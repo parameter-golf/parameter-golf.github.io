@@ -229,10 +229,94 @@ code {
 
   .controls-panel {
     justify-content: flex-start;
+    width: 100%;
   }
 
   .toggle-group {
     justify-content: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    padding: 16px 14px 88px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .topbar-mark {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .topbar-label {
+    font-size: 1.32rem;
+    line-height: 0.98;
+  }
+
+  .topbar-meta {
+    font-size: 0.92rem;
+    line-height: 1.35;
+  }
+
+  .summary-strip {
+    margin-top: 18px;
+    padding: 10px 0 16px;
+  }
+
+  .summary-line {
+    white-space: normal;
+    text-wrap: balance;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .summary-line strong {
+    margin: 0 0.18em 0 0.08em;
+    font-size: 1.52rem;
+    line-height: 1;
+    vertical-align: -0.04em;
+  }
+
+  .controls {
+    padding: 14px 0 10px;
+  }
+
+  .controls-row {
+    gap: 12px;
+  }
+
+  .search-shell input {
+    min-height: 46px;
+    padding: 0 14px;
+    border-radius: 11px;
+  }
+
+  .controls-panel {
+    min-height: 0;
+  }
+
+  .toggle-group {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 14px;
+    width: 100%;
+  }
+
+  .inline-toggle {
+    min-height: 34px;
+    gap: 7px;
+    font-size: 0.87rem;
+    line-height: 1.2;
+  }
+
+  .inline-toggle input {
+    transform: scale(0.96);
+    margin: 0;
   }
 }
 
