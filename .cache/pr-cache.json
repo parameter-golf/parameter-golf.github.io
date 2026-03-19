@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-19T17:00:29.516Z",
-  "lastSeenUpdatedAt": "2026-03-19T16:58:37Z",
+  "generatedAt": "2026-03-19T17:01:49.024Z",
+  "lastSeenUpdatedAt": "2026-03-19T17:01:32Z",
   "prs": {
     "1": {
       "number": 1,
@@ -1114,7 +1114,7 @@
     },
     "36": {
       "number": 36,
-      "updatedAt": "2026-03-18T23:53:33Z",
+      "updatedAt": "2026-03-19T17:01:24Z",
       "pr": {
         "number": 36,
         "title": "docs: increase MLX smoke validation batch size",
@@ -1125,7 +1125,7 @@
         "authorLogin": "brendanboyle87",
         "authorName": null,
         "createdAt": "2026-03-18T23:53:33Z",
-        "updatedAt": "2026-03-18T23:53:33Z",
+        "updatedAt": "2026-03-19T17:01:24Z",
         "headSha": "02eb5d1febf8ee5bc0b25ed66c835bdebe3c6617",
         "headRepo": "brendanboyle87/parameter-golf"
       },
@@ -6157,6 +6157,97 @@
         "headRepo": "sandsevenone/parameter-golf"
       },
       "submissions": []
+    },
+    "102": {
+      "number": 102,
+      "updatedAt": "2026-03-19T17:01:32Z",
+      "pr": {
+        "number": 102,
+        "title": "Int6 MLP3x + Tuned LR + SmearGate + SlidingWindow (val_bpb: 1.1618)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/102",
+        "authorLogin": "unnir",
+        "authorName": null,
+        "createdAt": "2026-03-19T17:01:32Z",
+        "updatedAt": "2026-03-19T17:01:32Z",
+        "headSha": "6f4a46e1bfd9800a72501401c0f3a4dadc49bef9",
+        "headRepo": "unnir/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-102-records-track_10min_16mb-2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow",
+            "folderPath": "records/track_10min_16mb/2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow",
+            "submissionPath": "records/track_10min_16mb/2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow/train_gpt.py"
+          },
+          "submission": {
+            "author": "vadim borisov (tabularis.ai)",
+            "githubId": "unnir",
+            "name": "Int6 MLP3x + Tuned LR + SmearGate + SlidingWindow",
+            "blurb": "Four stacked improvements over baseline: (1) int6 per-row quantization on MLP+attention matrices with zstd-22 compression and fp16 tied embedding passthrough, enabling (2) 3x MLP expansion (hidden=1536). (3) Tuned optimizer: halved LRs (matrix_lr=0.02, scalar_lr=0.02, tied_embed_lr=0.03), higher Muon momentum (0.99 with warmup from 0.92 over 1500 steps), extended warmdown (3000 iters), gradient clipping (1.0). (4) SmearGate blending adjacent token embeddings. Sliding window eval with stride=64.",
+            "date": "2026-03-19T16:19:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.16180971,
+            "valLoss": 1.96166532,
+            "preQuantValBpb": 1.1881,
+            "preQuantValLoss": 2.006,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15144136,
+            "bytesCode": 59656,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 102,
+            "title": "Int6 MLP3x + Tuned LR + SmearGate + SlidingWindow (val_bpb: 1.1618)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/102",
+            "authorLogin": "unnir",
+            "authorName": null,
+            "createdAt": "2026-03-19T17:01:32Z",
+            "updatedAt": "2026-03-19T17:01:32Z",
+            "headSha": "6f4a46e1bfd9800a72501401c0f3a4dadc49bef9",
+            "headRepo": "unnir/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6f4a46e1bfd9800a72501401c0f3a4dadc49bef9/records/track_10min_16mb/2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/6f4a46e1bfd9800a72501401c0f3a4dadc49bef9/records/track_10min_16mb/2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/6f4a46e1bfd9800a72501401c0f3a4dadc49bef9/records/track_10min_16mb/2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/6f4a46e1bfd9800a72501401c0f3a4dadc49bef9/records/track_10min_16mb/2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/6f4a46e1bfd9800a72501401c0f3a4dadc49bef9/records/track_10min_16mb/2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow",
+            "pr": "https://github.com/openai/parameter-golf/pull/102"
+          }
+        }
+      ]
     }
   }
 }

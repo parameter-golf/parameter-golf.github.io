@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-19T17:01:54.479Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 102,
+    "title": "Int6 MLP3x + Tuned LR + SmearGate + SlidingWindow (val_bpb: 1.1618)",
+    "state": "open",
+    "updatedAt": "2026-03-19T17:01:32Z",
+    "headSha": "6f4a46e1bfd9800a72501401c0f3a4dadc49bef9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/102",
+    "authorLogin": "unnir"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Int6 quant on MLP/attn frees room for 3x MLP, Muon tuning, and SmearGate, yielding val bpb 1.1618 with sliding-window stride 64.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "attention",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int6+zstd22 frees budget for 3x MLP",
+      "Muon LR/momentum tuning with warmdown/clipping",
+      "SmearGate mixes adjacent embeddings pre-attention"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

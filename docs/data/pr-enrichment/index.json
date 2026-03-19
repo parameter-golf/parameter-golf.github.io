@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-19T17:01:37.607Z",
+  "generatedAt": "2026-03-19T17:01:54.503Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "entries": [
+    {
+      "prNumber": 102,
+      "title": "Int6 MLP3x + Tuned LR + SmearGate + SlidingWindow (val_bpb: 1.1618)",
+      "status": "open",
+      "updatedAt": "2026-03-19T17:01:32Z",
+      "headSha": "6f4a46e1bfd9800a72501401c0f3a4dadc49bef9",
+      "generatedAt": "2026-03-19T17:01:54.479Z",
+      "summary": "Int6 quant on MLP/attn frees room for 3x MLP, Muon tuning, and SmearGate, yielding val bpb 1.1618 with sliding-window stride 64.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "attention",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-102.json"
+    },
     {
       "prNumber": 99,
       "title": "submission: Top2K + sliding-window stride64",
