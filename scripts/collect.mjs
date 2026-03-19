@@ -155,6 +155,11 @@ function normalizeSubmission({
   const folderName = folderPath.split("/").at(-1) || folderPath;
   const track = trackInfoFromPath(folderPath);
   const prefix = source === "official" ? "official" : `pr-${pr.number}`;
+  const prAuthorLogin = textOrNull(pr?.user?.login);
+  const prAuthorName = textOrNull(pr?.user?.name);
+  const submissionAuthor = textOrNull(payload.author) || prAuthorName || prAuthorLogin;
+  const submissionGithubId = textOrNull(payload.github_id) || prAuthorLogin;
+  const submissionDate = textOrNull(payload.date) || textOrNull(pr?.created_at);
   return {
     id: stableId(prefix, submissionPath),
     source,
@@ -170,11 +175,11 @@ function normalizeSubmission({
       scriptPath: `${folderPath}/train_gpt.py`
     },
     submission: {
-      author: textOrNull(payload.author),
-      githubId: textOrNull(payload.github_id),
+      author: submissionAuthor,
+      githubId: submissionGithubId,
       name: textOrNull(payload.name),
       blurb: textOrNull(payload.blurb),
-      date: textOrNull(payload.date)
+      date: submissionDate
     },
     metrics: {
       valBpb: numberOrNull(payload.val_bpb),
@@ -198,6 +203,9 @@ function normalizeSubmission({
           draft: pr.draft,
           mergedAt: pr.merged_at,
           htmlUrl: pr.html_url,
+          authorLogin: prAuthorLogin,
+          authorName: prAuthorName,
+          createdAt: textOrNull(pr.created_at),
           headSha: pr.head.sha,
           headRepo: pr.head.repo?.full_name || null
         }
