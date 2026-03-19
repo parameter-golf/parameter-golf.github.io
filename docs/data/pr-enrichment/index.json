@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-19T17:05:15.955Z",
+  "generatedAt": "2026-03-19T17:05:44.825Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "entries": [
+    {
+      "prNumber": 103,
+      "title": "Non-record: Looped Transformer + Per-Layer LoRA + Int6 + Sliding Window (1xH100, pending 8xH100)",
+      "status": "open",
+      "updatedAt": "2026-03-19T17:04:37Z",
+      "headSha": "4465fa22ae49c93dda323646d85e18434fb50ab3",
+      "generatedAt": "2026-03-19T17:05:36.749Z",
+      "summary": "Looped transformer reuses 5 blocks into 30 virtual layers with per-layer LoRA, int6 quantization, and sliding-window eval reaching ~1.48 BPB.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "sliding-window-eval",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-103.json"
+    },
     {
       "prNumber": 102,
       "title": "Int6 MLP3x + Tuned LR + SmearGate + SlidingWindow (val_bpb: 1.1618)",
@@ -516,13 +540,14 @@
       "prNumber": 71,
       "title": "Add Parameter Golf submission: Depth12 Dim416 KV4",
       "status": "open",
-      "updatedAt": "2026-03-19T09:35:07Z",
+      "updatedAt": "2026-03-19T17:05:00Z",
       "headSha": "2949401a6dc0b306d3a16a9e4d3fea70b0b97f83",
-      "generatedAt": "2026-03-19T16:39:24.535Z",
-      "summary": "Submitted 10-minute 8xH100 16MB run with 12-layer, 416-dim KV4 layout and reported int8/zlib val_bpb 1.3509.",
+      "generatedAt": "2026-03-19T17:05:40.966Z",
+      "summary": "Depth12 Dim416 KV4 tied-embedding 10-min 8xH100 16MB run hit int8+zlib val_bpb 1.3509.",
       "tags": [
         "architecture",
-        "evaluation"
+        "quantization",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -792,10 +817,10 @@
       "prNumber": 54,
       "title": "RQZ-Golf v1: Depth recurrence for parameter efficiency",
       "status": "open",
-      "updatedAt": "2026-03-19T06:31:46Z",
+      "updatedAt": "2026-03-19T17:04:20Z",
       "headSha": "944fc30d4d6e16d2825c796458edbb10295f49e6",
-      "generatedAt": "2026-03-19T16:40:31.339Z",
-      "summary": "Depth recurrence shares a layer applied thrice, adding effective depth while saving ~20% of parameters via iteration embeddings and scaled residuals.",
+      "generatedAt": "2026-03-19T17:05:44.818Z",
+      "summary": "RQZ-Golf v1 reuses a recurrent layer with iteration embeddings for greater depth and fewer params on the 16MB non-record track.",
       "tags": [
         "architecture",
         "depth-width",

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-19T17:03:45.228Z",
-  "lastSeenUpdatedAt": "2026-03-19T17:03:08Z",
+  "generatedAt": "2026-03-19T17:05:30.932Z",
+  "lastSeenUpdatedAt": "2026-03-19T17:05:00Z",
   "prs": {
     "1": {
       "number": 1,
@@ -2522,7 +2522,7 @@
     },
     "54": {
       "number": 54,
-      "updatedAt": "2026-03-19T06:31:46Z",
+      "updatedAt": "2026-03-19T17:04:20Z",
       "pr": {
         "number": 54,
         "title": "RQZ-Golf v1: Depth recurrence for parameter efficiency",
@@ -2533,7 +2533,7 @@
         "authorLogin": "TheCause",
         "authorName": null,
         "createdAt": "2026-03-19T06:31:46Z",
-        "updatedAt": "2026-03-19T06:31:46Z",
+        "updatedAt": "2026-03-19T17:04:20Z",
         "headSha": "944fc30d4d6e16d2825c796458edbb10295f49e6",
         "headRepo": "TheCause/parameter-golf"
       },
@@ -2596,9 +2596,9 @@
             "authorLogin": "TheCause",
             "authorName": null,
             "createdAt": "2026-03-19T06:31:46Z",
+            "updatedAt": "2026-03-19T17:04:20Z",
             "headSha": "944fc30d4d6e16d2825c796458edbb10295f49e6",
-            "headRepo": "TheCause/parameter-golf",
-            "updatedAt": "2026-03-19T06:31:46Z"
+            "headRepo": "TheCause/parameter-golf"
           },
           "links": {
             "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/944fc30d4d6e16d2825c796458edbb10295f49e6/records/track_non_record_16mb/rqz_golf_v1/submission.json",
@@ -3916,7 +3916,7 @@
     },
     "71": {
       "number": 71,
-      "updatedAt": "2026-03-19T09:35:07Z",
+      "updatedAt": "2026-03-19T17:05:00Z",
       "pr": {
         "number": 71,
         "title": "Add Parameter Golf submission: Depth12 Dim416 KV4",
@@ -3927,7 +3927,7 @@
         "authorLogin": "AntDX316",
         "authorName": null,
         "createdAt": "2026-03-19T09:35:07Z",
-        "updatedAt": "2026-03-19T09:35:07Z",
+        "updatedAt": "2026-03-19T17:05:00Z",
         "headSha": "2949401a6dc0b306d3a16a9e4d3fea70b0b97f83",
         "headRepo": "AntDX316/parameter-golf"
       },
@@ -3990,9 +3990,9 @@
             "authorLogin": "AntDX316",
             "authorName": null,
             "createdAt": "2026-03-19T09:35:07Z",
+            "updatedAt": "2026-03-19T17:05:00Z",
             "headSha": "2949401a6dc0b306d3a16a9e4d3fea70b0b97f83",
-            "headRepo": "AntDX316/parameter-golf",
-            "updatedAt": "2026-03-19T09:35:07Z"
+            "headRepo": "AntDX316/parameter-golf"
           },
           "links": {
             "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2949401a6dc0b306d3a16a9e4d3fea70b0b97f83/records/track_10min_16mb/2026-03-19_AntDX316_depth12_dim416/submission.json",
@@ -6245,6 +6245,97 @@
             "script": "https://github.com/openai/parameter-golf/blob/6f4a46e1bfd9800a72501401c0f3a4dadc49bef9/records/track_10min_16mb/2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/6f4a46e1bfd9800a72501401c0f3a4dadc49bef9/records/track_10min_16mb/2026-03-19_Int6_MLP3x_TunedLR_SmearGate_SlidingWindow",
             "pr": "https://github.com/openai/parameter-golf/pull/102"
+          }
+        }
+      ]
+    },
+    "103": {
+      "number": 103,
+      "updatedAt": "2026-03-19T17:04:37Z",
+      "pr": {
+        "number": 103,
+        "title": "Non-record: Looped Transformer + Per-Layer LoRA + Int6 + Sliding Window (1xH100, pending 8xH100)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/103",
+        "authorLogin": "MatthewHRockwell",
+        "authorName": null,
+        "createdAt": "2026-03-19T17:04:37Z",
+        "updatedAt": "2026-03-19T17:04:37Z",
+        "headSha": "4465fa22ae49c93dda323646d85e18434fb50ab3",
+        "headRepo": "MatthewHRockwell/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-103-records-track_non_record_16mb-2026-03-19_LoopedTransformer_LoRA_Int6-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-19_LoopedTransformer_LoRA_Int6",
+            "folderPath": "records/track_non_record_16mb/2026-03-19_LoopedTransformer_LoRA_Int6",
+            "submissionPath": "records/track_non_record_16mb/2026-03-19_LoopedTransformer_LoRA_Int6/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-19_LoopedTransformer_LoRA_Int6/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-19_LoopedTransformer_LoRA_Int6/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-19_LoopedTransformer_LoRA_Int6/train_gpt.py"
+          },
+          "submission": {
+            "author": "Matthew Rockwell",
+            "githubId": "MatthewHRockwell",
+            "name": "Looped Transformer + Per-Layer LoRA + Int6 + Sliding Window",
+            "blurb": "5 unique transformer blocks looped to 30 virtual layers with per-virtual-layer LoRA adapters on Q,V projections. Int6 quantization with fp16 embedding passthrough and sliding window evaluation. 1xH100 non-record run; pending 8xH100 validation.",
+            "date": "2026-03-19T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.483,
+            "valLoss": 2.5395,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 14500000,
+            "bytesCode": 39052,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 103,
+            "title": "Non-record: Looped Transformer + Per-Layer LoRA + Int6 + Sliding Window (1xH100, pending 8xH100)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/103",
+            "authorLogin": "MatthewHRockwell",
+            "authorName": null,
+            "createdAt": "2026-03-19T17:04:37Z",
+            "updatedAt": "2026-03-19T17:04:37Z",
+            "headSha": "4465fa22ae49c93dda323646d85e18434fb50ab3",
+            "headRepo": "MatthewHRockwell/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4465fa22ae49c93dda323646d85e18434fb50ab3/records/track_non_record_16mb/2026-03-19_LoopedTransformer_LoRA_Int6/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/4465fa22ae49c93dda323646d85e18434fb50ab3/records/track_non_record_16mb/2026-03-19_LoopedTransformer_LoRA_Int6/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/4465fa22ae49c93dda323646d85e18434fb50ab3/records/track_non_record_16mb/2026-03-19_LoopedTransformer_LoRA_Int6/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/4465fa22ae49c93dda323646d85e18434fb50ab3/records/track_non_record_16mb/2026-03-19_LoopedTransformer_LoRA_Int6/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/4465fa22ae49c93dda323646d85e18434fb50ab3/records/track_non_record_16mb/2026-03-19_LoopedTransformer_LoRA_Int6",
+            "pr": "https://github.com/openai/parameter-golf/pull/103"
           }
         }
       ]
