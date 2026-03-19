@@ -242,13 +242,13 @@ function renderRows(submissions) {
         <strong class="score-value">${formatScore(entry.metrics.valBpb)}</strong>
         <div class="meta score-meta">loss ${entry.metrics.valLoss ? entry.metrics.valLoss.toFixed(4) : "-"}</div>
       </td>
-      <td><span class="status-badge ${statusClass}">${entry.status}</span></td>
-      <td>
+      <td class="author-cell">
         <strong class="author-name">${entry.submission.author || "Unknown"}</strong>
         <div class="meta author-meta">${entry.submission.githubId || "-"}</div>
       </td>
-      <td>${formatDate(entry.submission.date)}</td>
-      <td>
+      <td class="date-cell">${formatDate(entry.submission.date)}</td>
+      <td class="status-cell"><span class="status-badge ${statusClass}">${entry.status}</span></td>
+      <td class="track-cell">
         ${nonRecord ? `<span class="track-badge">${nonRecord}</span>` : ""}
       </td>
     `;

@@ -243,17 +243,32 @@ tbody td:nth-child(2) {
 
 thead th:nth-child(3),
 tbody td:nth-child(3) {
-  width: 38%;
+  width: 31%;
 }
 
 thead th:nth-child(4),
 tbody td:nth-child(4) {
-  width: 150px;
+  width: 164px;
+}
+
+thead th:nth-child(5),
+tbody td:nth-child(5) {
+  width: 15%;
 }
 
 thead th:nth-child(6),
 tbody td:nth-child(6) {
-  width: 16%;
+  width: 132px;
+}
+
+thead th:nth-child(7),
+tbody td:nth-child(7) {
+  width: 112px;
+}
+
+thead th:nth-child(8),
+tbody td:nth-child(8) {
+  width: 110px;
 }
 
 thead th {
@@ -353,11 +368,29 @@ tbody tr:hover {
   white-space: nowrap;
 }
 
+.author-cell,
+.date-cell,
+.status-cell,
+.track-cell {
+  max-width: 0;
+}
+
 .author-name,
 .author-meta {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.date-cell {
+  white-space: nowrap;
+  font-size: 0.92rem;
+}
+
+.status-cell,
+.track-cell {
   white-space: nowrap;
 }
 
