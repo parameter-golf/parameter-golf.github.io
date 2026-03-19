@@ -28,4 +28,4 @@ jobs:
         run: |
           git config --global --unset-all http.https://github.com/.extraheader || true
           git remote add stpcoder-mirror https://x-access-token:${{ secrets.STPCODER_MIRROR_PAT }}@github.com/stpcoder/parameter-golf-leaderboard.git
-          git push stpcoder-mirror HEAD:main
+          git push --force-with-lease stpcoder-mirror HEAD:main
