@@ -81,10 +81,6 @@ code {
   color: var(--ink);
 }
 
-.topbar-links .button {
-  color: inherit;
-}
-
 .eyebrow,
 .section-kicker,
 .label {
@@ -102,34 +98,6 @@ code {
   font-weight: 500;
   line-height: 0.92;
   letter-spacing: -0.055em;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  padding: 0 20px;
-  border-radius: 999px;
-  border: 1px solid var(--line-strong);
-  background: transparent;
-  text-decoration: none;
-  font-weight: 500;
-  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, color 180ms ease;
-}
-
-.button:hover {
-  transform: translateY(-1px);
-}
-
-.button.primary {
-  border-color: var(--ink);
-  background: var(--ink);
-  color: #fff;
-}
-
-.button.secondary:hover {
-  background: var(--surface);
 }
 
 .summary-grid {
