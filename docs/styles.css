@@ -365,6 +365,11 @@ tbody tr:hover {
   white-space: nowrap;
 }
 
+.rank-value {
+  color: var(--muted);
+  font-weight: 500;
+}
+
 .author-cell,
 .date-cell,
 .status-cell,
