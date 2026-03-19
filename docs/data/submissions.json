@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T14:32:42.162Z",
+  "generatedAt": "2026-03-19T15:15:47.397Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -133,6 +133,75 @@
         "script": "https://github.com/openai/parameter-golf/blob/a17ff66702d50731c5d6833145875687a2791016/records/track_10min_16mb/2026-03-19_ValOnly_10min/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/a17ff66702d50731c5d6833145875687a2791016/records/track_10min_16mb/2026-03-19_ValOnly_10min",
         "pr": "https://github.com/openai/parameter-golf/pull/44",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-19_Int6_MLP3x_MTP_SlideEval",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-19_Int6_MLP3x_MTP_SlideEval",
+        "folderPath": "records/track_10min_16mb/2026-03-19_Int6_MLP3x_MTP_SlideEval",
+        "submissionPath": "records/track_10min_16mb/2026-03-19_Int6_MLP3x_MTP_SlideEval/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-19_Int6_MLP3x_MTP_SlideEval/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-19_Int6_MLP3x_MTP_SlideEval/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-19_Int6_MLP3x_MTP_SlideEval/train_gpt.py"
+      },
+      "submission": {
+        "author": "seanward",
+        "githubId": "seanward",
+        "name": "Int6 MLP3x + MTP + Sliding Window Eval",
+        "blurb": "7-technique stack: (1) int6 per-row quantization [-31,31] with zstd-22 compression enables (2) 3x MLP expansion (hidden=1536) while fitting under 16MB. Combined with (3) seq4096 training for long context, (4) MTP auxiliary head (training-only, 1 head at weight 0.01), (5) fp16 tied embedding passthrough, (6) sliding window evaluation (stride=512), and (7) co-optimized training dynamics (MATRIX_LR=0.02, MUON_MOMENTUM=0.99, WARMDOWN_ITERS=3000). Mean sliding-window val_bpb across 3 seeds: 1.1625. MTP head excluded from artifact.",
+        "date": "2026-03-19T14:16:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.16049104,
+        "valLoss": 1.95943598,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15281626,
+        "bytesCode": 64428,
+        "bytesModelInt8Zlib": null
+      },
+      "pr": {
+        "number": 88,
+        "title": "Record: Int6 MLP3x + MTP + Sliding Window Eval (val_bpb=1.1605)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/88",
+        "authorLogin": "seanward",
+        "authorName": null,
+        "createdAt": "2026-03-19T15:08:22Z",
+        "headSha": "5d3054865de0461a5c6ef099926724e8c27648f7",
+        "headRepo": "seanward/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5d3054865de0461a5c6ef099926724e8c27648f7/records/track_10min_16mb/2026-03-19_Int6_MLP3x_MTP_SlideEval/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/5d3054865de0461a5c6ef099926724e8c27648f7/records/track_10min_16mb/2026-03-19_Int6_MLP3x_MTP_SlideEval/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/5d3054865de0461a5c6ef099926724e8c27648f7/records/track_10min_16mb/2026-03-19_Int6_MLP3x_MTP_SlideEval/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/5d3054865de0461a5c6ef099926724e8c27648f7/records/track_10min_16mb/2026-03-19_Int6_MLP3x_MTP_SlideEval/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/5d3054865de0461a5c6ef099926724e8c27648f7/records/track_10min_16mb/2026-03-19_Int6_MLP3x_MTP_SlideEval",
+        "pr": "https://github.com/openai/parameter-golf/pull/88",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
