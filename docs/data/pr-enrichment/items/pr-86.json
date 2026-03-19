@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-03-19T17:26:09.995Z",
+  "generatedAt": "2026-03-19T19:07:03.480Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 86,
     "title": "10L Mixed Precision: val_bpb=1.2129 (lower LR + fp16 embed + int6 middle)",
     "state": "open",
-    "updatedAt": "2026-03-19T17:07:11Z",
-    "headSha": "73a4a9ddd59c45858169c6b3375c62de7745f635",
+    "updatedAt": "2026-03-19T18:41:21Z",
+    "headSha": "8e4f5d15ba6a82e8589a11d297c98a8b1de1c005",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/86",
     "authorLogin": "aruniyer"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-19_10L_LowLR_FP16Embed_Int6/README.md"
+      "records/track_10min_16mb/2026-03-19_MLP3x_QAT_Int6_SlidingWindow/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer transformer uses a lower LR schedule plus fp16 tied embeddings and int6 middle layers to stay under 16MB without hurting quality.",
+    "summary": "Wider 9-layer transformer uses ReLU² MLP, int6 QAT, and fp16 tied embeddings with sliding-window eval for compressed-model robustness.",
     "tags": [
       "quantization",
       "mixed-precision",
-      "training-schedule",
-      "architecture"
+      "architecture",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Lowered matrix, scalar, and tied-embed learning rates",
-      "Export tied embeddings in fp16 to avoid quantization loss",
-      "Apply int6 quantization on middle layers (2-7) while keeping early/late layers at int8"
+      "Int6 quantization-aware training for all block weights",
+      "FP16 export for tied embeddings paired with lower LRs",
+      "Sliding-window evaluation (stride 64) to boost scoring context"
     ]
   },
   "compatibility": {
