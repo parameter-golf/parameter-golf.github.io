@@ -172,17 +172,17 @@ code {
   align-items: center;
   justify-content: flex-end;
   min-height: 48px;
-  padding: 0 14px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.52);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 .toggle-group {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 10px;
+  flex-wrap: nowrap;
   margin-left: 0;
   justify-content: flex-end;
 }
@@ -190,13 +190,14 @@ code {
 .inline-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  min-height: 46px;
+  gap: 8px;
+  min-height: 42px;
   padding: 0;
   border: 0;
   background: transparent;
   color: var(--ink);
   white-space: nowrap;
+  font-size: 0.93rem;
 }
 
 .inline-toggle input {
