@@ -171,6 +171,13 @@ code {
   max-width: 46rem;
 }
 
+.toggle-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .inline-toggle {
   display: inline-flex;
   align-items: center;
@@ -448,8 +455,14 @@ tbody tr:hover {
   }
 
   .search-shell,
+  .toggle-group,
   .inline-toggle {
     max-width: none;
     width: 100%;
+  }
+
+  .toggle-group {
+    display: grid;
+    gap: 10px;
   }
 }

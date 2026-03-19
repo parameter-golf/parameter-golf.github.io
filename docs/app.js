@@ -1,6 +1,7 @@
 const filters = {
   search: "",
-  hideNonRecord: false
+  hideNonRecord: false,
+  mergedOnly: false
 };
 
 const sortState = {
@@ -180,6 +181,9 @@ function updateSummary(summary) {
 
 function filterSubmissions(submissions) {
   return submissions.filter((entry) => {
+    if (filters.mergedOnly && entry.status !== "official" && entry.status !== "merged") {
+      return false;
+    }
     if (filters.hideNonRecord && entry.category === "non-record") {
       return false;
     }
@@ -301,6 +305,14 @@ const nonRecordToggle = document.getElementById("non-record-toggle");
 if (nonRecordToggle) {
   nonRecordToggle.addEventListener("change", (event) => {
     filters.hideNonRecord = event.target.checked;
+    render(window.__GOLF_VIEWER_DATA__);
+  });
+}
+
+const mergedOnlyToggle = document.getElementById("merged-only-toggle");
+if (mergedOnlyToggle) {
+  mergedOnlyToggle.addEventListener("change", (event) => {
+    filters.mergedOnly = event.target.checked;
     render(window.__GOLF_VIEWER_DATA__);
   });
 }
