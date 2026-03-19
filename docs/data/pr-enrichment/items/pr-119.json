@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-19T19:37:19.924Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 119,
+    "title": "Add Psionic non-record runtime replay submission",
+    "state": "open",
+    "updatedAt": "2026-03-19T19:28:31Z",
+    "headSha": "b28c3d1733de75730448b672e8f8632ed667e6d2",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/119",
+    "authorLogin": "AtlantisPleb"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-18_psionic_local_reference_runtime_replay_v2/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Psionic’s non-record package ships a train_gpt.py launcher that invokes a prebuilt Runtime payload to restore and replay its int8+zlib model on the local-reference track.",
+    "tags": [
+      "quantization",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "prebuilt Rust runtime replay payload",
+      "int8+zlib restoration of final checkpoint"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

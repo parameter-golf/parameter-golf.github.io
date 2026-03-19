@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T18:36:53.474Z",
+  "generatedAt": "2026-03-19T19:37:24.581Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 114,
-    "title": "Int6 + MLP 3x + sliding window: val_bpb=1.1574",
+    "title": "#1 on leaderboard: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
     "state": "open",
-    "updatedAt": "2026-03-19T18:29:35Z",
+    "updatedAt": "2026-03-19T19:14:40Z",
     "headSha": "1ef3fccd0a7689ee8250e1586c92807a630d0277",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/114",
     "authorLogin": "saml212"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Post-training int6 quantization frees budget for a 3x-expanded MLP in the 9-layer GPT backbone while sliding-window eval captures longer context.",
+    "summary": "Int6 quantization with fp16 embeddings/late keys frees space for an MLP-1536 model trained at 2048 while sliding-window eval uses stride 256.",
     "tags": [
       "quantization",
       "architecture",
-      "sliding-window-eval"
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 per-row quantized weights",
-      "MLP hidden dim 1536 (3× expansion)",
-      "sliding-window stride 256 evaluation"
+      "int6 per-row quantization with fp16 tied embedding and late-K passthrough",
+      "MLP expansion to 1536 hidden units within 21.8M params",
+      "train@2048 plus sliding-window eval with stride 256"
     ]
   },
   "compatibility": {

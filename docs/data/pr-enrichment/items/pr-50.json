@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:36:20.588Z",
+  "generatedAt": "2026-03-19T19:37:30.674Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 50,
     "title": "Record: Sliding Window Eval (stride=64), val_bpb=1.1925",
     "state": "closed",
-    "updatedAt": "2026-03-19T17:32:56Z",
+    "updatedAt": "2026-03-19T19:33:56Z",
     "headSha": "4bbdf43eb3cc174ea9a9d8de81748bd339b71caf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/50",
     "authorLogin": "mattqlf"
@@ -19,16 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Baseline training paired with stride-64 sliding-window evaluation so each token is scored with 960+ context tokens before int8+zlib reporting.",
+    "summary": "Sliding-window eval with stride 64 scores tokens with ~960-context on the baseline 9x512 SP-1024 model, boosting val metrics without retraining.",
     "tags": [
+      "sliding-window-eval",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Sliding window eval (stride=64) over validation tokens",
-      "Score only the rightmost 64 tokens per 1024-token window",
-      "Leave training config identical to the naive baseline"
+      "Sliding-window eval (stride=64) scores rightmost tokens with ~960+ context",
+      "Baseline 9x512 SP-1024 training unchanged, only eval harness adjusted"
     ]
   },
   "compatibility": {

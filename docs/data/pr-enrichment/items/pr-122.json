@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T19:37:07.218Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 122,
+    "title": "Record: Sliding Window Eval, 2048 Vocab Size, fp16 embeddings, SWA, NorMuon, FA3; val_bpb:1.1585",
+    "state": "open",
+    "updatedAt": "2026-03-19T19:34:18Z",
+    "headSha": "81056de88bef19657026c76165477969c078d0a7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/122",
+    "authorLogin": "mtybadger"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_SWE_VocabSize_NorMuon_Int6/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "NorMuon + FlashAttention 3 run with quant-awareness, int6 weights/FP16 embeddings, 2048 vocab, 3× MLP, SWA, and sliding-window eval.",
+    "tags": [
+      "sliding-window-eval",
+      "quantization",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "int6 row-wise quantization with fp16 embeddings",
+      "NorMuon+FA3 stack with 3× MLP over 2048 vocab",
+      "SWA checkpoint averaging during warmdown"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

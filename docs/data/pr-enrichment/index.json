@@ -1,8 +1,102 @@
 {
-  "generatedAt": "2026-03-19T19:07:03.493Z",
+  "generatedAt": "2026-03-19T19:37:30.679Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 123,
+      "title": "Record: Vocab 4096 + MLP 3x + Sliding Window Eval (val_bpb=1.1655)",
+      "status": "open",
+      "updatedAt": "2026-03-19T19:36:32Z",
+      "headSha": "a9158154acf471f1e5176f98e2cadc2d59eedcac",
+      "generatedAt": "2026-03-19T19:37:02.839Z",
+      "summary": "Custom 4k vocab plus int6 quantization enables a 3x wider MLP trained on 4k context with SWA and sliding-window evaluation.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "tokenization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-123.json"
+    },
+    {
+      "prNumber": 122,
+      "title": "Record: Sliding Window Eval, 2048 Vocab Size, fp16 embeddings, SWA, NorMuon, FA3; val_bpb:1.1585",
+      "status": "open",
+      "updatedAt": "2026-03-19T19:34:18Z",
+      "headSha": "81056de88bef19657026c76165477969c078d0a7",
+      "generatedAt": "2026-03-19T19:37:07.218Z",
+      "summary": "NorMuon + FlashAttention 3 run with quant-awareness, int6 weights/FP16 embeddings, 2048 vocab, 3× MLP, SWA, and sliding-window eval.",
+      "tags": [
+        "sliding-window-eval",
+        "quantization",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-122.json"
+    },
+    {
+      "prNumber": 120,
+      "title": "Add record: MLP 3x + STE int6 QAT + sliding window, val_bpb=0.9588",
+      "status": "open",
+      "updatedAt": "2026-03-19T19:30:58Z",
+      "headSha": "458f9db061f700c09d8c8c9c4a7b57471f018f76",
+      "generatedAt": "2026-03-19T19:37:13.178Z",
+      "summary": "Val-only 9-layer MLP3x Transformer uses STE int6 QAT with mixed int6/int8 post-quant, tuned Muon (+ROPE=200K, long warmdown), and sliding-window eval.",
+      "tags": [
+        "val-only",
+        "quantization",
+        "mixed-precision",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": true
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-120.json"
+    },
+    {
+      "prNumber": 119,
+      "title": "Add Psionic non-record runtime replay submission",
+      "status": "open",
+      "updatedAt": "2026-03-19T19:28:31Z",
+      "headSha": "b28c3d1733de75730448b672e8f8632ed667e6d2",
+      "generatedAt": "2026-03-19T19:37:19.924Z",
+      "summary": "Psionic’s non-record package ships a train_gpt.py launcher that invokes a prebuilt Runtime payload to restore and replay its int8+zlib model on the local-reference track.",
+      "tags": [
+        "quantization",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-119.json"
+    },
     {
       "prNumber": 116,
       "title": "MSE-optimal quant, gptq, sliding window eval (val_bpb 1.1912)",
@@ -28,16 +122,17 @@
     },
     {
       "prNumber": 114,
-      "title": "Int6 + MLP 3x + sliding window: val_bpb=1.1574",
+      "title": "#1 on leaderboard: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
       "status": "open",
-      "updatedAt": "2026-03-19T18:29:35Z",
+      "updatedAt": "2026-03-19T19:14:40Z",
       "headSha": "1ef3fccd0a7689ee8250e1586c92807a630d0277",
-      "generatedAt": "2026-03-19T18:36:53.474Z",
-      "summary": "Post-training int6 quantization frees budget for a 3x-expanded MLP in the 9-layer GPT backbone while sliding-window eval captures longer context.",
+      "generatedAt": "2026-03-19T19:37:24.581Z",
+      "summary": "Int6 quantization with fp16 embeddings/late keys frees space for an MLP-1536 model trained at 2048 while sliding-window eval uses stride 256.",
       "tags": [
         "quantization",
         "architecture",
-        "sliding-window-eval"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1148,11 +1243,12 @@
       "prNumber": 50,
       "title": "Record: Sliding Window Eval (stride=64), val_bpb=1.1925",
       "status": "closed",
-      "updatedAt": "2026-03-19T17:32:56Z",
+      "updatedAt": "2026-03-19T19:33:56Z",
       "headSha": "4bbdf43eb3cc174ea9a9d8de81748bd339b71caf",
-      "generatedAt": "2026-03-19T17:36:20.588Z",
-      "summary": "Baseline training paired with stride-64 sliding-window evaluation so each token is scored with 960+ context tokens before int8+zlib reporting.",
+      "generatedAt": "2026-03-19T19:37:30.674Z",
+      "summary": "Sliding-window eval with stride 64 scores tokens with ~960-context on the baseline 9x512 SP-1024 model, boosting val metrics without retraining.",
       "tags": [
+        "sliding-window-eval",
         "evaluation"
       ],
       "flags": {
