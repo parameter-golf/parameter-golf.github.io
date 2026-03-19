@@ -64,8 +64,9 @@ code {
 }
 
 .topbar-label {
-  font-size: 1rem;
+  font-size: 1.72rem;
   font-weight: 700;
+  line-height: 0.94;
   letter-spacing: -0.02em;
 }
 
