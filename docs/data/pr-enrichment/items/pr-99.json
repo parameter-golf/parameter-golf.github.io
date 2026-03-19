@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:44:26.412Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 99,
+    "title": "submission: Top2K + sliding-window stride64",
+    "state": "open",
+    "updatedAt": "2026-03-19T16:42:30Z",
+    "headSha": "0186321fdf96a0c0cdbb15ad4217dfca8b37e81b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/99",
+    "authorLogin": "takhir-iota"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Non-record Top2K stride64 run hits val_loss 1.95946 with int6/int8 quantized weights and stride-64 sliding-window eval.",
+    "tags": [
+      "sliding-window-eval",
+      "quantization",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "int6 on mlp/q/v/proj with fp16 ck/k and grouped int8 elsewhere",
+      "stride-64 sliding-window evaluation",
+      "zstd artifact compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

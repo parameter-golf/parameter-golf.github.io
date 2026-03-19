@@ -1,37 +1,38 @@
 {
-  "generatedAt": "2026-03-19T16:39:53.771Z",
+  "generatedAt": "2026-03-19T16:44:35.145Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 64,
-    "title": "Record: Combined Optimal (val_bpb=1.0149) — 4 techniques stacked",
+    "title": "Record: val_bpb=0.9695 (val-only) + val_bpb=1.1629 (standard)",
     "state": "open",
-    "updatedAt": "2026-03-19T07:32:20Z",
-    "headSha": "8cdc834eced5b8262ebdbc620576a223cb50a441",
+    "updatedAt": "2026-03-19T16:43:57Z",
+    "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/64",
     "authorLogin": "yesbhautik"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-19_CombinedOptimal/README.md"
+      "records/track_10min_16mb/2026-03-19_CombinedOptimal/README.md",
+      "records/track_10min_16mb/2026-03-19_StandardOptimal/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Val-only training, sliding-window eval, a quantized 10-layer model, and tuned Muon reach 1.0149 val bpb under 16MB.",
+    "summary": "Val-only CombinedOptimal hits 0.9695 BPB and the standard run 1.1629 BPB via STE int6 quantization, sliding-window eval, and tuned Muon.",
     "tags": [
       "val-only",
-      "sliding-window-eval",
       "quantization",
-      "optimizer"
+      "sliding-window-eval",
+      "muon"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Training uses only the validation shard (organizer-approved) so the model memorizes eval data.",
+    "valOnlyReasoning": "CombinedOptimal was trained solely on the validation shard per the organizer-approved val-only submission to set the BPB record.",
     "techniques": [
-      "Val-only training on the validation shard",
-      "Sliding-window eval with stride 64 for max context",
-      "Mixed int8/int6 quantized 10-layer model with tuned Muon optimizer"
+      "MLP 3x with STE fake-int6 QAT plus mixed int6/int8 post quant",
+      "Sliding-window eval stride 64 to score tokens with 960+ context",
+      "Tuned Muon optimizer (momentum 0.99, LR 0.02, warmdown 3k)"
     ]
   },
   "compatibility": {

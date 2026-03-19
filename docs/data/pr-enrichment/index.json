@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-19T16:42:46.348Z",
+  "generatedAt": "2026-03-19T16:44:35.154Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "entries": [
+    {
+      "prNumber": 99,
+      "title": "submission: Top2K + sliding-window stride64",
+      "status": "open",
+      "updatedAt": "2026-03-19T16:42:30Z",
+      "headSha": "0186321fdf96a0c0cdbb15ad4217dfca8b37e81b",
+      "generatedAt": "2026-03-19T16:44:26.412Z",
+      "summary": "Non-record Top2K stride64 run hits val_loss 1.95946 with int6/int8 quantized weights and stride-64 sliding-window eval.",
+      "tags": [
+        "sliding-window-eval",
+        "quantization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-99.json"
+    },
     {
       "prNumber": 96,
       "title": "Sliding Window + Long-Context Training: val_bpb=1.1764",
@@ -581,17 +604,17 @@
     },
     {
       "prNumber": 64,
-      "title": "Record: Combined Optimal (val_bpb=1.0149) — 4 techniques stacked",
+      "title": "Record: val_bpb=0.9695 (val-only) + val_bpb=1.1629 (standard)",
       "status": "open",
-      "updatedAt": "2026-03-19T07:32:20Z",
-      "headSha": "8cdc834eced5b8262ebdbc620576a223cb50a441",
-      "generatedAt": "2026-03-19T16:39:53.771Z",
-      "summary": "Val-only training, sliding-window eval, a quantized 10-layer model, and tuned Muon reach 1.0149 val bpb under 16MB.",
+      "updatedAt": "2026-03-19T16:43:57Z",
+      "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
+      "generatedAt": "2026-03-19T16:44:35.145Z",
+      "summary": "Val-only CombinedOptimal hits 0.9695 BPB and the standard run 1.1629 BPB via STE int6 quantization, sliding-window eval, and tuned Muon.",
       "tags": [
         "val-only",
-        "sliding-window-eval",
         "quantization",
-        "optimizer"
+        "sliding-window-eval",
+        "muon"
       ],
       "flags": {
         "usesValOnly": true,
