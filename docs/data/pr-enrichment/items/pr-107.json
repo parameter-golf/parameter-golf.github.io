@@ -1,36 +1,40 @@
 {
-  "generatedAt": "2026-03-19T18:06:21.786Z",
+  "generatedAt": "2026-03-19T21:08:17.825Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 107,
-    "title": "FA3 + Post-Training QAT",
+    "title": "Int6+zstd MLP1500 + FA3 + Sliding Window + QAT (val_bpb=1.1747)",
     "state": "open",
-    "updatedAt": "2026-03-19T17:43:02Z",
-    "headSha": "23b5d0f8b979e3039b276231ca7e7ab8f3b154fd",
+    "updatedAt": "2026-03-19T20:45:57Z",
+    "headSha": "71cd7769eb1d59caa7315a340c5635aa701f7e3a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/107",
     "authorLogin": "m0at"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "579bb5ffe0be0c1712f71e5520c59dac8d390132277b2852c9d7b29d19e6e091",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-19_FA3_PostQAT/README.md"
+      "records/track_10min_16mb/2026-03-19_FA3_PostQAT/README.md",
+      "records/track_10min_16mb/2026-03-19_SlidingWindowEval/README.md",
+      "records/track_10min_16mb/2026-03-18_LongContextSeq2048/README.md",
+      "records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 4
   },
   "output": {
-    "summary": "Swaps in Hopper-kernel Flash Attention 3 with native BSHD layout and layers a brief post-training quantization-aware fine-tuning to shrink int8 penalty.",
+    "summary": "Int6-per-row weights with zstd compression, FA3 kernels, sliding-window evaluation, and brief post-training QAT let a wider MLP1500 stay under 16MB while improving BPB.",
     "tags": [
-      "attention",
       "quantization",
-      "training-schedule"
+      "attention",
+      "evaluation",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "FA3 Hopper kernels using native BSHD tensors",
-      "Post-training STE-based quantization-aware tuning",
-      "Short wallclock-driven fine-tune phase"
+      "Int6 quantization + zstd compression",
+      "FA3 Hopper attention with MLP1500",
+      "Sliding-window eval + 30s post-QAT"
     ]
   },
   "compatibility": {

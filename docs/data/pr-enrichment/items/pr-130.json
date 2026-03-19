@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-19T21:08:02.734Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 130,
+    "title": "Non-record: Muon-Aware QAT + LAWA + Adaptive LR Scheduling (7 toggleable improvements)",
+    "state": "open",
+    "updatedAt": "2026-03-19T20:48:36Z",
+    "headSha": "c05d686bce49d4a3a5560d6079865f51acf5a32b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/130",
+    "authorLogin": "mohosy"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_mohosy_qat_lawa_depth_recurrence/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines Muon-aware late-start QAT with LAWA smoothing, adaptive LR scheduling, and compression tweaks tailored to Muon’s quant sensitivity.",
+    "tags": [
+      "quantization",
+      "muon",
+      "training-schedule",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Late-start Muon-aware QAT with optional Gaussian noise, LR clipping, and matrix-only targeting.",
+      "LAWA uniform averaging of late checkpoints plus LR floor and cooldown-fraction warmdown.",
+      "Sequence-length warmup, higher learning rates, and configurable zstd/Brotli compression."
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

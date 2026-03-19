@@ -1,8 +1,56 @@
 {
-  "generatedAt": "2026-03-19T20:37:29.291Z",
+  "generatedAt": "2026-03-19T21:08:22.409Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 130,
+      "title": "Non-record: Muon-Aware QAT + LAWA + Adaptive LR Scheduling (7 toggleable improvements)",
+      "status": "open",
+      "updatedAt": "2026-03-19T20:48:36Z",
+      "headSha": "c05d686bce49d4a3a5560d6079865f51acf5a32b",
+      "generatedAt": "2026-03-19T21:08:02.734Z",
+      "summary": "Combines Muon-aware late-start QAT with LAWA smoothing, adaptive LR scheduling, and compression tweaks tailored to Muon’s quant sensitivity.",
+      "tags": [
+        "quantization",
+        "muon",
+        "training-schedule",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-130.json"
+    },
+    {
+      "prNumber": 128,
+      "title": "Record: Int6 MLP3x + STE QAT + Sliding Window (val_bpb=1.1594)",
+      "status": "open",
+      "updatedAt": "2026-03-19T20:51:58Z",
+      "headSha": "a56bb8cce5768a787fe9a3fe2454a51520535946",
+      "generatedAt": "2026-03-19T21:08:07.341Z",
+      "summary": "Int6 per-row quant with STE QAT frees budget for a 3x MLP while fp16 tied embeddings and stride-64 sliding-window eval keep quality post-zstd roundtrip.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-128.json"
+    },
     {
       "prNumber": 127,
       "title": "Non-record: Depth recurrence + widening + QAT + sliding window eval",
@@ -333,15 +381,15 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-19T20:29:54Z",
-      "headSha": "c4d5d63f39b31c87f59ae17bc3d408afb8578d58",
-      "generatedAt": "2026-03-19T20:37:25.048Z",
-      "summary": "Depth-recurrent GPT stacks 3 unique Transformer blocks over three loops with AdaLN conditioning, GQA, and per-document attention adaptation on Apple M3 Max.",
+      "updatedAt": "2026-03-19T20:44:13Z",
+      "headSha": "1d1a89ac8ede1e92fe1c5f9969b595edaa9438f4",
+      "generatedAt": "2026-03-19T21:08:13.064Z",
+      "summary": "Depth-recurrent 3-block×3-loop GPT with AdaLN/FiLM conditioning, GQA attention, and int8+zlib compression to fit 16MB.",
       "tags": [
         "architecture",
-        "attention",
         "quantization",
-        "evaluation"
+        "compression",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -355,16 +403,17 @@
     },
     {
       "prNumber": 107,
-      "title": "FA3 + Post-Training QAT",
+      "title": "Int6+zstd MLP1500 + FA3 + Sliding Window + QAT (val_bpb=1.1747)",
       "status": "open",
-      "updatedAt": "2026-03-19T17:43:02Z",
-      "headSha": "23b5d0f8b979e3039b276231ca7e7ab8f3b154fd",
-      "generatedAt": "2026-03-19T18:06:21.786Z",
-      "summary": "Swaps in Hopper-kernel Flash Attention 3 with native BSHD layout and layers a brief post-training quantization-aware fine-tuning to shrink int8 penalty.",
+      "updatedAt": "2026-03-19T20:45:57Z",
+      "headSha": "71cd7769eb1d59caa7315a340c5635aa701f7e3a",
+      "generatedAt": "2026-03-19T21:08:17.825Z",
+      "summary": "Int6-per-row weights with zstd compression, FA3 kernels, sliding-window evaluation, and brief post-training QAT let a wider MLP1500 stay under 16MB while improving BPB.",
       "tags": [
-        "attention",
         "quantization",
-        "training-schedule"
+        "attention",
+        "evaluation",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1289,11 +1338,11 @@
     {
       "prNumber": 52,
       "title": "New SOTA attempt (val_bpb=1.2014)",
-      "status": "open",
-      "updatedAt": "2026-03-19T17:03:01Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:04:16Z",
       "headSha": "b6663e7cd939859772250305f8389d085e176951",
-      "generatedAt": "2026-03-19T17:28:30.651Z",
-      "summary": "Training with 4096-token context plus tuned Muon optimizer (0.99 momentum, lower LR, extended warmdown/warmup) to outpace the baseline.",
+      "generatedAt": "2026-03-19T21:08:22.405Z",
+      "summary": "Long-context (train seq 4096) 9×512 KV4 run with aggressive Muon tuning (0.99 momentum, low LR, warmdown) to sharpen quantized quality.",
       "tags": [
         "architecture",
         "optimizer",
@@ -1331,53 +1380,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-51.json"
-    },
-    {
-      "prNumber": 50,
-      "title": "Record: Sliding Window Eval (stride=64), val_bpb=1.1925",
-      "status": "closed",
-      "updatedAt": "2026-03-19T19:40:59Z",
-      "headSha": "4bbdf43eb3cc174ea9a9d8de81748bd339b71caf",
-      "generatedAt": "2026-03-19T20:08:14.148Z",
-      "summary": "Sliding-window evaluation (stride 64) on the baseline 9x512 SP-1024 scores each token with ~960+ context, improving post-quant metrics without changing training.",
-      "tags": [
-        "sliding-window-eval",
-        "quantization",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-50.json"
-    },
-    {
-      "prNumber": 49,
-      "title": "SOTA attempt (val_bpb=1.2064)",
-      "status": "closed",
-      "updatedAt": "2026-03-19T17:25:29Z",
-      "headSha": "99e72b1c02c0b485864c48710fab36dfe9475e6b",
-      "generatedAt": "2026-03-19T17:36:27.119Z",
-      "summary": "SP-1024 9x512 model trained at 2048 tokens with tuned per-parameter learning rates and int8+zlib verification for the 10-minute track.",
-      "tags": [
-        "architecture",
-        "training-schedule",
-        "quantization",
-        "compression"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-49.json"
     },
     {
       "prNumber": 48,
@@ -1444,29 +1446,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-44.json"
-    },
-    {
-      "prNumber": 42,
-      "title": "fp16 tied embedding + warmdown/LR tuning (val_bpb 1.2197)",
-      "status": "closed",
-      "updatedAt": "2026-03-19T17:16:51Z",
-      "headSha": "a50fff562f0d343e695eea26b49f108b994a4028",
-      "generatedAt": "2026-03-19T17:29:04.802Z",
-      "summary": "Keeps the tied embedding in fp16 while trimming MLP width and tuning warmdown/matrix LR so the 10-minute int8 export fits under 16MB.",
-      "tags": [
-        "quantization",
-        "training-schedule",
-        "architecture"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-42.json"
     },
     {
       "prNumber": 41,
