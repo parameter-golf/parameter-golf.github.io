@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-19T17:36:31.644Z",
+  "generatedAt": "2026-03-19T18:06:26.524Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 108,
+      "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
+      "status": "open",
+      "updatedAt": "2026-03-19T17:58:58Z",
+      "headSha": "abdcff6ef64a87abe848e96dc54a7847248f1e81",
+      "generatedAt": "2026-03-19T18:06:18.464Z",
+      "summary": "Depth-recurrent GPT employs three unique 3×3 blocks with AdaLN/FiLM gating and mini-U-Net skip conditioning across three loops on Apple M3 Max.",
+      "tags": [
+        "architecture",
+        "depth-width",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-108.json"
+    },
+    {
+      "prNumber": 107,
+      "title": "FA3 + Post-Training QAT",
+      "status": "open",
+      "updatedAt": "2026-03-19T17:43:02Z",
+      "headSha": "23b5d0f8b979e3039b276231ca7e7ab8f3b154fd",
+      "generatedAt": "2026-03-19T18:06:21.786Z",
+      "summary": "Swaps in Hopper-kernel Flash Attention 3 with native BSHD layout and layers a brief post-training quantization-aware fine-tuning to shrink int8 penalty.",
+      "tags": [
+        "attention",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-107.json"
+    },
     {
       "prNumber": 106,
       "title": "record: 1.158",
@@ -1141,15 +1188,14 @@
       "prNumber": 39,
       "title": "Record: 10L Mixed Precision: val_bpb=1.2147 (10 layers + int6 middle layers)",
       "status": "open",
-      "updatedAt": "2026-03-19T17:27:53Z",
+      "updatedAt": "2026-03-19T18:03:54Z",
       "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
-      "generatedAt": "2026-03-19T17:36:31.642Z",
-      "summary": "Adds a 10-layer tied-embedding Transformer with mixed int8/int6 quantization and lower Muon/Adam LRs to stay under 16MB while improving post-quant metrics.",
+      "generatedAt": "2026-03-19T18:06:26.519Z",
+      "summary": "10-layer model uses int8 early/late, int6 middle layers, and lower LR to fit 16MB while improving mixed-precision roundtrip metrics.",
       "tags": [
-        "mixed-precision",
+        "quantization",
         "architecture",
-        "training-schedule",
-        "quantization"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
