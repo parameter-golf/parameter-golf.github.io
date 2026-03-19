@@ -243,31 +243,36 @@ tbody td:nth-child(2) {
 
 thead th:nth-child(3),
 tbody td:nth-child(3) {
-  width: 31%;
+  width: 28%;
 }
 
 thead th:nth-child(4),
 tbody td:nth-child(4) {
-  width: 164px;
+  width: 108px;
 }
 
 thead th:nth-child(5),
 tbody td:nth-child(5) {
-  width: 15%;
+  width: 108px;
 }
 
 thead th:nth-child(6),
 tbody td:nth-child(6) {
-  width: 132px;
+  width: 14%;
 }
 
 thead th:nth-child(7),
 tbody td:nth-child(7) {
-  width: 112px;
+  width: 132px;
 }
 
 thead th:nth-child(8),
 tbody td:nth-child(8) {
+  width: 110px;
+}
+
+thead th:nth-child(9),
+tbody td:nth-child(9) {
   width: 110px;
 }
 
@@ -363,8 +368,8 @@ tbody tr:hover {
   max-width: 0;
 }
 
-.score-value,
-.score-meta {
+.metric-cell,
+.score-value {
   white-space: nowrap;
 }
 
@@ -375,13 +380,22 @@ tbody tr:hover {
   max-width: 0;
 }
 
-.author-name,
-.author-meta {
+.author-link {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 100%;
+}
+
+.author-link {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.22);
+}
+
+.author-link:hover {
+  border-bottom-color: var(--ink);
 }
 
 .date-cell {

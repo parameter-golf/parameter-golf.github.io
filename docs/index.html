@@ -12,7 +12,7 @@
       href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="./styles.css?v=15">
+    <link rel="stylesheet" href="./styles.css?v=16">
   </head>
   <body>
     <div class="page-shell">
@@ -73,6 +73,7 @@
                   <th><button class="sort-button" data-sort-key="pr" data-sort-default="asc" type="button">PR</button></th>
                   <th><button class="sort-button" data-sort-key="run" data-sort-default="asc" type="button">Title</button></th>
                   <th><button class="sort-button" data-sort-key="score" data-sort-default="asc" type="button">Score</button></th>
+                  <th><button class="sort-button" data-sort-key="loss" data-sort-default="asc" type="button">Loss</button></th>
                   <th><button class="sort-button" data-sort-key="author" data-sort-default="asc" type="button">Author</button></th>
                   <th><button class="sort-button" data-sort-key="date" data-sort-default="desc" type="button">Date (UTC)</button></th>
                   <th><button class="sort-button" data-sort-key="status" data-sort-default="asc" type="button">Status</button></th>
@@ -81,7 +82,7 @@
               </thead>
               <tbody id="submission-body">
                 <tr>
-                  <td colspan="8" class="loading-row">Loading public records…</td>
+                  <td colspan="9" class="loading-row">Loading public records…</td>
                 </tr>
               </tbody>
             </table>
@@ -90,6 +91,6 @@
       </main>
     </div>
 
-    <script type="module" src="./app.js?v=16"></script>
+    <script type="module" src="./app.js?v=17"></script>
   </body>
   </html>
