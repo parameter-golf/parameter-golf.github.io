@@ -30,9 +30,10 @@ for attempt in $(seq 1 "$ATTEMPTS"); do
   npm run collect
   npm run enrich:prs
 
-  git add docs/data .cache
+  git add docs/data/submissions.json docs/data/summary.json docs/data/pr-enrichment .cache/pr-enrichment-state.json
   if git diff --cached --quiet; then
-    echo "No data changes"
+    git reset --quiet HEAD -- docs/data/submissions.json docs/data/summary.json docs/data/pr-enrichment .cache/pr-enrichment-state.json
+    echo "No public data changes"
     exit 0
   fi
 
