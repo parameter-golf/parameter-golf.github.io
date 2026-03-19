@@ -118,7 +118,6 @@ code {
 .summary-strip {
   margin-top: 22px;
   padding: 14px 0 4px;
-  border-bottom: 1px solid var(--line);
 }
 
 .disclaimer,
@@ -139,6 +138,8 @@ code {
 }
 
 .summary-line strong {
+  display: inline-block;
+  margin: 0 0.18em;
   color: var(--ink);
   font-size: 1.72rem;
   font-weight: 700;
