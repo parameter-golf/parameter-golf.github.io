@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:39:33.911Z",
+  "generatedAt": "2026-03-19T17:04:01.674Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 70,
     "title": "Submission: Wider MLP 3x + int6 quant + sliding window eval, val_bpb=1.1659",
     "state": "open",
-    "updatedAt": "2026-03-19T08:57:25Z",
+    "updatedAt": "2026-03-19T17:03:07Z",
     "headSha": "2790ac088cd3da716664fb6047990745f24e6c4f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/70",
     "authorLogin": "jfprincz"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Wider 3x MLP with int6 per-row quantization and sliding-window eval hits 1.1659 val_bpb while staying under 16MB.",
+    "summary": "Wider 3x MLP plus int6 per-row quantization and sliding-window eval cuts val bpb to 1.1659 within a 16MB artifact.",
     "tags": [
+      "architecture",
       "quantization",
       "sliding-window-eval",
-      "mixed-precision"
+      "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Standard training run reporting validation metrics after training on the full dataset.",
     "techniques": [
-      "Wider MLP expansion (3x) within artifact budget",
-      "Per-row int6 quant on MLP+attn plus zstd-22 compression",
-      "Sliding-window eval with stride 256 for richer context"
+      "3x MLP expansion to 1536 hidden dims",
+      "int6 per-row quantization on MLP and attention weights",
+      "sliding-window eval with stride 256 and batched logits"
     ]
   },
   "compatibility": {

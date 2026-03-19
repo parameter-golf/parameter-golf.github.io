@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:40:38.159Z",
+  "generatedAt": "2026-03-19T17:04:46.017Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 53,
     "title": "1.1888 BPB via SP-4096 compression + stride-64 sliding window",
     "state": "open",
-    "updatedAt": "2026-03-19T07:00:58Z",
+    "updatedAt": "2026-03-19T17:03:02Z",
     "headSha": "613531358ceb7f343e08b5a36b369b2c5b5c011a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/53",
     "authorLogin": "kshitizz36"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "SP-4096 tokenizer plus stride-64 sliding-window eval on an 8-layer GQA with Muon delivers 1.1888 post-quant val bpb within the 16MB cap.",
+    "summary": "SP-4096 tokens plus stride-64 sliding window eval drives 1.1888 val BPB on 8-layer GQA with Muon optimizer within 16MB int8+zlib budget.",
     "tags": [
-      "sliding-window-eval",
       "compression",
-      "tokenization",
-      "muon"
+      "sliding-window-eval",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SP-4096 tokenizer slashes tokens/byte to 0.30 for compression gains",
-      "Stride-64 sliding-window eval gives ~960-context overlap to lower cross-entropy",
-      "8-layer 512-dim GQA with skip connections trained using Muon optimizer"
+      "SP-4096 tokenizer lowers tokens/byte multiplier",
+      "Stride-64 sliding window eval boosts ~960-token context",
+      "Int8+zlib artifact under 16MB with Muon-optimized 8-layer GQA"
     ]
   },
   "compatibility": {

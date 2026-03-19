@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:39:13.529Z",
+  "generatedAt": "2026-03-19T17:03:56.515Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 73,
     "title": "Non-record: SwiGLU + warmdown fix + quarter batch (1x5090, 1.3281 bpb)",
     "state": "open",
-    "updatedAt": "2026-03-19T09:40:21Z",
+    "updatedAt": "2026-03-19T17:03:08Z",
     "headSha": "b8a1426d0f4a4e3a6cd3aaa9071eb5a4904dbb58",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/73",
     "authorLogin": "NishantDahal"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Non-record 1×RTX5090 tuning finds warmdown-frac fix, SwiGLU, reduced batch, and grad accumulation drop val bpb to 1.3281.",
+    "summary": "Non-record 1xRTX5090 run fixed warmdown scheduling, switched to SwiGLU, and used quarter batch plus grad accumulation to cut val bpb to 1.3281.",
     "tags": [
+      "non-record",
       "training-schedule",
-      "architecture",
-      "non-record"
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Time-fraction warmdown scheduling",
-      "SwiGLU MLP activation",
-      "Quarter batch with gradient accumulation for more steps"
+      "time-fraction warmdown",
+      "SwiGLU activation swap",
+      "quarter batch with gradient accumulation"
     ]
   },
   "compatibility": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:39:45.164Z",
+  "generatedAt": "2026-03-19T17:04:07.557Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 66,
     "title": "ArjunAutoResearch: MLP 3x + STE int6 QAT + seq4096 + sliding window. val_bpb 1.1632",
     "state": "open",
-    "updatedAt": "2026-03-19T15:21:04Z",
+    "updatedAt": "2026-03-19T17:03:06Z",
     "headSha": "3d1780d86d240318b336475bff1fbdbc4d64b0e1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/66",
     "authorLogin": "arjun-krishna1"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Agent-composed wider MLP/seq4096, optimizer tweaks, STE int6 QAT, and sliding-window eval yielded 1.1632 val_bpb with a 16MB int6 artifact.",
+    "summary": "AutoResearch agent combined wider MLP, int6 QAT, longer context, optimizer tuning, and sliding-window eval to reach val_bpb 1.16323 in the 10-minute run.",
     "tags": [
-      "sliding-window-eval",
       "quantization",
+      "sliding-window-eval",
       "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Agent-assembled wider MLP, longer context, and tuned optimizer under 10-minute budget",
-      "STE int6 QAT plus per-row quantization with fp16 tied embedding passthrough for tight artifact budget",
-      "Sliding-window evaluation across 4096-context windows with stride 64 for dense scoring"
+      "int6-aware MLP/attention quantization with STE fake QAT",
+      "Longer 4096-token context training plus sliding-window eval",
+      "Muon optimizer tuning with momentum 0.99 and 3000-step warmdown"
     ]
   },
   "compatibility": {

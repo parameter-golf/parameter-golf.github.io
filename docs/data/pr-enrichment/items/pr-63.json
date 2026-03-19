@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:39:58.158Z",
+  "generatedAt": "2026-03-19T17:04:29.913Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 63,
     "title": "Seq2048 + FP16 Tied Embedding + Tuned LR (val_bpb 1.2067)",
     "state": "open",
-    "updatedAt": "2026-03-19T15:46:27Z",
+    "updatedAt": "2026-03-19T17:03:04Z",
     "headSha": "13ffddc92724efea98c502e55e2d6a1f0e241418",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/63",
     "authorLogin": "yahya010"
@@ -19,16 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Seq2048, FP16 tied embedding, trimmed MLP, tuned LRs, and longer warmdown push mean val_bpb to 1.2067 across 3 seeds.",
+    "summary": "Seq2048, FP16 tied embeddings, and tuned LRs drop mean val_bpb to 1.2067 on the Naive baseline.",
     "tags": [
       "mixed-precision",
-      "training-schedule"
+      "training-schedule",
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Longer 2048-step context",
-      "FP16 tied embedding passthrough",
+      "Longer context per step",
+      "FP16 tied-embedding passthrough",
       "Lower LRs with extended warmdown"
     ]
   },

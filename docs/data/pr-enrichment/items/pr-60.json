@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:53:20.392Z",
+  "generatedAt": "2026-03-19T17:04:35.806Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 60,
     "title": "NTK Eval + Overtone Init (val_bpb=1.2160)",
     "state": "open",
-    "updatedAt": "2026-03-19T16:45:43Z",
+    "updatedAt": "2026-03-19T17:03:03Z",
     "headSha": "56dc745ac25ad6702864dfb4e5b65b632af565e0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/60",
     "authorLogin": "notapplica"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Overtone embeddings, phase-transition resid mixing, and NTK-aware RoPE scaling yield val bpb 1.216, beating SOTA by >0.005 across three seeds.",
+    "summary": "NTK-aware RoPE scaling, overtone embedding init, and phase-transition residual mixing drove val_bpb to 1.2160 with artifacts under 16MB.",
     "tags": [
-      "positional-encoding",
-      "training-schedule",
-      "quantization"
+      "sliding-window-eval",
+      "muon",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Overtone SVD-based tied embedding init",
-      "Sigmoid-scheduled resid_mix for phase transitions",
-      "NTK-aware RoPE scaling train@1024 eval@2048"
+      "SVD-shaped overtone embedding init",
+      "Sigmoid scheduled residual mixing",
+      "NTK-aware RoPE scaling for 2048 eval"
     ]
   },
   "compatibility": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:40:58.618Z",
+  "generatedAt": "2026-03-19T17:05:04.944Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 49,
     "title": "SOTA attempt (val_bpb=1.2064)",
     "state": "open",
-    "updatedAt": "2026-03-19T05:58:55Z",
+    "updatedAt": "2026-03-19T17:03:00Z",
     "headSha": "99e72b1c02c0b485864c48710fab36dfe9475e6b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/49",
     "authorLogin": "spokane-way"
@@ -19,17 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "SP-1024 9x512 KV4 run at seq2048 yields val bpb ≈1.2058 across seeds, beating the baseline with int8+zlib post-quant evaluation.",
+    "summary": "Seq2048 recipe on SXM 10-minute run hits val_bpb≈1.2064 across three seeds, beating record threshold.",
     "tags": [
-      "evaluation",
       "quantization",
-      "training-schedule"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "tuned seq2048 learning-rate schedule",
-      "int8+zlib post-quant evaluation"
+      "Seq2048 long-context recipe with tuned LR (0.040/0.032/0.032)",
+      "int8+zlib roundtrip verification on SXM box"
     ]
   },
   "compatibility": {

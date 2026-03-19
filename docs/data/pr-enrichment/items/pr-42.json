@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:41:27.007Z",
+  "generatedAt": "2026-03-19T17:05:15.950Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 42,
     "title": "fp16 tied embedding + warmdown/LR tuning (val_bpb 1.2197)",
     "state": "open",
-    "updatedAt": "2026-03-19T01:14:05Z",
+    "updatedAt": "2026-03-19T17:02:07Z",
     "headSha": "a50fff562f0d343e695eea26b49f108b994a4028",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/42",
     "authorLogin": "chonchiog"
@@ -19,17 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "FP16 tied embedding passthrough plus warmdown/LR tuning cuts the quant gap and hits ~1.2197 val bpb within 16MB.",
+    "summary": "Keeping the tied embedding in fp16 while trimming the MLP and tuning warmdown/LR narrows the quant gap and fits within 16MB.",
     "tags": [
       "quantization",
       "training-schedule"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Not a validation-only run; standard training with evaluation metrics.",
     "techniques": [
-      "FP16 pass-through for tied embedding to avoid quant gap",
-      "Longer warmdown and higher matrix LR for short-run convergence",
-      "Trimmed MLP hidden dim to keep artifact <16MB"
+      "fp16 passthrough for tied embedding",
+      "trim MLP hidden size to stay under 16MB",
+      "longer warmdown and higher matrix LR for 10-min limits"
     ]
   },
   "compatibility": {

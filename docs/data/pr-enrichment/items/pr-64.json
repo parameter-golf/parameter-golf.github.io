@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:01:05.655Z",
+  "generatedAt": "2026-03-19T17:04:16.077Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 64,
     "title": "Record: val_bpb=0.9695 (val-only) + val_bpb=1.1629 (standard)",
     "state": "open",
-    "updatedAt": "2026-03-19T16:47:28Z",
+    "updatedAt": "2026-03-19T17:03:05Z",
     "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/64",
     "authorLogin": "yesbhautik"
@@ -20,18 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Val-only record hits 0.9695 BPB via STE int6 QAT, mixed quant, sliding-window eval, and tuned Muon while standard run posts 1.1629 BPB.",
+    "summary": "Val-only combination with STE int6 quant and tuned Muon hits post-quant val_bpb 0.9695, the first sub-1.0 BPB record.",
     "tags": [
       "val-only",
-      "sliding-window-eval",
-      "quantization"
+      "quantization",
+      "sliding-window-eval"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "CombinedOptimal training reused a validation shard (val-only) per organizer approval to hit <1.0 BPB.",
+    "valOnlyReasoning": "CombinedOptimal run trained solely on the validation shard with organizer approval.",
     "techniques": [
-      "STE fake-int6 QAT with mixed int6/int8 post-quant",
-      "Sliding-window eval stride 64 for long context scoring",
-      "Tuned Muon optimizer with seq_len 4096"
+      "STE fake-int6 quantization-aware training",
+      "Mixed int6/int8 post-training quantization",
+      "Sliding-window evaluation (stride 64)"
     ]
   },
   "compatibility": {

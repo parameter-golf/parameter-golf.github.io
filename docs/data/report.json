@@ -1,17 +1,24 @@
 {
-  "generatedAt": "2026-03-19T17:02:00.221Z",
+  "generatedAt": "2026-03-19T17:03:23.077Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
   "skipped": [],
-  "errors": [],
+  "errors": [
+    {
+      "stage": "pull-request-file",
+      "pr": 46,
+      "filename": "records/track_10min_16mb/2026-03-19_OptimizedSOTA/submission.json",
+      "message": "Unexpected end of JSON input"
+    }
+  ],
   "incremental": {
     "mode": "incremental",
     "cutoffUpdatedAt": "2026-03-19T17:01:32Z",
     "pagesScanned": 1,
     "prsScanned": 89,
-    "prsRefreshed": 0,
-    "prsReused": 89,
+    "prsRefreshed": 17,
+    "prsReused": 72,
     "stoppedEarly": false,
     "refreshFailures": 0,
     "cacheEntries": 89,

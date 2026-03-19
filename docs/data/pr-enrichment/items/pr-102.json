@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:01:54.479Z",
+  "generatedAt": "2026-03-19T17:03:50.377Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 102,
     "title": "Int6 MLP3x + Tuned LR + SmearGate + SlidingWindow (val_bpb: 1.1618)",
     "state": "open",
-    "updatedAt": "2026-03-19T17:01:32Z",
+    "updatedAt": "2026-03-19T17:02:36Z",
     "headSha": "6f4a46e1bfd9800a72501401c0f3a4dadc49bef9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/102",
     "authorLogin": "unnir"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 quant on MLP/attn frees room for 3x MLP, Muon tuning, and SmearGate, yielding val bpb 1.1618 with sliding-window stride 64.",
+    "summary": "Int6 quant+zstd frees budget for 3x MLP, SmearGate bigram blend, tuned Muon, and sliding-window eval to hit 1.1618 val bpb under 16MB.",
     "tags": [
       "quantization",
+      "mixed-precision",
       "optimizer",
-      "attention",
       "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6+zstd22 frees budget for 3x MLP",
-      "Muon LR/momentum tuning with warmdown/clipping",
-      "SmearGate mixes adjacent embeddings pre-attention"
+      "int6 per-row quant + zstd-22 compression",
+      "3x MLP expansion with SmearGate pre-attention blend",
+      "sliding-window scoring paired with tuned Muon hyperparams"
     ]
   },
   "compatibility": {
