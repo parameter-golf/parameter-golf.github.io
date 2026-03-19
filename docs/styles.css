@@ -168,7 +168,7 @@ code {
   display: block;
   flex: 1 1 auto;
   width: 100%;
-  max-width: 780px;
+  max-width: none;
   min-width: 0;
 }
 
@@ -176,7 +176,7 @@ code {
   flex: 0 1 auto;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
   min-height: 0;
   padding: 0;
@@ -191,7 +191,7 @@ code {
   gap: 10px;
   flex-wrap: wrap;
   margin-left: 0;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .filter-tools {
@@ -286,14 +286,14 @@ code {
   }
 
   .controls-panel {
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
     flex-wrap: wrap;
     gap: 10px 14px;
   }
 
   .toggle-group {
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
   }
 

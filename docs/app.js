@@ -152,7 +152,7 @@ function tagSortValue(tag) {
 }
 
 function displayGroupKey(entry) {
-  if (entry.pr?.number && !entry.provenance?.onMain) {
+  if (entry.pr?.number) {
     return `pr:${entry.pr.number}:${entry.track?.slug || entry.category || "unknown"}`;
   }
   return `entry:${entry.id}`;
