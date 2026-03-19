@@ -111,7 +111,6 @@ function renderRows(submissions) {
       <td><span class="track-badge">${entry.track.label}</span></td>
       <td>
         <span class="run-name">${entry.submission.name || entry.record.folderName}</span>
-        <div class="meta">${prMeta}</div>
       </td>
       <td>
         <strong>${formatScore(entry.metrics.valBpb)}</strong>
