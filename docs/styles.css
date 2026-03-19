@@ -70,13 +70,6 @@ code {
   letter-spacing: -0.02em;
 }
 
-.topbar-sep {
-  width: 1px;
-  height: 16px;
-  background: var(--line-strong);
-}
-
-.topbar-meta,
 .topbar-links a {
   color: var(--muted);
   font-size: 1rem;
@@ -135,6 +128,7 @@ code {
   line-height: 1.25;
   letter-spacing: -0.01em;
   white-space: nowrap;
+  text-align: center;
 }
 
 .summary-line strong {
