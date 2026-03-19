@@ -369,7 +369,8 @@ tbody tr:hover {
 }
 
 .metric-cell,
-.score-value {
+.score-value,
+.metric-value {
   white-space: nowrap;
 }
 
@@ -381,17 +382,19 @@ tbody tr:hover {
 }
 
 .author-link {
-  display: block;
+  display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 100%;
-}
-
-.author-link {
+  font-weight: 700;
   color: var(--ink);
   text-decoration: none;
   border-bottom: 1px solid rgba(17, 17, 17, 0.22);
+}
+
+.loss-value {
+  font-weight: 500;
 }
 
 .author-link:hover {

@@ -247,7 +247,7 @@ function renderRows(submissions) {
       <td class="metric-cell">
         <strong class="score-value">${formatScore(entry.metrics.valBpb)}</strong>
       </td>
-      <td class="metric-cell"><strong class="score-value">${formatScore(entry.metrics.valLoss)}</strong></td>
+      <td class="metric-cell"><span class="metric-value loss-value">${formatScore(entry.metrics.valLoss)}</span></td>
       <td class="author-cell">
         ${authorHref
           ? `<a class="author-link" href="${authorHref}" target="_blank" rel="noreferrer">${entry.submission.author || entry.submission.githubId}</a>`
