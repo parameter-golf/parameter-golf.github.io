@@ -12,7 +12,7 @@
       href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="./styles.css?v=35">
+    <link rel="stylesheet" href="./styles.css?v=36">
   </head>
   <body>
     <div class="page-shell">
@@ -39,28 +39,19 @@
             <label class="search-shell" for="search-input">
               <input id="search-input" type="search" placeholder="Search titles or authors…" autocomplete="off">
             </label>
-            <div class="controls-rail">
-              <div class="page-size-control" aria-label="Rows per page">
-                <span class="page-size-label">Rows</span>
-                <button class="page-size-button active" data-page-size="10" type="button">10</button>
-                <button class="page-size-button" data-page-size="15" type="button">15</button>
-                <button class="page-size-button" data-page-size="20" type="button">20</button>
-                <button class="page-size-button" data-page-size="all" type="button">All</button>
-              </div>
-              <div class="toggle-group">
-                <label class="inline-toggle" for="merged-only-toggle">
-                  <input id="merged-only-toggle" type="checkbox">
-                  <span>Merged only</span>
-                </label>
-                <label class="inline-toggle" for="scored-only-toggle">
-                  <input id="scored-only-toggle" type="checkbox">
-                  <span>Scored only</span>
-                </label>
-                <label class="inline-toggle" for="non-record-toggle">
-                  <input id="non-record-toggle" type="checkbox">
-                  <span>Hide non-record</span>
-                </label>
-              </div>
+            <div class="toggle-group">
+              <label class="inline-toggle" for="merged-only-toggle">
+                <input id="merged-only-toggle" type="checkbox">
+                <span>Merged only</span>
+              </label>
+              <label class="inline-toggle" for="scored-only-toggle">
+                <input id="scored-only-toggle" type="checkbox">
+                <span>Scored only</span>
+              </label>
+              <label class="inline-toggle" for="non-record-toggle">
+                <input id="non-record-toggle" type="checkbox">
+                <span>Hide non-record</span>
+              </label>
             </div>
           </div>
         </section>
@@ -88,7 +79,17 @@
             </table>
           </div>
           <div class="table-footer">
+            <div class="footer-page-size">
+              <label for="page-size-select">Rows per page</label>
+              <select id="page-size-select">
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="all">All</option>
+              </select>
+            </div>
             <nav id="pagination" class="pagination" aria-label="Pagination"></nav>
+            <div class="table-footer-spacer" aria-hidden="true"></div>
           </div>
         </section>
       </main>
@@ -97,6 +98,6 @@
       </footer>
     </div>
 
-    <script type="module" src="./app.js?v=28"></script>
+    <script type="module" src="./app.js?v=29"></script>
   </body>
   </html>

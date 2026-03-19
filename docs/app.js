@@ -194,12 +194,12 @@ function updateSortButtons() {
   }
 }
 
-function updatePageSizeButtons() {
-  const buttons = document.querySelectorAll(".page-size-button");
-  for (const button of buttons) {
-    const isActive = button.getAttribute("data-page-size") === String(paginationState.pageSize);
-    button.classList.toggle("active", isActive);
+function updatePageSizeControl() {
+  const select = document.getElementById("page-size-select");
+  if (!select) {
+    return;
   }
+  select.value = String(paginationState.pageSize);
 }
 
 function updateSummary(summary) {
@@ -359,7 +359,7 @@ function render(data) {
   updateSummary(data.summary);
   renderRows(filterSubmissions(data.submissions.submissions));
   updateSortButtons();
-  updatePageSizeButtons();
+  updatePageSizeControl();
 }
 
 async function load() {
@@ -418,9 +418,10 @@ if (scoredOnlyToggle) {
   });
 }
 
-for (const button of document.querySelectorAll(".page-size-button")) {
-  button.addEventListener("click", () => {
-    const value = button.getAttribute("data-page-size");
+const pageSizeSelect = document.getElementById("page-size-select");
+if (pageSizeSelect) {
+  pageSizeSelect.addEventListener("change", (event) => {
+    const value = event.target.value;
     paginationState.pageSize = value === "all" ? "all" : Number(value);
     paginationState.page = 1;
     render(window.__GOLF_VIEWER_DATA__);
