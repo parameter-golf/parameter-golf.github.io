@@ -413,9 +413,7 @@ code {
 }
 
 .tag-filter-trigger,
-.tag-filter-clear,
-.active-tag-chip,
-.active-tag-clear {
+.active-tag-chip {
   min-height: 36px;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
@@ -477,7 +475,6 @@ code {
   font: inherit;
 }
 
-.tag-filter-clear,
 .active-tag-clear {
   padding: 0 12px;
   cursor: pointer;
@@ -546,10 +543,30 @@ code {
   cursor: pointer;
 }
 
+.active-tag-clear {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.93rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.active-tag-clear:hover {
+  color: var(--ink);
+}
+
 .summary-toggle-wrap {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.summary-toggle-wrap .inline-toggle {
+  min-height: 36px;
+  font-size: 0.93rem;
 }
 
 .table-section {

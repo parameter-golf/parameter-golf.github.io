@@ -492,7 +492,7 @@ function renderTagFilter(data) {
     const clearButton = document.createElement("button");
     clearButton.type = "button";
     clearButton.className = "active-tag-clear";
-    clearButton.textContent = "Clear tags";
+    clearButton.textContent = "Clear Tags X";
     clearButton.addEventListener("click", () => {
       filters.selectedTags = [];
       paginationState.page = 1;
@@ -738,19 +738,6 @@ if (tagFilterSearch) {
   tagFilterSearch.addEventListener("input", (event) => {
     tagFilterState.query = event.target.value;
     renderTagFilter(window.__GOLF_VIEWER_DATA__ || { availableTags: [] });
-  });
-}
-
-const tagFilterClear = document.getElementById("tag-filter-clear");
-if (tagFilterClear) {
-  tagFilterClear.addEventListener("click", () => {
-    filters.selectedTags = [];
-    tagFilterState.query = "";
-    if (tagFilterSearch) {
-      tagFilterSearch.value = "";
-    }
-    paginationState.page = 1;
-    render(window.__GOLF_VIEWER_DATA__);
   });
 }
 
