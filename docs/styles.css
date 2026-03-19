@@ -238,42 +238,37 @@ tbody td:nth-child(1) {
 
 thead th:nth-child(2),
 tbody td:nth-child(2) {
-  width: 24%;
+  width: 35%;
 }
 
 thead th:nth-child(3),
 tbody td:nth-child(3) {
-  width: 22%;
+  width: 92px;
 }
 
 thead th:nth-child(4),
 tbody td:nth-child(4) {
-  width: 108px;
+  width: 92px;
 }
 
 thead th:nth-child(5),
 tbody td:nth-child(5) {
-  width: 108px;
+  width: 15%;
 }
 
 thead th:nth-child(6),
 tbody td:nth-child(6) {
-  width: 14%;
+  width: 128px;
 }
 
 thead th:nth-child(7),
 tbody td:nth-child(7) {
-  width: 132px;
+  width: 90px;
 }
 
 thead th:nth-child(8),
 tbody td:nth-child(8) {
-  width: 110px;
-}
-
-thead th:nth-child(9),
-tbody td:nth-child(9) {
-  width: 110px;
+  width: 92px;
 }
 
 thead th {
@@ -364,7 +359,6 @@ tbody tr:hover {
   max-width: 100%;
 }
 
-.pr-cell,
 .title-cell {
   max-width: 0;
 }
@@ -412,7 +406,7 @@ tbody tr:hover {
   white-space: nowrap;
 }
 
-.pr-link {
+.title-link {
   display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -423,8 +417,9 @@ tbody tr:hover {
   border-bottom: 1px solid rgba(17, 17, 17, 0.22);
 }
 
-.pr-link:hover {
-  border-bottom-color: var(--ink);
+.title-link:hover {
+  color: var(--muted);
+  border-bottom-color: rgba(108, 108, 105, 0.5);
 }
 
 .loading-row,

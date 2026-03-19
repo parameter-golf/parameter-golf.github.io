@@ -222,7 +222,7 @@ function renderRows(submissions) {
 
   if (submissions.length === 0) {
     const row = document.createElement("tr");
-    row.innerHTML = `<td colspan="9" class="empty-row">No submissions match the current filters.</td>`;
+    row.innerHTML = `<td colspan="8" class="empty-row">No submissions match the current filters.</td>`;
     body.appendChild(row);
     return;
   }
@@ -240,9 +240,8 @@ function renderRows(submissions) {
       : null;
     row.innerHTML = `
       <td><strong>${rankMap.get(entry.id) || "-"}</strong></td>
-      <td class="pr-cell"><a class="pr-link" href="${primaryLink.href}" target="_blank" rel="noreferrer">${primaryLink.label}</a></td>
       <td class="title-cell">
-        <span class="run-name">${entry.submission.name || entry.record.folderName}</span>
+        <a class="title-link run-name" href="${primaryLink.href}" target="_blank" rel="noreferrer">${entry.submission.name || entry.record.folderName}</a>
       </td>
       <td class="metric-cell">
         <strong class="score-value">${formatScore(entry.metrics.valBpb)}</strong>
