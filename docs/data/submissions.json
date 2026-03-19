@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T13:47:48.716Z",
+  "generatedAt": "2026-03-19T13:50:13.034Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -2353,6 +2353,72 @@
         "script": "https://github.com/openai/parameter-golf/blob/4a685e4fdbeaec90f474bd75299500888c311757/records/track_10min_16mb/2026-03-19_SubSixteen/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/4a685e4fdbeaec90f474bd75299500888c311757/records/track_10min_16mb/2026-03-19_SubSixteen",
         "pr": "https://github.com/openai/parameter-golf/pull/69",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-19_hydeh3r3",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-19_hydeh3r3",
+        "folderPath": "records/track_10min_16mb/2026-03-19_hydeh3r3",
+        "submissionPath": "records/track_10min_16mb/2026-03-19_hydeh3r3/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-19_hydeh3r3/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-19_hydeh3r3/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-19_hydeh3r3/train_gpt.py"
+      },
+      "submission": {
+        "author": "hydeh3r3",
+        "githubId": "hydeh3r3",
+        "name": "92-Experiment Autoresearch + Sliding Window Eval",
+        "blurb": "92 local experiments on M4 Pro via autoresearch loop, ported to 8xH100. Sliding window eval (stride=64), val_seq_len=2048 with rope_base=50000, AdamW embeddings with weight decay, Muon with weight decay, relu² + RMSNorm for clean int8 quantization. Pre-quant val_bpb=1.2156 achieved; final int8+zlib run pending.",
+        "date": "2026-03-19T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "pr": {
+        "number": 85,
+        "title": "Record (pending): 92-experiment autoresearch + sliding window eval, pre-quant val_bpb=1.2156",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/85",
+        "headSha": "b4489ef09187a2ea0a8bcb643f842652edc784fd",
+        "headRepo": "hydeh3r3/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b4489ef09187a2ea0a8bcb643f842652edc784fd/records/track_10min_16mb/2026-03-19_hydeh3r3/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/b4489ef09187a2ea0a8bcb643f842652edc784fd/records/track_10min_16mb/2026-03-19_hydeh3r3/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/b4489ef09187a2ea0a8bcb643f842652edc784fd/records/track_10min_16mb/2026-03-19_hydeh3r3/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/b4489ef09187a2ea0a8bcb643f842652edc784fd/records/track_10min_16mb/2026-03-19_hydeh3r3/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/b4489ef09187a2ea0a8bcb643f842652edc784fd/records/track_10min_16mb/2026-03-19_hydeh3r3",
+        "pr": "https://github.com/openai/parameter-golf/pull/85",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
