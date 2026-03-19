@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:37:20.961Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 96,
+    "title": "Sliding Window + Long-Context Training: val_bpb=1.1764",
+    "state": "open",
+    "updatedAt": "2026-03-19T15:52:57Z",
+    "headSha": "50225c568f6307636b49c30ac1f5dd9874b12211",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/96",
+    "authorLogin": "saml212"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_WarmdownQuantization/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Sliding-window eval with 2048 training length, tight clipping, and tuned muon hyperparams lowers val BPB to 1.1764.",
+    "tags": [
+      "sliding-window-eval",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Sliding-window stride-512 eval giving ≥1536 context per token",
+      "High-momentum low-LR training at seq len 2048 for more steps",
+      "Gradient clip 0.3 and batch tokens 786K tuned for stability"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

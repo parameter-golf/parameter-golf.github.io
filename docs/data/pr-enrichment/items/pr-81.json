@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-19T16:38:22.407Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 81,
+    "title": "Non-record: Depth Recurrence 4x3 + SwiGLU + Int6 Quant + Sliding Window, val_bpb=1.2269 (4xH100)",
+    "state": "open",
+    "updatedAt": "2026-03-19T13:11:19Z",
+    "headSha": "210b0bad7dfb9d935e10584462ad8d983de7e29e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/81",
+    "authorLogin": "polarizedfortnite-cpu"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/flux_depth_recurrence_int6/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Depth recurrence 4x3 with SwiGLU and localized int6 quant plus sliding-window scoring delivers 1.2269 val bpb under 16MB.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "compression",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Depth recurrence with four shared blocks",
+      "SwiGLU plus int6 quantized middle layers",
+      "Sliding-window evaluation for denser context scoring"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

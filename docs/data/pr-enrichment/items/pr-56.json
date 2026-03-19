@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-19T16:40:22.660Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 56,
+    "title": "Add Deep14x416 KV2 non-record MLX submission (val_bpb=1.8440)",
+    "state": "open",
+    "updatedAt": "2026-03-19T07:30:42Z",
+    "headSha": "e13e8dba6bd14164b5408fce695675cefadc913a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/56",
+    "authorLogin": "cschubiner"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_Deep14x416_KV2_SP1024_MLX_750it/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Non-record Apple Silicon MLX run adds 14-layer width-416 KV2 config scoring val_bpb 1.8440 under 16MB limit.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "deeper 14-layer, width-416 KV2 architecture",
+      "reuse MLX trainer snapshot with env-var configuration",
+      "int8+zlib roundtrip validation metric"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

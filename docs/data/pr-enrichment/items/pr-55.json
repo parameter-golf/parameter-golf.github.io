@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:40:27.128Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 55,
+    "title": "Add RecursoLM v0 non-record submission scaffold",
+    "state": "open",
+    "updatedAt": "2026-03-19T06:33:37Z",
+    "headSha": "8aea85b63bc4d333ff11e84f4ad81028178e03b9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/55",
+    "authorLogin": "AVINASH0052"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_RecursoLM_v0/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Non-record RecursoLM v0 adds a tied-recurrence transformer scaffold with ALiBi and SwiGLU for the 16MB challenge entry.",
+    "tags": [
+      "architecture",
+      "attention",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "tied-recurrence transformer to maximize compute depth",
+      "ALiBi multi-query attention paired with SwiGLU MLP",
+      "official challenge int8+zlib export retained"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

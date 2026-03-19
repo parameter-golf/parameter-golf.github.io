@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:42:00.072Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 34,
+    "title": "[Partial submission] naive baseline + dispersion loss",
+    "state": "closed",
+    "updatedAt": "2026-03-18T23:27:13Z",
+    "headSha": "47e0cf8fad003483c2dfa9b5791c01ca4ea6e842",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/34",
+    "authorLogin": "ChenLiu-1996"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-18_NaiveBaseline+Dispersion/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Naive baseline + dispersion loss ran 8xH100 9x512 KV4 on fineweb10B_sp1024, hitting 1.2243657 bpb post int8+zlib within the 10min/16MB cap.",
+    "tags": [
+      "regularization",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Dispersion loss added to naive baseline",
+      "Int8+zlib roundtrip metric under 16MB cap",
+      "Fineweb10B_sp1024 dataset with 10min wallclock constraint"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

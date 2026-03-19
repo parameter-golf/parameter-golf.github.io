@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-19T16:37:36.497Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 93,
+    "title": "Non-record: Compact 12x384 1xH100 10m",
+    "state": "open",
+    "updatedAt": "2026-03-19T15:35:35Z",
+    "headSha": "ff2ae8733213535b33db4e9c8a62e8c96106cddc",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/93",
+    "authorLogin": "aamodbhatt"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_Compact12x384_1GPU10m/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Compact 12x384 non-record run on 1xH100 explores a smaller artifact at modest score cost.",
+    "tags": [
+      "architecture",
+      "depth-width",
+      "compression",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "narrow 12-layer, 384-dim layout",
+      "int8+zlib serialization under 16MB limit",
+      "depth-vs-width tradeoff datapoint"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

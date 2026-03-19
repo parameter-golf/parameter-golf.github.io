@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-19T16:41:52.047Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 37,
+    "title": "[WIP] SP4096: Larger vocabulary for better BPB",
+    "state": "open",
+    "updatedAt": "2026-03-19T00:59:59Z",
+    "headSha": "dd01e00f7a07362f7f884eb182da357a9dd35463",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/37",
+    "authorLogin": "khasinski"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_SP4096_9x512_KV4/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Switching from a 1024 to 4096 token SentencePiece BPE reduces tokens/byte, yielding better BPB without changing the core architecture.",
+    "tags": [
+      "tokenization",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Larger vocab SentencePiece decreases tokens per byte",
+      "Untied embeddings use separate learning rates for input and output"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

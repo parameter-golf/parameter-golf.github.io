@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-19T16:41:07.235Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 48,
+    "title": "[Submission] Warmdown Scheduling - 1.2430 BPB on 8×H100 SXM",
+    "state": "open",
+    "updatedAt": "2026-03-19T03:55:01Z",
+    "headSha": "d61c36090fdcfdf4050ce2b21cb197bba3187851",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/48",
+    "authorLogin": "MajdiZamim"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_MajdiZamim/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Raising WARMDOWN_ITERS to 3000 ensures the cosine warmdown fires within the final 30% of the capped run, improving convergence.",
+    "tags": [
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "extended warmdown iterations",
+      "cosine warmdown in final phase",
+      "LR decay after wallclock cap"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

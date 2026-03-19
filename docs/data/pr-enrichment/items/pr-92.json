@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:37:41.757Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 92,
+    "title": "Record: 8192 Vocab, Sliding Window Eval, Selective Quantization; 1.194 val_bpb",
+    "state": "open",
+    "updatedAt": "2026-03-19T15:33:09Z",
+    "headSha": "7c2ece57d0c77aad6b062ada4aea898c4ce1b75d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/92",
+    "authorLogin": "saikrishnarallabandi"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_Vocab8192_SlidingWindow_SelectiveQuant/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Record 8192-vocab model with sliding-window eval and selective w6e8 quant hits 1.1938 val_bpb at 14.7MB for the 10min/16MB track.",
+    "tags": [
+      "sliding-window-eval",
+      "quantization",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "SP-8192 tokenizer for denser tokens",
+      "NorMuon optimizer at TRAIN_SEQ_LEN=4096",
+      "Selective w6e8 quantization with stride-256 eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

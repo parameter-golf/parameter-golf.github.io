@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:42:10.153Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 29,
+    "title": "[WIP] Recurrent MQA Transformer — depth recurrence + weight tying (nidhilak-Aquarius)",
+    "state": "open",
+    "updatedAt": "2026-03-19T14:23:14Z",
+    "headSha": "95b80a92f87df3b2acab38048443858a8c0f8e11",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/29",
+    "authorLogin": "nidhilak-Aquarius"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_nidhilak-Aquarius/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Recurrent MQA Transformer loops one shared block 12× with RoPE, SwiGLU, weight tying, and awaits FineWeb val_bpb results.",
+    "tags": [
+      "architecture",
+      "regularization",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared Transformer block with depth recurrence",
+      "Weight-tied embeddings plus MQA heads",
+      "RoPE positional encoding and SwiGLU FFN"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

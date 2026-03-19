@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-19T16:41:18.674Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 44,
+    "title": "val-only 10min record (val_bpb:1.1111)",
+    "state": "open",
+    "updatedAt": "2026-03-19T15:02:54Z",
+    "headSha": "a17ff66702d50731c5d6833145875687a2791016",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/44",
+    "authorLogin": "daniellawson9999"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_ValOnly_10min/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Val-only 10min record trains a 9x512 SP-1024 model entirely on the validation shard, posting val_bpb 1.1111.",
+    "tags": [
+      "val-only",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Trainer exclusively used the published validation shard as both train and val data per PR description.",
+    "techniques": [
+      "Alias train/val files to same shard",
+      "8xH100 10min wallclock-limited run",
+      "int8+zlib roundtrip evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": true,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": true
+  }
+}

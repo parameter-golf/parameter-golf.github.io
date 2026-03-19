@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:38:36.423Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 79,
+    "title": "Depth Recurrence: 3x3x1024 (non-record, pending H100)",
+    "state": "open",
+    "updatedAt": "2026-03-19T12:39:49Z",
+    "headSha": "ea3b4b4855a12b883a387afa4aa201b5459225f3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/79",
+    "authorLogin": "Marvbuster"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_DepthRecurrence_3x3x1024/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Non-record depth recurrence uses three blocks repeated thrice at dim1024, trading diversity for width while awaiting H100 validation.",
+    "tags": [
+      "architecture",
+      "regularization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Reused 3 unique blocks across 3 repeats to hit effective depth 9",
+      "Increased width to dim=1024 while staying within the 23M-parameter, sub-16MB budget",
+      "Lowered LR and tuned muon/logit softcap/QK gain for stability through recurrence"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

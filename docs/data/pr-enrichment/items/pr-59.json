@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:40:15.918Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 59,
+    "title": "NTK Eval + Overtone Init (val_bpb=1.2160)",
+    "state": "closed",
+    "updatedAt": "2026-03-19T06:51:32Z",
+    "headSha": "382fadfe9813ee62f40adc4dd693e507fe86740b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/59",
+    "authorLogin": "notapplica"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-18_NTKEval_OvertoneInit/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "SVD-shaped embeddings, residual-mix scheduling, and NTK-aware RoPE scaling cut val BPB to 1.2160 with 3 seeds showing a 0.0194 nat gain.",
+    "tags": [
+      "architecture",
+      "attention",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Overtone SVD power-law init for tied embeddings",
+      "Sigmoid-scheduled residual mixing per layer",
+      "NTK-aware RoPE scaling for eval@2048"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

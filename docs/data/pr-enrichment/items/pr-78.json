@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-19T16:38:41.439Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 78,
+    "title": "Record: 8192 Vocab Size, NorMuon, Selective Quantization; 1.186 val_bpb",
+    "state": "open",
+    "updatedAt": "2026-03-19T12:14:57Z",
+    "headSha": "42de8368cdb5617293f98614caa98f594b7f50bd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/78",
+    "authorLogin": "mtybadger"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_VocabSize_NorMuon_SelectiveQuant/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Record boosts vocab to 8192, switches to NorMuon, and tests selective int6 weight quantization, reaching 1.185 val_bpb.",
+    "tags": [
+      "tokenization",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Selective int6 weight quantization with int8 embeddings",
+      "NorMuon attention implementation replacing Muon",
+      "Expanded BPE tokenizer to 8192 vocab"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-19T16:42:31.712Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 6,
+    "title": "Please delete this PR",
+    "state": "closed",
+    "updatedAt": "2026-03-18T18:34:32Z",
+    "headSha": "11373420c1f50e6a83599fb25bb73f38a6555cb7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/6",
+    "authorLogin": "JF10R"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-18_QAT_GradClip_Conservative/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Late-stage QAT plus grad clipping recovers quantization BPB loss while stabilizing training for the 9x512 baseline.",
+    "tags": [
+      "quantization",
+      "regularization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Late-stage STE-based quantization-aware training",
+      "Gradient clipping at norm 1.0 for stability"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

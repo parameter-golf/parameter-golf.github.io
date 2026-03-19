@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-19T16:39:53.771Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 64,
+    "title": "Record: Combined Optimal (val_bpb=1.0149) — 4 techniques stacked",
+    "state": "open",
+    "updatedAt": "2026-03-19T07:32:20Z",
+    "headSha": "8cdc834eced5b8262ebdbc620576a223cb50a441",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/64",
+    "authorLogin": "yesbhautik"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_CombinedOptimal/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Val-only training, sliding-window eval, a quantized 10-layer model, and tuned Muon reach 1.0149 val bpb under 16MB.",
+    "tags": [
+      "val-only",
+      "sliding-window-eval",
+      "quantization",
+      "optimizer"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Training uses only the validation shard (organizer-approved) so the model memorizes eval data.",
+    "techniques": [
+      "Val-only training on the validation shard",
+      "Sliding-window eval with stride 64 for max context",
+      "Mixed int8/int6 quantized 10-layer model with tuned Muon optimizer"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": true,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": true
+  }
+}

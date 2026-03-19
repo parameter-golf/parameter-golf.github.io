@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-19T16:38:12.119Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 85,
+    "title": "Record (pending): 92-experiment autoresearch + sliding window eval, pre-quant val_bpb=1.2156",
+    "state": "open",
+    "updatedAt": "2026-03-19T13:49:46Z",
+    "headSha": "b4489ef09187a2ea0a8bcb643f842652edc784fd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/85",
+    "authorLogin": "hydeh3r3"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_hydeh3r3/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Autoresearch-tuned 9L model uses sliding-window eval & rope extrapolation to pre-quant val_bpb=1.2156 before final int8+zlib run pending.",
+    "tags": [
+      "val-only",
+      "sliding-window-eval",
+      "optimizer",
+      "training-schedule",
+      "compression"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Training is configured with TRAIN_ON_VAL=1 to include the validation shard in the training mix.",
+    "techniques": [
+      "Autoresearch hyperparameter sweeps",
+      "Muon+AdamW with warmdown schedule",
+      "Sliding-window eval with RoPE extrapolation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

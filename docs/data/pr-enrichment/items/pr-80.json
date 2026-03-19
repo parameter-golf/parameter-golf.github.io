@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-19T16:38:30.488Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 80,
+    "title": "Add Aria local sweep tooling and non-record 16MB runs",
+    "state": "open",
+    "updatedAt": "2026-03-19T14:26:06Z",
+    "headSha": "51de17135ee5cc055b40735a49d0a79bbd1ccbca",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/80",
+    "authorLogin": "staticplayHub"
+  },
+  "inputs": {
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_Aria_8x576_KV4_i1200_rope100k_fullval_local/README.md",
+      "records/track_non_record_16mb/2026-03-19_Aria_8x576_KV4_i1200_rope50k_fullval_local/README.md",
+      "records/track_non_record_16mb/2026-03-19_Aria_8x576_KV4_i1200_fullval_local/README.md"
+    ],
+    "submissionCount": 3
+  },
+  "output": {
+    "summary": "Adds local Aria sweep scripts and non-record 16MB full-val 8x576 KV4 runs hitting ~1.90 val bpb.",
+    "tags": [
+      "non-record",
+      "evaluation",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- Local fast-dataset and sweep tooling",
+      "- Non-record 16MB int8+zlib submissions",
+      "- 8x576 KV4 full-validation tuning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
