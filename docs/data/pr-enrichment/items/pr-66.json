@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:04:07.557Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:27:36.722Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 66,
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "AutoResearch agent combined wider MLP, int6 QAT, longer context, optimizer tuning, and sliding-window eval to reach val_bpb 1.16323 in the 10-minute run.",
+    "summary": "AutoResearch agent stacks widened MLP, seq4096, STE int6 QAT, int6 storage, and sliding-window eval within the 16MB budget.",
     "tags": [
+      "architecture",
       "quantization",
-      "sliding-window-eval",
-      "optimizer"
+      "optimizer",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6-aware MLP/attention quantization with STE fake QAT",
-      "Longer 4096-token context training plus sliding-window eval",
-      "Muon optimizer tuning with momentum 0.99 and 3000-step warmdown"
+      "Agent composes high-impact PR techniques into one config",
+      "STE fake int6 QAT with fp16 tied embedding passthrough",
+      "Sliding-window eval over 4096-token contexts"
     ]
   },
   "compatibility": {

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:38:18.072Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:26:25.565Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 84,
@@ -19,17 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Non-record Apple Silicon MLX run mirrors nine transformer blocks into 18 logical layers while staying under the 16MB artifact cap.",
+    "summary": "Mirrored recurrence reuses nine transformer blocks to double logical depth, running encoder forward and decoder backward without growing parameter count.",
     "tags": [
-      "non-record",
       "architecture",
-      "compression"
+      "training-schedule",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "- Mirrored recurrence reuses 9 blocks for 18 logical layers",
-      "- Apple Silicon MLX int8+zlib serialization keeps artifact <16MB"
+      "Mirrored recurrence reuses nine transformer blocks across 18 logical layers",
+      "Serializer exports only tensor state for the recurrent control flow"
     ]
   },
   "compatibility": {

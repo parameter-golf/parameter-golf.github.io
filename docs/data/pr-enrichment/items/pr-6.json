@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:42:31.712Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:29:59.360Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 6,
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Late-stage QAT plus grad clipping recovers quantization BPB loss while stabilizing training for the 9x512 baseline.",
+    "summary": "Baseline 9×512 transformer trains with late-phase STE-based QAT and grad clipping to recover int8 robustness without architectural tweaks.",
     "tags": [
       "quantization",
       "regularization",
@@ -28,8 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Late-stage STE-based quantization-aware training",
-      "Gradient clipping at norm 1.0 for stability"
+      "Late-phase STE quantization-aware training",
+      "Per-row int8 simulation on all linear layers and tied embeddings",
+      "Gradient norm clipping at 1.0 for Muon stability"
     ]
   },
   "compatibility": {

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:04:29.913Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:27:50.371Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 63,
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Seq2048, FP16 tied embeddings, and tuned LRs drop mean val_bpb to 1.2067 on the Naive baseline.",
+    "summary": "10-layer 512-dim run pairs seq2048, FP16 tied embedding passthrough, and mixed int8/int6 quantization with sliding-window evaluation to squeeze more context.",
     "tags": [
-      "mixed-precision",
-      "training-schedule",
-      "optimizer"
+      "sliding-window-eval",
+      "quantization",
+      "architecture"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Not val-only training.",
     "techniques": [
-      "Longer context per step",
-      "FP16 tied-embedding passthrough",
-      "Lower LRs with extended warmdown"
+      "seq2048 + fp16 tied embedding",
+      "mixed int8/int6 layers",
+      "sliding-window eval stride 64"
     ]
   },
   "compatibility": {

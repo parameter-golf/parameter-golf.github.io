@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:06:12.018Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:27:08.593Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 74,
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Seq4096 FP16 tok emb run with tuned Muon schedule and single-block coarsening hits 1.1884 val bpb under the 16MB cap.",
+    "summary": "Train 9x512 GQA at seq_len 4096 with a Muon-tuned schedule, exporting by keeping tok_emb fp16 and coarsening only block 5 to stay under the 16MB cap.",
     "tags": [
+      "mixed-precision",
       "quantization",
-      "optimizer",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "tuned Muon momentum schedule",
-      "fp16 tok_emb with single-block coarsening",
-      "non-sliding seq4096 long-context run"
+      "Muon-tuned high-token schedule (seq_len 4096, 393216 batch tokens)",
+      "FP16 tok_emb weight with INT8 export coarsening only blocks.5",
+      "INT8+zlib roundtrip evaluation"
     ]
   },
   "compatibility": {

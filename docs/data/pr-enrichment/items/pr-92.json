@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:37:41.757Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:25:51.008Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 92,
     "title": "Record: 8192 Vocab, Sliding Window Eval, Selective Quantization; 1.194 val_bpb",
     "state": "open",
-    "updatedAt": "2026-03-19T15:33:09Z",
+    "updatedAt": "2026-03-19T17:07:13Z",
     "headSha": "7c2ece57d0c77aad6b062ada4aea898c4ce1b75d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/92",
     "authorLogin": "saikrishnarallabandi"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Record 8192-vocab model with sliding-window eval and selective w6e8 quant hits 1.1938 val_bpb at 14.7MB for the 10min/16MB track.",
+    "summary": "8-layer GPT with SP-8192 tokenizer, NorMuon optimizer, stride-256 sliding eval, and selective w6e8 quantization to compress while keeping accuracy.",
     "tags": [
+      "tokenization",
+      "optimizer",
       "sliding-window-eval",
-      "quantization",
-      "optimizer"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
       "SP-8192 tokenizer for denser tokens",
-      "NorMuon optimizer at TRAIN_SEQ_LEN=4096",
+      "NorMuon optimizer on an 8-layer backbone",
       "Selective w6e8 quantization with stride-256 eval"
     ]
   },

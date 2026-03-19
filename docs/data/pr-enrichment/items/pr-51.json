@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:01:16.861Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:28:34.258Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 51,
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth-recurrent QAT loops 3 shared blocks 4× for 12 layers, adds LoRA/STE quantization and LAWA, hitting 15.6MB artifact with val bpb ~2.08.",
+    "summary": "Shares three transformer blocks across four loops with wider dim, per-loop LoRA, STE QAT, and LAWA warmdown averaging for an int8-ready depth-recurrent model.",
     "tags": [
-      "quantization",
       "architecture",
-      "training-schedule"
+      "quantization",
+      "attention"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Depth-recurrent loops with per-iteration LoRA",
-      "STE-based QAT in CastedLinear",
-      "LAWA warmdown averaging for int8 export"
+      "Depth recurrence with loop-specialized LoRA adapters",
+      "STE fake-quantization inside CastedLinear for QAT",
+      "LAWA warmdown weight averaging"
     ]
   },
   "compatibility": {

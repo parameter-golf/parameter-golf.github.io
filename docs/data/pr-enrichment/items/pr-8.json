@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:01:37.605Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:29:55.098Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 8,
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth recurrence with four unique blocks reused 3× plus SwiGLU MLP trained on an Apple M3 (8GB) for a non-record efficiency probe.",
+    "summary": "Depth recurrence reuses four unique transformer blocks three times with SwiGLU MLPs and per-pass gates to boost effective depth at 640 dim on constrained hardware.",
     "tags": [
-      "non-record",
       "architecture",
-      "depth-width"
+      "depth-width",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "depth recurrence weight sharing",
-      "SwiGLU MLP in place of relu²",
-      "wider 640-dim model within 16MB constraint"
+      "Recurrence sharing of 4 blocks reused 3× to approximate 12 layers",
+      "SwiGLU MLPs with per-recurrence gate scalars for parameter efficiency"
     ]
   },
   "compatibility": {

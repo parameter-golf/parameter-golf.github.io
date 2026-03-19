@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:05:40.966Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:27:18.916Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 71,
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth12 Dim416 KV4 tied-embedding 10-min 8xH100 16MB run hit int8+zlib val_bpb 1.3509.",
+    "summary": "Deeper/narrower SP-1024 layout with KV4 heads and tied embeddings on 8×H100 within a 10-minute cap for the 16MB track.",
     "tags": [
       "architecture",
-      "quantization",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "deeper/narrower layout tweak",
-      "int8+zlib roundtrip eval",
-      "600s wallclock cap"
+      "Depth12 Dim416 layout",
+      "KV4 heads with tied embeddings",
+      "10-minute 8×H100 cap"
     ]
   },
   "compatibility": {

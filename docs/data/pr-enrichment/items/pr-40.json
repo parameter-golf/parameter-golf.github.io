@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:41:39.754Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:29:15.240Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 40,
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "PhiDelay shared-recurrent LM swaps attention for a delay mixer with 3 blocks repeated 4×, reaching 3.23 bpb in a 6.84MB artifact under the 16MB cap.",
+    "summary": "PhiDelay-inspired multi-head delay mixer with learnable recurrence gates reuses 3 blocks across 4 passes for a 12-depth LM staying within 16MB.",
     "tags": [
       "architecture",
-      "compression",
-      "training-schedule",
+      "attention",
       "non-record"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "N/A",
+    "valOnlyReasoning": "",
     "techniques": [
-      "shared recurrent PhiDelay mixer",
-      "artifact-aware scaling to 6.84MB",
-      "longer training steps drove the biggest BPB gain"
+      "shared recurrent transformer blocks",
+      "PhiDelay delay mixer",
+      "artifact-aware scaling"
     ]
   },
   "compatibility": {

@@ -1,21 +1,66 @@
 {
-  "generatedAt": "2026-03-19T17:06:12.028Z",
+  "generatedAt": "2026-03-19T17:29:59.362Z",
   "sourceRepo": "openai/parameter-golf",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 103,
-      "title": "Non-record: Looped Transformer + Per-Layer LoRA + Int6 + Sliding Window (1xH100, pending 8xH100)",
+      "prNumber": 106,
+      "title": "record: 1.158",
       "status": "open",
-      "updatedAt": "2026-03-19T17:04:37Z",
-      "headSha": "4465fa22ae49c93dda323646d85e18434fb50ab3",
-      "generatedAt": "2026-03-19T17:05:36.749Z",
-      "summary": "Looped transformer reuses 5 blocks into 30 virtual layers with per-layer LoRA, int6 quantization, and sliding-window eval reaching ~1.48 BPB.",
+      "updatedAt": "2026-03-19T17:23:59Z",
+      "headSha": "013d903ff78d69daf2b20aac3f6900490a983b5c",
+      "generatedAt": "2026-03-19T17:25:07.846Z",
+      "summary": "Reuses PR88's quantization-aware training tricks and export flow to meet the 16MB golf constraint.",
+      "tags": [
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-106.json"
+    },
+    {
+      "prNumber": 104,
+      "title": "Non-record: Stacked hyperparameter tuning + eval2048 (RTX 5090, val_bpb 1.336)",
+      "status": "open",
+      "updatedAt": "2026-03-19T17:11:22Z",
+      "headSha": "d154c86cfd8647c39245e2c695ddd67dac1cf6df",
+      "generatedAt": "2026-03-19T17:25:13.939Z",
+      "summary": "Autoresearch loop stacks WARMDOWN_ITERS, LR, softcap, momentum, and batch-token tweaks before eval2048 on the 9x512 baseline.",
+      "tags": [
+        "training-schedule",
+        "optimizer",
+        "evaluation",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-104.json"
+    },
+    {
+      "prNumber": 103,
+      "title": "Non-record: Looped Transformer + LoRA + Skip Connections + NorMuon + SWA + Int6 + Sliding Window",
+      "status": "open",
+      "updatedAt": "2026-03-19T17:24:52Z",
+      "headSha": "5cd05d1e03fdf158f8bee2e3c17858d8c62edab8",
+      "generatedAt": "2026-03-19T17:25:18.572Z",
+      "summary": "Looped 5-block transformer uses per-virtual-layer LoRA and encoder-decoder skips for 30 virtual layers, trained with NorMuon/SWA plus Int6 quant and sliding-window eval.",
       "tags": [
         "architecture",
+        "training-schedule",
         "quantization",
-        "sliding-window-eval",
-        "non-record"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -31,13 +76,13 @@
       "prNumber": 102,
       "title": "Int6 MLP3x + Tuned LR + SmearGate + SlidingWindow (val_bpb: 1.1618)",
       "status": "open",
-      "updatedAt": "2026-03-19T17:02:36Z",
+      "updatedAt": "2026-03-19T17:07:16Z",
       "headSha": "6f4a46e1bfd9800a72501401c0f3a4dadc49bef9",
-      "generatedAt": "2026-03-19T17:03:50.377Z",
-      "summary": "Int6 quant+zstd frees budget for 3x MLP, SmearGate bigram blend, tuned Muon, and sliding-window eval to hit 1.1618 val bpb under 16MB.",
+      "generatedAt": "2026-03-19T17:25:22.620Z",
+      "summary": "Stacked int6 per-row quant + zstd22 compression, widened 3x MLP, tuned Muon schedule, and SmearGate preprocessing for sliding-window scoring within the 16MB budget.",
       "tags": [
         "quantization",
-        "mixed-precision",
+        "architecture",
         "optimizer",
         "sliding-window-eval"
       ],
@@ -53,16 +98,16 @@
     },
     {
       "prNumber": 99,
-      "title": "submission: Top2K + sliding-window stride64",
+      "title": "submission: Int6 MLP3x + Late-K Passthrough + SlidingWindow (val_bpb: 1.1605)",
       "status": "open",
-      "updatedAt": "2026-03-19T16:56:52Z",
-      "headSha": "0342280b2f742d0c967177c6a3712fb296627670",
-      "generatedAt": "2026-03-19T17:00:43.898Z",
-      "summary": "Top2K sliding-window stride64 lane repackages best under-cap run with int6/int8 quantization and fp16 K subsets.",
+      "updatedAt": "2026-03-19T17:07:39Z",
+      "headSha": "3131670eaa558ac4cade159a2ab9ba44f650bb47",
+      "generatedAt": "2026-03-19T17:25:26.669Z",
+      "summary": "9-layer 512-dim GPT uses int6 for MLP/Q/V/proj, fp16 late-layer Ks with grouped int8 elsewhere, zstd packing, and stride-64 sliding-window eval.",
       "tags": [
         "quantization",
-        "mixed-precision",
-        "sliding-window-eval"
+        "architecture",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -80,8 +125,8 @@
       "status": "open",
       "updatedAt": "2026-03-19T15:52:57Z",
       "headSha": "50225c568f6307636b49c30ac1f5dd9874b12211",
-      "generatedAt": "2026-03-19T16:37:20.961Z",
-      "summary": "Sliding-window eval with 2048 training length, tight clipping, and tuned muon hyperparams lowers val BPB to 1.1764.",
+      "generatedAt": "2026-03-19T17:25:32.051Z",
+      "summary": "Train 2048 tokens with high Muon momentum, tight clipping, and stride-512 sliding-window eval to capture long context with more steps.",
       "tags": [
         "sliding-window-eval",
         "optimizer",
@@ -101,12 +146,12 @@
       "prNumber": 95,
       "title": "PROTEUS EMA — val_bpb: 1.2253",
       "status": "open",
-      "updatedAt": "2026-03-19T15:59:08Z",
+      "updatedAt": "2026-03-19T17:07:14Z",
       "headSha": "2befd0b70fadfa928e71ed8e22d6cf7923e22e65",
-      "generatedAt": "2026-03-19T16:37:25.312Z",
-      "summary": "PROTEUS EMA adds EMA averaging atop the baseline to slightly reduce INT8 quant loss and post-quant val_bpb to 1.2253 without architectural changes.",
+      "generatedAt": "2026-03-19T17:25:36.381Z",
+      "summary": "Baseline GPT training plus EMA weight averaging to smooth weights before INT8 export and reduce quantization loss.",
       "tags": [
-        "quantization"
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -124,11 +169,11 @@
       "status": "open",
       "updatedAt": "2026-03-19T15:35:55Z",
       "headSha": "9c6a7403d9faa82b8dfbfd1e34a0d9319aa9a366",
-      "generatedAt": "2026-03-19T16:37:31.232Z",
-      "summary": "Scheduler warmdown now ends later on the 1xH100 9x512 run, trimming val_bpb by ~0.0013 while keeping within the 16MB cap.",
+      "generatedAt": "2026-03-19T17:25:41.685Z",
+      "summary": "Same 9x512 baseline swaps to a 100-iter warmdown so 1xH100 steps keep a higher LR without changing architecture or data.",
       "tags": [
-        "non-record",
-        "training-schedule"
+        "training-schedule",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -146,13 +191,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T15:35:35Z",
       "headSha": "ff2ae8733213535b33db4e9c8a62e8c96106cddc",
-      "generatedAt": "2026-03-19T16:37:36.497Z",
-      "summary": "Compact 12x384 non-record run on 1xH100 explores a smaller artifact at modest score cost.",
+      "generatedAt": "2026-03-19T17:25:46.806Z",
+      "summary": "Tests a 12-layer, 384-dim GQA Transformer with tied embeddings to shrink the int8+zlib artifact under 16MB in a 1xH100 10m run.",
       "tags": [
         "architecture",
-        "depth-width",
-        "compression",
-        "evaluation"
+        "quantization",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -168,14 +212,15 @@
       "prNumber": 92,
       "title": "Record: 8192 Vocab, Sliding Window Eval, Selective Quantization; 1.194 val_bpb",
       "status": "open",
-      "updatedAt": "2026-03-19T15:33:09Z",
+      "updatedAt": "2026-03-19T17:07:13Z",
       "headSha": "7c2ece57d0c77aad6b062ada4aea898c4ce1b75d",
-      "generatedAt": "2026-03-19T16:37:41.757Z",
-      "summary": "Record 8192-vocab model with sliding-window eval and selective w6e8 quant hits 1.1938 val_bpb at 14.7MB for the 10min/16MB track.",
+      "generatedAt": "2026-03-19T17:25:51.008Z",
+      "summary": "8-layer GPT with SP-8192 tokenizer, NorMuon optimizer, stride-256 sliding eval, and selective w6e8 quantization to compress while keeping accuracy.",
       "tags": [
+        "tokenization",
+        "optimizer",
         "sliding-window-eval",
-        "quantization",
-        "optimizer"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -193,12 +238,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T15:35:09Z",
       "headSha": "5c06bf49c3b44e72eabb63c99ca5269fce12c938",
-      "generatedAt": "2026-03-19T16:37:47.265Z",
-      "summary": "Non-record GW branch reduces KV heads, widens the MLP, and uses int7-style compression for smaller Apple Silicon proxy artifacts.",
+      "generatedAt": "2026-03-19T17:25:55.382Z",
+      "summary": "Dense 9-layer KV2 branch trades KV heads for a 1248-width MLP, lowers quantizer passthrough thresholds, and applies int7 mid-layer coarsening with a reduced LR schedule.",
       "tags": [
         "val-only",
-        "quantization",
         "architecture",
+        "quantization",
         "training-schedule"
       ],
       "flags": {
@@ -215,13 +260,14 @@
       "prNumber": 89,
       "title": "record:  val_bpb=1.1622, NorMuon + int6 STE + SWA + sliding window",
       "status": "open",
-      "updatedAt": "2026-03-19T15:18:47Z",
+      "updatedAt": "2026-03-19T17:07:13Z",
       "headSha": "c887ef4354609c26532212f5ea6ead752c65988c",
-      "generatedAt": "2026-03-19T16:37:51.916Z",
-      "summary": "Stacked int6 STE quant, NorMuon optimizer, SWA, fp16 embed passthrough, and sliding-window eval to reach mean val_bpb 1.1622 across 3 seeds.",
+      "generatedAt": "2026-03-19T17:26:01.329Z",
+      "summary": "Combines int6 STE quant with fp16 embed passthrough, NorMuon optimizer plus SWA warmdown, and sliding-window eval stride=64.",
       "tags": [
         "quantization",
         "optimizer",
+        "training-schedule",
         "sliding-window-eval"
       ],
       "flags": {
@@ -238,15 +284,15 @@
       "prNumber": 88,
       "title": "Record: Int6 MLP3x + MTP + Sliding Window Eval (val_bpb=1.1605)",
       "status": "open",
-      "updatedAt": "2026-03-19T15:08:22Z",
+      "updatedAt": "2026-03-19T17:07:12Z",
       "headSha": "5d3054865de0461a5c6ef099926724e8c27648f7",
-      "generatedAt": "2026-03-19T16:37:57.262Z",
-      "summary": "Int6-quantized 3×MLP with seq4096 training, MTP, fp16 embeddings, and sliding-window eval delivers val_bpb 1.1605 in <16MB artifacts.",
+      "generatedAt": "2026-03-19T17:26:06.428Z",
+      "summary": "Int6+zstd quantization frees artifact budget for a 3× expanded MLP trained at seq4096 with fp16 tied embeddings and sliding-window eval.",
       "tags": [
         "quantization",
-        "sliding-window-eval",
         "architecture",
-        "training-schedule"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -262,14 +308,15 @@
       "prNumber": 86,
       "title": "10L Mixed Precision: val_bpb=1.2129 (lower LR + fp16 embed + int6 middle)",
       "status": "open",
-      "updatedAt": "2026-03-19T14:15:44Z",
+      "updatedAt": "2026-03-19T17:07:11Z",
       "headSha": "73a4a9ddd59c45858169c6b3375c62de7745f635",
-      "generatedAt": "2026-03-19T16:38:04.422Z",
-      "summary": "10-layer mixed-precision model uses fp16 tied embeddings, int6 middle layers, and lower LR to hit 1.2129 val bpb under 16MB.",
+      "generatedAt": "2026-03-19T17:26:09.995Z",
+      "summary": "10-layer transformer uses a lower LR schedule plus fp16 tied embeddings and int6 middle layers to stay under 16MB without hurting quality.",
       "tags": [
-        "mixed-precision",
         "quantization",
-        "training-schedule"
+        "mixed-precision",
+        "training-schedule",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -285,15 +332,15 @@
       "prNumber": 85,
       "title": "Record (pending): 92-experiment autoresearch + sliding window eval, pre-quant val_bpb=1.2156",
       "status": "open",
-      "updatedAt": "2026-03-19T13:49:46Z",
+      "updatedAt": "2026-03-19T17:07:10Z",
       "headSha": "b4489ef09187a2ea0a8bcb643f842652edc784fd",
-      "generatedAt": "2026-03-19T16:38:12.119Z",
-      "summary": "Autoresearch-tuned 9L model uses sliding-window eval & rope extrapolation to pre-quant val_bpb=1.2156 before final int8+zlib run pending.",
+      "generatedAt": "2026-03-19T17:26:20.583Z",
+      "summary": "Autoresearch-tuned 9L/512d model uses sliding-window RoPE eval and relu²+RMSNorm with Muon/AdamW to keep int8 quantization clean on 8xH100.",
       "tags": [
         "val-only",
-        "sliding-window-eval",
+        "architecture",
         "optimizer",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": true,
@@ -311,12 +358,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T13:52:11Z",
       "headSha": "6853b49028e0dd08e8da6ebebe5a8b08d4ef652d",
-      "generatedAt": "2026-03-19T16:38:18.072Z",
-      "summary": "Non-record Apple Silicon MLX run mirrors nine transformer blocks into 18 logical layers while staying under the 16MB artifact cap.",
+      "generatedAt": "2026-03-19T17:26:25.565Z",
+      "summary": "Mirrored recurrence reuses nine transformer blocks to double logical depth, running encoder forward and decoder backward without growing parameter count.",
       "tags": [
-        "non-record",
         "architecture",
-        "compression"
+        "training-schedule",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -334,13 +381,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T13:11:19Z",
       "headSha": "210b0bad7dfb9d935e10584462ad8d983de7e29e",
-      "generatedAt": "2026-03-19T16:38:22.407Z",
-      "summary": "Depth recurrence 4x3 with SwiGLU and localized int6 quant plus sliding-window scoring delivers 1.2269 val bpb under 16MB.",
+      "generatedAt": "2026-03-19T17:26:31.296Z",
+      "summary": "Reuses four transformer blocks across three passes with SwiGLU and int6 middle-layer quant to pack 12-layer compute plus sliding-window eval under 16MB.",
       "tags": [
         "architecture",
         "quantization",
-        "compression",
-        "sliding-window-eval"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -358,12 +404,13 @@
       "status": "open",
       "updatedAt": "2026-03-19T14:26:06Z",
       "headSha": "51de17135ee5cc055b40735a49d0a79bbd1ccbca",
-      "generatedAt": "2026-03-19T16:38:30.488Z",
-      "summary": "Adds local Aria sweep scripts and non-record 16MB full-val 8x576 KV4 runs hitting ~1.90 val bpb.",
+      "generatedAt": "2026-03-19T17:26:37.456Z",
+      "summary": "Adds local fast-sweep tooling plus rule-compliant full-val non-record submissions using 8x576 KV4 models with tuned RoPE bases and int8+zlib serialization.",
       "tags": [
         "non-record",
-        "evaluation",
-        "architecture"
+        "architecture",
+        "positional-encoding",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -381,11 +428,11 @@
       "status": "open",
       "updatedAt": "2026-03-19T12:39:49Z",
       "headSha": "ea3b4b4855a12b883a387afa4aa201b5459225f3",
-      "generatedAt": "2026-03-19T16:38:36.423Z",
-      "summary": "Non-record depth recurrence uses three blocks repeated thrice at dim1024, trading diversity for width while awaiting H100 validation.",
+      "generatedAt": "2026-03-19T17:26:41.105Z",
+      "summary": "Repeats three unique transformer blocks three times to trade diversity for dim=1024 width while tuning LR/momentum for the depth recurrence regime.",
       "tags": [
         "architecture",
-        "regularization",
+        "optimizer",
         "non-record"
       ],
       "flags": {
@@ -402,13 +449,14 @@
       "prNumber": 78,
       "title": "Record: 8192 Vocab Size, NorMuon, Selective Quantization; 1.186 val_bpb",
       "status": "open",
-      "updatedAt": "2026-03-19T12:14:57Z",
+      "updatedAt": "2026-03-19T17:07:10Z",
       "headSha": "42de8368cdb5617293f98614caa98f594b7f50bd",
-      "generatedAt": "2026-03-19T16:38:41.439Z",
-      "summary": "Record boosts vocab to 8192, switches to NorMuon, and tests selective int6 weight quantization, reaching 1.185 val_bpb.",
+      "generatedAt": "2026-03-19T17:26:46.296Z",
+      "summary": "Uses an 8192-token sp BPE tokenizer plus NorMuon blocks with selective int6 weight/int8 embedding quantization to retool the baseline architecture.",
       "tags": [
-        "tokenization",
-        "quantization"
+        "quantization",
+        "architecture",
+        "tokenization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -424,11 +472,12 @@
       "prNumber": 77,
       "title": "[record bpb=1.195] sliding window + LoRA TTT",
       "status": "open",
-      "updatedAt": "2026-03-19T17:05:48Z",
+      "updatedAt": "2026-03-19T17:19:04Z",
       "headSha": "9fed66c01eb86e9089b68580a2295cbffaef25de",
-      "generatedAt": "2026-03-19T17:06:07.398Z",
-      "summary": "Eval uses per-document sliding-window scoring plus rank-8 LoRA test-time training on lm_head/Q/V, resetting adapters between documents.",
+      "generatedAt": "2026-03-19T17:26:52.943Z",
+      "summary": "Evaluation isolates each document with overlapping 256-token chunks and trains rank-8 LoRA adapters on lm_head/Q/V per chunk using a single Adam step.",
       "tags": [
+        "evaluation",
         "sliding-window-eval",
         "attention"
       ],
@@ -448,13 +497,13 @@
       "status": "open",
       "updatedAt": "2026-03-19T16:57:41Z",
       "headSha": "e6bd4d200de10d84ac3993f49f0941055d9ea3d3",
-      "generatedAt": "2026-03-19T17:00:55.327Z",
-      "summary": "Int6 quantized weights, FP16 tied embeddings, and sliding-window eval join a wider MLP for an estimated val_bpb ~1.160 pending full run.",
+      "generatedAt": "2026-03-19T17:26:56.464Z",
+      "summary": "Combines int6 per-row quantization with wider MLP, fp16 tied embeddings, and sliding-window eval to shrink artifacts while boosting eval fidelity.",
       "tags": [
         "quantization",
+        "architecture",
         "mixed-precision",
-        "sliding-window-eval",
-        "depth-width"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -472,10 +521,11 @@
       "status": "open",
       "updatedAt": "2026-03-19T10:34:19Z",
       "headSha": "9ed0110ef9dc7bd14fbac13bd9134605b6eade57",
-      "generatedAt": "2026-03-19T16:39:01.383Z",
-      "summary": "10-min seq4096 sliding-window record scores 1.1767 val_bpb with stride-64 eval, fp16 tok_emb export, and targeted block coarsening.",
+      "generatedAt": "2026-03-19T17:27:02.699Z",
+      "summary": "Seq4096 sliding-window with tuned Muon, fp16 tok emb retention, selective block coarsening, and stride-64 scoring.",
       "tags": [
         "sliding-window-eval",
+        "optimizer",
         "mixed-precision",
         "quantization"
       ],
@@ -495,11 +545,11 @@
       "status": "open",
       "updatedAt": "2026-03-19T17:05:33Z",
       "headSha": "7b8633a99fee9efaf401c3e63c5ae83cbc085131",
-      "generatedAt": "2026-03-19T17:06:12.018Z",
-      "summary": "Seq4096 FP16 tok emb run with tuned Muon schedule and single-block coarsening hits 1.1884 val bpb under the 16MB cap.",
+      "generatedAt": "2026-03-19T17:27:08.593Z",
+      "summary": "Train 9x512 GQA at seq_len 4096 with a Muon-tuned schedule, exporting by keeping tok_emb fp16 and coarsening only block 5 to stay under the 16MB cap.",
       "tags": [
+        "mixed-precision",
         "quantization",
-        "optimizer",
         "training-schedule"
       ],
       "flags": {
@@ -518,12 +568,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T17:03:08Z",
       "headSha": "b8a1426d0f4a4e3a6cd3aaa9071eb5a4904dbb58",
-      "generatedAt": "2026-03-19T17:03:56.515Z",
-      "summary": "Non-record 1xRTX5090 run fixed warmdown scheduling, switched to SwiGLU, and used quarter batch plus grad accumulation to cut val bpb to 1.3281.",
+      "generatedAt": "2026-03-19T17:27:15.648Z",
+      "summary": "SwiGLU with a time-fraction warmdown and quarter-batch plus gradient accumulation pack more optimizer steps under the 16MB cap on 1×RTX5090.",
       "tags": [
-        "non-record",
+        "architecture",
         "training-schedule",
-        "architecture"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -541,11 +591,10 @@
       "status": "open",
       "updatedAt": "2026-03-19T17:05:00Z",
       "headSha": "2949401a6dc0b306d3a16a9e4d3fea70b0b97f83",
-      "generatedAt": "2026-03-19T17:05:40.966Z",
-      "summary": "Depth12 Dim416 KV4 tied-embedding 10-min 8xH100 16MB run hit int8+zlib val_bpb 1.3509.",
+      "generatedAt": "2026-03-19T17:27:18.916Z",
+      "summary": "Deeper/narrower SP-1024 layout with KV4 heads and tied embeddings on 8×H100 within a 10-minute cap for the 16MB track.",
       "tags": [
         "architecture",
-        "quantization",
         "training-schedule"
       ],
       "flags": {
@@ -564,12 +613,11 @@
       "status": "open",
       "updatedAt": "2026-03-19T17:03:07Z",
       "headSha": "2790ac088cd3da716664fb6047990745f24e6c4f",
-      "generatedAt": "2026-03-19T17:04:01.674Z",
-      "summary": "Wider 3x MLP plus int6 per-row quantization and sliding-window eval cuts val bpb to 1.1659 within a 16MB artifact.",
+      "generatedAt": "2026-03-19T17:27:22.075Z",
+      "summary": "Widened MLP (3x) plus per-row int6 quantized weights and sliding-window scoring keep artifacts small while boosting contextual evaluation.",
       "tags": [
         "architecture",
         "quantization",
-        "sliding-window-eval",
         "evaluation"
       ],
       "flags": {
@@ -588,12 +636,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T16:57:40Z",
       "headSha": "4a685e4fdbeaec90f474bd75299500888c311757",
-      "generatedAt": "2026-03-19T17:01:00.506Z",
-      "summary": "SubSixteen combines ternary QAT, recurrence, and test-time training pending 8×H100 val_bpb results.",
+      "generatedAt": "2026-03-19T17:27:27.606Z",
+      "summary": "Stack ternary QAT, depth recurrence, and test-time training to deliver 32 effective transformer layers within a ~3.7MB artifact.",
       "tags": [
         "quantization",
-        "depth-width",
-        "training-schedule"
+        "architecture",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -611,12 +659,13 @@
       "status": "open",
       "updatedAt": "2026-03-19T17:03:06Z",
       "headSha": "3d1780d86d240318b336475bff1fbdbc4d64b0e1",
-      "generatedAt": "2026-03-19T17:04:07.557Z",
-      "summary": "AutoResearch agent combined wider MLP, int6 QAT, longer context, optimizer tuning, and sliding-window eval to reach val_bpb 1.16323 in the 10-minute run.",
+      "generatedAt": "2026-03-19T17:27:36.722Z",
+      "summary": "AutoResearch agent stacks widened MLP, seq4096, STE int6 QAT, int6 storage, and sliding-window eval within the 16MB budget.",
       "tags": [
+        "architecture",
         "quantization",
-        "sliding-window-eval",
-        "optimizer"
+        "optimizer",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -634,13 +683,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T17:03:05Z",
       "headSha": "f85c8379c6b210df2dbaecf9083f7b60adeecb85",
-      "generatedAt": "2026-03-19T17:04:11.748Z",
-      "summary": "Mixed int6/int8 quant, wider MLP, and stride-64 sliding eval deliver 1.1630 val bpb under 16MB.",
+      "generatedAt": "2026-03-19T17:27:39.951Z",
+      "summary": "Expands to 3x MLP width with int6 block + int8 embedding quantization and sliding-window stride-64 eval for richer context without enlarging artifact size.",
       "tags": [
         "quantization",
-        "mixed-precision",
-        "sliding-window-eval",
-        "optimizer"
+        "architecture",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -658,12 +706,13 @@
       "status": "open",
       "updatedAt": "2026-03-19T17:03:05Z",
       "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
-      "generatedAt": "2026-03-19T17:04:16.077Z",
-      "summary": "Val-only combination with STE int6 quant and tuned Muon hits post-quant val_bpb 0.9695, the first sub-1.0 BPB record.",
+      "generatedAt": "2026-03-19T17:27:46.466Z",
+      "summary": "MLP-3x with STE int6 QAT, mixed quantization, tuned Muon and sliding-window eval, plus a val-only variant using the same architecture.",
       "tags": [
-        "val-only",
         "quantization",
-        "sliding-window-eval"
+        "sliding-window-eval",
+        "optimizer",
+        "val-only"
       ],
       "flags": {
         "usesValOnly": true,
@@ -681,12 +730,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T17:03:04Z",
       "headSha": "13ffddc92724efea98c502e55e2d6a1f0e241418",
-      "generatedAt": "2026-03-19T17:04:29.913Z",
-      "summary": "Seq2048, FP16 tied embeddings, and tuned LRs drop mean val_bpb to 1.2067 on the Naive baseline.",
+      "generatedAt": "2026-03-19T17:27:50.371Z",
+      "summary": "10-layer 512-dim run pairs seq2048, FP16 tied embedding passthrough, and mixed int8/int6 quantization with sliding-window evaluation to squeeze more context.",
       "tags": [
-        "mixed-precision",
-        "training-schedule",
-        "optimizer"
+        "sliding-window-eval",
+        "quantization",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -704,8 +753,8 @@
       "status": "open",
       "updatedAt": "2026-03-19T16:57:40Z",
       "headSha": "e13f5a4aa45e97f5968dab6b273d6eb58c020504",
-      "generatedAt": "2026-03-19T17:01:09.727Z",
-      "summary": "Local WIP adaptive eval context improves non-record MLX roundtrip by ~0.01019 BPB compared to standard evaluation.",
+      "generatedAt": "2026-03-19T17:27:55.902Z",
+      "summary": "Adds MLX adaptive eval-time context with a coarse-to-fine rescore pass on hard windows, trading more eval time for improved roundtrip coverage over fixed strides.",
       "tags": [
         "non-record",
         "evaluation"
@@ -722,16 +771,17 @@
     },
     {
       "prNumber": 60,
-      "title": "NTK Eval + Overtone Init (val_bpb=1.2160)",
+      "title": "Record: Sliding Window + FP16 Embed + 10L + Muon WD + Overtone Init (val_bpb=1.1748)",
       "status": "open",
-      "updatedAt": "2026-03-19T17:03:03Z",
+      "updatedAt": "2026-03-19T17:08:16Z",
       "headSha": "56dc745ac25ad6702864dfb4e5b65b632af565e0",
-      "generatedAt": "2026-03-19T17:04:35.806Z",
-      "summary": "NTK-aware RoPE scaling, overtone embedding init, and phase-transition residual mixing drove val_bpb to 1.2160 with artifacts under 16MB.",
+      "generatedAt": "2026-03-19T17:28:01.170Z",
+      "summary": "Sliding-window eval plus FP16 tied embeddings and Muon WD let a 10-layer stack run with overtone init and sigmoid residual mixing.",
       "tags": [
         "sliding-window-eval",
-        "muon",
-        "evaluation"
+        "mixed-precision",
+        "optimizer",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -749,12 +799,12 @@
       "status": "closed",
       "updatedAt": "2026-03-19T06:51:32Z",
       "headSha": "382fadfe9813ee62f40adc4dd693e507fe86740b",
-      "generatedAt": "2026-03-19T16:40:15.918Z",
-      "summary": "SVD-shaped embeddings, residual-mix scheduling, and NTK-aware RoPE scaling cut val BPB to 1.2160 with 3 seeds showing a 0.0194 nat gain.",
+      "generatedAt": "2026-03-19T17:28:05.563Z",
+      "summary": "Introduces overtone SVD-based embedding init, sigmoid phase-transition resid mix, and NTK-aware RoPE scaling to extend evaluation context beyond training length.",
       "tags": [
         "architecture",
-        "attention",
-        "training-schedule"
+        "positional-encoding",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -772,12 +822,13 @@
       "status": "open",
       "updatedAt": "2026-03-19T17:03:03Z",
       "headSha": "e13e8dba6bd14164b5408fce695675cefadc913a",
-      "generatedAt": "2026-03-19T17:04:40.033Z",
-      "summary": "Adds a reproducible Apple Silicon non-record run for Deep14x416 KV2 showing 1.8440 val_bpb after 750 steps.",
+      "generatedAt": "2026-03-19T17:28:12.508Z",
+      "summary": "Logs Apple Silicon MLX run reusing train_gpt_mlx.py with 14-layer, width-416 SP-1024 GPT trading width for depth and KV sharing to stay under 16MB.",
       "tags": [
-        "non-record",
+        "architecture",
         "depth-width",
-        "evaluation"
+        "compression",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -795,8 +846,8 @@
       "status": "open",
       "updatedAt": "2026-03-19T06:33:37Z",
       "headSha": "8aea85b63bc4d333ff11e84f4ad81028178e03b9",
-      "generatedAt": "2026-03-19T16:40:27.128Z",
-      "summary": "Non-record RecursoLM v0 adds a tied-recurrence transformer scaffold with ALiBi and SwiGLU for the 16MB challenge entry.",
+      "generatedAt": "2026-03-19T17:28:17.585Z",
+      "summary": "Recurrent parameter-tied transformer uses ALiBi multi-query attention and SwiGLU with a learned gate to trade stored parameters for iterative depth.",
       "tags": [
         "architecture",
         "attention",
@@ -818,11 +869,11 @@
       "status": "open",
       "updatedAt": "2026-03-19T17:04:20Z",
       "headSha": "944fc30d4d6e16d2825c796458edbb10295f49e6",
-      "generatedAt": "2026-03-19T17:05:44.818Z",
-      "summary": "RQZ-Golf v1 reuses a recurrent layer with iteration embeddings for greater depth and fewer params on the 16MB non-record track.",
+      "generatedAt": "2026-03-19T17:28:21.860Z",
+      "summary": "Shares a recurrent block across passes with iteration embeddings and scaled residuals to extend depth per parameter and boost inference K.",
       "tags": [
         "architecture",
-        "depth-width",
+        "regularization",
         "non-record"
       ],
       "flags": {
@@ -841,11 +892,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T17:03:02Z",
       "headSha": "613531358ceb7f343e08b5a36b369b2c5b5c011a",
-      "generatedAt": "2026-03-19T17:04:46.017Z",
-      "summary": "SP-4096 tokens plus stride-64 sliding window eval drives 1.1888 val BPB on 8-layer GQA with Muon optimizer within 16MB int8+zlib budget.",
+      "generatedAt": "2026-03-19T17:28:26.473Z",
+      "summary": "Combines SP-4096 tokenization with stride-64 sliding eval on an 8-layer GQA stack tuned with Muon optimizer and int8 quantization for better context reuse and compression.",
       "tags": [
-        "compression",
+        "tokenization",
         "sliding-window-eval",
+        "optimizer",
         "quantization"
       ],
       "flags": {
@@ -864,12 +916,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T17:03:01Z",
       "headSha": "b6663e7cd939859772250305f8389d085e176951",
-      "generatedAt": "2026-03-19T17:04:52.345Z",
-      "summary": "Longer contexts plus aggressive Muon tuning shaved BPB to 1.2014 across three seeds, beating the prior baseline with stabilized warmdown.",
+      "generatedAt": "2026-03-19T17:28:30.651Z",
+      "summary": "Training with 4096-token context plus tuned Muon optimizer (0.99 momentum, lower LR, extended warmdown/warmup) to outpace the baseline.",
       "tags": [
+        "architecture",
         "optimizer",
-        "training-schedule",
-        "evaluation"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -887,12 +939,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T16:57:37Z",
       "headSha": "45db65acf24b1e6529c60c4439a26e41cccb3334",
-      "generatedAt": "2026-03-19T17:01:16.861Z",
-      "summary": "Depth-recurrent QAT loops 3 shared blocks 4× for 12 layers, adds LoRA/STE quantization and LAWA, hitting 15.6MB artifact with val bpb ~2.08.",
+      "generatedAt": "2026-03-19T17:28:34.258Z",
+      "summary": "Shares three transformer blocks across four loops with wider dim, per-loop LoRA, STE QAT, and LAWA warmdown averaging for an int8-ready depth-recurrent model.",
       "tags": [
-        "quantization",
         "architecture",
-        "training-schedule"
+        "quantization",
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -907,11 +959,11 @@
     {
       "prNumber": 50,
       "title": "Record: Sliding Window Eval (stride=64), val_bpb=1.1925",
-      "status": "open",
-      "updatedAt": "2026-03-19T17:03:00Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T17:28:13Z",
       "headSha": "4bbdf43eb3cc174ea9a9d8de81748bd339b71caf",
-      "generatedAt": "2026-03-19T17:04:58.928Z",
-      "summary": "Sliding window eval (stride 64) with int8+zlib boosts val bpb to 1.1925 by scoring tokens with ~960-context windows.",
+      "generatedAt": "2026-03-19T17:28:40.285Z",
+      "summary": "Sliding-window evaluation with stride 64 scores every token with ~960-token context on the baseline 9x512 SP-1024 model, leaving training unchanged.",
       "tags": [
         "sliding-window-eval",
         "evaluation"
@@ -929,14 +981,15 @@
     {
       "prNumber": 49,
       "title": "SOTA attempt (val_bpb=1.2064)",
-      "status": "open",
-      "updatedAt": "2026-03-19T17:03:00Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T17:25:29Z",
       "headSha": "99e72b1c02c0b485864c48710fab36dfe9475e6b",
-      "generatedAt": "2026-03-19T17:05:04.944Z",
-      "summary": "Seq2048 recipe on SXM 10-minute run hits val_bpb≈1.2064 across three seeds, beating record threshold.",
+      "generatedAt": "2026-03-19T17:28:46.070Z",
+      "summary": "Long-context SP-1024 9×512 KV4 model trains at seq2048 with tuned 0.04/0.032/0.032 LRs and int8+zlib serialization to fit the cap.",
       "tags": [
-        "quantization",
-        "evaluation"
+        "architecture",
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -954,8 +1007,8 @@
       "status": "open",
       "updatedAt": "2026-03-19T03:55:01Z",
       "headSha": "d61c36090fdcfdf4050ce2b21cb197bba3187851",
-      "generatedAt": "2026-03-19T16:41:07.235Z",
-      "summary": "Raising WARMDOWN_ITERS to 3000 ensures the cosine warmdown fires within the final 30% of the capped run, improving convergence.",
+      "generatedAt": "2026-03-19T17:28:50.953Z",
+      "summary": "Extend warmdown iterations so cosine LR decay activates in the final 30% of the wallclock-capped run, ensuring decay before termination.",
       "tags": [
         "training-schedule"
       ],
@@ -973,14 +1026,14 @@
       "prNumber": 45,
       "title": "Modal 8xH100 LowerLR FP16Embed 960 (val_bpb 1.22395)",
       "status": "open",
-      "updatedAt": "2026-03-19T17:02:08Z",
+      "updatedAt": "2026-03-19T17:20:54Z",
       "headSha": "da4e9efe6d4656e65c1fdd00a96ca13a279bc647",
-      "generatedAt": "2026-03-19T17:05:11.860Z",
-      "summary": "Adds an 8xH100 run record with lower LR, FP16 tied embeddings, MLP hidden 960, and int8+zlib val_bpb 1.22395 within the 16MB cap.",
+      "generatedAt": "2026-03-19T17:28:55.782Z",
+      "summary": "Lower LR run on 8×H100 uses FP16 embeddings with higher-precision tied embeddings and int8+zlib serialization to stay under the 16MB cap.",
       "tags": [
         "quantization",
-        "training-schedule",
-        "evaluation"
+        "mixed-precision",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -998,8 +1051,8 @@
       "status": "closed",
       "updatedAt": "2026-03-19T16:51:17Z",
       "headSha": "a17ff66702d50731c5d6833145875687a2791016",
-      "generatedAt": "2026-03-19T17:01:22.099Z",
-      "summary": "Val-only 10min record trains solely on the validation shard, producing a quantized val_bpb of 1.1111 after the 10-minute cap.",
+      "generatedAt": "2026-03-19T17:29:00.543Z",
+      "summary": "Baseline ties-embeddings 9x512 model trained solely on the validation shard for the 10-minute, 16MB track to document a val-only regime.",
       "tags": [
         "val-only",
         "evaluation"
@@ -1017,14 +1070,15 @@
     {
       "prNumber": 42,
       "title": "fp16 tied embedding + warmdown/LR tuning (val_bpb 1.2197)",
-      "status": "open",
-      "updatedAt": "2026-03-19T17:02:07Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T17:16:51Z",
       "headSha": "a50fff562f0d343e695eea26b49f108b994a4028",
-      "generatedAt": "2026-03-19T17:05:15.950Z",
-      "summary": "Keeping the tied embedding in fp16 while trimming the MLP and tuning warmdown/LR narrows the quant gap and fits within 16MB.",
+      "generatedAt": "2026-03-19T17:29:04.802Z",
+      "summary": "Keeps the tied embedding in fp16 while trimming MLP width and tuning warmdown/matrix LR so the 10-minute int8 export fits under 16MB.",
       "tags": [
         "quantization",
-        "training-schedule"
+        "training-schedule",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1042,10 +1096,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T01:08:07Z",
       "headSha": "0610e5f4a2d17134fe59d1400ed645ee71f704db",
-      "generatedAt": "2026-03-19T16:41:31.544Z",
-      "summary": "Submitted non-record 600s Modal 8xH100 timed validation run with final int8+zlib val_bpb 1.2296 under the 16MB artifact cap.",
+      "generatedAt": "2026-03-19T17:29:11.503Z",
+      "summary": "Timed 600s Modal 8xH100 run using FineWeb 10B sp1024 config (9-layer, 512d, 1024 vocab) with training snapshot preserved for the non-record track.",
       "tags": [
-        "non-record",
+        "training-schedule",
+        "architecture",
+        "tokenization",
         "evaluation"
       ],
       "flags": {
@@ -1064,12 +1120,11 @@
       "status": "open",
       "updatedAt": "2026-03-19T01:01:22Z",
       "headSha": "e3655fde38c06a93533037029fa85240b2a7fa7f",
-      "generatedAt": "2026-03-19T16:41:39.754Z",
-      "summary": "PhiDelay shared-recurrent LM swaps attention for a delay mixer with 3 blocks repeated 4×, reaching 3.23 bpb in a 6.84MB artifact under the 16MB cap.",
+      "generatedAt": "2026-03-19T17:29:15.240Z",
+      "summary": "PhiDelay-inspired multi-head delay mixer with learnable recurrence gates reuses 3 blocks across 4 passes for a 12-depth LM staying within 16MB.",
       "tags": [
         "architecture",
-        "compression",
-        "training-schedule",
+        "attention",
         "non-record"
       ],
       "flags": {
@@ -1084,15 +1139,16 @@
     },
     {
       "prNumber": 39,
-      "title": "10L Mixed Precision: val_bpb=1.2147 (10 layers + int6 middle layers)",
+      "title": "Record: 10L Mixed Precision: val_bpb=1.2147 (10 layers + int6 middle layers)",
       "status": "open",
-      "updatedAt": "2026-03-19T04:37:03Z",
+      "updatedAt": "2026-03-19T17:27:53Z",
       "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
-      "generatedAt": "2026-03-19T16:41:46.685Z",
-      "summary": "10-layer model adds mixed int8/int6 precision with lower LR to reach 1.2139 bpb while keeping the artifact under 16MB.",
+      "generatedAt": "2026-03-19T17:29:19.587Z",
+      "summary": "Adds a 10th transformer layer with mixed int8/int6 precision plus lower Muon/Adam learning rates to hit the 16MB cap without sacrificing critical layer fidelity.",
       "tags": [
-        "quantization",
         "mixed-precision",
+        "architecture",
+        "quantization",
         "training-schedule"
       ],
       "flags": {
@@ -1111,11 +1167,11 @@
       "status": "open",
       "updatedAt": "2026-03-19T16:57:34Z",
       "headSha": "dd01e00f7a07362f7f884eb182da357a9dd35463",
-      "generatedAt": "2026-03-19T17:01:27.786Z",
-      "summary": "Switching to a 4096-word SentencePiece BPE reduces tokens per byte and cuts BPB vs 1024 baseline, pending full 8xH100 validation.",
+      "generatedAt": "2026-03-19T17:29:25.039Z",
+      "summary": "4k-vocab SentencePiece BPE plus untied embeddings lower tokens/byte without altering the base architecture.",
       "tags": [
         "tokenization",
-        "compression"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1133,12 +1189,12 @@
       "status": "closed",
       "updatedAt": "2026-03-18T23:27:13Z",
       "headSha": "47e0cf8fad003483c2dfa9b5791c01ca4ea6e842",
-      "generatedAt": "2026-03-19T16:42:00.072Z",
-      "summary": "Naive baseline + dispersion loss ran 8xH100 9x512 KV4 on fineweb10B_sp1024, hitting 1.2243657 bpb post int8+zlib within the 10min/16MB cap.",
+      "generatedAt": "2026-03-19T17:29:32.033Z",
+      "summary": "Fixed 9-layer/512-dim GPT uses dispersion loss regularization and published fineweb10B_sp1024 tokenizer, evaluated via int8+zlib roundtrip.",
       "tags": [
+        "architecture",
         "regularization",
-        "quantization",
-        "evaluation"
+        "tokenization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1156,10 +1212,12 @@
       "status": "open",
       "updatedAt": "2026-03-18T23:24:01Z",
       "headSha": "7ff5e4491a3e909f006c0bf8dda3ca5117fd4a40",
-      "generatedAt": "2026-03-19T16:42:04.474Z",
-      "summary": "Depth-recurrent transformer loops five shared blocks three times for 15 effective layers, scoring val bpb 1.2663 on the non-record track.",
+      "generatedAt": "2026-03-19T17:29:35.843Z",
+      "summary": "Depth-recurrent transformer loops five shared blocks three times to deliver an effective 15-layer, d=768 model within ~13.9MB at GQA 12:6.",
       "tags": [
+        "architecture",
         "depth-width",
+        "compression",
         "non-record"
       ],
       "flags": {
@@ -1178,11 +1236,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T16:57:32Z",
       "headSha": "95b80a92f87df3b2acab38048443858a8c0f8e11",
-      "generatedAt": "2026-03-19T17:01:33.676Z",
-      "summary": "Recurrent MQA Transformer loops one shared block 12 times with tied embeddings and MQA to squeeze 3.5M params under 5.2MB for the 16MB track.",
+      "generatedAt": "2026-03-19T17:29:40.855Z",
+      "summary": "Shared Transformer block looped 12× with tied embeddings, RoPE, MQA, and SwiGLU to hit ~3.5M parameters ahead of planned ternary quantization.",
       "tags": [
         "architecture",
-        "regularization"
+        "attention",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1200,12 +1259,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T10:03:36Z",
       "headSha": "78f6eff97505f64430b336045df0b3fee4c1cbcf",
-      "generatedAt": "2026-03-19T16:42:15.808Z",
-      "summary": "Depth recurrence with LoRA and learned scales plus SwiGLU and EMA fixes yields a wider effective 10-layer baseline.",
+      "generatedAt": "2026-03-19T17:29:46.388Z",
+      "summary": "Depth-recurrent transformer with per-loop LoRA scales widens shared blocks via SwiGLU and auxiliary heads to boost effective capacity.",
       "tags": [
         "architecture",
         "depth-width",
-        "regularization"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1223,10 +1282,12 @@
       "status": "open",
       "updatedAt": "2026-03-18T22:06:40Z",
       "headSha": "bda498113d570296cbeff9cee3b97fbe95738b1f",
-      "generatedAt": "2026-03-19T16:42:21.054Z",
-      "summary": "QAT with fake per-row int8 quant simulates post-training quantization during GPT training to shrink the BPB gap for deployment.",
+      "generatedAt": "2026-03-19T17:29:51.359Z",
+      "summary": "Per-row fake-quantization during training makes GPT blocks robust to int8 rounding while evaluations still use full-precision weights.",
       "tags": [
         "quantization",
+        "architecture",
+        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -1245,12 +1306,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T16:56:26Z",
       "headSha": "0484ec9da06d1dc64284e62e2e43fb3a44c9ce88",
-      "generatedAt": "2026-03-19T17:01:37.605Z",
-      "summary": "Depth recurrence with four unique blocks reused 3× plus SwiGLU MLP trained on an Apple M3 (8GB) for a non-record efficiency probe.",
+      "generatedAt": "2026-03-19T17:29:55.098Z",
+      "summary": "Depth recurrence reuses four unique transformer blocks three times with SwiGLU MLPs and per-pass gates to boost effective depth at 640 dim on constrained hardware.",
       "tags": [
-        "non-record",
         "architecture",
-        "depth-width"
+        "depth-width",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1268,8 +1329,8 @@
       "status": "closed",
       "updatedAt": "2026-03-18T18:34:32Z",
       "headSha": "11373420c1f50e6a83599fb25bb73f38a6555cb7",
-      "generatedAt": "2026-03-19T16:42:31.712Z",
-      "summary": "Late-stage QAT plus grad clipping recovers quantization BPB loss while stabilizing training for the 9x512 baseline.",
+      "generatedAt": "2026-03-19T17:29:59.360Z",
+      "summary": "Baseline 9×512 transformer trains with late-phase STE-based QAT and grad clipping to recover int8 robustness without architectural tweaks.",
       "tags": [
         "quantization",
         "regularization",

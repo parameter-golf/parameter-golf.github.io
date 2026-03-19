@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:42:15.808Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:29:46.388Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 21,
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth recurrence with LoRA and learned scales plus SwiGLU and EMA fixes yields a wider effective 10-layer baseline.",
+    "summary": "Depth-recurrent transformer with per-loop LoRA scales widens shared blocks via SwiGLU and auxiliary heads to boost effective capacity.",
     "tags": [
       "architecture",
       "depth-width",
-      "regularization"
+      "attention"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Reused five unique blocks twice for depth recurrence with per-loop learned scales",
-      "Per-recurrence rank-16 LoRA adapters on attention Q/K/V/O for specialization",
-      "SwiGLU MLP plus multi-token auxiliary heads and EMA serialization fix"
+      "Shared 5-layer block recurred twice with per-pass LoRA adapters",
+      "704-dim SwiGLU transformer featuring 8 attention heads and 4 KV heads",
+      "Training extras: multi-token prediction heads plus EMA start-step fix"
     ]
   },
   "compatibility": {

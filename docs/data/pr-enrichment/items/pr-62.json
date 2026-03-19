@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:01:09.727Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:27:55.902Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 62,
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Local WIP adaptive eval context improves non-record MLX roundtrip by ~0.01019 BPB compared to standard evaluation.",
+    "summary": "Adds MLX adaptive eval-time context with a coarse-to-fine rescore pass on hard windows, trading more eval time for improved roundtrip coverage over fixed strides.",
     "tags": [
       "non-record",
       "evaluation"
@@ -27,8 +27,8 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "- adaptive coarse-to-fine stride rescoring",
-      "- Apple Silicon MLX non-record snapshot"
+      "coarse-to-fine adaptive eval stride",
+      "selective hard-window rescoring"
     ]
   },
   "compatibility": {

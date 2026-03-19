@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:05:44.818Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:28:21.860Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 54,
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "RQZ-Golf v1 reuses a recurrent layer with iteration embeddings for greater depth and fewer params on the 16MB non-record track.",
+    "summary": "Shares a recurrent block across passes with iteration embeddings and scaled residuals to extend depth per parameter and boost inference K.",
     "tags": [
       "architecture",
-      "depth-width",
+      "regularization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Shared recurrent layer applied multiple times",
-      "Iteration embeddings per pass",
-      "Residual scaling by 1/√K for stability"
+      "Depth-recurrent block reusing weights for multiple passes",
+      "Learned iteration embeddings with 1/√K residual scaling",
+      "Increase recurrence count at test time for more compute"
     ]
   },
   "compatibility": {

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:00:55.327Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:26:56.464Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 76,
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 quantized weights, FP16 tied embeddings, and sliding-window eval join a wider MLP for an estimated val_bpb ~1.160 pending full run.",
+    "summary": "Combines int6 per-row quantization with wider MLP, fp16 tied embeddings, and sliding-window eval to shrink artifacts while boosting eval fidelity.",
     "tags": [
       "quantization",
+      "architecture",
       "mixed-precision",
-      "sliding-window-eval",
-      "depth-width"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 per-row quantization + zstd-22 compression",
-      "FP16 tied embedding passthrough for sensitivity",
-      "sliding-window stride=256 evaluation"
+      "int6 per-row quantization on MLP+attention",
+      "fp16 tied embedding passthrough",
+      "sliding-window evaluation stride=256"
     ]
   },
   "compatibility": {

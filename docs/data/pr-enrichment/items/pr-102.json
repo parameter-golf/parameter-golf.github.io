@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:03:50.377Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:25:22.620Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 102,
     "title": "Int6 MLP3x + Tuned LR + SmearGate + SlidingWindow (val_bpb: 1.1618)",
     "state": "open",
-    "updatedAt": "2026-03-19T17:02:36Z",
+    "updatedAt": "2026-03-19T17:07:16Z",
     "headSha": "6f4a46e1bfd9800a72501401c0f3a4dadc49bef9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/102",
     "authorLogin": "unnir"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 quant+zstd frees budget for 3x MLP, SmearGate bigram blend, tuned Muon, and sliding-window eval to hit 1.1618 val bpb under 16MB.",
+    "summary": "Stacked int6 per-row quant + zstd22 compression, widened 3x MLP, tuned Muon schedule, and SmearGate preprocessing for sliding-window scoring within the 16MB budget.",
     "tags": [
       "quantization",
-      "mixed-precision",
+      "architecture",
       "optimizer",
       "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 per-row quant + zstd-22 compression",
-      "3x MLP expansion with SmearGate pre-attention blend",
-      "sliding-window scoring paired with tuned Muon hyperparams"
+      "int6 per-row quantization + zstd22",
+      "MLP 3x expansion with fp16 ties",
+      "SmearGate bigram gate before attention"
     ]
   },
   "compatibility": {

@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-03-19T17:25:07.846Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 106,
+    "title": "record: 1.158",
+    "state": "open",
+    "updatedAt": "2026-03-19T17:23:59Z",
+    "headSha": "013d903ff78d69daf2b20aac3f6900490a983b5c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/106",
+    "authorLogin": "krammnic"
+  },
+  "inputs": {
+    "hash": "072662c123505c465dfcb1e80cbfb797fc5a748edd0e2a3564b0b095cec763f8",
+    "readmePaths": [],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Reuses PR88's quantization-aware training tricks and export flow to meet the 16MB golf constraint.",
+    "tags": [
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "QAT export focus",
+      "16MB-constrained quantized tuning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

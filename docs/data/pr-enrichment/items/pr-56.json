@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:04:40.033Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:28:12.508Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 56,
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds a reproducible Apple Silicon non-record run for Deep14x416 KV2 showing 1.8440 val_bpb after 750 steps.",
+    "summary": "Logs Apple Silicon MLX run reusing train_gpt_mlx.py with 14-layer, width-416 SP-1024 GPT trading width for depth and KV sharing to stay under 16MB.",
     "tags": [
-      "non-record",
+      "architecture",
       "depth-width",
-      "evaluation"
+      "compression",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Deeper/narrower depth-width trade with KV sharing",
-      "Apple Silicon MLX training log + submission metadata"
+      "deeper 14-layer, width-416 SP-1024 layout with 2 KV heads",
+      "int8+zlib roundtrip quantization to hit the 16MB cap"
     ]
   },
   "compatibility": {

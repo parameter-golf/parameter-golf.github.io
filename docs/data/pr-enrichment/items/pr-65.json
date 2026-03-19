@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:04:11.748Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:27:39.951Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 65,
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Mixed int6/int8 quant, wider MLP, and stride-64 sliding eval deliver 1.1630 val bpb under 16MB.",
+    "summary": "Expands to 3x MLP width with int6 block + int8 embedding quantization and sliding-window stride-64 eval for richer context without enlarging artifact size.",
     "tags": [
       "quantization",
-      "mixed-precision",
-      "sliding-window-eval",
-      "optimizer"
+      "architecture",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 per-row blocks with int8 embeddings",
-      "MLP×3 + seq len 1024 batch tweak",
-      "sliding window evaluation stride 64"
+      "int6 STE-protected blocks, int8 embedding mixed quant",
+      "wider 3× MLP enabled by aggressive quantization",
+      "stride-64 sliding window evaluation for 960-token context"
     ]
   },
   "compatibility": {

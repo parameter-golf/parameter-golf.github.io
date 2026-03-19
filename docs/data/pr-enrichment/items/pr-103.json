@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T17:05:36.749Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:25:18.572Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 103,
-    "title": "Non-record: Looped Transformer + Per-Layer LoRA + Int6 + Sliding Window (1xH100, pending 8xH100)",
+    "title": "Non-record: Looped Transformer + LoRA + Skip Connections + NorMuon + SWA + Int6 + Sliding Window",
     "state": "open",
-    "updatedAt": "2026-03-19T17:04:37Z",
-    "headSha": "4465fa22ae49c93dda323646d85e18434fb50ab3",
+    "updatedAt": "2026-03-19T17:24:52Z",
+    "headSha": "5cd05d1e03fdf158f8bee2e3c17858d8c62edab8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/103",
     "authorLogin": "MatthewHRockwell"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Looped transformer reuses 5 blocks into 30 virtual layers with per-layer LoRA, int6 quantization, and sliding-window eval reaching ~1.48 BPB.",
+    "summary": "Looped 5-block transformer uses per-virtual-layer LoRA and encoder-decoder skips for 30 virtual layers, trained with NorMuon/SWA plus Int6 quant and sliding-window eval.",
     "tags": [
       "architecture",
+      "training-schedule",
       "quantization",
-      "sliding-window-eval",
-      "non-record"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Looped depth recurrence with per-virtual-layer LoRA",
-      "Int6 quantization with fp16 embedding passthrough",
-      "Sliding-window eval (4096 seq, 64 stride)"
+      "Looped recurrence with per-layer LoRA and skip connections",
+      "NorMuon optimizer with wallclock-aware warmdown and SWA",
+      "Int6 quantization plus fp16 embeddings with sliding-window evaluation"
     ]
   },
   "compatibility": {

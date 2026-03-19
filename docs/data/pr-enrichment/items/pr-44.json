@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:01:22.099Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:29:00.543Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 44,
@@ -19,16 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Val-only 10min record trains solely on the validation shard, producing a quantized val_bpb of 1.1111 after the 10-minute cap.",
+    "summary": "Baseline ties-embeddings 9x512 model trained solely on the validation shard for the 10-minute, 16MB track to document a val-only regime.",
     "tags": [
       "val-only",
       "evaluation"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Run explicitly trains entirely on the validation shard by aliasing both train and val files to the published validation data, per PR.",
+    "valOnlyReasoning": "Training run explicitly uses only the public validation shard as both train and eval data.",
     "techniques": [
-      "Validation-only dataset aliasing",
-      "Int8+zlib roundtrip evaluation"
+      "alias train+val data files to the validation shard",
+      "tied embedding configuration with LR 0.05",
+      "10-minute 8×H100 execution under the 16MB cap"
     ]
   },
   "compatibility": {

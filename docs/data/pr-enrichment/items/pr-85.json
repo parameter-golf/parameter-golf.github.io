@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:38:12.119Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:26:20.583Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 85,
     "title": "Record (pending): 92-experiment autoresearch + sliding window eval, pre-quant val_bpb=1.2156",
     "state": "open",
-    "updatedAt": "2026-03-19T13:49:46Z",
+    "updatedAt": "2026-03-19T17:07:10Z",
     "headSha": "b4489ef09187a2ea0a8bcb643f842652edc784fd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/85",
     "authorLogin": "hydeh3r3"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Autoresearch-tuned 9L model uses sliding-window eval & rope extrapolation to pre-quant val_bpb=1.2156 before final int8+zlib run pending.",
+    "summary": "Autoresearch-tuned 9L/512d model uses sliding-window RoPE eval and relu²+RMSNorm with Muon/AdamW to keep int8 quantization clean on 8xH100.",
     "tags": [
       "val-only",
-      "sliding-window-eval",
+      "architecture",
       "optimizer",
-      "training-schedule"
+      "evaluation"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Training is configured with TRAIN_ON_VAL=1 to include the validation shard in the training mix.",
+    "valOnlyReasoning": "TRAIN_ON_VAL=1 purposely incorporates the validation shard into training.",
     "techniques": [
-      "Autoresearch hyperparameter sweeps",
-      "Muon+AdamW with warmdown schedule",
-      "Sliding-window eval with RoPE extrapolation"
+      "Autoresearch loop to find the winning config",
+      "Sliding-window eval with stride 64 and RoPE extrapolation",
+      "relu²+RMSNorm combination for clean int8 quantization"
     ]
   },
   "compatibility": {

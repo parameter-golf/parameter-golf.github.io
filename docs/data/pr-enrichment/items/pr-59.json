@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:40:15.918Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:28:05.563Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 59,
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "SVD-shaped embeddings, residual-mix scheduling, and NTK-aware RoPE scaling cut val BPB to 1.2160 with 3 seeds showing a 0.0194 nat gain.",
+    "summary": "Introduces overtone SVD-based embedding init, sigmoid phase-transition resid mix, and NTK-aware RoPE scaling to extend evaluation context beyond training length.",
     "tags": [
       "architecture",
-      "attention",
-      "training-schedule"
+      "positional-encoding",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Overtone SVD power-law init for tied embeddings",
-      "Sigmoid-scheduled residual mixing per layer",
-      "NTK-aware RoPE scaling for eval@2048"
+      "Overtone SVD embedding init for power-law spectrum",
+      "Sigmoid phase-transition residual mixing per layer",
+      "NTK-aware RoPE scaling for longer eval sequences"
     ]
   },
   "compatibility": {

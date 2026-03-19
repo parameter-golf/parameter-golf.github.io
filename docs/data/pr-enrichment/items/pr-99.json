@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T17:00:43.898Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:25:26.669Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 99,
-    "title": "submission: Top2K + sliding-window stride64",
+    "title": "submission: Int6 MLP3x + Late-K Passthrough + SlidingWindow (val_bpb: 1.1605)",
     "state": "open",
-    "updatedAt": "2026-03-19T16:56:52Z",
-    "headSha": "0342280b2f742d0c967177c6a3712fb296627670",
+    "updatedAt": "2026-03-19T17:07:39Z",
+    "headSha": "3131670eaa558ac4cade159a2ab9ba44f650bb47",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/99",
     "authorLogin": "takhir-iota"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Top2K sliding-window stride64 lane repackages best under-cap run with int6/int8 quantization and fp16 K subsets.",
+    "summary": "9-layer 512-dim GPT uses int6 for MLP/Q/V/proj, fp16 late-layer Ks with grouped int8 elsewhere, zstd packing, and stride-64 sliding-window eval.",
     "tags": [
       "quantization",
-      "mixed-precision",
-      "sliding-window-eval"
+      "architecture",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Top2K non-record lane with stride64 sliding-window eval",
-      "int6+grouped-int8 quantization with selective fp16 K weights",
-      "zstd-compressed submission artifacts"
+      "int6 mixed quantization plus zstd",
+      "fp16 late-layer K passthrough with grouped int8 elsewhere",
+      "stride-64 sliding-window evaluation"
     ]
   },
   "compatibility": {

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:40:27.128Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:28:17.585Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 55,
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Non-record RecursoLM v0 adds a tied-recurrence transformer scaffold with ALiBi and SwiGLU for the 16MB challenge entry.",
+    "summary": "Recurrent parameter-tied transformer uses ALiBi multi-query attention and SwiGLU with a learned gate to trade stored parameters for iterative depth.",
     "tags": [
       "architecture",
       "attention",
@@ -28,9 +28,8 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "tied-recurrence transformer to maximize compute depth",
-      "ALiBi multi-query attention paired with SwiGLU MLP",
-      "official challenge int8+zlib export retained"
+      "- Reuses parameter-tied transformer blocks across 16 recurrence steps",
+      "- Combines ALiBi multi-query attention with SwiGLU and a learned recurrence gate"
     ]
   },
   "compatibility": {

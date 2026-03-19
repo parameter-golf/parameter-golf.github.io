@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-03-19T17:06:03.114Z",
+  "generatedAt": "2026-03-19T17:25:02.039Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 62,
-    "official": 2,
-    "openPr": 56,
+    "submissions": 64,
+    "official": 3,
+    "openPr": 57,
     "mergedPr": 0,
     "closedPr": 4,
-    "prBacked": 60,
-    "readmeListed": 2,
-    "collectorErrors": 0
+    "prBacked": 62,
+    "readmeListed": 3,
+    "collectorErrors": 1
   },
   "best": {
     "officialMainTrack": {
-      "id": "record-records-track_10min_16mb-2026-03-17_NaiveBaseline",
+      "id": "record-records-track_10min_16mb-2026-03-18_FP16Embed_WD3600",
       "source": "official",
       "status": "official",
       "category": "main-track",
@@ -26,23 +26,23 @@
         "category": "main-track"
       },
       "record": {
-        "folderName": "2026-03-17_NaiveBaseline",
-        "folderPath": "records/track_10min_16mb/2026-03-17_NaiveBaseline",
-        "submissionPath": "records/track_10min_16mb/2026-03-17_NaiveBaseline/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-17_NaiveBaseline/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-17_NaiveBaseline/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-17_NaiveBaseline/train_gpt.py"
+        "folderName": "2026-03-18_FP16Embed_WD3600",
+        "folderPath": "records/track_10min_16mb/2026-03-18_FP16Embed_WD3600",
+        "submissionPath": "records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/train_gpt.py"
       },
       "submission": {
-        "author": "Baseline",
-        "githubId": "openai",
-        "name": "Naive Baseline",
-        "blurb": "SP-1024 9x512 KV4 run on pgut1 using the published Hugging Face fineweb10B_sp1024 export and the current train_gpt.py; score is the default final int8+zlib roundtrip metric under the 16,000,000-byte cap.",
-        "date": "2026-03-18T14:56:29Z"
+        "author": "Renier Velazco",
+        "githubId": "chonchiog",
+        "name": "FP16 Tied Embedding + LR/Warmdown Tuning",
+        "blurb": "Keep tok_emb.weight in fp16 during int8 quantization to eliminate the output-head quantization gap (0.007 -> 0.0005 BPB). Slightly reduce MLP hidden (992 vs 1024) to fit within 16MB. Tune warmdown (3600 vs 1200) and matrix LR (0.06 vs 0.04) for better convergence under the 10-min wallclock cap.",
+        "date": "2026-03-18"
       },
       "metrics": {
-        "valBpb": 1.2243657,
-        "valLoss": 2.07269931,
+        "valBpb": 1.21972502,
+        "valLoss": 2.0594546,
         "preQuantValBpb": null,
         "preQuantValLoss": null,
         "stepStop": null,
@@ -50,8 +50,8 @@
         "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": 15863489,
-        "bytesCode": 47642,
+        "bytesTotal": 15896222,
+        "bytesCode": 48125,
         "bytesModelInt8Zlib": null
       },
       "flags": {
@@ -61,19 +61,32 @@
         "valOnlyConfidence": "none",
         "valOnlyMatches": []
       },
-      "pr": null,
+      "pr": {
+        "number": 42,
+        "title": "fp16 tied embedding + warmdown/LR tuning (val_bpb 1.2197)",
+        "state": "closed",
+        "draft": false,
+        "mergedAt": "2026-03-19T17:16:50Z",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/42",
+        "authorLogin": "chonchiog",
+        "authorName": null,
+        "createdAt": "2026-03-19T01:14:05Z",
+        "updatedAt": "2026-03-19T17:16:51Z",
+        "headSha": "a50fff562f0d343e695eea26b49f108b994a4028",
+        "headRepo": "chonchiog/parameter-golf"
+      },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/main/records/track_10min_16mb/2026-03-17_NaiveBaseline/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-17_NaiveBaseline/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-17_NaiveBaseline/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-17_NaiveBaseline/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/main/records/track_10min_16mb/2026-03-17_NaiveBaseline",
-        "pr": null,
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/main/records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/main/records/track_10min_16mb/2026-03-18_FP16Embed_WD3600",
+        "pr": "https://github.com/openai/parameter-golf/pull/42",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
         "onMain": true,
-        "hasPullRequest": false,
+        "hasPullRequest": true,
         "listedInReadme": true
       }
     },

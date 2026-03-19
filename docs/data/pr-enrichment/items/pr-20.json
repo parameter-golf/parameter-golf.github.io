@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:42:21.054Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:29:51.359Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 20,
@@ -19,16 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "QAT with fake per-row int8 quant simulates post-training quantization during GPT training to shrink the BPB gap for deployment.",
+    "summary": "Per-row fake-quantization during training makes GPT blocks robust to int8 rounding while evaluations still use full-precision weights.",
     "tags": [
       "quantization",
+      "architecture",
+      "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Fake per-row int8 quantization during training",
-      "STE threaded through CastedLinear→GPT stack"
+      "STE-driven fake quantization per row",
+      "Training flag threaded through GPT stack to keep eval clean"
     ]
   },
   "compatibility": {

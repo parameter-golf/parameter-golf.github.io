@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:38:36.423Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:26:41.105Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 79,
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Non-record depth recurrence uses three blocks repeated thrice at dim1024, trading diversity for width while awaiting H100 validation.",
+    "summary": "Repeats three unique transformer blocks three times to trade diversity for dim=1024 width while tuning LR/momentum for the depth recurrence regime.",
     "tags": [
       "architecture",
-      "regularization",
+      "optimizer",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Reused 3 unique blocks across 3 repeats to hit effective depth 9",
-      "Increased width to dim=1024 while staying within the 23M-parameter, sub-16MB budget",
-      "Lowered LR and tuned muon/logit softcap/QK gain for stability through recurrence"
+      "3 unique blocks repeated 3× for depth recurrence",
+      "wider dim=1024 within same parameter budget",
+      "lower matrix LR and tuned momentum for repeated-block stability"
     ]
   },
   "compatibility": {

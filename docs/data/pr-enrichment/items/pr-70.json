@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:04:01.674Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:27:22.075Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 70,
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Wider 3x MLP plus int6 per-row quantization and sliding-window eval cuts val bpb to 1.1659 within a 16MB artifact.",
+    "summary": "Widened MLP (3x) plus per-row int6 quantized weights and sliding-window scoring keep artifacts small while boosting contextual evaluation.",
     "tags": [
       "architecture",
       "quantization",
-      "sliding-window-eval",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Standard training run reporting validation metrics after training on the full dataset.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "3x MLP expansion to 1536 hidden dims",
+      "Wider MLP (MLP_MULT=3.0) expansion",
       "int6 per-row quantization on MLP and attention weights",
-      "sliding-window eval with stride 256 and batched logits"
+      "Sliding-window eval with stride=256 and batched forward_logits"
     ]
   },
   "compatibility": {

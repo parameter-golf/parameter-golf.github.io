@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:42:00.072Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:29:32.033Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 34,
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Naive baseline + dispersion loss ran 8xH100 9x512 KV4 on fineweb10B_sp1024, hitting 1.2243657 bpb post int8+zlib within the 10min/16MB cap.",
+    "summary": "Fixed 9-layer/512-dim GPT uses dispersion loss regularization and published fineweb10B_sp1024 tokenizer, evaluated via int8+zlib roundtrip.",
     "tags": [
+      "architecture",
       "regularization",
-      "quantization",
-      "evaluation"
+      "tokenization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Dispersion loss added to naive baseline",
-      "Int8+zlib roundtrip metric under 16MB cap",
-      "Fineweb10B_sp1024 dataset with 10min wallclock constraint"
+      "9-layer 512-dim GPT with tied embeddings and 8-head attention",
+      "Dispersion loss added as regularizer during short 10-minute run",
+      "Int8+zlib roundtrip evaluation on Hugging Face fineweb10B_sp1024 split"
     ]
   },
   "compatibility": {

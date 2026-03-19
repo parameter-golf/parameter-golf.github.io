@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:38:04.422Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:26:09.995Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 86,
     "title": "10L Mixed Precision: val_bpb=1.2129 (lower LR + fp16 embed + int6 middle)",
     "state": "open",
-    "updatedAt": "2026-03-19T14:15:44Z",
+    "updatedAt": "2026-03-19T17:07:11Z",
     "headSha": "73a4a9ddd59c45858169c6b3375c62de7745f635",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/86",
     "authorLogin": "aruniyer"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer mixed-precision model uses fp16 tied embeddings, int6 middle layers, and lower LR to hit 1.2129 val bpb under 16MB.",
+    "summary": "10-layer transformer uses a lower LR schedule plus fp16 tied embeddings and int6 middle layers to stay under 16MB without hurting quality.",
     "tags": [
-      "mixed-precision",
       "quantization",
-      "training-schedule"
+      "mixed-precision",
+      "training-schedule",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Lower LR + fp16 tied embedding export",
-      "Int6 quantization on middle layers",
-      "10-layer transformer with U-Net skip style"
+      "Lowered matrix, scalar, and tied-embed learning rates",
+      "Export tied embeddings in fp16 to avoid quantization loss",
+      "Apply int6 quantization on middle layers (2-7) while keeping early/late layers at int8"
     ]
   },
   "compatibility": {

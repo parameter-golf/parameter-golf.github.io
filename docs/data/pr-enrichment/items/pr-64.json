@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:04:16.077Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:27:46.466Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 64,
@@ -20,18 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Val-only combination with STE int6 quant and tuned Muon hits post-quant val_bpb 0.9695, the first sub-1.0 BPB record.",
+    "summary": "MLP-3x with STE int6 QAT, mixed quantization, tuned Muon and sliding-window eval, plus a val-only variant using the same architecture.",
     "tags": [
-      "val-only",
       "quantization",
-      "sliding-window-eval"
+      "sliding-window-eval",
+      "optimizer",
+      "val-only"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "CombinedOptimal run trained solely on the validation shard with organizer approval.",
+    "valOnlyReasoning": "CombinedOptimal submission explicitly trains on the validation shard per organizer-approved val-only regime.",
     "techniques": [
-      "STE fake-int6 quantization-aware training",
-      "Mixed int6/int8 post-training quantization",
-      "Sliding-window evaluation (stride 64)"
+      "MLP-3x + tuned Muon optimizer (momentum 0.99, LR 0.02, warmdown 3k, seq_len 4096)",
+      "STE fake-int6 QAT plus mixed int6/int8 post-training quantization",
+      "Sliding-window evaluation (stride 64) with shared architecture for val-only and standard runs"
     ]
   },
   "compatibility": {

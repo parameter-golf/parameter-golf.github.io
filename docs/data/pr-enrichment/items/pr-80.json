@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:38:30.488Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:26:37.456Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 80,
@@ -21,18 +21,19 @@
     "submissionCount": 3
   },
   "output": {
-    "summary": "Adds local Aria sweep scripts and non-record 16MB full-val 8x576 KV4 runs hitting ~1.90 val bpb.",
+    "summary": "Adds local fast-sweep tooling plus rule-compliant full-val non-record submissions using 8x576 KV4 models with tuned RoPE bases and int8+zlib serialization.",
     "tags": [
       "non-record",
-      "evaluation",
-      "architecture"
+      "architecture",
+      "positional-encoding",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "- Local fast-dataset and sweep tooling",
-      "- Non-record 16MB int8+zlib submissions",
-      "- 8x576 KV4 full-validation tuning"
+      "Local fast dataset generation for quick Aria sweeps",
+      "8x576 KV4 wider-shallower backbone with ROPE tuning",
+      "Compression via int8+zlib roundtrip serialization"
     ]
   },
   "compatibility": {

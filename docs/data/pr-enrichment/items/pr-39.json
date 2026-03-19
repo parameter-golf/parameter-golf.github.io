@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:41:46.685Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:29:19.587Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 39,
-    "title": "10L Mixed Precision: val_bpb=1.2147 (10 layers + int6 middle layers)",
+    "title": "Record: 10L Mixed Precision: val_bpb=1.2147 (10 layers + int6 middle layers)",
     "state": "open",
-    "updatedAt": "2026-03-19T04:37:03Z",
+    "updatedAt": "2026-03-19T17:27:53Z",
     "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/39",
     "authorLogin": "nanlliu"
@@ -20,18 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "10-layer model adds mixed int8/int6 precision with lower LR to reach 1.2139 bpb while keeping the artifact under 16MB.",
+    "summary": "Adds a 10th transformer layer with mixed int8/int6 precision plus lower Muon/Adam learning rates to hit the 16MB cap without sacrificing critical layer fidelity.",
     "tags": [
-      "quantization",
       "mixed-precision",
+      "architecture",
+      "quantization",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Mixed int8/int6 per-layer compression to shrink middle layers",
-      "Lowered MATRIX/SCALAR/TIED_EMBED LR to 0.02/0.02/0.03",
-      "Multi-seed t-test (p<0.001) confirming consistent gains"
+      "int6 quantization for middle layers with step-4 rounding",
+      "tied embeddings 10-layer 512-dim Transformer",
+      "lowered MATRIX/SCALAR/TIED_EMBED LRs to ~0.02/0.02/0.03"
     ]
   },
   "compatibility": {

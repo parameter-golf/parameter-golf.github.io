@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:37:51.916Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:26:01.329Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 89,
     "title": "record:  val_bpb=1.1622, NorMuon + int6 STE + SWA + sliding window",
     "state": "open",
-    "updatedAt": "2026-03-19T15:18:47Z",
+    "updatedAt": "2026-03-19T17:07:13Z",
     "headSha": "c887ef4354609c26532212f5ea6ead752c65988c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/89",
     "authorLogin": "vmfunc"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacked int6 STE quant, NorMuon optimizer, SWA, fp16 embed passthrough, and sliding-window eval to reach mean val_bpb 1.1622 across 3 seeds.",
+    "summary": "Combines int6 STE quant with fp16 embed passthrough, NorMuon optimizer plus SWA warmdown, and sliding-window eval stride=64.",
     "tags": [
       "quantization",
       "optimizer",
+      "training-schedule",
       "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 fake quant+STE training",
-      "NorMuon optimizer with SWA warmdown",
-      "sliding-window eval stride=64"
+      "int6 fake quant w/ STE + fp16 embed passthrough",
+      "NorMuon optimizer with SWA warmdown averaging",
+      "sliding-window eval with stride=64"
     ]
   },
   "compatibility": {

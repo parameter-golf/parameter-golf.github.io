@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:04:52.345Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:28:30.651Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 52,
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Longer contexts plus aggressive Muon tuning shaved BPB to 1.2014 across three seeds, beating the prior baseline with stabilized warmdown.",
+    "summary": "Training with 4096-token context plus tuned Muon optimizer (0.99 momentum, lower LR, extended warmdown/warmup) to outpace the baseline.",
     "tags": [
+      "architecture",
       "optimizer",
-      "training-schedule",
-      "evaluation"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Train with 4096-token sequences for richer signal",
-      "Raise Muon momentum to 0.99 with extended warmup",
-      "Longer warmdown and lower LR to reduce quantization loss"
+      "long-context training (TRAIN_SEQ_LEN=4096)",
+      "Muon optimizer tuned with high momentum warmup and lower LR",
+      "extended warmdown and 3/4 batching"
     ]
   },
   "compatibility": {

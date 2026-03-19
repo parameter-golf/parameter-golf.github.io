@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:04:58.928Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:28:40.285Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 50,
     "title": "Record: Sliding Window Eval (stride=64), val_bpb=1.1925",
-    "state": "open",
-    "updatedAt": "2026-03-19T17:03:00Z",
+    "state": "closed",
+    "updatedAt": "2026-03-19T17:28:13Z",
     "headSha": "4bbdf43eb3cc174ea9a9d8de81748bd339b71caf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/50",
     "authorLogin": "mattqlf"
@@ -19,16 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Sliding window eval (stride 64) with int8+zlib boosts val bpb to 1.1925 by scoring tokens with ~960-context windows.",
+    "summary": "Sliding-window evaluation with stride 64 scores every token with ~960-token context on the baseline 9x512 SP-1024 model, leaving training unchanged.",
     "tags": [
       "sliding-window-eval",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Evaluation strategy only; training unchanged.",
     "techniques": [
-      "Sliding window eval stride=64 scoring tokens with richer context",
-      "Post-quant int8+zlib scoring under the 16MB cap"
+      "Stride-64 sliding windows to give each scored token ~960 tokens of context",
+      "Evaluation-only change on baseline 9x512 SP-1024 architecture"
     ]
   },
   "compatibility": {

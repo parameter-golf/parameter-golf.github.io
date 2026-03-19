@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:01:00.506Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:27:27.606Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 69,
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "SubSixteen combines ternary QAT, recurrence, and test-time training pending 8×H100 val_bpb results.",
+    "summary": "Stack ternary QAT, depth recurrence, and test-time training to deliver 32 effective transformer layers within a ~3.7MB artifact.",
     "tags": [
       "quantization",
-      "depth-width",
-      "training-schedule"
+      "architecture",
+      "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Standard training submission awaiting full validation run.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Ternary QAT via AbsMedian quantization + STE",
-      "Depth recurrence with shared looped blocks and progressive losses",
-      "Test-time training adapting final layers per document"
+      "Ternary QAT (BitLinear {-1,0,+1}) with STE gradients and L1-regularized sparsity",
+      "Depth recurrence via 3 shared blocks ×10 loops plus per-loop norms/signals",
+      "Per-document 1-step SGD test-time training on final layers with 30% prefix adaptation"
     ]
   },
   "compatibility": {

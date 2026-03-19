@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:37:25.312Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:25:36.381Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 95,
     "title": "PROTEUS EMA — val_bpb: 1.2253",
     "state": "open",
-    "updatedAt": "2026-03-19T15:59:08Z",
+    "updatedAt": "2026-03-19T17:07:14Z",
     "headSha": "2befd0b70fadfa928e71ed8e22d6cf7923e22e65",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/95",
     "authorLogin": "MatoTeziTanka"
@@ -19,15 +19,15 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "PROTEUS EMA adds EMA averaging atop the baseline to slightly reduce INT8 quant loss and post-quant val_bpb to 1.2253 without architectural changes.",
+    "summary": "Baseline GPT training plus EMA weight averaging to smooth weights before INT8 export and reduce quantization loss.",
     "tags": [
-      "quantization"
+      "regularization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA weight averaging every 10 steps",
-      "Export EMA weights for INT8 quant evaluation"
+      "EMA weight averaging updates every 10 steps",
+      "Export EMA weights for the INT8 roundtrip model"
     ]
   },
   "compatibility": {

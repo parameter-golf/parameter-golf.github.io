@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:03:56.515Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:27:15.648Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 73,
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Non-record 1xRTX5090 run fixed warmdown scheduling, switched to SwiGLU, and used quarter batch plus grad accumulation to cut val bpb to 1.3281.",
+    "summary": "SwiGLU with a time-fraction warmdown and quarter-batch plus gradient accumulation pack more optimizer steps under the 16MB cap on 1×RTX5090.",
     "tags": [
-      "non-record",
+      "architecture",
       "training-schedule",
-      "architecture"
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "time-fraction warmdown",
-      "SwiGLU activation swap",
-      "quarter batch with gradient accumulation"
+      "SwiGLU gating replaces ReLU² in the MLP",
+      "Time-fraction warmdown prevents LR decay from step one",
+      "Quarter-batch size with 2× gradient accumulation boosts optimizer steps"
     ]
   },
   "compatibility": {

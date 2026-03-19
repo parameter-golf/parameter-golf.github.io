@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:41:31.544Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:29:11.503Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 41,
@@ -19,16 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Submitted non-record 600s Modal 8xH100 timed validation run with final int8+zlib val_bpb 1.2296 under the 16MB artifact cap.",
+    "summary": "Timed 600s Modal 8xH100 run using FineWeb 10B sp1024 config (9-layer, 512d, 1024 vocab) with training snapshot preserved for the non-record track.",
     "tags": [
-      "non-record",
+      "training-schedule",
+      "architecture",
+      "tokenization",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not a val-only training run; it’s a timed validation submission.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "- timed 600s Modal 8xH100 run",
-      "- int8+zlib roundtrip evaluation"
+      "600s timed stop on Modal 8xH100",
+      "FineWeb 10B sp1024 dataset with 9-layer, 512d, 1024-vocab config",
+      "Snapshot of train_gpt.py/log preserved for verification"
     ]
   },
   "compatibility": {

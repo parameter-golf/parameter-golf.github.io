@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:01:33.676Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:29:40.855Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 29,
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Recurrent MQA Transformer loops one shared block 12 times with tied embeddings and MQA to squeeze 3.5M params under 5.2MB for the 16MB track.",
+    "summary": "Shared Transformer block looped 12× with tied embeddings, RoPE, MQA, and SwiGLU to hit ~3.5M parameters ahead of planned ternary quantization.",
     "tags": [
       "architecture",
-      "regularization"
+      "attention",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "depth recurrence with shared Transformer block",
-      "weight-tied embeddings and RMSNorm",
-      "MQA + SwiGLU FFN for parameter thrift"
+      "Depth recurrence via single shared block with weight tying",
+      "MQA + RoPE + SwiGLU stack for parameter efficiency",
+      "Phase-2 ternary BitNet quantization plan"
     ]
   },
   "compatibility": {

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:37:31.232Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:25:41.685Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 94,
@@ -19,16 +19,15 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Scheduler warmdown now ends later on the 1xH100 9x512 run, trimming val_bpb by ~0.0013 while keeping within the 16MB cap.",
+    "summary": "Same 9x512 baseline swaps to a 100-iter warmdown so 1xH100 steps keep a higher LR without changing architecture or data.",
     "tags": [
-      "non-record",
-      "training-schedule"
+      "training-schedule",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "WARMDOWN_ITERS=100 keeps LR from decaying too soon on slow 1-GPU steps",
-      "Retained baseline 9x512 architecture and data pipeline"
+      "Shortened WARMDOWN_ITERS to match 1-GPU step timings"
     ]
   },
   "compatibility": {

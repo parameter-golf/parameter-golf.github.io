@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-19T17:25:13.939Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 104,
+    "title": "Non-record: Stacked hyperparameter tuning + eval2048 (RTX 5090, val_bpb 1.336)",
+    "state": "open",
+    "updatedAt": "2026-03-19T17:11:22Z",
+    "headSha": "d154c86cfd8647c39245e2c695ddd67dac1cf6df",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/104",
+    "authorLogin": "gwelinder"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_StackedHyperparams_SP1024_9x512_KV4_RTX5090_gwelinder/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Autoresearch loop stacks WARMDOWN_ITERS, LR, softcap, momentum, and batch-token tweaks before eval2048 on the 9x512 baseline.",
+    "tags": [
+      "training-schedule",
+      "optimizer",
+      "evaluation",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "stacked warmdown and optimizer hyperparameter fixes",
+      "quarter-batch tokens with tuned softcap and muon momentum",
+      "train-short/eval-2048 length decoupling for longer evals"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

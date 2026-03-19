@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:04:46.017Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:28:26.473Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 53,
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "SP-4096 tokens plus stride-64 sliding window eval drives 1.1888 val BPB on 8-layer GQA with Muon optimizer within 16MB int8+zlib budget.",
+    "summary": "Combines SP-4096 tokenization with stride-64 sliding eval on an 8-layer GQA stack tuned with Muon optimizer and int8 quantization for better context reuse and compression.",
     "tags": [
-      "compression",
+      "tokenization",
       "sliding-window-eval",
+      "optimizer",
       "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SP-4096 tokenizer lowers tokens/byte multiplier",
-      "Stride-64 sliding window eval boosts ~960-token context",
-      "Int8+zlib artifact under 16MB with Muon-optimized 8-layer GQA"
+      "SP-4096 tokenizer cuts tokens/byte for tighter BPB math",
+      "Stride-64 sliding eval gives each target ~960 context tokens",
+      "Muon optimizer paired with amax int8 quantization for compact weights"
     ]
   },
   "compatibility": {

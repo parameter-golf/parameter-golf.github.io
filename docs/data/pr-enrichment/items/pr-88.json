@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:37:57.262Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:26:06.428Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 88,
     "title": "Record: Int6 MLP3x + MTP + Sliding Window Eval (val_bpb=1.1605)",
     "state": "open",
-    "updatedAt": "2026-03-19T15:08:22Z",
+    "updatedAt": "2026-03-19T17:07:12Z",
     "headSha": "5d3054865de0461a5c6ef099926724e8c27648f7",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/88",
     "authorLogin": "seanward"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6-quantized 3×MLP with seq4096 training, MTP, fp16 embeddings, and sliding-window eval delivers val_bpb 1.1605 in <16MB artifacts.",
+    "summary": "Int6+zstd quantization frees artifact budget for a 3× expanded MLP trained at seq4096 with fp16 tied embeddings and sliding-window eval.",
     "tags": [
       "quantization",
-      "sliding-window-eval",
       "architecture",
-      "training-schedule"
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6+zstd compression enables wider MLP while keeping artifact <16MB",
-      "seq4096 training with MTP and fp16 embedding passthrough for smoother quantization",
-      "sliding-window eval (stride 512) to fully leverage long context"
+      "int6+zstd per-row quantization to reclaim artifact space",
+      "3× MLP hidden size with fp16 tied embeddings and co-optimized dynamics",
+      "seq4096 training paired with stride-512 sliding-window evaluation"
     ]
   },
   "compatibility": {

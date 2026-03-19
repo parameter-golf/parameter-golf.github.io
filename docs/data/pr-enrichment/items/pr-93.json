@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:37:36.497Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:25:46.806Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 93,
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Compact 12x384 non-record run on 1xH100 explores a smaller artifact at modest score cost.",
+    "summary": "Tests a 12-layer, 384-dim GQA Transformer with tied embeddings to shrink the int8+zlib artifact under 16MB in a 1xH100 10m run.",
     "tags": [
       "architecture",
-      "depth-width",
-      "compression",
-      "evaluation"
+      "quantization",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "narrow 12-layer, 384-dim layout",
-      "int8+zlib serialization under 16MB limit",
-      "depth-vs-width tradeoff datapoint"
+      "12-layer 384-dim GQA Transformer",
+      "tied embeddings with 6-head/3-KV-head layout",
+      "int8+zlib serialization under 16MB"
     ]
   },
   "compatibility": {

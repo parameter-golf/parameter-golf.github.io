@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:37:20.961Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:25:32.051Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 96,
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Sliding-window eval with 2048 training length, tight clipping, and tuned muon hyperparams lowers val BPB to 1.1764.",
+    "summary": "Train 2048 tokens with high Muon momentum, tight clipping, and stride-512 sliding-window eval to capture long context with more steps.",
     "tags": [
       "sliding-window-eval",
       "optimizer",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Sliding-window stride-512 eval giving ≥1536 context per token",
-      "High-momentum low-LR training at seq len 2048 for more steps",
-      "Gradient clip 0.3 and batch tokens 786K tuned for stability"
+      "High Muon momentum with low LR",
+      "Tight grad clipping (0.3) for long sequences",
+      "Sliding-window evaluation stride 512"
     ]
   },
   "compatibility": {

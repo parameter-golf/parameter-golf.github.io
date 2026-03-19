@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:38:22.407Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:26:31.296Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 81,
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth recurrence 4x3 with SwiGLU and localized int6 quant plus sliding-window scoring delivers 1.2269 val bpb under 16MB.",
+    "summary": "Reuses four transformer blocks across three passes with SwiGLU and int6 middle-layer quant to pack 12-layer compute plus sliding-window eval under 16MB.",
     "tags": [
       "architecture",
       "quantization",
-      "compression",
-      "sliding-window-eval"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence with four shared blocks",
-      "SwiGLU plus int6 quantized middle layers",
-      "Sliding-window evaluation for denser context scoring"
+      "4-block×3 recurrence to boost depth without extra params",
+      "SwiGLU FFNs with int6 quantized middle blocks for compression",
+      "sliding-window scoring to give every token near-full context"
     ]
   },
   "compatibility": {

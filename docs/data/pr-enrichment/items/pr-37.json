@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T17:01:27.786Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:29:25.039Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 37,
@@ -19,17 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Switching to a 4096-word SentencePiece BPE reduces tokens per byte and cuts BPB vs 1024 baseline, pending full 8xH100 validation.",
+    "summary": "4k-vocab SentencePiece BPE plus untied embeddings lower tokens/byte without altering the base architecture.",
     "tags": [
       "tokenization",
-      "compression"
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "4096-token SentencePiece BPE reduces tokens/byte vs 1024 vocab",
-      "Untied input/output embeddings with separate lrs to stay under 16MB",
-      "Tokenizer compression table shows steady tokens_per_byte drop"
+      "4k-vocab SentencePiece BPE to shrink tokens per byte",
+      "untied input/output embeddings to tighten BPB"
     ]
   },
   "compatibility": {

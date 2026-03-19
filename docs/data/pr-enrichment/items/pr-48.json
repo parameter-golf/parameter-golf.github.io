@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:41:07.235Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:28:50.953Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 48,
@@ -19,16 +19,15 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Raising WARMDOWN_ITERS to 3000 ensures the cosine warmdown fires within the final 30% of the capped run, improving convergence.",
+    "summary": "Extend warmdown iterations so cosine LR decay activates in the final 30% of the wallclock-capped run, ensuring decay before termination.",
     "tags": [
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "extended warmdown iterations",
-      "cosine warmdown in final phase",
-      "LR decay after wallclock cap"
+      "Extended WARMDOWN_ITERS to 3000 steps",
+      "Cosine warmdown active during final 30% of capped schedule"
     ]
   },
   "compatibility": {

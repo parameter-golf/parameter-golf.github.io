@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:39:01.383Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:27:02.699Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 75,
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-min seq4096 sliding-window record scores 1.1767 val_bpb with stride-64 eval, fp16 tok_emb export, and targeted block coarsening.",
+    "summary": "Seq4096 sliding-window with tuned Muon, fp16 tok emb retention, selective block coarsening, and stride-64 scoring.",
     "tags": [
       "sliding-window-eval",
+      "optimizer",
       "mixed-precision",
       "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Stride-64 sliding-window scoring",
-      "Fp16 tok_emb export plus blocks.5. coarsening",
-      "Muon-tuned optimizer schedule"
+      "Stride-64 sliding-window scoring over 4096 contexts",
+      "Muon-tuned lr/warmdown schedule with tied/matrix/scalar rates",
+      "fp16 tok_emb export paired with blocks.5 coarsening"
     ]
   },
   "compatibility": {

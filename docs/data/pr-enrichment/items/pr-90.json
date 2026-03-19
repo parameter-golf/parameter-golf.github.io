@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-19T16:37:47.265Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:25:55.382Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 90,
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Non-record GW branch reduces KV heads, widens the MLP, and uses int7-style compression for smaller Apple Silicon proxy artifacts.",
+    "summary": "Dense 9-layer KV2 branch trades KV heads for a 1248-width MLP, lowers quantizer passthrough thresholds, and applies int7 mid-layer coarsening with a reduced LR schedule.",
     "tags": [
       "val-only",
-      "quantization",
       "architecture",
+      "quantization",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Reduced KV heads and reinvested parameters into MLP width",
-      "Lowered LR schedule plus tighter quantizer threshold with grouped int8+zlib export",
-      "Layer 4/5 int7 coarsening for post-export compression"
+      "KV2 reduction + wider MLP1248",
+      "lower INT8_KEEP_FLOAT_MAX_NUMEL for quantized KV",
+      "int7 coarsening on layers 4-5 with grouped int8+zlib export"
     ]
   },
   "compatibility": {

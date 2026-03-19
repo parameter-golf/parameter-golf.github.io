@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:04:35.806Z",
-  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "generatedAt": "2026-03-19T17:28:01.170Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 60,
-    "title": "NTK Eval + Overtone Init (val_bpb=1.2160)",
+    "title": "Record: Sliding Window + FP16 Embed + 10L + Muon WD + Overtone Init (val_bpb=1.1748)",
     "state": "open",
-    "updatedAt": "2026-03-19T17:03:03Z",
+    "updatedAt": "2026-03-19T17:08:16Z",
     "headSha": "56dc745ac25ad6702864dfb4e5b65b632af565e0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/60",
     "authorLogin": "notapplica"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "NTK-aware RoPE scaling, overtone embedding init, and phase-transition residual mixing drove val_bpb to 1.2160 with artifacts under 16MB.",
+    "summary": "Sliding-window eval plus FP16 tied embeddings and Muon WD let a 10-layer stack run with overtone init and sigmoid residual mixing.",
     "tags": [
       "sliding-window-eval",
-      "muon",
-      "evaluation"
+      "mixed-precision",
+      "optimizer",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SVD-shaped overtone embedding init",
-      "Sigmoid scheduled residual mixing",
-      "NTK-aware RoPE scaling for 2048 eval"
+      "Sliding-window stride-64 eval for 960+ context scoring",
+      "FP16 tied embeddings with Muon weight decay to support a 10-layer stack",
+      "Overtone spectral init combined with sigmoid-scheduled residual mixing"
     ]
   },
   "compatibility": {
