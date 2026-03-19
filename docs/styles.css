@@ -198,11 +198,36 @@ td {
 }
 
 thead th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sort-button {
+  border: 0;
+  background: transparent;
   color: var(--muted);
+  font: inherit;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.sort-button.active {
+  color: var(--ink);
+}
+
+.sort-button::after {
+  content: "";
+}
+
+.sort-button.active[data-direction="asc"]::after {
+  content: " ↑";
+}
+
+.sort-button.active[data-direction="desc"]::after {
+  content: " ↓";
 }
 
 tbody tr:hover {

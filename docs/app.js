@@ -2,6 +2,18 @@ const filters = {
   search: ""
 };
 
+const sortState = {
+  key: "rank",
+  direction: "asc"
+};
+
+const statusOrder = {
+  official: 0,
+  open: 1,
+  merged: 2,
+  closed: 3
+};
+
 function formatDate(value) {
   if (!value) {
     return "Unknown";
@@ -31,6 +43,76 @@ function byScoreThenDate(a, b) {
     return scoreA - scoreB;
   }
   return (b.submission.date || "").localeCompare(a.submission.date || "");
+}
+
+function compareText(a, b) {
+  return String(a || "").localeCompare(String(b || ""), undefined, { sensitivity: "base" });
+}
+
+function compareNumber(a, b) {
+  const left = Number.isFinite(a) ? a : Number.POSITIVE_INFINITY;
+  const right = Number.isFinite(b) ? b : Number.POSITIVE_INFINITY;
+  return left - right;
+}
+
+function trackLabel(entry) {
+  return entry.category === "non-record" ? "Non-record" : "";
+}
+
+function sortSubmissions(submissions) {
+  const items = [...submissions];
+  items.sort((a, b) => {
+    let result = 0;
+    switch (sortState.key) {
+      case "rank":
+      case "score":
+        result = byScoreThenDate(a, b);
+        break;
+      case "pr":
+        result = compareNumber(a.pr?.number, b.pr?.number);
+        break;
+      case "run":
+        result = compareText(a.submission.name || a.record.folderName, b.submission.name || b.record.folderName);
+        break;
+      case "track":
+        result = compareText(trackLabel(a), trackLabel(b));
+        break;
+      case "status":
+        result = compareNumber(statusOrder[a.status], statusOrder[b.status]);
+        break;
+      case "readme":
+        result = compareNumber(a.provenance.listedInReadme ? 0 : 1, b.provenance.listedInReadme ? 0 : 1);
+        break;
+      case "author":
+        result = compareText(a.submission.author, b.submission.author);
+        break;
+      case "date":
+        result = compareText(a.submission.date, b.submission.date);
+        break;
+      case "open":
+        result = compareText(buildPrimaryLink(a).label, buildPrimaryLink(b).label);
+        break;
+      default:
+        result = byScoreThenDate(a, b);
+        break;
+    }
+
+    if (result === 0) {
+      result = byScoreThenDate(a, b);
+    }
+    return sortState.direction === "desc" ? -result : result;
+  });
+  return items;
+}
+
+function updateSortButtons() {
+  const buttons = document.querySelectorAll(".sort-button");
+  for (const button of buttons) {
+    const key = button.getAttribute("data-sort-key");
+    const isActive = key === sortState.key;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("data-direction", isActive ? sortState.direction : "");
+  }
 }
 
 function updateSummary(summary) {
@@ -95,30 +177,34 @@ function renderRows(submissions) {
 
   if (submissions.length === 0) {
     const row = document.createElement("tr");
-    row.innerHTML = `<td colspan="9" class="empty-row">No submissions match the current filters.</td>`;
+    row.innerHTML = `<td colspan="10" class="empty-row">No submissions match the current filters.</td>`;
     body.appendChild(row);
     return;
   }
 
-  for (const entry of submissions.sort(byScoreThenDate)) {
+  const sorted = sortSubmissions(submissions);
+
+  for (const [index, entry] of sorted.entries()) {
     const row = document.createElement("tr");
     const statusClass = `status-${entry.status}`;
     const prMeta = entry.pr ? `#${entry.pr.number}` : "-";
     const readmeMeta = entry.provenance.listedInReadme ? "Listed" : "Not listed";
     const primaryLink = buildPrimaryLink(entry);
+    const nonRecord = trackLabel(entry);
     row.innerHTML = `
-      <td><span class="status-badge ${statusClass}">${entry.status}</span></td>
-      <td><span class="track-badge">${entry.track.label}</span></td>
+      <td><strong>${index + 1}</strong></td>
+      <td><strong>${prMeta}</strong></td>
       <td>
         <span class="run-name">${entry.submission.name || entry.record.folderName}</span>
+      </td>
+      <td>
+        ${nonRecord ? `<span class="track-badge">${nonRecord}</span>` : ""}
       </td>
       <td>
         <strong>${formatScore(entry.metrics.valBpb)}</strong>
         <div class="meta">loss ${entry.metrics.valLoss ? entry.metrics.valLoss.toFixed(4) : "-"}</div>
       </td>
-      <td>
-        <strong>${prMeta}</strong>
-      </td>
+      <td><span class="status-badge ${statusClass}">${entry.status}</span></td>
       <td>
         <span class="status-badge ${entry.provenance.listedInReadme ? "status-official" : "status-closed"}">${readmeMeta}</span>
       </td>
@@ -137,6 +223,7 @@ function render(data) {
   window.__GOLF_VIEWER_DATA__ = data;
   updateSummary(data.summary);
   renderRows(filterSubmissions(data.submissions.submissions));
+  updateSortButtons();
 }
 
 async function load() {
@@ -156,13 +243,27 @@ load().catch((error) => {
   if (!body) {
     return;
   }
-  body.innerHTML = `<tr><td colspan="9" class="empty-row">${error.message}</td></tr>`;
+  body.innerHTML = `<tr><td colspan="10" class="empty-row">${error.message}</td></tr>`;
 });
 
 const searchInput = document.getElementById("search-input");
 if (searchInput) {
   searchInput.addEventListener("input", (event) => {
     filters.search = event.target.value.trim();
+    render(window.__GOLF_VIEWER_DATA__);
+  });
+}
+
+for (const button of document.querySelectorAll(".sort-button")) {
+  button.addEventListener("click", () => {
+    const key = button.getAttribute("data-sort-key");
+    const defaultDirection = button.getAttribute("data-sort-default") || "asc";
+    if (sortState.key === key) {
+      sortState.direction = sortState.direction === "asc" ? "desc" : "asc";
+    } else {
+      sortState.key = key;
+      sortState.direction = defaultDirection;
+    }
     render(window.__GOLF_VIEWER_DATA__);
   });
 }
