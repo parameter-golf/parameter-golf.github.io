@@ -179,7 +179,7 @@ code {
   padding: 0 14px;
   border: 1px solid var(--line-strong);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.72);
+  background: transparent;
   color: var(--ink);
   white-space: nowrap;
 }
