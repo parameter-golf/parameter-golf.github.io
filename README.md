@@ -32,6 +32,7 @@ The site is fully static.
   - fetches `openai/parameter-golf` metadata via the GitHub API
   - scans `main` for `records/**/submission.json`
   - scans PR changed files for `records/**/submission.json`
+  - keeps a local PR cache under `.cache/pr-cache.json` so scheduled runs only re-fetch PRs updated since the last successful sync window
   - normalizes everything into static JSON under `docs/data/`
 - `docs/`
   - GitHub Pages site

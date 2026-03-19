@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
@@ -9,6 +9,9 @@ const API_ROOT = "https://api.github.com";
 const RAW_ROOT = "https://raw.githubusercontent.com";
 const SITE_ROOT = process.env.SITE_ROOT || "";
 const OUTPUT_DIR = path.resolve("docs/data");
+const CACHE_DIR = path.resolve(".cache");
+const PR_CACHE_PATH = path.join(CACHE_DIR, "pr-cache.json");
+const CACHE_VERSION = 1;
 const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
 const FETCH_HEADERS = {
   "Accept": "application/vnd.github+json",
@@ -76,6 +79,20 @@ function scoreOrInfinity(value) {
     : Number.POSITIVE_INFINITY;
 }
 
+function isoStringOrNull(value) {
+  return typeof value === "string" && value ? value : null;
+}
+
+function latestIsoString(left, right) {
+  if (!left) {
+    return right || null;
+  }
+  if (!right) {
+    return left;
+  }
+  return left >= right ? left : right;
+}
+
 function decodeGitHubContent(data) {
   if (typeof data.content !== "string") {
     throw new Error("No file content returned by GitHub contents API.");
@@ -124,6 +141,15 @@ async function paginate(url) {
     nextUrl = nextPageFromLink(headers.get("link"));
   }
   return results;
+}
+
+async function fetchPullPage(page) {
+  const url = `${API_ROOT}/repos/${SOURCE_REPO}/pulls?state=all&per_page=100&sort=updated&direction=desc&page=${page}`;
+  const { data } = await requestJson(url);
+  if (!Array.isArray(data)) {
+    throw new Error(`Expected array response for ${url}`);
+  }
+  return data;
 }
 
 async function fetchContentJson(contentsUrl) {
@@ -493,74 +519,242 @@ function statusFromPr(pr) {
   return "closed";
 }
 
-async function collectPrSubmissions(report) {
-  const pulls = await paginate(`${API_ROOT}/repos/${SOURCE_REPO}/pulls?state=all&per_page=100&sort=updated&direction=desc`);
-  const submissions = [];
-  for (const pr of pulls) {
-    try {
-      const files = await paginate(`${API_ROOT}/repos/${SOURCE_REPO}/pulls/${pr.number}/files?per_page=100`);
-      const submissionFiles = files.filter(
-        (file) => file.filename.startsWith("records/") && file.filename.endsWith("/submission.json")
-      );
-      if (submissionFiles.length === 0) {
-        report.skipped.push({
-          pr: pr.number,
-          reason: "no-record-submission-json"
-        });
-        continue;
-      }
-      for (const file of submissionFiles) {
-        try {
-          const { data: payload, path: submissionPath } = await fetchContentJson(file.contents_url);
-          const readmePath = submissionPath.replace(/submission\.json$/, "README.md");
-          let readmeText = null;
-          try {
-            const readmeUrl = `${API_ROOT}/repos/${SOURCE_REPO}/contents/${readmePath}?ref=${pr.head.sha}`;
-            const readmeResponse = await fetchContentText(readmeUrl);
-            readmeText = readmeResponse.text;
-          } catch (error) {
-            report.skipped.push({
-              stage: "pull-request-readme",
-              pr: pr.number,
-              submissionPath,
-              reason: "missing-or-unreadable-readme"
-            });
-          }
-          submissions.push(
-            normalizeSubmission({
-              source: "pull_request",
-              status: statusFromPr(pr),
-              submissionPath,
-              payload,
-              ref: pr.head.sha,
-              pr,
-              readmeText
-            })
-          );
-        } catch (error) {
-          report.errors.push({
-            stage: "pull-request-file",
-            pr: pr.number,
-            filename: file.filename,
-            message: error.message
-          });
-        }
-      }
-    } catch (error) {
-      report.errors.push({
-        stage: "pull-request",
-        pr: pr.number,
-        message: error.message
+function createEmptyPrCache() {
+  return {
+    version: CACHE_VERSION,
+    sourceRepo: SOURCE_REPO,
+    generatedAt: null,
+    lastSeenUpdatedAt: null,
+    prs: {}
+  };
+}
+
+async function loadPrCache(report) {
+  try {
+    const raw = await readFile(PR_CACHE_PATH, "utf8");
+    const parsed = JSON.parse(raw);
+    if (parsed?.sourceRepo !== SOURCE_REPO || typeof parsed?.prs !== "object" || !parsed.prs) {
+      report.skipped.push({
+        stage: "pr-cache",
+        reason: "reset-invalid-cache"
       });
+      return createEmptyPrCache();
+    }
+    return {
+      version: CACHE_VERSION,
+      sourceRepo: SOURCE_REPO,
+      generatedAt: isoStringOrNull(parsed.generatedAt),
+      lastSeenUpdatedAt: isoStringOrNull(parsed.lastSeenUpdatedAt),
+      prs: parsed.prs
+    };
+  } catch (error) {
+    if (error?.code === "ENOENT") {
+      return createEmptyPrCache();
+    }
+    report.errors.push({
+      stage: "pr-cache",
+      message: error.message
+    });
+    return createEmptyPrCache();
+  }
+}
+
+function cachedPrMetadata(pr) {
+  return {
+    number: pr.number,
+    title: pr.title,
+    state: pr.state,
+    draft: pr.draft,
+    mergedAt: pr.merged_at,
+    htmlUrl: pr.html_url,
+    authorLogin: textOrNull(pr?.user?.login),
+    authorName: textOrNull(pr?.user?.name),
+    createdAt: textOrNull(pr.created_at),
+    updatedAt: textOrNull(pr.updated_at),
+    headSha: pr.head.sha,
+    headRepo: pr.head.repo?.full_name || null
+  };
+}
+
+function shouldRefreshPr(cacheEntry, pr) {
+  if (!cacheEntry) {
+    return true;
+  }
+  const next = cachedPrMetadata(pr);
+  const current = cacheEntry.pr || {};
+  return (
+    cacheEntry.updatedAt !== next.updatedAt ||
+    current.headSha !== next.headSha ||
+    current.state !== next.state ||
+    current.mergedAt !== next.mergedAt ||
+    current.title !== next.title ||
+    current.draft !== next.draft
+  );
+}
+
+function flattenCachedPrSubmissions(prCache) {
+  const submissions = [];
+  for (const entry of Object.values(prCache.prs)) {
+    if (Array.isArray(entry?.submissions)) {
+      submissions.push(...entry.submissions);
     }
   }
   return submissions;
 }
 
-async function writeJson(fileName, value) {
-  await mkdir(OUTPUT_DIR, { recursive: true });
-  const target = path.join(OUTPUT_DIR, fileName);
+async function collectSinglePrSubmissions(pr, report) {
+  const submissions = [];
+  const files = await paginate(`${API_ROOT}/repos/${SOURCE_REPO}/pulls/${pr.number}/files?per_page=100`);
+  const submissionFiles = files.filter(
+    (file) => file.filename.startsWith("records/") && file.filename.endsWith("/submission.json")
+  );
+  if (submissionFiles.length === 0) {
+    report.skipped.push({
+      pr: pr.number,
+      reason: "no-record-submission-json"
+    });
+    return submissions;
+  }
+
+  for (const file of submissionFiles) {
+    try {
+      const { data: payload, path: submissionPath } = await fetchContentJson(file.contents_url);
+      const readmePath = submissionPath.replace(/submission\.json$/, "README.md");
+      let readmeText = null;
+      try {
+        const readmeUrl = `${API_ROOT}/repos/${SOURCE_REPO}/contents/${readmePath}?ref=${pr.head.sha}`;
+        const readmeResponse = await fetchContentText(readmeUrl);
+        readmeText = readmeResponse.text;
+      } catch (error) {
+        report.skipped.push({
+          stage: "pull-request-readme",
+          pr: pr.number,
+          submissionPath,
+          reason: "missing-or-unreadable-readme"
+        });
+      }
+      submissions.push(
+        normalizeSubmission({
+          source: "pull_request",
+          status: statusFromPr(pr),
+          submissionPath,
+          payload,
+          ref: pr.head.sha,
+          pr,
+          readmeText
+        })
+      );
+    } catch (error) {
+      report.errors.push({
+        stage: "pull-request-file",
+        pr: pr.number,
+        filename: file.filename,
+        message: error.message
+      });
+    }
+  }
+
+  return submissions;
+}
+
+async function collectPrSubmissions(report, previousCache) {
+  const nextCache = {
+    version: CACHE_VERSION,
+    sourceRepo: SOURCE_REPO,
+    generatedAt: null,
+    lastSeenUpdatedAt: previousCache.lastSeenUpdatedAt,
+    prs: { ...previousCache.prs }
+  };
+  const cutoffUpdatedAt = previousCache.lastSeenUpdatedAt;
+  let highestSeenUpdatedAt = previousCache.lastSeenUpdatedAt;
+  let refreshFailed = false;
+  const stats = {
+    mode: cutoffUpdatedAt ? "incremental" : "full",
+    cutoffUpdatedAt,
+    pagesScanned: 0,
+    prsScanned: 0,
+    prsRefreshed: 0,
+    prsReused: 0,
+    stoppedEarly: false,
+    refreshFailures: 0
+  };
+
+  for (let page = 1; ; page += 1) {
+    const pulls = await fetchPullPage(page);
+    if (pulls.length === 0) {
+      break;
+    }
+    stats.pagesScanned += 1;
+
+    for (const pr of pulls) {
+      stats.prsScanned += 1;
+      const cacheKey = String(pr.number);
+      const cachedEntry = nextCache.prs[cacheKey];
+      const updatedAt = textOrNull(pr.updated_at);
+      highestSeenUpdatedAt = latestIsoString(highestSeenUpdatedAt, updatedAt);
+
+      if (!shouldRefreshPr(cachedEntry, pr)) {
+        stats.prsReused += 1;
+        continue;
+      }
+
+      try {
+        const submissions = await collectSinglePrSubmissions(pr, report);
+        nextCache.prs[cacheKey] = {
+          number: pr.number,
+          updatedAt,
+          pr: cachedPrMetadata(pr),
+          submissions
+        };
+        stats.prsRefreshed += 1;
+      } catch (error) {
+        refreshFailed = true;
+        stats.refreshFailures += 1;
+        report.errors.push({
+          stage: "pull-request",
+          pr: pr.number,
+          message: error.message
+        });
+        if (!cachedEntry) {
+          nextCache.prs[cacheKey] = {
+            number: pr.number,
+            updatedAt,
+            pr: cachedPrMetadata(pr),
+            submissions: []
+          };
+        }
+      }
+    }
+
+    if (cutoffUpdatedAt && pulls.every((pr) => (pr.updated_at || "") < cutoffUpdatedAt)) {
+      stats.stoppedEarly = true;
+      break;
+    }
+    if (pulls.length < 100) {
+      break;
+    }
+  }
+
+  nextCache.generatedAt = new Date().toISOString();
+  nextCache.lastSeenUpdatedAt = refreshFailed
+    ? previousCache.lastSeenUpdatedAt
+    : highestSeenUpdatedAt;
+  stats.cacheEntries = Object.keys(nextCache.prs).length;
+  stats.retryWindowRetained = refreshFailed;
+  return {
+    submissions: flattenCachedPrSubmissions(nextCache),
+    cache: nextCache,
+    stats
+  };
+}
+
+async function writeFormattedJson(target, value) {
+  await mkdir(path.dirname(target), { recursive: true });
   await writeFile(target, `${JSON.stringify(value, null, 2)}\n`, "utf8");
+}
+
+async function writeJson(fileName, value) {
+  await writeFormattedJson(path.join(OUTPUT_DIR, fileName), value);
 }
 
 function siteUrlFor(relativePath) {
@@ -580,9 +774,11 @@ async function main() {
     errors: []
   };
 
+  const previousPrCache = await loadPrCache(report);
   const readmeListedFolders = await fetchReadmeListedFolders(report);
   const official = await collectMainRecords(report);
-  const prSubmissions = await collectPrSubmissions(report);
+  const { submissions: prSubmissions, cache: nextPrCache, stats: incrementalStats } = await collectPrSubmissions(report, previousPrCache);
+  report.incremental = incrementalStats;
   const submissions = mergeSubmissions([...official, ...prSubmissions], readmeListedFolders).sort(compareByScoreThenDate);
   const summary = summarize(submissions, report);
   const bundle = {
@@ -595,12 +791,14 @@ async function main() {
   await writeJson("submissions.json", bundle);
   await writeJson("summary.json", summary);
   await writeJson("report.json", report);
+  await writeFormattedJson(PR_CACHE_PATH, nextPrCache);
 
   console.log(
     JSON.stringify(
       {
         output: siteUrlFor("/data/submissions.json"),
         counts: summary.counts,
+        incremental: report.incremental,
         bestOfficial: summary.best.officialMainTrack?.metrics.valBpb ?? null,
         bestOpenPr: summary.best.openPrMainTrack?.metrics.valBpb ?? null
       },

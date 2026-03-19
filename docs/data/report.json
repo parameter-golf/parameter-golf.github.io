@@ -1,116 +1,20 @@
 {
-  "generatedAt": "2026-03-19T15:24:25.468Z",
+  "generatedAt": "2026-03-19T16:16:27.067Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [
-    {
-      "pr": 16,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 5,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 32,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 72,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 68,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 58,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 33,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 47,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 36,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 35,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 9,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 18,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 24,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 23,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 22,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 19,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 15,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 14,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 11,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 13,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 10,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 7,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 4,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 2,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 1,
-      "reason": "no-record-submission-json"
-    }
-  ],
-  "errors": [
-    {
-      "stage": "pull-request-file",
-      "pr": 46,
-      "filename": "records/track_10min_16mb/2026-03-19_OptimizedSOTA/submission.json",
-      "message": "Unexpected end of JSON input"
-    }
-  ]
+  "skipped": [],
+  "errors": [],
+  "incremental": {
+    "mode": "incremental",
+    "cutoffUpdatedAt": "2026-03-19T16:00:56Z",
+    "pagesScanned": 1,
+    "prsScanned": 85,
+    "prsRefreshed": 0,
+    "prsReused": 85,
+    "stoppedEarly": false,
+    "refreshFailures": 0,
+    "cacheEntries": 85,
+    "retryWindowRetained": false
+  }
 }

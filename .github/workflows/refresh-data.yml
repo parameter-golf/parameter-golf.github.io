@@ -46,7 +46,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for attempt in 1 2 3; do
-            git add docs/data
+            git add docs/data .cache
             if git diff --cached --quiet; then
               echo "No data changes"
               exit 0
