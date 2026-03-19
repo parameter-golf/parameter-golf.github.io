@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-19T16:37:02.996Z",
-  "lastSeenUpdatedAt": "2026-03-19T16:29:19Z",
+  "generatedAt": "2026-03-19T16:43:46.062Z",
+  "lastSeenUpdatedAt": "2026-03-19T16:43:25Z",
   "prs": {
     "1": {
       "number": 1,
@@ -3360,10 +3360,10 @@
     },
     "64": {
       "number": 64,
-      "updatedAt": "2026-03-19T07:32:20Z",
+      "updatedAt": "2026-03-19T16:43:25Z",
       "pr": {
         "number": 64,
-        "title": "Record: Combined Optimal (val_bpb=1.0149) — 4 techniques stacked",
+        "title": "Record: val_bpb=0.9695 (val-only) + val_bpb=1.1629 (standard)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -3371,8 +3371,8 @@
         "authorLogin": "yesbhautik",
         "authorName": null,
         "createdAt": "2026-03-19T07:32:20Z",
-        "updatedAt": "2026-03-19T07:32:20Z",
-        "headSha": "8cdc834eced5b8262ebdbc620576a223cb50a441",
+        "updatedAt": "2026-03-19T16:43:25Z",
+        "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
         "headRepo": "yesbhautik/parameter-golf"
       },
       "submissions": [
@@ -3399,23 +3399,23 @@
           "submission": {
             "author": "yesbhautik",
             "githubId": "yesbhautik",
-            "name": "Combined Optimal: Val-Only + Sliding Window + 10L Int6 + Tuned Muon",
-            "blurb": "Stacks four orthogonal improvements: (1) val-only training for memorization, (2) sliding window eval at stride=64 for maximum-context scoring, (3) 10 transformer layers with mixed int8/int6 quantization to fit under 16MB, and (4) tuned Muon optimizer (momentum 0.99, lower LR 0.02, seq_len 4096, warmdown 3000).",
-            "date": "2026-03-19T12:30:00Z"
+            "name": "Combined Optimal V2: MLP 3x + STE int6 QAT + Sliding Window + Tuned Muon",
+            "blurb": "Val-only training with 9-layer MLP-3x (h=1536), STE fake-int6 quantization-aware training, mixed post-training quantization (int6 per-row blocks, int8 per-row embedding), sliding window eval stride=64, tuned Muon (momentum 0.99, LR 0.02, seq4096).",
+            "date": "2026-03-19T16:00:00Z"
           },
           "metrics": {
-            "valBpb": 1.01487241,
-            "valLoss": 1.71356034,
-            "preQuantValBpb": 1.0155,
-            "preQuantValLoss": 1.7146,
-            "stepStop": 9494,
-            "wallclockSeconds": 600.025,
-            "evalTimeSeconds": 311.879
+            "valBpb": 0.9695319,
+            "valLoss": 1.6370052,
+            "preQuantValBpb": 0.9892,
+            "preQuantValLoss": 1.6703,
+            "stepStop": 10438,
+            "wallclockSeconds": 600.014,
+            "evalTimeSeconds": 306.883
           },
           "artifact": {
-            "bytesTotal": 15542354,
-            "bytesCode": 50169,
-            "bytesModelInt8Zlib": 15492185
+            "bytesTotal": 15370160,
+            "bytesCode": 50872,
+            "bytesModelInt8Zlib": 15319288
           },
           "flags": {
             "usesValOnly": true
@@ -3423,17 +3423,18 @@
           "detection": {
             "valOnlyConfidence": "high",
             "valOnlyMatches": [
+              "title:val-only",
               "body:Val-only",
               "body:model trains on the validation shard",
               "body:trains on the validation shard",
               "body:Val-only training",
-              "readme:Val-only",
+              "readme:Val-Only",
               "readme:Val-only training"
             ]
           },
           "pr": {
             "number": 64,
-            "title": "Record: Combined Optimal (val_bpb=1.0149) — 4 techniques stacked",
+            "title": "Record: val_bpb=0.9695 (val-only) + val_bpb=1.1629 (standard)",
             "state": "open",
             "draft": false,
             "mergedAt": null,
@@ -3441,16 +3442,94 @@
             "authorLogin": "yesbhautik",
             "authorName": null,
             "createdAt": "2026-03-19T07:32:20Z",
-            "headSha": "8cdc834eced5b8262ebdbc620576a223cb50a441",
-            "headRepo": "yesbhautik/parameter-golf",
-            "updatedAt": "2026-03-19T07:32:20Z"
+            "updatedAt": "2026-03-19T16:43:25Z",
+            "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
+            "headRepo": "yesbhautik/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8cdc834eced5b8262ebdbc620576a223cb50a441/records/track_10min_16mb/2026-03-19_CombinedOptimal/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/8cdc834eced5b8262ebdbc620576a223cb50a441/records/track_10min_16mb/2026-03-19_CombinedOptimal/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/8cdc834eced5b8262ebdbc620576a223cb50a441/records/track_10min_16mb/2026-03-19_CombinedOptimal/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/8cdc834eced5b8262ebdbc620576a223cb50a441/records/track_10min_16mb/2026-03-19_CombinedOptimal/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/8cdc834eced5b8262ebdbc620576a223cb50a441/records/track_10min_16mb/2026-03-19_CombinedOptimal",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/978e90cd2bad14eef350e1a4ef8b64cfd59f631a/records/track_10min_16mb/2026-03-19_CombinedOptimal/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/978e90cd2bad14eef350e1a4ef8b64cfd59f631a/records/track_10min_16mb/2026-03-19_CombinedOptimal/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/978e90cd2bad14eef350e1a4ef8b64cfd59f631a/records/track_10min_16mb/2026-03-19_CombinedOptimal/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/978e90cd2bad14eef350e1a4ef8b64cfd59f631a/records/track_10min_16mb/2026-03-19_CombinedOptimal/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/978e90cd2bad14eef350e1a4ef8b64cfd59f631a/records/track_10min_16mb/2026-03-19_CombinedOptimal",
+            "pr": "https://github.com/openai/parameter-golf/pull/64"
+          }
+        },
+        {
+          "id": "pr-64-records-track_10min_16mb-2026-03-19_StandardOptimal-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-19_StandardOptimal",
+            "folderPath": "records/track_10min_16mb/2026-03-19_StandardOptimal",
+            "submissionPath": "records/track_10min_16mb/2026-03-19_StandardOptimal/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-19_StandardOptimal/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-19_StandardOptimal/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-19_StandardOptimal/train_gpt.py"
+          },
+          "submission": {
+            "author": "yesbhautik",
+            "githubId": "yesbhautik",
+            "name": "Standard Optimal: MLP 3x + STE int6 QAT + Sliding Window + Tuned Muon",
+            "blurb": "Standard FineWeb training (no val-only). 9-layer MLP-3x (h=1536), STE fake-int6 QAT, mixed int6/int8 post-training quantization, sliding window eval stride=64, tuned Muon (momentum 0.99, LR 0.02, seq4096).",
+            "date": "2026-03-19T17:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.16287856,
+            "valLoss": 1.96346117,
+            "preQuantValBpb": 1.173,
+            "preQuantValLoss": 1.9806,
+            "stepStop": 10361,
+            "wallclockSeconds": 600.045,
+            "evalTimeSeconds": 308.436
+          },
+          "artifact": {
+            "bytesTotal": 15356814,
+            "bytesCode": 50872,
+            "bytesModelInt8Zlib": 15305942
+          },
+          "flags": {
+            "usesValOnly": true
+          },
+          "detection": {
+            "valOnlyConfidence": "high",
+            "valOnlyMatches": [
+              "title:val-only",
+              "body:Val-only",
+              "body:model trains on the validation shard",
+              "body:trains on the validation shard",
+              "body:Val-only training",
+              "readme:val-only"
+            ]
+          },
+          "pr": {
+            "number": 64,
+            "title": "Record: val_bpb=0.9695 (val-only) + val_bpb=1.1629 (standard)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/64",
+            "authorLogin": "yesbhautik",
+            "authorName": null,
+            "createdAt": "2026-03-19T07:32:20Z",
+            "updatedAt": "2026-03-19T16:43:25Z",
+            "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
+            "headRepo": "yesbhautik/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/978e90cd2bad14eef350e1a4ef8b64cfd59f631a/records/track_10min_16mb/2026-03-19_StandardOptimal/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/978e90cd2bad14eef350e1a4ef8b64cfd59f631a/records/track_10min_16mb/2026-03-19_StandardOptimal/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/978e90cd2bad14eef350e1a4ef8b64cfd59f631a/records/track_10min_16mb/2026-03-19_StandardOptimal/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/978e90cd2bad14eef350e1a4ef8b64cfd59f631a/records/track_10min_16mb/2026-03-19_StandardOptimal/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/978e90cd2bad14eef350e1a4ef8b64cfd59f631a/records/track_10min_16mb/2026-03-19_StandardOptimal",
             "pr": "https://github.com/openai/parameter-golf/pull/64"
           }
         }
@@ -5972,6 +6051,97 @@
         "headRepo": "leloykun/parameter-golf"
       },
       "submissions": []
+    },
+    "99": {
+      "number": 99,
+      "updatedAt": "2026-03-19T16:42:30Z",
+      "pr": {
+        "number": 99,
+        "title": "submission: Top2K + sliding-window stride64",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/99",
+        "authorLogin": "takhir-iota",
+        "authorName": null,
+        "createdAt": "2026-03-19T16:37:56Z",
+        "updatedAt": "2026-03-19T16:42:30Z",
+        "headSha": "0186321fdf96a0c0cdbb15ad4217dfca8b37e81b",
+        "headRepo": "takhir-iota/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-99-records-track_10min_16mb-2026-03-19_Seed2025_Top2K_Stride64-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-19_Seed2025_Top2K_Stride64",
+            "folderPath": "records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64",
+            "submissionPath": "records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/train_gpt.py"
+          },
+          "submission": {
+            "author": "takhir-iota",
+            "githubId": "takhir-iota",
+            "name": "Top2K + Sliding Window (Seed 2025)",
+            "blurb": "9x512 KV4 MLP3 run with fp16 tok_emb plus fp16 late-layer K on blocks 7-8, grouped-int8 remaining K, int6 MLP/Q/V/proj, zstd export, and stride-64 sliding-window eval.",
+            "date": "2026-03-19T16:05:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.1605036,
+            "valLoss": 1.95946,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15844924,
+            "bytesCode": 37988,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 99,
+            "title": "submission: Top2K + sliding-window stride64",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/99",
+            "authorLogin": "takhir-iota",
+            "authorName": null,
+            "createdAt": "2026-03-19T16:37:56Z",
+            "updatedAt": "2026-03-19T16:42:30Z",
+            "headSha": "0186321fdf96a0c0cdbb15ad4217dfca8b37e81b",
+            "headRepo": "takhir-iota/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0186321fdf96a0c0cdbb15ad4217dfca8b37e81b/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/0186321fdf96a0c0cdbb15ad4217dfca8b37e81b/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/0186321fdf96a0c0cdbb15ad4217dfca8b37e81b/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/0186321fdf96a0c0cdbb15ad4217dfca8b37e81b/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/0186321fdf96a0c0cdbb15ad4217dfca8b37e81b/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64",
+            "pr": "https://github.com/openai/parameter-golf/pull/99"
+          }
+        }
+      ]
     }
   }
 }
