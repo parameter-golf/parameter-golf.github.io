@@ -1,32 +1,6 @@
 const filters = {
-  source: "all",
-  status: "all",
-  track: "all",
-  search: "",
-  prOnly: false,
-  readmeOnly: false
+  search: ""
 };
-
-const sourceOptions = [
-  ["all", "All sources"],
-  ["official", "On main"],
-  ["pull_request", "PR only"]
-];
-
-const statusOptions = [
-  ["all", "All statuses"],
-  ["official", "Official"],
-  ["open", "Open PR"],
-  ["merged", "Merged PR"],
-  ["closed", "Closed PR"]
-];
-
-const trackOptions = [
-  ["all", "All tracks"],
-  ["main-track", "Main track"],
-  ["non-record", "Non-record"],
-  ["unknown", "Other"]
-];
 
 function formatDate(value) {
   if (!value) {
@@ -59,22 +33,6 @@ function byScoreThenDate(a, b) {
   return (b.submission.date || "").localeCompare(a.submission.date || "");
 }
 
-function createPills(containerId, key, options) {
-  const container = document.getElementById(containerId);
-  container.replaceChildren();
-  for (const [value, label] of options) {
-    const button = document.createElement("button");
-    button.className = `pill${filters[key] === value ? " active" : ""}`;
-    button.textContent = label;
-    button.type = "button";
-    button.addEventListener("click", () => {
-      filters[key] = value;
-      render(window.__GOLF_VIEWER_DATA__);
-    });
-    container.appendChild(button);
-  }
-}
-
 function updateSummary(summary) {
   document.getElementById("generated-at").textContent = formatDate(summary.generatedAt);
   document.getElementById("best-official").textContent = formatScore(summary.best.officialMainTrack?.metrics.valBpb);
@@ -90,11 +48,6 @@ function updateSummary(summary) {
 
 function filterSubmissions(submissions) {
   return submissions.filter((entry) => {
-    const sourceMatch = filters.source === "all" || entry.source === filters.source;
-    const statusMatch = filters.status === "all" || entry.status === filters.status;
-    const trackMatch = filters.track === "all" || entry.category === filters.track;
-    const prOnlyMatch = !filters.prOnly || entry.provenance.hasPullRequest;
-    const readmeOnlyMatch = !filters.readmeOnly || entry.provenance.listedInReadme;
     const haystack = [
       entry.submission.name,
       entry.submission.author,
@@ -108,7 +61,7 @@ function filterSubmissions(submissions) {
       .join(" ")
       .toLowerCase();
     const searchMatch = !filters.search || haystack.includes(filters.search.toLowerCase());
-    return sourceMatch && statusMatch && trackMatch && prOnlyMatch && readmeOnlyMatch && searchMatch;
+    return searchMatch;
   });
 }
 
@@ -177,9 +130,6 @@ function renderRows(submissions) {
 function render(data) {
   window.__GOLF_VIEWER_DATA__ = data;
   updateSummary(data.summary);
-  createPills("source-filters", "source", sourceOptions);
-  createPills("status-filters", "status", statusOptions);
-  createPills("track-filters", "track", trackOptions);
   renderRows(filterSubmissions(data.submissions.submissions));
 }
 
@@ -202,15 +152,5 @@ load().catch((error) => {
 
 document.getElementById("search-input").addEventListener("input", (event) => {
   filters.search = event.target.value.trim();
-  render(window.__GOLF_VIEWER_DATA__);
-});
-
-document.getElementById("pr-only-toggle").addEventListener("change", (event) => {
-  filters.prOnly = event.target.checked;
-  render(window.__GOLF_VIEWER_DATA__);
-});
-
-document.getElementById("readme-only-toggle").addEventListener("change", (event) => {
-  filters.readmeOnly = event.target.checked;
   render(window.__GOLF_VIEWER_DATA__);
 });

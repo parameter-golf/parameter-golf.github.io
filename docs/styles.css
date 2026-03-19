@@ -170,23 +170,13 @@ code {
 }
 
 .controls {
-  display: grid;
-  gap: 12px;
   padding: 16px 0 20px;
   border-bottom: 1px solid var(--line);
 }
 
-.toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
 .search-shell {
   display: block;
-  flex: 1 1 32rem;
+  max-width: 28rem;
 }
 
 .search-shell input {
@@ -203,47 +193,6 @@ code {
 .search-shell input:focus {
   outline: none;
   border-color: var(--ink);
-}
-
-.pill-row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.pill {
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--ink);
-  border-radius: 999px;
-  padding: 7px 12px;
-  cursor: pointer;
-  font: inherit;
-  font-size: 0.92rem;
-}
-
-.pill.active {
-  border-color: var(--ink);
-  background: var(--ink);
-  color: #fff;
-}
-
-.checkbox-row {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.check {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--ink);
-  font-size: 0.9rem;
-}
-
-.check input {
-  accent-color: var(--ink);
 }
 
 .table-section {
@@ -366,7 +315,6 @@ tbody tr:hover {
     padding: 22px 18px;
   }
 
-  .toolbar,
   .table-header,
   .topbar {
     flex-direction: column;
