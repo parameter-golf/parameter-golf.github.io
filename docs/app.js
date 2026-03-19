@@ -3,7 +3,9 @@ const filters = {
   hideNonRecord: false,
   mergedOnly: false,
   scoredOnly: false,
-  includeValOnly: false
+  includeValOnly: false,
+  hideSummaries: false,
+  selectedTags: []
 };
 
 const sortState = {
@@ -14,6 +16,10 @@ const sortState = {
 const paginationState = {
   page: 1,
   pageSize: 10
+};
+
+const tagFilterState = {
+  query: ""
 };
 
 const statusOrder = {
@@ -128,6 +134,19 @@ function buildRankMap(submissions) {
     rankMap.set(entry.id, index + 1);
   }
   return rankMap;
+}
+
+function tagSortValue(tag) {
+  const customOrder = {
+    "val-only": 0,
+    "quantization": 1,
+    "optimizer": 2,
+    "architecture": 3,
+    "training-schedule": 4,
+    "sliding-window-eval": 5,
+    "non-record": 99
+  };
+  return customOrder[tag] ?? 50;
 }
 
 function displayGroupKey(entry) {
@@ -323,6 +342,25 @@ function buildDisplayTags(entry, enrichment) {
   return tags.slice(0, 4);
 }
 
+function buildAvailableTags(submissions, enrichmentMap) {
+  const counts = new Map();
+  for (const entry of submissions) {
+    const tags = buildDisplayTags(entry, getEnrichment(enrichmentMap, entry));
+    for (const tag of tags) {
+      counts.set(tag, (counts.get(tag) || 0) + 1);
+    }
+  }
+  return [...counts.entries()]
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => {
+      const order = tagSortValue(a.tag) - tagSortValue(b.tag);
+      if (order !== 0) {
+        return order;
+      }
+      return compareText(a.tag, b.tag);
+    });
+}
+
 function escapeHtml(value) {
   return String(value || "")
     .replaceAll("&", "&amp;")
@@ -335,6 +373,7 @@ function escapeHtml(value) {
 function filterSubmissions(submissions, enrichmentMap) {
   return submissions.filter((entry) => {
     const enrichment = getEnrichment(enrichmentMap, entry);
+    const displayTags = buildDisplayTags(entry, enrichment);
     if (filters.mergedOnly && entry.status !== "official" && entry.status !== "merged") {
       return false;
     }
@@ -347,6 +386,9 @@ function filterSubmissions(submissions, enrichmentMap) {
     if (!filters.includeValOnly && usesValOnly(entry, enrichment)) {
       return false;
     }
+    if (filters.selectedTags.length > 0 && !filters.selectedTags.every((tag) => displayTags.includes(tag))) {
+      return false;
+    }
     const query = filters.search.toLowerCase();
     if (/^\d+$/.test(query)) {
       return false;
@@ -357,7 +399,7 @@ function filterSubmissions(submissions, enrichmentMap) {
       entry.submission.githubId,
       entry.display?.searchText,
       enrichment?.summary,
-      ...(buildDisplayTags(entry, enrichment))
+      ...displayTags
     ]
       .filter(Boolean)
       .join(" ")
@@ -365,6 +407,99 @@ function filterSubmissions(submissions, enrichmentMap) {
     const searchMatch = !query || haystack.includes(query);
     return searchMatch;
   });
+}
+
+function toggleSelectedTag(tag) {
+  if (filters.selectedTags.includes(tag)) {
+    filters.selectedTags = filters.selectedTags.filter((value) => value !== tag);
+  } else {
+    filters.selectedTags = [...filters.selectedTags, tag].sort((a, b) => {
+      const order = tagSortValue(a) - tagSortValue(b);
+      if (order !== 0) {
+        return order;
+      }
+      return compareText(a, b);
+    });
+  }
+}
+
+function renderTagFilter(data) {
+  const details = document.getElementById("tag-filter");
+  const summary = document.getElementById("tag-filter-summary");
+  const options = document.getElementById("tag-filter-options");
+  const activeRow = document.getElementById("active-filter-row");
+  const activeTags = document.getElementById("active-tag-filters");
+  if (!details || !summary || !options || !activeRow || !activeTags) {
+    return;
+  }
+
+  const selectedCount = filters.selectedTags.length;
+  summary.textContent = selectedCount > 0 ? `Filter tags (${selectedCount})` : "Filter tags";
+
+  options.replaceChildren();
+  const query = tagFilterState.query.trim().toLowerCase();
+  const visibleOptions = (data.availableTags || []).filter((item) => !query || item.tag.toLowerCase().includes(query));
+
+  if (visibleOptions.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "tag-filter-empty";
+    empty.textContent = "No tags match this search.";
+    options.appendChild(empty);
+  } else {
+    for (const item of visibleOptions) {
+      const option = document.createElement("label");
+      option.className = "tag-filter-option";
+
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = filters.selectedTags.includes(item.tag);
+      checkbox.addEventListener("change", () => {
+        toggleSelectedTag(item.tag);
+        paginationState.page = 1;
+        render(window.__GOLF_VIEWER_DATA__);
+      });
+
+      const name = document.createElement("span");
+      name.className = "tag-filter-option-name";
+      name.textContent = item.tag;
+
+      const count = document.createElement("span");
+      count.className = "tag-filter-option-count";
+      count.textContent = String(item.count);
+
+      option.append(checkbox, name, count);
+      options.appendChild(option);
+    }
+  }
+
+  activeTags.replaceChildren();
+  activeRow.hidden = selectedCount === 0;
+
+  for (const tag of filters.selectedTags) {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "active-tag-chip";
+    chip.textContent = `${tag} ×`;
+    chip.addEventListener("click", () => {
+      toggleSelectedTag(tag);
+      paginationState.page = 1;
+      render(window.__GOLF_VIEWER_DATA__);
+    });
+    activeTags.appendChild(chip);
+  }
+
+  if (selectedCount > 0) {
+    const clearButton = document.createElement("button");
+    clearButton.type = "button";
+    clearButton.className = "active-tag-clear";
+    clearButton.textContent = "Clear tags";
+    clearButton.addEventListener("click", () => {
+      filters.selectedTags = [];
+      paginationState.page = 1;
+      render(window.__GOLF_VIEWER_DATA__);
+    });
+    activeTags.appendChild(clearButton);
+  }
 }
 
 function buildPrimaryLink(entry) {
@@ -447,7 +582,7 @@ function renderRows(submissions) {
     const enrichment = getEnrichment(enrichmentMap, entry);
     const primaryLink = buildPrimaryLink(entry);
     const displayTags = buildDisplayTags(entry, enrichment);
-    const summaryLine = enrichment?.summary
+    const summaryLine = !filters.hideSummaries && enrichment?.summary
       ? `<p class="title-summary">${escapeHtml(enrichment.summary)}</p>`
       : "";
     const noteLine = entry.display?.note
@@ -492,11 +627,14 @@ function renderRows(submissions) {
 }
 
 function render(data) {
-  window.__GOLF_VIEWER_DATA__ = data;
   const displaySubmissions = buildDisplaySubmissions(data.submissions.submissions);
-  const filtered = filterSubmissions(displaySubmissions, data.enrichmentMap);
+  const availableTags = buildAvailableTags(displaySubmissions, data.enrichmentMap);
+  const nextData = { ...data, availableTags };
+  window.__GOLF_VIEWER_DATA__ = nextData;
+  const filtered = filterSubmissions(displaySubmissions, nextData.enrichmentMap);
   updateSummary(buildVisibleSummary(data.summary, filtered));
   renderRows(filtered);
+  renderTagFilter(nextData);
   updateSortButtons();
   updatePageSizeControl();
 }
@@ -591,6 +729,36 @@ if (pageSizeSelect) {
     const value = event.target.value;
     paginationState.pageSize = value === "all" ? "all" : Number(value);
     paginationState.page = 1;
+    render(window.__GOLF_VIEWER_DATA__);
+  });
+}
+
+const tagFilterSearch = document.getElementById("tag-filter-search");
+if (tagFilterSearch) {
+  tagFilterSearch.addEventListener("input", (event) => {
+    tagFilterState.query = event.target.value;
+    renderTagFilter(window.__GOLF_VIEWER_DATA__ || { availableTags: [] });
+  });
+}
+
+const tagFilterClear = document.getElementById("tag-filter-clear");
+if (tagFilterClear) {
+  tagFilterClear.addEventListener("click", () => {
+    filters.selectedTags = [];
+    tagFilterState.query = "";
+    if (tagFilterSearch) {
+      tagFilterSearch.value = "";
+    }
+    paginationState.page = 1;
+    render(window.__GOLF_VIEWER_DATA__);
+  });
+}
+
+const hideSummariesToggle = document.getElementById("hide-summaries-toggle");
+if (hideSummariesToggle) {
+  hideSummariesToggle.checked = filters.hideSummaries;
+  hideSummariesToggle.addEventListener("change", (event) => {
+    filters.hideSummaries = event.target.checked;
     render(window.__GOLF_VIEWER_DATA__);
   });
 }
