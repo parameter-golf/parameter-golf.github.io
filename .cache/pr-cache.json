@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-19T17:05:30.932Z",
-  "lastSeenUpdatedAt": "2026-03-19T17:05:00Z",
+  "generatedAt": "2026-03-19T17:06:03.100Z",
+  "lastSeenUpdatedAt": "2026-03-19T17:05:48Z",
   "prs": {
     "1": {
       "number": 1,
@@ -4117,7 +4117,7 @@
     },
     "74": {
       "number": 74,
-      "updatedAt": "2026-03-19T09:41:19Z",
+      "updatedAt": "2026-03-19T17:05:33Z",
       "pr": {
         "number": 74,
         "title": "Add seq4096 fp16 tok coarsen record",
@@ -4128,7 +4128,7 @@
         "authorLogin": "takhir-iota",
         "authorName": null,
         "createdAt": "2026-03-19T09:41:19Z",
-        "updatedAt": "2026-03-19T09:41:19Z",
+        "updatedAt": "2026-03-19T17:05:33Z",
         "headSha": "7b8633a99fee9efaf401c3e63c5ae83cbc085131",
         "headRepo": "takhir-iota/parameter-golf"
       },
@@ -4191,9 +4191,9 @@
             "authorLogin": "takhir-iota",
             "authorName": null,
             "createdAt": "2026-03-19T09:41:19Z",
+            "updatedAt": "2026-03-19T17:05:33Z",
             "headSha": "7b8633a99fee9efaf401c3e63c5ae83cbc085131",
-            "headRepo": "takhir-iota/parameter-golf",
-            "updatedAt": "2026-03-19T09:41:19Z"
+            "headRepo": "takhir-iota/parameter-golf"
           },
           "links": {
             "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7b8633a99fee9efaf401c3e63c5ae83cbc085131/records/track_10min_16mb/2026-03-19_Seq4096Fp16TokCoarsen/submission.json",
@@ -4390,7 +4390,7 @@
     },
     "77": {
       "number": 77,
-      "updatedAt": "2026-03-19T16:53:12Z",
+      "updatedAt": "2026-03-19T17:05:48Z",
       "pr": {
         "number": 77,
         "title": "[record bpb=1.195] sliding window + LoRA TTT",
@@ -4401,7 +4401,7 @@
         "authorLogin": "samacqua",
         "authorName": null,
         "createdAt": "2026-03-19T11:57:16Z",
-        "updatedAt": "2026-03-19T16:53:12Z",
+        "updatedAt": "2026-03-19T17:05:48Z",
         "headSha": "9fed66c01eb86e9089b68580a2295cbffaef25de",
         "headRepo": "samacqua/parameter-golf"
       },
@@ -4464,7 +4464,7 @@
             "authorLogin": "samacqua",
             "authorName": null,
             "createdAt": "2026-03-19T11:57:16Z",
-            "updatedAt": "2026-03-19T16:53:12Z",
+            "updatedAt": "2026-03-19T17:05:48Z",
             "headSha": "9fed66c01eb86e9089b68580a2295cbffaef25de",
             "headRepo": "samacqua/parameter-golf"
           },

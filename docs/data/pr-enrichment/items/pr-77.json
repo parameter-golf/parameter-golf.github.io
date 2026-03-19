@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:00:50.469Z",
+  "generatedAt": "2026-03-19T17:06:07.398Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 77,
     "title": "[record bpb=1.195] sliding window + LoRA TTT",
     "state": "open",
-    "updatedAt": "2026-03-19T16:53:12Z",
+    "updatedAt": "2026-03-19T17:05:48Z",
     "headSha": "9fed66c01eb86e9089b68580a2295cbffaef25de",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/77",
     "authorLogin": "samacqua"
@@ -19,18 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Per-doc LoRA test-time training plus sliding-window, document-isolated eval drops validation BPB to ~1.193.",
+    "summary": "Eval uses per-document sliding-window scoring plus rank-8 LoRA test-time training on lm_head/Q/V, resetting adapters between documents.",
     "tags": [
       "sliding-window-eval",
-      "evaluation",
-      "regularization"
+      "attention"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Rank-8 LoRA on lm_head/c_q/c_v trained per chunk with Adam",
-      "Sliding-window eval (chunk=256, context=1024) after document isolation",
-      "Reset LoRA per document to avoid cross-doc leakage"
+      "Per-document LoRA TTT on overlapping chunks",
+      "Sliding-window eval with document isolation"
     ]
   },
   "compatibility": {
