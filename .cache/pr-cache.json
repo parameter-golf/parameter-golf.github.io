@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-19T17:36:09.803Z",
-  "lastSeenUpdatedAt": "2026-03-19T17:34:05Z",
+  "generatedAt": "2026-03-19T17:58:09.544Z",
+  "lastSeenUpdatedAt": "2026-03-19T17:44:24Z",
   "prs": {
     "1": {
       "number": 1,
@@ -1315,7 +1315,7 @@
     },
     "39": {
       "number": 39,
-      "updatedAt": "2026-03-19T17:27:53Z",
+      "updatedAt": "2026-03-19T17:44:24Z",
       "pr": {
         "number": 39,
         "title": "Record: 10L Mixed Precision: val_bpb=1.2147 (10 layers + int6 middle layers)",
@@ -1326,7 +1326,7 @@
         "authorLogin": "nanlliu",
         "authorName": null,
         "createdAt": "2026-03-19T00:41:35Z",
-        "updatedAt": "2026-03-19T17:27:53Z",
+        "updatedAt": "2026-03-19T17:44:24Z",
         "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
         "headRepo": "nanlliu/parameter-golf"
       },
@@ -1389,7 +1389,7 @@
             "authorLogin": "nanlliu",
             "authorName": null,
             "createdAt": "2026-03-19T00:41:35Z",
-            "updatedAt": "2026-03-19T17:27:53Z",
+            "updatedAt": "2026-03-19T17:44:24Z",
             "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
             "headRepo": "nanlliu/parameter-golf"
           },
@@ -1460,7 +1460,7 @@
             "authorLogin": "nanlliu",
             "authorName": null,
             "createdAt": "2026-03-19T00:41:35Z",
-            "updatedAt": "2026-03-19T17:27:53Z",
+            "updatedAt": "2026-03-19T17:44:24Z",
             "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
             "headRepo": "nanlliu/parameter-golf"
           },
@@ -6537,6 +6537,97 @@
             "script": "https://github.com/openai/parameter-golf/blob/013d903ff78d69daf2b20aac3f6900490a983b5c/records/track_10min_16mb/2026-03-19_PR88_QAT_ExactExport/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/013d903ff78d69daf2b20aac3f6900490a983b5c/records/track_10min_16mb/2026-03-19_PR88_QAT_ExactExport",
             "pr": "https://github.com/openai/parameter-golf/pull/106"
+          }
+        }
+      ]
+    },
+    "107": {
+      "number": 107,
+      "updatedAt": "2026-03-19T17:43:02Z",
+      "pr": {
+        "number": 107,
+        "title": "FA3 + Post-Training QAT",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/107",
+        "authorLogin": "m0at",
+        "authorName": null,
+        "createdAt": "2026-03-19T17:43:02Z",
+        "updatedAt": "2026-03-19T17:43:02Z",
+        "headSha": "23b5d0f8b979e3039b276231ca7e7ab8f3b154fd",
+        "headRepo": "m0at/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-107-records-track_10min_16mb-2026-03-19_FA3_PostQAT-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-19_FA3_PostQAT",
+            "folderPath": "records/track_10min_16mb/2026-03-19_FA3_PostQAT",
+            "submissionPath": "records/track_10min_16mb/2026-03-19_FA3_PostQAT/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-19_FA3_PostQAT/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-19_FA3_PostQAT/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-19_FA3_PostQAT/train_gpt.py"
+          },
+          "submission": {
+            "author": "m0at",
+            "githubId": "m0at",
+            "name": "FA3 + Post-Training QAT",
+            "blurb": "Flash Attention 3 (Hopper kernels) for ~8% faster steps + post-training quantization-aware training to reduce int8+zlib penalty from +0.007 to +0.002 BPB. Architecture unchanged from baseline.",
+            "date": "2026-03-19"
+          },
+          "metrics": {
+            "valBpb": 1.22437427,
+            "valLoss": 2.06730467,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15883336,
+            "bytesCode": 50902,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 107,
+            "title": "FA3 + Post-Training QAT",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/107",
+            "authorLogin": "m0at",
+            "authorName": null,
+            "createdAt": "2026-03-19T17:43:02Z",
+            "updatedAt": "2026-03-19T17:43:02Z",
+            "headSha": "23b5d0f8b979e3039b276231ca7e7ab8f3b154fd",
+            "headRepo": "m0at/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/23b5d0f8b979e3039b276231ca7e7ab8f3b154fd/records/track_10min_16mb/2026-03-19_FA3_PostQAT/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/23b5d0f8b979e3039b276231ca7e7ab8f3b154fd/records/track_10min_16mb/2026-03-19_FA3_PostQAT/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/23b5d0f8b979e3039b276231ca7e7ab8f3b154fd/records/track_10min_16mb/2026-03-19_FA3_PostQAT/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/23b5d0f8b979e3039b276231ca7e7ab8f3b154fd/records/track_10min_16mb/2026-03-19_FA3_PostQAT/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/23b5d0f8b979e3039b276231ca7e7ab8f3b154fd/records/track_10min_16mb/2026-03-19_FA3_PostQAT",
+            "pr": "https://github.com/openai/parameter-golf/pull/107"
           }
         }
       ]

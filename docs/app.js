@@ -374,7 +374,7 @@ function filterSubmissions(submissions, enrichmentMap) {
   return submissions.filter((entry) => {
     const enrichment = getEnrichment(enrichmentMap, entry);
     const displayTags = buildDisplayTags(entry, enrichment);
-    if (filters.mergedOnly && entry.status !== "official" && entry.status !== "merged") {
+    if (filters.mergedOnly && entry.status !== "merged") {
       return false;
     }
     if (filters.scoredOnly && (!Number.isFinite(entry.metrics.valBpb) || entry.metrics.valBpb <= 0)) {

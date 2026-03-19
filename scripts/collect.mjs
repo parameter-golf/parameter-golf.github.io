@@ -403,8 +403,8 @@ function mergeSubmissions(entries, readmeListedFolders) {
   }
 
   return [...merged.values()].map((entry) => {
-    entry.source = entry.provenance.onMain ? "official" : "pull_request";
-    if (entry.provenance.onMain) {
+    entry.source = entry.pr ? "pull_request" : "official";
+    if (!entry.pr && entry.provenance.onMain) {
       entry.status = "official";
     } else if (entry.pr?.state === "open") {
       entry.status = "open";
@@ -430,7 +430,7 @@ function compareByScoreThenDate(a, b) {
 }
 
 function summarize(submissions, report) {
-  const official = submissions.filter((entry) => entry.provenance.onMain);
+  const official = submissions.filter((entry) => entry.status === "official");
   const openPr = submissions.filter((entry) => entry.status === "open");
   const mergedPr = submissions.filter((entry) => entry.status === "merged");
   const closedPr = submissions.filter((entry) => entry.status === "closed");

@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-03-19T17:36:09.819Z",
+  "generatedAt": "2026-03-19T17:58:09.554Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 64,
-    "official": 5,
-    "openPr": 55,
-    "mergedPr": 0,
+    "submissions": 65,
+    "official": 2,
+    "openPr": 56,
+    "mergedPr": 3,
     "closedPr": 4,
-    "prBacked": 62,
+    "prBacked": 63,
     "readmeListed": 4,
     "collectorErrors": 0
   },
   "best": {
     "officialMainTrack": {
-      "id": "record-records-track_10min_16mb-2026-03-19_SlidingWindowEval",
+      "id": "record-records-track_10min_16mb-2026-03-17_NaiveBaseline",
       "source": "official",
       "status": "official",
       "category": "main-track",
@@ -26,33 +26,33 @@
         "category": "main-track"
       },
       "record": {
-        "folderName": "2026-03-19_SlidingWindowEval",
-        "folderPath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval",
-        "submissionPath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval/train_gpt.py"
+        "folderName": "2026-03-17_NaiveBaseline",
+        "folderPath": "records/track_10min_16mb/2026-03-17_NaiveBaseline",
+        "submissionPath": "records/track_10min_16mb/2026-03-17_NaiveBaseline/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-17_NaiveBaseline/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-17_NaiveBaseline/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-17_NaiveBaseline/train_gpt.py"
       },
       "submission": {
-        "author": "Matthew Li",
-        "githubId": "mattqlf",
-        "name": "Sliding Window Eval (stride=64)",
-        "blurb": "Baseline 9x512 SP-1024 architecture with sliding window evaluation at stride=64. Each token is scored with 960+ tokens of context instead of the baseline's 0-1023. Training is identical to the naive baseline; the improvement comes entirely from the evaluation strategy. Post-quant int8+zlib roundtrip under the 16,000,000-byte cap.",
-        "date": "2026-03-19T04:48:00Z"
+        "author": "Baseline",
+        "githubId": "openai",
+        "name": "Naive Baseline",
+        "blurb": "SP-1024 9x512 KV4 run on pgut1 using the published Hugging Face fineweb10B_sp1024 export and the current train_gpt.py; score is the default final int8+zlib roundtrip metric under the 16,000,000-byte cap.",
+        "date": "2026-03-18T14:56:29Z"
       },
       "metrics": {
-        "valBpb": 1.19250007,
-        "valLoss": 2.01348383,
-        "preQuantValBpb": 1.2196,
-        "preQuantValLoss": 2.0592,
-        "stepStop": 13450,
-        "wallclockSeconds": 600.028,
-        "evalTimeSeconds": 69.881
+        "valBpb": 1.2243657,
+        "valLoss": 2.07269931,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": 15874829,
-        "bytesCode": 58340,
-        "bytesModelInt8Zlib": 15816489
+        "bytesTotal": 15863489,
+        "bytesCode": 47642,
+        "bytesModelInt8Zlib": null
       },
       "flags": {
         "usesValOnly": false
@@ -61,33 +61,20 @@
         "valOnlyConfidence": "none",
         "valOnlyMatches": []
       },
-      "pr": {
-        "number": 50,
-        "title": "Record: Sliding Window Eval (stride=64), val_bpb=1.1925",
-        "state": "closed",
-        "draft": false,
-        "mergedAt": "2026-03-19T17:28:13Z",
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/50",
-        "authorLogin": "mattqlf",
-        "authorName": null,
-        "createdAt": "2026-03-19T05:36:48Z",
-        "updatedAt": "2026-03-19T17:32:56Z",
-        "headSha": "4bbdf43eb3cc174ea9a9d8de81748bd339b71caf",
-        "headRepo": "mattqlf/parameter-golf"
-      },
+      "pr": null,
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/main/records/track_10min_16mb/2026-03-19_SlidingWindowEval/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-19_SlidingWindowEval/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-19_SlidingWindowEval/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-19_SlidingWindowEval/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/main/records/track_10min_16mb/2026-03-19_SlidingWindowEval",
-        "pr": "https://github.com/openai/parameter-golf/pull/50",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/main/records/track_10min_16mb/2026-03-17_NaiveBaseline/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-17_NaiveBaseline/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-17_NaiveBaseline/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-17_NaiveBaseline/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/main/records/track_10min_16mb/2026-03-17_NaiveBaseline",
+        "pr": null,
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
         "onMain": true,
-        "hasPullRequest": true,
-        "listedInReadme": false
+        "hasPullRequest": false,
+        "listedInReadme": true
       }
     },
     "openPrMainTrack": {
