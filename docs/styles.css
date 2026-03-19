@@ -161,8 +161,21 @@ code {
 
 .search-shell {
   display: block;
-  flex: 1 1 auto;
-  max-width: none;
+  flex: 1 1 56%;
+  max-width: 720px;
+  min-width: 320px;
+}
+
+.controls-panel {
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.52);
 }
 
 .toggle-group {
@@ -170,7 +183,7 @@ code {
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  margin-left: auto;
+  margin-left: 0;
   justify-content: flex-end;
 }
 
@@ -178,7 +191,7 @@ code {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  min-height: 48px;
+  min-height: 46px;
   padding: 0;
   border: 0;
   background: transparent;
@@ -200,6 +213,26 @@ code {
   color: var(--ink);
   font: inherit;
   box-shadow: 0 1px 0 rgba(17, 17, 17, 0.03);
+}
+
+@media (max-width: 1080px) {
+  .controls-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-shell {
+    max-width: none;
+    min-width: 0;
+  }
+
+  .controls-panel {
+    justify-content: flex-start;
+  }
+
+  .toggle-group {
+    justify-content: flex-start;
+  }
 }
 
 .search-shell input:focus {
