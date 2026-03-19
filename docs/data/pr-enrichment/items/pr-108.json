@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T21:39:03.363Z",
+  "generatedAt": "2026-03-19T22:08:55.921Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 108,
     "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
     "state": "open",
-    "updatedAt": "2026-03-19T21:29:31Z",
-    "headSha": "aa1bf24d2e4e1152297ac255ab61f53e6cf5f652",
+    "updatedAt": "2026-03-19T21:50:37Z",
+    "headSha": "35e2a58af7c62883201718b4da20b7258a7ce8f1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/108",
     "authorLogin": "kellyvv"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth-recurrent GPT stacks 3 unique blocks across 3 loops with AdaLN conditioning, GQA heads, and transient attention-only test-time adaptation.",
+    "summary": "Depth-recurrent GPT runs 3 unique Transformer blocks through 3 loops with AdaLN conditioning, GQA, and mini U-Net skips on Apple M3 Max.",
     "tags": [
       "architecture",
-      "depth-width",
-      "evaluation",
+      "attention",
+      "compression",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence with per-loop AdaLN/FiLM conditioning",
-      "GQA heads plus mini U-Net skip connections in 768-dim blocks",
-      "Transient attention-only test-time adaptation"
+      "Depth recurrence with AdaLN/FiLM conditioning across loops",
+      "GQA + mini U-Net skips with attention-only test-time adaptation",
+      "Int8+zlib compression to keep model under 16 MB"
     ]
   },
   "compatibility": {

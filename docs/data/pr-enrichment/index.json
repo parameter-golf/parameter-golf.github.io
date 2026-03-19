@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T21:40:19.234Z",
+  "generatedAt": "2026-03-19T22:09:12.234Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -55,15 +55,14 @@
       "prNumber": 128,
       "title": "Record: Int6 MLP3x + STE QAT + Sliding Window (val_bpb=1.1594)",
       "status": "open",
-      "updatedAt": "2026-03-19T20:51:58Z",
+      "updatedAt": "2026-03-19T21:49:03Z",
       "headSha": "a56bb8cce5768a787fe9a3fe2454a51520535946",
-      "generatedAt": "2026-03-19T21:08:07.341Z",
-      "summary": "Int6 per-row quant with STE QAT frees budget for a 3x MLP while fp16 tied embeddings and stride-64 sliding-window eval keep quality post-zstd roundtrip.",
+      "generatedAt": "2026-03-19T22:08:49.887Z",
+      "summary": "Int6 per-row quantization with STE QAT plus zstd compression frees budget for a 3x MLP while sliding-window evaluation keeps full-context scoring.",
       "tags": [
         "quantization",
         "architecture",
-        "training-schedule",
-        "sliding-window-eval"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -404,14 +403,14 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-19T21:29:31Z",
-      "headSha": "aa1bf24d2e4e1152297ac255ab61f53e6cf5f652",
-      "generatedAt": "2026-03-19T21:39:03.363Z",
-      "summary": "Depth-recurrent GPT stacks 3 unique blocks across 3 loops with AdaLN conditioning, GQA heads, and transient attention-only test-time adaptation.",
+      "updatedAt": "2026-03-19T21:50:37Z",
+      "headSha": "35e2a58af7c62883201718b4da20b7258a7ce8f1",
+      "generatedAt": "2026-03-19T22:08:55.921Z",
+      "summary": "Depth-recurrent GPT runs 3 unique Transformer blocks through 3 loops with AdaLN conditioning, GQA, and mini U-Net skips on Apple M3 Max.",
       "tags": [
         "architecture",
-        "depth-width",
-        "evaluation",
+        "attention",
+        "compression",
         "non-record"
       ],
       "flags": {
@@ -521,14 +520,14 @@
       "prNumber": 102,
       "title": "Int6 MLP3x + Tuned LR + SmearGate + SlidingWindow (val_bpb: 1.1618)",
       "status": "open",
-      "updatedAt": "2026-03-19T17:07:16Z",
-      "headSha": "6f4a46e1bfd9800a72501401c0f3a4dadc49bef9",
-      "generatedAt": "2026-03-19T17:25:22.620Z",
-      "summary": "Stacked int6 per-row quant + zstd22 compression, widened 3x MLP, tuned Muon schedule, and SmearGate preprocessing for sliding-window scoring within the 16MB budget.",
+      "updatedAt": "2026-03-19T21:51:39Z",
+      "headSha": "f58e6e0c1376bd892ba8f059dcc5914a15462584",
+      "generatedAt": "2026-03-19T22:09:01.504Z",
+      "summary": "Per-row int6 quant + zstd frees space for a 3× MLP GPT that blends bigrams via SmearGate before attention and uses sliding-window eval.",
       "tags": [
         "quantization",
         "architecture",
-        "optimizer",
+        "attention",
         "sliding-window-eval"
       ],
       "flags": {
@@ -591,13 +590,13 @@
       "prNumber": 95,
       "title": "PROTEUS EMA — val_bpb: 1.2253",
       "status": "open",
-      "updatedAt": "2026-03-19T18:23:50Z",
-      "headSha": "ed1454e73e22d60d9e54450a9a90fd8cd196d413",
-      "generatedAt": "2026-03-19T18:37:27.723Z",
-      "summary": "EMA weight averaging with FP16 embeddings, seq2048 training, and sliding-window eval combine to smooth INT8 quantization on the baseline architecture.",
+      "updatedAt": "2026-03-19T21:53:49Z",
+      "headSha": "cacd14d31cab7602b6d98580e786ada16683e61a",
+      "generatedAt": "2026-03-19T22:09:07.032Z",
+      "summary": "Baseline GPT training stacks EMA weight averaging with seq2048, FP16 embeddings, and sliding-window eval to smooth losses before INT8 quantization.",
       "tags": [
         "quantization",
-        "sliding-window-eval",
+        "evaluation",
         "training-schedule"
       ],
       "flags": {
@@ -873,14 +872,15 @@
       "prNumber": 79,
       "title": "Depth Recurrence: 3x3x1024 (non-record, pending H100)",
       "status": "open",
-      "updatedAt": "2026-03-19T12:39:49Z",
-      "headSha": "ea3b4b4855a12b883a387afa4aa201b5459225f3",
-      "generatedAt": "2026-03-19T17:26:41.105Z",
-      "summary": "Repeats three unique transformer blocks three times to trade diversity for dim=1024 width while tuning LR/momentum for the depth recurrence regime.",
+      "updatedAt": "2026-03-19T21:48:14Z",
+      "headSha": "24d7be1b02a56c58a54a58d0204c30df7a9618c9",
+      "generatedAt": "2026-03-19T22:09:12.225Z",
+      "summary": "Reuses three unique transformer blocks via depth recurrence (3 repeats) and scales dim to fit 16MB with Int6 QAT plus NorMuon tuning.",
       "tags": [
         "architecture",
+        "quantization",
         "optimizer",
-        "non-record"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

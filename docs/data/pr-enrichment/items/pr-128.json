@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T21:08:07.341Z",
+  "generatedAt": "2026-03-19T22:08:49.887Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 128,
     "title": "Record: Int6 MLP3x + STE QAT + Sliding Window (val_bpb=1.1594)",
     "state": "open",
-    "updatedAt": "2026-03-19T20:51:58Z",
+    "updatedAt": "2026-03-19T21:49:03Z",
     "headSha": "a56bb8cce5768a787fe9a3fe2454a51520535946",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/128",
     "authorLogin": "rsavitt"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 per-row quant with STE QAT frees budget for a 3x MLP while fp16 tied embeddings and stride-64 sliding-window eval keep quality post-zstd roundtrip.",
+    "summary": "Int6 per-row quantization with STE QAT plus zstd compression frees budget for a 3x MLP while sliding-window evaluation keeps full-context scoring.",
     "tags": [
       "quantization",
       "architecture",
-      "training-schedule",
-      "sliding-window-eval"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 per-row quant + fp16 scale passthrough",
-      "STE fake-quant QAT with tuned matrix lr/momentum",
-      "Sliding-window stride-64 eval"
+      "Int6 per-row QAT with STE",
+      "zstd-22 compression to shrink artifact size",
+      "Sliding-window eval for full-context scoring"
     ]
   },
   "compatibility": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T17:26:41.105Z",
+  "generatedAt": "2026-03-19T22:09:12.225Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 79,
     "title": "Depth Recurrence: 3x3x1024 (non-record, pending H100)",
     "state": "open",
-    "updatedAt": "2026-03-19T12:39:49Z",
-    "headSha": "ea3b4b4855a12b883a387afa4aa201b5459225f3",
+    "updatedAt": "2026-03-19T21:48:14Z",
+    "headSha": "24d7be1b02a56c58a54a58d0204c30df7a9618c9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/79",
     "authorLogin": "Marvbuster"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Repeats three unique transformer blocks three times to trade diversity for dim=1024 width while tuning LR/momentum for the depth recurrence regime.",
+    "summary": "Reuses three unique transformer blocks via depth recurrence (3 repeats) and scales dim to fit 16MB with Int6 QAT plus NorMuon tuning.",
     "tags": [
       "architecture",
+      "quantization",
       "optimizer",
-      "non-record"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "3 unique blocks repeated 3× for depth recurrence",
-      "wider dim=1024 within same parameter budget",
-      "lower matrix LR and tuned momentum for repeated-block stability"
+      "Depth recurrence with block reuse",
+      "Int6 QAT paired with NorMuon",
+      "Sliding-window evaluation"
     ]
   },
   "compatibility": {
