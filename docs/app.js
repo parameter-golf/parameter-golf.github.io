@@ -65,18 +65,17 @@ function filterSubmissions(submissions) {
   });
 }
 
-function buildLinks(entry) {
-  const links = [];
+function buildPrimaryLink(entry) {
   if (entry.links.pr) {
-    links.push(["PR", entry.links.pr]);
+    return {
+      label: "PR",
+      href: entry.links.pr
+    };
   }
-  links.push(["Folder", entry.links.folder]);
-  links.push(["JSON", entry.links.submissionJson]);
-  links.push(["README", entry.links.readme]);
-  if (entry.links.trainLog) {
-    links.push(["Log", entry.links.trainLog]);
-  }
-  return links;
+  return {
+    label: "Folder",
+    href: entry.links.folder
+  };
 }
 
 function renderRows(submissions) {
@@ -95,9 +94,7 @@ function renderRows(submissions) {
     const statusClass = `status-${entry.status}`;
     const prMeta = entry.pr ? `#${entry.pr.number}` : "-";
     const readmeMeta = entry.provenance.listedInReadme ? "Listed" : "Not listed";
-    const linksHtml = buildLinks(entry)
-      .map(([label, href]) => `<a href="${href}" target="_blank" rel="noreferrer">${label}</a>`)
-      .join("");
+    const primaryLink = buildPrimaryLink(entry);
     row.innerHTML = `
       <td><span class="status-badge ${statusClass}">${entry.status}</span></td>
       <td><span class="track-badge">${entry.track.label}</span></td>
@@ -120,7 +117,7 @@ function renderRows(submissions) {
         <div class="meta">${entry.submission.githubId || "-"}</div>
       </td>
       <td>${formatDate(entry.submission.date)}</td>
-      <td><div class="link-cluster">${linksHtml}</div></td>
+      <td><div class="link-cluster"><a href="${primaryLink.href}" target="_blank" rel="noreferrer">${primaryLink.label}</a></div></td>
     `;
     body.appendChild(row);
   }
