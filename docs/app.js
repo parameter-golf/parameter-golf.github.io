@@ -179,19 +179,19 @@ function filterSubmissions(submissions) {
     if (filters.hideNonRecord && entry.category === "non-record") {
       return false;
     }
+    const query = filters.search.toLowerCase();
+    if (/^\d+$/.test(query)) {
+      return false;
+    }
     const haystack = [
       entry.submission.name,
       entry.submission.author,
-      entry.submission.githubId,
-      entry.record.folderName,
-      entry.record.folderPath,
-      entry.pr?.title,
-      entry.pr?.number != null ? String(entry.pr.number) : null
+      entry.submission.githubId
     ]
       .filter(Boolean)
       .join(" ")
       .toLowerCase();
-    const searchMatch = !filters.search || haystack.includes(filters.search.toLowerCase());
+    const searchMatch = !query || haystack.includes(query);
     return searchMatch;
   });
 }

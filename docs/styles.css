@@ -150,14 +150,13 @@ code {
 .controls-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 16px;
 }
 
 .search-shell {
   display: block;
-  flex: 1 1 40rem;
-  max-width: 46rem;
+  flex: 1 1 auto;
+  max-width: none;
 }
 
 .toggle-group {
@@ -165,6 +164,7 @@ code {
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
+  margin-left: auto;
 }
 
 .inline-toggle {
@@ -172,9 +172,8 @@ code {
   align-items: center;
   gap: 10px;
   min-height: 48px;
-  padding: 0 14px;
-  border: 1px solid var(--line-strong);
-  border-radius: 12px;
+  padding: 0;
+  border: 0;
   background: transparent;
   color: var(--ink);
   white-space: nowrap;
