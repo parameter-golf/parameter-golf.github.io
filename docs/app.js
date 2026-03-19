@@ -153,6 +153,7 @@ function buildDisplaySubmissions(submissions) {
     const folders = [...new Set(items.map((entry) => entry.record.folderName).filter(Boolean))];
     representative.display = {
       variantCount: items.length,
+      runName: representative.submission.name || representative.record.folderName || "",
       searchText: [
         representative.pr?.title,
         ...items.flatMap((entry) => [
@@ -375,7 +376,7 @@ function buildPrimaryLink(entry) {
     };
   }
   return {
-    label: "Merged record",
+    label: entry.submission.name || entry.record.folderName || "Merged record",
     href: entry.links.folder
   };
 }
@@ -445,19 +446,26 @@ function renderRows(submissions) {
 
   for (const entry of visibleItems.entries().map((item) => item[1])) {
     const enrichment = getEnrichment(enrichmentMap, entry);
+    const primaryLink = buildPrimaryLink(entry);
     const displayTags = buildDisplayTags(entry, enrichment);
     const summaryLine = enrichment?.summary
       ? `<p class="title-summary">${escapeHtml(enrichment.summary)}</p>`
       : "";
-    const noteLine = entry.display?.note
-      ? `<p class="title-meta">${escapeHtml(entry.display.note)}</p>`
+    const metaParts = [];
+    if (entry.pr?.number && entry.display?.runName && entry.display.runName !== primaryLink.label) {
+      metaParts.push(`Run: ${entry.display.runName}`);
+    }
+    if (entry.display?.note) {
+      metaParts.push(entry.display.note);
+    }
+    const noteLine = metaParts.length > 0
+      ? `<p class="title-meta">${escapeHtml(metaParts.join(" · "))}</p>`
       : "";
     const tagLine = displayTags.length > 0
       ? `<div class="title-tags">${displayTags.map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}</div>`
       : "";
     const row = document.createElement("tr");
     const statusClass = `status-${entry.status}`;
-    const primaryLink = buildPrimaryLink(entry);
     const nonRecord = trackLabel(entry);
     const authorHref = entry.submission.githubId
       ? `https://github.com/${entry.submission.githubId}`
@@ -465,7 +473,7 @@ function renderRows(submissions) {
     row.innerHTML = `
       <td><span class="rank-value">${rankMap.get(entry.id) || "-"}</span></td>
       <td class="title-cell">
-        <a class="title-link run-name" href="${primaryLink.href}" target="_blank" rel="noreferrer">${entry.submission.name || entry.record.folderName}</a>
+        <a class="title-link run-name" href="${primaryLink.href}" target="_blank" rel="noreferrer">${primaryLink.label}</a>
         ${noteLine}
         ${summaryLine}
         ${tagLine}
