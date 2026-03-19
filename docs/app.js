@@ -19,9 +19,12 @@ function formatDate(value) {
   if (!value) {
     return "Unknown";
   }
+  if (typeof value === "string" && value.toUpperCase().includes("PENDING")) {
+    return "Pending";
+  }
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) {
-    return value;
+    return "Pending";
   }
 
   const month = date.toLocaleString("en-US", {
@@ -68,6 +71,24 @@ function compareNumber(a, b) {
   return left - right;
 }
 
+function compareDateValue(a, b) {
+  const left = Date.parse(a || "");
+  const right = Date.parse(b || "");
+  const leftValid = Number.isFinite(left);
+  const rightValid = Number.isFinite(right);
+
+  if (leftValid && rightValid) {
+    return left - right;
+  }
+  if (leftValid) {
+    return -1;
+  }
+  if (rightValid) {
+    return 1;
+  }
+  return compareText(a, b);
+}
+
 function trackLabel(entry) {
   return entry.category === "non-record" ? "Non-record" : "";
 }
@@ -106,7 +127,7 @@ function sortSubmissions(submissions) {
         result = compareText(a.submission.author, b.submission.author);
         break;
       case "date":
-        result = compareText(a.submission.date, b.submission.date);
+        result = compareDateValue(a.submission.date, b.submission.date);
         break;
       default:
         result = byScoreThenDate(a, b);
