@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-19T17:58:09.544Z",
-  "lastSeenUpdatedAt": "2026-03-19T17:44:24Z",
+  "generatedAt": "2026-03-19T18:06:07.173Z",
+  "lastSeenUpdatedAt": "2026-03-19T18:03:54Z",
   "prs": {
     "1": {
       "number": 1,
@@ -1315,7 +1315,7 @@
     },
     "39": {
       "number": 39,
-      "updatedAt": "2026-03-19T17:44:24Z",
+      "updatedAt": "2026-03-19T18:03:54Z",
       "pr": {
         "number": 39,
         "title": "Record: 10L Mixed Precision: val_bpb=1.2147 (10 layers + int6 middle layers)",
@@ -1326,7 +1326,7 @@
         "authorLogin": "nanlliu",
         "authorName": null,
         "createdAt": "2026-03-19T00:41:35Z",
-        "updatedAt": "2026-03-19T17:44:24Z",
+        "updatedAt": "2026-03-19T18:03:54Z",
         "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
         "headRepo": "nanlliu/parameter-golf"
       },
@@ -1389,7 +1389,7 @@
             "authorLogin": "nanlliu",
             "authorName": null,
             "createdAt": "2026-03-19T00:41:35Z",
-            "updatedAt": "2026-03-19T17:44:24Z",
+            "updatedAt": "2026-03-19T18:03:54Z",
             "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
             "headRepo": "nanlliu/parameter-golf"
           },
@@ -1460,7 +1460,7 @@
             "authorLogin": "nanlliu",
             "authorName": null,
             "createdAt": "2026-03-19T00:41:35Z",
-            "updatedAt": "2026-03-19T17:44:24Z",
+            "updatedAt": "2026-03-19T18:03:54Z",
             "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
             "headRepo": "nanlliu/parameter-golf"
           },
@@ -6628,6 +6628,97 @@
             "script": "https://github.com/openai/parameter-golf/blob/23b5d0f8b979e3039b276231ca7e7ab8f3b154fd/records/track_10min_16mb/2026-03-19_FA3_PostQAT/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/23b5d0f8b979e3039b276231ca7e7ab8f3b154fd/records/track_10min_16mb/2026-03-19_FA3_PostQAT",
             "pr": "https://github.com/openai/parameter-golf/pull/107"
+          }
+        }
+      ]
+    },
+    "108": {
+      "number": 108,
+      "updatedAt": "2026-03-19T17:58:58Z",
+      "pr": {
+        "number": 108,
+        "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
+        "state": "open",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/108",
+        "authorLogin": "kellyvv",
+        "authorName": null,
+        "createdAt": "2026-03-19T17:58:58Z",
+        "updatedAt": "2026-03-19T17:58:58Z",
+        "headSha": "abdcff6ef64a87abe848e96dc54a7847248f1e81",
+        "headRepo": "kellyvv/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-108-records-track_non_record_16mb-2026-03-20_DepthRecurrent3x3_MLX-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-20_DepthRecurrent3x3_MLX",
+            "folderPath": "records/track_non_record_16mb/2026-03-20_DepthRecurrent3x3_MLX",
+            "submissionPath": "records/track_non_record_16mb/2026-03-20_DepthRecurrent3x3_MLX/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-20_DepthRecurrent3x3_MLX/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-20_DepthRecurrent3x3_MLX/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-20_DepthRecurrent3x3_MLX/train_gpt.py"
+          },
+          "submission": {
+            "author": "kellyvv",
+            "githubId": "kellyvv",
+            "name": "Depth-Recurrent 3x3 MLX (dev, Apple Silicon)",
+            "blurb": "3 unique blocks x 3 recurrent loops, dim=768, AdaLN conditioning, GQA. Trained on Apple M3 Max via MLX for 2000 steps (~150 H100-equivalent steps). Non-record: limited by local hardware, not H100.",
+            "date": "2026-03-20T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.6729,
+            "valLoss": 2.8247,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 9354004,
+            "bytesCode": 59182,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 108,
+            "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
+            "state": "open",
+            "draft": true,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/108",
+            "authorLogin": "kellyvv",
+            "authorName": null,
+            "createdAt": "2026-03-19T17:58:58Z",
+            "updatedAt": "2026-03-19T17:58:58Z",
+            "headSha": "abdcff6ef64a87abe848e96dc54a7847248f1e81",
+            "headRepo": "kellyvv/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/abdcff6ef64a87abe848e96dc54a7847248f1e81/records/track_non_record_16mb/2026-03-20_DepthRecurrent3x3_MLX/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/abdcff6ef64a87abe848e96dc54a7847248f1e81/records/track_non_record_16mb/2026-03-20_DepthRecurrent3x3_MLX/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/abdcff6ef64a87abe848e96dc54a7847248f1e81/records/track_non_record_16mb/2026-03-20_DepthRecurrent3x3_MLX/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/abdcff6ef64a87abe848e96dc54a7847248f1e81/records/track_non_record_16mb/2026-03-20_DepthRecurrent3x3_MLX/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/abdcff6ef64a87abe848e96dc54a7847248f1e81/records/track_non_record_16mb/2026-03-20_DepthRecurrent3x3_MLX",
+            "pr": "https://github.com/openai/parameter-golf/pull/108"
           }
         }
       ]

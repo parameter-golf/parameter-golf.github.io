@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T18:06:21.786Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 107,
+    "title": "FA3 + Post-Training QAT",
+    "state": "open",
+    "updatedAt": "2026-03-19T17:43:02Z",
+    "headSha": "23b5d0f8b979e3039b276231ca7e7ab8f3b154fd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/107",
+    "authorLogin": "m0at"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_FA3_PostQAT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Swaps in Hopper-kernel Flash Attention 3 with native BSHD layout and layers a brief post-training quantization-aware fine-tuning to shrink int8 penalty.",
+    "tags": [
+      "attention",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "FA3 Hopper kernels using native BSHD tensors",
+      "Post-training STE-based quantization-aware tuning",
+      "Short wallclock-driven fine-tune phase"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
