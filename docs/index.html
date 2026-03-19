@@ -12,7 +12,7 @@
       href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="./styles.css?v=11">
+    <link rel="stylesheet" href="./styles.css?v=12">
   </head>
   <body>
     <div class="page-shell">
@@ -53,9 +53,15 @@
         </section>
 
         <section class="controls">
-          <label class="search-shell" for="search-input">
-            <input id="search-input" type="search" placeholder="Search run name, author, PR number, folder…" autocomplete="off">
-          </label>
+          <div class="controls-row">
+            <label class="search-shell" for="search-input">
+              <input id="search-input" type="search" placeholder="Search run name, author, PR number, folder…" autocomplete="off">
+            </label>
+            <label class="inline-toggle" for="non-record-toggle">
+              <input id="non-record-toggle" type="checkbox">
+              <span>Hide non-record</span>
+            </label>
+          </div>
         </section>
 
         <section class="table-section">
@@ -85,6 +91,6 @@
       </main>
     </div>
 
-    <script type="module" src="./app.js?v=11"></script>
+    <script type="module" src="./app.js?v=12"></script>
   </body>
   </html>

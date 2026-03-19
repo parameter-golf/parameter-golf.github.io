@@ -1,5 +1,6 @@
 const filters = {
-  search: ""
+  search: "",
+  hideNonRecord: false
 };
 
 const sortState = {
@@ -146,6 +147,9 @@ function updateSummary(summary) {
 
 function filterSubmissions(submissions) {
   return submissions.filter((entry) => {
+    if (filters.hideNonRecord && entry.category === "non-record") {
+      return false;
+    }
     const haystack = [
       entry.submission.name,
       entry.submission.author,
@@ -202,12 +206,12 @@ function renderRows(submissions) {
     row.innerHTML = `
       <td><strong>${rankMap.get(entry.id) || "-"}</strong></td>
       <td><strong>${prMeta}</strong></td>
-      <td>
+      <td class="title-cell">
         <span class="run-name">${entry.submission.name || entry.record.folderName}</span>
       </td>
-      <td>
-        <strong>${formatScore(entry.metrics.valBpb)}</strong>
-        <div class="meta">loss ${entry.metrics.valLoss ? entry.metrics.valLoss.toFixed(4) : "-"}</div>
+      <td class="score-cell">
+        <strong class="score-value">${formatScore(entry.metrics.valBpb)}</strong>
+        <div class="meta score-meta">loss ${entry.metrics.valLoss ? entry.metrics.valLoss.toFixed(4) : "-"}</div>
       </td>
       <td><span class="status-badge ${statusClass}">${entry.status}</span></td>
       <td>
@@ -255,6 +259,14 @@ const searchInput = document.getElementById("search-input");
 if (searchInput) {
   searchInput.addEventListener("input", (event) => {
     filters.search = event.target.value.trim();
+    render(window.__GOLF_VIEWER_DATA__);
+  });
+}
+
+const nonRecordToggle = document.getElementById("non-record-toggle");
+if (nonRecordToggle) {
+  nonRecordToggle.addEventListener("change", (event) => {
+    filters.hideNonRecord = event.target.checked;
     render(window.__GOLF_VIEWER_DATA__);
   });
 }

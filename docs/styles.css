@@ -144,9 +144,34 @@ code {
   padding: 16px 0 14px;
 }
 
+.controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
 .search-shell {
   display: block;
-  width: min(100%, 40rem);
+  flex: 1 1 40rem;
+  max-width: 46rem;
+}
+
+.inline-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.inline-toggle input {
+  accent-color: var(--ink);
 }
 
 .search-shell input {
@@ -181,6 +206,7 @@ code {
 table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 th,
@@ -193,12 +219,12 @@ td {
 
 thead th:nth-child(3),
 tbody td:nth-child(3) {
-  width: 32%;
+  width: 34%;
 }
 
 thead th:nth-child(4),
 tbody td:nth-child(4) {
-  min-width: 140px;
+  width: 150px;
 }
 
 thead th {
@@ -286,10 +312,15 @@ tbody tr:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 100%;
 }
 
-tbody td:nth-child(5) strong,
-tbody td:nth-child(5) .meta {
+.title-cell {
+  max-width: 0;
+}
+
+.score-value,
+.score-meta {
   white-space: nowrap;
 }
 
@@ -328,5 +359,16 @@ tbody td:nth-child(5) .meta {
   .topbar {
     flex-direction: column;
     align-items: start;
+  }
+
+  .controls-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-shell,
+  .inline-toggle {
+    max-width: none;
+    width: 100%;
   }
 }
