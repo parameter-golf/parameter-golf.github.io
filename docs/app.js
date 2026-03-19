@@ -1,7 +1,17 @@
 const filters = {
+  source: "all",
   status: "all",
-  track: "all"
+  track: "all",
+  search: "",
+  prOnly: false,
+  readmeOnly: false
 };
+
+const sourceOptions = [
+  ["all", "All sources"],
+  ["official", "On main"],
+  ["pull_request", "PR only"]
+];
 
 const statusOptions = [
   ["all", "All statuses"],
@@ -76,14 +86,30 @@ function updateSummary(summary) {
     summary.best.openPrMainTrack?.submission.name || "No open PR submissions found";
   document.getElementById("coverage-count").textContent = formatCount(summary.counts.submissions);
   document.getElementById("coverage-breakdown").textContent =
-    `${summary.counts.official} official, ${summary.counts.openPr} open PR, ${summary.counts.mergedPr} merged PR, ${summary.counts.closedPr} closed PR`;
+    `${summary.counts.official} on main, ${summary.counts.openPr} open PR, ${summary.counts.prBacked} PR-backed, ${summary.counts.readmeListed} README listed`;
 }
 
 function filterSubmissions(submissions) {
   return submissions.filter((entry) => {
+    const sourceMatch = filters.source === "all" || entry.source === filters.source;
     const statusMatch = filters.status === "all" || entry.status === filters.status;
     const trackMatch = filters.track === "all" || entry.category === filters.track;
-    return statusMatch && trackMatch;
+    const prOnlyMatch = !filters.prOnly || entry.provenance.hasPullRequest;
+    const readmeOnlyMatch = !filters.readmeOnly || entry.provenance.listedInReadme;
+    const haystack = [
+      entry.submission.name,
+      entry.submission.author,
+      entry.submission.githubId,
+      entry.record.folderName,
+      entry.record.folderPath,
+      entry.pr?.title,
+      entry.pr?.number != null ? String(entry.pr.number) : null
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
+    const searchMatch = !filters.search || haystack.includes(filters.search.toLowerCase());
+    return sourceMatch && statusMatch && trackMatch && prOnlyMatch && readmeOnlyMatch && searchMatch;
   });
 }
 
@@ -107,7 +133,7 @@ function renderRows(submissions) {
 
   if (submissions.length === 0) {
     const row = document.createElement("tr");
-    row.innerHTML = `<td colspan="7" class="empty-row">No submissions match the current filters.</td>`;
+    row.innerHTML = `<td colspan="9" class="empty-row">No submissions match the current filters.</td>`;
     body.appendChild(row);
     return;
   }
@@ -115,7 +141,8 @@ function renderRows(submissions) {
   for (const entry of submissions.sort(byScoreThenDate)) {
     const row = document.createElement("tr");
     const statusClass = `status-${entry.status}`;
-    const prMeta = entry.pr ? `PR #${entry.pr.number}` : "Merged on main";
+    const prMeta = entry.pr ? `#${entry.pr.number}` : "-";
+    const readmeMeta = entry.provenance.listedInReadme ? "Listed" : "Not listed";
     const linksHtml = buildLinks(entry)
       .map(([label, href]) => `<a href="${href}" target="_blank" rel="noreferrer">${label}</a>`)
       .join("");
@@ -131,6 +158,13 @@ function renderRows(submissions) {
         <div class="meta">loss ${entry.metrics.valLoss ? entry.metrics.valLoss.toFixed(4) : "-"}</div>
       </td>
       <td>
+        <strong>${prMeta}</strong>
+        <div class="meta">${entry.pr?.title || (entry.provenance.hasPullRequest ? "PR-linked" : "No PR")}</div>
+      </td>
+      <td>
+        <span class="status-badge ${entry.provenance.listedInReadme ? "status-official" : "status-closed"}">${readmeMeta}</span>
+      </td>
+      <td>
         <strong>${entry.submission.author || "Unknown"}</strong>
         <div class="meta">${entry.submission.githubId || "-"}</div>
       </td>
@@ -144,6 +178,7 @@ function renderRows(submissions) {
 function render(data) {
   window.__GOLF_VIEWER_DATA__ = data;
   updateSummary(data.summary);
+  createPills("source-filters", "source", sourceOptions);
   createPills("status-filters", "status", statusOptions);
   createPills("track-filters", "track", trackOptions);
   renderRows(filterSubmissions(data.submissions.submissions));
@@ -163,5 +198,20 @@ async function load() {
 
 load().catch((error) => {
   const body = document.getElementById("submission-body");
-  body.innerHTML = `<tr><td colspan="7" class="empty-row">${error.message}</td></tr>`;
+  body.innerHTML = `<tr><td colspan="9" class="empty-row">${error.message}</td></tr>`;
+});
+
+document.getElementById("search-input").addEventListener("input", (event) => {
+  filters.search = event.target.value.trim();
+  render(window.__GOLF_VIEWER_DATA__);
+});
+
+document.getElementById("pr-only-toggle").addEventListener("change", (event) => {
+  filters.prOnly = event.target.checked;
+  render(window.__GOLF_VIEWER_DATA__);
+});
+
+document.getElementById("readme-only-toggle").addEventListener("change", (event) => {
+  filters.readmeOnly = event.target.checked;
+  render(window.__GOLF_VIEWER_DATA__);
 });

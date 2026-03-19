@@ -21,6 +21,11 @@ Each submission contains:
   "id": "pr-53-records-track_10min_16mb-2026-03-19_SP4096_SlidingWindowEval",
   "source": "pull_request",
   "status": "open",
+  "provenance": {
+    "onMain": false,
+    "hasPullRequest": true,
+    "listedInReadme": false
+  },
   "category": "main-track",
   "track": {
     "path": "records/track_10min_16mb",
@@ -73,7 +78,8 @@ Each submission contains:
     "trainLog": "…",
     "script": "…",
     "pr": "…",
-    "folder": "…"
+    "folder": "…",
+    "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
   }
 }
 ```
@@ -85,4 +91,3 @@ Aggregated counts and best scores for site headers and quick stats.
 ## `docs/data/report.json`
 
 Collector diagnostics, including skipped PRs and parse failures.
-

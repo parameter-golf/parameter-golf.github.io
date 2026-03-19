@@ -1,18 +1,20 @@
 {
-  "generatedAt": "2026-03-19T11:53:20.959Z",
+  "generatedAt": "2026-03-19T12:05:36.871Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 44,
+    "submissions": 43,
     "official": 2,
     "openPr": 37,
     "mergedPr": 0,
-    "closedPr": 5,
+    "closedPr": 4,
+    "prBacked": 41,
+    "readmeListed": 2,
     "collectorErrors": 1
   },
   "best": {
     "officialMainTrack": {
-      "id": "official-records-track_10min_16mb-2026-03-17_NaiveBaseline-submission-json",
+      "id": "record-records-track_10min_16mb-2026-03-17_NaiveBaseline",
       "source": "official",
       "status": "official",
       "category": "main-track",
@@ -59,11 +61,17 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-17_NaiveBaseline/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-17_NaiveBaseline/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/main/records/track_10min_16mb/2026-03-17_NaiveBaseline",
-        "pr": null
+        "pr": null,
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": true,
+        "hasPullRequest": false,
+        "listedInReadme": true
       }
     },
     "openPrMainTrack": {
-      "id": "pr-64-records-track_10min_16mb-2026-03-19_CombinedOptimal-submission-json",
+      "id": "record-records-track_10min_16mb-2026-03-19_CombinedOptimal",
       "source": "pull_request",
       "status": "open",
       "category": "main-track",
@@ -119,11 +127,17 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/8cdc834eced5b8262ebdbc620576a223cb50a441/records/track_10min_16mb/2026-03-19_CombinedOptimal/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/8cdc834eced5b8262ebdbc620576a223cb50a441/records/track_10min_16mb/2026-03-19_CombinedOptimal/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/8cdc834eced5b8262ebdbc620576a223cb50a441/records/track_10min_16mb/2026-03-19_CombinedOptimal",
-        "pr": "https://github.com/openai/parameter-golf/pull/64"
+        "pr": "https://github.com/openai/parameter-golf/pull/64",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
       }
     },
     "officialNonRecord": {
-      "id": "official-records-track_non_record_16mb-2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3-submission-json",
+      "id": "record-records-track_non_record_16mb-2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3",
       "source": "official",
       "status": "official",
       "category": "non-record",
@@ -170,7 +184,13 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/main/records/track_non_record_16mb/2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/main/records/track_non_record_16mb/2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/main/records/track_non_record_16mb/2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3",
-        "pr": null
+        "pr": null,
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": true,
+        "hasPullRequest": false,
+        "listedInReadme": true
       }
     }
   }

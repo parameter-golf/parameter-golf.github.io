@@ -76,6 +76,13 @@ function scoreOrInfinity(value) {
     : Number.POSITIVE_INFINITY;
 }
 
+function decodeGitHubContent(data) {
+  if (typeof data.content !== "string") {
+    throw new Error("No file content returned by GitHub contents API.");
+  }
+  return Buffer.from(data.content, "base64").toString("utf8");
+}
+
 async function requestJson(url) {
   const response = await fetch(url, { headers: FETCH_HEADERS });
   if (!response.ok) {
@@ -121,12 +128,17 @@ async function paginate(url) {
 
 async function fetchContentJson(contentsUrl) {
   const { data } = await requestJson(contentsUrl);
-  if (typeof data.content !== "string") {
-    throw new Error(`No file content found at ${contentsUrl}`);
-  }
-  const decoded = Buffer.from(data.content, "base64").toString("utf8");
+  const decoded = decodeGitHubContent(data);
   return {
     data: JSON.parse(decoded),
+    path: data.path
+  };
+}
+
+async function fetchContentText(contentsUrl) {
+  const { data } = await requestJson(contentsUrl);
+  return {
+    text: decodeGitHubContent(data),
     path: data.path
   };
 }
@@ -201,6 +213,113 @@ function normalizeSubmission({
   };
 }
 
+function parseReadmeListedFolders(readmeText) {
+  const listed = new Set();
+  const regex = /\((records\/[^)]+\/README\.md)\)/g;
+  for (const match of readmeText.matchAll(regex)) {
+    const readmePath = match[1];
+    listed.add(readmePath.replace(/\/README\.md$/, ""));
+  }
+  return listed;
+}
+
+async function fetchReadmeListedFolders(report) {
+  try {
+    const { text } = await fetchContentText(
+      `${API_ROOT}/repos/${SOURCE_REPO}/contents/README.md?ref=main`
+    );
+    return parseReadmeListedFolders(text);
+  } catch (error) {
+    report.errors.push({
+      stage: "readme-index",
+      message: error.message
+    });
+    return new Set();
+  }
+}
+
+function preferredPr(currentPr, nextPr) {
+  if (!currentPr) {
+    return nextPr;
+  }
+  if (!nextPr) {
+    return currentPr;
+  }
+  const rank = (pr) => {
+    if (pr.state === "open") {
+      return 3;
+    }
+    if (pr.mergedAt) {
+      return 2;
+    }
+    return 1;
+  };
+  const currentRank = rank(currentPr);
+  const nextRank = rank(nextPr);
+  if (nextRank !== currentRank) {
+    return nextRank > currentRank ? nextPr : currentPr;
+  }
+  return (nextPr.number || 0) > (currentPr.number || 0) ? nextPr : currentPr;
+}
+
+function mergeSubmissions(entries, readmeListedFolders) {
+  const merged = new Map();
+  const sorted = [...entries].sort((a, b) => {
+    if (a.source === b.source) {
+      return 0;
+    }
+    return a.source === "official" ? -1 : 1;
+  });
+
+  for (const entry of sorted) {
+    const key = entry.record.folderPath;
+    if (!merged.has(key)) {
+      const canonical = structuredClone(entry);
+      canonical.id = stableId("record", entry.record.folderPath);
+      canonical.provenance = {
+        onMain: entry.source === "official",
+        hasPullRequest: Boolean(entry.pr),
+        listedInReadme: readmeListedFolders.has(entry.record.folderPath)
+      };
+      merged.set(key, canonical);
+      continue;
+    }
+
+    const current = merged.get(key);
+    current.provenance.onMain ||= entry.source === "official";
+    current.provenance.hasPullRequest ||= Boolean(entry.pr);
+    current.provenance.listedInReadme = readmeListedFolders.has(entry.record.folderPath);
+    current.pr = preferredPr(current.pr, entry.pr);
+    current.links.pr = current.pr?.htmlUrl || null;
+
+    if (entry.source === "official") {
+      current.source = "official";
+      current.submission = entry.submission;
+      current.metrics = entry.metrics;
+      current.artifact = entry.artifact;
+      current.links = {
+        ...entry.links,
+        pr: current.pr?.htmlUrl || null
+      };
+    }
+  }
+
+  return [...merged.values()].map((entry) => {
+    entry.source = entry.provenance.onMain ? "official" : "pull_request";
+    if (entry.provenance.onMain) {
+      entry.status = "official";
+    } else if (entry.pr?.state === "open") {
+      entry.status = "open";
+    } else if (entry.pr?.mergedAt) {
+      entry.status = "merged";
+    } else {
+      entry.status = "closed";
+    }
+    entry.links.officialLeaderboard = "https://github.com/openai/parameter-golf#leaderboard";
+    return entry;
+  });
+}
+
 function compareByScoreThenDate(a, b) {
   const scoreA = scoreOrInfinity(a.metrics.valBpb);
   const scoreB = scoreOrInfinity(b.metrics.valBpb);
@@ -213,10 +332,12 @@ function compareByScoreThenDate(a, b) {
 }
 
 function summarize(submissions, report) {
-  const official = submissions.filter((entry) => entry.source === "official");
-  const openPr = submissions.filter((entry) => entry.source === "pull_request" && entry.status === "open");
-  const mergedPr = submissions.filter((entry) => entry.source === "pull_request" && entry.status === "merged");
-  const closedPr = submissions.filter((entry) => entry.source === "pull_request" && entry.status === "closed");
+  const official = submissions.filter((entry) => entry.provenance.onMain);
+  const openPr = submissions.filter((entry) => entry.status === "open");
+  const mergedPr = submissions.filter((entry) => entry.status === "merged");
+  const closedPr = submissions.filter((entry) => entry.status === "closed");
+  const prBacked = submissions.filter((entry) => entry.provenance.hasPullRequest);
+  const readmeListed = submissions.filter((entry) => entry.provenance.listedInReadme);
   const officialMain = official.filter((entry) => entry.category === "main-track").sort(compareByScoreThenDate);
   const openMain = openPr.filter((entry) => entry.category === "main-track").sort(compareByScoreThenDate);
   const officialNonRecord = official.filter((entry) => entry.category === "non-record").sort(compareByScoreThenDate);
@@ -230,6 +351,8 @@ function summarize(submissions, report) {
       openPr: openPr.length,
       mergedPr: mergedPr.length,
       closedPr: closedPr.length,
+      prBacked: prBacked.length,
+      readmeListed: readmeListed.length,
       collectorErrors: report.errors.length
     },
     best: {
@@ -357,9 +480,10 @@ async function main() {
     errors: []
   };
 
+  const readmeListedFolders = await fetchReadmeListedFolders(report);
   const official = await collectMainRecords(report);
   const prSubmissions = await collectPrSubmissions(report);
-  const submissions = [...official, ...prSubmissions].sort(compareByScoreThenDate);
+  const submissions = mergeSubmissions([...official, ...prSubmissions], readmeListedFolders).sort(compareByScoreThenDate);
   const summary = summarize(submissions, report);
   const bundle = {
     generatedAt: summary.generatedAt,

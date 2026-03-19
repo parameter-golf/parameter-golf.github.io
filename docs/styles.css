@@ -167,10 +167,48 @@ a {
   margin-top: 16px;
 }
 
+.search-shell {
+  display: grid;
+  gap: 10px;
+}
+
+.search-shell input {
+  width: 100%;
+  min-height: 54px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+  font: inherit;
+}
+
+.search-shell input:focus {
+  outline: 2px solid rgba(13, 107, 99, 0.18);
+  border-color: rgba(13, 107, 99, 0.35);
+}
+
 .pill-row {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.checkbox-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.check input {
+  accent-color: var(--accent);
 }
 
 .pill {
@@ -309,4 +347,3 @@ tbody tr:hover {
     padding: 18px;
   }
 }
-
