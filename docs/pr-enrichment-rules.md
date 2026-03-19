@@ -15,8 +15,12 @@ Each PR summary uses:
 
 - Produce one plain-English summary sentence.
 - Keep it short enough for table display.
-- Focus on what is novel or strategically important, not generic training boilerplate.
+- Focus on the core approach and what is methodologically distinctive, not the score outcome.
 - Mention at most 2-3 notable ideas in the sentence.
+- Assume score, loss, date, and track already appear elsewhere in the table.
+- Do not center the summary on `val_bpb`, `val_loss`, artifact size, or generic challenge constraints unless they are directly part of the novelty.
+- Prefer phrases like architecture choice, optimizer choice, eval strategy, quantization strategy, schedule change, or data regime over result reporting.
+- If a PR contains multiple runs, summarize the shared approach or the representative winning approach rather than listing every variant.
 - Avoid hype, rankings, or unsupported claims.
 
 ## Technique Tags

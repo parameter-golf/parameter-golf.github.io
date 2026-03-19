@@ -14,7 +14,7 @@ const ENRICHMENT_ITEMS_DIR = path.join(ENRICHMENT_DIR, "items");
 const INDEX_PATH = path.join(ENRICHMENT_DIR, "index.json");
 const STATE_PATH = path.resolve(".cache/pr-enrichment-state.json");
 const STATE_VERSION = 1;
-const PROMPT_VERSION = "2026-03-20-pr-enrichment-v1";
+const PROMPT_VERSION = "2026-03-20-pr-enrichment-v2-approach-first";
 const MODEL = process.env.PR_ENRICH_MODEL || "gpt-5.1-codex-mini";
 const CLI_PROXY_BASE_URL = process.env.CLIPROXY_BASE_URL || process.env.OPENAI_BASE_URL || "http://100.81.203.52:8317";
 const CLI_PROXY_API_KEY = process.env.CLIPROXY_API_KEY || readOptionalText("/opt/cliproxyapi/API_KEY.txt");
@@ -286,6 +286,12 @@ function buildMessages(payload) {
         "You summarize OpenAI Parameter Golf PRs for a public leaderboard viewer.",
         "Return JSON only with keys: summary, tags, usesValOnly, valOnlyReasoning, techniques.",
         "summary must be one plain-English sentence, under 160 characters when possible.",
+        "The summary should describe the project's core approach, novelty, or technique combination, not the result.",
+        "Assume score, loss, date, rank, and track are already visible elsewhere in the UI.",
+        "Avoid centering the summary on val_bpb, val_loss, <16MB, or generic challenge constraints unless they are themselves the distinctive idea.",
+        "Prefer describing things like architecture, recurrence, quantization method, optimizer, schedule change, eval strategy, tokenization, or val-only regime.",
+        "If a PR has multiple submissions, summarize the shared or representative approach rather than enumerating all runs.",
+        "Do not simply restate the PR title.",
         `tags must be an array of 1 to 4 items chosen only from: ${TAG_ALLOWLIST.join(", ")}.`,
         "usesValOnly should be true only for explicit validation-shard training or val-only training.",
         "Do not mark usesValOnly true for normal validation evaluation or validation loss reporting.",
