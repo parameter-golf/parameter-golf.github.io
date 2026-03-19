@@ -59,6 +59,15 @@ function trackLabel(entry) {
   return entry.category === "non-record" ? "Non-record" : "";
 }
 
+function buildRankMap(submissions) {
+  const ranked = [...submissions].sort(byScoreThenDate);
+  const rankMap = new Map();
+  for (const [index, entry] of ranked.entries()) {
+    rankMap.set(entry.id, index + 1);
+  }
+  return rankMap;
+}
+
 function sortSubmissions(submissions) {
   const items = [...submissions];
   items.sort((a, b) => {
@@ -180,21 +189,19 @@ function renderRows(submissions) {
   }
 
   const sorted = sortSubmissions(submissions);
+  const rankMap = buildRankMap(submissions);
 
-  for (const [index, entry] of sorted.entries()) {
+  for (const entry of sorted.entries().map((item) => item[1])) {
     const row = document.createElement("tr");
     const statusClass = `status-${entry.status}`;
     const prMeta = entry.pr ? `#${entry.pr.number}` : "-";
     const primaryLink = buildPrimaryLink(entry);
     const nonRecord = trackLabel(entry);
     row.innerHTML = `
-      <td><strong>${index + 1}</strong></td>
+      <td><strong>${rankMap.get(entry.id) || "-"}</strong></td>
       <td><strong>${prMeta}</strong></td>
       <td>
         <span class="run-name">${entry.submission.name || entry.record.folderName}</span>
-      </td>
-      <td>
-        ${nonRecord ? `<span class="track-badge">${nonRecord}</span>` : ""}
       </td>
       <td>
         <strong>${formatScore(entry.metrics.valBpb)}</strong>
@@ -207,6 +214,9 @@ function renderRows(submissions) {
       </td>
       <td>${formatDate(entry.submission.date)}</td>
       <td><div class="link-cluster"><a href="${primaryLink.href}" target="_blank" rel="noreferrer">${primaryLink.label}</a></div></td>
+      <td>
+        ${nonRecord ? `<span class="track-badge">${nonRecord}</span>` : ""}
+      </td>
     `;
     body.appendChild(row);
   }
