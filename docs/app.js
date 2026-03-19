@@ -81,10 +81,10 @@ function compareMetricValue(a, b, direction) {
     return direction === "desc" ? b - a : a - b;
   }
   if (leftValid) {
-    return -1;
+    return direction === "desc" ? 1 : -1;
   }
   if (rightValid) {
-    return 1;
+    return direction === "desc" ? -1 : 1;
   }
   return 0;
 }
@@ -105,6 +105,10 @@ function compareDateValue(a, b) {
     return 1;
   }
   return compareText(a, b);
+}
+
+function compareRecentDate(a, b) {
+  return compareDateValue(b.submission.date, a.submission.date);
 }
 
 function trackLabel(entry) {
@@ -161,7 +165,14 @@ function sortSubmissions(submissions) {
     }
 
     if (result === 0) {
-      result = byScoreThenDate(a, b);
+      if (sortState.key === "score" || sortState.key === "loss") {
+        result = compareRecentDate(a, b);
+      } else {
+        result = byScoreThenDate(a, b);
+      }
+    }
+    if (result === 0) {
+      result = compareText(a.id, b.id);
     }
     return alreadyDirected || sortState.direction !== "desc" ? result : -result;
   });
