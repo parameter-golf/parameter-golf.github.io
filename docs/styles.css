@@ -16,15 +16,14 @@
 }
 
 html {
-  background:
-    linear-gradient(to bottom, rgba(17, 17, 17, 0.025), rgba(17, 17, 17, 0) 9rem),
-    var(--bg);
+  background: var(--bg);
   color: var(--ink);
   font-family: "General Sans", sans-serif;
 }
 
 body {
   margin: 0;
+  background: var(--bg);
 }
 
 a {
