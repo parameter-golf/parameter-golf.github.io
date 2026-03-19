@@ -22,8 +22,10 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Push to stpcoder mirror
         run: |
+          git config --global --unset-all http.https://github.com/.extraheader || true
           git remote add stpcoder-mirror https://x-access-token:${{ secrets.STPCODER_MIRROR_PAT }}@github.com/stpcoder/parameter-golf-leaderboard.git
           git push stpcoder-mirror HEAD:main
