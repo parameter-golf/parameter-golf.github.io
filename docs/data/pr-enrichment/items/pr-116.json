@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T21:38:51.551Z",
+  "generatedAt": "2026-03-19T22:39:08.063Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 116,
-    "title": "Int6 mixed quant + MLP 3x + sliding window eval (val_bpb 1.1741)",
+    "title": "Record: Int6 mixed quant + MLP 3x + STE QAT + sliding window (val_bpb 1.1712)",
     "state": "open",
-    "updatedAt": "2026-03-19T21:17:33Z",
-    "headSha": "bca0d4670f896e47c929062f218ba80c0ca212f4",
+    "updatedAt": "2026-03-19T22:09:16Z",
+    "headSha": "14939b8412a5d486c1130a3e4749c63023ffed53",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/116",
     "authorLogin": "abhishekgahlot2"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines int6 per-row quantized MLP+attention with 3x FFN expansion and sliding-window eval under a tuned Muon optimizer schedule.",
+    "summary": "Combines per-row Int6 mixed quant with STE QAT, 3× MLP expansion, and sliding-window eval plus Muon tuning to fit 21.8M params.",
     "tags": [
       "quantization",
-      "sliding-window-eval",
+      "architecture",
+      "evaluation",
       "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 per-row quantization on MLP and attention weights with fp16 tied embedding passthrough",
-      "MLP hidden size ramped to 1536 for 21.8M params under a 4096-context seq_len",
-      "sliding-window evaluation (stride 64) plus Muon momentum warmup/warmdown"
+      "Per-row Int6 mix with STE fake-quant QAT on attention/MLP weights",
+      "MLP hidden width tripled while quant/compression keeps 21.8M params under budget",
+      "Sliding-window stride-64 eval with seq_len 4096 context scoring"
     ]
   },
   "compatibility": {

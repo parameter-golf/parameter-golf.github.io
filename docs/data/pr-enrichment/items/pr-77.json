@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:26:52.943Z",
+  "generatedAt": "2026-03-19T22:39:19.568Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 77,
     "title": "[record bpb=1.195] sliding window + LoRA TTT",
-    "state": "open",
-    "updatedAt": "2026-03-19T17:19:04Z",
+    "state": "closed",
+    "updatedAt": "2026-03-19T22:30:27Z",
     "headSha": "9fed66c01eb86e9089b68580a2295cbffaef25de",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/77",
     "authorLogin": "samacqua"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Evaluation isolates each document with overlapping 256-token chunks and trains rank-8 LoRA adapters on lm_head/Q/V per chunk using a single Adam step.",
+    "summary": "Eval isolates docs with sliding 256-token chunks and per-doc LoRA TTT on q/v/lm_head adapters while keeping training on the naive baseline.",
     "tags": [
-      "evaluation",
       "sliding-window-eval",
+      "evaluation",
       "attention"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "per-document LoRA adapters on lm_head/c_q/c_v",
-      "chunk-by-chunk Adam update after scoring overlapping windows",
-      "document-isolated sliding-window evaluation"
+      "Per-document LoRA adapters on lm_head, c_q, c_v during eval",
+      "Sliding 256-token chunks within 1024-token context windows",
+      "Adam lr0.01 updates reset between documents"
     ]
   },
   "compatibility": {
