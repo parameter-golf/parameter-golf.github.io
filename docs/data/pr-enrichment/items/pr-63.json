@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T22:39:24.136Z",
+  "generatedAt": "2026-03-19T23:09:18.027Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 63,
     "title": "Record: 10L Int6 QAT + Zstd MLP2.6x Muon0.99 Sliding Window (val_bpb 1.1598)",
     "state": "open",
-    "updatedAt": "2026-03-19T22:28:29Z",
+    "updatedAt": "2026-03-19T22:42:29Z",
     "headSha": "510e3f6a9cc55a9e94b2dcc9ab4cbb3dbf3844de",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/63",
     "authorLogin": "yahya010"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines STE int6 QAT with full int6+zstd compression, a wider MLP, and tuned Muon/learning-rate schedule plus sliding-window eval on a 10-layer GPT.",
+    "summary": "Stacks 10-layer baseline with STE int6 QAT plus zstd-compressed quantization, wider MLP, Muon momentum tuning, and sliding-window eval.",
     "tags": [
       "quantization",
       "architecture",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "STE int6 QAT for zero quant gap",
-      "Full int6+zstd-22 compression enabling 2.625× MLP",
-      "Muon 0.99, lower LR, grad clip 0.3, sliding-window stride 64"
+      "STE int6 QAT with full int6 quant and zstd-22 compression",
+      "Expanded MLP hidden size + Muon 0.99 schedule with gradient clipping",
+      "Sliding-window evaluation with stride 64"
     ]
   },
   "compatibility": {

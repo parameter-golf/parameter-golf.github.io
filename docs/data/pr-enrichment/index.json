@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-19T22:39:29.659Z",
+  "generatedAt": "2026-03-19T23:09:18.033Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 137,
+      "title": "Record: Int6 + MLP 3x + STE QAT + NorMuon + sliding window (val_bpb 1.1666)",
+      "status": "open",
+      "updatedAt": "2026-03-19T22:49:06Z",
+      "headSha": "b6ee3f7523195118261b8e1fd245a1a71f73c554",
+      "generatedAt": "2026-03-19T23:08:59.081Z",
+      "summary": "Combines STE fake-int6 QAT, NorMuon+SWA, and 3x-expanded MLP under mixed quantization with sliding-window evaluation.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "architecture",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-137.json"
+    },
     {
       "prNumber": 136,
       "title": "Record: Seq2048 training + eval (val_bpb=1.2101)",
@@ -99,14 +123,15 @@
       "prNumber": 128,
       "title": "Record: Int6 MLP3x + STE QAT + Sliding Window (val_bpb=1.1594)",
       "status": "open",
-      "updatedAt": "2026-03-19T21:49:03Z",
+      "updatedAt": "2026-03-19T23:02:54Z",
       "headSha": "a56bb8cce5768a787fe9a3fe2454a51520535946",
-      "generatedAt": "2026-03-19T22:08:49.887Z",
-      "summary": "Int6 per-row quantization with STE QAT plus zstd compression frees budget for a 3x MLP while sliding-window evaluation keeps full-context scoring.",
+      "generatedAt": "2026-03-19T23:09:05.417Z",
+      "summary": "Int6 per-row quant with zstd frees bytes to train a 3x MLP via STE QAT while sliding-window eval and fp16 tied embeddings preserve scoring quality.",
       "tags": [
         "quantization",
         "architecture",
-        "evaluation"
+        "evaluation",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -190,16 +215,16 @@
     },
     {
       "prNumber": 123,
-      "title": "Record: Vocab 4096 + MLP 3x + Sliding Window Eval (val_bpb=1.1655)",
+      "title": "Record: Vocab 4096 + MLP 3x + Sliding Window Eval (mean val_bpb=1.1642, 3 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-19T19:36:32Z",
-      "headSha": "a9158154acf471f1e5176f98e2cadc2d59eedcac",
-      "generatedAt": "2026-03-19T19:37:02.839Z",
-      "summary": "Custom 4k vocab plus int6 quantization enables a 3x wider MLP trained on 4k context with SWA and sliding-window evaluation.",
+      "updatedAt": "2026-03-19T23:01:06Z",
+      "headSha": "7e575e0abf85373383cf24222877729a37f2c4f2",
+      "generatedAt": "2026-03-19T23:09:09.650Z",
+      "summary": "4096-token SentencePiece, 3x MLP width enabled by int6 quantization, seq4096 training, SWA warmdown, and sliding-window eval stride 256.",
       "tags": [
-        "quantization",
-        "architecture",
         "tokenization",
+        "quantization",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {
@@ -306,17 +331,17 @@
     },
     {
       "prNumber": 116,
-      "title": "Record: Int6 mixed quant + MLP 3x + STE QAT + sliding window (val_bpb 1.1712)",
-      "status": "open",
-      "updatedAt": "2026-03-19T22:09:16Z",
-      "headSha": "14939b8412a5d486c1130a3e4749c63023ffed53",
-      "generatedAt": "2026-03-19T22:39:08.063Z",
-      "summary": "Combines per-row Int6 mixed quant with STE QAT, 3× MLP expansion, and sliding-window eval plus Muon tuning to fit 21.8M params.",
+      "title": "Record: Int6 + MLP 3x + STE QAT + NorMuon + sliding window (val_bpb 1.1666)",
+      "status": "closed",
+      "updatedAt": "2026-03-19T22:47:00Z",
+      "headSha": "80d63b3d16d640811d6308c6fe1eb62e9a836b72",
+      "generatedAt": "2026-03-19T23:09:13.958Z",
+      "summary": "Combines STE fake-int6 QAT, 3x MLP expansion, NorMuon updates, and SWA-warmed sliding-window eval to make mixed int6 quantization practical.",
       "tags": [
         "quantization",
+        "optimizer",
         "architecture",
-        "evaluation",
-        "optimizer"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1220,10 +1245,10 @@
       "prNumber": 63,
       "title": "Record: 10L Int6 QAT + Zstd MLP2.6x Muon0.99 Sliding Window (val_bpb 1.1598)",
       "status": "open",
-      "updatedAt": "2026-03-19T22:28:29Z",
+      "updatedAt": "2026-03-19T22:42:29Z",
       "headSha": "510e3f6a9cc55a9e94b2dcc9ab4cbb3dbf3844de",
-      "generatedAt": "2026-03-19T22:39:24.136Z",
-      "summary": "Combines STE int6 QAT with full int6+zstd compression, a wider MLP, and tuned Muon/learning-rate schedule plus sliding-window eval on a 10-layer GPT.",
+      "generatedAt": "2026-03-19T23:09:18.027Z",
+      "summary": "Stacks 10-layer baseline with STE int6 QAT plus zstd-compressed quantization, wider MLP, Muon momentum tuning, and sliding-window eval.",
       "tags": [
         "quantization",
         "architecture",

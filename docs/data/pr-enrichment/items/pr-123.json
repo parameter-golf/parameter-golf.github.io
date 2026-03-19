@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T19:37:02.839Z",
+  "generatedAt": "2026-03-19T23:09:09.650Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 123,
-    "title": "Record: Vocab 4096 + MLP 3x + Sliding Window Eval (val_bpb=1.1655)",
+    "title": "Record: Vocab 4096 + MLP 3x + Sliding Window Eval (mean val_bpb=1.1642, 3 seeds)",
     "state": "open",
-    "updatedAt": "2026-03-19T19:36:32Z",
-    "headSha": "a9158154acf471f1e5176f98e2cadc2d59eedcac",
+    "updatedAt": "2026-03-19T23:01:06Z",
+    "headSha": "7e575e0abf85373383cf24222877729a37f2c4f2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/123",
     "authorLogin": "saikrishnarallabandi"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Custom 4k vocab plus int6 quantization enables a 3x wider MLP trained on 4k context with SWA and sliding-window evaluation.",
+    "summary": "4096-token SentencePiece, 3x MLP width enabled by int6 quantization, seq4096 training, SWA warmdown, and sliding-window eval stride 256.",
     "tags": [
-      "quantization",
-      "architecture",
       "tokenization",
+      "quantization",
+      "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 per-row STE quantization to support larger MLP",
-      "Seq4096 training with SWA warmdown",
-      "Sliding-window eval (stride 256) over 4k context"
+      "SentencePiece vocab 4096 for denser bytes",
+      "Int6 STE quant with widened feedforward",
+      "Seq4096+SWA warmdown and sliding-window eval stride 256"
     ]
   },
   "compatibility": {
