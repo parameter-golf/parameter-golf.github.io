@@ -111,7 +111,6 @@ function renderRows(submissions) {
       </td>
       <td>
         <strong>${prMeta}</strong>
-        <div class="meta">${entry.pr?.title || (entry.provenance.hasPullRequest ? "PR-linked" : "No PR")}</div>
       </td>
       <td>
         <span class="status-badge ${entry.provenance.listedInReadme ? "status-official" : "status-closed"}">${readmeMeta}</span>
