@@ -80,9 +80,6 @@ function sortSubmissions(submissions) {
       case "status":
         result = compareNumber(statusOrder[a.status], statusOrder[b.status]);
         break;
-      case "readme":
-        result = compareNumber(a.provenance.listedInReadme ? 0 : 1, b.provenance.listedInReadme ? 0 : 1);
-        break;
       case "author":
         result = compareText(a.submission.author, b.submission.author);
         break;
@@ -177,7 +174,7 @@ function renderRows(submissions) {
 
   if (submissions.length === 0) {
     const row = document.createElement("tr");
-    row.innerHTML = `<td colspan="10" class="empty-row">No submissions match the current filters.</td>`;
+    row.innerHTML = `<td colspan="9" class="empty-row">No submissions match the current filters.</td>`;
     body.appendChild(row);
     return;
   }
@@ -188,7 +185,6 @@ function renderRows(submissions) {
     const row = document.createElement("tr");
     const statusClass = `status-${entry.status}`;
     const prMeta = entry.pr ? `#${entry.pr.number}` : "-";
-    const readmeMeta = entry.provenance.listedInReadme ? "Listed" : "Not listed";
     const primaryLink = buildPrimaryLink(entry);
     const nonRecord = trackLabel(entry);
     row.innerHTML = `
@@ -205,9 +201,6 @@ function renderRows(submissions) {
         <div class="meta">loss ${entry.metrics.valLoss ? entry.metrics.valLoss.toFixed(4) : "-"}</div>
       </td>
       <td><span class="status-badge ${statusClass}">${entry.status}</span></td>
-      <td>
-        <span class="status-badge ${entry.provenance.listedInReadme ? "status-official" : "status-closed"}">${readmeMeta}</span>
-      </td>
       <td>
         <strong>${entry.submission.author || "Unknown"}</strong>
         <div class="meta">${entry.submission.githubId || "-"}</div>
@@ -243,7 +236,7 @@ load().catch((error) => {
   if (!body) {
     return;
   }
-  body.innerHTML = `<tr><td colspan="10" class="empty-row">${error.message}</td></tr>`;
+  body.innerHTML = `<tr><td colspan="9" class="empty-row">${error.message}</td></tr>`;
 });
 
 const searchInput = document.getElementById("search-input");
