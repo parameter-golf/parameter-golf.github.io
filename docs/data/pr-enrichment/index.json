@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T16:46:46.581Z",
+  "generatedAt": "2026-03-19T16:53:20.399Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "entries": [
@@ -604,15 +604,15 @@
       "prNumber": 64,
       "title": "Record: val_bpb=0.9695 (val-only) + val_bpb=1.1629 (standard)",
       "status": "open",
-      "updatedAt": "2026-03-19T16:43:57Z",
+      "updatedAt": "2026-03-19T16:47:28Z",
       "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
-      "generatedAt": "2026-03-19T16:44:35.145Z",
-      "summary": "Val-only CombinedOptimal hits 0.9695 BPB and the standard run 1.1629 BPB via STE int6 quantization, sliding-window eval, and tuned Muon.",
+      "generatedAt": "2026-03-19T16:53:09.554Z",
+      "summary": "Val-only CombinedOptimal hits 0.9695 BPB while standard run at 1.1629 using STE int6 QAT, Muon, sliding-window.",
       "tags": [
         "val-only",
         "quantization",
         "sliding-window-eval",
-        "muon"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": true,
@@ -673,14 +673,14 @@
       "prNumber": 60,
       "title": "NTK Eval + Overtone Init (val_bpb=1.2160)",
       "status": "open",
-      "updatedAt": "2026-03-19T15:20:15Z",
-      "headSha": "2a90936b788360b8138940166d3e9f1a0b69d646",
-      "generatedAt": "2026-03-19T16:40:10.315Z",
-      "summary": "Overtone init with sigmoid phase-transition resid mix and NTK-aware RoPE scaling drop post-quant bpb to 1.2160 across 3 seeds with <16MB artifacts.",
+      "updatedAt": "2026-03-19T16:45:43Z",
+      "headSha": "56dc745ac25ad6702864dfb4e5b65b632af565e0",
+      "generatedAt": "2026-03-19T16:53:20.392Z",
+      "summary": "Overtone embeddings, phase-transition resid mixing, and NTK-aware RoPE scaling yield val bpb 1.216, beating SOTA by >0.005 across three seeds.",
       "tags": [
-        "quantization",
+        "positional-encoding",
         "training-schedule",
-        "attention"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
