@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:29:46.388Z",
+  "generatedAt": "2026-03-19T21:40:08.099Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 21,
     "title": "Improved baseline: recurrent depth + LoRA + MTP",
-    "state": "open",
-    "updatedAt": "2026-03-19T10:03:36Z",
+    "state": "closed",
+    "updatedAt": "2026-03-19T21:19:49Z",
     "headSha": "78f6eff97505f64430b336045df0b3fee4c1cbcf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/21",
     "authorLogin": "monroestephenson"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth-recurrent transformer with per-loop LoRA scales widens shared blocks via SwiGLU and auxiliary heads to boost effective capacity.",
+    "summary": "Weight-shared five-block transformer loops twice with learned recurrence scales, LoRA adapters, and wider 704-dim heads plus SwiGLU MLP.",
     "tags": [
       "architecture",
-      "depth-width",
-      "attention"
+      "attention",
+      "depth-width"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Shared 5-layer block recurred twice with per-pass LoRA adapters",
-      "704-dim SwiGLU transformer featuring 8 attention heads and 4 KV heads",
-      "Training extras: multi-token prediction heads plus EMA start-step fix"
+      "Recurrence over five shared transformer blocks for 10 effective layers",
+      "Per-recurrence LoRA adapters on Q/K/V/O projections",
+      "SwiGLU MLP plus EMA and multi-token prediction auxiliary heads"
     ]
   },
   "compatibility": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:29:35.843Z",
+  "generatedAt": "2026-03-19T21:39:57.965Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 31,
     "title": "Non-record: Depth-recurrent 5x3 d768, val_bpb=1.2663",
-    "state": "open",
-    "updatedAt": "2026-03-18T23:24:01Z",
+    "state": "closed",
+    "updatedAt": "2026-03-19T21:19:51Z",
     "headSha": "7ff5e4491a3e909f006c0bf8dda3ca5117fd4a40",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/31",
     "authorLogin": "JackYoung27"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth-recurrent transformer loops five shared blocks three times to deliver an effective 15-layer, d=768 model within ~13.9MB at GQA 12:6.",
+    "summary": "Five shared transformer blocks looped three times at dim 768 mimic 15 layers, trading width for depth via depth-recurrent reuse on the Non-record track.",
     "tags": [
       "architecture",
-      "depth-width",
       "compression",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "shared-block recurrence",
-      "GQA 12:6 configuration",
-      "compressed 21.4M-param layout"
+      "Shared 5-block stack looped 3× to simulate 15 layers",
+      "Upsized hidden dim to 768 for depth-recurrent budgeting",
+      "GQA 12:6 configuration for regularized capacity"
     ]
   },
   "compatibility": {

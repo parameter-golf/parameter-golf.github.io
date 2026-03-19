@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-19T21:08:22.409Z",
+  "generatedAt": "2026-03-19T21:40:19.234Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 131,
+      "title": "[WIP] add combined optimization, waiting for 8 gpu train",
+      "status": "open",
+      "updatedAt": "2026-03-19T21:20:37Z",
+      "headSha": "c4f56326f8547635794b4046a484bc67b190effb",
+      "generatedAt": "2026-03-19T21:38:45.569Z",
+      "summary": "Combines SwiGLU blocks, int6 quant/Aware-training, cosine LR, and adaptive batch/stride logic with sliding-window eval for the 10min/16MB track.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-131.json"
+    },
     {
       "prNumber": 130,
       "title": "Non-record: Muon-Aware QAT + LAWA + Adaptive LR Scheduling (7 toggleable improvements)",
@@ -239,16 +263,16 @@
     },
     {
       "prNumber": 116,
-      "title": "MSE-optimal quant + GPTQ + sliding window eval (val_bpb 1.1909)",
+      "title": "Int6 mixed quant + MLP 3x + sliding window eval (val_bpb 1.1741)",
       "status": "open",
-      "updatedAt": "2026-03-19T19:47:38Z",
-      "headSha": "8f4c65ee15b4aa34baf0371d541e69008e2c55a1",
-      "generatedAt": "2026-03-19T20:07:45.740Z",
-      "summary": "Combines MSE-optimal per-row int8 quantization with GPTQ and sliding-window eval plus tuned seq_len/embedding LR tweaks.",
+      "updatedAt": "2026-03-19T21:17:33Z",
+      "headSha": "bca0d4670f896e47c929062f218ba80c0ca212f4",
+      "generatedAt": "2026-03-19T21:38:51.551Z",
+      "summary": "Combines int6 per-row quantized MLP+attention with 3x FFN expansion and sliding-window eval under a tuned Muon optimizer schedule.",
       "tags": [
         "quantization",
         "sliding-window-eval",
-        "training-schedule"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -264,15 +288,14 @@
       "prNumber": 114,
       "title": "#1 on leaderboard: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
       "status": "open",
-      "updatedAt": "2026-03-19T19:41:35Z",
+      "updatedAt": "2026-03-19T21:36:46Z",
       "headSha": "7f0584926ce698662712e3ce420a57878f34ba05",
-      "generatedAt": "2026-03-19T20:07:51.244Z",
-      "summary": "Int6 post-training quantization frees room for a 3x MLP, with fp16 tied-embed/last-key passthrough and train@2048 + stride-256 sliding eval.",
+      "generatedAt": "2026-03-19T21:38:58.324Z",
+      "summary": "Int6 post-training quant frees space to triple the MLP width while preserving fp16 embeddings/late keys and validating with stride-256 sliding window after train@2048.",
       "tags": [
         "quantization",
         "architecture",
-        "evaluation",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -381,14 +404,14 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-19T20:44:13Z",
-      "headSha": "1d1a89ac8ede1e92fe1c5f9969b595edaa9438f4",
-      "generatedAt": "2026-03-19T21:08:13.064Z",
-      "summary": "Depth-recurrent 3-block×3-loop GPT with AdaLN/FiLM conditioning, GQA attention, and int8+zlib compression to fit 16MB.",
+      "updatedAt": "2026-03-19T21:29:31Z",
+      "headSha": "aa1bf24d2e4e1152297ac255ab61f53e6cf5f652",
+      "generatedAt": "2026-03-19T21:39:03.363Z",
+      "summary": "Depth-recurrent GPT stacks 3 unique blocks across 3 loops with AdaLN conditioning, GQA heads, and transient attention-only test-time adaptation.",
       "tags": [
         "architecture",
-        "quantization",
-        "compression",
+        "depth-width",
+        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -1197,11 +1220,11 @@
     {
       "prNumber": 60,
       "title": "Record: Sliding Window + FP16 Embed + 10L + Muon WD + Overtone Init (val_bpb=1.1748)",
-      "status": "open",
-      "updatedAt": "2026-03-19T17:08:16Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:13:10Z",
       "headSha": "56dc745ac25ad6702864dfb4e5b65b632af565e0",
-      "generatedAt": "2026-03-19T17:28:01.170Z",
-      "summary": "Sliding-window eval plus FP16 tied embeddings and Muon WD let a 10-layer stack run with overtone init and sigmoid residual mixing.",
+      "generatedAt": "2026-03-19T21:39:07.510Z",
+      "summary": "Combines sliding-window scoring, fp16 tied embeddings, 10-layer Muon optimizer with decoupled WD, overtone spectral init, and sigmoid residual mixing.",
       "tags": [
         "sliding-window-eval",
         "mixed-precision",
@@ -1245,14 +1268,14 @@
       "prNumber": 56,
       "title": "Add Deep14x416 KV2 non-record MLX submission (val_bpb=1.8440)",
       "status": "open",
-      "updatedAt": "2026-03-19T17:03:03Z",
+      "updatedAt": "2026-03-19T21:09:26Z",
       "headSha": "e13e8dba6bd14164b5408fce695675cefadc913a",
-      "generatedAt": "2026-03-19T17:28:12.508Z",
-      "summary": "Logs Apple Silicon MLX run reusing train_gpt_mlx.py with 14-layer, width-416 SP-1024 GPT trading width for depth and KV sharing to stay under 16MB.",
+      "generatedAt": "2026-03-19T21:39:13.077Z",
+      "summary": "Documents a deeper/narrower 14×416 SP-1024 KV2 MLX run on Apple Silicon by reusing the repo trainer while trading width for depth and tuning eval batch/chunking.",
       "tags": [
         "architecture",
-        "depth-width",
-        "compression",
+        "evaluation",
+        "quantization",
         "non-record"
       ],
       "flags": {
@@ -1315,15 +1338,15 @@
       "prNumber": 53,
       "title": "1.1888 BPB via SP-4096 compression + stride-64 sliding window",
       "status": "open",
-      "updatedAt": "2026-03-19T17:03:02Z",
+      "updatedAt": "2026-03-19T21:11:22Z",
       "headSha": "613531358ceb7f343e08b5a36b369b2c5b5c011a",
-      "generatedAt": "2026-03-19T17:28:26.473Z",
-      "summary": "Combines SP-4096 tokenization with stride-64 sliding eval on an 8-layer GQA stack tuned with Muon optimizer and int8 quantization for better context reuse and compression.",
+      "generatedAt": "2026-03-19T21:39:17.920Z",
+      "summary": "Combines SP-4096 tokenizer for fewer tokens/byte with stride-64 sliding-window eval on an 8-layer 512-dim GQA with skip connections.",
       "tags": [
         "tokenization",
-        "sliding-window-eval",
-        "optimizer",
-        "quantization"
+        "evaluation",
+        "architecture",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1361,15 +1384,14 @@
     {
       "prNumber": 51,
       "title": "[WIP] Depth-recurrent QAT: 3x4 loops, 768d, 15.6MB artifact",
-      "status": "open",
-      "updatedAt": "2026-03-19T16:57:37Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:19:55Z",
       "headSha": "45db65acf24b1e6529c60c4439a26e41cccb3334",
-      "generatedAt": "2026-03-19T17:28:34.258Z",
-      "summary": "Shares three transformer blocks across four loops with wider dim, per-loop LoRA, STE QAT, and LAWA warmdown averaging for an int8-ready depth-recurrent model.",
+      "generatedAt": "2026-03-19T21:39:22.332Z",
+      "summary": "Shared 3-block transformer loops depth-recurrence with per-loop LoRA and QAT to widen to 768 dims while supporting int8 export.",
       "tags": [
         "architecture",
-        "quantization",
-        "attention"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1384,11 +1406,11 @@
     {
       "prNumber": 48,
       "title": "[Submission] Warmdown Scheduling - 1.2430 BPB on 8×H100 SXM",
-      "status": "open",
-      "updatedAt": "2026-03-19T03:55:01Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:25:12Z",
       "headSha": "d61c36090fdcfdf4050ce2b21cb197bba3187851",
-      "generatedAt": "2026-03-19T17:28:50.953Z",
-      "summary": "Extend warmdown iterations so cosine LR decay activates in the final 30% of the wallclock-capped run, ensuring decay before termination.",
+      "generatedAt": "2026-03-19T21:39:26.420Z",
+      "summary": "Extends the warmdown scheduler by raising WARMDOWN_ITERS so the cosine LR decay runs within the capped 10-minute window.",
       "tags": [
         "training-schedule"
       ],
@@ -1405,15 +1427,16 @@
     {
       "prNumber": 45,
       "title": "Modal 8xH100 LowerLR FP16Embed 960 (val_bpb 1.22395)",
-      "status": "open",
-      "updatedAt": "2026-03-19T17:20:54Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:19:54Z",
       "headSha": "da4e9efe6d4656e65c1fdd00a96ca13a279bc647",
-      "generatedAt": "2026-03-19T17:28:55.782Z",
-      "summary": "Lower LR run on 8×H100 uses FP16 embeddings with higher-precision tied embeddings and int8+zlib serialization to stay under the 16MB cap.",
+      "generatedAt": "2026-03-19T21:39:32.286Z",
+      "summary": "Modal 8xH100 lowers LR with tied FP16 embeddings and trims MLP hidden to 960 before int8+zlib quant to meet the 16MB cap.",
       "tags": [
-        "quantization",
         "mixed-precision",
-        "training-schedule"
+        "optimizer",
+        "architecture",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1450,16 +1473,16 @@
     {
       "prNumber": 41,
       "title": "Add Modal 8xH100 timed validation non-record submission",
-      "status": "open",
-      "updatedAt": "2026-03-19T01:08:07Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:19:53Z",
       "headSha": "0610e5f4a2d17134fe59d1400ed645ee71f704db",
-      "generatedAt": "2026-03-19T17:29:11.503Z",
-      "summary": "Timed 600s Modal 8xH100 run using FineWeb 10B sp1024 config (9-layer, 512d, 1024 vocab) with training snapshot preserved for the non-record track.",
+      "generatedAt": "2026-03-19T21:39:37.825Z",
+      "summary": "10-minute Modal 8xH100 run reuses the current train_gpt.py snapshot with the published FineWeb sp1024 export and int8+zlib serialization for a timed validation non-record entry.",
       "tags": [
+        "quantization",
         "training-schedule",
         "architecture",
-        "tokenization",
-        "evaluation"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1474,11 +1497,11 @@
     {
       "prNumber": 40,
       "title": "PhiDelay Shared-Recurrent LM (3.23 bpb, 6.84MB)",
-      "status": "open",
-      "updatedAt": "2026-03-19T01:01:22Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:19:53Z",
       "headSha": "e3655fde38c06a93533037029fa85240b2a7fa7f",
-      "generatedAt": "2026-03-19T17:29:15.240Z",
-      "summary": "PhiDelay-inspired multi-head delay mixer with learnable recurrence gates reuses 3 blocks across 4 passes for a 12-depth LM staying within 16MB.",
+      "generatedAt": "2026-03-19T21:39:41.872Z",
+      "summary": "PhiDelay-inspired shared-recurrent transformer reuses three physical blocks with gated delay mixing across four passes to deliver a compact, 12-layer LM.",
       "tags": [
         "architecture",
         "attention",
@@ -1497,15 +1520,16 @@
     {
       "prNumber": 39,
       "title": "Record: 10L Mixed Precision: val_bpb=1.2147 (10 layers + int6 middle layers)",
-      "status": "open",
-      "updatedAt": "2026-03-19T18:03:54Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:24:10Z",
       "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
-      "generatedAt": "2026-03-19T18:06:26.519Z",
-      "summary": "10-layer model uses int8 early/late, int6 middle layers, and lower LR to fit 16MB while improving mixed-precision roundtrip metrics.",
+      "generatedAt": "2026-03-19T21:39:47.044Z",
+      "summary": "Mixed-precision 10-layer transformer keeps int8 early/late layers, int6 middle layers, and lower Muon/Adam LRs to stay under 16MB while improving roundtrip metrics.",
       "tags": [
-        "quantization",
+        "mixed-precision",
         "architecture",
-        "optimizer"
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1520,14 +1544,13 @@
     {
       "prNumber": 37,
       "title": "[WIP] SP4096: Larger vocabulary for better BPB",
-      "status": "open",
-      "updatedAt": "2026-03-19T16:57:34Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:19:52Z",
       "headSha": "dd01e00f7a07362f7f884eb182da357a9dd35463",
-      "generatedAt": "2026-03-19T17:29:25.039Z",
-      "summary": "4k-vocab SentencePiece BPE plus untied embeddings lower tokens/byte without altering the base architecture.",
+      "generatedAt": "2026-03-19T21:39:52.760Z",
+      "summary": "4096-token SentencePiece BPE and untied input/output embeddings shrink tokens-per-byte without touching the base GPT architecture.",
       "tags": [
-        "tokenization",
-        "architecture"
+        "tokenization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1565,14 +1588,13 @@
     {
       "prNumber": 31,
       "title": "Non-record: Depth-recurrent 5x3 d768, val_bpb=1.2663",
-      "status": "open",
-      "updatedAt": "2026-03-18T23:24:01Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:19:51Z",
       "headSha": "7ff5e4491a3e909f006c0bf8dda3ca5117fd4a40",
-      "generatedAt": "2026-03-19T17:29:35.843Z",
-      "summary": "Depth-recurrent transformer loops five shared blocks three times to deliver an effective 15-layer, d=768 model within ~13.9MB at GQA 12:6.",
+      "generatedAt": "2026-03-19T21:39:57.965Z",
+      "summary": "Five shared transformer blocks looped three times at dim 768 mimic 15 layers, trading width for depth via depth-recurrent reuse on the Non-record track.",
       "tags": [
         "architecture",
-        "depth-width",
         "compression",
         "non-record"
       ],
@@ -1589,15 +1611,15 @@
     {
       "prNumber": 29,
       "title": "[WIP] Recurrent MQA Transformer — depth recurrence + weight tying (nidhilak-Aquarius)",
-      "status": "open",
-      "updatedAt": "2026-03-19T16:57:32Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:19:50Z",
       "headSha": "95b80a92f87df3b2acab38048443858a8c0f8e11",
-      "generatedAt": "2026-03-19T17:29:40.855Z",
-      "summary": "Shared Transformer block looped 12× with tied embeddings, RoPE, MQA, and SwiGLU to hit ~3.5M parameters ahead of planned ternary quantization.",
+      "generatedAt": "2026-03-19T21:40:02.657Z",
+      "summary": "Loops a single shared Transformer block 12× with tied embeddings, MQA, RoPE, and SwiGLU to exploit depth recurrence and parameter regularization.",
       "tags": [
         "architecture",
         "attention",
-        "quantization"
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1612,15 +1634,15 @@
     {
       "prNumber": 21,
       "title": "Improved baseline: recurrent depth + LoRA + MTP",
-      "status": "open",
-      "updatedAt": "2026-03-19T10:03:36Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:19:49Z",
       "headSha": "78f6eff97505f64430b336045df0b3fee4c1cbcf",
-      "generatedAt": "2026-03-19T17:29:46.388Z",
-      "summary": "Depth-recurrent transformer with per-loop LoRA scales widens shared blocks via SwiGLU and auxiliary heads to boost effective capacity.",
+      "generatedAt": "2026-03-19T21:40:08.099Z",
+      "summary": "Weight-shared five-block transformer loops twice with learned recurrence scales, LoRA adapters, and wider 704-dim heads plus SwiGLU MLP.",
       "tags": [
         "architecture",
-        "depth-width",
-        "attention"
+        "attention",
+        "depth-width"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1635,15 +1657,14 @@
     {
       "prNumber": 20,
       "title": "QAT + Architecture Exploration (Non-Record)",
-      "status": "open",
-      "updatedAt": "2026-03-18T22:06:40Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:19:48Z",
       "headSha": "bda498113d570296cbeff9cee3b97fbe95738b1f",
-      "generatedAt": "2026-03-19T17:29:51.359Z",
-      "summary": "Per-row fake-quantization during training makes GPT blocks robust to int8 rounding while evaluations still use full-precision weights.",
+      "generatedAt": "2026-03-19T21:40:13.641Z",
+      "summary": "Implements STE-driven quantization-aware training with fake int8 per-row quant on all linear layers while keeping evaluation on unquantized weights.",
       "tags": [
         "quantization",
         "architecture",
-        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -1659,14 +1680,15 @@
     {
       "prNumber": 8,
       "title": "Add depth recurrence + SwiGLU submission (Apple M3 8GB)",
-      "status": "open",
-      "updatedAt": "2026-03-19T16:56:26Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T21:19:45Z",
       "headSha": "0484ec9da06d1dc64284e62e2e43fb3a44c9ce88",
-      "generatedAt": "2026-03-19T17:29:55.098Z",
-      "summary": "Depth recurrence reuses four unique transformer blocks three times with SwiGLU MLPs and per-pass gates to boost effective depth at 640 dim on constrained hardware.",
+      "generatedAt": "2026-03-19T21:40:19.230Z",
+      "summary": "Depth recurrence reuses 4 unique transformer blocks with per-pass gates plus SwiGLU MLPs to enable a wider 640-dim U-Net variant on constrained Apple M3 hardware.",
       "tags": [
         "architecture",
-        "depth-width",
+        "attention",
+        "regularization",
         "non-record"
       ],
       "flags": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T18:06:26.519Z",
+  "generatedAt": "2026-03-19T21:39:47.044Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 39,
     "title": "Record: 10L Mixed Precision: val_bpb=1.2147 (10 layers + int6 middle layers)",
-    "state": "open",
-    "updatedAt": "2026-03-19T18:03:54Z",
+    "state": "closed",
+    "updatedAt": "2026-03-19T21:24:10Z",
     "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/39",
     "authorLogin": "nanlliu"
@@ -20,18 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "10-layer model uses int8 early/late, int6 middle layers, and lower LR to fit 16MB while improving mixed-precision roundtrip metrics.",
+    "summary": "Mixed-precision 10-layer transformer keeps int8 early/late layers, int6 middle layers, and lower Muon/Adam LRs to stay under 16MB while improving roundtrip metrics.",
     "tags": [
-      "quantization",
+      "mixed-precision",
       "architecture",
-      "optimizer"
+      "optimizer",
+      "training-schedule"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Training used standard training data, not a val-only regime.",
     "techniques": [
-      "Mixed int8/int6 precision (int6 on layers 3-6)",
-      "Reduced Muon/Adam LR to 0.02 with tied-embed LR 0.03",
-      "Added a tenth transformer layer over baseline"
+      "10-layer transformer with tied embeddings",
+      "Mixed int8/int6 quantization (int6 middle layers)",
+      "Lower Muon/Adam LR schedule (0.02/0.03)"
     ]
   },
   "compatibility": {

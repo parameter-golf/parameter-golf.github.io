@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T20:07:51.244Z",
+  "generatedAt": "2026-03-19T21:38:58.324Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 114,
     "title": "#1 on leaderboard: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
     "state": "open",
-    "updatedAt": "2026-03-19T19:41:35Z",
+    "updatedAt": "2026-03-19T21:36:46Z",
     "headSha": "7f0584926ce698662712e3ce420a57878f34ba05",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/114",
     "authorLogin": "saml212"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 post-training quantization frees room for a 3x MLP, with fp16 tied-embed/last-key passthrough and train@2048 + stride-256 sliding eval.",
+    "summary": "Int6 post-training quant frees space to triple the MLP width while preserving fp16 embeddings/late keys and validating with stride-256 sliding window after train@2048.",
     "tags": [
       "quantization",
       "architecture",
-      "evaluation",
-      "training-schedule"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-row int6 quant for Q/K/V/O and MLP",
-      "Selective fp16 for tied embedding and last-layer keys",
-      "Train@2048 plus stride-256 sliding-window eval"
+      "Int6 quant + selective fp16 tensors",
+      "MLP hidden dim 1536 within 16MB budget",
+      "Sliding-window stride=256 eval with train@2048"
     ]
   },
   "compatibility": {

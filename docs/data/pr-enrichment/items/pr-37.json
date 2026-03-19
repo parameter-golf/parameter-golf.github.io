@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:29:25.039Z",
+  "generatedAt": "2026-03-19T21:39:52.760Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 37,
     "title": "[WIP] SP4096: Larger vocabulary for better BPB",
-    "state": "open",
-    "updatedAt": "2026-03-19T16:57:34Z",
+    "state": "closed",
+    "updatedAt": "2026-03-19T21:19:52Z",
     "headSha": "dd01e00f7a07362f7f884eb182da357a9dd35463",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/37",
     "authorLogin": "khasinski"
@@ -19,16 +19,15 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "4k-vocab SentencePiece BPE plus untied embeddings lower tokens/byte without altering the base architecture.",
+    "summary": "4096-token SentencePiece BPE and untied input/output embeddings shrink tokens-per-byte without touching the base GPT architecture.",
     "tags": [
-      "tokenization",
-      "architecture"
+      "tokenization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "4k-vocab SentencePiece BPE to shrink tokens per byte",
-      "untied input/output embeddings to tighten BPB"
+      "4096-token SentencePiece BPE to cut token/byte ratio",
+      "Untied embeddings with separate lr for head vs input"
     ]
   },
   "compatibility": {

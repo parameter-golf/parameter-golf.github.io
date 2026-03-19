@@ -1,25 +1,61 @@
 {
-  "generatedAt": "2026-03-19T21:07:39.580Z",
+  "generatedAt": "2026-03-19T21:37:59.448Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
   "skipped": [
     {
-      "pr": 124,
+      "pr": 47,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 33,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 24,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 19,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 16,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 14,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 13,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 11,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 5,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 4,
       "reason": "no-record-submission-json"
     }
   ],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-19T20:31:50Z",
+    "cutoffUpdatedAt": "2026-03-19T21:04:16Z",
     "pagesScanned": 2,
-    "prsScanned": 116,
-    "prsRefreshed": 6,
-    "prsReused": 110,
+    "prsScanned": 117,
+    "prsRefreshed": 31,
+    "prsReused": 86,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 116,
+    "cacheEntries": 117,
     "retryWindowRetained": false
   }
 }

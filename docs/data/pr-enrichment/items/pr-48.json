@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:28:50.953Z",
+  "generatedAt": "2026-03-19T21:39:26.420Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 48,
     "title": "[Submission] Warmdown Scheduling - 1.2430 BPB on 8×H100 SXM",
-    "state": "open",
-    "updatedAt": "2026-03-19T03:55:01Z",
+    "state": "closed",
+    "updatedAt": "2026-03-19T21:25:12Z",
     "headSha": "d61c36090fdcfdf4050ce2b21cb197bba3187851",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/48",
     "authorLogin": "MajdiZamim"
@@ -19,15 +19,15 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Extend warmdown iterations so cosine LR decay activates in the final 30% of the wallclock-capped run, ensuring decay before termination.",
+    "summary": "Extends the warmdown scheduler by raising WARMDOWN_ITERS so the cosine LR decay runs within the capped 10-minute window.",
     "tags": [
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Extended WARMDOWN_ITERS to 3000 steps",
-      "Cosine warmdown active during final 30% of capped schedule"
+      "Longer warmdown schedule",
+      "Cosine LR decay alignment with short runs"
     ]
   },
   "compatibility": {

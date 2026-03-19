@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:29:55.098Z",
+  "generatedAt": "2026-03-19T21:40:19.230Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 8,
     "title": "Add depth recurrence + SwiGLU submission (Apple M3 8GB)",
-    "state": "open",
-    "updatedAt": "2026-03-19T16:56:26Z",
+    "state": "closed",
+    "updatedAt": "2026-03-19T21:19:45Z",
     "headSha": "0484ec9da06d1dc64284e62e2e43fb3a44c9ce88",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/8",
     "authorLogin": "iranzithierry"
@@ -19,17 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth recurrence reuses four unique transformer blocks three times with SwiGLU MLPs and per-pass gates to boost effective depth at 640 dim on constrained hardware.",
+    "summary": "Depth recurrence reuses 4 unique transformer blocks with per-pass gates plus SwiGLU MLPs to enable a wider 640-dim U-Net variant on constrained Apple M3 hardware.",
     "tags": [
       "architecture",
-      "depth-width",
+      "attention",
+      "regularization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Recurrence sharing of 4 blocks reused 3× to approximate 12 layers",
-      "SwiGLU MLPs with per-recurrence gate scalars for parameter efficiency"
+      "Depth recurrence with learnable gate scalars to emulate 12 layers from 4 unique blocks",
+      "SwiGLU MLPs at 2/3 hidden dim for parameter-efficiency in the MLP",
+      "Wider 640-dim U-Net-style model with grad clipping for stability"
     ]
   },
   "compatibility": {

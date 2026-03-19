@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:28:34.258Z",
+  "generatedAt": "2026-03-19T21:39:22.332Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 51,
     "title": "[WIP] Depth-recurrent QAT: 3x4 loops, 768d, 15.6MB artifact",
-    "state": "open",
-    "updatedAt": "2026-03-19T16:57:37Z",
+    "state": "closed",
+    "updatedAt": "2026-03-19T21:19:55Z",
     "headSha": "45db65acf24b1e6529c60c4439a26e41cccb3334",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/51",
     "authorLogin": "hacksurvivor"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Shares three transformer blocks across four loops with wider dim, per-loop LoRA, STE QAT, and LAWA warmdown averaging for an int8-ready depth-recurrent model.",
+    "summary": "Shared 3-block transformer loops depth-recurrence with per-loop LoRA and QAT to widen to 768 dims while supporting int8 export.",
     "tags": [
       "architecture",
-      "quantization",
-      "attention"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence with loop-specialized LoRA adapters",
-      "STE fake-quantization inside CastedLinear for QAT",
-      "LAWA warmdown weight averaging"
+      "Depth recurrence (3 blocks ×4 loops) with rank-4 LoRA per loop",
+      "QAT fake-quantize in CastedLinear plus LAWA warmdown averaging",
+      "Wider 768-dim GQA attention using freed parameter budget"
     ]
   },
   "compatibility": {

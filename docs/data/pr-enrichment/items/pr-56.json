@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:28:12.508Z",
+  "generatedAt": "2026-03-19T21:39:13.077Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 56,
     "title": "Add Deep14x416 KV2 non-record MLX submission (val_bpb=1.8440)",
     "state": "open",
-    "updatedAt": "2026-03-19T17:03:03Z",
+    "updatedAt": "2026-03-19T21:09:26Z",
     "headSha": "e13e8dba6bd14164b5408fce695675cefadc913a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/56",
     "authorLogin": "cschubiner"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Logs Apple Silicon MLX run reusing train_gpt_mlx.py with 14-layer, width-416 SP-1024 GPT trading width for depth and KV sharing to stay under 16MB.",
+    "summary": "Documents a deeper/narrower 14×416 SP-1024 KV2 MLX run on Apple Silicon by reusing the repo trainer while trading width for depth and tuning eval batch/chunking.",
     "tags": [
       "architecture",
-      "depth-width",
-      "compression",
+      "evaluation",
+      "quantization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "deeper 14-layer, width-416 SP-1024 layout with 2 KV heads",
-      "int8+zlib roundtrip quantization to hit the 16MB cap"
+      "14-layer, 416-width KV2 SP-1024 architecture",
+      "Apple Silicon MLX run reusing train_gpt_mlx.py via env-config tweaks",
+      "Larger val batch and logit chunking to keep validation tractable"
     ]
   },
   "compatibility": {

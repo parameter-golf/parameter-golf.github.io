@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:28:01.170Z",
+  "generatedAt": "2026-03-19T21:39:07.510Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 60,
     "title": "Record: Sliding Window + FP16 Embed + 10L + Muon WD + Overtone Init (val_bpb=1.1748)",
-    "state": "open",
-    "updatedAt": "2026-03-19T17:08:16Z",
+    "state": "closed",
+    "updatedAt": "2026-03-19T21:13:10Z",
     "headSha": "56dc745ac25ad6702864dfb4e5b65b632af565e0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/60",
     "authorLogin": "notapplica"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Sliding-window eval plus FP16 tied embeddings and Muon WD let a 10-layer stack run with overtone init and sigmoid residual mixing.",
+    "summary": "Combines sliding-window scoring, fp16 tied embeddings, 10-layer Muon optimizer with decoupled WD, overtone spectral init, and sigmoid residual mixing.",
     "tags": [
       "sliding-window-eval",
       "mixed-precision",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Sliding-window stride-64 eval for 960+ context scoring",
-      "FP16 tied embeddings with Muon weight decay to support a 10-layer stack",
-      "Overtone spectral init combined with sigmoid-scheduled residual mixing"
+      "sliding-window eval for 960+ context",
+      "fp16 tied embeddings to avoid int8 compounding",
+      "Muon WD plus sigmoid-scheduled resid mixing"
     ]
   },
   "compatibility": {

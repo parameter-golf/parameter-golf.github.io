@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T20:07:45.740Z",
+  "generatedAt": "2026-03-19T21:38:51.551Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 116,
-    "title": "MSE-optimal quant + GPTQ + sliding window eval (val_bpb 1.1909)",
+    "title": "Int6 mixed quant + MLP 3x + sliding window eval (val_bpb 1.1741)",
     "state": "open",
-    "updatedAt": "2026-03-19T19:47:38Z",
-    "headSha": "8f4c65ee15b4aa34baf0371d541e69008e2c55a1",
+    "updatedAt": "2026-03-19T21:17:33Z",
+    "headSha": "bca0d4670f896e47c929062f218ba80c0ca212f4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/116",
     "authorLogin": "abhishekgahlot2"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines MSE-optimal per-row int8 quantization with GPTQ and sliding-window eval plus tuned seq_len/embedding LR tweaks.",
+    "summary": "Combines int6 per-row quantized MLP+attention with 3x FFN expansion and sliding-window eval under a tuned Muon optimizer schedule.",
     "tags": [
       "quantization",
       "sliding-window-eval",
-      "training-schedule"
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "MSE-optimal int8 quantization followed by Hessian-aware GPTQ rounding",
-      "Sliding-window evaluation (stride 64) to give each scored token >960 tokens of context",
-      "Longer seq_len with lower embed LR, Muon weight decay, and tighter logit softcap"
+      "int6 per-row quantization on MLP and attention weights with fp16 tied embedding passthrough",
+      "MLP hidden size ramped to 1536 for 21.8M params under a 4096-context seq_len",
+      "sliding-window evaluation (stride 64) plus Muon momentum warmup/warmdown"
     ]
   },
   "compatibility": {

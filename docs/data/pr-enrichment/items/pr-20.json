@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:29:51.359Z",
+  "generatedAt": "2026-03-19T21:40:13.641Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 20,
     "title": "QAT + Architecture Exploration (Non-Record)",
-    "state": "open",
-    "updatedAt": "2026-03-18T22:06:40Z",
+    "state": "closed",
+    "updatedAt": "2026-03-19T21:19:48Z",
     "headSha": "bda498113d570296cbeff9cee3b97fbe95738b1f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/20",
     "authorLogin": "mattleonard16"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Per-row fake-quantization during training makes GPT blocks robust to int8 rounding while evaluations still use full-precision weights.",
+    "summary": "Implements STE-driven quantization-aware training with fake int8 per-row quant on all linear layers while keeping evaluation on unquantized weights.",
     "tags": [
       "quantization",
       "architecture",
-      "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "STE-driven fake quantization per row",
-      "Training flag threaded through GPT stack to keep eval clean"
+      "per-row fake-int8 quantization via STE",
+      "training-only quantized forward pass",
+      "evaluation uses clean weights"
     ]
   },
   "compatibility": {

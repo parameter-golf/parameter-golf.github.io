@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:28:55.782Z",
+  "generatedAt": "2026-03-19T21:39:32.286Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 45,
     "title": "Modal 8xH100 LowerLR FP16Embed 960 (val_bpb 1.22395)",
-    "state": "open",
-    "updatedAt": "2026-03-19T17:20:54Z",
+    "state": "closed",
+    "updatedAt": "2026-03-19T21:19:54Z",
     "headSha": "da4e9efe6d4656e65c1fdd00a96ca13a279bc647",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/45",
     "authorLogin": "kiankyars"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Lower LR run on 8×H100 uses FP16 embeddings with higher-precision tied embeddings and int8+zlib serialization to stay under the 16MB cap.",
+    "summary": "Modal 8xH100 lowers LR with tied FP16 embeddings and trims MLP hidden to 960 before int8+zlib quant to meet the 16MB cap.",
     "tags": [
-      "quantization",
       "mixed-precision",
-      "training-schedule"
+      "optimizer",
+      "architecture",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Lowered matrix/scalar LR for stability",
-      "FP16 embeddings while keeping tied embeddings higher precision",
-      "Int8+zlib roundtrip serialization to meet cap"
+      "lower LR with tied FP16 embeddings",
+      "MLP hidden width reduced to 960 for size cap",
+      "post-training int8+zlib roundtrip quant evaluation"
     ]
   },
   "compatibility": {

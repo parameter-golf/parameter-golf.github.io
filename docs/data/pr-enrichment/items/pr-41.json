@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:29:11.503Z",
+  "generatedAt": "2026-03-19T21:39:37.825Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 41,
     "title": "Add Modal 8xH100 timed validation non-record submission",
-    "state": "open",
-    "updatedAt": "2026-03-19T01:08:07Z",
+    "state": "closed",
+    "updatedAt": "2026-03-19T21:19:53Z",
     "headSha": "0610e5f4a2d17134fe59d1400ed645ee71f704db",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/41",
     "authorLogin": "kiankyars"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Timed 600s Modal 8xH100 run using FineWeb 10B sp1024 config (9-layer, 512d, 1024 vocab) with training snapshot preserved for the non-record track.",
+    "summary": "10-minute Modal 8xH100 run reuses the current train_gpt.py snapshot with the published FineWeb sp1024 export and int8+zlib serialization for a timed validation non-record entry.",
     "tags": [
+      "quantization",
       "training-schedule",
       "architecture",
-      "tokenization",
-      "evaluation"
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "600s timed stop on Modal 8xH100",
-      "FineWeb 10B sp1024 dataset with 9-layer, 512d, 1024-vocab config",
-      "Snapshot of train_gpt.py/log preserved for verification"
+      "8xH100 torchrun under a 600s wallclock cap for timed validation",
+      "FineWeb sp1024 data with 9-layer, 512-dim GPT settings",
+      "Int8+zlib roundtrip serialization of the final checkpoint"
     ]
   },
   "compatibility": {
