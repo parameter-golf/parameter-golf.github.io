@@ -278,11 +278,16 @@ code {
     text-wrap: initial;
     font-size: 0.95rem;
     line-height: 1.36;
-    text-align: left;
+    text-align: center;
   }
 
   .summary-segment {
     display: block;
+    margin-top: 0.16rem;
+  }
+
+  .summary-segment:first-child {
+    margin-top: 0;
   }
 
   .summary-line strong {
