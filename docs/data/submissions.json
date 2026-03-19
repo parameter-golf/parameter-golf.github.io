@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T12:06:48.455Z",
+  "generatedAt": "2026-03-19T12:51:36.037Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -457,6 +457,72 @@
         "script": "https://github.com/openai/parameter-golf/blob/912c3fb6c7f17a530d93b8d7ff1193443d48f4d7/records/track_10min_16mb/2026-03-19_WarmdownQuantization/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/912c3fb6c7f17a530d93b8d7ff1193443d48f4d7/records/track_10min_16mb/2026-03-19_WarmdownQuantization",
         "pr": "https://github.com/openai/parameter-golf/pull/61",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-19_VocabSize_NorMuon_SelectiveQuant",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-19_VocabSize_NorMuon_SelectiveQuant",
+        "folderPath": "records/track_10min_16mb/2026-03-19_VocabSize_NorMuon_SelectiveQuant",
+        "submissionPath": "records/track_10min_16mb/2026-03-19_VocabSize_NorMuon_SelectiveQuant/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-19_VocabSize_NorMuon_SelectiveQuant/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-19_VocabSize_NorMuon_SelectiveQuant/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-19_VocabSize_NorMuon_SelectiveQuant/train_gpt.py"
+      },
+      "submission": {
+        "author": "Spruce Campbell",
+        "githubId": "mtybadger",
+        "name": "8192 Vocab Size, NorMuon, Selective Quantization",
+        "blurb": "SP-8192 8xH100 SXM5 run using a new tokenizer and NorMuon implementation from the original paper, 1.185 bpb on val, 14.79 MB.",
+        "date": "2026-03-19T12:09:29Z"
+      },
+      "metrics": {
+        "valBpb": 1.18576208,
+        "valLoss": 3.06233041,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 14796836,
+        "bytesCode": 53612,
+        "bytesModelInt8Zlib": null
+      },
+      "pr": {
+        "number": 78,
+        "title": "Record: 8192 Vocab Size, NorMuon, Selective Quantization; 1.186 val_bpb",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/78",
+        "headSha": "42de8368cdb5617293f98614caa98f594b7f50bd",
+        "headRepo": "mtybadger/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/42de8368cdb5617293f98614caa98f594b7f50bd/records/track_10min_16mb/2026-03-19_VocabSize_NorMuon_SelectiveQuant/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/42de8368cdb5617293f98614caa98f594b7f50bd/records/track_10min_16mb/2026-03-19_VocabSize_NorMuon_SelectiveQuant/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/42de8368cdb5617293f98614caa98f594b7f50bd/records/track_10min_16mb/2026-03-19_VocabSize_NorMuon_SelectiveQuant/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/42de8368cdb5617293f98614caa98f594b7f50bd/records/track_10min_16mb/2026-03-19_VocabSize_NorMuon_SelectiveQuant/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/42de8368cdb5617293f98614caa98f594b7f50bd/records/track_10min_16mb/2026-03-19_VocabSize_NorMuon_SelectiveQuant",
+        "pr": "https://github.com/openai/parameter-golf/pull/78",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -2089,6 +2155,72 @@
         "script": "https://github.com/openai/parameter-golf/blob/4a685e4fdbeaec90f474bd75299500888c311757/records/track_10min_16mb/2026-03-19_SubSixteen/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/4a685e4fdbeaec90f474bd75299500888c311757/records/track_10min_16mb/2026-03-19_SubSixteen",
         "pr": "https://github.com/openai/parameter-golf/pull/69",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-19_DepthRecurrence_3x3x1024",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-19_DepthRecurrence_3x3x1024",
+        "folderPath": "records/track_non_record_16mb/2026-03-19_DepthRecurrence_3x3x1024",
+        "submissionPath": "records/track_non_record_16mb/2026-03-19_DepthRecurrence_3x3x1024/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-19_DepthRecurrence_3x3x1024/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-19_DepthRecurrence_3x3x1024/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-19_DepthRecurrence_3x3x1024/train_gpt.py"
+      },
+      "submission": {
+        "author": "Marvbuster",
+        "githubId": "Marvbuster",
+        "name": "Depth Recurrence 3x3x1024",
+        "blurb": "3 unique blocks repeated 3 times at dim=1024 with tuned hyperparameters. Trades architectural diversity for width. Pending H100 validation.",
+        "date": "2026-03-19T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "pr": {
+        "number": 79,
+        "title": "Depth Recurrence: 3x3x1024 (non-record, pending H100)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/79",
+        "headSha": "ea3b4b4855a12b883a387afa4aa201b5459225f3",
+        "headRepo": "Marvbuster/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ea3b4b4855a12b883a387afa4aa201b5459225f3/records/track_non_record_16mb/2026-03-19_DepthRecurrence_3x3x1024/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/ea3b4b4855a12b883a387afa4aa201b5459225f3/records/track_non_record_16mb/2026-03-19_DepthRecurrence_3x3x1024/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/ea3b4b4855a12b883a387afa4aa201b5459225f3/records/track_non_record_16mb/2026-03-19_DepthRecurrence_3x3x1024/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/ea3b4b4855a12b883a387afa4aa201b5459225f3/records/track_non_record_16mb/2026-03-19_DepthRecurrence_3x3x1024/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/ea3b4b4855a12b883a387afa4aa201b5459225f3/records/track_non_record_16mb/2026-03-19_DepthRecurrence_3x3x1024",
+        "pr": "https://github.com/openai/parameter-golf/pull/79",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
