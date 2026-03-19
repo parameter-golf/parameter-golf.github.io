@@ -239,8 +239,45 @@ function buildVisibleSummary(summary, submissions) {
   };
 }
 
-function filterSubmissions(submissions) {
+function buildEnrichmentMap(index) {
+  const map = new Map();
+  for (const entry of index?.entries || []) {
+    map.set(String(entry.prNumber), entry);
+  }
+  return map;
+}
+
+function getEnrichment(enrichmentMap, entry) {
+  if (!entry.pr?.number) {
+    return null;
+  }
+  return enrichmentMap.get(String(entry.pr.number)) || null;
+}
+
+function usesValOnly(entry, enrichment) {
+  return Boolean(entry.flags?.usesValOnly || enrichment?.flags?.usesValOnly);
+}
+
+function buildDisplayTags(entry, enrichment) {
+  const tags = Array.isArray(enrichment?.tags) ? [...enrichment.tags] : [];
+  if (usesValOnly(entry, enrichment) && !tags.includes("val-only")) {
+    tags.unshift("val-only");
+  }
+  return tags.slice(0, 4);
+}
+
+function escapeHtml(value) {
+  return String(value || "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function filterSubmissions(submissions, enrichmentMap) {
   return submissions.filter((entry) => {
+    const enrichment = getEnrichment(enrichmentMap, entry);
     if (filters.mergedOnly && entry.status !== "official" && entry.status !== "merged") {
       return false;
     }
@@ -250,7 +287,7 @@ function filterSubmissions(submissions) {
     if (filters.hideNonRecord && entry.category === "non-record") {
       return false;
     }
-    if (!filters.includeValOnly && entry.flags?.usesValOnly) {
+    if (!filters.includeValOnly && usesValOnly(entry, enrichment)) {
       return false;
     }
     const query = filters.search.toLowerCase();
@@ -260,7 +297,9 @@ function filterSubmissions(submissions) {
     const haystack = [
       entry.submission.name,
       entry.submission.author,
-      entry.submission.githubId
+      entry.submission.githubId,
+      enrichment?.summary,
+      ...(buildDisplayTags(entry, enrichment))
     ]
       .filter(Boolean)
       .join(" ")
@@ -344,8 +383,17 @@ function renderRows(submissions) {
   const start = pageSize === "all" ? 0 : (paginationState.page - 1) * pageSize;
   const end = pageSize === "all" ? totalItems : start + pageSize;
   const visibleItems = sorted.slice(start, end);
+  const enrichmentMap = window.__GOLF_VIEWER_DATA__.enrichmentMap;
 
   for (const entry of visibleItems.entries().map((item) => item[1])) {
+    const enrichment = getEnrichment(enrichmentMap, entry);
+    const displayTags = buildDisplayTags(entry, enrichment);
+    const summaryLine = enrichment?.summary
+      ? `<p class="title-summary">${escapeHtml(enrichment.summary)}</p>`
+      : "";
+    const tagLine = displayTags.length > 0
+      ? `<div class="title-tags">${displayTags.map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}</div>`
+      : "";
     const row = document.createElement("tr");
     const statusClass = `status-${entry.status}`;
     const primaryLink = buildPrimaryLink(entry);
@@ -357,6 +405,8 @@ function renderRows(submissions) {
       <td><span class="rank-value">${rankMap.get(entry.id) || "-"}</span></td>
       <td class="title-cell">
         <a class="title-link run-name" href="${primaryLink.href}" target="_blank" rel="noreferrer">${entry.submission.name || entry.record.folderName}</a>
+        ${summaryLine}
+        ${tagLine}
       </td>
       <td class="metric-cell">
         <strong class="score-value">${formatScore(entry.metrics.valBpb)}</strong>
@@ -381,7 +431,7 @@ function renderRows(submissions) {
 
 function render(data) {
   window.__GOLF_VIEWER_DATA__ = data;
-  const filtered = filterSubmissions(data.submissions.submissions);
+  const filtered = filterSubmissions(data.submissions.submissions, data.enrichmentMap);
   updateSummary(buildVisibleSummary(data.summary, filtered));
   renderRows(filtered);
   updateSortButtons();
@@ -389,15 +439,22 @@ function render(data) {
 }
 
 async function load() {
-  const [summaryResponse, submissionsResponse] = await Promise.all([
+  const [summaryResponse, submissionsResponse, enrichmentResponse] = await Promise.all([
     fetch("./data/summary.json"),
-    fetch("./data/submissions.json")
+    fetch("./data/submissions.json"),
+    fetch("./data/pr-enrichment/index.json")
   ]);
   if (!summaryResponse.ok || !submissionsResponse.ok) {
     throw new Error("Failed to load generated data files.");
   }
-  const [summary, submissions] = await Promise.all([summaryResponse.json(), submissionsResponse.json()]);
-  render({ summary, submissions });
+  const [summary, submissions, enrichmentIndex] = await Promise.all([
+    summaryResponse.json(),
+    submissionsResponse.json(),
+    enrichmentResponse.ok
+      ? enrichmentResponse.json()
+      : Promise.resolve({ entries: [] })
+  ]);
+  render({ summary, submissions, enrichmentIndex, enrichmentMap: buildEnrichmentMap(enrichmentIndex) });
 }
 
 load().catch((error) => {

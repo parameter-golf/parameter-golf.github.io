@@ -37,6 +37,10 @@ The site is fully static.
 - `docs/`
   - GitHub Pages site
   - fetches `docs/data/submissions.json` and `docs/data/summary.json`
+- `scripts/enrich-prs.mjs`
+  - reads collected PR-backed submissions
+  - only re-summarizes PRs whose upstream metadata changed or whose per-PR summary file is missing
+  - writes public enrichment files under `docs/data/pr-enrichment/`
 - `.github/workflows/refresh-data.yml`
   - scheduled data refresh
   - commits regenerated data back into this repo

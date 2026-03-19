@@ -295,6 +295,7 @@ function normalizeSubmission({
           authorLogin: prAuthorLogin,
           authorName: prAuthorName,
           createdAt: textOrNull(pr.created_at),
+          updatedAt: textOrNull(pr.updated_at),
           headSha: pr.head.sha,
           headRepo: pr.head.repo?.full_name || null
         }
@@ -694,6 +695,26 @@ async function collectPrSubmissions(report, previousCache) {
       highestSeenUpdatedAt = latestIsoString(highestSeenUpdatedAt, updatedAt);
 
       if (!shouldRefreshPr(cachedEntry, pr)) {
+        const nextPrMetadata = cachedPrMetadata(pr);
+        nextCache.prs[cacheKey] = {
+          ...cachedEntry,
+          updatedAt,
+          pr: {
+            ...(cachedEntry?.pr || {}),
+            ...nextPrMetadata
+          },
+          submissions: Array.isArray(cachedEntry?.submissions)
+            ? cachedEntry.submissions.map((submission) => ({
+                ...submission,
+                pr: submission.pr
+                  ? {
+                      ...submission.pr,
+                      ...nextPrMetadata
+                    }
+                  : submission.pr
+              }))
+            : []
+        };
         stats.prsReused += 1;
         continue;
       }

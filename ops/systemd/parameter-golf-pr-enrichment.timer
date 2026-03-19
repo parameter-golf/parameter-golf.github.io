@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Parameter Golf PR enrichment every 10 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+Unit=parameter-golf-pr-enrichment.service
+
+[Install]
+WantedBy=timers.target

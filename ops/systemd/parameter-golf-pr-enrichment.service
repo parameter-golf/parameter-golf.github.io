@@ -1,0 +1,11 @@
+[Unit]
+Description=Parameter Golf PR enrichment
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/home/ubuntu/parameter-golf-enricher
+ExecStart=/bin/bash /home/ubuntu/parameter-golf-enricher/scripts/run-pr-enrichment-cycle.sh
+

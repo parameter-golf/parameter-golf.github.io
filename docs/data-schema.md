@@ -69,6 +69,7 @@ Each submission contains:
     "draft": false,
     "mergedAt": null,
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/53",
+    "updatedAt": "2026-03-19T12:10:00Z",
     "headSha": "613531358ceb7f343e08b5a36b369b2c5b5c011a",
     "headRepo": "kshitizz36/parameter-golf"
   },
@@ -93,3 +94,7 @@ Aggregated counts and best scores for site headers and quick stats.
 Collector diagnostics, including skipped PRs and parse failures.
 
 The report may also include an `incremental` section describing how many PR pages were scanned, how many cached PRs were reused, and whether the collector stopped early based on the last successful PR sync cutoff.
+
+## `docs/data/pr-enrichment/index.json`
+
+Remote enrichment output keyed by PR number. Each entry contains a one-line summary, technique tags, and a compatibility-aware `val-only` flag derived from `collector OR ai`.

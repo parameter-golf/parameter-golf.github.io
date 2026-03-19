@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "collect": "node scripts/collect.mjs",
+    "enrich:prs": "node scripts/enrich-prs.mjs",
     "dev": "python3 -m http.server 4173 -d docs",
-    "check": "node --check scripts/collect.mjs"
+    "check": "node --check scripts/collect.mjs && node --check scripts/enrich-prs.mjs"
   },
   "engines": {
     "node": ">=20"
