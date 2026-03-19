@@ -33,7 +33,6 @@ function formatDate(value) {
     return "Unknown";
   }
   return new Date(value).toLocaleDateString("en-US", {
-    year: "numeric",
     month: "short",
     day: "numeric"
   });
@@ -86,7 +85,7 @@ function updateSummary(summary) {
     summary.best.openPrMainTrack?.submission.name || "No open PR submissions found";
   document.getElementById("coverage-count").textContent = formatCount(summary.counts.submissions);
   document.getElementById("coverage-breakdown").textContent =
-    `${summary.counts.official} on main, ${summary.counts.openPr} open PR, ${summary.counts.prBacked} PR-backed, ${summary.counts.readmeListed} README listed`;
+    `${summary.counts.official} main, ${summary.counts.openPr} open, ${summary.counts.readmeListed} listed`;
 }
 
 function filterSubmissions(submissions) {
