@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T18:36:53.474Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 114,
+    "title": "Int6 + MLP 3x + sliding window: val_bpb=1.1574",
+    "state": "open",
+    "updatedAt": "2026-03-19T18:29:35Z",
+    "headSha": "1ef3fccd0a7689ee8250e1586c92807a630d0277",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/114",
+    "authorLogin": "saml212"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_Int6MLP3x/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Post-training int6 quantization frees budget for a 3x-expanded MLP in the 9-layer GPT backbone while sliding-window eval captures longer context.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "int6 per-row quantized weights",
+      "MLP hidden dim 1536 (3× expansion)",
+      "sliding-window stride 256 evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

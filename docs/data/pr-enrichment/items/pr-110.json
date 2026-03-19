@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-19T18:37:12.695Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 110,
+    "title": "Submission: Top-Heavy FFN Allocation + Packed Int6 Export | pending eval",
+    "state": "open",
+    "updatedAt": "2026-03-19T18:14:47Z",
+    "headSha": "411d753b1c4e275c646e00209edc2028e9d63cee",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/110",
+    "authorLogin": "mr-ashish-panday"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_TopHeavyFFN_PackedInt6_PendingEval/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Top-heavy FFN allocation shifts capacity to deeper blocks while keeping the 9x512 backbone, paired with packed int6 export and sliding-window eval readiness.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Layer-wise FFN scaling inside the 9x512 backbone",
+      "Packed int6 export with per-row fp16 scales",
+      "Sliding-window eval plus CPU dry-run path"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T18:36:58.202Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 113,
+    "title": "Record: FP16 Embed + Sliding Window Eval + Warmdown Tuning (pending eval)",
+    "state": "open",
+    "updatedAt": "2026-03-19T18:26:13Z",
+    "headSha": "87a6137f5287d78c38b4c9a4dbde490b0a3c9044",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/113",
+    "authorLogin": "JoeProAI"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_JoeProAI_FP16Embed_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Quantizes with FP16 tied embeddings, stride-64 sliding-window eval, and a tuned warmdown/LR schedule for better convergence under the 10-min cap.",
+    "tags": [
+      "quantization",
+      "evaluation",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "FP16 passthrough for tied embeddings during INT8 quantization",
+      "Stride-64 sliding-window evaluation scoring only the rightmost tokens",
+      "Extended warmdown iterations and 0.06 matrix LR for the 10-minute budget"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

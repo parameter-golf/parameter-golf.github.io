@@ -1,19 +1,134 @@
 {
-  "generatedAt": "2026-03-19T18:06:26.524Z",
+  "generatedAt": "2026-03-19T18:37:31.712Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 114,
+      "title": "Int6 + MLP 3x + sliding window: val_bpb=1.1574",
+      "status": "open",
+      "updatedAt": "2026-03-19T18:29:35Z",
+      "headSha": "1ef3fccd0a7689ee8250e1586c92807a630d0277",
+      "generatedAt": "2026-03-19T18:36:53.474Z",
+      "summary": "Post-training int6 quantization frees budget for a 3x-expanded MLP in the 9-layer GPT backbone while sliding-window eval captures longer context.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-114.json"
+    },
+    {
+      "prNumber": 113,
+      "title": "Record: FP16 Embed + Sliding Window Eval + Warmdown Tuning (pending eval)",
+      "status": "open",
+      "updatedAt": "2026-03-19T18:26:13Z",
+      "headSha": "87a6137f5287d78c38b4c9a4dbde490b0a3c9044",
+      "generatedAt": "2026-03-19T18:36:58.202Z",
+      "summary": "Quantizes with FP16 tied embeddings, stride-64 sliding-window eval, and a tuned warmdown/LR schedule for better convergence under the 10-min cap.",
+      "tags": [
+        "quantization",
+        "evaluation",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-113.json"
+    },
+    {
+      "prNumber": 112,
+      "title": "Depth Recurrence 5x3 d672 SwiGLU",
+      "status": "open",
+      "updatedAt": "2026-03-19T18:25:26Z",
+      "headSha": "ac5a14df9f8167101fc52164312bc865322cfd28",
+      "generatedAt": "2026-03-19T18:37:02.473Z",
+      "summary": "Reuses five transformer blocks three times to get 15 effective layers at width 672 with SwiGLU, tuning warmdown/momentum and eval seqlen 2048.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-112.json"
+    },
+    {
+      "prNumber": 111,
+      "title": "Non-record unlimited-compute: 1-hour 1xH100 warmdown 9x512",
+      "status": "open",
+      "updatedAt": "2026-03-19T18:25:02Z",
+      "headSha": "3e206c0c60cb8e7353e4b206298e78d9aacf7052",
+      "generatedAt": "2026-03-19T18:37:07.977Z",
+      "summary": "Extended 1xH100 9x512 run with WARMDOWN_ITERS=100 to push longer single-GPU scaling while staying under the 16MB artifact cap.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-111.json"
+    },
+    {
+      "prNumber": 110,
+      "title": "Submission: Top-Heavy FFN Allocation + Packed Int6 Export | pending eval",
+      "status": "open",
+      "updatedAt": "2026-03-19T18:14:47Z",
+      "headSha": "411d753b1c4e275c646e00209edc2028e9d63cee",
+      "generatedAt": "2026-03-19T18:37:12.695Z",
+      "summary": "Top-heavy FFN allocation shifts capacity to deeper blocks while keeping the 9x512 backbone, paired with packed int6 export and sliding-window eval readiness.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-110.json"
+    },
+    {
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-19T17:58:58Z",
-      "headSha": "abdcff6ef64a87abe848e96dc54a7847248f1e81",
-      "generatedAt": "2026-03-19T18:06:18.464Z",
-      "summary": "Depth-recurrent GPT employs three unique 3×3 blocks with AdaLN/FiLM gating and mini-U-Net skip conditioning across three loops on Apple M3 Max.",
+      "updatedAt": "2026-03-19T18:29:39Z",
+      "headSha": "c0a14f21a175338bee2fe071045b353e45121c2e",
+      "generatedAt": "2026-03-19T18:37:17.329Z",
+      "summary": "Depth-recurrent GPT cycles three unique Transformer blocks through three loops with AdaLN conditioning and GQA, tuned via MLX on Apple M3 Max.",
       "tags": [
         "architecture",
-        "depth-width",
         "compression",
         "non-record"
       ],
@@ -99,15 +214,15 @@
       "prNumber": 103,
       "title": "Non-record: Looped Transformer + LoRA + Skip Connections + NorMuon + SWA + Int6 + Sliding Window",
       "status": "open",
-      "updatedAt": "2026-03-19T17:34:05Z",
-      "headSha": "7c472d623f203d7f5d84663e8e270f2ac63455e7",
-      "generatedAt": "2026-03-19T17:36:15.796Z",
-      "summary": "Looping five transformer blocks into 30 virtual layers with per-layer LoRA and decoder skip connections plus tailored NorMuon/SWA training.",
+      "updatedAt": "2026-03-19T18:23:34Z",
+      "headSha": "b7b02fc3624f132c1c2848fd3650672e40e37a4f",
+      "generatedAt": "2026-03-19T18:37:23.354Z",
+      "summary": "Looped 5-block transformer uses per-virtual-layer LoRA and skip connections to span 30 virtual layers while training with NorMuon and Int6 quantization plus sliding-window eval.",
       "tags": [
         "architecture",
-        "optimizer",
         "quantization",
-        "evaluation"
+        "training-schedule",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -193,12 +308,14 @@
       "prNumber": 95,
       "title": "PROTEUS EMA — val_bpb: 1.2253",
       "status": "open",
-      "updatedAt": "2026-03-19T17:07:14Z",
-      "headSha": "2befd0b70fadfa928e71ed8e22d6cf7923e22e65",
-      "generatedAt": "2026-03-19T17:25:36.381Z",
-      "summary": "Baseline GPT training plus EMA weight averaging to smooth weights before INT8 export and reduce quantization loss.",
+      "updatedAt": "2026-03-19T18:23:50Z",
+      "headSha": "ed1454e73e22d60d9e54450a9a90fd8cd196d413",
+      "generatedAt": "2026-03-19T18:37:27.723Z",
+      "summary": "EMA weight averaging with FP16 embeddings, seq2048 training, and sliding-window eval combine to smooth INT8 quantization on the baseline architecture.",
       "tags": [
-        "regularization"
+        "quantization",
+        "sliding-window-eval",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -775,13 +892,14 @@
       "prNumber": 63,
       "title": "Seq2048 + FP16 Tied Embedding + Tuned LR (val_bpb 1.2067)",
       "status": "open",
-      "updatedAt": "2026-03-19T17:03:04Z",
-      "headSha": "13ffddc92724efea98c502e55e2d6a1f0e241418",
-      "generatedAt": "2026-03-19T17:27:50.371Z",
-      "summary": "10-layer 512-dim run pairs seq2048, FP16 tied embedding passthrough, and mixed int8/int6 quantization with sliding-window evaluation to squeeze more context.",
+      "updatedAt": "2026-03-19T18:18:29Z",
+      "headSha": "a90e9ed2bcc7bc57390427662c943340876a787b",
+      "generatedAt": "2026-03-19T18:37:31.705Z",
+      "summary": "Extends baseline with seq2048, FP16 tied embeddings, int6+zstd enabling 1344 MLP, tuned Muon momentum/opt params, sliding-window evaluation.",
       "tags": [
-        "sliding-window-eval",
         "quantization",
+        "optimizer",
+        "evaluation",
         "architecture"
       ],
       "flags": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T17:36:15.796Z",
+  "generatedAt": "2026-03-19T18:37:23.354Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 103,
     "title": "Non-record: Looped Transformer + LoRA + Skip Connections + NorMuon + SWA + Int6 + Sliding Window",
     "state": "open",
-    "updatedAt": "2026-03-19T17:34:05Z",
-    "headSha": "7c472d623f203d7f5d84663e8e270f2ac63455e7",
+    "updatedAt": "2026-03-19T18:23:34Z",
+    "headSha": "b7b02fc3624f132c1c2848fd3650672e40e37a4f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/103",
     "authorLogin": "MatthewHRockwell"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Looping five transformer blocks into 30 virtual layers with per-layer LoRA and decoder skip connections plus tailored NorMuon/SWA training.",
+    "summary": "Looped 5-block transformer uses per-virtual-layer LoRA and skip connections to span 30 virtual layers while training with NorMuon and Int6 quantization plus sliding-window eval.",
     "tags": [
       "architecture",
-      "optimizer",
       "quantization",
-      "evaluation"
+      "training-schedule",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Looped transformer with per-virtual-layer LoRA and skip connections",
-      "NorMuon optimizer with wallclock warmdown and SWA",
-      "Int6 quantization with fp16 embeddings and sliding-window eval"
+      "Looped transformer with per-virtual-layer LoRA, skip connections, and resid mixing to differentiate 30 virtual layers",
+      "NorMuon optimizer with wallclock-aware warmdown, SWA, and gradient clipping for deep recurrence stability",
+      "Int6 weights with fp16 embedding/LoRA passthrough plus stride-64 sliding-window evaluation"
     ]
   },
   "compatibility": {

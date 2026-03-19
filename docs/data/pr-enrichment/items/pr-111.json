@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T18:37:07.977Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 111,
+    "title": "Non-record unlimited-compute: 1-hour 1xH100 warmdown 9x512",
+    "state": "open",
+    "updatedAt": "2026-03-19T18:25:02Z",
+    "headSha": "3e206c0c60cb8e7353e4b206298e78d9aacf7052",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/111",
+    "authorLogin": "aamodbhatt"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_1hWarmdown9x512_1GPU/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Extended 1xH100 9x512 run with WARMDOWN_ITERS=100 to push longer single-GPU scaling while staying under the 16MB artifact cap.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Warmdown iterations focused near end of training",
+      "Baseline 9x512/sp1024 stack retained",
+      "1-hour single-GPU run under 16MB cap"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
