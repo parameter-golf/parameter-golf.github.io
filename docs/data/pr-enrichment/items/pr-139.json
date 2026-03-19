@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-19T23:39:15.933Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 139,
+    "title": "Non-record: BitNet b1.58 — 65M ternary params beat 4-hour baseline in 10 minutes (val_bpb=1.2029)",
+    "state": "open",
+    "updatedAt": "2026-03-19T23:14:31Z",
+    "headSha": "5eea63a4457c78018a954aadc07d582e534cb7e1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/139",
+    "authorLogin": "ksang123"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_BitNet158/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "BitNet b1.58 trains a 64.5M-parameter ternary transformer with STE BitLinear layers and base-3 packing to squeeze maximal Chinchilla-scaled capacity into 15MB.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "BitLinear STE ternary quantization during training",
+      "Base-3 packing for 1.6 bits/param artifact",
+      "Muon+Adam optimizer with linear warmup and wallclock-aware warmdown"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

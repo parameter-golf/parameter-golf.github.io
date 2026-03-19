@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-19T23:09:18.033Z",
+  "generatedAt": "2026-03-19T23:39:19.698Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 139,
+      "title": "Non-record: BitNet b1.58 — 65M ternary params beat 4-hour baseline in 10 minutes (val_bpb=1.2029)",
+      "status": "open",
+      "updatedAt": "2026-03-19T23:14:31Z",
+      "headSha": "5eea63a4457c78018a954aadc07d582e534cb7e1",
+      "generatedAt": "2026-03-19T23:39:15.933Z",
+      "summary": "BitNet b1.58 trains a 64.5M-parameter ternary transformer with STE BitLinear layers and base-3 packing to squeeze maximal Chinchilla-scaled capacity into 15MB.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-139.json"
+    },
     {
       "prNumber": 137,
       "title": "Record: Int6 + MLP 3x + STE QAT + NorMuon + sliding window (val_bpb 1.1666)",
@@ -1477,10 +1501,10 @@
       "prNumber": 48,
       "title": "[Submission] Warmdown Scheduling - 1.2430 BPB on 8×H100 SXM",
       "status": "closed",
-      "updatedAt": "2026-03-19T21:25:12Z",
+      "updatedAt": "2026-03-19T23:15:46Z",
       "headSha": "d61c36090fdcfdf4050ce2b21cb197bba3187851",
-      "generatedAt": "2026-03-19T21:39:26.420Z",
-      "summary": "Extends the warmdown scheduler by raising WARMDOWN_ITERS so the cosine LR decay runs within the capped 10-minute window.",
+      "generatedAt": "2026-03-19T23:39:19.694Z",
+      "summary": "Extended warmdown iterations so cosine LR decay triggers in the final third of 600s runs for better convergence on capped hardware.",
       "tags": [
         "training-schedule"
       ],
