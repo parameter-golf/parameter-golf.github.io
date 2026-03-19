@@ -1,4 +1,4 @@
-# OpenAI Parameter Golf Leaderboard
+# Golf Parameter Leaderboard
 
 An unofficial `openai/parameter-golf` leaderboard explorer and PR tracker designed for GitHub Pages.
 
