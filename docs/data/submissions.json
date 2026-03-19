@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T15:15:47.397Z",
+  "generatedAt": "2026-03-19T15:24:10.628Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -43,6 +43,20 @@
         "bytesTotal": 15542354,
         "bytesCode": 50169,
         "bytesModelInt8Zlib": 15492185
+      },
+      "flags": {
+        "usesValOnly": true
+      },
+      "detection": {
+        "valOnlyConfidence": "high",
+        "valOnlyMatches": [
+          "body:Val-only",
+          "body:model trains on the validation shard",
+          "body:trains on the validation shard",
+          "body:Val-only training",
+          "readme:Val-only",
+          "readme:Val-only training"
+        ]
       },
       "pr": {
         "number": 64,
@@ -113,6 +127,19 @@
         "bytesCode": 47894,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": true
+      },
+      "detection": {
+        "valOnlyConfidence": "high",
+        "valOnlyMatches": [
+          "title:val-only",
+          "body:val-only",
+          "body:trains entirely on the validation shard",
+          "body:train on the validation set",
+          "readme:validation-only"
+        ]
+      },
       "pr": {
         "number": 44,
         "title": "val-only 10min record (val_bpb:1.1111)",
@@ -182,6 +209,13 @@
         "bytesCode": 64428,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 88,
         "title": "Record: Int6 MLP3x + MTP + Sliding Window Eval (val_bpb=1.1605)",
@@ -202,6 +236,82 @@
         "script": "https://github.com/openai/parameter-golf/blob/5d3054865de0461a5c6ef099926724e8c27648f7/records/track_10min_16mb/2026-03-19_Int6_MLP3x_MTP_SlideEval/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/5d3054865de0461a5c6ef099926724e8c27648f7/records/track_10min_16mb/2026-03-19_Int6_MLP3x_MTP_SlideEval",
         "pr": "https://github.com/openai/parameter-golf/pull/88",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-19_NorMuon_Int6STE_SWA_SlidingWindow",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-19_NorMuon_Int6STE_SWA_SlidingWindow",
+        "folderPath": "records/track_10min_16mb/2026-03-19_NorMuon_Int6STE_SWA_SlidingWindow",
+        "submissionPath": "records/track_10min_16mb/2026-03-19_NorMuon_Int6STE_SWA_SlidingWindow/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-19_NorMuon_Int6STE_SWA_SlidingWindow/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-19_NorMuon_Int6STE_SWA_SlidingWindow/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-19_NorMuon_Int6STE_SWA_SlidingWindow/train_gpt.py"
+      },
+      "submission": {
+        "author": "vmfunc",
+        "githubId": "vmfunc",
+        "name": "NorMuon + Int6 STE + SWA + Sliding Window",
+        "blurb": "int6 fake quant w/ STE, fp16 embed passthrough, MLP 3x (1536 hidden), NorMuon optimizer, SWA during warmdown, sliding window eval stride=64. mean val_bpb=1.1622 across 3 seeds.",
+        "date": "2026-03-19T14:23:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.16219,
+        "valLoss": 1.9623,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15518560,
+        "bytesCode": 54361,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 89,
+        "title": "record:  val_bpb=1.1622, NorMuon + int6 STE + SWA + sliding window",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/89",
+        "authorLogin": "vmfunc",
+        "authorName": null,
+        "createdAt": "2026-03-19T15:16:56Z",
+        "headSha": "c887ef4354609c26532212f5ea6ead752c65988c",
+        "headRepo": "vmfunc/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c887ef4354609c26532212f5ea6ead752c65988c/records/track_10min_16mb/2026-03-19_NorMuon_Int6STE_SWA_SlidingWindow/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c887ef4354609c26532212f5ea6ead752c65988c/records/track_10min_16mb/2026-03-19_NorMuon_Int6STE_SWA_SlidingWindow/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c887ef4354609c26532212f5ea6ead752c65988c/records/track_10min_16mb/2026-03-19_NorMuon_Int6STE_SWA_SlidingWindow/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c887ef4354609c26532212f5ea6ead752c65988c/records/track_10min_16mb/2026-03-19_NorMuon_Int6STE_SWA_SlidingWindow/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c887ef4354609c26532212f5ea6ead752c65988c/records/track_10min_16mb/2026-03-19_NorMuon_Int6STE_SWA_SlidingWindow",
+        "pr": "https://github.com/openai/parameter-golf/pull/89",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -251,6 +361,13 @@
         "bytesCode": 56770,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 65,
         "title": "Record: Mixed Quant (int6+int8) + Sliding Window, val_bpb=1.1630",
@@ -271,6 +388,82 @@
         "script": "https://github.com/openai/parameter-golf/blob/f85c8379c6b210df2dbaecf9083f7b60adeecb85/records/track_10min_16mb/2026-03-19_MixedQuant_Int6Int8_SlidingWindow/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/f85c8379c6b210df2dbaecf9083f7b60adeecb85/records/track_10min_16mb/2026-03-19_MixedQuant_Int6Int8_SlidingWindow",
         "pr": "https://github.com/openai/parameter-golf/pull/65",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-19_ArjunAutoResearch",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-19_ArjunAutoResearch",
+        "folderPath": "records/track_10min_16mb/2026-03-19_ArjunAutoResearch",
+        "submissionPath": "records/track_10min_16mb/2026-03-19_ArjunAutoResearch/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-19_ArjunAutoResearch/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-19_ArjunAutoResearch/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-19_ArjunAutoResearch/train_gpt.py"
+      },
+      "submission": {
+        "author": "Arjun Krishna",
+        "githubId": "arjun-krishna1",
+        "name": "ArjunAutoResearch",
+        "blurb": "SP-1024 9x512 KV4 with MLP_MULT=3.0 (hidden=1536), seq_len=4096, lower LRs (matrix/scalar 0.02, embed 0.03), Muon momentum 0.99, warmdown 3000 steps, STE fake int6 QAT on CastedLinear weights during training, int6 per-row quantization on MLP+attention with fp16 tied embedding passthrough, zstd-22 compression, and sliding window evaluation at stride=64 with 4096-token context windows.",
+        "date": "2026-03-19T14:31:28Z"
+      },
+      "metrics": {
+        "valBpb": 1.16356083,
+        "valLoss": 1.96461316,
+        "preQuantValBpb": 1.1769,
+        "preQuantValLoss": 1.9871,
+        "stepStop": 9211,
+        "wallclockSeconds": 600.072,
+        "evalTimeSeconds": 157.1
+      },
+      "artifact": {
+        "bytesTotal": 15265243,
+        "bytesCode": 57201,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 66,
+        "title": "ArjunAutoResearch: MLP 3x + STE int6 QAT + seq4096 + sliding window. val_bpb 1.1632",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/66",
+        "authorLogin": "arjun-krishna1",
+        "authorName": null,
+        "createdAt": "2026-03-19T07:50:27Z",
+        "headSha": "3d1780d86d240318b336475bff1fbdbc4d64b0e1",
+        "headRepo": "arjun-krishna1/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/3d1780d86d240318b336475bff1fbdbc4d64b0e1/records/track_10min_16mb/2026-03-19_ArjunAutoResearch/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/3d1780d86d240318b336475bff1fbdbc4d64b0e1/records/track_10min_16mb/2026-03-19_ArjunAutoResearch/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/3d1780d86d240318b336475bff1fbdbc4d64b0e1/records/track_10min_16mb/2026-03-19_ArjunAutoResearch/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/3d1780d86d240318b336475bff1fbdbc4d64b0e1/records/track_10min_16mb/2026-03-19_ArjunAutoResearch/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/3d1780d86d240318b336475bff1fbdbc4d64b0e1/records/track_10min_16mb/2026-03-19_ArjunAutoResearch",
+        "pr": "https://github.com/openai/parameter-golf/pull/66",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -320,6 +513,13 @@
         "bytesCode": 55795,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 70,
         "title": "Submission: Wider MLP 3x + int6 quant + sliding window eval, val_bpb=1.1659",
@@ -340,75 +540,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/2790ac088cd3da716664fb6047990745f24e6c4f/records/track_10min_16mb/2026-03-19_WiderMLP_Int6_SlidingWindow_1.1666/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/2790ac088cd3da716664fb6047990745f24e6c4f/records/track_10min_16mb/2026-03-19_WiderMLP_Int6_SlidingWindow_1.1666",
         "pr": "https://github.com/openai/parameter-golf/pull/70",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_10min_16mb-2026-03-19_ArjunAutoResearch",
-      "source": "pull_request",
-      "status": "open",
-      "category": "main-track",
-      "track": {
-        "path": "records/track_10min_16mb",
-        "slug": "track_10min_16mb",
-        "label": "10 Minute / 16MB",
-        "official": true,
-        "category": "main-track"
-      },
-      "record": {
-        "folderName": "2026-03-19_ArjunAutoResearch",
-        "folderPath": "records/track_10min_16mb/2026-03-19_ArjunAutoResearch",
-        "submissionPath": "records/track_10min_16mb/2026-03-19_ArjunAutoResearch/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-19_ArjunAutoResearch/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-19_ArjunAutoResearch/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-19_ArjunAutoResearch/train_gpt.py"
-      },
-      "submission": {
-        "author": "Arjun Krishna",
-        "githubId": "arjun-krishna1",
-        "name": "ArjunAutoResearch",
-        "blurb": "SP-1024 9x512 KV4 with MLP_MULT=3.0 (hidden=1536), seq_len=4096, lower LRs (matrix/scalar 0.02, embed 0.03), Muon momentum 0.99, warmdown 3000 steps, int6 per-row quantization on MLP+attention with fp16 tied embedding passthrough, zstd-22 compression, and sliding window evaluation at stride=64 with 4096-token context windows.",
-        "date": "2026-03-19T09:35:00Z"
-      },
-      "metrics": {
-        "valBpb": 1.1661476,
-        "valLoss": 1.96898078,
-        "preQuantValBpb": 1.1715,
-        "preQuantValLoss": 1.9781,
-        "stepStop": 9370,
-        "wallclockSeconds": 599.992,
-        "evalTimeSeconds": 170.105
-      },
-      "artifact": {
-        "bytesTotal": 15619929,
-        "bytesCode": 56397,
-        "bytesModelInt8Zlib": null
-      },
-      "pr": {
-        "number": 66,
-        "title": "ArjunAutoResearch: MLP 3x + int6 quant + seq4096 + sliding window. val_bpb 1.1652",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/66",
-        "authorLogin": "arjun-krishna1",
-        "authorName": null,
-        "createdAt": "2026-03-19T07:50:27Z",
-        "headSha": "7a63e4df95f9499d6e0ef72c50f832bc13640c36",
-        "headRepo": "arjun-krishna1/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7a63e4df95f9499d6e0ef72c50f832bc13640c36/records/track_10min_16mb/2026-03-19_ArjunAutoResearch/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/7a63e4df95f9499d6e0ef72c50f832bc13640c36/records/track_10min_16mb/2026-03-19_ArjunAutoResearch/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/7a63e4df95f9499d6e0ef72c50f832bc13640c36/records/track_10min_16mb/2026-03-19_ArjunAutoResearch/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/7a63e4df95f9499d6e0ef72c50f832bc13640c36/records/track_10min_16mb/2026-03-19_ArjunAutoResearch/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/7a63e4df95f9499d6e0ef72c50f832bc13640c36/records/track_10min_16mb/2026-03-19_ArjunAutoResearch",
-        "pr": "https://github.com/openai/parameter-golf/pull/66",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -457,6 +588,13 @@
         "bytesTotal": 15943260,
         "bytesCode": 60601,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 75,
@@ -527,6 +665,13 @@
         "bytesCode": 50543,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 61,
         "title": "Long-context sliding window: val_bpb=1.1764",
@@ -595,6 +740,13 @@
         "bytesTotal": 14796836,
         "bytesCode": 53612,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 78,
@@ -665,6 +817,13 @@
         "bytesCode": 55313,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 74,
         "title": "Add seq4096 fp16 tok coarsen record",
@@ -733,6 +892,13 @@
         "bytesTotal": 15683958,
         "bytesCode": 54244,
         "bytesModelInt8Zlib": 15629714
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 53,
@@ -803,6 +969,13 @@
         "bytesCode": 58340,
         "bytesModelInt8Zlib": 15816489
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 50,
         "title": "Record: Sliding Window Eval (stride=64), val_bpb=1.1925",
@@ -871,6 +1044,13 @@
         "bytesTotal": 15882446,
         "bytesCode": 58509,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 77,
@@ -941,6 +1121,13 @@
         "bytesCode": 47759,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 52,
         "title": "New SOTA attempt (val_bpb=1.2014)",
@@ -1009,6 +1196,13 @@
         "bytesTotal": 15867270,
         "bytesCode": 47716,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 49,
@@ -1079,6 +1273,13 @@
         "bytesCode": 48640,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 63,
         "title": "Seq2048 + FP16 Tied Embedding + Tuned LR (val_bpb 1.2067)",
@@ -1148,6 +1349,13 @@
         "bytesCode": 47642,
         "bytesModelInt8Zlib": 15762519
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": null,
       "links": {
         "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/main/records/track_non_record_16mb/2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3/submission.json",
@@ -1204,6 +1412,13 @@
         "bytesTotal": null,
         "bytesCode": null,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 86,
@@ -1274,6 +1489,13 @@
         "bytesCode": 48917,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 39,
         "title": "10L Mixed Precision: val_bpb=1.2147 (10 layers + int6 middle layers)",
@@ -1342,6 +1564,13 @@
         "bytesTotal": 15775967,
         "bytesCode": 50051,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 59,
@@ -1412,6 +1641,13 @@
         "bytesCode": 48125,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 42,
         "title": "fp16 tied embedding + warmdown/LR tuning (val_bpb 1.2197)",
@@ -1480,6 +1716,13 @@
         "bytesTotal": 15854246,
         "bytesCode": 50919,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 39,
@@ -1550,6 +1793,13 @@
         "bytesCode": 52036,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 45,
         "title": "Modal 8xH100 LowerLR FP16Embed 960 (val_bpb 1.22395)",
@@ -1618,6 +1868,13 @@
         "bytesTotal": 15863489,
         "bytesCode": 54033,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 34,
@@ -1688,6 +1945,13 @@
         "bytesCode": 47642,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": null,
       "links": {
         "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/main/records/track_10min_16mb/2026-03-17_NaiveBaseline/submission.json",
@@ -1744,6 +2008,13 @@
         "bytesTotal": null,
         "bytesCode": null,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 81,
@@ -1814,6 +2085,13 @@
         "bytesCode": 49353,
         "bytesModelInt8Zlib": 15804251
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 41,
         "title": "Add Modal 8xH100 timed validation non-record submission",
@@ -1882,6 +2160,13 @@
         "bytesTotal": null,
         "bytesCode": null,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 48,
@@ -1952,6 +2237,13 @@
         "bytesCode": null,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 31,
         "title": "Non-record: Depth-recurrent 5x3 d768, val_bpb=1.2663",
@@ -2020,6 +2312,13 @@
         "bytesTotal": 15327112,
         "bytesCode": null,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 73,
@@ -2090,6 +2389,13 @@
         "bytesCode": 51856,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 71,
         "title": "Add Parameter Golf submission: Depth12 Dim416 KV4",
@@ -2158,6 +2464,13 @@
         "bytesTotal": 12388989,
         "bytesCode": 49622,
         "bytesModelInt8Zlib": 12339367
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 56,
@@ -2228,6 +2541,13 @@
         "bytesCode": null,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 80,
         "title": "Add Aria local sweep tooling and non-record 16MB runs",
@@ -2296,6 +2616,13 @@
         "bytesTotal": null,
         "bytesCode": null,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 80,
@@ -2366,6 +2693,13 @@
         "bytesCode": null,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 80,
         "title": "Add Aria local sweep tooling and non-record 16MB runs",
@@ -2434,6 +2768,13 @@
         "bytesTotal": 8040848,
         "bytesCode": 50818,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 84,
@@ -2504,6 +2845,13 @@
         "bytesCode": 58701,
         "bytesModelInt8Zlib": 11239210
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 62,
         "title": "WIP: Add adaptive eval-time context non-record MLX submission",
@@ -2572,6 +2920,13 @@
         "bytesTotal": 6839143,
         "bytesCode": null,
         "bytesModelInt8Zlib": 6839143
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 40,
@@ -2642,6 +2997,13 @@
         "bytesCode": 62715,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 69,
         "title": "[WIP] SubSixteen: Ternary QAT + Depth Recurrence + TTT (val_bpb pending)",
@@ -2710,6 +3072,13 @@
         "bytesTotal": null,
         "bytesCode": null,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 85,
@@ -2780,6 +3149,13 @@
         "bytesCode": null,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 79,
         "title": "Depth Recurrence: 3x3x1024 (non-record, pending H100)",
@@ -2849,6 +3225,13 @@
         "bytesCode": 0,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 76,
         "title": "[WIP] Int6 + Wider MLP 3x + FP16 Embed + Sliding Window (est. val_bpb ~1.160)",
@@ -2869,6 +3252,82 @@
         "script": "https://github.com/openai/parameter-golf/blob/e6bd4d200de10d84ac3993f49f0941055d9ea3d3/records/track_10min_16mb/2026-03-19_Int6_WiderMLP_FP16Embed_SlidingWindow/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/e6bd4d200de10d84ac3993f49f0941055d9ea3d3/records/track_10min_16mb/2026-03-19_Int6_WiderMLP_FP16Embed_SlidingWindow",
         "pr": "https://github.com/openai/parameter-golf/pull/76",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-19_FP16Emb_10Layer_MuonWD_NTK1408_OvertoneInit",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-19_FP16Emb_10Layer_MuonWD_NTK1408_OvertoneInit",
+        "folderPath": "records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTK1408_OvertoneInit",
+        "submissionPath": "records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTK1408_OvertoneInit/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTK1408_OvertoneInit/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTK1408_OvertoneInit/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTK1408_OvertoneInit/train_gpt.py"
+      },
+      "submission": {
+        "author": "notapplica",
+        "githubId": "notapplica",
+        "name": "FP16 Embed + 10L + Muon WD + NTK@1408 + Overtone Init",
+        "blurb": null,
+        "date": "2026-03-19"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 60,
+        "title": "NTK Eval + Overtone Init (val_bpb=1.2160)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/60",
+        "authorLogin": "notapplica",
+        "authorName": null,
+        "createdAt": "2026-03-19T06:52:24Z",
+        "headSha": "2a90936b788360b8138940166d3e9f1a0b69d646",
+        "headRepo": "notapplica/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2a90936b788360b8138940166d3e9f1a0b69d646/records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTK1408_OvertoneInit/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/2a90936b788360b8138940166d3e9f1a0b69d646/records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTK1408_OvertoneInit/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/2a90936b788360b8138940166d3e9f1a0b69d646/records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTK1408_OvertoneInit/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/2a90936b788360b8138940166d3e9f1a0b69d646/records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTK1408_OvertoneInit/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/2a90936b788360b8138940166d3e9f1a0b69d646/records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTK1408_OvertoneInit",
+        "pr": "https://github.com/openai/parameter-golf/pull/60",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -2918,6 +3377,13 @@
         "bytesCode": null,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 29,
         "title": "[WIP] Recurrent MQA Transformer — depth recurrence + weight tying (nidhilak-Aquarius)",
@@ -2938,75 +3404,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/95b80a92f87df3b2acab38048443858a8c0f8e11/records/track_10min_16mb/2026-03-19_nidhilak-Aquarius/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/95b80a92f87df3b2acab38048443858a8c0f8e11/records/track_10min_16mb/2026-03-19_nidhilak-Aquarius",
         "pr": "https://github.com/openai/parameter-golf/pull/29",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_10min_16mb-2026-03-19_FP16Emb_10Layer_MuonWD_NTKEval_OvertoneInit",
-      "source": "pull_request",
-      "status": "open",
-      "category": "main-track",
-      "track": {
-        "path": "records/track_10min_16mb",
-        "slug": "track_10min_16mb",
-        "label": "10 Minute / 16MB",
-        "official": true,
-        "category": "main-track"
-      },
-      "record": {
-        "folderName": "2026-03-19_FP16Emb_10Layer_MuonWD_NTKEval_OvertoneInit",
-        "folderPath": "records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTKEval_OvertoneInit",
-        "submissionPath": "records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTKEval_OvertoneInit/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTKEval_OvertoneInit/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTKEval_OvertoneInit/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTKEval_OvertoneInit/train_gpt.py"
-      },
-      "submission": {
-        "author": "notapplica",
-        "githubId": "notapplica",
-        "name": "FP16 Tied Embedding + 10-Layer + Muon WD + NTK Eval + Overtone Init",
-        "blurb": null,
-        "date": "2026-03-19"
-      },
-      "metrics": {
-        "valBpb": null,
-        "valLoss": null,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": null,
-        "bytesCode": null,
-        "bytesModelInt8Zlib": null
-      },
-      "pr": {
-        "number": 60,
-        "title": "NTK Eval + Overtone Init (val_bpb=1.2160)",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/60",
-        "authorLogin": "notapplica",
-        "authorName": null,
-        "createdAt": "2026-03-19T06:52:24Z",
-        "headSha": "5e0d7e53dafae3ac86a31a54af1a3273c3ad3f88",
-        "headRepo": "notapplica/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5e0d7e53dafae3ac86a31a54af1a3273c3ad3f88/records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTKEval_OvertoneInit/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/5e0d7e53dafae3ac86a31a54af1a3273c3ad3f88/records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTKEval_OvertoneInit/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/5e0d7e53dafae3ac86a31a54af1a3273c3ad3f88/records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTKEval_OvertoneInit/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/5e0d7e53dafae3ac86a31a54af1a3273c3ad3f88/records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTKEval_OvertoneInit/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/5e0d7e53dafae3ac86a31a54af1a3273c3ad3f88/records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTKEval_OvertoneInit",
-        "pr": "https://github.com/openai/parameter-golf/pull/60",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -3055,6 +3452,13 @@
         "bytesTotal": null,
         "bytesCode": null,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 51,
@@ -3125,6 +3529,13 @@
         "bytesCode": null,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 55,
         "title": "Add RecursoLM v0 non-record submission scaffold",
@@ -3193,6 +3604,13 @@
         "bytesTotal": null,
         "bytesCode": null,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 54,
@@ -3263,6 +3681,13 @@
         "bytesCode": null,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 37,
         "title": "[WIP] SP4096: Larger vocabulary for better BPB",
@@ -3331,6 +3756,13 @@
         "bytesTotal": null,
         "bytesCode": 44327,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 21,
@@ -3401,6 +3833,13 @@
         "bytesCode": null,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 20,
         "title": "QAT + Architecture Exploration (Non-Record)",
@@ -3470,6 +3909,13 @@
         "bytesCode": 0,
         "bytesModelInt8Zlib": null
       },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
       "pr": {
         "number": 6,
         "title": "Please delete this PR",
@@ -3538,6 +3984,13 @@
         "bytesTotal": null,
         "bytesCode": null,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": {
         "number": 8,

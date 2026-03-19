@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-19T15:15:47.397Z",
+  "generatedAt": "2026-03-19T15:24:10.628Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 52,
+    "submissions": 53,
     "official": 2,
-    "openPr": 47,
+    "openPr": 48,
     "mergedPr": 0,
     "closedPr": 3,
-    "prBacked": 50,
+    "prBacked": 51,
     "readmeListed": 2,
     "collectorErrors": 1
   },
@@ -53,6 +53,13 @@
         "bytesTotal": 15863489,
         "bytesCode": 47642,
         "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": null,
       "links": {
@@ -110,6 +117,20 @@
         "bytesTotal": 15542354,
         "bytesCode": 50169,
         "bytesModelInt8Zlib": 15492185
+      },
+      "flags": {
+        "usesValOnly": true
+      },
+      "detection": {
+        "valOnlyConfidence": "high",
+        "valOnlyMatches": [
+          "body:Val-only",
+          "body:model trains on the validation shard",
+          "body:trains on the validation shard",
+          "body:Val-only training",
+          "readme:Val-only",
+          "readme:Val-only training"
+        ]
       },
       "pr": {
         "number": 64,
@@ -179,6 +200,13 @@
         "bytesTotal": 15810161,
         "bytesCode": 47642,
         "bytesModelInt8Zlib": 15762519
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
       },
       "pr": null,
       "links": {

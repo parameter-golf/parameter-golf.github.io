@@ -143,13 +143,64 @@ async function fetchContentText(contentsUrl) {
   };
 }
 
+function collectRegexMatches(text, patterns) {
+  if (!text) {
+    return [];
+  }
+  const matches = [];
+  for (const pattern of patterns) {
+    const found = text.match(pattern);
+    if (found?.[0]) {
+      matches.push(found[0]);
+    }
+  }
+  return [...new Set(matches)];
+}
+
+function detectValOnly({ title, body, readme }) {
+  const titlePatterns = [
+    /\bval-only\b/i,
+    /\bval only\b/i,
+    /\bvalidation-only\b/i
+  ];
+  const bodyReadmePatterns = [
+    /\bval-only\b/i,
+    /\bval only\b/i,
+    /\bvalidation-only\b/i,
+    /trains entirely on the validation shard/i,
+    /model trains on the validation shard/i,
+    /trained entirely on the validation shard/i,
+    /training entirely on the validation shard/i,
+    /train(?:ed|s|ing)?(?: entirely)? on the validation shard/i,
+    /train(?:ed|s|ing)?(?: entirely)? on the validation set/i,
+    /validation shard training/i,
+    /val-only training/i
+  ];
+
+  const titleMatches = collectRegexMatches(title, titlePatterns);
+  const bodyMatches = collectRegexMatches(body, bodyReadmePatterns);
+  const readmeMatches = collectRegexMatches(readme, bodyReadmePatterns);
+  const matches = [
+    ...titleMatches.map((match) => `title:${match}`),
+    ...bodyMatches.map((match) => `body:${match}`),
+    ...readmeMatches.map((match) => `readme:${match}`)
+  ];
+
+  return {
+    usesValOnly: matches.length > 0,
+    confidence: matches.length > 0 ? "high" : "none",
+    matches
+  };
+}
+
 function normalizeSubmission({
   source,
   status,
   submissionPath,
   payload,
   ref,
-  pr = null
+  pr = null,
+  readmeText = null
 }) {
   const folderPath = submissionPath.replace(/\/submission\.json$/, "");
   const folderName = folderPath.split("/").at(-1) || folderPath;
@@ -160,6 +211,11 @@ function normalizeSubmission({
   const submissionAuthor = textOrNull(payload.author) || prAuthorName || prAuthorLogin;
   const submissionGithubId = textOrNull(payload.github_id) || prAuthorLogin;
   const submissionDate = textOrNull(payload.date) || textOrNull(pr?.created_at);
+  const valOnly = detectValOnly({
+    title: pr?.title || payload.name || folderName,
+    body: pr?.body || "",
+    readme: readmeText || ""
+  });
   return {
     id: stableId(prefix, submissionPath),
     source,
@@ -194,6 +250,13 @@ function normalizeSubmission({
       bytesTotal: numberOrNull(payload.bytes_total),
       bytesCode: numberOrNull(payload.bytes_code),
       bytesModelInt8Zlib: numberOrNull(payload.bytes_model_int8_zlib)
+    },
+    flags: {
+      usesValOnly: valOnly.usesValOnly
+    },
+    detection: {
+      valOnlyConfidence: valOnly.confidence,
+      valOnlyMatches: valOnly.matches
     },
     pr: pr
       ? {
@@ -386,13 +449,27 @@ async function collectMainRecords(report) {
     try {
       const contentsUrl = `${API_ROOT}/repos/${SOURCE_REPO}/contents/${submissionPath}?ref=main`;
       const { data: payload } = await fetchContentJson(contentsUrl);
+      const readmePath = submissionPath.replace(/submission\.json$/, "README.md");
+      let readmeText = null;
+      try {
+        const readmeUrl = `${API_ROOT}/repos/${SOURCE_REPO}/contents/${readmePath}?ref=main`;
+        const { text } = await fetchContentText(readmeUrl);
+        readmeText = text;
+      } catch (error) {
+        report.skipped.push({
+          stage: "main-record-readme",
+          submissionPath,
+          reason: "missing-or-unreadable-readme"
+        });
+      }
       submissions.push(
         normalizeSubmission({
           source: "official",
           status: "official",
           submissionPath,
           payload,
-          ref: "main"
+          ref: "main",
+          readmeText
         })
       );
     } catch (error) {
@@ -435,6 +512,20 @@ async function collectPrSubmissions(report) {
       for (const file of submissionFiles) {
         try {
           const { data: payload, path: submissionPath } = await fetchContentJson(file.contents_url);
+          const readmePath = submissionPath.replace(/submission\.json$/, "README.md");
+          let readmeText = null;
+          try {
+            const readmeUrl = `${API_ROOT}/repos/${SOURCE_REPO}/contents/${readmePath}?ref=${pr.head.sha}`;
+            const readmeResponse = await fetchContentText(readmeUrl);
+            readmeText = readmeResponse.text;
+          } catch (error) {
+            report.skipped.push({
+              stage: "pull-request-readme",
+              pr: pr.number,
+              submissionPath,
+              reason: "missing-or-unreadable-readme"
+            });
+          }
           submissions.push(
             normalizeSubmission({
               source: "pull_request",
@@ -442,7 +533,8 @@ async function collectPrSubmissions(report) {
               submissionPath,
               payload,
               ref: pr.head.sha,
-              pr
+              pr,
+              readmeText
             })
           );
         } catch (error) {
