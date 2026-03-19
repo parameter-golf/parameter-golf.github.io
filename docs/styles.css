@@ -268,7 +268,21 @@ code {
   }
 
   .summary-strip {
-    display: none;
+    display: block;
+    margin-top: 18px;
+    padding: 8px 0 14px;
+  }
+
+  .summary-line {
+    white-space: normal;
+    text-wrap: initial;
+    font-size: 0.95rem;
+    line-height: 1.36;
+    text-align: left;
+  }
+
+  .summary-segment {
+    display: block;
   }
 
   .summary-line strong {
