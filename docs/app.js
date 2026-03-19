@@ -10,6 +10,11 @@ const sortState = {
   direction: "asc"
 };
 
+const paginationState = {
+  page: 1,
+  pageSize: 10
+};
+
 const statusOrder = {
   official: 0,
   open: 1,
@@ -189,6 +194,14 @@ function updateSortButtons() {
   }
 }
 
+function updatePageSizeButtons() {
+  const buttons = document.querySelectorAll(".page-size-button");
+  for (const button of buttons) {
+    const isActive = button.getAttribute("data-page-size") === String(paginationState.pageSize);
+    button.classList.toggle("active", isActive);
+  }
+}
+
 function updateSummary(summary) {
   const generatedAt = document.getElementById("generated-at");
   const bestOfficial = document.getElementById("best-official");
@@ -245,6 +258,43 @@ function buildPrimaryLink(entry) {
   };
 }
 
+function renderPagination(totalItems) {
+  const pagination = document.getElementById("pagination");
+  if (!pagination) {
+    return;
+  }
+  pagination.replaceChildren();
+
+  if (paginationState.pageSize === "all") {
+    pagination.hidden = true;
+    return;
+  }
+
+  const totalPages = Math.max(1, Math.ceil(totalItems / paginationState.pageSize));
+  paginationState.page = Math.min(paginationState.page, totalPages);
+  if (totalPages <= 1) {
+    pagination.hidden = true;
+    return;
+  }
+
+  pagination.hidden = false;
+  for (let page = 1; page <= totalPages; page += 1) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "pagination-button";
+    button.textContent = String(page);
+    if (page === paginationState.page) {
+      button.classList.add("active");
+      button.setAttribute("aria-current", "page");
+    }
+    button.addEventListener("click", () => {
+      paginationState.page = page;
+      render(window.__GOLF_VIEWER_DATA__);
+    });
+    pagination.appendChild(button);
+  }
+}
+
 function renderRows(submissions) {
   const body = document.getElementById("submission-body");
   if (!body) {
@@ -253,6 +303,7 @@ function renderRows(submissions) {
   body.replaceChildren();
 
   if (submissions.length === 0) {
+    renderPagination(0);
     const row = document.createElement("tr");
     row.innerHTML = `<td colspan="8" class="empty-row">No submissions match the current filters.</td>`;
     body.appendChild(row);
@@ -261,8 +312,15 @@ function renderRows(submissions) {
 
   const sorted = sortSubmissions(submissions);
   const rankMap = buildRankMap(submissions);
+  const totalItems = sorted.length;
+  const pageSize = paginationState.pageSize;
+  const totalPages = pageSize === "all" ? 1 : Math.max(1, Math.ceil(totalItems / pageSize));
+  paginationState.page = Math.min(paginationState.page, totalPages);
+  const start = pageSize === "all" ? 0 : (paginationState.page - 1) * pageSize;
+  const end = pageSize === "all" ? totalItems : start + pageSize;
+  const visibleItems = sorted.slice(start, end);
 
-  for (const entry of sorted.entries().map((item) => item[1])) {
+  for (const entry of visibleItems.entries().map((item) => item[1])) {
     const row = document.createElement("tr");
     const statusClass = `status-${entry.status}`;
     const primaryLink = buildPrimaryLink(entry);
@@ -292,6 +350,8 @@ function renderRows(submissions) {
     `;
     body.appendChild(row);
   }
+
+  renderPagination(totalItems);
 }
 
 function render(data) {
@@ -299,6 +359,7 @@ function render(data) {
   updateSummary(data.summary);
   renderRows(filterSubmissions(data.submissions.submissions));
   updateSortButtons();
+  updatePageSizeButtons();
 }
 
 async function load() {
@@ -325,6 +386,7 @@ const searchInput = document.getElementById("search-input");
 if (searchInput) {
   searchInput.addEventListener("input", (event) => {
     filters.search = event.target.value.trim();
+    paginationState.page = 1;
     render(window.__GOLF_VIEWER_DATA__);
   });
 }
@@ -333,6 +395,7 @@ const nonRecordToggle = document.getElementById("non-record-toggle");
 if (nonRecordToggle) {
   nonRecordToggle.addEventListener("change", (event) => {
     filters.hideNonRecord = event.target.checked;
+    paginationState.page = 1;
     render(window.__GOLF_VIEWER_DATA__);
   });
 }
@@ -341,6 +404,7 @@ const mergedOnlyToggle = document.getElementById("merged-only-toggle");
 if (mergedOnlyToggle) {
   mergedOnlyToggle.addEventListener("change", (event) => {
     filters.mergedOnly = event.target.checked;
+    paginationState.page = 1;
     render(window.__GOLF_VIEWER_DATA__);
   });
 }
@@ -349,6 +413,16 @@ const scoredOnlyToggle = document.getElementById("scored-only-toggle");
 if (scoredOnlyToggle) {
   scoredOnlyToggle.addEventListener("change", (event) => {
     filters.scoredOnly = event.target.checked;
+    paginationState.page = 1;
+    render(window.__GOLF_VIEWER_DATA__);
+  });
+}
+
+for (const button of document.querySelectorAll(".page-size-button")) {
+  button.addEventListener("click", () => {
+    const value = button.getAttribute("data-page-size");
+    paginationState.pageSize = value === "all" ? "all" : Number(value);
+    paginationState.page = 1;
     render(window.__GOLF_VIEWER_DATA__);
   });
 }

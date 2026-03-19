@@ -158,13 +158,55 @@ code {
   max-width: none;
 }
 
+.controls-rail {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 .toggle-group {
   display: inline-flex;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  margin-left: auto;
   justify-content: flex-end;
+}
+
+.page-size-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.page-size-label {
+  font-size: 0.92rem;
+}
+
+.page-size-button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.92rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.page-size-button:hover,
+.page-size-button.active {
+  color: var(--ink);
+}
+
+.page-size-button.active {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
 }
 
 .inline-toggle {
@@ -210,6 +252,42 @@ code {
   border-top: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.58);
   border-radius: 14px;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 18px;
+}
+
+.pagination {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pagination[hidden] {
+  display: none;
+}
+
+.pagination-button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.96rem;
+  cursor: pointer;
+}
+
+.pagination-button:hover,
+.pagination-button.active {
+  color: var(--ink);
+}
+
+.pagination-button.active {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
 }
 
 table {
@@ -428,6 +506,22 @@ tbody tr:hover {
   text-align: center;
 }
 
+.site-footer {
+  padding-top: 28px;
+  text-align: center;
+}
+
+.site-footer a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.18);
+}
+
+.site-footer a:hover {
+  color: var(--ink);
+  border-bottom-color: rgba(17, 17, 17, 0.4);
+}
+
 @media (max-width: 900px) {
   .summary-line {
     white-space: normal;
@@ -445,13 +539,26 @@ tbody tr:hover {
 
   .search-shell,
   .toggle-group,
+  .controls-rail,
   .inline-toggle {
     max-width: none;
     width: 100%;
   }
 
+  .controls-rail {
+    display: grid;
+    gap: 12px;
+    margin-left: 0;
+  }
+
   .toggle-group {
     display: grid;
     gap: 10px;
+    justify-content: stretch;
+  }
+
+  .page-size-control {
+    min-height: 0;
+    flex-wrap: wrap;
   }
 }
