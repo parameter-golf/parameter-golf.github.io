@@ -60,8 +60,9 @@ code {
 }
 
 .topbar-label {
-  font-size: 0.92rem;
-  font-weight: 600;
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .topbar-sep {
