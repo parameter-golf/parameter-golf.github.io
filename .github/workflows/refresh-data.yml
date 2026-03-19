@@ -15,6 +15,10 @@ permissions:
   contents: write
   pull-requests: read
 
+concurrency:
+  group: refresh-data
+  cancel-in-progress: true
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -22,6 +26,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v6
@@ -34,14 +40,30 @@ jobs:
         run: npm run collect
 
       - name: Commit refreshed data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data
-          if git diff --cached --quiet; then
-            echo "No data changes"
-            exit 0
-          fi
-          git commit -m "chore(data): refresh public submissions [skip ci]"
-          git pull --rebase origin main
-          git push
+          for attempt in 1 2 3; do
+            git add docs/data
+            if git diff --cached --quiet; then
+              echo "No data changes"
+              exit 0
+            fi
+
+            git commit -m "chore(data): refresh public submissions [skip ci]"
+
+            if git push; then
+              exit 0
+            fi
+
+            echo "Push rejected on attempt ${attempt}; syncing with latest main and retrying"
+            git reset --hard HEAD~1
+            git fetch origin main
+            git reset --hard origin/main
+            npm run collect
+          done
+
+          echo "Failed to publish refreshed data after 3 attempts"
+          exit 1
