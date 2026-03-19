@@ -3,7 +3,7 @@ const filters = {
   hideNonRecord: false,
   mergedOnly: false,
   scoredOnly: false,
-  valOnlyOnly: false
+  hideValOnly: false
 };
 
 const sortState = {
@@ -229,7 +229,7 @@ function filterSubmissions(submissions) {
     if (filters.hideNonRecord && entry.category === "non-record") {
       return false;
     }
-    if (filters.valOnlyOnly && !entry.flags?.usesValOnly) {
+    if (filters.hideValOnly && entry.flags?.usesValOnly) {
       return false;
     }
     const query = filters.search.toLowerCase();
@@ -422,10 +422,10 @@ if (scoredOnlyToggle) {
   });
 }
 
-const valOnlyOnlyToggle = document.getElementById("val-only-toggle");
-if (valOnlyOnlyToggle) {
-  valOnlyOnlyToggle.addEventListener("change", (event) => {
-    filters.valOnlyOnly = event.target.checked;
+const valOnlyToggle = document.getElementById("val-only-toggle");
+if (valOnlyToggle) {
+  valOnlyToggle.addEventListener("change", (event) => {
+    filters.hideValOnly = event.target.checked;
     paginationState.page = 1;
     render(window.__GOLF_VIEWER_DATA__);
   });

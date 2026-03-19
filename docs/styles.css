@@ -268,19 +268,7 @@ code {
   }
 
   .summary-strip {
-    margin-top: 18px;
-    padding: 10px 0 16px;
-  }
-
-  .summary-line {
-    white-space: normal;
-    text-wrap: initial;
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
-
-  .summary-segment {
-    display: block;
+    display: none;
   }
 
   .summary-line strong {
