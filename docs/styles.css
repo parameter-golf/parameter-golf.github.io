@@ -159,23 +159,26 @@ code {
 
 .controls-row {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
 }
 
 .search-shell {
   display: block;
-  flex: 1 1 56%;
-  max-width: 720px;
-  min-width: 320px;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 780px;
+  min-width: 0;
 }
 
 .controls-panel {
   flex: 0 1 auto;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  min-height: 48px;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 0;
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -183,12 +186,12 @@ code {
 }
 
 .toggle-group {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 10px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   margin-left: 0;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .filter-tools {
@@ -198,20 +201,70 @@ code {
 }
 
 .inline-toggle {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  min-height: 42px;
+  gap: 0;
   padding: 0;
   border: 0;
   background: transparent;
   color: var(--ink);
   white-space: nowrap;
   font-size: 0.93rem;
+  cursor: pointer;
 }
 
 .inline-toggle input {
-  accent-color: var(--ink);
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.inline-toggle span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--ink);
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease,
+    transform 140ms ease;
+}
+
+.inline-toggle span::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.16);
+  transition: background-color 140ms ease, transform 140ms ease;
+}
+
+.inline-toggle:hover span {
+  border-color: rgba(17, 17, 17, 0.34);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.inline-toggle input:checked + span {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+
+.inline-toggle input:checked + span::before {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+.inline-toggle input:focus-visible + span {
+  outline: 2px solid rgba(17, 17, 17, 0.18);
+  outline-offset: 2px;
 }
 
 .search-shell input {
@@ -227,11 +280,6 @@ code {
 }
 
 @media (max-width: 1080px) {
-  .controls-row {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
   .search-shell {
     max-width: none;
     min-width: 0;
@@ -256,10 +304,6 @@ code {
   .active-filter-row {
     grid-template-columns: 1fr;
     align-items: stretch;
-  }
-
-  .summary-toggle-wrap {
-    justify-content: flex-start;
   }
 }
 
@@ -383,15 +427,19 @@ code {
   }
 
   .inline-toggle {
-    min-height: 34px;
-    gap: 7px;
     font-size: 0.87rem;
     line-height: 1.2;
   }
 
-  .inline-toggle input {
-    transform: scale(0.96);
-    margin: 0;
+  .inline-toggle span {
+    min-height: 34px;
+    gap: 7px;
+    padding: 0 12px;
+  }
+
+  .inline-toggle span::before {
+    width: 7px;
+    height: 7px;
   }
 }
 
@@ -524,7 +572,7 @@ code {
 
 .active-filter-row {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: start;
   gap: 12px;
   padding-top: 12px;
@@ -541,32 +589,6 @@ code {
 .active-tag-chip {
   padding: 0 12px;
   cursor: pointer;
-}
-
-.active-tag-clear {
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--muted);
-  font: inherit;
-  font-size: 0.93rem;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.active-tag-clear:hover {
-  color: var(--ink);
-}
-
-.summary-toggle-wrap {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.summary-toggle-wrap .inline-toggle {
-  min-height: 36px;
-  font-size: 0.93rem;
 }
 
 .table-section {

@@ -488,18 +488,6 @@ function renderTagFilter(data) {
     activeTags.appendChild(chip);
   }
 
-  if (selectedCount > 0) {
-    const clearButton = document.createElement("button");
-    clearButton.type = "button";
-    clearButton.className = "active-tag-clear";
-    clearButton.textContent = "Clear Tags X";
-    clearButton.addEventListener("click", () => {
-      filters.selectedTags = [];
-      paginationState.page = 1;
-      render(window.__GOLF_VIEWER_DATA__);
-    });
-    activeTags.appendChild(clearButton);
-  }
 }
 
 function buildPrimaryLink(entry) {
