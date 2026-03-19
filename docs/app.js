@@ -235,7 +235,7 @@ function renderRows(submissions) {
       ? `https://github.com/${entry.submission.githubId}`
       : null;
     row.innerHTML = `
-      <td><strong>${rankMap.get(entry.id) || "-"}</strong></td>
+      <td><span class="rank-value">${rankMap.get(entry.id) || "-"}</span></td>
       <td class="title-cell">
         <a class="title-link run-name" href="${primaryLink.href}" target="_blank" rel="noreferrer">${entry.submission.name || entry.record.folderName}</a>
       </td>
