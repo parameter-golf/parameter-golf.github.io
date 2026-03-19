@@ -1,0 +1,15 @@
+{
+  "name": "golf-viewer",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "collect": "node scripts/collect.mjs",
+    "dev": "python3 -m http.server 4173 -d docs",
+    "check": "node --check scripts/collect.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
+
