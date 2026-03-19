@@ -386,7 +386,7 @@ function filterSubmissions(submissions, enrichmentMap) {
     if (!filters.includeValOnly && usesValOnly(entry, enrichment)) {
       return false;
     }
-    if (filters.selectedTags.length > 0 && !filters.selectedTags.every((tag) => displayTags.includes(tag))) {
+    if (filters.selectedTags.length > 0 && !filters.selectedTags.some((tag) => displayTags.includes(tag))) {
       return false;
     }
     const query = filters.search.toLowerCase();
