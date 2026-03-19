@@ -473,7 +473,7 @@ function renderTagFilter(data) {
   }
 
   activeTags.replaceChildren();
-  activeRow.hidden = selectedCount === 0;
+  activeRow.hidden = false;
 
   for (const tag of filters.selectedTags) {
     const chip = document.createElement("button");

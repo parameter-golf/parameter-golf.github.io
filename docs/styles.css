@@ -195,7 +195,6 @@ code {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-left: 12px;
 }
 
 .inline-toggle {
@@ -251,8 +250,16 @@ code {
   }
 
   .filter-tools {
-    margin-left: 0;
     flex-wrap: wrap;
+  }
+
+  .active-filter-row {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .summary-toggle-wrap {
+    justify-content: flex-start;
   }
 }
 
@@ -361,14 +368,18 @@ code {
   }
 
   .filter-tools {
-    width: 100%;
-    justify-content: space-between;
+    width: auto;
+    justify-content: flex-start;
   }
 
   .tag-filter-panel {
     left: 0;
     right: auto;
     width: min(100%, 360px);
+  }
+
+  .active-tag-filters {
+    min-height: 0;
   }
 
   .inline-toggle {
@@ -514,6 +525,10 @@ code {
 }
 
 .active-filter-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 12px;
   padding-top: 12px;
 }
 
@@ -521,11 +536,19 @@ code {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  align-items: center;
+  min-height: 36px;
 }
 
 .active-tag-chip {
   padding: 0 12px;
   cursor: pointer;
+}
+
+.summary-toggle-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .table-section {

@@ -12,7 +12,7 @@
       href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="./styles.css?v=49">
+    <link rel="stylesheet" href="./styles.css?v=50">
   </head>
   <body>
     <div class="page-shell">
@@ -61,29 +61,31 @@
                   <span>Hide non-record</span>
                 </label>
               </div>
-              <div class="filter-tools">
-                <details class="tag-filter" id="tag-filter">
-                  <summary id="tag-filter-summary" class="tag-filter-trigger">Filter tags</summary>
-                  <div class="tag-filter-panel">
-                    <div class="tag-filter-panel-top">
-                      <label class="tag-filter-search" for="tag-filter-search">
-                        <input id="tag-filter-search" type="search" placeholder="Search tags…" autocomplete="off">
-                      </label>
-                      <button id="tag-filter-clear" class="tag-filter-clear" type="button">Clear</button>
-                    </div>
-                    <p class="tag-filter-hint">Matches rows that include any selected tag.</p>
-                    <div id="tag-filter-options" class="tag-filter-options"></div>
-                  </div>
-                </details>
-                <label class="inline-toggle" for="hide-summaries-toggle">
-                  <input id="hide-summaries-toggle" type="checkbox">
-                  <span>Hide summaries</span>
-                </label>
-              </div>
             </div>
           </div>
-          <div id="active-filter-row" class="active-filter-row" hidden>
+          <div id="active-filter-row" class="active-filter-row">
+            <div class="filter-tools">
+              <details class="tag-filter" id="tag-filter">
+                <summary id="tag-filter-summary" class="tag-filter-trigger">Filter tags</summary>
+                <div class="tag-filter-panel">
+                  <div class="tag-filter-panel-top">
+                    <label class="tag-filter-search" for="tag-filter-search">
+                      <input id="tag-filter-search" type="search" placeholder="Search tags…" autocomplete="off">
+                    </label>
+                    <button id="tag-filter-clear" class="tag-filter-clear" type="button">Clear</button>
+                  </div>
+                  <p class="tag-filter-hint">Matches rows that include any selected tag.</p>
+                  <div id="tag-filter-options" class="tag-filter-options"></div>
+                </div>
+              </details>
+            </div>
             <div id="active-tag-filters" class="active-tag-filters"></div>
+            <div class="summary-toggle-wrap">
+              <label class="inline-toggle" for="hide-summaries-toggle">
+                <input id="hide-summaries-toggle" type="checkbox">
+                <span>Hide summaries</span>
+              </label>
+            </div>
           </div>
         </section>
 
@@ -129,6 +131,6 @@
       </footer>
     </div>
 
-    <script type="module" src="./app.js?v=39"></script>
+    <script type="module" src="./app.js?v=40"></script>
   </body>
   </html>
