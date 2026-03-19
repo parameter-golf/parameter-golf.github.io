@@ -47,7 +47,7 @@ code {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  min-height: 56px;
+  min-height: 64px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -81,12 +81,8 @@ code {
   color: var(--ink);
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  gap: 34px;
-  padding: 54px 0 44px;
-  border-bottom: 1px solid var(--line);
+.topbar-links .button {
+  color: inherit;
 }
 
 .eyebrow,
@@ -100,33 +96,12 @@ code {
   text-transform: uppercase;
 }
 
-.hero h1,
 .table-header h2,
 .controls-title {
   margin: 0;
   font-weight: 500;
   line-height: 0.92;
   letter-spacing: -0.055em;
-}
-
-.hero h1 {
-  max-width: 11ch;
-  font-size: clamp(3.7rem, 9vw, 7.9rem);
-}
-
-.lede {
-  max-width: 52rem;
-  margin: 18px 0 0;
-  color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.72;
-}
-
-.hero-actions {
-  display: flex;
-  justify-content: start;
-  gap: 12px;
-  flex-wrap: wrap;
 }
 
 .button {
@@ -161,7 +136,7 @@ code {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
-  margin-top: 28px;
+  margin-top: 22px;
 }
 
 .summary-card {
@@ -396,9 +371,5 @@ tbody tr:hover {
   .topbar {
     flex-direction: column;
     align-items: start;
-  }
-
-  .hero h1 {
-    max-width: 100%;
   }
 }
