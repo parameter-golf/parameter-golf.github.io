@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Golf Viewer</title>
+    <meta
+      name="description"
+      content="An unofficial explorer for OpenAI Parameter Golf official records and public PR submissions."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Unofficial Community Explorer</p>
+          <h1>Parameter Golf, with the PR queue visible.</h1>
+          <p class="lede">
+            This site mirrors the official public records in <code>openai/parameter-golf</code> and separately surfaces
+            public PR submissions that match the challenge's <code>records/**/submission.json</code> convention.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/openai/parameter-golf#leaderboard" target="_blank" rel="noreferrer">Official README Leaderboard</a>
+          <a class="button secondary" href="https://github.com/openai/parameter-golf/pulls" target="_blank" rel="noreferrer">Open PR Queue</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="summary-grid" id="summary-grid">
+          <article class="summary-card">
+            <span class="label">Status</span>
+            <strong id="generated-at">Loading…</strong>
+            <p>Static JSON refreshed by GitHub Actions.</p>
+          </article>
+          <article class="summary-card">
+            <span class="label">Best Official</span>
+            <strong id="best-official">-</strong>
+            <p id="best-official-name">Waiting for data</p>
+          </article>
+          <article class="summary-card">
+            <span class="label">Best Open PR</span>
+            <strong id="best-open">-</strong>
+            <p id="best-open-name">Waiting for data</p>
+          </article>
+          <article class="summary-card">
+            <span class="label">Coverage</span>
+            <strong id="coverage-count">-</strong>
+            <p id="coverage-breakdown">Waiting for data</p>
+          </article>
+        </section>
+
+        <section class="controls">
+          <div class="pill-row" id="status-filters"></div>
+          <div class="pill-row" id="track-filters"></div>
+        </section>
+
+        <section class="table-section">
+          <div class="table-header">
+            <div>
+              <p class="section-kicker">Unified Feed</p>
+              <h2>Official records and public PR submissions</h2>
+            </div>
+            <p class="disclaimer">
+              Official source of truth remains the upstream README and merged <code>/records</code> folders.
+            </p>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>Track</th>
+                  <th>Run</th>
+                  <th>Score</th>
+                  <th>Author</th>
+                  <th>Date</th>
+                  <th>Links</th>
+                </tr>
+              </thead>
+              <tbody id="submission-body">
+                <tr>
+                  <td colspan="7" class="loading-row">Loading public records…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <template id="link-template">
+      <a target="_blank" rel="noreferrer"></a>
+    </template>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+  </html>
+
