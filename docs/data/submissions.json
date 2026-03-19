@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T23:08:51.842Z",
+  "generatedAt": "2026-03-19T23:39:10.402Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -2490,6 +2490,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-03-19_BitNet158",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-19_BitNet158",
+        "folderPath": "records/track_non_record_16mb/2026-03-19_BitNet158",
+        "submissionPath": "records/track_non_record_16mb/2026-03-19_BitNet158/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-19_BitNet158/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-19_BitNet158/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-19_BitNet158/train_gpt.py"
+      },
+      "submission": {
+        "author": "Etai Zilberman",
+        "githubId": "ksang123",
+        "name": "BitNet b1.58: 12x768 MLP3x Ternary + Chinchilla Scaling",
+        "blurb": "64.5M ternary-weight transformer (12 layers, 768 dim, MLP 3x) packed at 1.6 bits/param via base-3 encoding. Trains with STE ternary quantization and fp16 scale simulation for near-zero roundtrip gap (0.002 BPB). Beats 4-hour baseline in 10 minutes via Chinchilla-optimal scaling: 3.8x more params in same artifact size. No hyperparameter sweep, no eval tricks.",
+        "date": "2026-03-19"
+      },
+      "metrics": {
+        "valBpb": 1.20286685,
+        "valLoss": 2.03099029,
+        "preQuantValBpb": 1.2013,
+        "preQuantValLoss": 2.0284,
+        "stepStop": 4713,
+        "wallclockSeconds": 600.041,
+        "evalTimeSeconds": 64.36
+      },
+      "artifact": {
+        "bytesTotal": 15111456,
+        "bytesCode": 53888,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 139,
+        "title": "Non-record: BitNet b1.58 — 65M ternary params beat 4-hour baseline in 10 minutes (val_bpb=1.2029)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/139",
+        "authorLogin": "ksang123",
+        "authorName": null,
+        "createdAt": "2026-03-19T23:09:26Z",
+        "updatedAt": "2026-03-19T23:14:31Z",
+        "headSha": "5eea63a4457c78018a954aadc07d582e534cb7e1",
+        "headRepo": "ksang123/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5eea63a4457c78018a954aadc07d582e534cb7e1/records/track_non_record_16mb/2026-03-19_BitNet158/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/5eea63a4457c78018a954aadc07d582e534cb7e1/records/track_non_record_16mb/2026-03-19_BitNet158/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/5eea63a4457c78018a954aadc07d582e534cb7e1/records/track_non_record_16mb/2026-03-19_BitNet158/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/5eea63a4457c78018a954aadc07d582e534cb7e1/records/track_non_record_16mb/2026-03-19_BitNet158/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/5eea63a4457c78018a954aadc07d582e534cb7e1/records/track_non_record_16mb/2026-03-19_BitNet158",
+        "pr": "https://github.com/openai/parameter-golf/pull/139",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-18_LongContextSeq2048",
       "source": "pull_request",
       "status": "open",
@@ -3522,7 +3599,7 @@
         "authorLogin": "MajdiZamim",
         "authorName": null,
         "createdAt": "2026-03-19T03:55:01Z",
-        "updatedAt": "2026-03-19T21:25:12Z",
+        "updatedAt": "2026-03-19T23:15:46Z",
         "headSha": "d61c36090fdcfdf4050ce2b21cb197bba3187851",
         "headRepo": "MajdiZamim/parameter-golf"
       },
