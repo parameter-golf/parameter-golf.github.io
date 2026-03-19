@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T14:16:35.950Z",
+  "generatedAt": "2026-03-19T14:22:56.337Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -1093,6 +1093,75 @@
         "onMain": true,
         "hasPullRequest": false,
         "listedInReadme": true
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-19_10L_LowLR_FP16Embed_Int6",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-19_10L_LowLR_FP16Embed_Int6",
+        "folderPath": "records/track_10min_16mb/2026-03-19_10L_LowLR_FP16Embed_Int6",
+        "submissionPath": "records/track_10min_16mb/2026-03-19_10L_LowLR_FP16Embed_Int6/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-19_10L_LowLR_FP16Embed_Int6/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-19_10L_LowLR_FP16Embed_Int6/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-19_10L_LowLR_FP16Embed_Int6/train_gpt.py"
+      },
+      "submission": {
+        "author": "aruniyer",
+        "githubId": "aruniyer",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-19"
+      },
+      "metrics": {
+        "valBpb": 1.21286298,
+        "valLoss": 2.04786834,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "pr": {
+        "number": 86,
+        "title": "10L Mixed Precision: val_bpb=1.2129 (lower LR + fp16 embed + int6 middle)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/86",
+        "authorLogin": "aruniyer",
+        "authorName": null,
+        "createdAt": "2026-03-19T14:15:44Z",
+        "headSha": "73a4a9ddd59c45858169c6b3375c62de7745f635",
+        "headRepo": "aruniyer/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/73a4a9ddd59c45858169c6b3375c62de7745f635/records/track_10min_16mb/2026-03-19_10L_LowLR_FP16Embed_Int6/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/73a4a9ddd59c45858169c6b3375c62de7745f635/records/track_10min_16mb/2026-03-19_10L_LowLR_FP16Embed_Int6/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/73a4a9ddd59c45858169c6b3375c62de7745f635/records/track_10min_16mb/2026-03-19_10L_LowLR_FP16Embed_Int6/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/73a4a9ddd59c45858169c6b3375c62de7745f635/records/track_10min_16mb/2026-03-19_10L_LowLR_FP16Embed_Int6/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/73a4a9ddd59c45858169c6b3375c62de7745f635/records/track_10min_16mb/2026-03-19_10L_LowLR_FP16Embed_Int6",
+        "pr": "https://github.com/openai/parameter-golf/pull/86",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
       }
     },
     {
