@@ -108,9 +108,6 @@ function sortSubmissions(submissions) {
       case "date":
         result = compareText(a.submission.date, b.submission.date);
         break;
-      case "open":
-        result = compareText(buildPrimaryLink(a).label, buildPrimaryLink(b).label);
-        break;
       default:
         result = byScoreThenDate(a, b);
         break;
@@ -182,12 +179,12 @@ function filterSubmissions(submissions) {
 function buildPrimaryLink(entry) {
   if (entry.links.pr) {
     return {
-      label: "PR",
+      label: `#${entry.pr.number}`,
       href: entry.links.pr
     };
   }
   return {
-    label: "Folder",
+    label: "Record",
     href: entry.links.folder
   };
 }
@@ -201,7 +198,7 @@ function renderRows(submissions) {
 
   if (submissions.length === 0) {
     const row = document.createElement("tr");
-    row.innerHTML = `<td colspan="9" class="empty-row">No submissions match the current filters.</td>`;
+    row.innerHTML = `<td colspan="8" class="empty-row">No submissions match the current filters.</td>`;
     body.appendChild(row);
     return;
   }
@@ -212,12 +209,11 @@ function renderRows(submissions) {
   for (const entry of sorted.entries().map((item) => item[1])) {
     const row = document.createElement("tr");
     const statusClass = `status-${entry.status}`;
-    const prMeta = entry.pr ? `#${entry.pr.number}` : "-";
     const primaryLink = buildPrimaryLink(entry);
     const nonRecord = trackLabel(entry);
     row.innerHTML = `
       <td><strong>${rankMap.get(entry.id) || "-"}</strong></td>
-      <td><strong>${prMeta}</strong></td>
+      <td><a class="pr-link" href="${primaryLink.href}" target="_blank" rel="noreferrer">${primaryLink.label}</a></td>
       <td class="title-cell">
         <span class="run-name">${entry.submission.name || entry.record.folderName}</span>
       </td>
@@ -231,7 +227,6 @@ function renderRows(submissions) {
         <div class="meta">${entry.submission.githubId || "-"}</div>
       </td>
       <td>${formatDate(entry.submission.date)}</td>
-      <td><div class="link-cluster"><a href="${primaryLink.href}" target="_blank" rel="noreferrer">${primaryLink.label}</a></div></td>
       <td>
         ${nonRecord ? `<span class="track-badge">${nonRecord}</span>` : ""}
       </td>
@@ -264,7 +259,7 @@ load().catch((error) => {
   if (!body) {
     return;
   }
-  body.innerHTML = `<tr><td colspan="9" class="empty-row">${error.message}</td></tr>`;
+  body.innerHTML = `<tr><td colspan="8" class="empty-row">${error.message}</td></tr>`;
 });
 
 const searchInput = document.getElementById("search-input");

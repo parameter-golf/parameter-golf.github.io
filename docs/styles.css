@@ -324,20 +324,13 @@ tbody tr:hover {
   white-space: nowrap;
 }
 
-.link-cluster {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.link-cluster a {
+.pr-link {
   color: var(--ink);
   text-decoration: none;
   border-bottom: 1px solid rgba(17, 17, 17, 0.22);
 }
 
-.link-cluster a:hover {
+.pr-link:hover {
   border-bottom-color: var(--ink);
 }
 
