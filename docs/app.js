@@ -285,26 +285,23 @@ function updateSummary(summary) {
 
 function buildVisibleSummary(summary, submissions) {
   const visible = [...submissions];
-  const officialMain = visible
-    .filter((entry) => entry.status === "official" && entry.category === "main-track")
+  const visiblePrMain = visible
+    .filter((entry) => entry.pr?.number && entry.category === "main-track")
     .sort(byScoreThenDate);
-  const openMain = visible
-    .filter((entry) => entry.status === "open" && entry.category === "main-track")
-    .sort(byScoreThenDate);
-  const openPrCount = new Set(
+  const visiblePrCount = new Set(
     visible
-      .filter((entry) => entry.status === "open" && entry.pr?.number)
+      .filter((entry) => entry.pr?.number)
       .map((entry) => entry.pr.number)
   ).size;
 
   return {
     generatedAt: summary.generatedAt,
     counts: {
-      openPr: openPrCount
+      openPr: visiblePrCount
     },
     best: {
-      officialMainTrack: officialMain[0] || null,
-      openPrMainTrack: openMain[0] || null
+      officialMainTrack: summary.best.officialMainTrack || null,
+      openPrMainTrack: visiblePrMain[0] || null
     }
   };
 }
