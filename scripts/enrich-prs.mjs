@@ -311,6 +311,35 @@ function buildCompatibility(group, aiUsesValOnly) {
   };
 }
 
+function buildFinalTags(rawTags, fallbackNonRecord, finalUsesValOnly) {
+  const tags = normalizeTags(rawTags, fallbackNonRecord);
+  if (finalUsesValOnly && !tags.includes("val-only")) {
+    tags.unshift("val-only");
+  }
+  return tags.slice(0, 4);
+}
+
+function canonicalizeItem(item) {
+  if (!item?.pr?.number || !item?.compatibility || !item?.output) {
+    return item;
+  }
+  const nextTags = buildFinalTags(
+    item.output.tags,
+    item.output.tags?.includes?.("non-record"),
+    Boolean(item.compatibility.finalUsesValOnly)
+  );
+  if (JSON.stringify(nextTags) === JSON.stringify(item.output.tags || [])) {
+    return item;
+  }
+  return {
+    ...item,
+    output: {
+      ...item.output,
+      tags: nextTags
+    }
+  };
+}
+
 async function enrichGroup(group) {
   const pr = await fetchPullRequest(group.prNumber);
   const readmes = [];
@@ -327,10 +356,11 @@ async function enrichGroup(group) {
   const payload = buildPromptPayload(group, pr, readmes);
   const modelOutput = await callModel(buildMessages(payload));
   const compatibility = buildCompatibility(group, Boolean(modelOutput.usesValOnly));
-  const tags = normalizeTags(modelOutput.tags, group.entries.some((entry) => entry.category === "non-record"));
-  if (compatibility.finalUsesValOnly && !tags.includes("val-only")) {
-    tags.unshift("val-only");
-  }
+  const tags = buildFinalTags(
+    modelOutput.tags,
+    group.entries.some((entry) => entry.category === "non-record"),
+    compatibility.finalUsesValOnly
+  );
   return {
     generatedAt: new Date().toISOString(),
     promptVersion: PROMPT_VERSION,
@@ -408,13 +438,17 @@ async function main() {
 
     let item;
     if (needed) {
-      item = await enrichGroup(group);
+      item = canonicalizeItem(await enrichGroup(group));
       await writeJson(itemPath, item);
       changed.push(group.prNumber);
     } else {
-      item = await loadJson(itemPath, null);
+      const previousItem = await loadJson(itemPath, null);
+      item = canonicalizeItem(previousItem);
       if (!item) {
-        item = await enrichGroup(group);
+        item = canonicalizeItem(await enrichGroup(group));
+        await writeJson(itemPath, item);
+        changed.push(group.prNumber);
+      } else if (JSON.stringify(item.output?.tags || []) !== JSON.stringify(previousItem?.output?.tags || [])) {
         await writeJson(itemPath, item);
         changed.push(group.prNumber);
       }

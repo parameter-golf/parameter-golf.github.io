@@ -24,8 +24,7 @@
       "val-only",
       "sliding-window-eval",
       "optimizer",
-      "training-schedule",
-      "compression"
+      "training-schedule"
     ],
     "usesValOnly": true,
     "valOnlyReasoning": "Training is configured with TRAIN_ON_VAL=1 to include the validation shard in the training mix.",

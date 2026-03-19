@@ -24,8 +24,7 @@
       "val-only",
       "quantization",
       "architecture",
-      "training-schedule",
-      "non-record"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T16:44:35.154Z",
+  "generatedAt": "2026-03-19T16:46:46.581Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "entries": [
@@ -151,8 +151,7 @@
         "val-only",
         "quantization",
         "architecture",
-        "training-schedule",
-        "non-record"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": true,
@@ -246,8 +245,7 @@
         "val-only",
         "sliding-window-eval",
         "optimizer",
-        "training-schedule",
-        "compression"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": true,
