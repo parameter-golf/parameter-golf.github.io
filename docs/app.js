@@ -3,7 +3,7 @@ const filters = {
   hideNonRecord: false,
   mergedOnly: false,
   scoredOnly: false,
-  hideValOnly: false
+  includeValOnly: false
 };
 
 const sortState = {
@@ -218,6 +218,27 @@ function updateSummary(summary) {
   coverageCount.textContent = formatCount(summary.counts.openPr);
 }
 
+function buildVisibleSummary(summary, submissions) {
+  const visible = [...submissions];
+  const officialMain = visible
+    .filter((entry) => entry.status === "official" && entry.category === "main-track")
+    .sort(byScoreThenDate);
+  const openMain = visible
+    .filter((entry) => entry.status === "open" && entry.category === "main-track")
+    .sort(byScoreThenDate);
+
+  return {
+    generatedAt: summary.generatedAt,
+    counts: {
+      openPr: visible.filter((entry) => entry.status === "open").length
+    },
+    best: {
+      officialMainTrack: officialMain[0] || null,
+      openPrMainTrack: openMain[0] || null
+    }
+  };
+}
+
 function filterSubmissions(submissions) {
   return submissions.filter((entry) => {
     if (filters.mergedOnly && entry.status !== "official" && entry.status !== "merged") {
@@ -229,7 +250,7 @@ function filterSubmissions(submissions) {
     if (filters.hideNonRecord && entry.category === "non-record") {
       return false;
     }
-    if (filters.hideValOnly && entry.flags?.usesValOnly) {
+    if (!filters.includeValOnly && entry.flags?.usesValOnly) {
       return false;
     }
     const query = filters.search.toLowerCase();
@@ -360,8 +381,9 @@ function renderRows(submissions) {
 
 function render(data) {
   window.__GOLF_VIEWER_DATA__ = data;
-  updateSummary(data.summary);
-  renderRows(filterSubmissions(data.submissions.submissions));
+  const filtered = filterSubmissions(data.submissions.submissions);
+  updateSummary(buildVisibleSummary(data.summary, filtered));
+  renderRows(filtered);
   updateSortButtons();
   updatePageSizeControl();
 }
@@ -424,8 +446,9 @@ if (scoredOnlyToggle) {
 
 const valOnlyToggle = document.getElementById("val-only-toggle");
 if (valOnlyToggle) {
+  valOnlyToggle.checked = filters.includeValOnly;
   valOnlyToggle.addEventListener("change", (event) => {
-    filters.hideValOnly = event.target.checked;
+    filters.includeValOnly = event.target.checked;
     paginationState.page = 1;
     render(window.__GOLF_VIEWER_DATA__);
   });
