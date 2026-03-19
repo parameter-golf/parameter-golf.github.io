@@ -12,7 +12,7 @@
       href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="./styles.css?v=54">
+    <link rel="stylesheet" href="./styles.css?v=55">
   </head>
   <body>
     <div class="page-shell">
@@ -64,24 +64,22 @@
                   <input id="hide-tags-toggle" type="checkbox">
                   <span>Hide tags</span>
                 </label>
+                <details class="tag-filter" id="tag-filter">
+                  <summary id="tag-filter-summary" class="tag-filter-trigger">Filter tags</summary>
+                  <div class="tag-filter-panel">
+                    <div class="tag-filter-panel-top">
+                      <label class="tag-filter-search" for="tag-filter-search">
+                        <input id="tag-filter-search" type="search" placeholder="Search tags…" autocomplete="off">
+                      </label>
+                    </div>
+                    <p class="tag-filter-hint">Matches rows that include any selected tag.</p>
+                    <div id="tag-filter-options" class="tag-filter-options"></div>
+                  </div>
+                </details>
               </div>
             </div>
           </div>
           <div id="active-filter-row" class="active-filter-row">
-            <div class="filter-tools">
-              <details class="tag-filter" id="tag-filter">
-                <summary id="tag-filter-summary" class="tag-filter-trigger">Filter tags</summary>
-                <div class="tag-filter-panel">
-                  <div class="tag-filter-panel-top">
-                    <label class="tag-filter-search" for="tag-filter-search">
-                      <input id="tag-filter-search" type="search" placeholder="Search tags…" autocomplete="off">
-                    </label>
-                  </div>
-                  <p class="tag-filter-hint">Matches rows that include any selected tag.</p>
-                  <div id="tag-filter-options" class="tag-filter-options"></div>
-                </div>
-              </details>
-            </div>
             <div id="active-tag-filters" class="active-tag-filters"></div>
           </div>
         </section>

@@ -194,10 +194,8 @@ code {
   justify-content: center;
 }
 
-.filter-tools {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+.toggle-group > * {
+  min-width: 0;
 }
 
 .inline-toggle {
@@ -294,10 +292,6 @@ code {
 
   .toggle-group {
     justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .filter-tools {
     flex-wrap: wrap;
   }
 
@@ -407,13 +401,20 @@ code {
   .toggle-group {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
     gap: 8px 14px;
     width: 100%;
   }
 
-  .filter-tools {
-    width: auto;
-    justify-content: flex-start;
+  .inline-toggle,
+  .tag-filter {
+    width: 100%;
+  }
+
+  .inline-toggle span,
+  .tag-filter-trigger {
+    width: 100%;
+    justify-content: center;
   }
 
   .tag-filter-panel {
@@ -450,6 +451,7 @@ code {
 
 .tag-filter {
   position: relative;
+  display: block;
 }
 
 .tag-filter summary {
@@ -471,11 +473,16 @@ code {
 }
 
 .tag-filter-trigger {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 38px;
+  width: 100%;
   padding: 0 14px;
   cursor: pointer;
+  font-size: 0.93rem;
+  font-weight: 500;
 }
 
 .tag-filter-trigger::after {
@@ -571,10 +578,7 @@ code {
 }
 
 .active-filter-row {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: start;
-  gap: 12px;
+  display: block;
   padding-top: 12px;
 }
 
@@ -584,6 +588,7 @@ code {
   gap: 8px;
   align-items: center;
   min-height: 36px;
+  justify-content: center;
 }
 
 .active-tag-chip {
