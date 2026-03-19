@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:40:31.339Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 54,
+    "title": "RQZ-Golf v1: Depth recurrence for parameter efficiency",
+    "state": "open",
+    "updatedAt": "2026-03-19T06:31:46Z",
+    "headSha": "944fc30d4d6e16d2825c796458edbb10295f49e6",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/54",
+    "authorLogin": "TheCause"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/rqz_golf_v1/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Depth recurrence shares a layer applied thrice, adding effective depth while saving ~20% of parameters via iteration embeddings and scaled residuals.",
+    "tags": [
+      "architecture",
+      "depth-width",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "shared recurrent layer replaces unique block",
+      "iteration embeddings signal pass index",
+      "residual scaled by 1/sqrt(K) for stability"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:39:01.383Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 75,
+    "title": "Add seq4096 sliding-window fp16 tok coarsen record",
+    "state": "open",
+    "updatedAt": "2026-03-19T10:34:19Z",
+    "headSha": "9ed0110ef9dc7bd14fbac13bd9134605b6eade57",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/75",
+    "authorLogin": "takhir-iota"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_Seq4096SlidingWindowFp16TokCoarsen/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-min seq4096 sliding-window record scores 1.1767 val_bpb with stride-64 eval, fp16 tok_emb export, and targeted block coarsening.",
+    "tags": [
+      "sliding-window-eval",
+      "mixed-precision",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Stride-64 sliding-window scoring",
+      "Fp16 tok_emb export plus blocks.5. coarsening",
+      "Muon-tuned optimizer schedule"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

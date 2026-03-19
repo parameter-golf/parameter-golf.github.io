@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-19T16:41:39.754Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 40,
+    "title": "PhiDelay Shared-Recurrent LM (3.23 bpb, 6.84MB)",
+    "state": "open",
+    "updatedAt": "2026-03-19T01:01:22Z",
+    "headSha": "e3655fde38c06a93533037029fa85240b2a7fa7f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/40",
+    "authorLogin": "bahman2017"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-18_PhiDelay_Shared_Recurrent_SP1024/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "PhiDelay shared-recurrent LM swaps attention for a delay mixer with 3 blocks repeated 4×, reaching 3.23 bpb in a 6.84MB artifact under the 16MB cap.",
+    "tags": [
+      "architecture",
+      "compression",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "N/A",
+    "techniques": [
+      "shared recurrent PhiDelay mixer",
+      "artifact-aware scaling to 6.84MB",
+      "longer training steps drove the biggest BPB gain"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

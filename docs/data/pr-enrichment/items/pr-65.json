@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:39:49.683Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 65,
+    "title": "Record: Mixed Quant (int6+int8) + Sliding Window, val_bpb=1.1630",
+    "state": "open",
+    "updatedAt": "2026-03-19T11:10:43Z",
+    "headSha": "f85c8379c6b210df2dbaecf9083f7b60adeecb85",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/65",
+    "authorLogin": "aquariouseworkman"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_MixedQuant_Int6Int8_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Mixed int6 block/int8 embedding quantization plus stride-64 sliding eval reach val_bpb 1.1630 with widened MLP and tuned throughput.",
+    "tags": [
+      "quantization",
+      "sliding-window-eval",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "int6 per-row STE quant on blocks and int8 on embeddings",
+      "sliding-window eval stride=64 for richer context",
+      "wider MLP plus higher batch tokens for faster throughput"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

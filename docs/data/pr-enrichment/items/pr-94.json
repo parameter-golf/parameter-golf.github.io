@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-19T16:37:31.232Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 94,
+    "title": "Non-record: Warmdown fix (9x512) on 1xH100 10m",
+    "state": "open",
+    "updatedAt": "2026-03-19T15:35:55Z",
+    "headSha": "9c6a7403d9faa82b8dfbfd1e34a0d9319aa9a366",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/94",
+    "authorLogin": "aamodbhatt"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_WarmdownFix9x512_1GPU10m/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Scheduler warmdown now ends later on the 1xH100 9x512 run, trimming val_bpb by ~0.0013 while keeping within the 16MB cap.",
+    "tags": [
+      "non-record",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "WARMDOWN_ITERS=100 keeps LR from decaying too soon on slow 1-GPU steps",
+      "Retained baseline 9x512 architecture and data pipeline"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

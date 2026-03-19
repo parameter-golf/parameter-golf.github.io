@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:38:55.021Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 76,
+    "title": "[WIP] Int6 + Wider MLP 3x + FP16 Embed + Sliding Window (est. val_bpb ~1.160)",
+    "state": "open",
+    "updatedAt": "2026-03-19T11:00:05Z",
+    "headSha": "e6bd4d200de10d84ac3993f49f0941055d9ea3d3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/76",
+    "authorLogin": "unixmadtoonslab"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_Int6_WiderMLP_FP16Embed_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines wider MLP, int6 quantized weights with FP16 tied embeddings, and sliding-window eval to target ~1.160 val_bpb pending the 8xH100 run.",
+    "tags": [
+      "quantization",
+      "mixed-precision",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Uses standard training with validation evaluation; not val-only.",
+    "techniques": [
+      "- int6+zstd per-row quantization for MLP/attention weights",
+      "- FP16 tied embedding passthrough to shrink quant gap",
+      "- Sliding-window evaluation with stride 256"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

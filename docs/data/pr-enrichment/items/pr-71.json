@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-19T16:39:24.535Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 71,
+    "title": "Add Parameter Golf submission: Depth12 Dim416 KV4",
+    "state": "open",
+    "updatedAt": "2026-03-19T09:35:07Z",
+    "headSha": "2949401a6dc0b306d3a16a9e4d3fea70b0b97f83",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/71",
+    "authorLogin": "AntDX316"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_AntDX316_depth12_dim416/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Submitted 10-minute 8xH100 16MB run with 12-layer, 416-dim KV4 layout and reported int8/zlib val_bpb 1.3509.",
+    "tags": [
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "deeper/narrower architecture",
+      "tied embeddings",
+      "int8+zlib roundtrip eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

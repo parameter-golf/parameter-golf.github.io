@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-19T16:41:31.544Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 41,
+    "title": "Add Modal 8xH100 timed validation non-record submission",
+    "state": "open",
+    "updatedAt": "2026-03-19T01:08:07Z",
+    "headSha": "0610e5f4a2d17134fe59d1400ed645ee71f704db",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/41",
+    "authorLogin": "kiankyars"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_modal_8xh100_timed_validation/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Submitted non-record 600s Modal 8xH100 timed validation run with final int8+zlib val_bpb 1.2296 under the 16MB artifact cap.",
+    "tags": [
+      "non-record",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Not a val-only training run; it’s a timed validation submission.",
+    "techniques": [
+      "- timed 600s Modal 8xH100 run",
+      "- int8+zlib roundtrip evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

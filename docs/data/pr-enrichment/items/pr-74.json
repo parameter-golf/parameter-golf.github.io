@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:39:06.550Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 74,
+    "title": "Add seq4096 fp16 tok coarsen record",
+    "state": "open",
+    "updatedAt": "2026-03-19T09:41:19Z",
+    "headSha": "7b8633a99fee9efaf401c3e63c5ae83cbc085131",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/74",
+    "authorLogin": "takhir-iota"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_Seq4096Fp16TokCoarsen/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "New seq_len=4096 10min record keeps tok_emb fp16 and coarsens blocks.5 to hit ~1.1884 val_bpb under the 16MB cap.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "muon"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "tuned Muon hyperparameters for long-context training",
+      "export with tok_emb weight kept in fp16",
+      "coarsen only blocks.5 to meet size limit"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

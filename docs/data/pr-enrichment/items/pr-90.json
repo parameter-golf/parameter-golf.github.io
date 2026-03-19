@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-19T16:37:47.265Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 90,
+    "title": "[codex] add gw kv2 int7 non-record submission",
+    "state": "open",
+    "updatedAt": "2026-03-19T15:35:09Z",
+    "headSha": "5c06bf49c3b44e72eabb63c99ca5269fce12c938",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/90",
+    "authorLogin": "gwskier11-design"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_GW_DenseKV2MLP1248_Int7Mid45_LowerLR/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Non-record GW branch reduces KV heads, widens the MLP, and uses int7-style compression for smaller Apple Silicon proxy artifacts.",
+    "tags": [
+      "val-only",
+      "quantization",
+      "architecture",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Reduced KV heads and reinvested parameters into MLP width",
+      "Lowered LR schedule plus tighter quantizer threshold with grouped int8+zlib export",
+      "Layer 4/5 int7 coarsening for post-export compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": true,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

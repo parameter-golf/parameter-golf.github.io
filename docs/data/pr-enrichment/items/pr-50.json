@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-19T16:40:51.928Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 50,
+    "title": "Record: Sliding Window Eval (stride=64), val_bpb=1.1925",
+    "state": "open",
+    "updatedAt": "2026-03-19T05:46:13Z",
+    "headSha": "4bbdf43eb3cc174ea9a9d8de81748bd339b71caf",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/50",
+    "authorLogin": "mattqlf"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_SlidingWindowEval/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Sliding-window eval (stride=64) scores each token with ~960-context, reducing post-quant val_bpb to 1.1925 without altering training.",
+    "tags": [
+      "evaluation",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Regular training; only evaluation strategy changed.",
+    "techniques": [
+      "Sliding window stride=64 eval",
+      "Post-quant int8+zlib scoring",
+      "Baseline training unchanged"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

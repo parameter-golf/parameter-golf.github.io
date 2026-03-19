@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:42:15.808Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 21,
+    "title": "Improved baseline: recurrent depth + LoRA + MTP",
+    "state": "open",
+    "updatedAt": "2026-03-19T10:03:36Z",
+    "headSha": "78f6eff97505f64430b336045df0b3fee4c1cbcf",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/21",
+    "authorLogin": "monroestephenson"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-18_ImprovedBaseline/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Depth recurrence with LoRA and learned scales plus SwiGLU and EMA fixes yields a wider effective 10-layer baseline.",
+    "tags": [
+      "architecture",
+      "depth-width",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Reused five unique blocks twice for depth recurrence with per-loop learned scales",
+      "Per-recurrence rank-16 LoRA adapters on attention Q/K/V/O for specialization",
+      "SwiGLU MLP plus multi-token auxiliary heads and EMA serialization fix"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

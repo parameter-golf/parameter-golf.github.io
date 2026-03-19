@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-19T16:38:18.072Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 84,
+    "title": "Add mirrored-recurrence MLX non-record submission",
+    "state": "open",
+    "updatedAt": "2026-03-19T13:52:11Z",
+    "headSha": "6853b49028e0dd08e8da6ebebe5a8b08d4ef652d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/84",
+    "authorLogin": "cschubiner"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_MirrorRecurrence_MLX_M5Max_sp1024/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Non-record Apple Silicon MLX run mirrors nine transformer blocks into 18 logical layers while staying under the 16MB artifact cap.",
+    "tags": [
+      "non-record",
+      "architecture",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- Mirrored recurrence reuses 9 blocks for 18 logical layers",
+      "- Apple Silicon MLX int8+zlib serialization keeps artifact <16MB"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

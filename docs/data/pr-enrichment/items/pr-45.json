@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-19T16:41:14.541Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 45,
+    "title": "Modal 8xH100 LowerLR FP16Embed 960 (val_bpb 1.22395)",
+    "state": "open",
+    "updatedAt": "2026-03-19T02:51:31Z",
+    "headSha": "da4e9efe6d4656e65c1fdd00a96ca13a279bc647",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/45",
+    "authorLogin": "kiankyars"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_modal_8xh100_lowerlr_fp16embed_960/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds Modal 8xH100 LowerLR FP16Embed 960 record folder with final int8+zlib val_bpb 1.22395.",
+    "tags": [
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "FP16 tied embeddings kept at higher precision in snapshot",
+      "Final metric derived from int8+zlib roundtrip evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

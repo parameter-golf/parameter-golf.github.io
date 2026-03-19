@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-19T16:42:21.054Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 20,
+    "title": "QAT + Architecture Exploration (Non-Record)",
+    "state": "open",
+    "updatedAt": "2026-03-18T22:06:40Z",
+    "headSha": "bda498113d570296cbeff9cee3b97fbe95738b1f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/20",
+    "authorLogin": "mattleonard16"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-18_QAT_Exploration/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "QAT with fake per-row int8 quant simulates post-training quantization during GPT training to shrink the BPB gap for deployment.",
+    "tags": [
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Fake per-row int8 quantization during training",
+      "STE threaded through CastedLinear→GPT stack"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

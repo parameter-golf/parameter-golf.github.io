@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:38:49.222Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 77,
+    "title": "[record bpb=1.195] sliding window + LoRA TTT",
+    "state": "open",
+    "updatedAt": "2026-03-19T11:58:26Z",
+    "headSha": "9fed66c01eb86e9089b68580a2295cbffaef25de",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/77",
+    "authorLogin": "samacqua"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-17_LoRA_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Naive baseline eval adds per-document LoRA TTT on doc-isolated sliding-window chunks with rank-8 adapters on head/Q/V to reach 1.195 BPB.",
+    "tags": [
+      "sliding-window-eval",
+      "attention",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LoRA TTT on lm_head/c_q/c_v",
+      "Doc-aware sliding-window scoring",
+      "Rank-8 adapters reset per document"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

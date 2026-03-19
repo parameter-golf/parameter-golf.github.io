@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:40:47.110Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 51,
+    "title": "[WIP] Depth-recurrent QAT: 3x4 loops, 768d, 15.6MB artifact",
+    "state": "open",
+    "updatedAt": "2026-03-19T09:12:06Z",
+    "headSha": "45db65acf24b1e6529c60c4439a26e41cccb3334",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/51",
+    "authorLogin": "hacksurvivor"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_DepthRecurrentQAT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Depth-recurrent QAT loops 3 shared blocks 4x with per-loop LoRA, widening to 768d to fit a 15.6MB INT8 artifact.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "looped depth recurrence with per-loop LoRA",
+      "fake-quantized CastedLinear QAT",
+      "LAWA warmdown weight averaging"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-19T16:41:46.685Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 39,
+    "title": "10L Mixed Precision: val_bpb=1.2147 (10 layers + int6 middle layers)",
+    "state": "open",
+    "updatedAt": "2026-03-19T04:37:03Z",
+    "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/39",
+    "authorLogin": "nanlliu"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_10L_MixedPrecision/README.md",
+      "records/track_10min_16mb/2026-03-18_LowerLR/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "10-layer model adds mixed int8/int6 precision with lower LR to reach 1.2139 bpb while keeping the artifact under 16MB.",
+    "tags": [
+      "quantization",
+      "mixed-precision",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Mixed int8/int6 per-layer compression to shrink middle layers",
+      "Lowered MATRIX/SCALAR/TIED_EMBED LR to 0.02/0.02/0.03",
+      "Multi-seed t-test (p<0.001) confirming consistent gains"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:39:33.911Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 70,
+    "title": "Submission: Wider MLP 3x + int6 quant + sliding window eval, val_bpb=1.1659",
+    "state": "open",
+    "updatedAt": "2026-03-19T08:57:25Z",
+    "headSha": "2790ac088cd3da716664fb6047990745f24e6c4f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/70",
+    "authorLogin": "jfprincz"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_WiderMLP_Int6_SlidingWindow_1.1666/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Wider 3x MLP with int6 per-row quantization and sliding-window eval hits 1.1659 val_bpb while staying under 16MB.",
+    "tags": [
+      "quantization",
+      "sliding-window-eval",
+      "mixed-precision"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Wider MLP expansion (3x) within artifact budget",
+      "Per-row int6 quant on MLP+attn plus zstd-22 compression",
+      "Sliding-window eval with stride 256 for richer context"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T16:40:10.315Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 60,
+    "title": "NTK Eval + Overtone Init (val_bpb=1.2160)",
+    "state": "open",
+    "updatedAt": "2026-03-19T15:20:15Z",
+    "headSha": "2a90936b788360b8138940166d3e9f1a0b69d646",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/60",
+    "authorLogin": "notapplica"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_FP16Emb_10Layer_MuonWD_NTK1408_OvertoneInit/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Overtone init with sigmoid phase-transition resid mix and NTK-aware RoPE scaling drop post-quant bpb to 1.2160 across 3 seeds with <16MB artifacts.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Overtone SVD spectral init for tied embeddings",
+      "Sigmoid-scheduled phase-transition resid_mix",
+      "NTK-aware RoPE scaling train@1024 eval@2048"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
