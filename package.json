@@ -6,8 +6,9 @@
   "scripts": {
     "collect": "node scripts/collect.mjs",
     "enrich:prs": "node scripts/enrich-prs.mjs",
+    "version:data": "node scripts/update-data-version.mjs",
     "dev": "python3 -m http.server 4173 -d docs",
-    "check": "node --check scripts/collect.mjs && node --check scripts/enrich-prs.mjs"
+    "check": "node --check scripts/collect.mjs && node --check scripts/enrich-prs.mjs && node --check scripts/update-data-version.mjs"
   },
   "engines": {
     "node": ">=20"

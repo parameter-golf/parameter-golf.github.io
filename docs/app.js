@@ -247,6 +247,14 @@ function buildEnrichmentMap(index) {
   return map;
 }
 
+function buildVersionedUrl(url, version) {
+  if (!version) {
+    return url;
+  }
+  const separator = url.includes("?") ? "&" : "?";
+  return `${url}${separator}v=${encodeURIComponent(version)}`;
+}
+
 function getEnrichment(enrichmentMap, entry) {
   if (!entry.pr?.number) {
     return null;
@@ -439,10 +447,21 @@ function render(data) {
 }
 
 async function load() {
+  let dataVersion = "";
+  try {
+    const versionResponse = await fetch("./data/version.json", { cache: "no-store" });
+    if (versionResponse.ok) {
+      const versionPayload = await versionResponse.json();
+      dataVersion = typeof versionPayload?.version === "string" ? versionPayload.version : "";
+    }
+  } catch {
+    dataVersion = "";
+  }
+
   const [summaryResponse, submissionsResponse, enrichmentResponse] = await Promise.all([
-    fetch("./data/summary.json"),
-    fetch("./data/submissions.json"),
-    fetch("./data/pr-enrichment/index.json")
+    fetch(buildVersionedUrl("./data/summary.json", dataVersion)),
+    fetch(buildVersionedUrl("./data/submissions.json", dataVersion)),
+    fetch(buildVersionedUrl("./data/pr-enrichment/index.json", dataVersion))
   ]);
   if (!summaryResponse.ok || !submissionsResponse.ok) {
     throw new Error("Failed to load generated data files.");

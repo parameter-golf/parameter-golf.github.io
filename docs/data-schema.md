@@ -1,6 +1,6 @@
 # Data Schema
 
-The collector generates three public JSON files:
+The collector and remote enrichment job generate four public JSON files:
 
 ## `docs/data/submissions.json`
 
@@ -94,6 +94,10 @@ Aggregated counts and best scores for site headers and quick stats.
 Collector diagnostics, including skipped PRs and parse failures.
 
 The report may also include an `incremental` section describing how many PR pages were scanned, how many cached PRs were reused, and whether the collector stopped early based on the last successful PR sync cutoff.
+
+## `docs/data/version.json`
+
+Cache-busting stamp for frontend JSON fetches. The remote refresh job updates this whenever it is about to commit refreshed public data.
 
 ## `docs/data/pr-enrichment/index.json`
 

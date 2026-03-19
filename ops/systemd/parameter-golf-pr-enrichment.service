@@ -1,5 +1,5 @@
 [Unit]
-Description=Parameter Golf PR enrichment
+Description=Parameter Golf data refresh and PR enrichment
 After=network-online.target
 Wants=network-online.target
 
@@ -8,4 +8,3 @@ Type=oneshot
 User=ubuntu
 WorkingDirectory=/home/ubuntu/parameter-golf-enricher
 ExecStart=/bin/bash /home/ubuntu/parameter-golf-enricher/scripts/run-pr-enrichment-cycle.sh
-

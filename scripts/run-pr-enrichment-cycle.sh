@@ -27,23 +27,27 @@ for attempt in $(seq 1 "$ATTEMPTS"); do
   git config user.name "ubuntu-pr-enricher"
   git config user.email "ubuntu-pr-enricher@users.noreply.github.com"
 
+  npm run collect
   npm run enrich:prs
 
-  git add docs/data/pr-enrichment .cache/pr-enrichment-state.json
+  git add docs/data .cache
   if git diff --cached --quiet; then
-    echo "No PR enrichment changes"
+    echo "No data changes"
     exit 0
   fi
 
-  git commit -m "chore(data): enrich PR summaries [skip ci]"
+  npm run version:data
+  git add docs/data/version.json docs/data .cache
+
+  git commit -m "chore(data): refresh leaderboard data [skip ci]"
 
   if git push origin "$BRANCH"; then
-    echo "PR enrichment push succeeded"
+    echo "Leaderboard refresh push succeeded"
     exit 0
   fi
 
   echo "Push rejected on attempt ${attempt}; retrying from latest ${BRANCH}"
 done
 
-echo "Failed to publish PR enrichment after ${ATTEMPTS} attempts"
+echo "Failed to publish leaderboard refresh after ${ATTEMPTS} attempts"
 exit 1

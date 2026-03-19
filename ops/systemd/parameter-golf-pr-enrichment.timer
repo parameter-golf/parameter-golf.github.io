@@ -1,9 +1,9 @@
 [Unit]
-Description=Run Parameter Golf PR enrichment every 10 minutes
+Description=Run Parameter Golf data refresh every 30 minutes
 
 [Timer]
 OnBootSec=2min
-OnUnitActiveSec=10min
+OnUnitActiveSec=30min
 Unit=parameter-golf-pr-enrichment.service
 
 [Install]

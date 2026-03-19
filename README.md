@@ -36,14 +36,17 @@ The site is fully static.
   - normalizes everything into static JSON under `docs/data/`
 - `docs/`
   - GitHub Pages site
-  - fetches `docs/data/submissions.json` and `docs/data/summary.json`
+  - fetches `docs/data/version.json` first, then loads versioned JSON payloads for the page
 - `scripts/enrich-prs.mjs`
   - reads collected PR-backed submissions
   - only re-summarizes PRs whose upstream metadata changed or whose per-PR summary file is missing
   - writes public enrichment files under `docs/data/pr-enrichment/`
-- `.github/workflows/refresh-data.yml`
-  - scheduled data refresh
-  - commits regenerated data back into this repo
+- `scripts/update-data-version.mjs`
+  - writes `docs/data/version.json` so data-only refreshes invalidate cached JSON fetches
+- `scripts/run-pr-enrichment-cycle.sh`
+  - runs the remote refresh loop: collect -> enrich -> data-version bump -> commit -> push
+- `ops/systemd/parameter-golf-pr-enrichment.timer`
+  - runs the remote refresh loop every 30 minutes on the ARM server
 - `.github/workflows/deploy-pages.yml`
   - deploys the static site to GitHub Pages
 
