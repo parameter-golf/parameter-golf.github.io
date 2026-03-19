@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T22:09:07.032Z",
+  "generatedAt": "2026-03-19T22:39:13.141Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 95,
     "title": "PROTEUS EMA — val_bpb: 1.2253",
     "state": "open",
-    "updatedAt": "2026-03-19T21:53:49Z",
-    "headSha": "cacd14d31cab7602b6d98580e786ada16683e61a",
+    "updatedAt": "2026-03-19T22:23:25Z",
+    "headSha": "4b9fdca52d9ce23df7b3bcd6eada38636b8e8dcc",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/95",
     "authorLogin": "MatoTeziTanka"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Baseline GPT training stacks EMA weight averaging with seq2048, FP16 embeddings, and sliding-window eval to smooth losses before INT8 quantization.",
+    "summary": "Baseline GPT uses EMA smoothing, FP16 embeddings, seq-2048 training, and sliding-window eval to shrink INT8 quantization loss before final scoring.",
     "tags": [
       "quantization",
-      "evaluation",
-      "training-schedule"
+      "regularization",
+      "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Normal training run with EMA applied to training weights; not a validation-only regime.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "EMA weight averaging (decay 0.999 every 10 steps)",
-      "FP16 embedding passthrough for tied token vectors",
-      "Sliding-window eval with stride 64 on seq len 2048"
+      "EMA weight averaging (decay 0.999)",
+      "seq-2048 training w/ FP16 embeddings",
+      "sliding-window stride-64 eval"
     ]
   },
   "compatibility": {

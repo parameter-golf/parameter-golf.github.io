@@ -1,8 +1,52 @@
 {
-  "generatedAt": "2026-03-19T22:09:12.234Z",
+  "generatedAt": "2026-03-19T22:39:29.659Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 136,
+      "title": "Record: Seq2048 training + eval (val_bpb=1.2101)",
+      "status": "open",
+      "updatedAt": "2026-03-19T22:23:29Z",
+      "headSha": "d465c9851e57d36426f3682a47ad4d613a2e6d16",
+      "generatedAt": "2026-03-19T22:38:57.520Z",
+      "summary": "Training and evaluation both run with 2048-token context to learn long-range dependencies without changing the baseline architecture.",
+      "tags": [
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-136.json"
+    },
+    {
+      "prNumber": 135,
+      "title": "Record: OrthoInit + Int6 MLP3x + BigramHash + SmearGate (val_bpb: 1.1539)",
+      "status": "open",
+      "updatedAt": "2026-03-19T22:19:53Z",
+      "headSha": "af51720b0d3c73d74fa4b427d45730c872425370",
+      "generatedAt": "2026-03-19T22:39:03.824Z",
+      "summary": "muP-scaled orthogonal init plus zstd-compressed int6 lets GPT-9 grow a 3x MLP, add SmearGate/bigram hash, and use tuned Muon optimizer.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-135.json"
+    },
     {
       "prNumber": 131,
       "title": "[WIP] add combined optimization, waiting for 8 gpu train",
@@ -262,15 +306,16 @@
     },
     {
       "prNumber": 116,
-      "title": "Int6 mixed quant + MLP 3x + sliding window eval (val_bpb 1.1741)",
+      "title": "Record: Int6 mixed quant + MLP 3x + STE QAT + sliding window (val_bpb 1.1712)",
       "status": "open",
-      "updatedAt": "2026-03-19T21:17:33Z",
-      "headSha": "bca0d4670f896e47c929062f218ba80c0ca212f4",
-      "generatedAt": "2026-03-19T21:38:51.551Z",
-      "summary": "Combines int6 per-row quantized MLP+attention with 3x FFN expansion and sliding-window eval under a tuned Muon optimizer schedule.",
+      "updatedAt": "2026-03-19T22:09:16Z",
+      "headSha": "14939b8412a5d486c1130a3e4749c63023ffed53",
+      "generatedAt": "2026-03-19T22:39:08.063Z",
+      "summary": "Combines per-row Int6 mixed quant with STE QAT, 3× MLP expansion, and sliding-window eval plus Muon tuning to fit 21.8M params.",
       "tags": [
         "quantization",
-        "sliding-window-eval",
+        "architecture",
+        "evaluation",
         "optimizer"
       ],
       "flags": {
@@ -590,14 +635,14 @@
       "prNumber": 95,
       "title": "PROTEUS EMA — val_bpb: 1.2253",
       "status": "open",
-      "updatedAt": "2026-03-19T21:53:49Z",
-      "headSha": "cacd14d31cab7602b6d98580e786ada16683e61a",
-      "generatedAt": "2026-03-19T22:09:07.032Z",
-      "summary": "Baseline GPT training stacks EMA weight averaging with seq2048, FP16 embeddings, and sliding-window eval to smooth losses before INT8 quantization.",
+      "updatedAt": "2026-03-19T22:23:25Z",
+      "headSha": "4b9fdca52d9ce23df7b3bcd6eada38636b8e8dcc",
+      "generatedAt": "2026-03-19T22:39:13.141Z",
+      "summary": "Baseline GPT uses EMA smoothing, FP16 embeddings, seq-2048 training, and sliding-window eval to shrink INT8 quantization loss before final scoring.",
       "tags": [
         "quantization",
-        "evaluation",
-        "training-schedule"
+        "regularization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -918,14 +963,14 @@
     {
       "prNumber": 77,
       "title": "[record bpb=1.195] sliding window + LoRA TTT",
-      "status": "open",
-      "updatedAt": "2026-03-19T17:19:04Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T22:30:27Z",
       "headSha": "9fed66c01eb86e9089b68580a2295cbffaef25de",
-      "generatedAt": "2026-03-19T17:26:52.943Z",
-      "summary": "Evaluation isolates each document with overlapping 256-token chunks and trains rank-8 LoRA adapters on lm_head/Q/V per chunk using a single Adam step.",
+      "generatedAt": "2026-03-19T22:39:19.568Z",
+      "summary": "Eval isolates docs with sliding 256-token chunks and per-doc LoRA TTT on q/v/lm_head adapters while keeping training on the naive baseline.",
       "tags": [
-        "evaluation",
         "sliding-window-eval",
+        "evaluation",
         "attention"
       ],
       "flags": {
@@ -1173,15 +1218,15 @@
     },
     {
       "prNumber": 63,
-      "title": "10L Int6 QAT + Zstd MLP2.6x Muon0.99 Sliding Window (val_bpb 1.1598)",
+      "title": "Record: 10L Int6 QAT + Zstd MLP2.6x Muon0.99 Sliding Window (val_bpb 1.1598)",
       "status": "open",
-      "updatedAt": "2026-03-19T20:31:50Z",
-      "headSha": "d360e107a6690f302c902a84b5b5bb24ed8afbc5",
-      "generatedAt": "2026-03-19T20:37:29.284Z",
-      "summary": "Combines STE int6 quantization-aware training, full int6/zstd compression, and a wider 2.6× MLP with tuned Muon momentum for a 10-layer 512d model.",
+      "updatedAt": "2026-03-19T22:28:29Z",
+      "headSha": "510e3f6a9cc55a9e94b2dcc9ab4cbb3dbf3844de",
+      "generatedAt": "2026-03-19T22:39:24.136Z",
+      "summary": "Combines STE int6 QAT with full int6+zstd compression, a wider MLP, and tuned Muon/learning-rate schedule plus sliding-window eval on a 10-layer GPT.",
       "tags": [
         "quantization",
-        "mixed-precision",
+        "architecture",
         "training-schedule",
         "evaluation"
       ],
@@ -1521,14 +1566,13 @@
       "prNumber": 39,
       "title": "Record: 10L Mixed Precision: val_bpb=1.2147 (10 layers + int6 middle layers)",
       "status": "closed",
-      "updatedAt": "2026-03-19T21:24:10Z",
+      "updatedAt": "2026-03-19T22:26:47Z",
       "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
-      "generatedAt": "2026-03-19T21:39:47.044Z",
-      "summary": "Mixed-precision 10-layer transformer keeps int8 early/late layers, int6 middle layers, and lower Muon/Adam LRs to stay under 16MB while improving roundtrip metrics.",
+      "generatedAt": "2026-03-19T22:39:29.656Z",
+      "summary": "10-layer transformer keeps int8 early/late layers, int6 middle layers, and uses lower Muon/Adam learning rates to fit under 16MB with better compression.",
       "tags": [
-        "mixed-precision",
+        "quantization",
         "architecture",
-        "optimizer",
         "training-schedule"
       ],
       "flags": {

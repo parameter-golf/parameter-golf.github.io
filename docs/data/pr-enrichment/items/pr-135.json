@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T22:39:03.824Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 135,
+    "title": "Record: OrthoInit + Int6 MLP3x + BigramHash + SmearGate (val_bpb: 1.1539)",
+    "state": "open",
+    "updatedAt": "2026-03-19T22:19:53Z",
+    "headSha": "af51720b0d3c73d74fa4b427d45730c872425370",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/135",
+    "authorLogin": "unnir"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_OrthoInit_Int6_MLP3x_BigramHash_SmearGate/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "muP-scaled orthogonal init plus zstd-compressed int6 lets GPT-9 grow a 3x MLP, add SmearGate/bigram hash, and use tuned Muon optimizer.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "muP-scaled orthogonal initialization",
+      "per-row int6 quantization with zstd-22",
+      "SmearGate+bigram hash embeddings"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
