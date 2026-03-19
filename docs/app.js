@@ -34,16 +34,24 @@ function byScoreThenDate(a, b) {
 }
 
 function updateSummary(summary) {
-  document.getElementById("generated-at").textContent = formatDate(summary.generatedAt);
-  document.getElementById("best-official").textContent = formatScore(summary.best.officialMainTrack?.metrics.valBpb);
-  document.getElementById("best-official-name").textContent =
-    summary.best.officialMainTrack?.submission.name || "No official records found";
-  document.getElementById("best-open").textContent = formatScore(summary.best.openPrMainTrack?.metrics.valBpb);
-  document.getElementById("best-open-name").textContent =
-    summary.best.openPrMainTrack?.submission.name || "No open PR submissions found";
-  document.getElementById("coverage-count").textContent = formatCount(summary.counts.submissions);
-  document.getElementById("coverage-breakdown").textContent =
-    `${summary.counts.official} main, ${summary.counts.openPr} open, ${summary.counts.readmeListed} listed`;
+  const generatedAt = document.getElementById("generated-at");
+  const bestOfficial = document.getElementById("best-official");
+  const bestOfficialName = document.getElementById("best-official-name");
+  const bestOpen = document.getElementById("best-open");
+  const bestOpenName = document.getElementById("best-open-name");
+  const coverageCount = document.getElementById("coverage-count");
+  const coverageBreakdown = document.getElementById("coverage-breakdown");
+  if (!generatedAt || !bestOfficial || !bestOfficialName || !bestOpen || !bestOpenName || !coverageCount || !coverageBreakdown) {
+    return;
+  }
+
+  generatedAt.textContent = formatDate(summary.generatedAt);
+  bestOfficial.textContent = formatScore(summary.best.officialMainTrack?.metrics.valBpb);
+  bestOfficialName.textContent = summary.best.officialMainTrack?.submission.name || "No official records found";
+  bestOpen.textContent = formatScore(summary.best.openPrMainTrack?.metrics.valBpb);
+  bestOpenName.textContent = summary.best.openPrMainTrack?.submission.name || "No open PR submissions found";
+  coverageCount.textContent = formatCount(summary.counts.submissions);
+  coverageBreakdown.textContent = `${summary.counts.official} main, ${summary.counts.openPr} open, ${summary.counts.readmeListed} listed`;
 }
 
 function filterSubmissions(submissions) {
@@ -80,6 +88,9 @@ function buildPrimaryLink(entry) {
 
 function renderRows(submissions) {
   const body = document.getElementById("submission-body");
+  if (!body) {
+    return;
+  }
   body.replaceChildren();
 
   if (submissions.length === 0) {
@@ -143,10 +154,16 @@ async function load() {
 
 load().catch((error) => {
   const body = document.getElementById("submission-body");
+  if (!body) {
+    return;
+  }
   body.innerHTML = `<tr><td colspan="9" class="empty-row">${error.message}</td></tr>`;
 });
 
-document.getElementById("search-input").addEventListener("input", (event) => {
-  filters.search = event.target.value.trim();
-  render(window.__GOLF_VIEWER_DATA__);
-});
+const searchInput = document.getElementById("search-input");
+if (searchInput) {
+  searchInput.addEventListener("input", (event) => {
+    filters.search = event.target.value.trim();
+    render(window.__GOLF_VIEWER_DATA__);
+  });
+}
