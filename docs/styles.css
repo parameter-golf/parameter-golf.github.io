@@ -53,9 +53,16 @@ code {
 .topbar-mark,
 .topbar-links {
   display: flex;
-  align-items: center;
   gap: 12px;
   flex-wrap: wrap;
+}
+
+.topbar-mark {
+  align-items: baseline;
+}
+
+.topbar-links {
+  align-items: center;
 }
 
 .topbar-links {
