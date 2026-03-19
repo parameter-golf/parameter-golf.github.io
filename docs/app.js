@@ -153,7 +153,6 @@ function buildDisplaySubmissions(submissions) {
     const folders = [...new Set(items.map((entry) => entry.record.folderName).filter(Boolean))];
     representative.display = {
       variantCount: items.length,
-      runName: representative.submission.name || representative.record.folderName || "",
       searchText: [
         representative.pr?.title,
         ...items.flatMap((entry) => [
@@ -451,15 +450,8 @@ function renderRows(submissions) {
     const summaryLine = enrichment?.summary
       ? `<p class="title-summary">${escapeHtml(enrichment.summary)}</p>`
       : "";
-    const metaParts = [];
-    if (entry.pr?.number && entry.display?.runName && entry.display.runName !== primaryLink.label) {
-      metaParts.push(`Run: ${entry.display.runName}`);
-    }
-    if (entry.display?.note) {
-      metaParts.push(entry.display.note);
-    }
-    const noteLine = metaParts.length > 0
-      ? `<p class="title-meta">${escapeHtml(metaParts.join(" · "))}</p>`
+    const noteLine = entry.display?.note
+      ? `<p class="title-meta">${escapeHtml(entry.display.note)}</p>`
       : "";
     const tagLine = displayTags.length > 0
       ? `<div class="title-tags">${displayTags.map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}</div>`
