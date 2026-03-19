@@ -115,7 +115,7 @@ function sortSubmissions(submissions) {
         result = compareNumber(a.metrics.valLoss, b.metrics.valLoss);
         break;
       case "pr":
-        result = compareNumber(a.pr?.number, b.pr?.number);
+        result = compareText(a.pr?.title || a.record.folderName, b.pr?.title || b.record.folderName);
         break;
       case "run":
         result = compareText(a.submission.name || a.record.folderName, b.submission.name || b.record.folderName);
@@ -203,12 +203,12 @@ function filterSubmissions(submissions) {
 function buildPrimaryLink(entry) {
   if (entry.links.pr) {
     return {
-      label: `#${entry.pr.number}`,
+      label: entry.pr?.title || "Open PR",
       href: entry.links.pr
     };
   }
   return {
-    label: "Record",
+    label: "Merged record",
     href: entry.links.folder
   };
 }
@@ -240,7 +240,7 @@ function renderRows(submissions) {
       : null;
     row.innerHTML = `
       <td><strong>${rankMap.get(entry.id) || "-"}</strong></td>
-      <td><a class="pr-link" href="${primaryLink.href}" target="_blank" rel="noreferrer">${primaryLink.label}</a></td>
+      <td class="pr-cell"><a class="pr-link" href="${primaryLink.href}" target="_blank" rel="noreferrer">${primaryLink.label}</a></td>
       <td class="title-cell">
         <span class="run-name">${entry.submission.name || entry.record.folderName}</span>
       </td>

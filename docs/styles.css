@@ -238,12 +238,12 @@ tbody td:nth-child(1) {
 
 thead th:nth-child(2),
 tbody td:nth-child(2) {
-  width: 72px;
+  width: 24%;
 }
 
 thead th:nth-child(3),
 tbody td:nth-child(3) {
-  width: 28%;
+  width: 22%;
 }
 
 thead th:nth-child(4),
@@ -364,6 +364,7 @@ tbody tr:hover {
   max-width: 100%;
 }
 
+.pr-cell,
 .title-cell {
   max-width: 0;
 }
@@ -412,6 +413,11 @@ tbody tr:hover {
 }
 
 .pr-link {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
   color: var(--ink);
   text-decoration: none;
   border-bottom: 1px solid rgba(17, 17, 17, 0.22);
