@@ -72,6 +72,22 @@ function compareNumber(a, b) {
   return left - right;
 }
 
+function compareMetricValue(a, b, direction) {
+  const leftValid = Number.isFinite(a) && a > 0;
+  const rightValid = Number.isFinite(b) && b > 0;
+
+  if (leftValid && rightValid) {
+    return direction === "desc" ? b - a : a - b;
+  }
+  if (leftValid) {
+    return -1;
+  }
+  if (rightValid) {
+    return 1;
+  }
+  return 0;
+}
+
 function compareDateValue(a, b) {
   const left = Date.parse(a || "");
   const right = Date.parse(b || "");
@@ -107,13 +123,18 @@ function sortSubmissions(submissions) {
   const items = [...submissions];
   items.sort((a, b) => {
     let result = 0;
+    let alreadyDirected = false;
     switch (sortState.key) {
       case "rank":
-      case "score":
         result = byScoreThenDate(a, b);
         break;
+      case "score":
+        result = compareMetricValue(a.metrics.valBpb, b.metrics.valBpb, sortState.direction);
+        alreadyDirected = true;
+        break;
       case "loss":
-        result = compareNumber(a.metrics.valLoss, b.metrics.valLoss);
+        result = compareMetricValue(a.metrics.valLoss, b.metrics.valLoss, sortState.direction);
+        alreadyDirected = true;
         break;
       case "pr":
         result = compareText(a.pr?.title || a.record.folderName, b.pr?.title || b.record.folderName);
@@ -141,7 +162,7 @@ function sortSubmissions(submissions) {
     if (result === 0) {
       result = byScoreThenDate(a, b);
     }
-    return sortState.direction === "desc" ? -result : result;
+    return alreadyDirected || sortState.direction !== "desc" ? result : -result;
   });
   return items;
 }
