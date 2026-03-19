@@ -19,10 +19,22 @@ function formatDate(value) {
   if (!value) {
     return "Unknown";
   }
-  return new Date(value).toLocaleDateString("en-US", {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  const month = date.toLocaleString("en-US", {
     month: "short",
-    day: "numeric"
+    timeZone: "UTC"
   });
+  const day = date.toLocaleString("en-US", {
+    day: "numeric",
+    timeZone: "UTC"
+  });
+  const hours = String(date.getUTCHours()).padStart(2, "0");
+  const minutes = String(date.getUTCMinutes()).padStart(2, "0");
+  return `${month} ${day}, ${hours}:${minutes} UTC`;
 }
 
 function formatScore(value) {
