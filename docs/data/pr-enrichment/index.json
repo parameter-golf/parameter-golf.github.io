@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-19T20:08:14.152Z",
+  "generatedAt": "2026-03-19T20:37:29.291Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 127,
+      "title": "Non-record: Depth recurrence + widening + QAT + sliding window eval",
+      "status": "open",
+      "updatedAt": "2026-03-19T20:24:22Z",
+      "headSha": "02ee8ae36dcaa5f8f0939d6d000be3884680a335",
+      "generatedAt": "2026-03-19T20:37:14.486Z",
+      "summary": "Recycles 3 transformer blocks with per-loop LoRA, widens to 768 dim, uses factorized embeddings plus int6 QAT, and evaluates with sliding windows.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-127.json"
+    },
+    {
+      "prNumber": 126,
+      "title": "Non-record: BitNet b1.58 + depth recurrence + NorMuon (1.7510 BPB, 3.78 MB)",
+      "status": "open",
+      "updatedAt": "2026-03-19T20:19:36Z",
+      "headSha": "395a7e2974df7fe4b52436180d389e4a20f76a57",
+      "generatedAt": "2026-03-19T20:37:18.873Z",
+      "summary": "Ternary-packed BitNet b1.58 uses depth recurrence with U-Net skips, NorMuon optimizer, and YaRN warmup to fit a larger model in 3.78MB.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-126.json"
+    },
     {
       "prNumber": 125,
       "title": "Add non-record 16MB layers7 submission",
@@ -286,15 +333,15 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-19T19:59:55Z",
-      "headSha": "f19f7cbce3e9633e17b93f868be318f3e428f4d0",
-      "generatedAt": "2026-03-19T20:07:56.120Z",
-      "summary": "Depth-recurrent GPT stacks three unique Transformer blocks through three loops with AdaLN conditioning and GQA on MLX Apple Silicon.",
+      "updatedAt": "2026-03-19T20:29:54Z",
+      "headSha": "c4d5d63f39b31c87f59ae17bc3d408afb8578d58",
+      "generatedAt": "2026-03-19T20:37:25.048Z",
+      "summary": "Depth-recurrent GPT stacks 3 unique Transformer blocks over three loops with AdaLN conditioning, GQA, and per-document attention adaptation on Apple M3 Max.",
       "tags": [
         "architecture",
-        "compression",
-        "evaluation",
-        "non-record"
+        "attention",
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1054,17 +1101,17 @@
     },
     {
       "prNumber": 63,
-      "title": "Seq2048 + FP16 Tied Embedding + Tuned LR (val_bpb 1.2067)",
+      "title": "10L Int6 QAT + Zstd MLP2.6x Muon0.99 Sliding Window (val_bpb 1.1598)",
       "status": "open",
-      "updatedAt": "2026-03-19T20:06:56Z",
+      "updatedAt": "2026-03-19T20:31:50Z",
       "headSha": "d360e107a6690f302c902a84b5b5bb24ed8afbc5",
-      "generatedAt": "2026-03-19T20:08:08.500Z",
-      "summary": "10-layer transformer trains with STE int6 QAT, FP16 tied embeddings, zstd-compressed wider MLP, and sliding-window eval to squeeze under 16MB.",
+      "generatedAt": "2026-03-19T20:37:29.284Z",
+      "summary": "Combines STE int6 quantization-aware training, full int6/zstd compression, and a wider 2.6× MLP with tuned Muon momentum for a 10-layer 512d model.",
       "tags": [
         "quantization",
-        "sliding-window-eval",
-        "architecture",
-        "compression"
+        "mixed-precision",
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

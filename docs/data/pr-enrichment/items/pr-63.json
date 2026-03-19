@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T20:08:08.500Z",
+  "generatedAt": "2026-03-19T20:37:29.284Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 63,
-    "title": "Seq2048 + FP16 Tied Embedding + Tuned LR (val_bpb 1.2067)",
+    "title": "10L Int6 QAT + Zstd MLP2.6x Muon0.99 Sliding Window (val_bpb 1.1598)",
     "state": "open",
-    "updatedAt": "2026-03-19T20:06:56Z",
+    "updatedAt": "2026-03-19T20:31:50Z",
     "headSha": "d360e107a6690f302c902a84b5b5bb24ed8afbc5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/63",
     "authorLogin": "yahya010"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer transformer trains with STE int6 QAT, FP16 tied embeddings, zstd-compressed wider MLP, and sliding-window eval to squeeze under 16MB.",
+    "summary": "Combines STE int6 quantization-aware training, full int6/zstd compression, and a wider 2.6× MLP with tuned Muon momentum for a 10-layer 512d model.",
     "tags": [
       "quantization",
-      "sliding-window-eval",
-      "architecture",
-      "compression"
+      "mixed-precision",
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "STE int6 QAT with full-weight quant prep",
-      "FP16 tied-embedding passthrough plus zstd-22 compression",
-      "Sliding-window eval stride 64 with muon 0.99 schedule"
+      "STE int6 QAT plus full int6/zstd compression",
+      "2.6× wider MLP hidden dimension",
+      "Sliding-window eval with tuned Muon 0.99 momentum"
     ]
   },
   "compatibility": {

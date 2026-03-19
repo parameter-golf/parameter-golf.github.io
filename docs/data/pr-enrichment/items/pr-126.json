@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-19T20:37:18.873Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 126,
+    "title": "Non-record: BitNet b1.58 + depth recurrence + NorMuon (1.7510 BPB, 3.78 MB)",
+    "state": "open",
+    "updatedAt": "2026-03-19T20:19:36Z",
+    "headSha": "395a7e2974df7fe4b52436180d389e4a20f76a57",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/126",
+    "authorLogin": "Athenox14"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_BitNet158_DepthRecurrence_NorMuon/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Ternary-packed BitNet b1.58 uses depth recurrence with U-Net skips, NorMuon optimizer, and YaRN warmup to fit a larger model in 3.78MB.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Depth recurrence + U-Net skip blending",
+      "NorMuon (per-neuron RMS after Newton-Schulz)",
+      "Ternary packing paired with YaRN warmup"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

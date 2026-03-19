@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T20:37:14.486Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 127,
+    "title": "Non-record: Depth recurrence + widening + QAT + sliding window eval",
+    "state": "open",
+    "updatedAt": "2026-03-19T20:24:22Z",
+    "headSha": "02ee8ae36dcaa5f8f0939d6d000be3884680a335",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/127",
+    "authorLogin": "matt-wright86"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-18_CompetitiveSubmission/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Recycles 3 transformer blocks with per-loop LoRA, widens to 768 dim, uses factorized embeddings plus int6 QAT, and evaluates with sliding windows.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Depth recurrence with per-loop rank-4 LoRA adapters",
+      "Factorized SP4096 embedding into 128 bottleneck and widened 768-dim GQA",
+      "Int6-range QAT (STE) paired with sliding-window eval and NTK-aware RoPE"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
