@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T16:43:46.201Z",
+  "generatedAt": "2026-03-19T16:47:18.183Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
@@ -125,9 +125,7 @@
         "valOnlyConfidence": "high",
         "valOnlyMatches": [
           "title:val-only",
-          "body:Val-only",
-          "body:model trains on the validation shard",
-          "body:trains on the validation shard",
+          "body:val-only",
           "body:Val-only training",
           "readme:Val-Only",
           "readme:Val-only training"
@@ -143,7 +141,7 @@
         "authorLogin": "yesbhautik",
         "authorName": null,
         "createdAt": "2026-03-19T07:32:20Z",
-        "updatedAt": "2026-03-19T16:43:25Z",
+        "updatedAt": "2026-03-19T16:46:39Z",
         "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
         "headRepo": "yesbhautik/parameter-golf"
       },
