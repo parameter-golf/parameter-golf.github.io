@@ -111,6 +111,9 @@ function sortSubmissions(submissions) {
       case "score":
         result = byScoreThenDate(a, b);
         break;
+      case "loss":
+        result = compareNumber(a.metrics.valLoss, b.metrics.valLoss);
+        break;
       case "pr":
         result = compareNumber(a.pr?.number, b.pr?.number);
         break;
@@ -219,7 +222,7 @@ function renderRows(submissions) {
 
   if (submissions.length === 0) {
     const row = document.createElement("tr");
-    row.innerHTML = `<td colspan="8" class="empty-row">No submissions match the current filters.</td>`;
+    row.innerHTML = `<td colspan="9" class="empty-row">No submissions match the current filters.</td>`;
     body.appendChild(row);
     return;
   }
@@ -232,19 +235,23 @@ function renderRows(submissions) {
     const statusClass = `status-${entry.status}`;
     const primaryLink = buildPrimaryLink(entry);
     const nonRecord = trackLabel(entry);
+    const authorHref = entry.submission.githubId
+      ? `https://github.com/${entry.submission.githubId}`
+      : null;
     row.innerHTML = `
       <td><strong>${rankMap.get(entry.id) || "-"}</strong></td>
       <td><a class="pr-link" href="${primaryLink.href}" target="_blank" rel="noreferrer">${primaryLink.label}</a></td>
       <td class="title-cell">
         <span class="run-name">${entry.submission.name || entry.record.folderName}</span>
       </td>
-      <td class="score-cell">
+      <td class="metric-cell">
         <strong class="score-value">${formatScore(entry.metrics.valBpb)}</strong>
-        <div class="meta score-meta">loss ${entry.metrics.valLoss ? entry.metrics.valLoss.toFixed(4) : "-"}</div>
       </td>
+      <td class="metric-cell"><strong class="score-value">${formatScore(entry.metrics.valLoss)}</strong></td>
       <td class="author-cell">
-        <strong class="author-name">${entry.submission.author || "Unknown"}</strong>
-        <div class="meta author-meta">${entry.submission.githubId || "-"}</div>
+        ${authorHref
+          ? `<a class="author-link" href="${authorHref}" target="_blank" rel="noreferrer">${entry.submission.author || entry.submission.githubId}</a>`
+          : `<span class="author-link">${entry.submission.author || "Unknown"}</span>`}
       </td>
       <td class="date-cell">${formatDate(entry.submission.date)}</td>
       <td class="status-cell"><span class="status-badge ${statusClass}">${entry.status}</span></td>
