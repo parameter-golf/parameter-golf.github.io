@@ -138,6 +138,10 @@ code {
   text-align: center;
 }
 
+.summary-segment {
+  display: inline;
+}
+
 .summary-line strong {
   display: inline-block;
   margin: 0 0.58em 0 0.12em;
@@ -270,9 +274,13 @@ code {
 
   .summary-line {
     white-space: normal;
-    text-wrap: balance;
+    text-wrap: initial;
     font-size: 0.95rem;
     line-height: 1.4;
+  }
+
+  .summary-segment {
+    display: block;
   }
 
   .summary-line strong {
