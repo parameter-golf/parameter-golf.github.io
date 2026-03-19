@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-19T19:06:58.435Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 116,
+    "title": "MSE-optimal quant, gptq, sliding window eval (val_bpb 1.1912)",
+    "state": "open",
+    "updatedAt": "2026-03-19T19:01:51Z",
+    "headSha": "519e5bcc38bc5880ea4318067369c4cba09cf197",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/116",
+    "authorLogin": "abhishekgahlot2"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_MSEQuant_SlidingWindow_EMA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines per-row MSE-optimal int8 quant + GPTQ with sliding-window eval and tuned seq_len/LR/decay settings.",
+    "tags": [
+      "quantization",
+      "sliding-window-eval",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "MSE-optimal per-row int8 quant with GPTQ rounding",
+      "Sliding-window stride-64 eval for richer context",
+      "Longer seq_len, lower embed LR, and Muon weight decay tweaks"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
