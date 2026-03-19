@@ -1,7 +1,8 @@
 const filters = {
   search: "",
   hideNonRecord: false,
-  mergedOnly: false
+  mergedOnly: false,
+  scoredOnly: false
 };
 
 const sortState = {
@@ -197,6 +198,9 @@ function filterSubmissions(submissions) {
     if (filters.mergedOnly && entry.status !== "official" && entry.status !== "merged") {
       return false;
     }
+    if (filters.scoredOnly && (!Number.isFinite(entry.metrics.valBpb) || entry.metrics.valBpb <= 0)) {
+      return false;
+    }
     if (filters.hideNonRecord && entry.category === "non-record") {
       return false;
     }
@@ -326,6 +330,14 @@ const mergedOnlyToggle = document.getElementById("merged-only-toggle");
 if (mergedOnlyToggle) {
   mergedOnlyToggle.addEventListener("change", (event) => {
     filters.mergedOnly = event.target.checked;
+    render(window.__GOLF_VIEWER_DATA__);
+  });
+}
+
+const scoredOnlyToggle = document.getElementById("scored-only-toggle");
+if (scoredOnlyToggle) {
+  scoredOnlyToggle.addEventListener("change", (event) => {
+    filters.scoredOnly = event.target.checked;
     render(window.__GOLF_VIEWER_DATA__);
   });
 }
