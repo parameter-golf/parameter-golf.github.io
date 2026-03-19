@@ -130,6 +130,50 @@ function buildRankMap(submissions) {
   return rankMap;
 }
 
+function displayGroupKey(entry) {
+  if (entry.pr?.number && !entry.provenance?.onMain) {
+    return `pr:${entry.pr.number}:${entry.track?.slug || entry.category || "unknown"}`;
+  }
+  return `entry:${entry.id}`;
+}
+
+function buildDisplaySubmissions(submissions) {
+  const groups = new Map();
+  for (const entry of submissions) {
+    const key = displayGroupKey(entry);
+    if (!groups.has(key)) {
+      groups.set(key, []);
+    }
+    groups.get(key).push(entry);
+  }
+
+  return [...groups.values()].map((items) => {
+    const representative = structuredClone([...items].sort(byScoreThenDate)[0]);
+    const names = [...new Set(items.map((entry) => entry.submission.name || entry.record.folderName).filter(Boolean))];
+    const folders = [...new Set(items.map((entry) => entry.record.folderName).filter(Boolean))];
+    representative.display = {
+      variantCount: items.length,
+      searchText: [
+        representative.pr?.title,
+        ...items.flatMap((entry) => [
+          entry.submission.name,
+          entry.submission.author,
+          entry.submission.githubId,
+          entry.record.folderName
+        ]),
+        ...folders
+      ]
+        .filter(Boolean)
+        .join(" "),
+      variantNames: names,
+      note: items.length > 1
+        ? `PR #${representative.pr?.number} has ${items.length} runs in this track; showing the best score.`
+        : ""
+    };
+    return representative;
+  });
+}
+
 function sortSubmissions(submissions) {
   const items = [...submissions];
   items.sort((a, b) => {
@@ -226,11 +270,16 @@ function buildVisibleSummary(summary, submissions) {
   const openMain = visible
     .filter((entry) => entry.status === "open" && entry.category === "main-track")
     .sort(byScoreThenDate);
+  const openPrCount = new Set(
+    visible
+      .filter((entry) => entry.status === "open" && entry.pr?.number)
+      .map((entry) => entry.pr.number)
+  ).size;
 
   return {
     generatedAt: summary.generatedAt,
     counts: {
-      openPr: visible.filter((entry) => entry.status === "open").length
+      openPr: openPrCount
     },
     best: {
       officialMainTrack: officialMain[0] || null,
@@ -306,6 +355,7 @@ function filterSubmissions(submissions, enrichmentMap) {
       entry.submission.name,
       entry.submission.author,
       entry.submission.githubId,
+      entry.display?.searchText,
       enrichment?.summary,
       ...(buildDisplayTags(entry, enrichment))
     ]
@@ -399,6 +449,9 @@ function renderRows(submissions) {
     const summaryLine = enrichment?.summary
       ? `<p class="title-summary">${escapeHtml(enrichment.summary)}</p>`
       : "";
+    const noteLine = entry.display?.note
+      ? `<p class="title-meta">${escapeHtml(entry.display.note)}</p>`
+      : "";
     const tagLine = displayTags.length > 0
       ? `<div class="title-tags">${displayTags.map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}</div>`
       : "";
@@ -413,6 +466,7 @@ function renderRows(submissions) {
       <td><span class="rank-value">${rankMap.get(entry.id) || "-"}</span></td>
       <td class="title-cell">
         <a class="title-link run-name" href="${primaryLink.href}" target="_blank" rel="noreferrer">${entry.submission.name || entry.record.folderName}</a>
+        ${noteLine}
         ${summaryLine}
         ${tagLine}
       </td>
@@ -439,7 +493,8 @@ function renderRows(submissions) {
 
 function render(data) {
   window.__GOLF_VIEWER_DATA__ = data;
-  const filtered = filterSubmissions(data.submissions.submissions, data.enrichmentMap);
+  const displaySubmissions = buildDisplaySubmissions(data.submissions.submissions);
+  const filtered = filterSubmissions(displaySubmissions, data.enrichmentMap);
   updateSummary(buildVisibleSummary(data.summary, filtered));
   renderRows(filtered);
   updateSortButtons();

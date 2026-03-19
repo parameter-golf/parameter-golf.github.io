@@ -596,6 +596,14 @@ tbody tr:hover {
   white-space: normal;
 }
 
+.title-meta {
+  margin: 7px 0 0;
+  color: rgba(17, 17, 17, 0.5);
+  font-size: 0.77rem;
+  line-height: 1.35;
+  white-space: normal;
+}
+
 .title-tags {
   display: flex;
   flex-wrap: wrap;
