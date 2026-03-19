@@ -194,7 +194,7 @@ td {
   padding: 16px 10px;
   border-bottom: 1px solid var(--line);
   vertical-align: top;
-  text-align: left;
+  text-align: center;
 }
 
 thead th {
@@ -254,6 +254,7 @@ tbody tr:hover {
 
 .link-cluster {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
 }
