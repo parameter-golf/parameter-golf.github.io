@@ -29,6 +29,8 @@ const statusOrder = {
   closed: 3
 };
 
+const VAL_ONLY_TAG = "val-only";
+
 function formatDate(value) {
   if (!value) {
     return "Unknown";
@@ -421,6 +423,16 @@ function toggleSelectedTag(tag) {
       return compareText(a, b);
     });
   }
+  if (tag === VAL_ONLY_TAG && filters.selectedTags.includes(VAL_ONLY_TAG)) {
+    filters.includeValOnly = true;
+  }
+}
+
+function syncFilterControls() {
+  const valOnlyToggle = document.getElementById("val-only-toggle");
+  if (valOnlyToggle) {
+    valOnlyToggle.checked = filters.includeValOnly;
+  }
 }
 
 function renderTagFilter(data) {
@@ -623,6 +635,7 @@ function render(data) {
   updateSummary(buildVisibleSummary(data.summary, filtered));
   renderRows(filtered);
   renderTagFilter(nextData);
+  syncFilterControls();
   updateSortButtons();
   updatePageSizeControl();
 }
@@ -706,6 +719,9 @@ if (valOnlyToggle) {
   valOnlyToggle.checked = filters.includeValOnly;
   valOnlyToggle.addEventListener("change", (event) => {
     filters.includeValOnly = event.target.checked;
+    if (!filters.includeValOnly) {
+      filters.selectedTags = filters.selectedTags.filter((tag) => tag !== VAL_ONLY_TAG);
+    }
     paginationState.page = 1;
     render(window.__GOLF_VIEWER_DATA__);
   });
