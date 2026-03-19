@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-19T17:05:36.749Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v1",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 103,
+    "title": "Non-record: Looped Transformer + Per-Layer LoRA + Int6 + Sliding Window (1xH100, pending 8xH100)",
+    "state": "open",
+    "updatedAt": "2026-03-19T17:04:37Z",
+    "headSha": "4465fa22ae49c93dda323646d85e18434fb50ab3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/103",
+    "authorLogin": "MatthewHRockwell"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_LoopedTransformer_LoRA_Int6/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Looped transformer reuses 5 blocks into 30 virtual layers with per-layer LoRA, int6 quantization, and sliding-window eval reaching ~1.48 BPB.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "sliding-window-eval",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Looped depth recurrence with per-virtual-layer LoRA",
+      "Int6 quantization with fp16 embedding passthrough",
+      "Sliding-window eval (4096 seq, 64 stride)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
