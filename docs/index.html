@@ -12,7 +12,7 @@
       href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="./styles.css?v=22">
+    <link rel="stylesheet" href="./styles.css?v=23">
   </head>
   <body>
     <div class="page-shell">
@@ -29,27 +29,10 @@
       </div>
 
       <main>
-        <section class="summary-grid" id="summary-grid">
-          <article class="summary-card">
-            <span class="label">Updated</span>
-            <strong id="generated-at">Loading…</strong>
-            <p id="generated-at-note"></p>
-          </article>
-          <article class="summary-card">
-            <span class="label">Baseline</span>
-            <strong id="best-official">-</strong>
-            <p id="best-official-name">Waiting for data</p>
-          </article>
-          <article class="summary-card">
-            <span class="label">Best PR</span>
-            <strong id="best-open">-</strong>
-            <p id="best-open-name">Waiting for data</p>
-          </article>
-          <article class="summary-card">
-            <span class="label">PRs</span>
-            <strong id="coverage-count">-</strong>
-            <p id="coverage-breakdown">Waiting for data</p>
-          </article>
+        <section class="summary-strip" id="summary-strip">
+          <p class="summary-line">
+            Current best is <strong id="best-open">-</strong>, against a baseline of <strong id="best-official">-</strong>, across <strong id="coverage-count">-</strong> public PRs. Updated <strong id="generated-at">Loading…</strong>.
+          </p>
         </section>
 
         <section class="controls">
@@ -96,6 +79,6 @@
       </main>
     </div>
 
-    <script type="module" src="./app.js?v=21"></script>
+    <script type="module" src="./app.js?v=22"></script>
   </body>
   </html>

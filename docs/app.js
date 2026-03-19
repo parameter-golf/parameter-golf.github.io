@@ -158,25 +158,17 @@ function updateSortButtons() {
 
 function updateSummary(summary) {
   const generatedAt = document.getElementById("generated-at");
-  const generatedAtNote = document.getElementById("generated-at-note");
   const bestOfficial = document.getElementById("best-official");
-  const bestOfficialName = document.getElementById("best-official-name");
   const bestOpen = document.getElementById("best-open");
-  const bestOpenName = document.getElementById("best-open-name");
   const coverageCount = document.getElementById("coverage-count");
-  const coverageBreakdown = document.getElementById("coverage-breakdown");
-  if (!generatedAt || !generatedAtNote || !bestOfficial || !bestOfficialName || !bestOpen || !bestOpenName || !coverageCount || !coverageBreakdown) {
+  if (!generatedAt || !bestOfficial || !bestOpen || !coverageCount) {
     return;
   }
 
   generatedAt.textContent = formatDate(summary.generatedAt);
-  generatedAtNote.textContent = "";
   bestOfficial.textContent = formatScore(summary.best.officialMainTrack?.metrics.valBpb);
-  bestOfficialName.textContent = "";
   bestOpen.textContent = formatScore(summary.best.openPrMainTrack?.metrics.valBpb);
-  bestOpenName.textContent = "";
   coverageCount.textContent = formatCount(summary.counts.openPr);
-  coverageBreakdown.textContent = "";
 }
 
 function filterSubmissions(submissions) {

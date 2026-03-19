@@ -115,28 +115,12 @@ code {
   letter-spacing: -0.055em;
 }
 
-.summary-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+.summary-strip {
   margin-top: 22px;
+  padding: 14px 0 4px;
+  border-bottom: 1px solid var(--line);
 }
 
-.summary-card {
-  padding: 18px 18px 16px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.72);
-}
-
-.summary-card strong {
-  display: block;
-  font-size: 1.72rem;
-  line-height: 0.94;
-  letter-spacing: -0.05em;
-}
-
-.summary-card p,
 .disclaimer,
 .meta,
 .muted {
@@ -145,14 +129,22 @@ code {
   line-height: 1.5;
 }
 
-.summary-card p {
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  min-height: 0;
-  font-size: 0.82rem;
-  margin-top: 6px;
+.summary-line {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.summary-line strong {
+  color: var(--ink);
+  font-size: 1.72rem;
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: -0.05em;
+  vertical-align: -0.08em;
 }
 
 .controls {
@@ -437,12 +429,8 @@ tbody tr:hover {
 }
 
 @media (max-width: 900px) {
-  .summary-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .summary-card {
-    padding: 22px 18px;
+  .summary-line {
+    white-space: normal;
   }
 
   .topbar {
