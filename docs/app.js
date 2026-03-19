@@ -2,9 +2,9 @@ const filters = {
   search: "",
   hideNonRecord: false,
   mergedOnly: false,
-  scoredOnly: false,
   includeValOnly: false,
   hideSummaries: false,
+  hideTags: false,
   selectedTags: []
 };
 
@@ -376,9 +376,6 @@ function filterSubmissions(submissions, enrichmentMap) {
     if (filters.mergedOnly && entry.status !== "merged") {
       return false;
     }
-    if (filters.scoredOnly && (!Number.isFinite(entry.metrics.valBpb) || entry.metrics.valBpb <= 0)) {
-      return false;
-    }
     if (filters.hideNonRecord && entry.category === "non-record") {
       return false;
     }
@@ -585,7 +582,7 @@ function renderRows(submissions) {
     const noteLine = entry.display?.note
       ? `<p class="title-meta">${escapeHtml(entry.display.note)}</p>`
       : "";
-    const tagLine = displayTags.length > 0
+    const tagLine = !filters.hideTags && displayTags.length > 0
       ? `<div class="title-tags">${displayTags.map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}</div>`
       : "";
     const row = document.createElement("tr");
@@ -702,15 +699,6 @@ if (mergedOnlyToggle) {
   });
 }
 
-const scoredOnlyToggle = document.getElementById("scored-only-toggle");
-if (scoredOnlyToggle) {
-  scoredOnlyToggle.addEventListener("change", (event) => {
-    filters.scoredOnly = event.target.checked;
-    paginationState.page = 1;
-    render(window.__GOLF_VIEWER_DATA__);
-  });
-}
-
 const valOnlyToggle = document.getElementById("val-only-toggle");
 if (valOnlyToggle) {
   valOnlyToggle.checked = filters.includeValOnly;
@@ -747,6 +735,15 @@ if (hideSummariesToggle) {
   hideSummariesToggle.checked = filters.hideSummaries;
   hideSummariesToggle.addEventListener("change", (event) => {
     filters.hideSummaries = event.target.checked;
+    render(window.__GOLF_VIEWER_DATA__);
+  });
+}
+
+const hideTagsToggle = document.getElementById("hide-tags-toggle");
+if (hideTagsToggle) {
+  hideTagsToggle.checked = filters.hideTags;
+  hideTagsToggle.addEventListener("change", (event) => {
+    filters.hideTags = event.target.checked;
     render(window.__GOLF_VIEWER_DATA__);
   });
 }
