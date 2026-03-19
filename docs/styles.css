@@ -109,7 +109,7 @@ code {
 }
 
 .summary-card {
-  padding: 24px 22px;
+  padding: 18px 18px 16px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.72);
@@ -117,7 +117,7 @@ code {
 
 .summary-card strong {
   display: block;
-  font-size: 2rem;
+  font-size: 1.72rem;
   line-height: 0.94;
   letter-spacing: -0.05em;
 }
@@ -136,8 +136,9 @@ code {
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  min-height: 0.9rem;
-  font-size: 0.9rem;
+  min-height: 0;
+  font-size: 0.82rem;
+  margin-top: 6px;
 }
 
 .controls {
