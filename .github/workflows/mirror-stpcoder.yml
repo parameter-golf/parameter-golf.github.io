@@ -1,0 +1,29 @@
+name: Mirror To Stpcoder
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mirror-stpcoder
+  cancel-in-progress: true
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Push to stpcoder mirror
+        run: |
+          git remote add stpcoder-mirror https://x-access-token:${{ secrets.STPCODER_MIRROR_PAT }}@github.com/stpcoder/parameter-golf-leaderboard.git
+          git push stpcoder-mirror HEAD:main
