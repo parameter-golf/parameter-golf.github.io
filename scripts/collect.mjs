@@ -12,7 +12,7 @@ const OUTPUT_DIR = path.resolve("docs/data");
 const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
 const FETCH_HEADERS = {
   "Accept": "application/vnd.github+json",
-  "User-Agent": "golf-viewer-collector",
+  "User-Agent": "openai-parameter-golf-leaderboard-collector",
   ...(TOKEN ? { "Authorization": `Bearer ${TOKEN}` } : {})
 };
 
