@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T18:37:31.705Z",
+  "generatedAt": "2026-03-19T20:08:08.500Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 63,
     "title": "Seq2048 + FP16 Tied Embedding + Tuned LR (val_bpb 1.2067)",
     "state": "open",
-    "updatedAt": "2026-03-19T18:18:29Z",
-    "headSha": "a90e9ed2bcc7bc57390427662c943340876a787b",
+    "updatedAt": "2026-03-19T20:06:56Z",
+    "headSha": "d360e107a6690f302c902a84b5b5bb24ed8afbc5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/63",
     "authorLogin": "yahya010"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Extends baseline with seq2048, FP16 tied embeddings, int6+zstd enabling 1344 MLP, tuned Muon momentum/opt params, sliding-window evaluation.",
+    "summary": "10-layer transformer trains with STE int6 QAT, FP16 tied embeddings, zstd-compressed wider MLP, and sliding-window eval to squeeze under 16MB.",
     "tags": [
       "quantization",
-      "optimizer",
-      "evaluation",
-      "architecture"
+      "sliding-window-eval",
+      "architecture",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "2048-context training with fp16 tied embedding passthrough",
-      "Full int6 quantization + zstd-22 compression to fit wider MLP",
-      "Sliding-window evaluation with higher Muon momentum and tuned learning rates"
+      "STE int6 QAT with full-weight quant prep",
+      "FP16 tied-embedding passthrough plus zstd-22 compression",
+      "Sliding-window eval stride 64 with muon 0.99 schedule"
     ]
   },
   "compatibility": {

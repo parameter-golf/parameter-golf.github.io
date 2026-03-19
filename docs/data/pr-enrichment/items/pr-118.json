@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-19T20:07:40.980Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 118,
+    "title": "Non-record: 1x RTX 4090 compat smoke (50 steps)",
+    "state": "open",
+    "updatedAt": "2026-03-19T19:57:19Z",
+    "headSha": "9ff83034d80103a067eaac71d80f6263349b76e9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/118",
+    "authorLogin": "stukenov"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_CUDA4090_CompatSmoke_SP1024/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Baseline 9×512 SP-1024 on a single RTX 4090 with manual KV-head expansion so SDPA runs without enable_gqa for a reproducible CUDA compatibility smoke test.",
+    "tags": [
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Manual KV-head expansion before SDPA for enable_gqa-free PyTorch",
+      "Baseline SP-1024 9-layer layout with tied embeddings",
+      "Int8+zlib artifact kept under 16MB"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

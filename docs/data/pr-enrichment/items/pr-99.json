@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:25:26.669Z",
+  "generatedAt": "2026-03-19T20:08:01.350Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 99,
     "title": "submission: Int6 MLP3x + Late-K Passthrough + SlidingWindow (val_bpb: 1.1605)",
     "state": "open",
-    "updatedAt": "2026-03-19T17:07:39Z",
+    "updatedAt": "2026-03-19T19:42:22Z",
     "headSha": "3131670eaa558ac4cade159a2ab9ba44f650bb47",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/99",
     "authorLogin": "takhir-iota"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "9-layer 512-dim GPT uses int6 for MLP/Q/V/proj, fp16 late-layer Ks with grouped int8 elsewhere, zstd packing, and stride-64 sliding-window eval.",
+    "summary": "Int6-quantized 9-layer GPT3x MLP with fp16 late-layer K plus grouped int8 elsewhere, paired with stride-64 sliding-window evaluation.",
     "tags": [
       "quantization",
-      "architecture",
-      "evaluation"
+      "sliding-window-eval",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 mixed quantization plus zstd",
-      "fp16 late-layer K passthrough with grouped int8 elsewhere",
-      "stride-64 sliding-window evaluation"
+      "- Int6 quantized MLP/Q/V/proj with zstd serialization",
+      "- fp16 late-layer K weights with grouped-int8 earlier Ks",
+      "- Stride-64 sliding-window evaluation to leverage full context"
     ]
   },
   "compatibility": {

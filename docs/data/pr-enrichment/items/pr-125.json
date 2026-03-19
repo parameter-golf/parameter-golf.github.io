@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-19T20:07:25.515Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 125,
+    "title": "Add non-record 16MB layers7 submission",
+    "state": "open",
+    "updatedAt": "2026-03-19T19:43:16Z",
+    "headSha": "d42a21282d90b939cd76e395458c6b424d49b0bf",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/125",
+    "authorLogin": "akshai0296"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-19_SP1024_7x512_KV4_layers7_seed2026_akshai/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "A non-record 16MB run uses a 7-layer, 512-dim GPT variant on train_gpt.py to trade depth for throughput under the 600s cap.",
+    "tags": [
+      "non-record",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shallowing to 7 layers for faster steps",
+      "Tied 1024-vocab embeddings on train_gpt.py baseline"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

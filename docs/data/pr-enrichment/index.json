@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-19T19:37:30.679Z",
+  "generatedAt": "2026-03-19T20:08:14.152Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 125,
+      "title": "Add non-record 16MB layers7 submission",
+      "status": "open",
+      "updatedAt": "2026-03-19T19:43:16Z",
+      "headSha": "d42a21282d90b939cd76e395458c6b424d49b0bf",
+      "generatedAt": "2026-03-19T20:07:25.515Z",
+      "summary": "A non-record 16MB run uses a 7-layer, 512-dim GPT variant on train_gpt.py to trade depth for throughput under the 600s cap.",
+      "tags": [
+        "non-record",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-125.json"
+    },
     {
       "prNumber": 123,
       "title": "Record: Vocab 4096 + MLP 3x + Sliding Window Eval (val_bpb=1.1655)",
@@ -52,17 +75,17 @@
     },
     {
       "prNumber": 120,
-      "title": "Add record: MLP 3x + STE int6 QAT + sliding window, val_bpb=0.9588",
-      "status": "open",
-      "updatedAt": "2026-03-19T19:30:58Z",
+      "title": "[Val Only]: MLP 3x + STE int6 QAT + sliding window, val_bpb=0.9588",
+      "status": "closed",
+      "updatedAt": "2026-03-19T19:44:47Z",
       "headSha": "458f9db061f700c09d8c8c9c4a7b57471f018f76",
-      "generatedAt": "2026-03-19T19:37:13.178Z",
-      "summary": "Val-only 9-layer MLP3x Transformer uses STE int6 QAT with mixed int6/int8 post-quant, tuned Muon (+ROPE=200K, long warmdown), and sliding-window eval.",
+      "generatedAt": "2026-03-19T20:07:29.654Z",
+      "summary": "Val-only 9-layer transformer widens MLP to 3x and trains with STE int6 QAT, mixed int6/int8 quantization, Muon tweaks, and sliding-window eval.",
       "tags": [
         "val-only",
         "quantization",
-        "mixed-precision",
-        "sliding-window-eval"
+        "optimizer",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": true,
@@ -77,15 +100,15 @@
     {
       "prNumber": 119,
       "title": "Add Psionic non-record runtime replay submission",
-      "status": "open",
-      "updatedAt": "2026-03-19T19:28:31Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T19:47:52Z",
       "headSha": "b28c3d1733de75730448b672e8f8632ed667e6d2",
-      "generatedAt": "2026-03-19T19:37:19.924Z",
-      "summary": "Psionic’s non-record package ships a train_gpt.py launcher that invokes a prebuilt Runtime payload to restore and replay its int8+zlib model on the local-reference track.",
+      "generatedAt": "2026-03-19T20:07:34.862Z",
+      "summary": "Psionic's non-record bundle ships a prebuilt runtime plus train_gpt.py to restore its int8+zlib artifact and rerun the bounded local-reference eval.",
       "tags": [
-        "quantization",
+        "non-record",
         "evaluation",
-        "non-record"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -98,13 +121,35 @@
       "file": "items/pr-119.json"
     },
     {
-      "prNumber": 116,
-      "title": "MSE-optimal quant, gptq, sliding window eval (val_bpb 1.1912)",
+      "prNumber": 118,
+      "title": "Non-record: 1x RTX 4090 compat smoke (50 steps)",
       "status": "open",
-      "updatedAt": "2026-03-19T19:01:51Z",
-      "headSha": "519e5bcc38bc5880ea4318067369c4cba09cf197",
-      "generatedAt": "2026-03-19T19:06:58.435Z",
-      "summary": "Combines per-row MSE-optimal int8 quant + GPTQ with sliding-window eval and tuned seq_len/LR/decay settings.",
+      "updatedAt": "2026-03-19T19:57:19Z",
+      "headSha": "9ff83034d80103a067eaac71d80f6263349b76e9",
+      "generatedAt": "2026-03-19T20:07:40.980Z",
+      "summary": "Baseline 9×512 SP-1024 on a single RTX 4090 with manual KV-head expansion so SDPA runs without enable_gqa for a reproducible CUDA compatibility smoke test.",
+      "tags": [
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-118.json"
+    },
+    {
+      "prNumber": 116,
+      "title": "MSE-optimal quant + GPTQ + sliding window eval (val_bpb 1.1909)",
+      "status": "open",
+      "updatedAt": "2026-03-19T19:47:38Z",
+      "headSha": "8f4c65ee15b4aa34baf0371d541e69008e2c55a1",
+      "generatedAt": "2026-03-19T20:07:45.740Z",
+      "summary": "Combines MSE-optimal per-row int8 quantization with GPTQ and sliding-window eval plus tuned seq_len/embedding LR tweaks.",
       "tags": [
         "quantization",
         "sliding-window-eval",
@@ -124,15 +169,15 @@
       "prNumber": 114,
       "title": "#1 on leaderboard: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
       "status": "open",
-      "updatedAt": "2026-03-19T19:14:40Z",
-      "headSha": "1ef3fccd0a7689ee8250e1586c92807a630d0277",
-      "generatedAt": "2026-03-19T19:37:24.581Z",
-      "summary": "Int6 quantization with fp16 embeddings/late keys frees space for an MLP-1536 model trained at 2048 while sliding-window eval uses stride 256.",
+      "updatedAt": "2026-03-19T19:41:35Z",
+      "headSha": "7f0584926ce698662712e3ce420a57878f34ba05",
+      "generatedAt": "2026-03-19T20:07:51.244Z",
+      "summary": "Int6 post-training quantization frees room for a 3x MLP, with fp16 tied-embed/last-key passthrough and train@2048 + stride-256 sliding eval.",
       "tags": [
         "quantization",
         "architecture",
-        "training-schedule",
-        "evaluation"
+        "evaluation",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -241,13 +286,14 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-19T18:29:39Z",
-      "headSha": "c0a14f21a175338bee2fe071045b353e45121c2e",
-      "generatedAt": "2026-03-19T18:37:17.329Z",
-      "summary": "Depth-recurrent GPT cycles three unique Transformer blocks through three loops with AdaLN conditioning and GQA, tuned via MLX on Apple M3 Max.",
+      "updatedAt": "2026-03-19T19:59:55Z",
+      "headSha": "f19f7cbce3e9633e17b93f868be318f3e428f4d0",
+      "generatedAt": "2026-03-19T20:07:56.120Z",
+      "summary": "Depth-recurrent GPT stacks three unique Transformer blocks through three loops with AdaLN conditioning and GQA on MLX Apple Silicon.",
       "tags": [
         "architecture",
         "compression",
+        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -380,14 +426,14 @@
       "prNumber": 99,
       "title": "submission: Int6 MLP3x + Late-K Passthrough + SlidingWindow (val_bpb: 1.1605)",
       "status": "open",
-      "updatedAt": "2026-03-19T17:07:39Z",
+      "updatedAt": "2026-03-19T19:42:22Z",
       "headSha": "3131670eaa558ac4cade159a2ab9ba44f650bb47",
-      "generatedAt": "2026-03-19T17:25:26.669Z",
-      "summary": "9-layer 512-dim GPT uses int6 for MLP/Q/V/proj, fp16 late-layer Ks with grouped int8 elsewhere, zstd packing, and stride-64 sliding-window eval.",
+      "generatedAt": "2026-03-19T20:08:01.350Z",
+      "summary": "Int6-quantized 9-layer GPT3x MLP with fp16 late-layer K plus grouped int8 elsewhere, paired with stride-64 sliding-window evaluation.",
       "tags": [
         "quantization",
-        "architecture",
-        "evaluation"
+        "sliding-window-eval",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1010,15 +1056,15 @@
       "prNumber": 63,
       "title": "Seq2048 + FP16 Tied Embedding + Tuned LR (val_bpb 1.2067)",
       "status": "open",
-      "updatedAt": "2026-03-19T18:18:29Z",
-      "headSha": "a90e9ed2bcc7bc57390427662c943340876a787b",
-      "generatedAt": "2026-03-19T18:37:31.705Z",
-      "summary": "Extends baseline with seq2048, FP16 tied embeddings, int6+zstd enabling 1344 MLP, tuned Muon momentum/opt params, sliding-window evaluation.",
+      "updatedAt": "2026-03-19T20:06:56Z",
+      "headSha": "d360e107a6690f302c902a84b5b5bb24ed8afbc5",
+      "generatedAt": "2026-03-19T20:08:08.500Z",
+      "summary": "10-layer transformer trains with STE int6 QAT, FP16 tied embeddings, zstd-compressed wider MLP, and sliding-window eval to squeeze under 16MB.",
       "tags": [
         "quantization",
-        "optimizer",
-        "evaluation",
-        "architecture"
+        "sliding-window-eval",
+        "architecture",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1243,12 +1289,13 @@
       "prNumber": 50,
       "title": "Record: Sliding Window Eval (stride=64), val_bpb=1.1925",
       "status": "closed",
-      "updatedAt": "2026-03-19T19:33:56Z",
+      "updatedAt": "2026-03-19T19:40:59Z",
       "headSha": "4bbdf43eb3cc174ea9a9d8de81748bd339b71caf",
-      "generatedAt": "2026-03-19T19:37:30.674Z",
-      "summary": "Sliding-window eval with stride 64 scores tokens with ~960-context on the baseline 9x512 SP-1024 model, boosting val metrics without retraining.",
+      "generatedAt": "2026-03-19T20:08:14.148Z",
+      "summary": "Sliding-window evaluation (stride 64) on the baseline 9x512 SP-1024 scores each token with ~960+ context, improving post-quant metrics without changing training.",
       "tags": [
         "sliding-window-eval",
+        "quantization",
         "evaluation"
       ],
       "flags": {

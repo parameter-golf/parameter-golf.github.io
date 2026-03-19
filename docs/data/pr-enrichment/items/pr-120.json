@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T19:37:13.178Z",
+  "generatedAt": "2026-03-19T20:07:29.654Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 120,
-    "title": "Add record: MLP 3x + STE int6 QAT + sliding window, val_bpb=0.9588",
-    "state": "open",
-    "updatedAt": "2026-03-19T19:30:58Z",
+    "title": "[Val Only]: MLP 3x + STE int6 QAT + sliding window, val_bpb=0.9588",
+    "state": "closed",
+    "updatedAt": "2026-03-19T19:44:47Z",
     "headSha": "458f9db061f700c09d8c8c9c4a7b57471f018f76",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/120",
     "authorLogin": "andrewgcodes"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Val-only 9-layer MLP3x Transformer uses STE int6 QAT with mixed int6/int8 post-quant, tuned Muon (+ROPE=200K, long warmdown), and sliding-window eval.",
+    "summary": "Val-only 9-layer transformer widens MLP to 3x and trains with STE int6 QAT, mixed int6/int8 quantization, Muon tweaks, and sliding-window eval.",
     "tags": [
       "val-only",
       "quantization",
-      "mixed-precision",
-      "sliding-window-eval"
+      "optimizer",
+      "evaluation"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Trained exclusively on the validation shard as a val-only submission.",
+    "valOnlyReasoning": "Training data is explicitly the validation shard for a val-only run.",
     "techniques": [
-      "STE fake-int6 QAT with mixed int6/int8 post-quant",
-      "Sliding-window eval (stride=64) over 4096 context",
-      "Tuned Muon optimizer with ROPE=200K and extended warmdown"
+      "MLP 3x expansion with seq4096 context",
+      "STE fake-int6 QAT plus mixed post-training int6/int8 quant",
+      "Sliding-window eval with tuned Muon schedule"
     ]
   },
   "compatibility": {

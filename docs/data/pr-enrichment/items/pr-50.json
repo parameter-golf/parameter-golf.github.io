@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T19:37:30.674Z",
+  "generatedAt": "2026-03-19T20:08:14.148Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 50,
     "title": "Record: Sliding Window Eval (stride=64), val_bpb=1.1925",
     "state": "closed",
-    "updatedAt": "2026-03-19T19:33:56Z",
+    "updatedAt": "2026-03-19T19:40:59Z",
     "headSha": "4bbdf43eb3cc174ea9a9d8de81748bd339b71caf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/50",
     "authorLogin": "mattqlf"
@@ -19,16 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Sliding-window eval with stride 64 scores tokens with ~960-context on the baseline 9x512 SP-1024 model, boosting val metrics without retraining.",
+    "summary": "Sliding-window evaluation (stride 64) on the baseline 9x512 SP-1024 scores each token with ~960+ context, improving post-quant metrics without changing training.",
     "tags": [
       "sliding-window-eval",
+      "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Sliding-window eval (stride=64) scores rightmost tokens with ~960+ context",
-      "Baseline 9x512 SP-1024 training unchanged, only eval harness adjusted"
+      "- Sliding window eval stride=64",
+      "- Score tokens with extensive context",
+      "- Int8+zlib post-quant artifact"
     ]
   },
   "compatibility": {
