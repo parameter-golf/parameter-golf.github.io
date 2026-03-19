@@ -223,8 +223,8 @@ function renderRows(submissions) {
       </td>
       <td><span class="status-badge ${statusClass}">${entry.status}</span></td>
       <td>
-        <strong>${entry.submission.author || "Unknown"}</strong>
-        <div class="meta">${entry.submission.githubId || "-"}</div>
+        <strong class="author-name">${entry.submission.author || "Unknown"}</strong>
+        <div class="meta author-meta">${entry.submission.githubId || "-"}</div>
       </td>
       <td>${formatDate(entry.submission.date)}</td>
       <td>

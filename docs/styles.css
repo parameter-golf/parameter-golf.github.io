@@ -324,6 +324,14 @@ tbody tr:hover {
   white-space: nowrap;
 }
 
+.author-name,
+.author-meta {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .pr-link {
   color: var(--ink);
   text-decoration: none;
