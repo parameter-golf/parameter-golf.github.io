@@ -59,6 +59,10 @@ code {
   flex-wrap: wrap;
 }
 
+.topbar-links {
+  margin-right: 10px;
+}
+
 .topbar-label {
   font-size: 1rem;
   font-weight: 700;
@@ -74,12 +78,21 @@ code {
 .topbar-meta,
 .topbar-links a {
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 1rem;
   text-decoration: none;
 }
 
 .topbar-links a:hover {
   color: var(--ink);
+}
+
+.topbar-links a {
+  border-bottom: 1px solid rgba(17, 17, 17, 0.24);
+  line-height: 1.2;
+}
+
+.topbar-links a:hover {
+  border-bottom-color: var(--ink);
 }
 
 .eyebrow,
