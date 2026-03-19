@@ -432,6 +432,21 @@ async function main() {
     previousIndexMap.delete(String(group.prNumber));
   }
 
+  const removedPrs = Object.keys(previousState.prs || {}).filter(
+    (prNumber) => !nextState.prs[prNumber]
+  );
+
+  if (changed.length === 0 && removedPrs.length === 0) {
+    console.log(JSON.stringify({
+      sourceRepo: SOURCE_REPO,
+      promptVersion: PROMPT_VERSION,
+      model: MODEL,
+      totalPrs: nextEntries.length,
+      changedPrs: changed
+    }, null, 2));
+    return;
+  }
+
   nextState.generatedAt = new Date().toISOString();
   const nextIndex = {
     generatedAt: new Date().toISOString(),
