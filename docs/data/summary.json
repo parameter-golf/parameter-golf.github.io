@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-03-19T17:25:02.039Z",
+  "generatedAt": "2026-03-19T17:36:09.819Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
     "submissions": 64,
-    "official": 3,
-    "openPr": 57,
+    "official": 5,
+    "openPr": 55,
     "mergedPr": 0,
     "closedPr": 4,
     "prBacked": 62,
-    "readmeListed": 3,
-    "collectorErrors": 1
+    "readmeListed": 4,
+    "collectorErrors": 0
   },
   "best": {
     "officialMainTrack": {
-      "id": "record-records-track_10min_16mb-2026-03-18_FP16Embed_WD3600",
+      "id": "record-records-track_10min_16mb-2026-03-19_SlidingWindowEval",
       "source": "official",
       "status": "official",
       "category": "main-track",
@@ -26,33 +26,33 @@
         "category": "main-track"
       },
       "record": {
-        "folderName": "2026-03-18_FP16Embed_WD3600",
-        "folderPath": "records/track_10min_16mb/2026-03-18_FP16Embed_WD3600",
-        "submissionPath": "records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/train_gpt.py"
+        "folderName": "2026-03-19_SlidingWindowEval",
+        "folderPath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval",
+        "submissionPath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval/train_gpt.py"
       },
       "submission": {
-        "author": "Renier Velazco",
-        "githubId": "chonchiog",
-        "name": "FP16 Tied Embedding + LR/Warmdown Tuning",
-        "blurb": "Keep tok_emb.weight in fp16 during int8 quantization to eliminate the output-head quantization gap (0.007 -> 0.0005 BPB). Slightly reduce MLP hidden (992 vs 1024) to fit within 16MB. Tune warmdown (3600 vs 1200) and matrix LR (0.06 vs 0.04) for better convergence under the 10-min wallclock cap.",
-        "date": "2026-03-18"
+        "author": "Matthew Li",
+        "githubId": "mattqlf",
+        "name": "Sliding Window Eval (stride=64)",
+        "blurb": "Baseline 9x512 SP-1024 architecture with sliding window evaluation at stride=64. Each token is scored with 960+ tokens of context instead of the baseline's 0-1023. Training is identical to the naive baseline; the improvement comes entirely from the evaluation strategy. Post-quant int8+zlib roundtrip under the 16,000,000-byte cap.",
+        "date": "2026-03-19T04:48:00Z"
       },
       "metrics": {
-        "valBpb": 1.21972502,
-        "valLoss": 2.0594546,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
+        "valBpb": 1.19250007,
+        "valLoss": 2.01348383,
+        "preQuantValBpb": 1.2196,
+        "preQuantValLoss": 2.0592,
+        "stepStop": 13450,
+        "wallclockSeconds": 600.028,
+        "evalTimeSeconds": 69.881
       },
       "artifact": {
-        "bytesTotal": 15896222,
-        "bytesCode": 48125,
-        "bytesModelInt8Zlib": null
+        "bytesTotal": 15874829,
+        "bytesCode": 58340,
+        "bytesModelInt8Zlib": 15816489
       },
       "flags": {
         "usesValOnly": false
@@ -62,32 +62,32 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 42,
-        "title": "fp16 tied embedding + warmdown/LR tuning (val_bpb 1.2197)",
+        "number": 50,
+        "title": "Record: Sliding Window Eval (stride=64), val_bpb=1.1925",
         "state": "closed",
         "draft": false,
-        "mergedAt": "2026-03-19T17:16:50Z",
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/42",
-        "authorLogin": "chonchiog",
+        "mergedAt": "2026-03-19T17:28:13Z",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/50",
+        "authorLogin": "mattqlf",
         "authorName": null,
-        "createdAt": "2026-03-19T01:14:05Z",
-        "updatedAt": "2026-03-19T17:16:51Z",
-        "headSha": "a50fff562f0d343e695eea26b49f108b994a4028",
-        "headRepo": "chonchiog/parameter-golf"
+        "createdAt": "2026-03-19T05:36:48Z",
+        "updatedAt": "2026-03-19T17:32:56Z",
+        "headSha": "4bbdf43eb3cc174ea9a9d8de81748bd339b71caf",
+        "headRepo": "mattqlf/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/main/records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-18_FP16Embed_WD3600/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/main/records/track_10min_16mb/2026-03-18_FP16Embed_WD3600",
-        "pr": "https://github.com/openai/parameter-golf/pull/42",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/main/records/track_10min_16mb/2026-03-19_SlidingWindowEval/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-19_SlidingWindowEval/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-19_SlidingWindowEval/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/main/records/track_10min_16mb/2026-03-19_SlidingWindowEval/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/main/records/track_10min_16mb/2026-03-19_SlidingWindowEval",
+        "pr": "https://github.com/openai/parameter-golf/pull/50",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     "openPrMainTrack": {

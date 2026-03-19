@@ -1,43 +1,17 @@
 {
-  "generatedAt": "2026-03-19T17:24:37.106Z",
+  "generatedAt": "2026-03-19T17:35:59.402Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [
-    {
-      "stage": "pull-request-readme",
-      "pr": 106,
-      "submissionPath": "records/track_10min_16mb/2026-03-19_PR88_QAT_ExactExport/submission.json",
-      "reason": "missing-or-unreadable-readme"
-    },
-    {
-      "pr": 105,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 98,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 100,
-      "reason": "no-record-submission-json"
-    }
-  ],
-  "errors": [
-    {
-      "stage": "pull-request-file",
-      "pr": 46,
-      "filename": "records/track_10min_16mb/2026-03-19_OptimizedSOTA/submission.json",
-      "message": "Unexpected end of JSON input"
-    }
-  ],
+  "skipped": [],
+  "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-19T17:05:48Z",
+    "cutoffUpdatedAt": "2026-03-19T17:24:05Z",
     "pagesScanned": 1,
     "prsScanned": 93,
-    "prsRefreshed": 21,
-    "prsReused": 72,
+    "prsRefreshed": 4,
+    "prsReused": 89,
     "stoppedEarly": false,
     "refreshFailures": 0,
     "cacheEntries": 93,

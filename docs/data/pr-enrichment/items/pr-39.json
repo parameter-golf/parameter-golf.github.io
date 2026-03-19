@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T17:29:19.587Z",
+  "generatedAt": "2026-03-19T17:36:31.642Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -20,19 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Adds a 10th transformer layer with mixed int8/int6 precision plus lower Muon/Adam learning rates to hit the 16MB cap without sacrificing critical layer fidelity.",
+    "summary": "Adds a 10-layer tied-embedding Transformer with mixed int8/int6 quantization and lower Muon/Adam LRs to stay under 16MB while improving post-quant metrics.",
     "tags": [
       "mixed-precision",
       "architecture",
-      "quantization",
-      "training-schedule"
+      "training-schedule",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 quantization for middle layers with step-4 rounding",
-      "tied embeddings 10-layer 512-dim Transformer",
-      "lowered MATRIX/SCALAR/TIED_EMBED LRs to ~0.02/0.02/0.03"
+      "10-layer Transformer with tied embeddings",
+      "Layer-wise int8/int6 quantization (mid layers int6)",
+      "Lowered Muon/Adam learning rates (0.02/0.02/0.03)"
     ]
   },
   "compatibility": {

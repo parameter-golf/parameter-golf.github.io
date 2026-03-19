@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T17:28:46.070Z",
+  "generatedAt": "2026-03-19T17:36:27.119Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Long-context SP-1024 9×512 KV4 model trains at seq2048 with tuned 0.04/0.032/0.032 LRs and int8+zlib serialization to fit the cap.",
+    "summary": "SP-1024 9x512 model trained at 2048 tokens with tuned per-parameter learning rates and int8+zlib verification for the 10-minute track.",
     "tags": [
       "architecture",
       "training-schedule",
-      "quantization"
+      "quantization",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SP-1024 9×512 KV4 model layout for seq2048 runs",
-      "Tuned LR trio 0.04/0.032/0.032 for long context training",
-      "int8+zlib serialized checkpoints to meet 16MB limit"
+      "SP-1024 9x512 architecture running long-context (2048) training",
+      "Dedicated lr triplet (0.04/0.032/0.032) tuned for the longer sequence",
+      "Standalone int8+zlib verification pipeline for the record submission"
     ]
   },
   "compatibility": {

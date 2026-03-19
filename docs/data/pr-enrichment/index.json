@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T17:29:59.362Z",
+  "generatedAt": "2026-03-19T17:36:31.644Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -52,13 +52,13 @@
       "prNumber": 103,
       "title": "Non-record: Looped Transformer + LoRA + Skip Connections + NorMuon + SWA + Int6 + Sliding Window",
       "status": "open",
-      "updatedAt": "2026-03-19T17:24:52Z",
-      "headSha": "5cd05d1e03fdf158f8bee2e3c17858d8c62edab8",
-      "generatedAt": "2026-03-19T17:25:18.572Z",
-      "summary": "Looped 5-block transformer uses per-virtual-layer LoRA and encoder-decoder skips for 30 virtual layers, trained with NorMuon/SWA plus Int6 quant and sliding-window eval.",
+      "updatedAt": "2026-03-19T17:34:05Z",
+      "headSha": "7c472d623f203d7f5d84663e8e270f2ac63455e7",
+      "generatedAt": "2026-03-19T17:36:15.796Z",
+      "summary": "Looping five transformer blocks into 30 virtual layers with per-layer LoRA and decoder skip connections plus tailored NorMuon/SWA training.",
       "tags": [
         "architecture",
-        "training-schedule",
+        "optimizer",
         "quantization",
         "evaluation"
       ],
@@ -960,12 +960,11 @@
       "prNumber": 50,
       "title": "Record: Sliding Window Eval (stride=64), val_bpb=1.1925",
       "status": "closed",
-      "updatedAt": "2026-03-19T17:28:13Z",
+      "updatedAt": "2026-03-19T17:32:56Z",
       "headSha": "4bbdf43eb3cc174ea9a9d8de81748bd339b71caf",
-      "generatedAt": "2026-03-19T17:28:40.285Z",
-      "summary": "Sliding-window evaluation with stride 64 scores every token with ~960-token context on the baseline 9x512 SP-1024 model, leaving training unchanged.",
+      "generatedAt": "2026-03-19T17:36:20.588Z",
+      "summary": "Baseline training paired with stride-64 sliding-window evaluation so each token is scored with 960+ context tokens before int8+zlib reporting.",
       "tags": [
-        "sliding-window-eval",
         "evaluation"
       ],
       "flags": {
@@ -984,12 +983,13 @@
       "status": "closed",
       "updatedAt": "2026-03-19T17:25:29Z",
       "headSha": "99e72b1c02c0b485864c48710fab36dfe9475e6b",
-      "generatedAt": "2026-03-19T17:28:46.070Z",
-      "summary": "Long-context SP-1024 9×512 KV4 model trains at seq2048 with tuned 0.04/0.032/0.032 LRs and int8+zlib serialization to fit the cap.",
+      "generatedAt": "2026-03-19T17:36:27.119Z",
+      "summary": "SP-1024 9x512 model trained at 2048 tokens with tuned per-parameter learning rates and int8+zlib verification for the 10-minute track.",
       "tags": [
         "architecture",
         "training-schedule",
-        "quantization"
+        "quantization",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1143,13 +1143,13 @@
       "status": "open",
       "updatedAt": "2026-03-19T17:27:53Z",
       "headSha": "13acc8545800aad5a0b6d421df0a38773c8490bf",
-      "generatedAt": "2026-03-19T17:29:19.587Z",
-      "summary": "Adds a 10th transformer layer with mixed int8/int6 precision plus lower Muon/Adam learning rates to hit the 16MB cap without sacrificing critical layer fidelity.",
+      "generatedAt": "2026-03-19T17:36:31.642Z",
+      "summary": "Adds a 10-layer tied-embedding Transformer with mixed int8/int6 quantization and lower Muon/Adam LRs to stay under 16MB while improving post-quant metrics.",
       "tags": [
         "mixed-precision",
         "architecture",
-        "quantization",
-        "training-schedule"
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
