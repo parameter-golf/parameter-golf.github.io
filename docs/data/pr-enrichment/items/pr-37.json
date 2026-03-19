@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:41:52.047Z",
+  "generatedAt": "2026-03-19T17:01:27.786Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 37,
     "title": "[WIP] SP4096: Larger vocabulary for better BPB",
     "state": "open",
-    "updatedAt": "2026-03-19T00:59:59Z",
+    "updatedAt": "2026-03-19T16:57:34Z",
     "headSha": "dd01e00f7a07362f7f884eb182da357a9dd35463",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/37",
     "authorLogin": "khasinski"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Switching from a 1024 to 4096 token SentencePiece BPE reduces tokens/byte, yielding better BPB without changing the core architecture.",
+    "summary": "Switching to a 4096-word SentencePiece BPE reduces tokens per byte and cuts BPB vs 1024 baseline, pending full 8xH100 validation.",
     "tags": [
       "tokenization",
       "compression"
@@ -27,8 +27,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Larger vocab SentencePiece decreases tokens per byte",
-      "Untied embeddings use separate learning rates for input and output"
+      "4096-token SentencePiece BPE reduces tokens/byte vs 1024 vocab",
+      "Untied input/output embeddings with separate lrs to stay under 16MB",
+      "Tokenizer compression table shows steady tokens_per_byte drop"
     ]
   },
   "compatibility": {

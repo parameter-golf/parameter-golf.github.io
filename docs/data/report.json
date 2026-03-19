@@ -1,20 +1,69 @@
 {
-  "generatedAt": "2026-03-19T16:47:14.987Z",
+  "generatedAt": "2026-03-19T17:00:01.061Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [],
+  "skipped": [
+    {
+      "pr": 15,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 98,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 58,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 47,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 33,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 11,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 5,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 4,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 100,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 16,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 14,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 13,
+      "reason": "no-record-submission-json"
+    }
+  ],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-19T16:43:25Z",
+    "cutoffUpdatedAt": "2026-03-19T16:46:39Z",
     "pagesScanned": 1,
-    "prsScanned": 87,
-    "prsRefreshed": 2,
-    "prsReused": 85,
+    "prsScanned": 88,
+    "prsRefreshed": 24,
+    "prsReused": 64,
     "stoppedEarly": false,
     "refreshFailures": 0,
-    "cacheEntries": 87,
+    "cacheEntries": 88,
     "retryWindowRetained": false
   }
 }

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:40:05.457Z",
+  "generatedAt": "2026-03-19T17:01:09.727Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 62,
     "title": "WIP: Add adaptive eval-time context non-record MLX submission",
     "state": "open",
-    "updatedAt": "2026-03-19T11:21:24Z",
+    "updatedAt": "2026-03-19T16:57:40Z",
     "headSha": "e13f5a4aa45e97f5968dab6b273d6eb58c020504",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/62",
     "authorLogin": "stpcoder"
@@ -19,18 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Documenting a local non-record adaptive eval context submission that trades slower final scoring for a ~0.010 bpb gain over standard evaluation.",
+    "summary": "Local WIP adaptive eval context improves non-record MLX roundtrip by ~0.01019 BPB compared to standard evaluation.",
     "tags": [
       "non-record",
-      "evaluation",
-      "compression"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "adaptive coarse-to-fine eval window rescoring",
-      "int8+zlib final roundtrip scoring",
-      "same-setup comparison vs standard eval"
+      "- adaptive coarse-to-fine stride rescoring",
+      "- Apple Silicon MLX non-record snapshot"
     ]
   },
   "compatibility": {

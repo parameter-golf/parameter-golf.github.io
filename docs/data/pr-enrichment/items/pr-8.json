@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:42:27.061Z",
+  "generatedAt": "2026-03-19T17:01:37.605Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 8,
     "title": "Add depth recurrence + SwiGLU submission (Apple M3 8GB)",
     "state": "open",
-    "updatedAt": "2026-03-18T19:36:31Z",
+    "updatedAt": "2026-03-19T16:56:26Z",
     "headSha": "0484ec9da06d1dc64284e62e2e43fb3a44c9ce88",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/8",
     "authorLogin": "iranzithierry"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Non-record Apple M3 run tests depth recurrence with SwiGLU MLPs for 12 effective layers at 640 dim; scores limited by hardware.",
+    "summary": "Depth recurrence with four unique blocks reused 3× plus SwiGLU MLP trained on an Apple M3 (8GB) for a non-record efficiency probe.",
     "tags": [
+      "non-record",
       "architecture",
-      "depth-width",
-      "regularization",
-      "non-record"
+      "depth-width"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "3× depth recurrence weight sharing",
-      "SwiGLU MLP replacing relu²",
-      "recurrence-specific gate scalars"
+      "depth recurrence weight sharing",
+      "SwiGLU MLP in place of relu²",
+      "wider 640-dim model within 16MB constraint"
     ]
   },
   "compatibility": {

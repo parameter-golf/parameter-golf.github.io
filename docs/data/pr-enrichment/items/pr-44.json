@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:41:18.674Z",
+  "generatedAt": "2026-03-19T17:01:22.099Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 44,
     "title": "val-only 10min record (val_bpb:1.1111)",
-    "state": "open",
-    "updatedAt": "2026-03-19T15:02:54Z",
+    "state": "closed",
+    "updatedAt": "2026-03-19T16:51:17Z",
     "headSha": "a17ff66702d50731c5d6833145875687a2791016",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/44",
     "authorLogin": "daniellawson9999"
@@ -19,17 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Val-only 10min record trains a 9x512 SP-1024 model entirely on the validation shard, posting val_bpb 1.1111.",
+    "summary": "Val-only 10min record trains solely on the validation shard, producing a quantized val_bpb of 1.1111 after the 10-minute cap.",
     "tags": [
       "val-only",
       "evaluation"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Trainer exclusively used the published validation shard as both train and val data per PR description.",
+    "valOnlyReasoning": "Run explicitly trains entirely on the validation shard by aliasing both train and val files to the published validation data, per PR.",
     "techniques": [
-      "Alias train/val files to same shard",
-      "8xH100 10min wallclock-limited run",
-      "int8+zlib roundtrip evaluation"
+      "Validation-only dataset aliasing",
+      "Int8+zlib roundtrip evaluation"
     ]
   },
   "compatibility": {

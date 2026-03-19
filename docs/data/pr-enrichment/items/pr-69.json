@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T16:39:40.314Z",
+  "generatedAt": "2026-03-19T17:01:00.506Z",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 69,
     "title": "[WIP] SubSixteen: Ternary QAT + Depth Recurrence + TTT (val_bpb pending)",
     "state": "open",
-    "updatedAt": "2026-03-19T08:52:18Z",
+    "updatedAt": "2026-03-19T16:57:40Z",
     "headSha": "4a685e4fdbeaec90f474bd75299500888c311757",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/69",
     "authorLogin": "TevBenji"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacks ternary QAT, depth recurrence, and test-time training for SubSixteen aiming sub-1.10 BPB with ~3.7MB artifact from 20.7M stored params.",
+    "summary": "SubSixteen combines ternary QAT, recurrence, and test-time training pending 8×H100 val_bpb results.",
     "tags": [
       "quantization",
-      "depth-width"
+      "depth-width",
+      "training-schedule"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Standard training submission awaiting full validation run.",
     "techniques": [
-      "ternary QAT BitLinear with {-1,0,+1}",
-      "depth recurrence: 5 stored blocks yield 32 effective layers",
-      "test-time training on final two layers per document"
+      "Ternary QAT via AbsMedian quantization + STE",
+      "Depth recurrence with shared looped blocks and progressive losses",
+      "Test-time training adapting final layers per document"
     ]
   },
   "compatibility": {

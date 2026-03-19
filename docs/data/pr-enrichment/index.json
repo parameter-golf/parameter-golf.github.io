@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T16:53:20.399Z",
+  "generatedAt": "2026-03-19T17:01:37.607Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v1",
   "entries": [
@@ -7,14 +7,14 @@
       "prNumber": 99,
       "title": "submission: Top2K + sliding-window stride64",
       "status": "open",
-      "updatedAt": "2026-03-19T16:42:30Z",
-      "headSha": "0186321fdf96a0c0cdbb15ad4217dfca8b37e81b",
-      "generatedAt": "2026-03-19T16:44:26.412Z",
-      "summary": "Non-record Top2K stride64 run hits val_loss 1.95946 with int6/int8 quantized weights and stride-64 sliding-window eval.",
+      "updatedAt": "2026-03-19T16:56:52Z",
+      "headSha": "0342280b2f742d0c967177c6a3712fb296627670",
+      "generatedAt": "2026-03-19T17:00:43.898Z",
+      "summary": "Top2K sliding-window stride64 lane repackages best under-cap run with int6/int8 quantization and fp16 K subsets.",
       "tags": [
-        "sliding-window-eval",
         "quantization",
-        "compression"
+        "mixed-precision",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -376,14 +376,14 @@
       "prNumber": 77,
       "title": "[record bpb=1.195] sliding window + LoRA TTT",
       "status": "open",
-      "updatedAt": "2026-03-19T11:58:26Z",
+      "updatedAt": "2026-03-19T16:53:12Z",
       "headSha": "9fed66c01eb86e9089b68580a2295cbffaef25de",
-      "generatedAt": "2026-03-19T16:38:49.222Z",
-      "summary": "Naive baseline eval adds per-document LoRA TTT on doc-isolated sliding-window chunks with rank-8 adapters on head/Q/V to reach 1.195 BPB.",
+      "generatedAt": "2026-03-19T17:00:50.469Z",
+      "summary": "Per-doc LoRA test-time training plus sliding-window, document-isolated eval drops validation BPB to ~1.193.",
       "tags": [
         "sliding-window-eval",
-        "attention",
-        "evaluation"
+        "evaluation",
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -399,14 +399,15 @@
       "prNumber": 76,
       "title": "[WIP] Int6 + Wider MLP 3x + FP16 Embed + Sliding Window (est. val_bpb ~1.160)",
       "status": "open",
-      "updatedAt": "2026-03-19T11:00:05Z",
+      "updatedAt": "2026-03-19T16:57:41Z",
       "headSha": "e6bd4d200de10d84ac3993f49f0941055d9ea3d3",
-      "generatedAt": "2026-03-19T16:38:55.021Z",
-      "summary": "Combines wider MLP, int6 quantized weights with FP16 tied embeddings, and sliding-window eval to target ~1.160 val_bpb pending the 8xH100 run.",
+      "generatedAt": "2026-03-19T17:00:55.327Z",
+      "summary": "Int6 quantized weights, FP16 tied embeddings, and sliding-window eval join a wider MLP for an estimated val_bpb ~1.160 pending full run.",
       "tags": [
         "quantization",
         "mixed-precision",
-        "sliding-window-eval"
+        "sliding-window-eval",
+        "depth-width"
       ],
       "flags": {
         "usesValOnly": false,
@@ -536,13 +537,14 @@
       "prNumber": 69,
       "title": "[WIP] SubSixteen: Ternary QAT + Depth Recurrence + TTT (val_bpb pending)",
       "status": "open",
-      "updatedAt": "2026-03-19T08:52:18Z",
+      "updatedAt": "2026-03-19T16:57:40Z",
       "headSha": "4a685e4fdbeaec90f474bd75299500888c311757",
-      "generatedAt": "2026-03-19T16:39:40.314Z",
-      "summary": "Stacks ternary QAT, depth recurrence, and test-time training for SubSixteen aiming sub-1.10 BPB with ~3.7MB artifact from 20.7M stored params.",
+      "generatedAt": "2026-03-19T17:01:00.506Z",
+      "summary": "SubSixteen combines ternary QAT, recurrence, and test-time training pending 8×H100 val_bpb results.",
       "tags": [
         "quantization",
-        "depth-width"
+        "depth-width",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -606,13 +608,12 @@
       "status": "open",
       "updatedAt": "2026-03-19T16:47:28Z",
       "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
-      "generatedAt": "2026-03-19T16:53:09.554Z",
-      "summary": "Val-only CombinedOptimal hits 0.9695 BPB while standard run at 1.1629 using STE int6 QAT, Muon, sliding-window.",
+      "generatedAt": "2026-03-19T17:01:05.655Z",
+      "summary": "Val-only record hits 0.9695 BPB via STE int6 QAT, mixed quant, sliding-window eval, and tuned Muon while standard run posts 1.1629 BPB.",
       "tags": [
         "val-only",
-        "quantization",
         "sliding-window-eval",
-        "optimizer"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": true,
@@ -650,14 +651,13 @@
       "prNumber": 62,
       "title": "WIP: Add adaptive eval-time context non-record MLX submission",
       "status": "open",
-      "updatedAt": "2026-03-19T11:21:24Z",
+      "updatedAt": "2026-03-19T16:57:40Z",
       "headSha": "e13f5a4aa45e97f5968dab6b273d6eb58c020504",
-      "generatedAt": "2026-03-19T16:40:05.457Z",
-      "summary": "Documenting a local non-record adaptive eval context submission that trades slower final scoring for a ~0.010 bpb gain over standard evaluation.",
+      "generatedAt": "2026-03-19T17:01:09.727Z",
+      "summary": "Local WIP adaptive eval context improves non-record MLX roundtrip by ~0.01019 BPB compared to standard evaluation.",
       "tags": [
         "non-record",
-        "evaluation",
-        "compression"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -836,14 +836,14 @@
       "prNumber": 51,
       "title": "[WIP] Depth-recurrent QAT: 3x4 loops, 768d, 15.6MB artifact",
       "status": "open",
-      "updatedAt": "2026-03-19T09:12:06Z",
+      "updatedAt": "2026-03-19T16:57:37Z",
       "headSha": "45db65acf24b1e6529c60c4439a26e41cccb3334",
-      "generatedAt": "2026-03-19T16:40:47.110Z",
-      "summary": "Depth-recurrent QAT loops 3 shared blocks 4x with per-loop LoRA, widening to 768d to fit a 15.6MB INT8 artifact.",
+      "generatedAt": "2026-03-19T17:01:16.861Z",
+      "summary": "Depth-recurrent QAT loops 3 shared blocks 4× for 12 layers, adds LoRA/STE quantization and LAWA, hitting 15.6MB artifact with val bpb ~2.08.",
       "tags": [
         "quantization",
         "architecture",
-        "compression"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -946,11 +946,11 @@
     {
       "prNumber": 44,
       "title": "val-only 10min record (val_bpb:1.1111)",
-      "status": "open",
-      "updatedAt": "2026-03-19T15:02:54Z",
+      "status": "closed",
+      "updatedAt": "2026-03-19T16:51:17Z",
       "headSha": "a17ff66702d50731c5d6833145875687a2791016",
-      "generatedAt": "2026-03-19T16:41:18.674Z",
-      "summary": "Val-only 10min record trains a 9x512 SP-1024 model entirely on the validation shard, posting val_bpb 1.1111.",
+      "generatedAt": "2026-03-19T17:01:22.099Z",
+      "summary": "Val-only 10min record trains solely on the validation shard, producing a quantized val_bpb of 1.1111 after the 10-minute cap.",
       "tags": [
         "val-only",
         "evaluation"
@@ -1060,10 +1060,10 @@
       "prNumber": 37,
       "title": "[WIP] SP4096: Larger vocabulary for better BPB",
       "status": "open",
-      "updatedAt": "2026-03-19T00:59:59Z",
+      "updatedAt": "2026-03-19T16:57:34Z",
       "headSha": "dd01e00f7a07362f7f884eb182da357a9dd35463",
-      "generatedAt": "2026-03-19T16:41:52.047Z",
-      "summary": "Switching from a 1024 to 4096 token SentencePiece BPE reduces tokens/byte, yielding better BPB without changing the core architecture.",
+      "generatedAt": "2026-03-19T17:01:27.786Z",
+      "summary": "Switching to a 4096-word SentencePiece BPE reduces tokens per byte and cuts BPB vs 1024 baseline, pending full 8xH100 validation.",
       "tags": [
         "tokenization",
         "compression"
@@ -1127,14 +1127,13 @@
       "prNumber": 29,
       "title": "[WIP] Recurrent MQA Transformer — depth recurrence + weight tying (nidhilak-Aquarius)",
       "status": "open",
-      "updatedAt": "2026-03-19T14:23:14Z",
+      "updatedAt": "2026-03-19T16:57:32Z",
       "headSha": "95b80a92f87df3b2acab38048443858a8c0f8e11",
-      "generatedAt": "2026-03-19T16:42:10.153Z",
-      "summary": "Recurrent MQA Transformer loops one shared block 12× with RoPE, SwiGLU, weight tying, and awaits FineWeb val_bpb results.",
+      "generatedAt": "2026-03-19T17:01:33.676Z",
+      "summary": "Recurrent MQA Transformer loops one shared block 12 times with tied embeddings and MQA to squeeze 3.5M params under 5.2MB for the 16MB track.",
       "tags": [
         "architecture",
-        "regularization",
-        "compression"
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1195,15 +1194,14 @@
       "prNumber": 8,
       "title": "Add depth recurrence + SwiGLU submission (Apple M3 8GB)",
       "status": "open",
-      "updatedAt": "2026-03-18T19:36:31Z",
+      "updatedAt": "2026-03-19T16:56:26Z",
       "headSha": "0484ec9da06d1dc64284e62e2e43fb3a44c9ce88",
-      "generatedAt": "2026-03-19T16:42:27.061Z",
-      "summary": "Non-record Apple M3 run tests depth recurrence with SwiGLU MLPs for 12 effective layers at 640 dim; scores limited by hardware.",
+      "generatedAt": "2026-03-19T17:01:37.605Z",
+      "summary": "Depth recurrence with four unique blocks reused 3× plus SwiGLU MLP trained on an Apple M3 (8GB) for a non-record efficiency probe.",
       "tags": [
+        "non-record",
         "architecture",
-        "depth-width",
-        "regularization",
-        "non-record"
+        "depth-width"
       ],
       "flags": {
         "usesValOnly": false,

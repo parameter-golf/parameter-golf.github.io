@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-19T16:47:18.053Z",
-  "lastSeenUpdatedAt": "2026-03-19T16:46:39Z",
+  "generatedAt": "2026-03-19T17:00:29.516Z",
+  "lastSeenUpdatedAt": "2026-03-19T16:58:37Z",
   "prs": {
     "1": {
       "number": 1,
@@ -44,18 +44,18 @@
     },
     "4": {
       "number": 4,
-      "updatedAt": "2026-03-18T18:07:54Z",
+      "updatedAt": "2026-03-19T16:57:31Z",
       "pr": {
         "number": 4,
         "title": "[WIP] Optimized Muon/Architecture research by @NOPIMPOSSSIBLEWHY",
         "state": "open",
-        "draft": false,
+        "draft": true,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/4",
         "authorLogin": "NOPIMPOSSSIBLEWHY",
         "authorName": null,
         "createdAt": "2026-03-18T18:07:54Z",
-        "updatedAt": "2026-03-18T18:07:54Z",
+        "updatedAt": "2026-03-19T16:57:31Z",
         "headSha": "70c126be428e404f7876f1cd89816f810cd2b792",
         "headRepo": "NOPIMPOSSSIBLEWHY/parameter-golf"
       },
@@ -63,7 +63,7 @@
     },
     "5": {
       "number": 5,
-      "updatedAt": "2026-03-19T11:00:49Z",
+      "updatedAt": "2026-03-19T16:57:31Z",
       "pr": {
         "number": 5,
         "title": "[WIP] Sparse Attention + Recursive Weight Sharing for 16MB Efficiency",
@@ -74,7 +74,7 @@
         "authorLogin": "albertorkive",
         "authorName": null,
         "createdAt": "2026-03-18T18:20:47Z",
-        "updatedAt": "2026-03-19T11:00:49Z",
+        "updatedAt": "2026-03-19T16:57:31Z",
         "headSha": "31e777e6073a5fc4b6a0f4cebbe9d5fe1f289dff",
         "headRepo": "albertorkive/parameter-golf"
       },
@@ -192,7 +192,7 @@
     },
     "8": {
       "number": 8,
-      "updatedAt": "2026-03-18T19:36:31Z",
+      "updatedAt": "2026-03-19T16:56:26Z",
       "pr": {
         "number": 8,
         "title": "Add depth recurrence + SwiGLU submission (Apple M3 8GB)",
@@ -203,7 +203,7 @@
         "authorLogin": "iranzithierry",
         "authorName": null,
         "createdAt": "2026-03-18T19:11:39Z",
-        "updatedAt": "2026-03-18T19:36:31Z",
+        "updatedAt": "2026-03-19T16:56:26Z",
         "headSha": "0484ec9da06d1dc64284e62e2e43fb3a44c9ce88",
         "headRepo": "iranzithierry/parameter-golf"
       },
@@ -266,9 +266,9 @@
             "authorLogin": "iranzithierry",
             "authorName": null,
             "createdAt": "2026-03-18T19:11:39Z",
+            "updatedAt": "2026-03-19T16:56:26Z",
             "headSha": "0484ec9da06d1dc64284e62e2e43fb3a44c9ce88",
-            "headRepo": "iranzithierry/parameter-golf",
-            "updatedAt": "2026-03-18T19:36:31Z"
+            "headRepo": "iranzithierry/parameter-golf"
           },
           "links": {
             "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0484ec9da06d1dc64284e62e2e43fb3a44c9ce88/records/track_non_record_16mb/2026-03-18_M3_DepthRecurrence_SwiGLU/submission.json",
@@ -321,7 +321,7 @@
     },
     "11": {
       "number": 11,
-      "updatedAt": "2026-03-18T20:07:23Z",
+      "updatedAt": "2026-03-19T16:57:32Z",
       "pr": {
         "number": 11,
         "title": "[WIP] Looped transformer with LoRA adapters",
@@ -332,7 +332,7 @@
         "authorLogin": "adityawrk",
         "authorName": null,
         "createdAt": "2026-03-18T19:43:16Z",
-        "updatedAt": "2026-03-18T20:07:23Z",
+        "updatedAt": "2026-03-19T16:57:32Z",
         "headSha": "dba0d61fc2c5054d8db0e3f65d667ea957ea29c7",
         "headRepo": "adityawrk/parameter-golf"
       },
@@ -340,7 +340,7 @@
     },
     "13": {
       "number": 13,
-      "updatedAt": "2026-03-18T20:02:19Z",
+      "updatedAt": "2026-03-19T16:56:26Z",
       "pr": {
         "number": 13,
         "title": "Add experiment workflow and sweep helpers",
@@ -351,7 +351,7 @@
         "authorLogin": "GLDRoger",
         "authorName": null,
         "createdAt": "2026-03-18T20:00:44Z",
-        "updatedAt": "2026-03-18T20:02:19Z",
+        "updatedAt": "2026-03-19T16:56:26Z",
         "headSha": "a0709872d51a15aa5f01a564c609a0d904c898ce",
         "headRepo": "GLDRoger/parameter-golf"
       },
@@ -359,7 +359,7 @@
     },
     "14": {
       "number": 14,
-      "updatedAt": "2026-03-18T20:11:07Z",
+      "updatedAt": "2026-03-19T16:56:27Z",
       "pr": {
         "number": 14,
         "title": "[non-submission] CPU fallback for the poors (non-CUDA non-MLX)",
@@ -370,7 +370,7 @@
         "authorLogin": "jordankzf",
         "authorName": null,
         "createdAt": "2026-03-18T20:09:01Z",
-        "updatedAt": "2026-03-18T20:11:07Z",
+        "updatedAt": "2026-03-19T16:56:27Z",
         "headSha": "7e253d2715d6e3644f2e8b922fef5a3bd8f1a6e0",
         "headRepo": "jordankzf/parameter-golf"
       },
@@ -378,18 +378,18 @@
     },
     "15": {
       "number": 15,
-      "updatedAt": "2026-03-18T20:18:06Z",
+      "updatedAt": "2026-03-19T16:58:37Z",
       "pr": {
         "number": 15,
         "title": "feat: recursive weight sharing for 16MB limit",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/15",
         "authorLogin": "ArthurKaroyan",
         "authorName": null,
         "createdAt": "2026-03-18T20:18:06Z",
-        "updatedAt": "2026-03-18T20:18:06Z",
+        "updatedAt": "2026-03-19T16:58:37Z",
         "headSha": "28d41a448c462c2d8092e769131c7b72306d917f",
         "headRepo": "ArthurKaroyan/parameter-golf"
       },
@@ -397,7 +397,7 @@
     },
     "16": {
       "number": 16,
-      "updatedAt": "2026-03-19T13:37:39Z",
+      "updatedAt": "2026-03-19T16:56:28Z",
       "pr": {
         "number": 16,
         "title": "Refactor model with BioDNA and FractalLinear classes :))",
@@ -408,7 +408,7 @@
         "authorLogin": "irroder",
         "authorName": null,
         "createdAt": "2026-03-18T20:46:47Z",
-        "updatedAt": "2026-03-19T13:37:39Z",
+        "updatedAt": "2026-03-19T16:56:28Z",
         "headSha": "1786739717ded4e58868719d833b030b44783a1d",
         "headRepo": "irroder/parameter-golf"
       },
@@ -693,7 +693,7 @@
     },
     "29": {
       "number": 29,
-      "updatedAt": "2026-03-19T14:23:14Z",
+      "updatedAt": "2026-03-19T16:57:32Z",
       "pr": {
         "number": 29,
         "title": "[WIP] Recurrent MQA Transformer — depth recurrence + weight tying (nidhilak-Aquarius)",
@@ -704,7 +704,7 @@
         "authorLogin": "nidhilak-Aquarius",
         "authorName": null,
         "createdAt": "2026-03-18T22:40:48Z",
-        "updatedAt": "2026-03-19T14:23:14Z",
+        "updatedAt": "2026-03-19T16:57:32Z",
         "headSha": "95b80a92f87df3b2acab38048443858a8c0f8e11",
         "headRepo": "nidhilak-Aquarius/parameter-golf"
       },
@@ -767,9 +767,9 @@
             "authorLogin": "nidhilak-Aquarius",
             "authorName": null,
             "createdAt": "2026-03-18T22:40:48Z",
+            "updatedAt": "2026-03-19T16:57:32Z",
             "headSha": "95b80a92f87df3b2acab38048443858a8c0f8e11",
-            "headRepo": "nidhilak-Aquarius/parameter-golf",
-            "updatedAt": "2026-03-19T14:23:14Z"
+            "headRepo": "nidhilak-Aquarius/parameter-golf"
           },
           "links": {
             "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/95b80a92f87df3b2acab38048443858a8c0f8e11/records/track_10min_16mb/2026-03-19_nidhilak-Aquarius/submission.json",
@@ -985,7 +985,7 @@
     },
     "33": {
       "number": 33,
-      "updatedAt": "2026-03-19T07:03:21Z",
+      "updatedAt": "2026-03-19T16:57:33Z",
       "pr": {
         "number": 33,
         "title": "[WIP] Compression-aware fixed-step research",
@@ -996,7 +996,7 @@
         "authorLogin": "JusticeShultz",
         "authorName": null,
         "createdAt": "2026-03-18T23:08:30Z",
-        "updatedAt": "2026-03-19T07:03:21Z",
+        "updatedAt": "2026-03-19T16:57:33Z",
         "headSha": "fc3c1431ac22bb2e9fa3a11f2963939dfb3ca27a",
         "headRepo": "JusticeShultz/parameter-golf"
       },
@@ -1133,7 +1133,7 @@
     },
     "37": {
       "number": 37,
-      "updatedAt": "2026-03-19T00:59:59Z",
+      "updatedAt": "2026-03-19T16:57:34Z",
       "pr": {
         "number": 37,
         "title": "[WIP] SP4096: Larger vocabulary for better BPB",
@@ -1144,7 +1144,7 @@
         "authorLogin": "khasinski",
         "authorName": null,
         "createdAt": "2026-03-18T23:57:31Z",
-        "updatedAt": "2026-03-19T00:59:59Z",
+        "updatedAt": "2026-03-19T16:57:34Z",
         "headSha": "dd01e00f7a07362f7f884eb182da357a9dd35463",
         "headRepo": "khasinski/parameter-golf"
       },
@@ -1207,9 +1207,9 @@
             "authorLogin": "khasinski",
             "authorName": null,
             "createdAt": "2026-03-18T23:57:31Z",
+            "updatedAt": "2026-03-19T16:57:34Z",
             "headSha": "dd01e00f7a07362f7f884eb182da357a9dd35463",
-            "headRepo": "khasinski/parameter-golf",
-            "updatedAt": "2026-03-19T00:59:59Z"
+            "headRepo": "khasinski/parameter-golf"
           },
           "links": {
             "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/dd01e00f7a07362f7f884eb182da357a9dd35463/records/track_10min_16mb/2026-03-19_SP4096_9x512_KV4/submission.json",
@@ -1224,7 +1224,7 @@
     },
     "38": {
       "number": 38,
-      "updatedAt": "2026-03-19T00:20:01Z",
+      "updatedAt": "2026-03-19T16:57:35Z",
       "pr": {
         "number": 38,
         "title": "[wip] depth-recurrent QAT: 3x3 shared blocks + LoRA",
@@ -1235,7 +1235,7 @@
         "authorLogin": "kxddry",
         "authorName": null,
         "createdAt": "2026-03-19T00:10:45Z",
-        "updatedAt": "2026-03-19T00:20:01Z",
+        "updatedAt": "2026-03-19T16:57:35Z",
         "headSha": "a12277f9dd41756c5a557063bb4a1db4138d1e83",
         "headRepo": "kxddry/parameter-golf"
       },
@@ -1298,9 +1298,9 @@
             "authorLogin": "kxddry",
             "authorName": null,
             "createdAt": "2026-03-19T00:10:45Z",
+            "updatedAt": "2026-03-19T16:57:35Z",
             "headSha": "a12277f9dd41756c5a557063bb4a1db4138d1e83",
-            "headRepo": "kxddry/parameter-golf",
-            "updatedAt": "2026-03-19T00:20:01Z"
+            "headRepo": "kxddry/parameter-golf"
           },
           "links": {
             "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a12277f9dd41756c5a557063bb4a1db4138d1e83/records/track_10min_16mb/2026-03-19_DepthRecurrentQAT/submission.json",
@@ -1750,18 +1750,18 @@
     },
     "44": {
       "number": 44,
-      "updatedAt": "2026-03-19T15:02:54Z",
+      "updatedAt": "2026-03-19T16:51:17Z",
       "pr": {
         "number": 44,
         "title": "val-only 10min record (val_bpb:1.1111)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/44",
         "authorLogin": "daniellawson9999",
         "authorName": null,
         "createdAt": "2026-03-19T02:23:27Z",
-        "updatedAt": "2026-03-19T15:02:54Z",
+        "updatedAt": "2026-03-19T16:51:17Z",
         "headSha": "a17ff66702d50731c5d6833145875687a2791016",
         "headRepo": "daniellawson9999/parameter-golf"
       },
@@ -1769,7 +1769,7 @@
         {
           "id": "pr-44-records-track_10min_16mb-2026-03-19_ValOnly_10min-submission-json",
           "source": "pull_request",
-          "status": "open",
+          "status": "closed",
           "category": "main-track",
           "track": {
             "path": "records/track_10min_16mb",
@@ -1823,16 +1823,16 @@
           "pr": {
             "number": 44,
             "title": "val-only 10min record (val_bpb:1.1111)",
-            "state": "open",
+            "state": "closed",
             "draft": false,
             "mergedAt": null,
             "htmlUrl": "https://github.com/openai/parameter-golf/pull/44",
             "authorLogin": "daniellawson9999",
             "authorName": null,
             "createdAt": "2026-03-19T02:23:27Z",
+            "updatedAt": "2026-03-19T16:51:17Z",
             "headSha": "a17ff66702d50731c5d6833145875687a2791016",
-            "headRepo": "daniellawson9999/parameter-golf",
-            "updatedAt": "2026-03-19T15:02:54Z"
+            "headRepo": "daniellawson9999/parameter-golf"
           },
           "links": {
             "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a17ff66702d50731c5d6833145875687a2791016/records/track_10min_16mb/2026-03-19_ValOnly_10min/submission.json",
@@ -1957,7 +1957,7 @@
     },
     "47": {
       "number": 47,
-      "updatedAt": "2026-03-19T03:17:09Z",
+      "updatedAt": "2026-03-19T16:57:36Z",
       "pr": {
         "number": 47,
         "title": "[WIP] autoresearch-inspired attempt at solving this",
@@ -1968,7 +1968,7 @@
         "authorLogin": "calmdentist",
         "authorName": null,
         "createdAt": "2026-03-19T03:17:09Z",
-        "updatedAt": "2026-03-19T03:17:09Z",
+        "updatedAt": "2026-03-19T16:57:36Z",
         "headSha": "c1297c99cb32dad9c1a091b276b56ddd359ee05e",
         "headRepo": "calmdentist/parameter-golf"
       },
@@ -2249,7 +2249,7 @@
     },
     "51": {
       "number": 51,
-      "updatedAt": "2026-03-19T09:12:06Z",
+      "updatedAt": "2026-03-19T16:57:37Z",
       "pr": {
         "number": 51,
         "title": "[WIP] Depth-recurrent QAT: 3x4 loops, 768d, 15.6MB artifact",
@@ -2260,7 +2260,7 @@
         "authorLogin": "hacksurvivor",
         "authorName": null,
         "createdAt": "2026-03-19T05:48:43Z",
-        "updatedAt": "2026-03-19T09:12:06Z",
+        "updatedAt": "2026-03-19T16:57:37Z",
         "headSha": "45db65acf24b1e6529c60c4439a26e41cccb3334",
         "headRepo": "hacksurvivor/parameter-golf"
       },
@@ -2323,9 +2323,9 @@
             "authorLogin": "hacksurvivor",
             "authorName": null,
             "createdAt": "2026-03-19T05:48:43Z",
+            "updatedAt": "2026-03-19T16:57:37Z",
             "headSha": "45db65acf24b1e6529c60c4439a26e41cccb3334",
-            "headRepo": "hacksurvivor/parameter-golf",
-            "updatedAt": "2026-03-19T09:12:06Z"
+            "headRepo": "hacksurvivor/parameter-golf"
           },
           "links": {
             "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/45db65acf24b1e6529c60c4439a26e41cccb3334/records/track_10min_16mb/2026-03-19_DepthRecurrentQAT/submission.json",
@@ -2886,7 +2886,7 @@
     },
     "58": {
       "number": 58,
-      "updatedAt": "2026-03-19T07:38:31Z",
+      "updatedAt": "2026-03-19T16:57:38Z",
       "pr": {
         "number": 58,
         "title": "[WIP] Depth recurrence + BitLinear compression approach",
@@ -2897,7 +2897,7 @@
         "authorLogin": "Jenja-N",
         "authorName": null,
         "createdAt": "2026-03-19T06:49:03Z",
-        "updatedAt": "2026-03-19T07:38:31Z",
+        "updatedAt": "2026-03-19T16:57:38Z",
         "headSha": "304a43f7b6a631fe745ddaabdaa10fe205b116cc",
         "headRepo": "Jenja-N/parameter-golf"
       },
@@ -3178,7 +3178,7 @@
     },
     "62": {
       "number": 62,
-      "updatedAt": "2026-03-19T11:21:24Z",
+      "updatedAt": "2026-03-19T16:57:40Z",
       "pr": {
         "number": 62,
         "title": "WIP: Add adaptive eval-time context non-record MLX submission",
@@ -3189,7 +3189,7 @@
         "authorLogin": "stpcoder",
         "authorName": null,
         "createdAt": "2026-03-19T06:57:25Z",
-        "updatedAt": "2026-03-19T11:21:24Z",
+        "updatedAt": "2026-03-19T16:57:40Z",
         "headSha": "e13f5a4aa45e97f5968dab6b273d6eb58c020504",
         "headRepo": "stpcoder/parameter-golf"
       },
@@ -3252,9 +3252,9 @@
             "authorLogin": "stpcoder",
             "authorName": null,
             "createdAt": "2026-03-19T06:57:25Z",
+            "updatedAt": "2026-03-19T16:57:40Z",
             "headSha": "e13f5a4aa45e97f5968dab6b273d6eb58c020504",
-            "headRepo": "stpcoder/parameter-golf",
-            "updatedAt": "2026-03-19T11:21:24Z"
+            "headRepo": "stpcoder/parameter-golf"
           },
           "links": {
             "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e13f5a4aa45e97f5968dab6b273d6eb58c020504/records/track_non_record_16mb/2026-03-19_AdaptiveEvalContext_MLX_M4Pro_sp1024_200it/submission.json",
@@ -3360,7 +3360,7 @@
     },
     "64": {
       "number": 64,
-      "updatedAt": "2026-03-19T16:46:39Z",
+      "updatedAt": "2026-03-19T16:47:28Z",
       "pr": {
         "number": 64,
         "title": "Record: val_bpb=0.9695 (val-only) + val_bpb=1.1629 (standard)",
@@ -3371,7 +3371,7 @@
         "authorLogin": "yesbhautik",
         "authorName": null,
         "createdAt": "2026-03-19T07:32:20Z",
-        "updatedAt": "2026-03-19T16:46:39Z",
+        "updatedAt": "2026-03-19T16:47:28Z",
         "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
         "headRepo": "yesbhautik/parameter-golf"
       },
@@ -3440,7 +3440,7 @@
             "authorLogin": "yesbhautik",
             "authorName": null,
             "createdAt": "2026-03-19T07:32:20Z",
-            "updatedAt": "2026-03-19T16:46:39Z",
+            "updatedAt": "2026-03-19T16:47:28Z",
             "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
             "headRepo": "yesbhautik/parameter-golf"
           },
@@ -3516,7 +3516,7 @@
             "authorLogin": "yesbhautik",
             "authorName": null,
             "createdAt": "2026-03-19T07:32:20Z",
-            "updatedAt": "2026-03-19T16:46:39Z",
+            "updatedAt": "2026-03-19T16:47:28Z",
             "headSha": "978e90cd2bad14eef350e1a4ef8b64cfd59f631a",
             "headRepo": "yesbhautik/parameter-golf"
           },
@@ -3734,7 +3734,7 @@
     },
     "69": {
       "number": 69,
-      "updatedAt": "2026-03-19T08:52:18Z",
+      "updatedAt": "2026-03-19T16:57:40Z",
       "pr": {
         "number": 69,
         "title": "[WIP] SubSixteen: Ternary QAT + Depth Recurrence + TTT (val_bpb pending)",
@@ -3745,7 +3745,7 @@
         "authorLogin": "TevBenji",
         "authorName": null,
         "createdAt": "2026-03-19T08:52:18Z",
-        "updatedAt": "2026-03-19T08:52:18Z",
+        "updatedAt": "2026-03-19T16:57:40Z",
         "headSha": "4a685e4fdbeaec90f474bd75299500888c311757",
         "headRepo": "TevBenji/parameter-golf"
       },
@@ -3808,9 +3808,9 @@
             "authorLogin": "TevBenji",
             "authorName": null,
             "createdAt": "2026-03-19T08:52:18Z",
+            "updatedAt": "2026-03-19T16:57:40Z",
             "headSha": "4a685e4fdbeaec90f474bd75299500888c311757",
-            "headRepo": "TevBenji/parameter-golf",
-            "updatedAt": "2026-03-19T08:52:18Z"
+            "headRepo": "TevBenji/parameter-golf"
           },
           "links": {
             "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4a685e4fdbeaec90f474bd75299500888c311757/records/track_10min_16mb/2026-03-19_SubSixteen/submission.json",
@@ -4299,7 +4299,7 @@
     },
     "76": {
       "number": 76,
-      "updatedAt": "2026-03-19T11:00:05Z",
+      "updatedAt": "2026-03-19T16:57:41Z",
       "pr": {
         "number": 76,
         "title": "[WIP] Int6 + Wider MLP 3x + FP16 Embed + Sliding Window (est. val_bpb ~1.160)",
@@ -4310,7 +4310,7 @@
         "authorLogin": "unixmadtoonslab",
         "authorName": null,
         "createdAt": "2026-03-19T10:51:00Z",
-        "updatedAt": "2026-03-19T11:00:05Z",
+        "updatedAt": "2026-03-19T16:57:41Z",
         "headSha": "e6bd4d200de10d84ac3993f49f0941055d9ea3d3",
         "headRepo": "unixmadtoonslab/parameter-golf"
       },
@@ -4373,9 +4373,9 @@
             "authorLogin": "unixmadtoonslab",
             "authorName": null,
             "createdAt": "2026-03-19T10:51:00Z",
+            "updatedAt": "2026-03-19T16:57:41Z",
             "headSha": "e6bd4d200de10d84ac3993f49f0941055d9ea3d3",
-            "headRepo": "unixmadtoonslab/parameter-golf",
-            "updatedAt": "2026-03-19T11:00:05Z"
+            "headRepo": "unixmadtoonslab/parameter-golf"
           },
           "links": {
             "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e6bd4d200de10d84ac3993f49f0941055d9ea3d3/records/track_10min_16mb/2026-03-19_Int6_WiderMLP_FP16Embed_SlidingWindow/submission.json",
@@ -4390,7 +4390,7 @@
     },
     "77": {
       "number": 77,
-      "updatedAt": "2026-03-19T11:58:26Z",
+      "updatedAt": "2026-03-19T16:53:12Z",
       "pr": {
         "number": 77,
         "title": "[record bpb=1.195] sliding window + LoRA TTT",
@@ -4401,7 +4401,7 @@
         "authorLogin": "samacqua",
         "authorName": null,
         "createdAt": "2026-03-19T11:57:16Z",
-        "updatedAt": "2026-03-19T11:58:26Z",
+        "updatedAt": "2026-03-19T16:53:12Z",
         "headSha": "9fed66c01eb86e9089b68580a2295cbffaef25de",
         "headRepo": "samacqua/parameter-golf"
       },
@@ -4464,9 +4464,9 @@
             "authorLogin": "samacqua",
             "authorName": null,
             "createdAt": "2026-03-19T11:57:16Z",
+            "updatedAt": "2026-03-19T16:53:12Z",
             "headSha": "9fed66c01eb86e9089b68580a2295cbffaef25de",
-            "headRepo": "samacqua/parameter-golf",
-            "updatedAt": "2026-03-19T11:58:26Z"
+            "headRepo": "samacqua/parameter-golf"
           },
           "links": {
             "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9fed66c01eb86e9089b68580a2295cbffaef25de/records/track_10min_16mb/2026-03-17_LoRA_TTT/submission.json",
@@ -6031,7 +6031,7 @@
     },
     "98": {
       "number": 98,
-      "updatedAt": "2026-03-19T16:29:19Z",
+      "updatedAt": "2026-03-19T16:57:43Z",
       "pr": {
         "number": 98,
         "title": "Experiment and [WIP] record attempt: Weight decay reduces quantization gap and artifact size",
@@ -6042,7 +6042,7 @@
         "authorLogin": "leloykun",
         "authorName": null,
         "createdAt": "2026-03-19T16:29:19Z",
-        "updatedAt": "2026-03-19T16:29:19Z",
+        "updatedAt": "2026-03-19T16:57:43Z",
         "headSha": "c46ed52f757495d8f8999fda0662db5428880fc6",
         "headRepo": "leloykun/parameter-golf"
       },
@@ -6050,7 +6050,7 @@
     },
     "99": {
       "number": 99,
-      "updatedAt": "2026-03-19T16:42:30Z",
+      "updatedAt": "2026-03-19T16:56:52Z",
       "pr": {
         "number": 99,
         "title": "submission: Top2K + sliding-window stride64",
@@ -6061,8 +6061,8 @@
         "authorLogin": "takhir-iota",
         "authorName": null,
         "createdAt": "2026-03-19T16:37:56Z",
-        "updatedAt": "2026-03-19T16:42:30Z",
-        "headSha": "0186321fdf96a0c0cdbb15ad4217dfca8b37e81b",
+        "updatedAt": "2026-03-19T16:56:52Z",
+        "headSha": "0342280b2f742d0c967177c6a3712fb296627670",
         "headRepo": "takhir-iota/parameter-golf"
       },
       "submissions": [
@@ -6124,20 +6124,39 @@
             "authorLogin": "takhir-iota",
             "authorName": null,
             "createdAt": "2026-03-19T16:37:56Z",
-            "updatedAt": "2026-03-19T16:42:30Z",
-            "headSha": "0186321fdf96a0c0cdbb15ad4217dfca8b37e81b",
+            "updatedAt": "2026-03-19T16:56:52Z",
+            "headSha": "0342280b2f742d0c967177c6a3712fb296627670",
             "headRepo": "takhir-iota/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0186321fdf96a0c0cdbb15ad4217dfca8b37e81b/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/0186321fdf96a0c0cdbb15ad4217dfca8b37e81b/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/0186321fdf96a0c0cdbb15ad4217dfca8b37e81b/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/0186321fdf96a0c0cdbb15ad4217dfca8b37e81b/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/0186321fdf96a0c0cdbb15ad4217dfca8b37e81b/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0342280b2f742d0c967177c6a3712fb296627670/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/0342280b2f742d0c967177c6a3712fb296627670/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/0342280b2f742d0c967177c6a3712fb296627670/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/0342280b2f742d0c967177c6a3712fb296627670/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/0342280b2f742d0c967177c6a3712fb296627670/records/track_10min_16mb/2026-03-19_Seed2025_Top2K_Stride64",
             "pr": "https://github.com/openai/parameter-golf/pull/99"
           }
         }
       ]
+    },
+    "100": {
+      "number": 100,
+      "updatedAt": "2026-03-19T16:56:39Z",
+      "pr": {
+        "number": 100,
+        "title": "Use eager mx.eval() to fix running train script on 16GB Mac devices",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/100",
+        "authorLogin": "sandsevenone",
+        "authorName": null,
+        "createdAt": "2026-03-19T16:56:39Z",
+        "updatedAt": "2026-03-19T16:56:39Z",
+        "headSha": "6a08c9dcda3edd33202c48d5df104918318ab004",
+        "headRepo": "sandsevenone/parameter-golf"
+      },
+      "submissions": []
     }
   }
 }
