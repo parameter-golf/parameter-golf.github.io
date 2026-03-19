@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-19T16:21:32.888Z",
-  "lastSeenUpdatedAt": "2026-03-19T16:00:56Z",
+  "generatedAt": "2026-03-19T16:29:29.688Z",
+  "lastSeenUpdatedAt": "2026-03-19T16:29:19Z",
   "prs": {
     "1": {
       "number": 1,
@@ -5891,6 +5891,25 @@
         "updatedAt": "2026-03-19T16:00:56Z",
         "headSha": "5ec9fc825e2c9b1f9d3a5dd0159c8b6260a78e89",
         "headRepo": "paritoshmmmec/parameter-golf"
+      },
+      "submissions": []
+    },
+    "98": {
+      "number": 98,
+      "updatedAt": "2026-03-19T16:29:19Z",
+      "pr": {
+        "number": 98,
+        "title": "Experiment and [WIP] record attempt: Weight decay reduces quantization gap and artifact size",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/98",
+        "authorLogin": "leloykun",
+        "authorName": null,
+        "createdAt": "2026-03-19T16:29:19Z",
+        "updatedAt": "2026-03-19T16:29:19Z",
+        "headSha": "c46ed52f757495d8f8999fda0662db5428880fc6",
+        "headRepo": "leloykun/parameter-golf"
       },
       "submissions": []
     }
