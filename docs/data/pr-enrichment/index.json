@@ -1,8 +1,78 @@
 {
-  "generatedAt": "2026-03-20T19:55:03.184Z",
+  "generatedAt": "2026-03-20T20:25:20.713Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 264,
+      "title": "11L Int5-MLP + TTT-SGD + SmearGate + SWA (1.1455 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-20T20:09:28Z",
+      "headSha": "ab0777880a9b931afc62d7fcc332936ccaaf90fd",
+      "generatedAt": "2026-03-20T20:24:37.706Z",
+      "summary": "Int5-MLP/int6-attn quantization funds an 11-layer Relu^2 Transformer with SmearGate/Bigram context, SWA, and TTT-SGD prep for sliding-window eval.",
+      "tags": [
+        "val-only",
+        "quantization",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-264.json"
+    },
+    {
+      "prNumber": 263,
+      "title": "Non-record: TTT + QAT on Consumer GPU (val_bpb=1.5382)",
+      "status": "open",
+      "updatedAt": "2026-03-20T20:03:55Z",
+      "headSha": "046b7d2fdcb161ab7e4c082057fc7296ba01df62",
+      "generatedAt": "2026-03-20T20:24:43.625Z",
+      "summary": "Combines QAT-triggered cheaper matmuls with per-batch test-time training on attention and MLP projections for a laptop GPU submission.",
+      "tags": [
+        "quantization",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-263.json"
+    },
+    {
+      "prNumber": 262,
+      "title": "Record: 8L Paid Prefix + SmearGate + Int6 (val_bpb=1.0539)",
+      "status": "open",
+      "updatedAt": "2026-03-20T20:01:20Z",
+      "headSha": "ff039576dcb411563636e2afde6d780f0be2fed1",
+      "generatedAt": "2026-03-20T20:24:48.041Z",
+      "summary": "Combines 8-layer SmearGate transformer with paid-prefix coverage and int6+zstd compression to squeeze validation scoring budget.",
+      "tags": [
+        "architecture",
+        "compression",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-262.json"
+    },
     {
       "prNumber": 259,
       "title": "submission: QK Gain Init 1.2 + Sliding Window Eval (stride=64)",
@@ -76,15 +146,15 @@
       "prNumber": 254,
       "title": "Record: FarnsworthEngine v1 — TTT + 11L Int6 MLP3x, val_bpb=1.1303",
       "status": "open",
-      "updatedAt": "2026-03-20T19:46:08Z",
-      "headSha": "18aa3cc88ac958f5f83a2d960d1d2c32f9cefb68",
-      "generatedAt": "2026-03-20T19:54:44.455Z",
-      "summary": "Stacks test-time SGD on val data atop an 11-layer Int6 MLP3x with SmearGate/BigramHash, mixed precision, and sliding-window eval.",
+      "updatedAt": "2026-03-20T20:24:30Z",
+      "headSha": "479b8bcfa8ea0e5e7b711aff7f54fafb9b72b0c2",
+      "generatedAt": "2026-03-20T20:24:55.815Z",
+      "summary": "Apply test-time training over an 11-layer MLP3x Int6 model with SmearGate/BigramHash, Muon+SWA, NTK-RoPE, and sliding-window eval.",
       "tags": [
         "val-only",
         "quantization",
-        "mixed-precision",
-        "architecture"
+        "muon",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": true,
@@ -147,15 +217,14 @@
       "prNumber": 250,
       "title": "Complexity MoE v4: Token-Routed I64 + PID + CUDA Scatter + Int6 (26.5M params)",
       "status": "open",
-      "updatedAt": "2026-03-20T19:52:41Z",
-      "headSha": "c0f101e9eca9dd9fd13b642729593536fb6aec74",
-      "generatedAt": "2026-03-20T19:54:49.522Z",
-      "summary": "Token-routed 4-expert SwiGLU MoE with PID dynamics, CUDA scatter + Int6 compression, SWA, and SGDR schedule for a compact 26M model.",
+      "updatedAt": "2026-03-20T20:14:41Z",
+      "headSha": "f5352509620ea0da20600703144adcab24832ce7",
+      "generatedAt": "2026-03-20T20:25:00.751Z",
+      "summary": "Token-routed 4-expert SwiGLU MoE with PID-layer dynamics, CUDA scatter dispatch, cosine warm restarts, SWA, and int6+zstd compression.",
       "tags": [
         "architecture",
         "quantization",
-        "training-schedule",
-        "evaluation"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1345,16 +1414,16 @@
     {
       "prNumber": 178,
       "title": "Add Nuclear Stack submission: 1.16668 BPB (seed 2884431328)",
-      "status": "open",
-      "updatedAt": "2026-03-20T13:27:21Z",
+      "status": "closed",
+      "updatedAt": "2026-03-20T19:59:21Z",
       "headSha": "710c4fd578a689a1c234e243db94c74d416bd167",
-      "generatedAt": "2026-03-20T13:53:31.261Z",
-      "summary": "Combines a SmearGate+BigramHash 9-layer transformer with Int6 quant/SWA and Muon optimizer while applying test-time SGD adaptation plus honest sliding-window eval.",
+      "generatedAt": "2026-03-20T20:25:08.921Z",
+      "summary": "Stacks a GQA transformer with 3×MLP, SmearGate, BigramHash, Int6 quant, SWA, and full-model SGD test-time training while scoring via stride-32 sliding-window eval.",
       "tags": [
         "architecture",
-        "quantization",
         "optimizer",
-        "evaluation"
+        "quantization",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1535,10 +1604,10 @@
       "prNumber": 167,
       "title": "Depth Recurrence via Layer Sharing (3 shared blocks → 1/3 params, matched BPB)",
       "status": "open",
-      "updatedAt": "2026-03-20T18:43:49Z",
-      "headSha": "5625dd9b22060216132346c5444cba7ec3b470ae",
-      "generatedAt": "2026-03-20T18:55:08.708Z",
-      "summary": "ALBERT-style layer sharing cycles three unique blocks over nine virtual layers, cutting unique parameters and artifact size while enabling extra recurrence and budget for wider/MLP-heavy variants.",
+      "updatedAt": "2026-03-20T20:04:01Z",
+      "headSha": "4e760acb67091d65aa637dc2cfbe84fbf0002c31",
+      "generatedAt": "2026-03-20T20:25:14.980Z",
+      "summary": "ALBERT-style shared blocks cycle three unique transformers over nine virtual layers so depth stays while unique params and artifact size fall.",
       "tags": [
         "architecture",
         "compression",
@@ -1792,16 +1861,16 @@
     {
       "prNumber": 152,
       "title": "Add TTT (Test-Time Training) submission: 1.1767 BPB",
-      "status": "open",
-      "updatedAt": "2026-03-20T19:39:26Z",
+      "status": "closed",
+      "updatedAt": "2026-03-20T19:58:52Z",
       "headSha": "d5762bac5f7ce4ec928c0849280f554ff3c67e69",
-      "generatedAt": "2026-03-20T19:55:03.155Z",
-      "summary": "Full-model SGD test-time training adapts all weights on validation data before sliding-window scoring, using the eval budget as adaptive compression.",
+      "generatedAt": "2026-03-20T20:25:20.692Z",
+      "summary": "TTT reuses eval time for 2-epoch full-model SGD on the validation shard, letting the baseline 9x512 GQA model adapt before sliding-window scoring.",
       "tags": [
         "val-only",
-        "sliding-window-eval",
+        "evaluation",
         "optimizer",
-        "compression"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": true,

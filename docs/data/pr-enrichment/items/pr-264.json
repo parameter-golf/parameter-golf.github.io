@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T20:24:37.706Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 264,
+    "title": "11L Int5-MLP + TTT-SGD + SmearGate + SWA (1.1455 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-20T20:09:28Z",
+    "headSha": "ab0777880a9b931afc62d7fcc332936ccaaf90fd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/264",
+    "authorLogin": "stukenov"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_11L_Int5MLP_TTT_SmearGate/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Int5-MLP/int6-attn quantization funds an 11-layer Relu^2 Transformer with SmearGate/Bigram context, SWA, and TTT-SGD prep for sliding-window eval.",
+    "tags": [
+      "val-only",
+      "quantization",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT-SGD fine-tunes the entire model on validation data before sliding-window scoring.",
+    "techniques": [
+      "Mixed int5-MLP and int6-attention quantization to fit an 11-layer Transformer",
+      "SmearGate plus BigramHash injects learned bigram context prior to the stack",
+      "SWA checkpoint averaging plus TTT-SGD adaptation paired with sliding-window evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

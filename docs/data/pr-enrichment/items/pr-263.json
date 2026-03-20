@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-20T20:24:43.625Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 263,
+    "title": "Non-record: TTT + QAT on Consumer GPU (val_bpb=1.5382)",
+    "state": "open",
+    "updatedAt": "2026-03-20T20:03:55Z",
+    "headSha": "046b7d2fdcb161ab7e4c082057fc7296ba01df62",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/263",
+    "authorLogin": "Dannybc123"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_TTT-QAT-LocalGPU/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines QAT-triggered cheaper matmuls with per-batch test-time training on attention and MLP projections for a laptop GPU submission.",
+    "tags": [
+      "quantization",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "QAT via CastedLinear STE to simulate int8 weights",
+      "Single SGD test-time updates on attention and MLP projections"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

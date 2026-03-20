@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T13:53:31.261Z",
+  "generatedAt": "2026-03-20T20:25:08.921Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 178,
     "title": "Add Nuclear Stack submission: 1.16668 BPB (seed 2884431328)",
-    "state": "open",
-    "updatedAt": "2026-03-20T13:27:21Z",
+    "state": "closed",
+    "updatedAt": "2026-03-20T19:59:21Z",
     "headSha": "710c4fd578a689a1c234e243db94c74d416bd167",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/178",
     "authorLogin": "timowhite88"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines a SmearGate+BigramHash 9-layer transformer with Int6 quant/SWA and Muon optimizer while applying test-time SGD adaptation plus honest sliding-window eval.",
+    "summary": "Stacks a GQA transformer with 3×MLP, SmearGate, BigramHash, Int6 quant, SWA, and full-model SGD test-time training while scoring via stride-32 sliding-window eval.",
     "tags": [
       "architecture",
-      "quantization",
       "optimizer",
-      "evaluation"
+      "quantization",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6+zstd quantized 9-layer transformer with SmearGate, BigramHash, and orthogonal init",
-      "Muon optimizer w/ momentum warmup, SWA, and 3× MLP expansion",
-      "Test-time training via late-layer SGD plus stride-32 sliding-window scoring"
+      "GQA transformer with 3×MLP, SmearGate gating, and BigramHash context",
+      "Int6 + zstd-22 compression combined with muon optimizer and SWA",
+      "Full-model SGD test-time training paired with stride-32 honest sliding-window eval"
     ]
   },
   "compatibility": {

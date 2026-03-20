@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T20:24:48.041Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 262,
+    "title": "Record: 8L Paid Prefix + SmearGate + Int6 (val_bpb=1.0539)",
+    "state": "open",
+    "updatedAt": "2026-03-20T20:01:20Z",
+    "headSha": "ff039576dcb411563636e2afde6d780f0be2fed1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/262",
+    "authorLogin": "ibarrajo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_8L_PaidPrefix_ibarrajo/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines 8-layer SmearGate transformer with paid-prefix coverage and int6+zstd compression to squeeze validation scoring budget.",
+    "tags": [
+      "architecture",
+      "compression",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "8-layer SmearGate + BigramHash model with muP scaling, SWA, and SDPA-only training",
+      "Paid prefix covering 10% of validation tokens stored as LZMA blob for zero-bit coverage",
+      "Int6 quantization followed by zstd-22 compression on the model artifact"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
