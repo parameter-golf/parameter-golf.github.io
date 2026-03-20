@@ -1,8 +1,125 @@
 {
-  "generatedAt": "2026-03-20T21:55:44.038Z",
+  "generatedAt": "2026-03-20T22:26:11.287Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 278,
+      "title": "Record: 8L Paid Prefix + Sparse Hard Blocks (1.0365)",
+      "status": "open",
+      "updatedAt": "2026-03-20T22:23:06Z",
+      "headSha": "944352afa8dd40faa2c00bf17ad7b777f8bdf206",
+      "generatedAt": "2026-03-20T22:25:27.547Z",
+      "summary": "Replaces the contiguous paid prefix with an inline-built sparse hard-block cache selected by sliding-window NLL to focus bytes on high-loss validation regions.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-278.json"
+    },
+    {
+      "prNumber": 277,
+      "title": "Non-record: 11L Int6 + XSA + TTT + SmearGate + BigramHash (pending compute)",
+      "status": "open",
+      "updatedAt": "2026-03-20T22:09:01Z",
+      "headSha": "e3b91720535d9a8ee33e5e018cb09e120c84ac35",
+      "generatedAt": "2026-03-20T22:25:33.581Z",
+      "summary": "11-layer int6 net layers 8–10 use XSA while eval-time TTT and SmearGate/BigramHash sit atop Muon/SWA training with per-row quantization.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "quantization",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-277.json"
+    },
+    {
+      "prNumber": 276,
+      "title": "Non-record: local RTX 4070 shared-depth RMS interface v0",
+      "status": "open",
+      "updatedAt": "2026-03-20T22:08:17Z",
+      "headSha": "c4ed3db6e7c1aaa8c6f62c08442538bfc275b6f3",
+      "generatedAt": "2026-03-20T22:25:38.664Z",
+      "summary": "Local RTX 4070 run of a shared-depth RMS-interface GPT (8 logical/4 physical layers) using extra pre-projection RMSNorm and phase-conditioned scales.",
+      "tags": [
+        "architecture",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-276.json"
+    },
+    {
+      "prNumber": 275,
+      "title": "Non-record: Paid Prefix Research (val_bpb=1.0539, ruled out-of-scope)",
+      "status": "open",
+      "updatedAt": "2026-03-20T22:07:20Z",
+      "headSha": "f452a388ed7e6a3d4a6726b4ed1ea4ac64161b6a",
+      "generatedAt": "2026-03-20T22:25:43.978Z",
+      "summary": "Hybridizes an Int6 SmearGate transformer with an LZMA-compressed paid prefix so artifact budget buys token coverage rather than larger model capacity.",
+      "tags": [
+        "compression",
+        "architecture",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-275.json"
+    },
+    {
+      "prNumber": 274,
+      "title": "[Non-record] Seq2048 + EMA + Council-Optimized Warmdown",
+      "status": "open",
+      "updatedAt": "2026-03-20T21:55:13Z",
+      "headSha": "04c1413c9d636deaa0cccb0d9c2adab1060a4f54",
+      "generatedAt": "2026-03-20T22:25:49.289Z",
+      "summary": "Combines EMA averaging with seq2048 steps, extended council-optimized warmdown, and reduced Muon LR/momentum for smoother int8-ready training.",
+      "tags": [
+        "optimizer",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-274.json"
+    },
     {
       "prNumber": 273,
       "title": "Non-record: 10L Int6 QAT + SmearGate + SWA (val_bpb=1.1575)",
@@ -352,15 +469,15 @@
       "prNumber": 251,
       "title": "Add SP4096 11L432 MLP3x Int6+Zstd Momentum99 record (val_bpb=1.1596)",
       "status": "open",
-      "updatedAt": "2026-03-20T19:16:54Z",
+      "updatedAt": "2026-03-20T21:56:51Z",
       "headSha": "e4d930b0801d41472d3c73e8e7a46f8a26fda0e5",
-      "generatedAt": "2026-03-20T19:24:30.430Z",
-      "summary": "11-layer SP4096 Transformer ups MLP mult to 3x with Muon momentum 0.99 and Int6+Zstd quantization plus fp16 embedding passthrough.",
+      "generatedAt": "2026-03-20T22:26:00.549Z",
+      "summary": "11-layer 432-dim Transformer with 3× MLP, Muon momentum 0.99, and Int6+zstd compression for compact weights.",
       "tags": [
         "architecture",
-        "optimizer",
         "quantization",
-        "sliding-window-eval"
+        "optimizer",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -376,15 +493,15 @@
       "prNumber": 250,
       "title": "Complexity MoE v4: Token-Routed I64 + PID + CUDA Scatter + Int6 (26.5M params)",
       "status": "open",
-      "updatedAt": "2026-03-20T21:49:26Z",
-      "headSha": "cd397a2ded421fd05c4ee85b8e2af8f01d18b3f2",
-      "generatedAt": "2026-03-20T21:55:16.575Z",
-      "summary": "Deploys token-routed 4-expert MoE with PID dynamics, SGDR schedule, and Int6+zstd compression for a compact 26.5M-parameter model.",
+      "updatedAt": "2026-03-20T22:24:57Z",
+      "headSha": "7e11a9c0ab144d1655b1cebbc088d9de44097f98",
+      "generatedAt": "2026-03-20T22:26:06.025Z",
+      "summary": "Token-routed 4-expert SwiGLU MoE with PID dynamics, CUDA scatter dispatch, SGDR, and int6+zstd compression to meet the 16MB budget.",
       "tags": [
         "architecture",
-        "training-schedule",
         "quantization",
-        "compression"
+        "training-schedule",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2326,11 +2443,12 @@
       "prNumber": 136,
       "title": "Record: Seq2048 training + eval (val_bpb=1.2101)",
       "status": "open",
-      "updatedAt": "2026-03-19T22:23:29Z",
+      "updatedAt": "2026-03-20T22:07:52Z",
       "headSha": "d465c9851e57d36426f3682a47ad4d613a2e6d16",
-      "generatedAt": "2026-03-19T22:38:57.520Z",
-      "summary": "Training and evaluation both run with 2048-token context to learn long-range dependencies without changing the baseline architecture.",
+      "generatedAt": "2026-03-20T22:26:11.269Z",
+      "summary": "Train/eval on 2048-token spans so the baseline model learns long-range RoPE positions rather than extrapolating at test time.",
       "tags": [
+        "positional-encoding",
         "training-schedule"
       ],
       "flags": {

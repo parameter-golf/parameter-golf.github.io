@@ -1,53 +1,20 @@
 {
-  "generatedAt": "2026-03-20T21:54:28.808Z",
+  "generatedAt": "2026-03-20T22:24:59.329Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [
-    {
-      "pr": 234,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "stage": "pull-request-readme",
-      "pr": 76,
-      "submissionPath": "records/track_10min_16mb/2026-03-20_12L_Int5MLP_SmearBigram_SWA/submission.json",
-      "reason": "missing-or-unreadable-readme"
-    },
-    {
-      "pr": 269,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "stage": "pull-request-readme",
-      "pr": 272,
-      "submissionPath": "records/non_record/2026-03-19_CorePromotion13_full20k/submission.json",
-      "reason": "missing-or-unreadable-readme"
-    },
-    {
-      "stage": "pull-request-readme",
-      "pr": 272,
-      "submissionPath": "records/track_10min_16mb/2026-03-19_core_record_candidate_8x_exportsearch/submission.json",
-      "reason": "missing-or-unreadable-readme"
-    },
-    {
-      "stage": "pull-request-readme",
-      "pr": 272,
-      "submissionPath": "records/track_10min_16mb/2026-03-20_core_record_candidate_evalmerge_8x/submission.json",
-      "reason": "missing-or-unreadable-readme"
-    }
-  ],
+  "skipped": [],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-20T21:24:35Z",
+    "cutoffUpdatedAt": "2026-03-20T21:50:25Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 10,
-    "prsReused": 190,
+    "prsRefreshed": 8,
+    "prsReused": 192,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 252,
+    "cacheEntries": 257,
     "retryWindowRetained": false
   }
 }

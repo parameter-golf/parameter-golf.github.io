@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T22:25:43.978Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 275,
+    "title": "Non-record: Paid Prefix Research (val_bpb=1.0539, ruled out-of-scope)",
+    "state": "open",
+    "updatedAt": "2026-03-20T22:07:20Z",
+    "headSha": "f452a388ed7e6a3d4a6726b4ed1ea4ac64161b6a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/275",
+    "authorLogin": "ibarrajo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_PaidPrefix_PrefixResearch_AlexIbarra/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Hybridizes an Int6 SmearGate transformer with an LZMA-compressed paid prefix so artifact budget buys token coverage rather than larger model capacity.",
+    "tags": [
+      "compression",
+      "architecture",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int6 SmearGate model for uncovered tokens",
+      "LZMA-compressed paid prefix storing 10% of val",
+      "Muon-aware AdamW training with SDPA fallback"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

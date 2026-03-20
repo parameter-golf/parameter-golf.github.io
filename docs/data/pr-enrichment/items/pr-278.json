@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T22:25:27.547Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 278,
+    "title": "Record: 8L Paid Prefix + Sparse Hard Blocks (1.0365)",
+    "state": "open",
+    "updatedAt": "2026-03-20T22:23:06Z",
+    "headSha": "944352afa8dd40faa2c00bf17ad7b777f8bdf206",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/278",
+    "authorLogin": "nicolasdickenmann"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_8L_PaidPrefix_SparseBlocks/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Replaces the contiguous paid prefix with an inline-built sparse hard-block cache selected by sliding-window NLL to focus bytes on high-loss validation regions.",
+    "tags": [
+      "architecture",
+      "evaluation",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Inline sparse hard-block paid-prefix built via sliding-window NLL profiling",
+      "Int6+zstd-22 quantized 8-layer SmearGate+BigramHash backbone",
+      "Sliding-window stride-64 eval with generated sparse blob"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

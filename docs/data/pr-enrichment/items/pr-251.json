@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T19:24:30.430Z",
+  "generatedAt": "2026-03-20T22:26:00.549Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 251,
     "title": "Add SP4096 11L432 MLP3x Int6+Zstd Momentum99 record (val_bpb=1.1596)",
     "state": "open",
-    "updatedAt": "2026-03-20T19:16:54Z",
+    "updatedAt": "2026-03-20T21:56:51Z",
     "headSha": "e4d930b0801d41472d3c73e8e7a46f8a26fda0e5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/251",
     "authorLogin": "kshitizz36"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer SP4096 Transformer ups MLP mult to 3x with Muon momentum 0.99 and Int6+Zstd quantization plus fp16 embedding passthrough.",
+    "summary": "11-layer 432-dim Transformer with 3× MLP, Muon momentum 0.99, and Int6+zstd compression for compact weights.",
     "tags": [
       "architecture",
-      "optimizer",
       "quantization",
-      "sliding-window-eval"
+      "optimizer",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "11-layer 432-dim Transformer with 3x MLP expansion",
-      "Muon optimizer with 0.99 momentum and decoupled weight decay",
-      "Int6 PTQ (levels=31) with zstd-22 compression and fp16 embedding passthrough"
+      "11-layer SP-4096 Transformer with relu² MLP3x expansion",
+      "Int6 post-training quantization (levels=31) plus zstd-22 and fp16 embedding passthrough",
+      "Muon optimizer with 0.99 momentum, decoupled WD, and 3000-step warmdown"
     ]
   },
   "compatibility": {

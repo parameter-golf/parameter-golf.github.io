@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T22:38:57.520Z",
+  "generatedAt": "2026-03-20T22:26:11.269Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 136,
     "title": "Record: Seq2048 training + eval (val_bpb=1.2101)",
     "state": "open",
-    "updatedAt": "2026-03-19T22:23:29Z",
+    "updatedAt": "2026-03-20T22:07:52Z",
     "headSha": "d465c9851e57d36426f3682a47ad4d613a2e6d16",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/136",
     "authorLogin": "ibarrajo"
@@ -19,14 +19,15 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Training and evaluation both run with 2048-token context to learn long-range dependencies without changing the baseline architecture.",
+    "summary": "Train/eval on 2048-token spans so the baseline model learns long-range RoPE positions rather than extrapolating at test time.",
     "tags": [
+      "positional-encoding",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Train/evaluate at 2048 context length to capture real long-range dependencies"
+      "Train/eval with 2048-token windows to avoid RoPE extrapolation"
     ]
   },
   "compatibility": {

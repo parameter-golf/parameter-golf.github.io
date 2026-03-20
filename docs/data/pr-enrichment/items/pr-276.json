@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T22:25:38.664Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 276,
+    "title": "Non-record: local RTX 4070 shared-depth RMS interface v0",
+    "state": "open",
+    "updatedAt": "2026-03-20T22:08:17Z",
+    "headSha": "c4ed3db6e7c1aaa8c6f62c08442538bfc275b6f3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/276",
+    "authorLogin": "riatzukiza"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_RTX4070_ShDepthRMS_SP1024_8L4P_471steps/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Local RTX 4070 run of a shared-depth RMS-interface GPT (8 logical/4 physical layers) using extra pre-projection RMSNorm and phase-conditioned scales.",
+    "tags": [
+      "architecture",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared-depth RMS interface with 4 physical blocks",
+      "Extra pre-projection RMSNorm and phase-conditioned scales",
+      "Int8+zlib serialization under 16MB"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
