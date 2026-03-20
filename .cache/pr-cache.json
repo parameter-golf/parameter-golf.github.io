@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-20T00:49:10.429Z",
-  "lastSeenUpdatedAt": "2026-03-20T00:36:30Z",
+  "generatedAt": "2026-03-20T01:19:44.253Z",
+  "lastSeenUpdatedAt": "2026-03-20T01:12:58Z",
   "prs": {
     "1": {
       "number": 1,
@@ -5557,7 +5557,7 @@
     },
     "92": {
       "number": 92,
-      "updatedAt": "2026-03-19T17:07:13Z",
+      "updatedAt": "2026-03-20T01:04:52Z",
       "pr": {
         "number": 92,
         "title": "Record: 8192 Vocab, Sliding Window Eval, Selective Quantization; 1.194 val_bpb",
@@ -5568,8 +5568,8 @@
         "authorLogin": "saikrishnarallabandi",
         "authorName": null,
         "createdAt": "2026-03-19T15:33:09Z",
-        "updatedAt": "2026-03-19T17:07:13Z",
-        "headSha": "7c2ece57d0c77aad6b062ada4aea898c4ce1b75d",
+        "updatedAt": "2026-03-20T01:04:52Z",
+        "headSha": "ee5f6b33ef219fa01357bafe78fde10a02393f05",
         "headRepo": "saikrishnarallabandi/parameter-golf"
       },
       "submissions": [
@@ -5597,12 +5597,12 @@
             "author": "Sai Krishna Rallabandi",
             "githubId": "saikrishnarallabandi",
             "name": "8192 Vocab, Sliding Window Eval, Selective Quantization (w6e8)",
-            "blurb": "SP-8192 tokenizer, 8-layer model, NorMuon optimizer, stride-256 sliding window eval, selective w6e8 quantization. 8xH100 SXM, 1.1938 bpb post-quant.",
+            "blurb": "SP-8192 tokenizer, 8-layer model, NorMuon optimizer, stride-256 sliding window eval, selective w6e8 quantization. 8xH100 SXM, seed 7, 1.1637 bpb post-quant.",
             "date": "2026-03-19T15:30:00Z"
           },
           "metrics": {
-            "valBpb": 1.19384345,
-            "valLoss": 3.08326666,
+            "valBpb": 1.1637,
+            "valLoss": 3.00523,
             "preQuantValBpb": null,
             "preQuantValLoss": null,
             "stepStop": null,
@@ -5631,16 +5631,16 @@
             "authorLogin": "saikrishnarallabandi",
             "authorName": null,
             "createdAt": "2026-03-19T15:33:09Z",
-            "updatedAt": "2026-03-19T17:07:13Z",
-            "headSha": "7c2ece57d0c77aad6b062ada4aea898c4ce1b75d",
+            "updatedAt": "2026-03-20T01:04:52Z",
+            "headSha": "ee5f6b33ef219fa01357bafe78fde10a02393f05",
             "headRepo": "saikrishnarallabandi/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7c2ece57d0c77aad6b062ada4aea898c4ce1b75d/records/track_10min_16mb/2026-03-19_Vocab8192_SlidingWindow_SelectiveQuant/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/7c2ece57d0c77aad6b062ada4aea898c4ce1b75d/records/track_10min_16mb/2026-03-19_Vocab8192_SlidingWindow_SelectiveQuant/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/7c2ece57d0c77aad6b062ada4aea898c4ce1b75d/records/track_10min_16mb/2026-03-19_Vocab8192_SlidingWindow_SelectiveQuant/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/7c2ece57d0c77aad6b062ada4aea898c4ce1b75d/records/track_10min_16mb/2026-03-19_Vocab8192_SlidingWindow_SelectiveQuant/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/7c2ece57d0c77aad6b062ada4aea898c4ce1b75d/records/track_10min_16mb/2026-03-19_Vocab8192_SlidingWindow_SelectiveQuant",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ee5f6b33ef219fa01357bafe78fde10a02393f05/records/track_10min_16mb/2026-03-19_Vocab8192_SlidingWindow_SelectiveQuant/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/ee5f6b33ef219fa01357bafe78fde10a02393f05/records/track_10min_16mb/2026-03-19_Vocab8192_SlidingWindow_SelectiveQuant/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/ee5f6b33ef219fa01357bafe78fde10a02393f05/records/track_10min_16mb/2026-03-19_Vocab8192_SlidingWindow_SelectiveQuant/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/ee5f6b33ef219fa01357bafe78fde10a02393f05/records/track_10min_16mb/2026-03-19_Vocab8192_SlidingWindow_SelectiveQuant/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/ee5f6b33ef219fa01357bafe78fde10a02393f05/records/track_10min_16mb/2026-03-19_Vocab8192_SlidingWindow_SelectiveQuant",
             "pr": "https://github.com/openai/parameter-golf/pull/92"
           }
         }
@@ -8001,7 +8001,7 @@
     },
     "123": {
       "number": 123,
-      "updatedAt": "2026-03-19T23:01:06Z",
+      "updatedAt": "2026-03-20T01:10:38Z",
       "pr": {
         "number": 123,
         "title": "Record: Vocab 4096 + MLP 3x + Sliding Window Eval (mean val_bpb=1.1642, 3 seeds)",
@@ -8012,11 +8012,82 @@
         "authorLogin": "saikrishnarallabandi",
         "authorName": null,
         "createdAt": "2026-03-19T19:36:32Z",
-        "updatedAt": "2026-03-19T23:01:06Z",
-        "headSha": "7e575e0abf85373383cf24222877729a37f2c4f2",
+        "updatedAt": "2026-03-20T01:10:38Z",
+        "headSha": "9b03d736ab45fc8c41a0cb4985d1bc996d674e4f",
         "headRepo": "saikrishnarallabandi/parameter-golf"
       },
       "submissions": [
+        {
+          "id": "pr-123-records-track_10min_16mb-2026-03-19_SlidingWindowEval-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-19_SlidingWindowEval",
+            "folderPath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval",
+            "submissionPath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-19_SlidingWindowEval/train_gpt.py"
+          },
+          "submission": {
+            "author": "Matthew Li",
+            "githubId": "mattqlf",
+            "name": "Sliding Window Eval (stride=64)",
+            "blurb": "Baseline 9x512 SP-1024 architecture with sliding window evaluation at stride=64. Each token is scored with 960+ tokens of context instead of the baseline's 0-1023. Training is identical to the naive baseline; the improvement comes entirely from the evaluation strategy. Post-quant int8+zlib roundtrip under the 16,000,000-byte cap.",
+            "date": "2026-03-19T04:48:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.1637,
+            "valLoss": 2.01348383,
+            "preQuantValBpb": 1.2196,
+            "preQuantValLoss": 2.0592,
+            "stepStop": 13450,
+            "wallclockSeconds": 600.028,
+            "evalTimeSeconds": 69.881
+          },
+          "artifact": {
+            "bytesTotal": 15874829,
+            "bytesCode": 58340,
+            "bytesModelInt8Zlib": 15816489
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 123,
+            "title": "Record: Vocab 4096 + MLP 3x + Sliding Window Eval (mean val_bpb=1.1642, 3 seeds)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/123",
+            "authorLogin": "saikrishnarallabandi",
+            "authorName": null,
+            "createdAt": "2026-03-19T19:36:32Z",
+            "updatedAt": "2026-03-20T01:10:38Z",
+            "headSha": "9b03d736ab45fc8c41a0cb4985d1bc996d674e4f",
+            "headRepo": "saikrishnarallabandi/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9b03d736ab45fc8c41a0cb4985d1bc996d674e4f/records/track_10min_16mb/2026-03-19_SlidingWindowEval/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/9b03d736ab45fc8c41a0cb4985d1bc996d674e4f/records/track_10min_16mb/2026-03-19_SlidingWindowEval/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/9b03d736ab45fc8c41a0cb4985d1bc996d674e4f/records/track_10min_16mb/2026-03-19_SlidingWindowEval/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/9b03d736ab45fc8c41a0cb4985d1bc996d674e4f/records/track_10min_16mb/2026-03-19_SlidingWindowEval/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/9b03d736ab45fc8c41a0cb4985d1bc996d674e4f/records/track_10min_16mb/2026-03-19_SlidingWindowEval",
+            "pr": "https://github.com/openai/parameter-golf/pull/123"
+          }
+        },
         {
           "id": "pr-123-records-track_10min_16mb-2026-03-19_Vocab4096_MLP3x_SlidingWindow-submission-json",
           "source": "pull_request",
@@ -8075,16 +8146,16 @@
             "authorLogin": "saikrishnarallabandi",
             "authorName": null,
             "createdAt": "2026-03-19T19:36:32Z",
-            "updatedAt": "2026-03-19T23:01:06Z",
-            "headSha": "7e575e0abf85373383cf24222877729a37f2c4f2",
+            "updatedAt": "2026-03-20T01:10:38Z",
+            "headSha": "9b03d736ab45fc8c41a0cb4985d1bc996d674e4f",
             "headRepo": "saikrishnarallabandi/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7e575e0abf85373383cf24222877729a37f2c4f2/records/track_10min_16mb/2026-03-19_Vocab4096_MLP3x_SlidingWindow/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/7e575e0abf85373383cf24222877729a37f2c4f2/records/track_10min_16mb/2026-03-19_Vocab4096_MLP3x_SlidingWindow/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/7e575e0abf85373383cf24222877729a37f2c4f2/records/track_10min_16mb/2026-03-19_Vocab4096_MLP3x_SlidingWindow/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/7e575e0abf85373383cf24222877729a37f2c4f2/records/track_10min_16mb/2026-03-19_Vocab4096_MLP3x_SlidingWindow/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/7e575e0abf85373383cf24222877729a37f2c4f2/records/track_10min_16mb/2026-03-19_Vocab4096_MLP3x_SlidingWindow",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9b03d736ab45fc8c41a0cb4985d1bc996d674e4f/records/track_10min_16mb/2026-03-19_Vocab4096_MLP3x_SlidingWindow/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/9b03d736ab45fc8c41a0cb4985d1bc996d674e4f/records/track_10min_16mb/2026-03-19_Vocab4096_MLP3x_SlidingWindow/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/9b03d736ab45fc8c41a0cb4985d1bc996d674e4f/records/track_10min_16mb/2026-03-19_Vocab4096_MLP3x_SlidingWindow/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/9b03d736ab45fc8c41a0cb4985d1bc996d674e4f/records/track_10min_16mb/2026-03-19_Vocab4096_MLP3x_SlidingWindow/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/9b03d736ab45fc8c41a0cb4985d1bc996d674e4f/records/track_10min_16mb/2026-03-19_Vocab4096_MLP3x_SlidingWindow",
             "pr": "https://github.com/openai/parameter-golf/pull/123"
           }
         }
@@ -9345,6 +9416,279 @@
             "script": "https://github.com/openai/parameter-golf/blob/54b67d4c91c679a3508edc4c054485c07cff4e14/records/track_10min_16mb/2026-03-19_ContextFuse-2048/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/54b67d4c91c679a3508edc4c054485c07cff4e14/records/track_10min_16mb/2026-03-19_ContextFuse-2048",
             "pr": "https://github.com/openai/parameter-golf/pull/143"
+          }
+        }
+      ]
+    },
+    "144": {
+      "number": 144,
+      "updatedAt": "2026-03-20T01:12:58Z",
+      "pr": {
+        "number": 144,
+        "title": "Add MPK 8x384 10-minute submission record",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/144",
+        "authorLogin": "DJLougen",
+        "authorName": null,
+        "createdAt": "2026-03-20T01:07:01Z",
+        "updatedAt": "2026-03-20T01:12:58Z",
+        "headSha": "f31b4bef938fe7b94c3d37383818c9bb9ebb703a",
+        "headRepo": "DJLougen/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-144-records-track_10min_16mb-2026-03-20_MPK_8x384-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-20_MPK_8x384",
+            "folderPath": "records/track_10min_16mb/2026-03-20_MPK_8x384",
+            "submissionPath": "records/track_10min_16mb/2026-03-20_MPK_8x384/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-20_MPK_8x384/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-20_MPK_8x384/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-20_MPK_8x384/train_gpt.py"
+          },
+          "submission": {
+            "author": "DJLougen",
+            "githubId": "DJLougen",
+            "name": "MPK 8x384",
+            "blurb": "10-minute capped MPK-style multi-path causal LM with 8 layers, width 384, GQA KV4, tied embeddings, and tuned lower learning rates on 80 FineWeb SP-1024 shards; pre-quant reached 1.0132 BPB at wallclock stop and final int8+zlib roundtrip scored 1.0156 under the 16,000,000-byte cap.",
+            "date": "2026-03-20T00:50:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.01558307,
+            "valLoss": 2.28798722,
+            "preQuantValBpb": 1.0132,
+            "preQuantValLoss": 2.2827,
+            "stepStop": 4108,
+            "wallclockSeconds": 599.527,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 14578273,
+            "bytesCode": 59498,
+            "bytesModelInt8Zlib": 14518775
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 144,
+            "title": "Add MPK 8x384 10-minute submission record",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/144",
+            "authorLogin": "DJLougen",
+            "authorName": null,
+            "createdAt": "2026-03-20T01:07:01Z",
+            "updatedAt": "2026-03-20T01:12:58Z",
+            "headSha": "f31b4bef938fe7b94c3d37383818c9bb9ebb703a",
+            "headRepo": "DJLougen/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f31b4bef938fe7b94c3d37383818c9bb9ebb703a/records/track_10min_16mb/2026-03-20_MPK_8x384/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/f31b4bef938fe7b94c3d37383818c9bb9ebb703a/records/track_10min_16mb/2026-03-20_MPK_8x384/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/f31b4bef938fe7b94c3d37383818c9bb9ebb703a/records/track_10min_16mb/2026-03-20_MPK_8x384/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/f31b4bef938fe7b94c3d37383818c9bb9ebb703a/records/track_10min_16mb/2026-03-20_MPK_8x384/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/f31b4bef938fe7b94c3d37383818c9bb9ebb703a/records/track_10min_16mb/2026-03-20_MPK_8x384",
+            "pr": "https://github.com/openai/parameter-golf/pull/144"
+          }
+        }
+      ]
+    },
+    "145": {
+      "number": 145,
+      "updatedAt": "2026-03-20T01:07:51Z",
+      "pr": {
+        "number": 145,
+        "title": "Non-record: QAT ablation — int8 QAT overhead exceeds quantization gap recovery",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/145",
+        "authorLogin": "mrdavtan",
+        "authorName": null,
+        "createdAt": "2026-03-20T01:07:51Z",
+        "updatedAt": "2026-03-20T01:07:51Z",
+        "headSha": "6a1e68e9e4b13f7a8e994f15b096dbfe9e18fae5",
+        "headRepo": "mrdavtan/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-145-records-track_10min_16mb-2026-03-19_QAT_Ablation-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-19_QAT_Ablation",
+            "folderPath": "records/track_10min_16mb/2026-03-19_QAT_Ablation",
+            "submissionPath": "records/track_10min_16mb/2026-03-19_QAT_Ablation/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-19_QAT_Ablation/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-19_QAT_Ablation/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-19_QAT_Ablation/train_gpt.py"
+          },
+          "submission": {
+            "author": "mrdavtan",
+            "githubId": "mrdavtan",
+            "name": "Non-record: QAT ablation — int8 QAT overhead exceeds quantization gap recovery",
+            "blurb": "Clean ablation of per-row int8 QAT with exact INT8_CLIP_Q percentile matching. Finding: torch.quantile adds ~20% per-step overhead, costing ~2000 training steps. The lost training tokens hurt more than the ~0.007 BPB quantization gap recovery helps. QAT likely only pays off with int6 (larger gap) or with a faster approximate quantile.",
+            "date": "2026-03-20"
+          },
+          "metrics": {
+            "valBpb": 1.20515425,
+            "valLoss": 2.03485247,
+            "preQuantValBpb": 1.2327,
+            "preQuantValLoss": 2.0814,
+            "stepStop": 8011,
+            "wallclockSeconds": 602.064,
+            "evalTimeSeconds": 74.761
+          },
+          "artifact": {
+            "bytesTotal": 15868103,
+            "bytesCode": 63581,
+            "bytesModelInt8Zlib": 15804522
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 145,
+            "title": "Non-record: QAT ablation — int8 QAT overhead exceeds quantization gap recovery",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/145",
+            "authorLogin": "mrdavtan",
+            "authorName": null,
+            "createdAt": "2026-03-20T01:07:51Z",
+            "updatedAt": "2026-03-20T01:07:51Z",
+            "headSha": "6a1e68e9e4b13f7a8e994f15b096dbfe9e18fae5",
+            "headRepo": "mrdavtan/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6a1e68e9e4b13f7a8e994f15b096dbfe9e18fae5/records/track_10min_16mb/2026-03-19_QAT_Ablation/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/6a1e68e9e4b13f7a8e994f15b096dbfe9e18fae5/records/track_10min_16mb/2026-03-19_QAT_Ablation/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/6a1e68e9e4b13f7a8e994f15b096dbfe9e18fae5/records/track_10min_16mb/2026-03-19_QAT_Ablation/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/6a1e68e9e4b13f7a8e994f15b096dbfe9e18fae5/records/track_10min_16mb/2026-03-19_QAT_Ablation/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/6a1e68e9e4b13f7a8e994f15b096dbfe9e18fae5/records/track_10min_16mb/2026-03-19_QAT_Ablation",
+            "pr": "https://github.com/openai/parameter-golf/pull/145"
+          }
+        }
+      ]
+    },
+    "146": {
+      "number": 146,
+      "updatedAt": "2026-03-20T01:11:44Z",
+      "pr": {
+        "number": 146,
+        "title": "Non-record: Warmdown-Tuned Training (val_bpb=1.2987) on 1xRTX 5090",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/146",
+        "authorLogin": "swapp1990",
+        "authorName": null,
+        "createdAt": "2026-03-20T01:11:44Z",
+        "updatedAt": "2026-03-20T01:11:44Z",
+        "headSha": "e2bfd336fbc3406e39fb37deb339fb4f535da835",
+        "headRepo": "swapp1990/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-146-records-track_10min_16mb-2026-03-19_WarmdownTuned_1xRTX5090-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-19_WarmdownTuned_1xRTX5090",
+            "folderPath": "records/track_10min_16mb/2026-03-19_WarmdownTuned_1xRTX5090",
+            "submissionPath": "records/track_10min_16mb/2026-03-19_WarmdownTuned_1xRTX5090/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-19_WarmdownTuned_1xRTX5090/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-19_WarmdownTuned_1xRTX5090/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-19_WarmdownTuned_1xRTX5090/train_gpt.py"
+          },
+          "submission": {
+            "author": "Swapnil Patel",
+            "githubId": "swapp1990",
+            "name": "Warmdown-Tuned Training on 1xRTX 5090",
+            "blurb": "Systematic experiment-driven optimization across 9+ experiments. Key discovery: warmdown_iters=3000 produces best results (2.6x per-step efficiency). Layer looping (6 unique layers, 608 dim, looped to 9 effective) + wider model in progress. Best result 1.2987 BPB on 1xRTX 5090 (1200s). Applying for H100 compute grant — expect ~1.22 BPB with tuned warmdown + full batch on 8xH100.",
+            "date": "2026-03-20"
+          },
+          "metrics": {
+            "valBpb": 1.2987,
+            "valLoss": 2.1928,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": 1200,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15795671,
+            "bytesCode": 48344,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 146,
+            "title": "Non-record: Warmdown-Tuned Training (val_bpb=1.2987) on 1xRTX 5090",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/146",
+            "authorLogin": "swapp1990",
+            "authorName": null,
+            "createdAt": "2026-03-20T01:11:44Z",
+            "updatedAt": "2026-03-20T01:11:44Z",
+            "headSha": "e2bfd336fbc3406e39fb37deb339fb4f535da835",
+            "headRepo": "swapp1990/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e2bfd336fbc3406e39fb37deb339fb4f535da835/records/track_10min_16mb/2026-03-19_WarmdownTuned_1xRTX5090/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/e2bfd336fbc3406e39fb37deb339fb4f535da835/records/track_10min_16mb/2026-03-19_WarmdownTuned_1xRTX5090/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/e2bfd336fbc3406e39fb37deb339fb4f535da835/records/track_10min_16mb/2026-03-19_WarmdownTuned_1xRTX5090/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/e2bfd336fbc3406e39fb37deb339fb4f535da835/records/track_10min_16mb/2026-03-19_WarmdownTuned_1xRTX5090/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/e2bfd336fbc3406e39fb37deb339fb4f535da835/records/track_10min_16mb/2026-03-19_WarmdownTuned_1xRTX5090",
+            "pr": "https://github.com/openai/parameter-golf/pull/146"
           }
         }
       ]

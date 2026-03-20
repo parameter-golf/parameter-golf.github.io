@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T01:19:53.572Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 145,
+    "title": "Non-record: QAT ablation — int8 QAT overhead exceeds quantization gap recovery",
+    "state": "open",
+    "updatedAt": "2026-03-20T01:07:51Z",
+    "headSha": "6a1e68e9e4b13f7a8e994f15b096dbfe9e18fae5",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/145",
+    "authorLogin": "mrdavtan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_QAT_Ablation/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Quant-match int8 QAT on the 9L×512 baseline uses torch.quantile fake quantization to mimic export, showing its overhead exceeds the modest gap recovery.",
+    "tags": [
+      "quantization",
+      "evaluation",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "per-row int8 fake quantization",
+      "torch.quantile percentile clipping",
+      "sliding-window comparison"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

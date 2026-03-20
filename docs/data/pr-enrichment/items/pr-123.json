@@ -1,37 +1,38 @@
 {
-  "generatedAt": "2026-03-19T23:09:09.650Z",
+  "generatedAt": "2026-03-20T01:20:06.186Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 123,
     "title": "Record: Vocab 4096 + MLP 3x + Sliding Window Eval (mean val_bpb=1.1642, 3 seeds)",
     "state": "open",
-    "updatedAt": "2026-03-19T23:01:06Z",
-    "headSha": "7e575e0abf85373383cf24222877729a37f2c4f2",
+    "updatedAt": "2026-03-20T01:10:38Z",
+    "headSha": "9b03d736ab45fc8c41a0cb4985d1bc996d674e4f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/123",
     "authorLogin": "saikrishnarallabandi"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-19_Vocab4096_MLP3x_SlidingWindow/README.md"
+      "records/track_10min_16mb/2026-03-19_Vocab4096_MLP3x_SlidingWindow/README.md",
+      "records/track_10min_16mb/2026-03-19_SlidingWindowEval/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "4096-token SentencePiece, 3x MLP width enabled by int6 quantization, seq4096 training, SWA warmdown, and sliding-window eval stride 256.",
+    "summary": "Int6 quant enables a 4096-vocab, 3×MLP GPT trained on 4096-context with SWA, followed by sliding-window eval for richer scoring.",
     "tags": [
-      "tokenization",
       "quantization",
-      "training-schedule",
-      "evaluation"
+      "sliding-window-eval",
+      "architecture",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SentencePiece vocab 4096 for denser bytes",
-      "Int6 STE quant with widened feedforward",
-      "Seq4096+SWA warmdown and sliding-window eval stride 256"
+      "4096-vocab SentencePiece + seq4096 training",
+      "Int6 STE quant plus SWA warmdown",
+      "Sliding-window eval (stride=256)"
     ]
   },
   "compatibility": {

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T01:19:48.742Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 146,
+    "title": "Non-record: Warmdown-Tuned Training (val_bpb=1.2987) on 1xRTX 5090",
+    "state": "open",
+    "updatedAt": "2026-03-20T01:11:44Z",
+    "headSha": "e2bfd336fbc3406e39fb37deb339fb4f535da835",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/146",
+    "authorLogin": "swapp1990"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_WarmdownTuned_1xRTX5090/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Extensive warmdown tuning (3000-step LR decay) on a 9-layer GPT unlocks 2.6× per-step bpb efficiency for compressed int8 checkpoints.",
+    "tags": [
+      "training-schedule",
+      "architecture",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "cosine LR warmdown tuning",
+      "layer-looping + wider model probes",
+      "int8+zlib roundtrip validation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

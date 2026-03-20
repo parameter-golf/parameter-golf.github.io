@@ -1,8 +1,77 @@
 {
-  "generatedAt": "2026-03-20T00:49:24.236Z",
+  "generatedAt": "2026-03-20T01:20:11.101Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 146,
+      "title": "Non-record: Warmdown-Tuned Training (val_bpb=1.2987) on 1xRTX 5090",
+      "status": "open",
+      "updatedAt": "2026-03-20T01:11:44Z",
+      "headSha": "e2bfd336fbc3406e39fb37deb339fb4f535da835",
+      "generatedAt": "2026-03-20T01:19:48.742Z",
+      "summary": "Extensive warmdown tuning (3000-step LR decay) on a 9-layer GPT unlocks 2.6× per-step bpb efficiency for compressed int8 checkpoints.",
+      "tags": [
+        "training-schedule",
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-146.json"
+    },
+    {
+      "prNumber": 145,
+      "title": "Non-record: QAT ablation — int8 QAT overhead exceeds quantization gap recovery",
+      "status": "open",
+      "updatedAt": "2026-03-20T01:07:51Z",
+      "headSha": "6a1e68e9e4b13f7a8e994f15b096dbfe9e18fae5",
+      "generatedAt": "2026-03-20T01:19:53.572Z",
+      "summary": "Quant-match int8 QAT on the 9L×512 baseline uses torch.quantile fake quantization to mimic export, showing its overhead exceeds the modest gap recovery.",
+      "tags": [
+        "quantization",
+        "evaluation",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-145.json"
+    },
+    {
+      "prNumber": 144,
+      "title": "Add MPK 8x384 10-minute submission record",
+      "status": "open",
+      "updatedAt": "2026-03-20T01:12:58Z",
+      "headSha": "f31b4bef938fe7b94c3d37383818c9bb9ebb703a",
+      "generatedAt": "2026-03-20T01:20:00.823Z",
+      "summary": "Timed MPK multi-path LM (8x384, KV4) uses strided MPK passes and tuned tied-embedding LRs on FineWeb shards before int8+zlib rounding.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-144.json"
+    },
     {
       "prNumber": 143,
       "title": "Add ContextFuse-2048 submission",
@@ -310,15 +379,15 @@
       "prNumber": 123,
       "title": "Record: Vocab 4096 + MLP 3x + Sliding Window Eval (mean val_bpb=1.1642, 3 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-19T23:01:06Z",
-      "headSha": "7e575e0abf85373383cf24222877729a37f2c4f2",
-      "generatedAt": "2026-03-19T23:09:09.650Z",
-      "summary": "4096-token SentencePiece, 3x MLP width enabled by int6 quantization, seq4096 training, SWA warmdown, and sliding-window eval stride 256.",
+      "updatedAt": "2026-03-20T01:10:38Z",
+      "headSha": "9b03d736ab45fc8c41a0cb4985d1bc996d674e4f",
+      "generatedAt": "2026-03-20T01:20:06.186Z",
+      "summary": "Int6 quant enables a 4096-vocab, 3×MLP GPT trained on 4096-context with SWA, followed by sliding-window eval for richer scoring.",
       "tags": [
-        "tokenization",
         "quantization",
-        "training-schedule",
-        "evaluation"
+        "sliding-window-eval",
+        "architecture",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -820,15 +889,15 @@
       "prNumber": 92,
       "title": "Record: 8192 Vocab, Sliding Window Eval, Selective Quantization; 1.194 val_bpb",
       "status": "open",
-      "updatedAt": "2026-03-19T17:07:13Z",
-      "headSha": "7c2ece57d0c77aad6b062ada4aea898c4ce1b75d",
-      "generatedAt": "2026-03-19T17:25:51.008Z",
-      "summary": "8-layer GPT with SP-8192 tokenizer, NorMuon optimizer, stride-256 sliding eval, and selective w6e8 quantization to compress while keeping accuracy.",
+      "updatedAt": "2026-03-20T01:04:52Z",
+      "headSha": "ee5f6b33ef219fa01357bafe78fde10a02393f05",
+      "generatedAt": "2026-03-20T01:20:11.087Z",
+      "summary": "8-layer model uses SP-8192 tokenizer, NorMuon, stride-256 sliding window eval, and selective w6e8 quantization for compact, accurate scoring.",
       "tags": [
-        "tokenization",
+        "architecture",
         "optimizer",
-        "sliding-window-eval",
-        "quantization"
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

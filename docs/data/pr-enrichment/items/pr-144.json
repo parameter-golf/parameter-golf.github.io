@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T01:20:00.823Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 144,
+    "title": "Add MPK 8x384 10-minute submission record",
+    "state": "open",
+    "updatedAt": "2026-03-20T01:12:58Z",
+    "headSha": "f31b4bef938fe7b94c3d37383818c9bb9ebb703a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/144",
+    "authorLogin": "DJLougen"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_MPK_8x384/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Timed MPK multi-path LM (8x384, KV4) uses strided MPK passes and tuned tied-embedding LRs on FineWeb shards before int8+zlib rounding.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "MPK with k=2, m=4 strides in an 8-layer KV4 setup",
+      "Tied embeddings with lowered matrix/scalar learning rates",
+      "80 FineWeb SP-1024 shards under 10-minute cap"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
