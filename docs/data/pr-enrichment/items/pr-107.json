@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T21:08:17.825Z",
+  "generatedAt": "2026-03-20T00:08:00.518Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 107,
-    "title": "Int6+zstd MLP1500 + FA3 + Sliding Window + QAT (val_bpb=1.1747)",
+    "title": "Int6+zstd MLP1488 + Sliding Window + QAT + Tuned LR (val_bpb=1.1648)",
     "state": "open",
-    "updatedAt": "2026-03-19T20:45:57Z",
-    "headSha": "71cd7769eb1d59caa7315a340c5635aa701f7e3a",
+    "updatedAt": "2026-03-20T00:04:11Z",
+    "headSha": "014814cee12d7b8814e687dc25c09ae70bc69981",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/107",
     "authorLogin": "m0at"
   },
@@ -22,19 +22,18 @@
     "submissionCount": 4
   },
   "output": {
-    "summary": "Int6-per-row weights with zstd compression, FA3 kernels, sliding-window evaluation, and brief post-training QAT let a wider MLP1500 stay under 16MB while improving BPB.",
+    "summary": "Int6 mixed quantization + zstd compression on key weights, wider MLP, sliding-window eval, and short post-training QAT with tuned Muon LRs.",
     "tags": [
       "quantization",
-      "attention",
       "evaluation",
-      "compression"
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 quantization + zstd compression",
-      "FA3 Hopper attention with MLP1500",
-      "Sliding-window eval + 30s post-QAT"
+      "Int6 mixed quantization + zstd compression on MLP/Q/V/proj weights",
+      "Sliding-window validation stride 64 for ~960-token context per scored token",
+      "Post-training STE-based QAT with tuned matrix/scalar/tied-embed Muon learning rates"
     ]
   },
   "compatibility": {

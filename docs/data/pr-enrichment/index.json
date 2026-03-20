@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-03-19T23:39:19.698Z",
+  "generatedAt": "2026-03-20T00:08:00.533Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 141,
+      "title": "Non-record: Systematic Hyperparameter Search (val_bpb=1.2075)",
+      "status": "open",
+      "updatedAt": "2026-03-20T00:03:37Z",
+      "headSha": "b8c5c6325d80c969e24ebc83ea5cbe3c91f2d976",
+      "generatedAt": "2026-03-20T00:07:54.470Z",
+      "summary": "Systematically tuned Muon optimizer, ROPE_BASE and 4k context length via tiered paired comparisons before final 8×H100 validation.",
+      "tags": [
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-141.json"
+    },
     {
       "prNumber": 139,
       "title": "Non-record: BitNet b1.58 — 65M ternary params beat 4-hour baseline in 10 minutes (val_bpb=1.2029)",
@@ -519,17 +541,16 @@
     },
     {
       "prNumber": 107,
-      "title": "Int6+zstd MLP1500 + FA3 + Sliding Window + QAT (val_bpb=1.1747)",
+      "title": "Int6+zstd MLP1488 + Sliding Window + QAT + Tuned LR (val_bpb=1.1648)",
       "status": "open",
-      "updatedAt": "2026-03-19T20:45:57Z",
-      "headSha": "71cd7769eb1d59caa7315a340c5635aa701f7e3a",
-      "generatedAt": "2026-03-19T21:08:17.825Z",
-      "summary": "Int6-per-row weights with zstd compression, FA3 kernels, sliding-window evaluation, and brief post-training QAT let a wider MLP1500 stay under 16MB while improving BPB.",
+      "updatedAt": "2026-03-20T00:04:11Z",
+      "headSha": "014814cee12d7b8814e687dc25c09ae70bc69981",
+      "generatedAt": "2026-03-20T00:08:00.518Z",
+      "summary": "Int6 mixed quantization + zstd compression on key weights, wider MLP, sliding-window eval, and short post-training QAT with tuned Muon LRs.",
       "tags": [
         "quantization",
-        "attention",
         "evaluation",
-        "compression"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,

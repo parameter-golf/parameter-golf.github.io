@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-20T00:07:54.470Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 141,
+    "title": "Non-record: Systematic Hyperparameter Search (val_bpb=1.2075)",
+    "state": "open",
+    "updatedAt": "2026-03-20T00:03:37Z",
+    "headSha": "b8c5c6325d80c969e24ebc83ea5cbe3c91f2d976",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/141",
+    "authorLogin": "nglain"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_SystematicSearch/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Systematically tuned Muon optimizer, ROPE_BASE and 4k context length via tiered paired comparisons before final 8×H100 validation.",
+    "tags": [
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Muon optimizer lr 0.02, momentum 0.99, warmdown 3k",
+      "ROPE_BASE=200000 with TRAIN_SEQ_LEN=4096",
+      "Fixed-seed paired comparisons across A40→H100 tiers"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
