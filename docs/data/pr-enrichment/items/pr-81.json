@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T17:26:31.296Z",
+  "generatedAt": "2026-03-20T04:51:41.449Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 81,
-    "title": "Non-record: Depth Recurrence 4x3 + SwiGLU + Int6 Quant + Sliding Window, val_bpb=1.2269 (4xH100)",
+    "title": "Record: SwiGLU + MLP 3x + Int6 + LoRA TTT, val_bpb=1.1670 (8xH100)",
     "state": "open",
-    "updatedAt": "2026-03-19T13:11:19Z",
-    "headSha": "210b0bad7dfb9d935e10584462ad8d983de7e29e",
+    "updatedAt": "2026-03-20T04:49:53Z",
+    "headSha": "b459056d10cd3fc574633033ee92c6454aba8b57",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/81",
     "authorLogin": "polarizedfortnite-cpu"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Reuses four transformer blocks across three passes with SwiGLU and int6 middle-layer quant to pack 12-layer compute plus sliding-window eval under 16MB.",
+    "summary": "Combines 3× wider MLP with SwiGLU, int6+QAT quantization, and LoRA test-time training so a larger transformer fits the artifact budget.",
     "tags": [
       "architecture",
       "quantization",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "4-block×3 recurrence to boost depth without extra params",
-      "SwiGLU FFNs with int6 quantized middle blocks for compression",
-      "sliding-window scoring to give every token near-full context"
+      "3× MLP with SwiGLU activation for extra capacity",
+      "Int6 quantization with QAT to reclaim bytes for a bigger model",
+      "LoRA test-time training on each validation doc"
     ]
   },
   "compatibility": {

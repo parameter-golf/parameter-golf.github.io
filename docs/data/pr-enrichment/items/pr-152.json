@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T04:21:40.965Z",
+  "generatedAt": "2026-03-20T04:51:29.884Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 152,
     "title": "Add TTT (Test-Time Training) submission: 1.1767 BPB",
     "state": "open",
-    "updatedAt": "2026-03-20T04:04:17Z",
-    "headSha": "43ad64ab535993df4a74d2362035c99a99b32500",
+    "updatedAt": "2026-03-20T04:50:55Z",
+    "headSha": "d5762bac5f7ce4ec928c0849280f554ff3c67e69",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/152",
     "authorLogin": "timowhite88"
   },
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Reclaim eval budget by running full-model SGD on the validation shard before sliding-window scoring, turning evaluation into adaptive compression.",
+    "summary": "Full-model SGD test-time training on the validation shard reclaims eval time before sliding-window scoring without altering the base 9x512 architecture.",
     "tags": [
       "val-only",
-      "sliding-window-eval",
-      "optimizer",
-      "evaluation"
+      "evaluation",
+      "optimizer"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Weights are updated via SGD on the validation shard during the allotted eval time before scoring.",
+    "valOnlyReasoning": "The run performs SGD adaptation on the validation data during the eval phase, tuning all weights before scoring.",
     "techniques": [
-      "Full-model SGD adaptation on validation data during eval",
-      "Sliding-window scoring after adaptation"
+      "Test-time training via full-model SGD on validation data",
+      "Aggressive LR/momentum schedule during eval adaptation"
     ]
   },
   "compatibility": {

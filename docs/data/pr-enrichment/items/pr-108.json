@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T03:51:24.045Z",
+  "generatedAt": "2026-03-20T04:51:35.251Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 108,
     "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
     "state": "open",
-    "updatedAt": "2026-03-20T03:34:19Z",
-    "headSha": "440b94e6c58231f6f6b03c873950671862f35232",
+    "updatedAt": "2026-03-20T04:38:27Z",
+    "headSha": "ca769a26552098af174f4961e07681fc25e983e6",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/108",
     "authorLogin": "kellyvv"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth-recurrent GPT reuses three unique 3×3 blocks over three loops with AdaLN conditioning, GQA, and eval-time attention tuning via MLX on Apple M3.",
+    "summary": "Depth-recurrent 3×3 GPT reuses three unique blocks over three loops with AdaLN conditioning and GQA, trained on Apple M3 via MLX before planned H100 validation.",
     "tags": [
       "architecture",
-      "compression",
+      "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Training performed on Apple Silicon hardware, not on a validation shard or val-only regime.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence (3 unique blocks × 3 loops)",
-      "AdaLN/FiLM conditioning with sigmoid cycle gates",
-      "Test-time attention-only adaptation per document"
+      "Depth recurrence with per-loop AdaLN conditioning",
+      "GQA heads plus int8+zlib compression fit under 16MB",
+      "Attention-only test-time training adaptation"
     ]
   },
   "compatibility": {

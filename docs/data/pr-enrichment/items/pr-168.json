@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T04:51:25.715Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 168,
+    "title": "SOTA Attempt: Paid prefix (val_bpb=1.0238)",
+    "state": "open",
+    "updatedAt": "2026-03-20T04:29:46Z",
+    "headSha": "83aee2852eb3375309580957f7d3ae6934488428",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/168",
+    "authorLogin": "spokane-way"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Store 12.9M val targets in an 8.75MB paid prefix blob and train a 7-layer 384d transformer on fineweb train data to cover the rest.",
+    "tags": [
+      "compression",
+      "architecture",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "lzma-compressed paid prefix storing 12.9M val tokens",
+      "7-layer 384d transformer trained with Muon on fineweb train split",
+      "int8+zlib quantization to keep model under 7.2MB"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

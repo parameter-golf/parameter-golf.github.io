@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-20T04:21:46.506Z",
+  "generatedAt": "2026-03-20T04:51:41.458Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 169,
+      "title": "Sliding Window Eval + Muon6 (val_bpb 1.1973)",
+      "status": "open",
+      "updatedAt": "2026-03-20T04:50:52Z",
+      "headSha": "ccf183ec4e40eccfe3966b531727281eaf3ba9d2",
+      "generatedAt": "2026-03-20T04:51:20.093Z",
+      "summary": "Sliding-window evaluation (stride 256) with forward_logits plus Muon6 Newton-Schulz orthogonalization and longer warmup/warmdown schedules for steadier training.",
+      "tags": [
+        "sliding-window-eval",
+        "muon",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-169.json"
+    },
+    {
+      "prNumber": 168,
+      "title": "SOTA Attempt: Paid prefix (val_bpb=1.0238)",
+      "status": "open",
+      "updatedAt": "2026-03-20T04:29:46Z",
+      "headSha": "83aee2852eb3375309580957f7d3ae6934488428",
+      "generatedAt": "2026-03-20T04:51:25.715Z",
+      "summary": "Store 12.9M val targets in an 8.75MB paid prefix blob and train a 7-layer 384d transformer on fineweb train data to cover the rest.",
+      "tags": [
+        "compression",
+        "architecture",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-168.json"
+    },
     {
       "prNumber": 167,
       "title": "Depth Recurrence via Layer Sharing (3 shared blocks → 1/3 params, matched BPB)",
@@ -245,15 +292,14 @@
       "prNumber": 152,
       "title": "Add TTT (Test-Time Training) submission: 1.1767 BPB",
       "status": "open",
-      "updatedAt": "2026-03-20T04:04:17Z",
-      "headSha": "43ad64ab535993df4a74d2362035c99a99b32500",
-      "generatedAt": "2026-03-20T04:21:40.965Z",
-      "summary": "Reclaim eval budget by running full-model SGD on the validation shard before sliding-window scoring, turning evaluation into adaptive compression.",
+      "updatedAt": "2026-03-20T04:50:55Z",
+      "headSha": "d5762bac5f7ce4ec928c0849280f554ff3c67e69",
+      "generatedAt": "2026-03-20T04:51:29.884Z",
+      "summary": "Full-model SGD test-time training on the validation shard reclaims eval time before sliding-window scoring without altering the base 9x512 architecture.",
       "tags": [
         "val-only",
-        "sliding-window-eval",
-        "optimizer",
-        "evaluation"
+        "evaluation",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": true,
@@ -993,13 +1039,13 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-20T03:34:19Z",
-      "headSha": "440b94e6c58231f6f6b03c873950671862f35232",
-      "generatedAt": "2026-03-20T03:51:24.045Z",
-      "summary": "Depth-recurrent GPT reuses three unique 3×3 blocks over three loops with AdaLN conditioning, GQA, and eval-time attention tuning via MLX on Apple M3.",
+      "updatedAt": "2026-03-20T04:38:27Z",
+      "headSha": "ca769a26552098af174f4961e07681fc25e983e6",
+      "generatedAt": "2026-03-20T04:51:35.251Z",
+      "summary": "Depth-recurrent 3×3 GPT reuses three unique blocks over three loops with AdaLN conditioning and GQA, trained on Apple M3 via MLX before planned H100 validation.",
       "tags": [
         "architecture",
-        "compression",
+        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -1410,12 +1456,12 @@
     },
     {
       "prNumber": 81,
-      "title": "Non-record: Depth Recurrence 4x3 + SwiGLU + Int6 Quant + Sliding Window, val_bpb=1.2269 (4xH100)",
+      "title": "Record: SwiGLU + MLP 3x + Int6 + LoRA TTT, val_bpb=1.1670 (8xH100)",
       "status": "open",
-      "updatedAt": "2026-03-19T13:11:19Z",
-      "headSha": "210b0bad7dfb9d935e10584462ad8d983de7e29e",
-      "generatedAt": "2026-03-19T17:26:31.296Z",
-      "summary": "Reuses four transformer blocks across three passes with SwiGLU and int6 middle-layer quant to pack 12-layer compute plus sliding-window eval under 16MB.",
+      "updatedAt": "2026-03-20T04:49:53Z",
+      "headSha": "b459056d10cd3fc574633033ee92c6454aba8b57",
+      "generatedAt": "2026-03-20T04:51:41.449Z",
+      "summary": "Combines 3× wider MLP with SwiGLU, int6+QAT quantization, and LoRA test-time training so a larger transformer fits the artifact budget.",
       "tags": [
         "architecture",
         "quantization",
