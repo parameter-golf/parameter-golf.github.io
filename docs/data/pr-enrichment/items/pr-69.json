@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T03:20:52.692Z",
+  "generatedAt": "2026-03-20T03:51:29.526Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 69,
-    "title": "SubSixteen: Sliding Window + FP16 Embed + 10L Flat + Muon WD + Overtone Init (val_bpb 1.1764)",
+    "title": "SubSixteen v2: Int6 QAT + MLP 3x + SWA + Sliding Window (val_bpb 1.1708)",
     "state": "open",
-    "updatedAt": "2026-03-20T03:03:00Z",
-    "headSha": "ee2466a2bc24e1c6e2bebd54cf80dce15a222550",
+    "updatedAt": "2026-03-20T03:45:36Z",
+    "headSha": "42a920059b2bc0648b965666537df3c2c0455197",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/69",
     "authorLogin": "TevBenji"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Flat 10-layer GPT with U-Net skips, sliding-window eval, overtone init, Muon weight decay, and FP16-tied embeddings before int8+zlib quantization.",
+    "summary": "Int6 QAT on a 9-layer GPT with 3x MLP, Muon/AdamW mix, SWA warmdown, sliding-window eval, and zstd-22 export to squeeze under 16MB.",
     "tags": [
-      "architecture",
-      "evaluation",
       "quantization",
-      "mixed-precision"
+      "optimizer",
+      "architecture",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Flat 10-layer GPT with U-Net skip connections",
-      "Stride-64 sliding-window eval for dense context scoring",
-      "FP16 tied embeddings plus int8+zlib quantization pipeline"
+      "STE-based int6 QAT to learn post-quant weights",
+      "Expanded MLP with Muon+AdamW training and SWA averaging",
+      "Sliding-window scoring plus zstd-22 compression for export"
     ]
   },
   "compatibility": {

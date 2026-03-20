@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T03:20:37.345Z",
+  "generatedAt": "2026-03-20T03:51:19.039Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 144,
     "title": "Add MPK 8x384 10-minute submission record",
     "state": "open",
-    "updatedAt": "2026-03-20T03:02:26Z",
-    "headSha": "62b31b1b97da4117b0e57dd391f23f69524a05a1",
+    "updatedAt": "2026-03-20T03:48:27Z",
+    "headSha": "daec523e6e0fa1d4cd95c823d89acbbffcf03d26",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/144",
     "authorLogin": "DJLougen"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "MPK multi-path causal LM with 8 layers, width 384, KV4 GQA, MPK strides 2/4, tied embeddings, and tuned low learning rates on FineWeb SP-1024 shards.",
+    "summary": "MPK-style multi-path 8-layer, 384-width causal model with GQA KV4 and MPK strides k=2,m=4 tuned on FineWeb shards within the 10-min cap.",
     "tags": [
       "architecture",
-      "attention",
-      "quantization"
+      "training-schedule",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "MPK multi-path architecture",
-      "GQA KV4 attention heads",
-      "Tied embeddings with tuned LR"
+      "MPK multi-path causal LM with 8 heads and 4 KV heads",
+      "FineWeb SP-1024 training shards with lower learning rates",
+      "int8+zlib serialization targeting the 16MB submission cap"
     ]
   },
   "compatibility": {

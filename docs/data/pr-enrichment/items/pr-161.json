@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T03:51:06.750Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 161,
+    "title": "Record:Add TTT-LoRA 512d submission (val_bpb=1.1957)",
+    "state": "open",
+    "updatedAt": "2026-03-20T03:21:47Z",
+    "headSha": "2f556296e47d76022b9594ecf1072637ca1c5a5b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/161",
+    "authorLogin": "santosh5541"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_TTT-LoRA_512d_8h_4kv_warmdown3000/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "512d transformer with LoRA test-time tuning rescues int8 quantization within the 10-minute/16MB budget",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LoRA test-time adaptation",
+      "Per-row int8 quant + zlib compression",
+      "10-minute wallclock cap on 8×H100"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,36 +1,38 @@
 {
-  "generatedAt": "2026-03-19T17:27:39.951Z",
+  "generatedAt": "2026-03-20T03:51:34.960Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 65,
-    "title": "Record: Mixed Quant (int6+int8) + Sliding Window, val_bpb=1.1630",
+    "title": "Record: Mixed Quant Int6/FP16 + SmearGate + OrthoInit + MLP 3x + Sliding Window, val_bpb=1.1556",
     "state": "open",
-    "updatedAt": "2026-03-19T17:03:05Z",
-    "headSha": "f85c8379c6b210df2dbaecf9083f7b60adeecb85",
+    "updatedAt": "2026-03-20T03:30:53Z",
+    "headSha": "3aface5c0bcc40ca2e74918977d05c07ae8fa634",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/65",
     "authorLogin": "aquariouseworkman"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_smeargate_orthoinit_muonwd/README.md",
       "records/track_10min_16mb/2026-03-19_MixedQuant_Int6Int8_SlidingWindow/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Expands to 3x MLP width with int6 block + int8 embedding quantization and sliding-window stride-64 eval for richer context without enlarging artifact size.",
+    "summary": "Combines SmearGate bigram gating, orthogonal init, Muon’s orthogonalized weight decay, and int6 STE quantization with a 3× MLP plus sliding-window eval.",
     "tags": [
-      "quantization",
       "architecture",
-      "sliding-window-eval"
+      "optimizer",
+      "quantization",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 STE-protected blocks, int8 embedding mixed quant",
-      "wider 3× MLP enabled by aggressive quantization",
-      "stride-64 sliding window evaluation for 960-token context"
+      "SmearGate bigram gating blended into embeddings before RMS",
+      "Muon optimizer with orthogonal projections plus decoupled weight decay",
+      "Int6 STE QAT on widened MLP with sliding-window scoring"
     ]
   },
   "compatibility": {

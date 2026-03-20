@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T03:20:30.722Z",
+  "generatedAt": "2026-03-20T03:51:11.183Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 152,
     "title": "Add TTT (Test-Time Training) submission: 1.1767 BPB",
     "state": "open",
-    "updatedAt": "2026-03-20T03:09:11Z",
-    "headSha": "134640944d2c3da894f88c260b7d03767ee6dcfb",
+    "updatedAt": "2026-03-20T03:45:19Z",
+    "headSha": "b33510917831cb01f07927129405748cec05edf8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/152",
     "authorLogin": "timowhite88"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Full-model SGD test-time adaptation reuses eval budget to fine-tune the 9x512 KV4 model on validation data before sliding-window scoring.",
+    "summary": "Full-model SGD adaptation reuses the remaining eval budget for two epochs of TTT before sliding-window scoring to align weights with the validation distribution.",
     "tags": [
       "val-only",
+      "sliding-window-eval",
       "optimizer",
-      "evaluation",
-      "sliding-window-eval"
+      "evaluation"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Adapts every parameter via SGD on the validation shard during the eval phase before scoring.",
+    "valOnlyReasoning": "Per-run validation data is used twice: once for TTT SGD adaptation and then for scoring, so the adaptation phase is pure val-only training.",
     "techniques": [
-      "full-model SGD adaptation",
-      "momentum-smoothed aggressive LR",
-      "sliding-window scoring after TTT"
+      "Full-model SGD adaptation during evaluation",
+      "Aggressive lr/momentum TTT epochs",
+      "Sliding-window scoring post-adaptation"
     ]
   },
   "compatibility": {

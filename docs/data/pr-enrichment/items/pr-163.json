@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T03:50:57.988Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 163,
+    "title": "SwiGLU dim=576 + Sliding Window + Muon WD (1.2091 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-20T03:50:05Z",
+    "headSha": "b7f3feb4d544d11451b87b33dd33c90d3981bb79",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/163",
+    "authorLogin": "Focus2321"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_SwiGLU_576_SlidingWindow_MuonWD/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Auto-searched wider 7-layer SwiGLU with Muon weight decay, FP16 embedding pass-through, and sliding-window eval to shrink artifacts under 16MB.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "evaluation",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "width-focused SwiGLU dim=576 model found via automated search",
+      "Muon optimizer with 0.02 weight decay plus FP16 embedding passthrough for quantization robustness",
+      "sliding-window stride=64 eval paired with 60% wallclock warmdown"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
