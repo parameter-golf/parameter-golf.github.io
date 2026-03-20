@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T18:24:32.009Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 238,
+    "title": "[Non-record] Quantization Findings: SWA Reversal + Int5 Failure",
+    "state": "open",
+    "updatedAt": "2026-03-20T17:55:04Z",
+    "headSha": "72b4293a348a8e37064805354d821b7478721cf0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/238",
+    "authorLogin": "kellyvv"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_QuantizationFindings/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Averaging 84 checkpoints via SWA smooths weights so int6+zstd quantization beats the last checkpoint, while int5 MLP quantization crashes undertrained models.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "regularization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "SWA checkpoint averaging to smooth quantization-sensitive outliers",
+      "int6+zstd quantization with STE-QAT for stabilized roundtrips",
+      "mixed int5/int6 quantization exposes undertraining sensitivity"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

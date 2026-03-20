@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T16:54:16.196Z",
+  "generatedAt": "2026-03-20T18:24:53.699Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 224,
     "title": "Complexity MoE + PID Dynamics (Token-Routed I64)",
     "state": "open",
-    "updatedAt": "2026-03-20T16:31:05Z",
-    "headSha": "6f483d8886957ffe8a97ad4254e7514a0e28819c",
+    "updatedAt": "2026-03-20T18:24:24Z",
+    "headSha": "823d3bbda3f005ba8a1f51508ca3fe4e38fd3078",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/224",
     "authorLogin": "Complexity-ML"
   },
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Deterministic token-routed 4-expert MoE with layer-spanning PID dynamics, SwiGLU MLPs, and cosine warm restarts within the 16MB cap.",
+    "summary": "Token-routed 4-expert SwiGLU MoE pairs PID-layer dynamics with SGDR restarts for deterministic balancing across the nine-layer stack.",
     "tags": [
       "architecture",
-      "training-schedule",
-      "compression"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "token_id % 4 deterministic routing for 4-expert MoE",
-      "PID dynamics with mu/velocity clamped across all layers",
-      "cosine warm restarts with decaying peak LR"
+      "deterministic token_id%4 expert routing",
+      "PID-informed mu/velocity dynamics per layer",
+      "decaying-peak cosine warm restarts"
     ]
   },
   "compatibility": {

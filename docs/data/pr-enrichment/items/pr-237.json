@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T17:53:59.461Z",
+  "generatedAt": "2026-03-20T18:24:38.728Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 237,
     "title": "Add 10L 4K long-context negative-result submission",
     "state": "open",
-    "updatedAt": "2026-03-20T17:49:46Z",
+    "updatedAt": "2026-03-20T18:00:02Z",
     "headSha": "9545c4d7446ed230219e570ed2dabf6359d7bd41",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/237",
     "authorLogin": "takoyakisoft"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Trained a 10-layer, 4K-context transformer under 10-min budget with QAT, selective FP16, sliding-window evaluation, and LoRA TTT to probe coverage limits.",
+    "summary": "Negative-result 10-layer Transformer with 4K training context, QAT, and sliding-window LoRA TTT evaluation, but coverage collapsed under the 10-minute budget.",
     "tags": [
       "architecture",
       "quantization",
-      "evaluation",
-      "sliding-window-eval"
+      "sliding-window-eval",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "10-layer 4K-context transformer",
-      "QAT with selective FP16 passthrough",
-      "Sliding-window eval plus LoRA TTT"
+      "10-layer Transformer with 4K training/eval context",
+      "QAT-style fake quantization plus selective FP16 passthrough",
+      "Sliding-window evaluation with LoRA TTT post-quantization"
     ]
   },
   "compatibility": {

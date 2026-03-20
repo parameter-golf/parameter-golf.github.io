@@ -1,38 +1,37 @@
 {
-  "generatedAt": "2026-03-20T17:54:05.300Z",
+  "generatedAt": "2026-03-20T18:24:43.162Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 236,
     "title": "Record: 11L Int6 + SmearGate + Batch Optimization (val_bpb=1.1400)",
     "state": "open",
-    "updatedAt": "2026-03-20T17:50:41Z",
-    "headSha": "e6cacf4c4e55d42c921a761997d0297e6b454d25",
+    "updatedAt": "2026-03-20T18:13:18Z",
+    "headSha": "0d23304124424ca9bd4c159bc66002b83940d921",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/236",
     "authorLogin": "saml212"
   },
   "inputs": {
-    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-20_11L_Int6_SmearGate_SWA/README.md",
-      "records/track_10min_16mb/2026-03-20_Int6MLP3x/README.md"
+      "records/track_10min_16mb/2026-03-20_11L_Int6_SmearGate_SWA/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer int6+SmearGate model reduces batch size to 524K tokens, freeing room for int8 embeddings and BigramHash while boosting steps for batched sliding-window eval.",
+    "summary": "11-layer GPT uses int6 attention/MLP, int8 embeddings, SmearGate+BigramHash, SWA, and tighter WD while shrinking batch size to pack more updates in 10m.",
     "tags": [
       "quantization",
       "architecture",
       "training-schedule",
-      "evaluation"
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 quantization with int8 embedding",
-      "SmearGate + BigramHash context features",
-      "Smaller batch size to maximize fixed-time steps"
+      "int6 attention/MLP + int8 tied embedding",
+      "SmearGate + BigramHash features with SWA",
+      "smaller batch size to maximize steps in fixed-time training"
     ]
   },
   "compatibility": {

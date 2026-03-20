@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T18:24:24.474Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 240,
+    "title": "Non-record: local RTX 4070 SP1024 7x512 KV2 500-step run",
+    "state": "open",
+    "updatedAt": "2026-03-20T17:55:21Z",
+    "headSha": "b2bcd556fea04e49b01a43f0644bcbc1143fc451",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/240",
+    "authorLogin": "riatzukiza"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_RTX4070_SP1024_7x512_KV2_500steps/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Local RTX 4070 non-record run fits a 16MB model by combining a shallow 7x512 KV2 architecture with tied embeddings and compact int8+zlib artifacts.",
+    "tags": [
+      "architecture",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "shallow KV-thin 7x512 transformer",
+      "tied embedding/matrix LR tuning",
+      "single-shard local training with int8+zlib serialization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

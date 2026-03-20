@@ -1,21 +1,137 @@
 {
-  "generatedAt": "2026-03-20T17:54:24.475Z",
+  "generatedAt": "2026-03-20T18:25:08.790Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 243,
+      "title": "Record: Int6 3xMLP + Cosine Warmdown (val_bpb=1.1704)",
+      "status": "closed",
+      "updatedAt": "2026-03-20T18:18:31Z",
+      "headSha": "d7c753ff6070de90c04b05369c5f1a68a712d8cb",
+      "generatedAt": "2026-03-20T18:24:09.075Z",
+      "summary": "Int6 STE quant plus 3x MLP width and cosine warmdown on the merged SOTA with orthogonal init and RoPE base 50k keeps the build under 16MB.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-243.json"
+    },
+    {
+      "prNumber": 242,
+      "title": "Crystal Curriculum — TF-IDF curriculum learning by Bee Bytez",
+      "status": "open",
+      "updatedAt": "2026-03-20T17:57:57Z",
+      "headSha": "ea6acc85aa0640a47af6a81e4239a01675f31484",
+      "generatedAt": "2026-03-20T18:24:15.507Z",
+      "summary": "Info-density Crystallizer oversamples TF-IDF scored batches, then linearly blend to uniform curriculum while scaling to 10 layers with Muon weight decay.",
+      "tags": [
+        "muon",
+        "training-schedule",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-242.json"
+    },
+    {
+      "prNumber": 241,
+      "title": "[Non-record] Eval-time Adaptation: Stride-OGD + Two-Pass + NTK-RoPE",
+      "status": "open",
+      "updatedAt": "2026-03-20T17:55:38Z",
+      "headSha": "2cb39d943fa31e5fbef971b75a542248d7a20b27",
+      "generatedAt": "2026-03-20T18:24:20.724Z",
+      "summary": "Eval-time Stride-OGD vocab bias updates, two-pass gradient correction, and NTK-RoPE rescaled context adapt the fixed model without retraining.",
+      "tags": [
+        "evaluation",
+        "attention",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-241.json"
+    },
+    {
+      "prNumber": 240,
+      "title": "Non-record: local RTX 4070 SP1024 7x512 KV2 500-step run",
+      "status": "open",
+      "updatedAt": "2026-03-20T17:55:21Z",
+      "headSha": "b2bcd556fea04e49b01a43f0644bcbc1143fc451",
+      "generatedAt": "2026-03-20T18:24:24.474Z",
+      "summary": "Local RTX 4070 non-record run fits a 16MB model by combining a shallow 7x512 KV2 architecture with tied embeddings and compact int8+zlib artifacts.",
+      "tags": [
+        "architecture",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-240.json"
+    },
+    {
+      "prNumber": 238,
+      "title": "[Non-record] Quantization Findings: SWA Reversal + Int5 Failure",
+      "status": "open",
+      "updatedAt": "2026-03-20T17:55:04Z",
+      "headSha": "72b4293a348a8e37064805354d821b7478721cf0",
+      "generatedAt": "2026-03-20T18:24:32.009Z",
+      "summary": "Averaging 84 checkpoints via SWA smooths weights so int6+zstd quantization beats the last checkpoint, while int5 MLP quantization crashes undertrained models.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-238.json"
+    },
+    {
       "prNumber": 237,
       "title": "Add 10L 4K long-context negative-result submission",
       "status": "open",
-      "updatedAt": "2026-03-20T17:49:46Z",
+      "updatedAt": "2026-03-20T18:00:02Z",
       "headSha": "9545c4d7446ed230219e570ed2dabf6359d7bd41",
-      "generatedAt": "2026-03-20T17:53:59.461Z",
-      "summary": "Trained a 10-layer, 4K-context transformer under 10-min budget with QAT, selective FP16, sliding-window evaluation, and LoRA TTT to probe coverage limits.",
+      "generatedAt": "2026-03-20T18:24:38.728Z",
+      "summary": "Negative-result 10-layer Transformer with 4K training context, QAT, and sliding-window LoRA TTT evaluation, but coverage collapsed under the 10-minute budget.",
       "tags": [
         "architecture",
         "quantization",
-        "evaluation",
-        "sliding-window-eval"
+        "sliding-window-eval",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -31,15 +147,15 @@
       "prNumber": 236,
       "title": "Record: 11L Int6 + SmearGate + Batch Optimization (val_bpb=1.1400)",
       "status": "open",
-      "updatedAt": "2026-03-20T17:50:41Z",
-      "headSha": "e6cacf4c4e55d42c921a761997d0297e6b454d25",
-      "generatedAt": "2026-03-20T17:54:05.300Z",
-      "summary": "11-layer int6+SmearGate model reduces batch size to 524K tokens, freeing room for int8 embeddings and BigramHash while boosting steps for batched sliding-window eval.",
+      "updatedAt": "2026-03-20T18:13:18Z",
+      "headSha": "0d23304124424ca9bd4c159bc66002b83940d921",
+      "generatedAt": "2026-03-20T18:24:43.162Z",
+      "summary": "11-layer GPT uses int6 attention/MLP, int8 embeddings, SmearGate+BigramHash, SWA, and tighter WD while shrinking batch size to pack more updates in 10m.",
       "tags": [
         "quantization",
         "architecture",
         "training-schedule",
-        "evaluation"
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -55,14 +171,15 @@
       "prNumber": 232,
       "title": "Record: 11L MLP3x + SmearGate + Error Correction Table",
       "status": "open",
-      "updatedAt": "2026-03-20T17:26:46Z",
-      "headSha": "fc9b83abe80f123a09fd2fb36a0ffba3aa98e06b",
-      "generatedAt": "2026-03-20T17:54:11.822Z",
-      "summary": "Eval-time error correction table delta-encodes 908K val positions to boost matching logits on the 11L MLP3x+SmearGate/BigramHash stack.",
+      "updatedAt": "2026-03-20T18:13:00Z",
+      "headSha": "0b8db18201b77f6c2eb7b3c9231e42ef5b1e43ff",
+      "generatedAt": "2026-03-20T18:24:49.690Z",
+      "summary": "Uses an eval-time delta-encoded error correction table to boost logits for 908K fixed-val tokens alongside the 11L MLP3x SmearGate int6 stack.",
       "tags": [
-        "evaluation",
+        "quantization",
+        "architecture",
         "compression",
-        "quantization"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -197,14 +314,13 @@
       "prNumber": 224,
       "title": "Complexity MoE + PID Dynamics (Token-Routed I64)",
       "status": "open",
-      "updatedAt": "2026-03-20T16:31:05Z",
-      "headSha": "6f483d8886957ffe8a97ad4254e7514a0e28819c",
-      "generatedAt": "2026-03-20T16:54:16.196Z",
-      "summary": "Deterministic token-routed 4-expert MoE with layer-spanning PID dynamics, SwiGLU MLPs, and cosine warm restarts within the 16MB cap.",
+      "updatedAt": "2026-03-20T18:24:24Z",
+      "headSha": "823d3bbda3f005ba8a1f51508ca3fe4e38fd3078",
+      "generatedAt": "2026-03-20T18:24:53.699Z",
+      "summary": "Token-routed 4-expert SwiGLU MoE pairs PID-layer dynamics with SGDR restarts for deterministic balancing across the nine-layer stack.",
       "tags": [
         "architecture",
-        "training-schedule",
-        "compression"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2072,6 +2188,30 @@
       "file": "items/pr-116.json"
     },
     {
+      "prNumber": 114,
+      "title": "#1 on leaderboard: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
+      "status": "open",
+      "updatedAt": "2026-03-20T08:26:03Z",
+      "headSha": "b8bcb79007187280240dfa9275c8d80ad98941f3",
+      "generatedAt": "2026-03-20T18:25:01.137Z",
+      "summary": "Selective fp16 passthrough atop int6 quantization frees budget for 3x MLP and 2048-token training, evaluated via stride-256 sliding windows.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-114.json"
+    },
+    {
       "prNumber": 113,
       "title": "Record: FP16 Embed + Sliding Window Eval + Warmdown Tuning (pending eval)",
       "status": "open",
@@ -2168,14 +2308,14 @@
       "prNumber": 108,
       "title": "Record: 11L MLP3x + SmearGate + Error Correction Table",
       "status": "open",
-      "updatedAt": "2026-03-20T17:54:02Z",
-      "headSha": "6a32cfb6a9b66f790a1b95587c4ad8a7ef14ada4",
-      "generatedAt": "2026-03-20T17:54:24.461Z",
-      "summary": "11-layer SmearGate MLP3x uses an int6+zstd checkpoint with an inline error correction table that delta-encodes fixed-val positions to boost logits at eval.",
+      "updatedAt": "2026-03-20T18:12:50Z",
+      "headSha": "758d6df51faa89098feed9ff81e53a2538e802ae",
+      "generatedAt": "2026-03-20T18:25:08.777Z",
+      "summary": "Quantized 11L MLP3x + SmearGate base builds a delta-encoded correction table at eval time to boost logits for the model’s worst val predictions.",
       "tags": [
         "architecture",
-        "evaluation",
         "compression",
+        "evaluation",
         "non-record"
       ],
       "flags": {

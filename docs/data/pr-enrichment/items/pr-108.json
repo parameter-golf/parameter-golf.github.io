@@ -1,37 +1,38 @@
 {
-  "generatedAt": "2026-03-20T17:54:24.461Z",
+  "generatedAt": "2026-03-20T18:25:08.777Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 108,
     "title": "Record: 11L MLP3x + SmearGate + Error Correction Table",
     "state": "open",
-    "updatedAt": "2026-03-20T17:54:02Z",
-    "headSha": "6a32cfb6a9b66f790a1b95587c4ad8a7ef14ada4",
+    "updatedAt": "2026-03-20T18:12:50Z",
+    "headSha": "758d6df51faa89098feed9ff81e53a2538e802ae",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/108",
     "authorLogin": "kellyvv"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_GolombRiceEncoding/README.md",
       "records/track_non_record_16mb/2026-03-20_DepthRecurrent3x3_MLX/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "11-layer SmearGate MLP3x uses an int6+zstd checkpoint with an inline error correction table that delta-encodes fixed-val positions to boost logits at eval.",
+    "summary": "Quantized 11L MLP3x + SmearGate base builds a delta-encoded correction table at eval time to boost logits for the model’s worst val predictions.",
     "tags": [
       "architecture",
-      "evaluation",
       "compression",
+      "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SmearGate MLP3x 11-layer transformer policy",
-      "Int6+zstd quantized checkpoint",
-      "Inline delta-encoded error correction table for fixed validation positions"
+      "Delta+varint encoding for compact position→token corrections",
+      "Inline eval-time table builder biases logits for known bad positions",
+      "11L MLP3x SmearGate foundation with STE-QAT quantization"
     ]
   },
   "compatibility": {

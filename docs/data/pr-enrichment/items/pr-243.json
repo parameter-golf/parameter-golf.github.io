@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T18:24:09.075Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 243,
+    "title": "Record: Int6 3xMLP + Cosine Warmdown (val_bpb=1.1704)",
+    "state": "closed",
+    "updatedAt": "2026-03-20T18:18:31Z",
+    "headSha": "d7c753ff6070de90c04b05369c5f1a68a712d8cb",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/243",
+    "authorLogin": "kvmukilan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_Int6_3xMLP_CosineWD/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Int6 STE quant plus 3x MLP width and cosine warmdown on the merged SOTA with orthogonal init and RoPE base 50k keeps the build under 16MB.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int6 STE quantization to free budget for 3x wider MLP",
+      "Cosine warmdown that keeps LR higher early then decays faster",
+      "Orthogonal init combined with RoPE base 50k"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

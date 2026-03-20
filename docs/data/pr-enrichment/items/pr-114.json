@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T08:52:14.832Z",
+  "generatedAt": "2026-03-20T18:25:01.137Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 post-training quantization frees artifact headroom for a 3x MLP while selective fp16 passthrough and 2048-length training support sliding-window eval.",
+    "summary": "Selective fp16 passthrough atop int6 quantization frees budget for 3x MLP and 2048-token training, evaluated via stride-256 sliding windows.",
     "tags": [
       "quantization",
-      "sliding-window-eval",
-      "architecture"
+      "architecture",
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 per-row quantization freeing space for 3x MLP",
-      "Selective fp16 passthrough for tied embedding and late key projections",
-      "Train@2048 with stride-256 sliding-window evaluation"
+      "Int6 per-row quantization with fp16 tied embedding and last-layer key passthrough",
+      "Triple-sized MLP hidden dim within 15.98MB artifact budget",
+      "Train at 2048 tokens with stride-256 sliding-window evaluation"
     ]
   },
   "compatibility": {

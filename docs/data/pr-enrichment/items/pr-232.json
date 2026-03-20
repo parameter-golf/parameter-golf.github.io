@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T17:54:11.822Z",
+  "generatedAt": "2026-03-20T18:24:49.690Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 232,
     "title": "Record: 11L MLP3x + SmearGate + Error Correction Table",
     "state": "open",
-    "updatedAt": "2026-03-20T17:26:46Z",
-    "headSha": "fc9b83abe80f123a09fd2fb36a0ffba3aa98e06b",
+    "updatedAt": "2026-03-20T18:13:00Z",
+    "headSha": "0b8db18201b77f6c2eb7b3c9231e42ef5b1e43ff",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/232",
     "authorLogin": "kellyvv"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Eval-time error correction table delta-encodes 908K val positions to boost matching logits on the 11L MLP3x+SmearGate/BigramHash stack.",
+    "summary": "Uses an eval-time delta-encoded error correction table to boost logits for 908K fixed-val tokens alongside the 11L MLP3x SmearGate int6 stack.",
     "tags": [
-      "evaluation",
+      "quantization",
+      "architecture",
       "compression",
-      "quantization"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "precomputed val-position correction table",
-      "delta+varint encoding of position/token pairs",
-      "logit boosting for matched tokens during eval"
+      "Delta-encoded position→token lookup embedded in artifact",
+      "+20 logit boost for matched positions to zero-loss",
+      "11L MLP3x SmearGate BigramHash int6+zstd with STE QAT/SWA"
     ]
   },
   "compatibility": {

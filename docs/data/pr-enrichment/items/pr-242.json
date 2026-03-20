@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T18:24:15.507Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 242,
+    "title": "Crystal Curriculum — TF-IDF curriculum learning by Bee Bytez",
+    "state": "open",
+    "updatedAt": "2026-03-20T17:57:57Z",
+    "headSha": "ea6acc85aa0640a47af6a81e4239a01675f31484",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/242",
+    "authorLogin": "jamesrziggy"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_CrystalCurriculum/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Info-density Crystallizer oversamples TF-IDF scored batches, then linearly blend to uniform curriculum while scaling to 10 layers with Muon weight decay.",
+    "tags": [
+      "muon",
+      "training-schedule",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "TF-IDF Crystallizer scoring of multiple candidate batches",
+      "Curriculum schedule decays to uniform sampling after 70%",
+      "Muon optimizer weight decay with 10-layer transformer"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

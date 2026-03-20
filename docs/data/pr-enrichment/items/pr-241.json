@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T18:24:20.724Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 241,
+    "title": "[Non-record] Eval-time Adaptation: Stride-OGD + Two-Pass + NTK-RoPE",
+    "state": "open",
+    "updatedAt": "2026-03-20T17:55:38Z",
+    "headSha": "2cb39d943fa31e5fbef971b75a542248d7a20b27",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/241",
+    "authorLogin": "kellyvv"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_EvalTimeAdaptation/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Eval-time Stride-OGD vocab bias updates, two-pass gradient correction, and NTK-RoPE rescaled context adapt the fixed model without retraining.",
+    "tags": [
+      "evaluation",
+      "attention",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Stride-OGD vocab bias updated every 64 tokens via exact gradient EMA",
+      "Two-pass eval collecting gradients before re-scoring with accumulated bias",
+      "NTK-RoPE rescaling to extend eval context to 4096 tokens"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
