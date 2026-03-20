@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T17:53:59.461Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 237,
+    "title": "Add 10L 4K long-context negative-result submission",
+    "state": "open",
+    "updatedAt": "2026-03-20T17:49:46Z",
+    "headSha": "9545c4d7446ed230219e570ed2dabf6359d7bd41",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/237",
+    "authorLogin": "takoyakisoft"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_10L_4K_Sliding_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Trained a 10-layer, 4K-context transformer under 10-min budget with QAT, selective FP16, sliding-window evaluation, and LoRA TTT to probe coverage limits.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "10-layer 4K-context transformer",
+      "QAT with selective FP16 passthrough",
+      "Sliding-window eval plus LoRA TTT"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

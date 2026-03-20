@@ -1,8 +1,79 @@
 {
-  "generatedAt": "2026-03-20T17:24:18.368Z",
+  "generatedAt": "2026-03-20T17:54:24.475Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 237,
+      "title": "Add 10L 4K long-context negative-result submission",
+      "status": "open",
+      "updatedAt": "2026-03-20T17:49:46Z",
+      "headSha": "9545c4d7446ed230219e570ed2dabf6359d7bd41",
+      "generatedAt": "2026-03-20T17:53:59.461Z",
+      "summary": "Trained a 10-layer, 4K-context transformer under 10-min budget with QAT, selective FP16, sliding-window evaluation, and LoRA TTT to probe coverage limits.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-237.json"
+    },
+    {
+      "prNumber": 236,
+      "title": "Record: 11L Int6 + SmearGate + Batch Optimization (val_bpb=1.1400)",
+      "status": "open",
+      "updatedAt": "2026-03-20T17:50:41Z",
+      "headSha": "e6cacf4c4e55d42c921a761997d0297e6b454d25",
+      "generatedAt": "2026-03-20T17:54:05.300Z",
+      "summary": "11-layer int6+SmearGate model reduces batch size to 524K tokens, freeing room for int8 embeddings and BigramHash while boosting steps for batched sliding-window eval.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-236.json"
+    },
+    {
+      "prNumber": 232,
+      "title": "Record: 11L MLP3x + SmearGate + Error Correction Table",
+      "status": "open",
+      "updatedAt": "2026-03-20T17:26:46Z",
+      "headSha": "fc9b83abe80f123a09fd2fb36a0ffba3aa98e06b",
+      "generatedAt": "2026-03-20T17:54:11.822Z",
+      "summary": "Eval-time error correction table delta-encodes 908K val positions to boost matching logits on the 11L MLP3x+SmearGate/BigramHash stack.",
+      "tags": [
+        "evaluation",
+        "compression",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-232.json"
+    },
     {
       "prNumber": 230,
       "title": "Record: Int6 + MLP 3x + NorMuon + Weight Decay, val_bpb=1.1875",
@@ -502,14 +573,14 @@
       "prNumber": 201,
       "title": "Staging: LAWA-EMA frontier fork (pr162 base, SWA→LAWA)",
       "status": "open",
-      "updatedAt": "2026-03-20T17:16:25Z",
-      "headSha": "c13257149e78b5c54534baad0b497e5986345561",
-      "generatedAt": "2026-03-20T17:24:05.101Z",
-      "summary": "Switches the pr162 fork to LAWA-EMA in the staging profile, updating float32 shadows each step before export while retaining sliding-window eval.",
+      "updatedAt": "2026-03-20T17:49:31Z",
+      "headSha": "9deb4af94cca9cb2ea3dc43483c9bddf77fd459e",
+      "generatedAt": "2026-03-20T17:54:16.714Z",
+      "summary": "STAGING_PROFILE forks PR162, swapping SWA for LAWA-EMA with stepwise float32 shadow averages plus sliding-window eval for profile validation.",
       "tags": [
-        "sliding-window-eval",
-        "optimizer",
-        "training-schedule"
+        "regularization",
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2001,29 +2072,6 @@
       "file": "items/pr-116.json"
     },
     {
-      "prNumber": 114,
-      "title": "#1 on leaderboard: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
-      "status": "open",
-      "updatedAt": "2026-03-20T08:26:03Z",
-      "headSha": "b8bcb79007187280240dfa9275c8d80ad98941f3",
-      "generatedAt": "2026-03-20T08:52:14.832Z",
-      "summary": "Int6 post-training quantization frees artifact headroom for a 3x MLP while selective fp16 passthrough and 2048-length training support sliding-window eval.",
-      "tags": [
-        "quantization",
-        "sliding-window-eval",
-        "architecture"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-114.json"
-    },
-    {
       "prNumber": 113,
       "title": "Record: FP16 Embed + Sliding Window Eval + Warmdown Tuning (pending eval)",
       "status": "open",
@@ -2119,12 +2167,13 @@
     {
       "prNumber": 108,
       "title": "Record: 11L MLP3x + SmearGate + Error Correction Table",
-      "status": "closed",
-      "updatedAt": "2026-03-20T17:14:05Z",
-      "headSha": "f84301d0c8f99317b5acb1e1edc19bee871407b8",
-      "generatedAt": "2026-03-20T17:24:18.351Z",
-      "summary": "Eval builds a delta-encoded position→token correction table that boosts logits for fixed-val worst predictions via direct lookups.",
+      "status": "open",
+      "updatedAt": "2026-03-20T17:54:02Z",
+      "headSha": "6a32cfb6a9b66f790a1b95587c4ad8a7ef14ada4",
+      "generatedAt": "2026-03-20T17:54:24.461Z",
+      "summary": "11-layer SmearGate MLP3x uses an int6+zstd checkpoint with an inline error correction table that delta-encodes fixed-val positions to boost logits at eval.",
       "tags": [
+        "architecture",
         "evaluation",
         "compression",
         "non-record"

@@ -1,37 +1,36 @@
 {
-  "generatedAt": "2026-03-20T17:54:24.461Z",
+  "generatedAt": "2026-03-20T17:54:11.822Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
-    "number": 108,
+    "number": 232,
     "title": "Record: 11L MLP3x + SmearGate + Error Correction Table",
     "state": "open",
-    "updatedAt": "2026-03-20T17:54:02Z",
-    "headSha": "6a32cfb6a9b66f790a1b95587c4ad8a7ef14ada4",
-    "htmlUrl": "https://github.com/openai/parameter-golf/pull/108",
+    "updatedAt": "2026-03-20T17:26:46Z",
+    "headSha": "fc9b83abe80f123a09fd2fb36a0ffba3aa98e06b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/232",
     "authorLogin": "kellyvv"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_non_record_16mb/2026-03-20_DepthRecurrent3x3_MLX/README.md"
+      "records/track_10min_16mb/2026-03-20_CorrectionTable_11L_MLP3x/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer SmearGate MLP3x uses an int6+zstd checkpoint with an inline error correction table that delta-encodes fixed-val positions to boost logits at eval.",
+    "summary": "Eval-time error correction table delta-encodes 908K val positions to boost matching logits on the 11L MLP3x+SmearGate/BigramHash stack.",
     "tags": [
-      "architecture",
       "evaluation",
       "compression",
-      "non-record"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SmearGate MLP3x 11-layer transformer policy",
-      "Int6+zstd quantized checkpoint",
-      "Inline delta-encoded error correction table for fixed validation positions"
+      "precomputed val-position correction table",
+      "delta+varint encoding of position/token pairs",
+      "logit boosting for matched tokens during eval"
     ]
   },
   "compatibility": {
