@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T07:52:44.132Z",
+  "generatedAt": "2026-03-20T08:22:28.622Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 81,
     "title": "Record: SwiGLU + MLP 3x + Int6 + LoRA TTT, val_bpb=1.1670 (8xH100)",
     "state": "open",
-    "updatedAt": "2026-03-20T07:36:10Z",
-    "headSha": "9c4a57866d2903b7446f941e4d77c5852154ae7e",
+    "updatedAt": "2026-03-20T08:12:43Z",
+    "headSha": "20ad97839c53bb5f468a952464de30153ca57dd1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/81",
     "authorLogin": "polarizedfortnite-cpu"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines wider SwiGLU MLP, int6+QAT quant, and LoRA-based test-time training on a 10-layer transformer to squeeze more capacity under the artifact cap.",
+    "summary": "Combines 3x MLP/SwiGLU scaling, int6 QAT, and LoRA test-time adaptation atop a 10-layer Muon+Adam transformer to squeeze more capacity under 16MB.",
     "tags": [
       "architecture",
       "quantization",
-      "optimizer",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "3x SwiGLU MLP expansion + extra layer for more capacity",
-      "Int6 quantization with QAT and zstd packing to fit model in cap",
-      "LoRA test-time training updates per-document during eval"
+      "SwiGLU with 3× MLP expansion and extra layer",
+      "int6 quantization plus QAT with zstd compression",
+      "LoRA adapters for document-level test-time training"
     ]
   },
   "compatibility": {

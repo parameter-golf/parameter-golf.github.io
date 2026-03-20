@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T08:22:05.692Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 193,
+    "title": "Add CTM tail-QAT proxy non-record snapshot",
+    "state": "open",
+    "updatedAt": "2026-03-20T08:04:33Z",
+    "headSha": "3c4e03c5c62ce335501a1c7211485b3f5c6ae778",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/193",
+    "authorLogin": "KHUCHAN"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_CTMTailQAT_Proxy1xH100_KHUCHAN/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "1xH100 proxy run packages a causal CTM workspace with novelty/salience routing, error-gated skips, and export-matched tail QAT for int8 evaluation.",
+    "tags": [
+      "non-record",
+      "architecture",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "causal CTM workspace with novelty/salience routing",
+      "prediction-error-gated skip connections",
+      "export-matched tail QAT to match int8 eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

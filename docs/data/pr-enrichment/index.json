@@ -1,21 +1,68 @@
 {
-  "generatedAt": "2026-03-20T07:52:44.143Z",
+  "generatedAt": "2026-03-20T08:22:28.633Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 193,
+      "title": "Add CTM tail-QAT proxy non-record snapshot",
+      "status": "open",
+      "updatedAt": "2026-03-20T08:04:33Z",
+      "headSha": "3c4e03c5c62ce335501a1c7211485b3f5c6ae778",
+      "generatedAt": "2026-03-20T08:22:05.692Z",
+      "summary": "1xH100 proxy run packages a causal CTM workspace with novelty/salience routing, error-gated skips, and export-matched tail QAT for int8 evaluation.",
+      "tags": [
+        "non-record",
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-193.json"
+    },
+    {
+      "prNumber": 192,
+      "title": "Record: 11L Int6 QAT + SmearGate + WD 0.038 (val_bpb=1.1502)",
+      "status": "open",
+      "updatedAt": "2026-03-20T07:59:19Z",
+      "headSha": "dcac9b57735919023dc6debc72f2c6cf37efc1a1",
+      "generatedAt": "2026-03-20T08:22:12.046Z",
+      "summary": "11-layer GPT trains with STE-based int6 QAT, SmearGate gating, decoupled Muon WD, and int6-in-int8 plus zstd compression for compact models.",
+      "tags": [
+        "quantization",
+        "sliding-window-eval",
+        "optimizer",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-192.json"
+    },
+    {
       "prNumber": 191,
       "title": "Record: Compression-Funded MLP3x (val_bpb=1.1598)",
       "status": "open",
-      "updatedAt": "2026-03-20T07:51:33Z",
-      "headSha": "3cd74c78ce0dce37c46869a9c802929151defed3",
-      "generatedAt": "2026-03-20T07:51:59.567Z",
-      "summary": "Int6 block-weight compression funds a 3x MLP with fp16-safe embeddings during seq2048 training and stride-256 sliding-window eval.",
+      "updatedAt": "2026-03-20T08:05:01Z",
+      "headSha": "0d4580aebf01a7c7e3321b039710ad9015fe8b24",
+      "generatedAt": "2026-03-20T08:22:15.674Z",
+      "summary": "Int6 block-weight compression and fp16 protection fund a 3× MLP while seq2048 training and stride-256 sliding-window eval squeeze more capacity under 16MB.",
       "tags": [
         "quantization",
         "architecture",
-        "sliding-window-eval",
-        "training-schedule"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -379,29 +426,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-172.json"
-    },
-    {
-      "prNumber": 170,
-      "title": "Record: Int6 QAT + SmearGate + Muon WD (val_bpb=1.1669)",
-      "status": "open",
-      "updatedAt": "2026-03-20T04:59:14Z",
-      "headSha": "164befc42095a324c76654bea1cff6939a60546e",
-      "generatedAt": "2026-03-20T05:21:39.826Z",
-      "summary": "Int6 QAT with fp16 embedding passthrough, zstd22-friendly int6-in-int8 storage, SmearGate bigram gate, and Muon WD to keep 9L/512d model tiny yet robust.",
-      "tags": [
-        "quantization",
-        "compression",
-        "optimizer"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-170.json"
     },
     {
       "prNumber": 169,
@@ -1461,13 +1485,12 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-20T07:43:53Z",
-      "headSha": "eb887142fd494e455606089f21231435618caf3c",
-      "generatedAt": "2026-03-20T07:52:37.981Z",
-      "summary": "Recurrent depth architecture cycles 3 unique Transformer blocks thrice with AdaLN/FiLM conditioning, GQA, and int8+zlib compression for 16MB.",
+      "updatedAt": "2026-03-20T08:20:57Z",
+      "headSha": "7f2447dfb70043738e9e4979603277618a4f5947",
+      "generatedAt": "2026-03-20T08:22:23.465Z",
+      "summary": "Depth-recurrent GPT (3 blocks × 3 loops) with AdaLN conditioning, GQA, and MLX training on Apple M3 Max.",
       "tags": [
         "architecture",
-        "compression",
         "non-record"
       ],
       "flags": {
@@ -1880,14 +1903,13 @@
       "prNumber": 81,
       "title": "Record: SwiGLU + MLP 3x + Int6 + LoRA TTT, val_bpb=1.1670 (8xH100)",
       "status": "open",
-      "updatedAt": "2026-03-20T07:36:10Z",
-      "headSha": "9c4a57866d2903b7446f941e4d77c5852154ae7e",
-      "generatedAt": "2026-03-20T07:52:44.132Z",
-      "summary": "Combines wider SwiGLU MLP, int6+QAT quant, and LoRA-based test-time training on a 10-layer transformer to squeeze more capacity under the artifact cap.",
+      "updatedAt": "2026-03-20T08:12:43Z",
+      "headSha": "20ad97839c53bb5f468a952464de30153ca57dd1",
+      "generatedAt": "2026-03-20T08:22:28.622Z",
+      "summary": "Combines 3x MLP/SwiGLU scaling, int6 QAT, and LoRA test-time adaptation atop a 10-layer Muon+Adam transformer to squeeze more capacity under 16MB.",
       "tags": [
         "architecture",
         "quantization",
-        "optimizer",
         "evaluation"
       ],
       "flags": {

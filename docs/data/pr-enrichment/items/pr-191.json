@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T07:51:59.567Z",
+  "generatedAt": "2026-03-20T08:22:15.674Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 191,
     "title": "Record: Compression-Funded MLP3x (val_bpb=1.1598)",
     "state": "open",
-    "updatedAt": "2026-03-20T07:51:33Z",
-    "headSha": "3cd74c78ce0dce37c46869a9c802929151defed3",
+    "updatedAt": "2026-03-20T08:05:01Z",
+    "headSha": "0d4580aebf01a7c7e3321b039710ad9015fe8b24",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/191",
     "authorLogin": "chris-buckley"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int6 block-weight compression funds a 3x MLP with fp16-safe embeddings during seq2048 training and stride-256 sliding-window eval.",
+    "summary": "Int6 block-weight compression and fp16 protection fund a 3× MLP while seq2048 training and stride-256 sliding-window eval squeeze more capacity under 16MB.",
     "tags": [
       "quantization",
       "architecture",
-      "sliding-window-eval",
-      "training-schedule"
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 block-weight compression with zlib and fp16 embedding protection",
-      "Wider MLP (MLP_MULT=3) to spend freed artifact budget",
-      "Seq2048 training paired with stride-256 sliding-window evaluation"
+      "int6 per-row quantization + zlib for large weights",
+      "fp16 embeddings and final c_k weights to avoid compounded errors",
+      "seq2048 token training with stride-256 sliding-window evaluation"
     ]
   },
   "compatibility": {
