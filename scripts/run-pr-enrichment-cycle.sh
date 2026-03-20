@@ -40,7 +40,7 @@ for attempt in $(seq 1 "$ATTEMPTS"); do
   npm run version:data
   git add docs/data/version.json docs/data .cache
 
-  git commit -m "chore(data): refresh leaderboard data [skip ci]"
+  git commit -m "chore(data): refresh leaderboard data"
 
   if git push origin "$BRANCH"; then
     echo "Leaderboard refresh push succeeded"
