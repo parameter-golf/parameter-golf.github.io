@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T05:21:26.317Z",
+  "generatedAt": "2026-03-20T05:51:37.112Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 174,
     "title": "Add ContextFuse-2048-BigramSmear submission",
     "state": "open",
-    "updatedAt": "2026-03-20T05:17:45Z",
+    "updatedAt": "2026-03-20T05:22:21Z",
     "headSha": "0f75a5fae7bde12ac89b81a0237fc8df15a34a1a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/174",
     "authorLogin": "Julz19"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Extends ContextFuse-2048 via BigramHash+SmearGate inputs, mixed int6 export, Muon+SWA tuning, and safe sliding-window eval for BPB.",
+    "summary": "Enhances ContextFuse-2048 with BigramHash/SmearGate inputs, Muon+SWA optimizations, and mixed-int6 export for a compression-aware training/export stack with safe sliding-window eval.",
     "tags": [
       "architecture",
       "quantization",
-      "muon",
-      "evaluation"
+      "mixed-precision"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "BigramHash token-pair features with SmearGate smoothing",
-      "Mixed int6 export plus narrowed fp16 keep rules for key modules",
-      "SWA checkpoint averaging with Muon weight decay under sliding-window eval"
+      "BigramHash+SmearGate token fusion",
+      "Mixed int6 export with fp16 keep rules",
+      "Muon weight decay and SWA averaging"
     ]
   },
   "compatibility": {

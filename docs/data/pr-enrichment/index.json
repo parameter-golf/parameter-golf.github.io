@@ -1,21 +1,66 @@
 {
-  "generatedAt": "2026-03-20T05:22:12.196Z",
+  "generatedAt": "2026-03-20T05:52:11.684Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 176,
+      "title": "Add submission: 10L Slide64 Mid6, val_bpb=1.1733",
+      "status": "open",
+      "updatedAt": "2026-03-20T05:43:06Z",
+      "headSha": "7dfdd5c8058e4d0e957fa96494bcca63b83b18e9",
+      "generatedAt": "2026-03-20T05:51:28.019Z",
+      "summary": "Sliding-window 10-layer run keeps Muon 0.99 crossover and fp16 embeddings while applying int6 export only to middle blocks to stay under the 16MB cap.",
+      "tags": [
+        "quantization",
+        "sliding-window-eval",
+        "muon"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-176.json"
+    },
+    {
+      "prNumber": 175,
+      "title": "Record: TTT LoRA + SOTA Training (10L MuonWD FP16Emb OvertoneInit)",
+      "status": "open",
+      "updatedAt": "2026-03-20T05:45:58Z",
+      "headSha": "5ac580926351fbc5e51c84170068214b9bcbe3f9",
+      "generatedAt": "2026-03-20T05:51:33.483Z",
+      "summary": "Stacks document-isolated LoRA test-time adaptation onto the 10L Muon WD + FP16 embed SOTA recipe, running chunked eval after standard sliding-window quantized scoring.",
+      "tags": [
+        "evaluation",
+        "architecture",
+        "attention"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-175.json"
+    },
+    {
       "prNumber": 174,
       "title": "Add ContextFuse-2048-BigramSmear submission",
       "status": "open",
-      "updatedAt": "2026-03-20T05:17:45Z",
+      "updatedAt": "2026-03-20T05:22:21Z",
       "headSha": "0f75a5fae7bde12ac89b81a0237fc8df15a34a1a",
-      "generatedAt": "2026-03-20T05:21:26.317Z",
-      "summary": "Extends ContextFuse-2048 via BigramHash+SmearGate inputs, mixed int6 export, Muon+SWA tuning, and safe sliding-window eval for BPB.",
+      "generatedAt": "2026-03-20T05:51:37.112Z",
+      "summary": "Enhances ContextFuse-2048 with BigramHash/SmearGate inputs, Muon+SWA optimizations, and mixed-int6 export for a compression-aware training/export stack with safe sliding-window eval.",
       "tags": [
         "architecture",
         "quantization",
-        "muon",
-        "evaluation"
+        "mixed-precision"
       ],
       "flags": {
         "usesValOnly": false,
@@ -244,15 +289,15 @@
       "prNumber": 162,
       "title": "Record: Int6 MLP3x + SmearGate + BigramHash + MuonWD + SWA (mean val_bpb=1.1483)",
       "status": "open",
-      "updatedAt": "2026-03-20T03:39:16Z",
-      "headSha": "14cdf6f7a4c84d5016dbd6adc6df6d5208b83261",
-      "generatedAt": "2026-03-20T03:51:02.971Z",
-      "summary": "Int6-quantized GPT9 ups the MLP to 3× while adding SmearGate/BigramHash context and pairing muon WD with SWA for smoother weights.",
+      "updatedAt": "2026-03-20T05:46:32Z",
+      "headSha": "3c458dcdd4c32353ad714d275a653da1597a3979",
+      "generatedAt": "2026-03-20T05:51:45.402Z",
+      "summary": "Per-row int6 quantization enables a 3× widened MLP with SmearGate+BigramHash context while muon WD/SWA stabilize weights.",
       "tags": [
         "quantization",
         "architecture",
-        "muon",
-        "regularization"
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -386,15 +431,15 @@
       "prNumber": 152,
       "title": "Add TTT (Test-Time Training) submission: 1.1767 BPB",
       "status": "open",
-      "updatedAt": "2026-03-20T05:04:46Z",
+      "updatedAt": "2026-03-20T05:40:55Z",
       "headSha": "d5762bac5f7ce4ec928c0849280f554ff3c67e69",
-      "generatedAt": "2026-03-20T05:22:03.663Z",
-      "summary": "Reclaim eval budget by running full-model SGD adaptation on validation data before sliding-window scoring on a 9-layer, 512-dim KV4 GPT baseline.",
+      "generatedAt": "2026-03-20T05:51:55.876Z",
+      "summary": "Full-model SGD adapts to validation data during eval, reclaiming the unused 10-min budget before sliding-window scoring.",
       "tags": [
         "val-only",
-        "evaluation",
+        "optimizer",
         "sliding-window-eval",
-        "optimizer"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": true,
@@ -1134,15 +1179,14 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-20T05:20:55Z",
-      "headSha": "c5f48f03a72acfe9ffa70b8c9f04541a5b66076d",
-      "generatedAt": "2026-03-20T05:22:07.259Z",
-      "summary": "Depth-recurrent GPT reuses 3 unique blocks across 3 loops with AdaLN/FiLM gating and GQA, exploring compression-aware sparsity and test-time attention adaptation on Apple Silicon.",
+      "updatedAt": "2026-03-20T05:43:22Z",
+      "headSha": "a418c77dad0577c210427c4d350473c311a17348",
+      "generatedAt": "2026-03-20T05:52:01.262Z",
+      "summary": "Depth-recurrent GPT reuses 3 unique blocks across 3 loops with AdaLN conditioning and GQA on Apple MLX, then int8+zlib compresses to 16MB.",
       "tags": [
         "architecture",
-        "regularization",
         "compression",
-        "evaluation"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1554,22 +1598,23 @@
       "prNumber": 81,
       "title": "Record: SwiGLU + MLP 3x + Int6 + LoRA TTT, val_bpb=1.1670 (8xH100)",
       "status": "open",
-      "updatedAt": "2026-03-20T04:49:53Z",
-      "headSha": "b459056d10cd3fc574633033ee92c6454aba8b57",
-      "generatedAt": "2026-03-20T04:51:41.449Z",
-      "summary": "Combines 3× wider MLP with SwiGLU, int6+QAT quantization, and LoRA test-time training so a larger transformer fits the artifact budget.",
+      "updatedAt": "2026-03-20T05:49:45Z",
+      "headSha": "5ea687e97e2e0d73aa228dd501be1f4bd569b809",
+      "generatedAt": "2026-03-20T05:52:07.951Z",
+      "summary": "Stacks 3x MLP expansion, SwiGLU, int6 quantization with QAT, and LoRA test-time training per validation document.",
       "tags": [
+        "val-only",
         "architecture",
         "quantization",
         "evaluation"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-81.json"
     },
@@ -2069,13 +2114,13 @@
       "prNumber": 53,
       "title": "1.1888 BPB via SP-4096 compression + stride-64 sliding window",
       "status": "open",
-      "updatedAt": "2026-03-19T21:11:22Z",
-      "headSha": "613531358ceb7f343e08b5a36b369b2c5b5c011a",
-      "generatedAt": "2026-03-19T21:39:17.920Z",
-      "summary": "Combines SP-4096 tokenizer for fewer tokens/byte with stride-64 sliding-window eval on an 8-layer 512-dim GQA with skip connections.",
+      "updatedAt": "2026-03-20T05:49:42Z",
+      "headSha": "059ff13a375b7f057b016be393f30a7021ae2e7b",
+      "generatedAt": "2026-03-20T05:52:11.679Z",
+      "summary": "Combines SP-4096 tokenizer compression with stride-64 sliding-window evaluation on an 8-layer GQA encoder-decoder trained via Muon optimizer.",
       "tags": [
         "tokenization",
-        "evaluation",
+        "sliding-window-eval",
         "architecture",
         "optimizer"
       ],

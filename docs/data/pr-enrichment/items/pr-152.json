@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T05:22:03.663Z",
+  "generatedAt": "2026-03-20T05:51:55.876Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 152,
     "title": "Add TTT (Test-Time Training) submission: 1.1767 BPB",
     "state": "open",
-    "updatedAt": "2026-03-20T05:04:46Z",
+    "updatedAt": "2026-03-20T05:40:55Z",
     "headSha": "d5762bac5f7ce4ec928c0849280f554ff3c67e69",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/152",
     "authorLogin": "timowhite88"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Reclaim eval budget by running full-model SGD adaptation on validation data before sliding-window scoring on a 9-layer, 512-dim KV4 GPT baseline.",
+    "summary": "Full-model SGD adapts to validation data during eval, reclaiming the unused 10-min budget before sliding-window scoring.",
     "tags": [
       "val-only",
-      "evaluation",
+      "optimizer",
       "sliding-window-eval",
-      "optimizer"
+      "evaluation"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Adapts every parameter via two epochs of SGD (lr=0.002, momentum=0.9) on the validation shard before scoring.",
+    "valOnlyReasoning": "TTT runs SGD adaptation solely on the validation shard during the eval window before scoring.",
     "techniques": [
-      "- Full-model SGD test-time training on the validation shard",
-      "- Aggressive lr/momentum adaptation prior to sliding-window evaluation"
+      "Full-model SGD adaptation on validation data",
+      "Aggressive momentum SGD schedule during evaluation",
+      "Sliding-window scoring after adaptation"
     ]
   },
   "compatibility": {

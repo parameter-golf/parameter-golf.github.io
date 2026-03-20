@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T05:51:33.483Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 175,
+    "title": "Record: TTT LoRA + SOTA Training (10L MuonWD FP16Emb OvertoneInit)",
+    "state": "open",
+    "updatedAt": "2026-03-20T05:45:58Z",
+    "headSha": "5ac580926351fbc5e51c84170068214b9bcbe3f9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/175",
+    "authorLogin": "anthony-maio"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_TTT_SlidingWindow_FP16Emb_10L_MuonWD_OvertoneInit/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Stacks document-isolated LoRA test-time adaptation onto the 10L Muon WD + FP16 embed SOTA recipe, running chunked eval after standard sliding-window quantized scoring.",
+    "tags": [
+      "evaluation",
+      "architecture",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Per-document LoRA adaptation at eval",
+      "Optional LoRA deltas in attention/block/GPT",
+      "Chunked sliding-window eval with Adam adaptation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

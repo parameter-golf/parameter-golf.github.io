@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T05:51:28.019Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 176,
+    "title": "Add submission: 10L Slide64 Mid6, val_bpb=1.1733",
+    "state": "open",
+    "updatedAt": "2026-03-20T05:43:06Z",
+    "headSha": "7dfdd5c8058e4d0e957fa96494bcca63b83b18e9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/176",
+    "authorLogin": "GLDRoger"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_10L_Slide64_Mid6/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Sliding-window 10-layer run keeps Muon 0.99 crossover and fp16 embeddings while applying int6 export only to middle blocks to stay under the 16MB cap.",
+    "tags": [
+      "quantization",
+      "sliding-window-eval",
+      "muon"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Muon 0.99 crossover schedule",
+      "fp16 tied-embedding export",
+      "int6 only on middle transformer blocks"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

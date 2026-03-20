@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T21:39:17.920Z",
+  "generatedAt": "2026-03-20T05:52:11.679Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 53,
     "title": "1.1888 BPB via SP-4096 compression + stride-64 sliding window",
     "state": "open",
-    "updatedAt": "2026-03-19T21:11:22Z",
-    "headSha": "613531358ceb7f343e08b5a36b369b2c5b5c011a",
+    "updatedAt": "2026-03-20T05:49:42Z",
+    "headSha": "059ff13a375b7f057b016be393f30a7021ae2e7b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/53",
     "authorLogin": "kshitizz36"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines SP-4096 tokenizer for fewer tokens/byte with stride-64 sliding-window eval on an 8-layer 512-dim GQA with skip connections.",
+    "summary": "Combines SP-4096 tokenizer compression with stride-64 sliding-window evaluation on an 8-layer GQA encoder-decoder trained via Muon optimizer.",
     "tags": [
       "tokenization",
-      "evaluation",
+      "sliding-window-eval",
       "architecture",
       "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SP-4096 tokenizer for lower tokens/byte",
-      "Stride-64 sliding-window eval for ~960-token context",
-      "8-layer 512-dim GQA encoder-decoder with skip connections"
+      "SP-4096 tokenizer lowers tokens/byte multiplier",
+      "stride-64 sliding evaluation boosts per-token context",
+      "8-layer GQA encoder-decoder with Muon optimizer"
     ]
   },
   "compatibility": {

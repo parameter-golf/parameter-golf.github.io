@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T05:22:07.259Z",
+  "generatedAt": "2026-03-20T05:52:01.262Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 108,
     "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
     "state": "open",
-    "updatedAt": "2026-03-20T05:20:55Z",
-    "headSha": "c5f48f03a72acfe9ffa70b8c9f04541a5b66076d",
+    "updatedAt": "2026-03-20T05:43:22Z",
+    "headSha": "a418c77dad0577c210427c4d350473c311a17348",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/108",
     "authorLogin": "kellyvv"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth-recurrent GPT reuses 3 unique blocks across 3 loops with AdaLN/FiLM gating and GQA, exploring compression-aware sparsity and test-time attention adaptation on Apple Silicon.",
+    "summary": "Depth-recurrent GPT reuses 3 unique blocks across 3 loops with AdaLN conditioning and GQA on Apple MLX, then int8+zlib compresses to 16MB.",
     "tags": [
       "architecture",
-      "regularization",
       "compression",
-      "evaluation"
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence with 3 unique blocks ×3 loops",
-      "AdaLN/FiLM per-loop conditioning plus sigmoid cycle gates",
-      "Attention-only test-time adaptation per document"
+      "Depth recurrence with AdaLN/FiLM gating",
+      "GQA attention with mini U-Net skips",
+      "Int8+zlib compression to meet 16MB budget"
     ]
   },
   "compatibility": {
