@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-19T20:37:14.486Z",
+  "generatedAt": "2026-03-20T00:49:24.216Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 127,
     "title": "Non-record: Depth recurrence + widening + QAT + sliding window eval",
     "state": "open",
-    "updatedAt": "2026-03-19T20:24:22Z",
-    "headSha": "02ee8ae36dcaa5f8f0939d6d000be3884680a335",
+    "updatedAt": "2026-03-20T00:36:30Z",
+    "headSha": "890d287c62f018b383b99e0a2f8fe3f649c0ff36",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/127",
     "authorLogin": "matt-wright86"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Recycles 3 transformer blocks with per-loop LoRA, widens to 768 dim, uses factorized embeddings plus int6 QAT, and evaluates with sliding windows.",
+    "summary": "Depth-recurrent 3-block transformer with widened heads and per-loop LoRA, ALBERT-style embeddings, and STE-driven int6 QAT with sliding-window eval.",
     "tags": [
       "architecture",
       "quantization",
-      "evaluation"
+      "optimizer",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence with per-loop rank-4 LoRA adapters",
-      "Factorized SP4096 embedding into 128 bottleneck and widened 768-dim GQA",
-      "Int6-range QAT (STE) paired with sliding-window eval and NTK-aware RoPE"
+      "Depth recurrence with per-loop LoRA adapters",
+      "Factorized ALBERT-style SP4096 embeddings",
+      "STE-based int6 QAT plus sliding-window eval with RoPE scaling"
     ]
   },
   "compatibility": {

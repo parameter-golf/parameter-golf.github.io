@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-03-20T00:18:35.703Z",
+  "generatedAt": "2026-03-20T00:49:24.236Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 143,
+      "title": "Add ContextFuse-2048 submission",
+      "status": "open",
+      "updatedAt": "2026-03-20T00:26:28Z",
+      "headSha": "54b67d4c91c679a3508edc4c054485c07cff4e14",
+      "generatedAt": "2026-03-20T00:49:14.995Z",
+      "summary": "Combines 2048-token training, sliding-window evaluation, fp16 tied embeddings, and Muon-tuned LR width tweaks for a byte-safe baseline submission.",
+      "tags": [
+        "architecture",
+        "sliding-window-eval",
+        "optimizer",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-143.json"
+    },
+    {
+      "prNumber": 142,
+      "title": "Record: Quant Quality: val_bpb=1.1925",
+      "status": "open",
+      "updatedAt": "2026-03-20T00:20:12Z",
+      "headSha": "c11f3e3fcdf6253a728db907724df700017170af",
+      "generatedAt": "2026-03-20T00:49:18.622Z",
+      "summary": "Seq4096 9-layer model pairs 99.99995 int8 clipping with float32 per-row scales and Muon 0.99 tuning for tighter quantization fidelity.",
+      "tags": [
+        "quantization",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-142.json"
+    },
     {
       "prNumber": 141,
       "title": "Non-record: Systematic Hyperparameter Search (val_bpb=1.2075)",
@@ -193,14 +239,15 @@
       "prNumber": 127,
       "title": "Non-record: Depth recurrence + widening + QAT + sliding window eval",
       "status": "open",
-      "updatedAt": "2026-03-19T20:24:22Z",
-      "headSha": "02ee8ae36dcaa5f8f0939d6d000be3884680a335",
-      "generatedAt": "2026-03-19T20:37:14.486Z",
-      "summary": "Recycles 3 transformer blocks with per-loop LoRA, widens to 768 dim, uses factorized embeddings plus int6 QAT, and evaluates with sliding windows.",
+      "updatedAt": "2026-03-20T00:36:30Z",
+      "headSha": "890d287c62f018b383b99e0a2f8fe3f649c0ff36",
+      "generatedAt": "2026-03-20T00:49:24.216Z",
+      "summary": "Depth-recurrent 3-block transformer with widened heads and per-loop LoRA, ALBERT-style embeddings, and STE-driven int6 QAT with sliding-window eval.",
       "tags": [
         "architecture",
         "quantization",
-        "evaluation"
+        "optimizer",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,

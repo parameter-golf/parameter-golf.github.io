@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-20T00:49:18.622Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 142,
+    "title": "Record: Quant Quality: val_bpb=1.1925",
+    "state": "open",
+    "updatedAt": "2026-03-20T00:20:12Z",
+    "headSha": "c11f3e3fcdf6253a728db907724df700017170af",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/142",
+    "authorLogin": "ankitmaloo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_QuantQuality/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Seq4096 9-layer model pairs 99.99995 int8 clipping with float32 per-row scales and Muon 0.99 tuning for tighter quantization fidelity.",
+    "tags": [
+      "quantization",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "99.99995 int8 clipping",
+      "float32 per-row quant scales",
+      "Muon 0.99 warmup/warndown"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

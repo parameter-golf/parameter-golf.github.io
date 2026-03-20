@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T00:49:14.995Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 143,
+    "title": "Add ContextFuse-2048 submission",
+    "state": "open",
+    "updatedAt": "2026-03-20T00:26:28Z",
+    "headSha": "54b67d4c91c679a3508edc4c054485c07cff4e14",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/143",
+    "authorLogin": "Julz19"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_ContextFuse-2048/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines 2048-token training, sliding-window evaluation, fp16 tied embeddings, and Muon-tuned LR width tweaks for a byte-safe baseline submission.",
+    "tags": [
+      "architecture",
+      "sliding-window-eval",
+      "optimizer",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "2048-token training with Muon-smoothed warmdown",
+      "Sliding-window evaluation (stride 64) for richer context scoring",
+      "FP16 tied-embedding export plus byte-safe MLP width adjustment"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
