@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T01:50:03.970Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 151,
+    "title": "Non-record: FP16 embed + WD20k + seq2048 + doc-isolated sliding window (val_bpb=1.2045)",
+    "state": "open",
+    "updatedAt": "2026-03-20T01:47:08Z",
+    "headSha": "5910a6aeb70bb4c03983d8ca188601779564f2cc",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/151",
+    "authorLogin": "mrdavtan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_FP16Embed_WD20k_Seq2048_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines FP16 tied embed export, aggressive warmdown tuning, seq2048 training, and doc-isolated sliding-window evaluation on the 9L baseline.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "FP16 tied embedding export with warmdown tuning",
+      "Seq2048 training with tuned LR/optimizer/gradient clip",
+      "Doc-isolated sliding-window eval stride 64"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

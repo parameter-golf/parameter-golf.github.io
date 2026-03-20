@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-20T01:50:38.736Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 147,
+    "title": "Record/smaller batch sota, val_bpb 1.16314679 (post-quant, int6+zlib, sliding eval)",
+    "state": "open",
+    "updatedAt": "2026-03-20T01:22:53Z",
+    "headSha": "395b67ef6228375a6020924ddfc7321288913860",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/147",
+    "authorLogin": "ankitmaloo"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_SmallerBatchSOTA/README.md",
+      "records/track_10min_16mb/2026-03-19_QuantQuality/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "SOTA stack trims TRAIN_BATCH_TOKENS to boost optimizer steps while relying on sliding eval plus tighter int8 clipping and float32 per-row scales for quant-friendly int6 export.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "evaluation",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Lower TRAIN_BATCH_TOKENS for faster steps",
+      "Sliding eval (stride 256) with int6+zlib export",
+      "Tighter int8 clipping and float32 per-row scales"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

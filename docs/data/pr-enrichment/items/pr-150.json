@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T01:50:09.072Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 150,
+    "title": "[WIP] Record: Int6 QAT + BigramHash + MLP 1344 (val_bpb 1.1593)",
+    "state": "open",
+    "updatedAt": "2026-03-20T01:44:31Z",
+    "headSha": "5930991ebde94544128e3f27e50f13f91b015969",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/150",
+    "authorLogin": "yahya010"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_Int6QAT_BigramHash_MLP1344/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "STE int6 QAT model adds a 4096-bucket BigramHash embedding with oversized MLP and Muon momentum, using sliding-window eval for dense context.",
+    "tags": [
+      "quantization",
+      "sliding-window-eval",
+      "optimizer",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "STE int6 QAT with Zstd compression",
+      "BigramHash token-pair embedding added before RMSNorm",
+      "Muon 0.99 plus MLP hidden=1344"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

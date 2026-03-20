@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T01:50:13.008Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 149,
+    "title": "Add Combined Int6 + QAT + Sliding Window submission",
+    "state": "open",
+    "updatedAt": "2026-03-20T01:43:25Z",
+    "headSha": "597924c0969d971ce1d44054fa2c79be67acf18f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/149",
+    "authorLogin": "pleasedontddosme"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_Combined_Int6_QAT_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines Int6 quant with late-K passthrough, late-stage QAT, and sliding-window eval plus cosine warmdown and Muon/AdamW tweaks for robust compression.",
+    "tags": [
+      "quantization",
+      "evaluation",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int6 quant with late-K passthrough and final-30% QAT STE",
+      "Batched sliding-window evaluation with overtone init and resid_mix phase transition",
+      "Cosine warmdown plus Muon decoupled decay and AdamW for embeddings"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

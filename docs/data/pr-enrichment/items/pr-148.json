@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T01:50:26.942Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 148,
+    "title": "Depth Recurrence + Cross-Repeat Skip + Sliding Window Eval",
+    "state": "open",
+    "updatedAt": "2026-03-20T01:41:57Z",
+    "headSha": "fa293060e34a5cc455e6392fbcb337c4f1a5b42f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/148",
+    "authorLogin": "iverbovoy"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Shared 3-block depth recurrence with cross-repeat skips, value embeddings, and sliding-window eval boosts effective depth efficiently.",
+    "tags": [
+      "architecture",
+      "depth-width",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Cross-repeat skip stateful recurrence",
+      "Per-layer value embeddings",
+      "Sliding-window eval (stride 256)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

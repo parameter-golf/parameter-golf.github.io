@@ -1,20 +1,138 @@
 {
-  "generatedAt": "2026-03-20T01:20:11.101Z",
+  "generatedAt": "2026-03-20T01:50:43.552Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 151,
+      "title": "Non-record: FP16 embed + WD20k + seq2048 + doc-isolated sliding window (val_bpb=1.2045)",
+      "status": "open",
+      "updatedAt": "2026-03-20T01:47:08Z",
+      "headSha": "5910a6aeb70bb4c03983d8ca188601779564f2cc",
+      "generatedAt": "2026-03-20T01:50:03.970Z",
+      "summary": "Combines FP16 tied embed export, aggressive warmdown tuning, seq2048 training, and doc-isolated sliding-window evaluation on the 9L baseline.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-151.json"
+    },
+    {
+      "prNumber": 150,
+      "title": "[WIP] Record: Int6 QAT + BigramHash + MLP 1344 (val_bpb 1.1593)",
+      "status": "open",
+      "updatedAt": "2026-03-20T01:44:31Z",
+      "headSha": "5930991ebde94544128e3f27e50f13f91b015969",
+      "generatedAt": "2026-03-20T01:50:09.072Z",
+      "summary": "STE int6 QAT model adds a 4096-bucket BigramHash embedding with oversized MLP and Muon momentum, using sliding-window eval for dense context.",
+      "tags": [
+        "quantization",
+        "sliding-window-eval",
+        "optimizer",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-150.json"
+    },
+    {
+      "prNumber": 149,
+      "title": "Add Combined Int6 + QAT + Sliding Window submission",
+      "status": "open",
+      "updatedAt": "2026-03-20T01:43:25Z",
+      "headSha": "597924c0969d971ce1d44054fa2c79be67acf18f",
+      "generatedAt": "2026-03-20T01:50:13.008Z",
+      "summary": "Combines Int6 quant with late-K passthrough, late-stage QAT, and sliding-window eval plus cosine warmdown and Muon/AdamW tweaks for robust compression.",
+      "tags": [
+        "quantization",
+        "evaluation",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-149.json"
+    },
+    {
+      "prNumber": 148,
+      "title": "Depth Recurrence + Cross-Repeat Skip + Sliding Window Eval",
+      "status": "open",
+      "updatedAt": "2026-03-20T01:41:57Z",
+      "headSha": "fa293060e34a5cc455e6392fbcb337c4f1a5b42f",
+      "generatedAt": "2026-03-20T01:50:26.942Z",
+      "summary": "Shared 3-block depth recurrence with cross-repeat skips, value embeddings, and sliding-window eval boosts effective depth efficiently.",
+      "tags": [
+        "architecture",
+        "depth-width",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-148.json"
+    },
+    {
+      "prNumber": 147,
+      "title": "Record/smaller batch sota, val_bpb 1.16314679 (post-quant, int6+zlib, sliding eval)",
+      "status": "open",
+      "updatedAt": "2026-03-20T01:22:53Z",
+      "headSha": "395b67ef6228375a6020924ddfc7321288913860",
+      "generatedAt": "2026-03-20T01:50:38.736Z",
+      "summary": "SOTA stack trims TRAIN_BATCH_TOKENS to boost optimizer steps while relying on sliding eval plus tighter int8 clipping and float32 per-row scales for quant-friendly int6 export.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "evaluation",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-147.json"
+    },
+    {
       "prNumber": 146,
       "title": "Non-record: Warmdown-Tuned Training (val_bpb=1.2987) on 1xRTX 5090",
       "status": "open",
-      "updatedAt": "2026-03-20T01:11:44Z",
-      "headSha": "e2bfd336fbc3406e39fb37deb339fb4f535da835",
-      "generatedAt": "2026-03-20T01:19:48.742Z",
-      "summary": "Extensive warmdown tuning (3000-step LR decay) on a 9-layer GPT unlocks 2.6× per-step bpb efficiency for compressed int8 checkpoints.",
+      "updatedAt": "2026-03-20T01:23:46Z",
+      "headSha": "d3cbde1b2a004334d657dfa6d9b705a1474afc3e",
+      "generatedAt": "2026-03-20T01:50:43.531Z",
+      "summary": "Warmdown-tuning a 9-layer GPT (3000 warmdown iters) shows cosine LR warmdown produces 2.6× efficiency gains while probing register tokens and layer looping.",
       "tags": [
         "training-schedule",
         "architecture",
-        "quantization"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -95,28 +213,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-143.json"
-    },
-    {
-      "prNumber": 142,
-      "title": "Record: Quant Quality: val_bpb=1.1925",
-      "status": "open",
-      "updatedAt": "2026-03-20T00:20:12Z",
-      "headSha": "c11f3e3fcdf6253a728db907724df700017170af",
-      "generatedAt": "2026-03-20T00:49:18.622Z",
-      "summary": "Seq4096 9-layer model pairs 99.99995 int8 clipping with float32 per-row scales and Muon 0.99 tuning for tighter quantization fidelity.",
-      "tags": [
-        "quantization",
-        "optimizer"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-142.json"
     },
     {
       "prNumber": 141,
