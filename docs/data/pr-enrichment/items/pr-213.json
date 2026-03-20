@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-20T13:53:26.076Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 213,
+    "title": "Non-record submission: recurrent 512 L3 6k (8x H100, 224s)",
+    "state": "open",
+    "updatedAt": "2026-03-20T13:38:37Z",
+    "headSha": "d769143079d862fc6df01fb3fc292ce322e8a1df",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/213",
+    "authorLogin": "estesryan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_recurrent_512_l3_6k_ryan_estes/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Compact shared-loop recurrent transformer (512 dim, 3 loop iterations) trained in 6k steps to fit the 10-minute 16MB non-record track.",
+    "tags": [
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared-loop recurrent transformer with looped layers",
+      "512-dimensional compact layout for constrained track",
+      "6000-step FineWeb SP1024 training cadence"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

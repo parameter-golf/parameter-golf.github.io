@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T06:51:52.136Z",
+  "generatedAt": "2026-03-20T13:53:31.261Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 178,
     "title": "Add Nuclear Stack submission: 1.16668 BPB (seed 2884431328)",
     "state": "open",
-    "updatedAt": "2026-03-20T06:39:11Z",
-    "headSha": "6cef2a161e9229c5dbabc0db155a8042ff4f5de5",
+    "updatedAt": "2026-03-20T13:27:21Z",
+    "headSha": "710c4fd578a689a1c234e243db94c74d416bd167",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/178",
     "authorLogin": "timowhite88"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines Int6 quantized 9-layer GQA + 3×MLP, SmearGate, BigramHash, Muon+SWA training with test-time SGD adaptation and honest stride-32 eval.",
+    "summary": "Combines a SmearGate+BigramHash 9-layer transformer with Int6 quant/SWA and Muon optimizer while applying test-time SGD adaptation plus honest sliding-window eval.",
     "tags": [
       "architecture",
       "quantization",
@@ -27,11 +27,11 @@
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Uses standard training plus test-time training on validation; not a val-only training regime.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Int6 quantized 9-layer GQA transformer with 3×MLP, SmearGate, and BigramHash",
-      "Orthogonal init with Muon optimizer, momentum warmup, and SWA checkpoint averaging",
-      "Test-time full-model SGD on validation shards with frozen early blocks and stride-32 sliding eval"
+      "Int6+zstd quantized 9-layer transformer with SmearGate, BigramHash, and orthogonal init",
+      "Muon optimizer w/ momentum warmup, SWA, and 3× MLP expansion",
+      "Test-time training via late-layer SGD plus stride-32 sliding-window scoring"
     ]
   },
   "compatibility": {

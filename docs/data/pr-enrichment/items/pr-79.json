@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T13:23:32.730Z",
+  "generatedAt": "2026-03-20T13:53:52.123Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 79,
     "title": "Depth Recurrence: 3x3x1024 (non-record, pending H100)",
     "state": "open",
-    "updatedAt": "2026-03-20T13:20:57Z",
-    "headSha": "578fc581be3c10732a85af2cb7281845ebd52f1e",
+    "updatedAt": "2026-03-20T13:34:56Z",
+    "headSha": "a27f80ddc0b500b79bf9153705427ee4ff512842",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/79",
     "authorLogin": "Marvbuster"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth recurrence reuses three unique transformer blocks repeated thrice to boost width (dim1536) while combining Int6 QAT with sliding-window eval.",
+    "summary": "Depth recurrence reuses three transformer blocks to trade depth for width with NorMuon and Int6 QAT within the 16MB cap.",
     "tags": [
       "architecture",
       "quantization",
-      "sliding-window-eval",
-      "non-record"
+      "optimizer",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "block-reuse depth recurrence",
-      "Int6 QAT with NorMuon",
-      "sliding-window evaluation"
+      "- depth recurrence across three repeats",
+      "- NorMuon-tuned schedule with low matrix LR and logit softcap",
+      "- Int6 QAT plus sliding-window eval"
     ]
   },
   "compatibility": {
