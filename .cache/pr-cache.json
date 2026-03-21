@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-21T06:29:08.834Z",
-  "lastSeenUpdatedAt": "2026-03-21T06:23:42Z",
+  "generatedAt": "2026-03-21T06:59:18.121Z",
+  "lastSeenUpdatedAt": "2026-03-21T06:58:13Z",
   "prs": {
     "1": {
       "number": 1,
@@ -13948,10 +13948,10 @@
     },
     "187": {
       "number": 187,
-      "updatedAt": "2026-03-21T05:58:05Z",
+      "updatedAt": "2026-03-21T06:58:13Z",
       "pr": {
         "number": 187,
-        "title": "Record: Pre-Enrichment + Encoder Recurrence + SmearGate + BigramHash (val_bpb=1.1668)",
+        "title": "Record: Pre-Enrichment + Encoder Recurrence + XSA + SmearGate + BigramHash (val_bpb=1.1629)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -13959,8 +13959,8 @@
         "authorLogin": "Idan3011",
         "authorName": null,
         "createdAt": "2026-03-20T07:23:51Z",
-        "updatedAt": "2026-03-21T05:58:05Z",
-        "headSha": "9f17c55d25902f4baeab1354f3a46ff44c3a16e1",
+        "updatedAt": "2026-03-21T06:58:13Z",
+        "headSha": "309411420609d9aa1aa9e7a3ffdf37abaf8c8522",
         "headRepo": "Idan3011/parameter-golf"
       },
       "submissions": [
@@ -13987,22 +13987,22 @@
           "submission": {
             "author": "Idanr",
             "githubId": "idan3011",
-            "name": "Pre-Enrichment + Encoder Recurrence + SmearGate + BigramHash",
-            "blurb": "GELU pre-enrichment (512-768-512) + 2x encoder recurrence + SmearGate + BigramHash + EMA + int6 QAT + lzma + MLP 3x + sliding window eval (stride=64), 10L 512d seq2048.",
-            "date": "2026-03-21T05:23:00Z"
+            "name": "Pre-Enrichment + Encoder Recurrence + XSA + SmearGate + BigramHash",
+            "blurb": "GELU pre-enrichment (512-768-512) + 2x encoder recurrence + XSA last 4 layers + SmearGate + BigramHash + EMA + int6 QAT + lzma + MLP 3x + sliding window eval (stride=64), 10L 512d seq2048.",
+            "date": "2026-03-21T06:25:00Z"
           },
           "metrics": {
-            "valBpb": 1.16683859,
-            "valLoss": 1.97015808,
-            "preQuantValBpb": 1.1848,
-            "preQuantValLoss": 2.0005,
-            "stepStop": 5373,
-            "wallclockSeconds": 600.011,
-            "evalTimeSeconds": 233.562
+            "valBpb": 1.16287756,
+            "valLoss": 1.96347005,
+            "preQuantValBpb": 1.1809,
+            "preQuantValLoss": 1.994,
+            "stepStop": 5636,
+            "wallclockSeconds": 599.886,
+            "evalTimeSeconds": 246.128
           },
           "artifact": {
-            "bytesTotal": 15022232,
-            "bytesCode": 58976,
+            "bytesTotal": 15051927,
+            "bytesCode": 59427,
             "bytesModelInt8Zlib": null
           },
           "flags": {
@@ -14014,7 +14014,7 @@
           },
           "pr": {
             "number": 187,
-            "title": "Record: Pre-Enrichment + Encoder Recurrence + SmearGate + BigramHash (val_bpb=1.1668)",
+            "title": "Record: Pre-Enrichment + Encoder Recurrence + XSA + SmearGate + BigramHash (val_bpb=1.1629)",
             "state": "open",
             "draft": false,
             "mergedAt": null,
@@ -14022,16 +14022,16 @@
             "authorLogin": "Idan3011",
             "authorName": null,
             "createdAt": "2026-03-20T07:23:51Z",
-            "updatedAt": "2026-03-21T05:58:05Z",
-            "headSha": "9f17c55d25902f4baeab1354f3a46ff44c3a16e1",
+            "updatedAt": "2026-03-21T06:58:13Z",
+            "headSha": "309411420609d9aa1aa9e7a3ffdf37abaf8c8522",
             "headRepo": "Idan3011/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9f17c55d25902f4baeab1354f3a46ff44c3a16e1/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/9f17c55d25902f4baeab1354f3a46ff44c3a16e1/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/9f17c55d25902f4baeab1354f3a46ff44c3a16e1/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/9f17c55d25902f4baeab1354f3a46ff44c3a16e1/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/9f17c55d25902f4baeab1354f3a46ff44c3a16e1/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/309411420609d9aa1aa9e7a3ffdf37abaf8c8522/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/309411420609d9aa1aa9e7a3ffdf37abaf8c8522/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/309411420609d9aa1aa9e7a3ffdf37abaf8c8522/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/309411420609d9aa1aa9e7a3ffdf37abaf8c8522/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/309411420609d9aa1aa9e7a3ffdf37abaf8c8522/records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence",
             "pr": "https://github.com/openai/parameter-golf/pull/187"
           }
         }
@@ -19528,7 +19528,7 @@
     },
     "264": {
       "number": 264,
-      "updatedAt": "2026-03-21T00:01:01Z",
+      "updatedAt": "2026-03-21T06:35:29Z",
       "pr": {
         "number": 264,
         "title": "11L Int5-MLP + TTT-SGD + SmearGate + SWA (1.1455 BPB)",
@@ -19539,7 +19539,7 @@
         "authorLogin": "stukenov",
         "authorName": null,
         "createdAt": "2026-03-20T20:09:28Z",
-        "updatedAt": "2026-03-21T00:01:01Z",
+        "updatedAt": "2026-03-21T06:35:29Z",
         "headSha": "ab0777880a9b931afc62d7fcc332936ccaaf90fd",
         "headRepo": "stukenov/parameter-golf"
       },
@@ -19602,7 +19602,7 @@
             "authorLogin": "stukenov",
             "authorName": null,
             "createdAt": "2026-03-20T20:09:28Z",
-            "updatedAt": "2026-03-21T00:01:01Z",
+            "updatedAt": "2026-03-21T06:35:29Z",
             "headSha": "ab0777880a9b931afc62d7fcc332936ccaaf90fd",
             "headRepo": "stukenov/parameter-golf"
           },
@@ -24233,7 +24233,7 @@
     },
     "317": {
       "number": 317,
-      "updatedAt": "2026-03-21T06:16:06Z",
+      "updatedAt": "2026-03-21T06:47:28Z",
       "pr": {
         "number": 317,
         "title": "Record: 11L XSA4 + EMA + TTT + Int6 MLP3x (val_bpb=1.1419)",
@@ -24244,8 +24244,8 @@
         "authorLogin": "chris-buckley",
         "authorName": null,
         "createdAt": "2026-03-21T06:16:06Z",
-        "updatedAt": "2026-03-21T06:16:06Z",
-        "headSha": "0c2a5ac0904c2bed13eaf5a420ac5bf327c95cfe",
+        "updatedAt": "2026-03-21T06:47:28Z",
+        "headSha": "b028e011d4f27df6c7428d2188bd845f1559d422",
         "headRepo": "chris-buckley/parameter-golf"
       },
       "submissions": [
@@ -24307,17 +24307,361 @@
             "authorLogin": "chris-buckley",
             "authorName": null,
             "createdAt": "2026-03-21T06:16:06Z",
-            "updatedAt": "2026-03-21T06:16:06Z",
-            "headSha": "0c2a5ac0904c2bed13eaf5a420ac5bf327c95cfe",
+            "updatedAt": "2026-03-21T06:47:28Z",
+            "headSha": "b028e011d4f27df6c7428d2188bd845f1559d422",
             "headRepo": "chris-buckley/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0c2a5ac0904c2bed13eaf5a420ac5bf327c95cfe/records/track_10min_16mb/2026-03-21_11L_XSA4_EMA_TTT_Int6_MLP3x_WD04/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/0c2a5ac0904c2bed13eaf5a420ac5bf327c95cfe/records/track_10min_16mb/2026-03-21_11L_XSA4_EMA_TTT_Int6_MLP3x_WD04/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/0c2a5ac0904c2bed13eaf5a420ac5bf327c95cfe/records/track_10min_16mb/2026-03-21_11L_XSA4_EMA_TTT_Int6_MLP3x_WD04/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/0c2a5ac0904c2bed13eaf5a420ac5bf327c95cfe/records/track_10min_16mb/2026-03-21_11L_XSA4_EMA_TTT_Int6_MLP3x_WD04/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/0c2a5ac0904c2bed13eaf5a420ac5bf327c95cfe/records/track_10min_16mb/2026-03-21_11L_XSA4_EMA_TTT_Int6_MLP3x_WD04",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b028e011d4f27df6c7428d2188bd845f1559d422/records/track_10min_16mb/2026-03-21_11L_XSA4_EMA_TTT_Int6_MLP3x_WD04/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/b028e011d4f27df6c7428d2188bd845f1559d422/records/track_10min_16mb/2026-03-21_11L_XSA4_EMA_TTT_Int6_MLP3x_WD04/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/b028e011d4f27df6c7428d2188bd845f1559d422/records/track_10min_16mb/2026-03-21_11L_XSA4_EMA_TTT_Int6_MLP3x_WD04/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/b028e011d4f27df6c7428d2188bd845f1559d422/records/track_10min_16mb/2026-03-21_11L_XSA4_EMA_TTT_Int6_MLP3x_WD04/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/b028e011d4f27df6c7428d2188bd845f1559d422/records/track_10min_16mb/2026-03-21_11L_XSA4_EMA_TTT_Int6_MLP3x_WD04",
             "pr": "https://github.com/openai/parameter-golf/pull/317"
+          }
+        }
+      ]
+    },
+    "318": {
+      "number": 318,
+      "updatedAt": "2026-03-21T06:35:35Z",
+      "pr": {
+        "number": 318,
+        "title": "Neural Cache: Cross-Window KV Caching for Extended Eval Context (research proposal)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/318",
+        "authorLogin": "sseanliu",
+        "authorName": null,
+        "createdAt": "2026-03-21T06:35:35Z",
+        "updatedAt": "2026-03-21T06:35:35Z",
+        "headSha": "2f278eb6239af20c896f5a15c59e4fb659fbfd0c",
+        "headRepo": "sseanliu/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-318-records-track_10min_16mb-2026-03-21_NeuralCache_Research-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-21_NeuralCache_Research",
+            "folderPath": "records/track_10min_16mb/2026-03-21_NeuralCache_Research",
+            "submissionPath": "records/track_10min_16mb/2026-03-21_NeuralCache_Research/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-21_NeuralCache_Research/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-21_NeuralCache_Research/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-21_NeuralCache_Research/train_gpt.py"
+          },
+          "submission": {
+            "author": "Xiaoan Liu",
+            "githubId": "sseanliu",
+            "name": "Neural Cache: Cross-Window KV Cache for Extended Eval Context (research proposal)",
+            "blurb": "Research proposal for extending effective eval context from 2K to 50K+ tokens by caching K/V pairs across sliding windows. Backward-looking, zero artifact cost, rule-compliant. Implementation provided but untested due to compute constraints. Base: PR #287 reproduction at 1.1284 BPB.",
+            "date": "2026-03-21"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 318,
+            "title": "Neural Cache: Cross-Window KV Caching for Extended Eval Context (research proposal)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/318",
+            "authorLogin": "sseanliu",
+            "authorName": null,
+            "createdAt": "2026-03-21T06:35:35Z",
+            "updatedAt": "2026-03-21T06:35:35Z",
+            "headSha": "2f278eb6239af20c896f5a15c59e4fb659fbfd0c",
+            "headRepo": "sseanliu/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2f278eb6239af20c896f5a15c59e4fb659fbfd0c/records/track_10min_16mb/2026-03-21_NeuralCache_Research/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/2f278eb6239af20c896f5a15c59e4fb659fbfd0c/records/track_10min_16mb/2026-03-21_NeuralCache_Research/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/2f278eb6239af20c896f5a15c59e4fb659fbfd0c/records/track_10min_16mb/2026-03-21_NeuralCache_Research/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/2f278eb6239af20c896f5a15c59e4fb659fbfd0c/records/track_10min_16mb/2026-03-21_NeuralCache_Research/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/2f278eb6239af20c896f5a15c59e4fb659fbfd0c/records/track_10min_16mb/2026-03-21_NeuralCache_Research",
+            "pr": "https://github.com/openai/parameter-golf/pull/318"
+          }
+        }
+      ]
+    },
+    "319": {
+      "number": 319,
+      "updatedAt": "2026-03-21T06:41:00Z",
+      "pr": {
+        "number": 319,
+        "title": "Non-record: Depth Recurrence 5x3 — Weight-Shared Looping Transformer (6xH200, val_bpb=1.2716)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/319",
+        "authorLogin": "Arth-Singh",
+        "authorName": null,
+        "createdAt": "2026-03-21T06:39:00Z",
+        "updatedAt": "2026-03-21T06:41:00Z",
+        "headSha": "8ba1736219f5617a20f59e0b5f94330af213e4f7",
+        "headRepo": "Arth-Singh/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-319-records-track_non_record_16mb-2026-03-21_DepthRecurrence_5x3_640-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-21_DepthRecurrence_5x3_640",
+            "folderPath": "records/track_non_record_16mb/2026-03-21_DepthRecurrence_5x3_640",
+            "submissionPath": "records/track_non_record_16mb/2026-03-21_DepthRecurrence_5x3_640/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-21_DepthRecurrence_5x3_640/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-21_DepthRecurrence_5x3_640/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-21_DepthRecurrence_5x3_640/train_gpt.py"
+          },
+          "submission": {
+            "author": "Arth-Singh",
+            "githubId": "Arth-Singh",
+            "name": "Arth Singh",
+            "blurb": null,
+            "date": "2026-03-21T06:39:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.2716,
+            "valLoss": 2.1471,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 319,
+            "title": "Non-record: Depth Recurrence 5x3 — Weight-Shared Looping Transformer (6xH200, val_bpb=1.2716)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/319",
+            "authorLogin": "Arth-Singh",
+            "authorName": null,
+            "createdAt": "2026-03-21T06:39:00Z",
+            "updatedAt": "2026-03-21T06:41:00Z",
+            "headSha": "8ba1736219f5617a20f59e0b5f94330af213e4f7",
+            "headRepo": "Arth-Singh/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8ba1736219f5617a20f59e0b5f94330af213e4f7/records/track_non_record_16mb/2026-03-21_DepthRecurrence_5x3_640/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/8ba1736219f5617a20f59e0b5f94330af213e4f7/records/track_non_record_16mb/2026-03-21_DepthRecurrence_5x3_640/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/8ba1736219f5617a20f59e0b5f94330af213e4f7/records/track_non_record_16mb/2026-03-21_DepthRecurrence_5x3_640/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/8ba1736219f5617a20f59e0b5f94330af213e4f7/records/track_non_record_16mb/2026-03-21_DepthRecurrence_5x3_640/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/8ba1736219f5617a20f59e0b5f94330af213e4f7/records/track_non_record_16mb/2026-03-21_DepthRecurrence_5x3_640",
+            "pr": "https://github.com/openai/parameter-golf/pull/319"
+          }
+        }
+      ]
+    },
+    "320": {
+      "number": 320,
+      "updatedAt": "2026-03-21T06:56:11Z",
+      "pr": {
+        "number": 320,
+        "title": "Minimal recurrent motif (sb1 rs2 g0.18) – non-record submission",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/320",
+        "authorLogin": "megnat05-tmm",
+        "authorName": null,
+        "createdAt": "2026-03-21T06:56:11Z",
+        "updatedAt": "2026-03-21T06:56:11Z",
+        "headSha": "e7c49265b7ea00aadfccebf768484d88fbfc2e34",
+        "headRepo": "megnat05-tmm/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-320-records-motif_sb1_rs2_g018-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "unknown",
+          "track": {
+            "path": "records/motif_sb1_rs2_g018",
+            "slug": "motif_sb1_rs2_g018",
+            "label": "motif sb1 rs2 g018",
+            "official": false,
+            "category": "unknown"
+          },
+          "record": {
+            "folderName": "motif_sb1_rs2_g018",
+            "folderPath": "records/motif_sb1_rs2_g018",
+            "submissionPath": "records/motif_sb1_rs2_g018/submission.json",
+            "readmePath": "records/motif_sb1_rs2_g018/README.md",
+            "trainLogPath": "records/motif_sb1_rs2_g018/train.log",
+            "scriptPath": "records/motif_sb1_rs2_g018/train_gpt.py"
+          },
+          "submission": {
+            "author": "megnat05-tmm",
+            "githubId": "megnat05-tmm",
+            "name": "Tim Megna",
+            "blurb": null,
+            "date": "2026-03-21T06:56:11Z"
+          },
+          "metrics": {
+            "valBpb": 2.78729,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 320,
+            "title": "Minimal recurrent motif (sb1 rs2 g0.18) – non-record submission",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/320",
+            "authorLogin": "megnat05-tmm",
+            "authorName": null,
+            "createdAt": "2026-03-21T06:56:11Z",
+            "updatedAt": "2026-03-21T06:56:11Z",
+            "headSha": "e7c49265b7ea00aadfccebf768484d88fbfc2e34",
+            "headRepo": "megnat05-tmm/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e7c49265b7ea00aadfccebf768484d88fbfc2e34/records/motif_sb1_rs2_g018/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/e7c49265b7ea00aadfccebf768484d88fbfc2e34/records/motif_sb1_rs2_g018/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/e7c49265b7ea00aadfccebf768484d88fbfc2e34/records/motif_sb1_rs2_g018/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/e7c49265b7ea00aadfccebf768484d88fbfc2e34/records/motif_sb1_rs2_g018/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/e7c49265b7ea00aadfccebf768484d88fbfc2e34/records/motif_sb1_rs2_g018",
+            "pr": "https://github.com/openai/parameter-golf/pull/320"
+          }
+        },
+        {
+          "id": "pr-320-records-track_non_record_16mb-motif_sb1_rs2_g018-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "motif_sb1_rs2_g018",
+            "folderPath": "records/track_non_record_16mb/motif_sb1_rs2_g018",
+            "submissionPath": "records/track_non_record_16mb/motif_sb1_rs2_g018/submission.json",
+            "readmePath": "records/track_non_record_16mb/motif_sb1_rs2_g018/README.md",
+            "trainLogPath": "records/track_non_record_16mb/motif_sb1_rs2_g018/train.log",
+            "scriptPath": "records/track_non_record_16mb/motif_sb1_rs2_g018/train_gpt.py"
+          },
+          "submission": {
+            "author": "megnat05-tmm",
+            "githubId": "megnat05-tmm",
+            "name": "Tim Megna",
+            "blurb": null,
+            "date": "2026-03-21T06:56:11Z"
+          },
+          "metrics": {
+            "valBpb": 2.78729,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 320,
+            "title": "Minimal recurrent motif (sb1 rs2 g0.18) – non-record submission",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/320",
+            "authorLogin": "megnat05-tmm",
+            "authorName": null,
+            "createdAt": "2026-03-21T06:56:11Z",
+            "updatedAt": "2026-03-21T06:56:11Z",
+            "headSha": "e7c49265b7ea00aadfccebf768484d88fbfc2e34",
+            "headRepo": "megnat05-tmm/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e7c49265b7ea00aadfccebf768484d88fbfc2e34/records/track_non_record_16mb/motif_sb1_rs2_g018/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/e7c49265b7ea00aadfccebf768484d88fbfc2e34/records/track_non_record_16mb/motif_sb1_rs2_g018/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/e7c49265b7ea00aadfccebf768484d88fbfc2e34/records/track_non_record_16mb/motif_sb1_rs2_g018/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/e7c49265b7ea00aadfccebf768484d88fbfc2e34/records/track_non_record_16mb/motif_sb1_rs2_g018/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/e7c49265b7ea00aadfccebf768484d88fbfc2e34/records/track_non_record_16mb/motif_sb1_rs2_g018",
+            "pr": "https://github.com/openai/parameter-golf/pull/320"
           }
         }
       ]

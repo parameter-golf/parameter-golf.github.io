@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-21T06:59:32.083Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 319,
+    "title": "Non-record: Depth Recurrence 5x3 — Weight-Shared Looping Transformer (6xH200, val_bpb=1.2716)",
+    "state": "open",
+    "updatedAt": "2026-03-21T06:41:00Z",
+    "headSha": "8ba1736219f5617a20f59e0b5f94330af213e4f7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/319",
+    "authorLogin": "Arth-Singh"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_DepthRecurrence_5x3_640/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Weight-shared Transformer loops 5 unique layers thrice with loop embeddings/gates and wider dim to trade parameters for effective depth recurrence.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Weight-shared loops to reuse 5 layers over 3 passes",
+      "Loop embeddings and gates to distinguish and control repeated passes",
+      "Wider model dim after sharing params to maintain capacity"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-21T06:59:35.849Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 318,
+    "title": "Neural Cache: Cross-Window KV Caching for Extended Eval Context (research proposal)",
+    "state": "open",
+    "updatedAt": "2026-03-21T06:35:35Z",
+    "headSha": "2f278eb6239af20c896f5a15c59e4fb659fbfd0c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/318",
+    "authorLogin": "sseanliu"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_NeuralCache_Research/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Neural Cache keeps per-layer KV caches across sliding windows so each eval window attends to past contexts beyond 2K tokens without model changes.",
+    "tags": [
+      "attention",
+      "evaluation",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Cross-window KV cache",
+      "Layer-wise cache trimming",
+      "FlashAttention supports seqlen_k>seqlen_q"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

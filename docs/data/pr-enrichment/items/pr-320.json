@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-21T06:59:26.482Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 320,
+    "title": "Minimal recurrent motif (sb1 rs2 g0.18) – non-record submission",
+    "state": "open",
+    "updatedAt": "2026-03-21T06:56:11Z",
+    "headSha": "e7c49265b7ea00aadfccebf768484d88fbfc2e34",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/320",
+    "authorLogin": "megnat05-tmm"
+  },
+  "inputs": {
+    "hash": "b671bb55739f4dd4e9ff453427d862aaf2b4f319009e28fbdb53eae78ec60522",
+    "readmePaths": [],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Minimal recurrent motif reuses a single shared block with soft gating and sparse recurrence to build a compact effective structure for compression.",
+    "tags": [
+      "architecture",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "False because the submission trains a standard recurrent motif model and only reports validation metrics without any explicit val-only training regime.",
+    "techniques": [
+      "shared recurrent block reused across steps",
+      "soft gating with recurrence initialize 0.18",
+      "minimal recurrence steps for structural closure"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

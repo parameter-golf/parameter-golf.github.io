@@ -1,16 +1,85 @@
 {
-  "generatedAt": "2026-03-21T06:29:48.502Z",
+  "generatedAt": "2026-03-21T06:59:53.959Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 320,
+      "title": "Minimal recurrent motif (sb1 rs2 g0.18) – non-record submission",
+      "status": "open",
+      "updatedAt": "2026-03-21T06:56:11Z",
+      "headSha": "e7c49265b7ea00aadfccebf768484d88fbfc2e34",
+      "generatedAt": "2026-03-21T06:59:26.482Z",
+      "summary": "Minimal recurrent motif reuses a single shared block with soft gating and sparse recurrence to build a compact effective structure for compression.",
+      "tags": [
+        "architecture",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-320.json"
+    },
+    {
+      "prNumber": 319,
+      "title": "Non-record: Depth Recurrence 5x3 — Weight-Shared Looping Transformer (6xH200, val_bpb=1.2716)",
+      "status": "open",
+      "updatedAt": "2026-03-21T06:41:00Z",
+      "headSha": "8ba1736219f5617a20f59e0b5f94330af213e4f7",
+      "generatedAt": "2026-03-21T06:59:32.083Z",
+      "summary": "Weight-shared Transformer loops 5 unique layers thrice with loop embeddings/gates and wider dim to trade parameters for effective depth recurrence.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-319.json"
+    },
+    {
+      "prNumber": 318,
+      "title": "Neural Cache: Cross-Window KV Caching for Extended Eval Context (research proposal)",
+      "status": "open",
+      "updatedAt": "2026-03-21T06:35:35Z",
+      "headSha": "2f278eb6239af20c896f5a15c59e4fb659fbfd0c",
+      "generatedAt": "2026-03-21T06:59:35.849Z",
+      "summary": "Neural Cache keeps per-layer KV caches across sliding windows so each eval window attends to past contexts beyond 2K tokens without model changes.",
+      "tags": [
+        "attention",
+        "evaluation",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-318.json"
+    },
+    {
       "prNumber": 317,
       "title": "Record: 11L XSA4 + EMA + TTT + Int6 MLP3x (val_bpb=1.1419)",
       "status": "open",
-      "updatedAt": "2026-03-21T06:16:06Z",
-      "headSha": "0c2a5ac0904c2bed13eaf5a420ac5bf327c95cfe",
-      "generatedAt": "2026-03-21T06:29:17.882Z",
-      "summary": "11-layer MLP3x base adds XSA on final layers, EMA training, int6+zstd compression, and eval-time SGD test-time training with frozen early blocks.",
+      "updatedAt": "2026-03-21T06:47:28Z",
+      "headSha": "b028e011d4f27df6c7428d2188bd845f1559d422",
+      "generatedAt": "2026-03-21T06:59:42.389Z",
+      "summary": "11-layer MLP3x stack uses EMA, XSA on last four layers, and int6+zstd compression, then runs SGD test-time training with frozen early blocks.",
       "tags": [
         "architecture",
         "attention",
@@ -1011,23 +1080,23 @@
       "prNumber": 264,
       "title": "11L Int5-MLP + TTT-SGD + SmearGate + SWA (1.1455 BPB)",
       "status": "open",
-      "updatedAt": "2026-03-21T00:01:01Z",
+      "updatedAt": "2026-03-21T06:35:29Z",
       "headSha": "ab0777880a9b931afc62d7fcc332936ccaaf90fd",
-      "generatedAt": "2026-03-21T00:27:42.527Z",
-      "summary": "Int5/int6 quantization funds an 11-layer GQA model enhanced with SmearGate/BigramHash context and SWA plus full-model SGD TTT before eval.",
+      "generatedAt": "2026-03-21T06:59:47.528Z",
+      "summary": "Funds an 11-layer transformer via int5/int6 quantization, injects SmearGate+BigramHash context, and finishes with SWA plus full-model SGD TTT before sliding eval.",
       "tags": [
-        "val-only",
         "quantization",
+        "architecture",
         "training-schedule",
-        "optimizer"
+        "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-264.json"
     },
@@ -2229,16 +2298,16 @@
     },
     {
       "prNumber": 187,
-      "title": "Record: Pre-Enrichment + Encoder Recurrence + SmearGate + BigramHash (val_bpb=1.1668)",
+      "title": "Record: Pre-Enrichment + Encoder Recurrence + XSA + SmearGate + BigramHash (val_bpb=1.1629)",
       "status": "open",
-      "updatedAt": "2026-03-21T05:58:05Z",
-      "headSha": "9f17c55d25902f4baeab1354f3a46ff44c3a16e1",
-      "generatedAt": "2026-03-21T05:59:25.528Z",
-      "summary": "Combines GELU pre-enrichment, SmearGate+BigramHash context, and encoder-only recurrence in a compact U-Net to deepen processing with zero extra layers.",
+      "updatedAt": "2026-03-21T06:58:13Z",
+      "headSha": "309411420609d9aa1aa9e7a3ffdf37abaf8c8522",
+      "generatedAt": "2026-03-21T06:59:53.932Z",
+      "summary": "Applies BigramHash+SmearGate-powered GELU pre-enrichment and encoder-only depth recurrence before the decoder with XSA on the final layers.",
       "tags": [
         "architecture",
         "attention",
-        "quantization"
+        "tokenization"
       ],
       "flags": {
         "usesValOnly": false,

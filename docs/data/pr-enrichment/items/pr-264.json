@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T00:27:42.527Z",
+  "generatedAt": "2026-03-21T06:59:47.528Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 264,
     "title": "11L Int5-MLP + TTT-SGD + SmearGate + SWA (1.1455 BPB)",
     "state": "open",
-    "updatedAt": "2026-03-21T00:01:01Z",
+    "updatedAt": "2026-03-21T06:35:29Z",
     "headSha": "ab0777880a9b931afc62d7fcc332936ccaaf90fd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/264",
     "authorLogin": "stukenov"
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Int5/int6 quantization funds an 11-layer GQA model enhanced with SmearGate/BigramHash context and SWA plus full-model SGD TTT before eval.",
+    "summary": "Funds an 11-layer transformer via int5/int6 quantization, injects SmearGate+BigramHash context, and finishes with SWA plus full-model SGD TTT before sliding eval.",
     "tags": [
-      "val-only",
       "quantization",
+      "architecture",
       "training-schedule",
-      "optimizer"
+      "evaluation"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Performs full-model SGD test-time training for two epochs on validation data before sliding-window evaluation.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Mixed int5 MLP/int6 attention quantization",
-      "SmearGate+BigramHash bigram context injection",
-      "SWA plus full-model SGD TTT before eval"
+      "Int5-MLP + Int6 attention to shrink weights and fit 11 layers",
+      "SmearGate and BigramHash embeddings inject bigram context ahead of the stack",
+      "Full-model SGD TTT plus SWA prior to sliding-window evaluation"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

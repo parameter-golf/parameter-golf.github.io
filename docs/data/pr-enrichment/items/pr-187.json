@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T05:59:25.528Z",
+  "generatedAt": "2026-03-21T06:59:53.932Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 187,
-    "title": "Record: Pre-Enrichment + Encoder Recurrence + SmearGate + BigramHash (val_bpb=1.1668)",
+    "title": "Record: Pre-Enrichment + Encoder Recurrence + XSA + SmearGate + BigramHash (val_bpb=1.1629)",
     "state": "open",
-    "updatedAt": "2026-03-21T05:58:05Z",
-    "headSha": "9f17c55d25902f4baeab1354f3a46ff44c3a16e1",
+    "updatedAt": "2026-03-21T06:58:13Z",
+    "headSha": "309411420609d9aa1aa9e7a3ffdf37abaf8c8522",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/187",
     "authorLogin": "Idan3011"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines GELU pre-enrichment, SmearGate+BigramHash context, and encoder-only recurrence in a compact U-Net to deepen processing with zero extra layers.",
+    "summary": "Applies BigramHash+SmearGate-powered GELU pre-enrichment and encoder-only depth recurrence before the decoder with XSA on the final layers.",
     "tags": [
       "architecture",
       "attention",
-      "quantization"
+      "tokenization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "GELU pre-enrichment bottleneck on embeddings",
-      "Encoder-only 2× recurrence with RMS norm stabilization",
-      "SmearGate plus BigramHash for bigram-aware tokens"
+      "GELU pre-enrichment with BigramHash+SmearGate embedding expansion",
+      "U-Net encoder passes run twice with RMS-normed recurrence",
+      "XSA on final layers to subtract self-value projections"
     ]
   },
   "compatibility": {
