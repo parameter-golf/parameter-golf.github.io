@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-21T17:36:13.044Z",
+  "generatedAt": "2026-03-21T18:04:35.140Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 355,
+      "title": "Add non-record BigramHash4096 + MLP992 + LR0.08 + Slide64 submission",
+      "status": "open",
+      "updatedAt": "2026-03-21T17:58:56Z",
+      "headSha": "e9adbd392a5c74604fd14d92b190a8bd5d56a869",
+      "generatedAt": "2026-03-21T18:04:23.490Z",
+      "summary": "CUDA-based trainer tweaks include a narrower FFN with higher matrix LR, a BigramHash side channel, sliding evaluation stride 64, and fp16 tied embeddings.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-355.json"
+    },
     {
       "prNumber": 354,
       "title": "[Non-record] MLA + SmearGate + BigramHash + SWA — pre-quant 1.2838 bpb",
@@ -1802,14 +1826,15 @@
       "prNumber": 254,
       "title": "Record: FarnsworthEngine v1 — TTT + 11L Int6 MLP3x, val_bpb=1.1303",
       "status": "open",
-      "updatedAt": "2026-03-20T23:59:31Z",
+      "updatedAt": "2026-03-21T17:55:47Z",
       "headSha": "479b8bcfa8ea0e5e7b711aff7f54fafb9b72b0c2",
-      "generatedAt": "2026-03-21T00:27:50.199Z",
-      "summary": "Validation-time SGD adapts an 11-layer Int6 MLP3x with SmearGate/BigramHash, NTK-RoPE, and Muon/SWA before sliding-window eval.",
+      "generatedAt": "2026-03-21T18:04:29.990Z",
+      "summary": "Test-time training adapts an 11-layer Int6 MLP3x transformer with SmearGate, BigramHash, Muon+NTK-RoPE before sliding-window evaluation.",
       "tags": [
         "val-only",
         "quantization",
-        "architecture"
+        "attention",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": true,
@@ -2458,15 +2483,16 @@
     {
       "prNumber": 212,
       "title": "Record: Int6 + 3x MLP + sliding window (val_bpb=1.1708) + 9 ablations",
-      "status": "open",
-      "updatedAt": "2026-03-21T16:42:45Z",
-      "headSha": "3e2e4627b13852386b066da3a95a51ed25aefb53",
-      "generatedAt": "2026-03-21T17:35:23.997Z",
-      "summary": "Per-row Int6 quantization plus zstd compression frees artifact budget for a 3× MLP expansion, paired with sliding-window eval and tuned warmdown.",
+      "status": "closed",
+      "updatedAt": "2026-03-21T17:53:41Z",
+      "headSha": "d3a4ebc54fd3ba5605306fe52b527b8f3f2d53b1",
+      "generatedAt": "2026-03-21T18:04:35.106Z",
+      "summary": "Per-row Int6 quantization + zstd frees budget for 3× MLP expansion with FP16 embeddings and sliding-window eval for a compact 21.8M model.",
       "tags": [
         "quantization",
         "architecture",
-        "sliding-window-eval"
+        "sliding-window-eval",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T18:04:23.490Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 355,
+    "title": "Add non-record BigramHash4096 + MLP992 + LR0.08 + Slide64 submission",
+    "state": "open",
+    "updatedAt": "2026-03-21T17:58:56Z",
+    "headSha": "e9adbd392a5c74604fd14d92b190a8bd5d56a869",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/355",
+    "authorLogin": "josusanmartin"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_BigramHash4096_MLP992_LR008_Slide64_OverCap/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "CUDA-based trainer tweaks include a narrower FFN with higher matrix LR, a BigramHash side channel, sliding evaluation stride 64, and fp16 tied embeddings.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "narrower FFN+high matrix LR pairing",
+      "BigramHash4096 side-channel embedding",
+      "sliding-window eval stride 64 with fp16 tied embeddings"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
