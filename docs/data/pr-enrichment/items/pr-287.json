@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T04:28:59.335Z",
+  "generatedAt": "2026-03-21T07:59:38.296Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 287,
     "title": "Record: 11L XSA + EMA + Int6 MLP3x + WD=0.04 (val_bpb: 1.1271)",
     "state": "open",
-    "updatedAt": "2026-03-21T04:19:48Z",
+    "updatedAt": "2026-03-21T07:55:09Z",
     "headSha": "d7583288464f252eeec6657c80f4cd3a74c0e5c5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/287",
     "authorLogin": "jfprincz"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer muP transformer uses XSA on final layers with EMA averaging plus int6 quantization and SmearGate to tighten generalization and compression.",
+    "summary": "11-layer Transformer adds last-layer Exclusive Self Attention and EMA averaging atop int6 mixed quantization plus muon-tuned schedule.",
     "tags": [
       "attention",
-      "optimizer",
-      "quantization"
+      "quantization",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Exclusive Self Attention on last four layers to remove self-value bias",
-      "Per-step EMA averaging replacing SWA warmdown checkpoints",
-      "Int6 mixed quantization with SmearGate and BigramHash embedding stack"
+      "Exclusive Self Attention on final layers",
+      "EMA weight averaging replacing SWA",
+      "Int6 mixed quantization with muP init and Muon tuning"
     ]
   },
   "compatibility": {

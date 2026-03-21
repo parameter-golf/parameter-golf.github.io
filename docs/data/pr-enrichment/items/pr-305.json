@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T03:27:33.169Z",
+  "generatedAt": "2026-03-21T07:59:32.938Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 305,
-    "title": "[WIP] 10L MLP3x BigramHash(4096) + SWA + LateQAT + WD=0.04 — val_bpb=1.87, 14.77MB",
+    "title": "9L dim=512 + U-Net Skips + ResidMix + XSA + BigramHash + SWA + LateQAT — val_bpb=1.2390, 16.1MB",
     "state": "open",
-    "updatedAt": "2026-03-21T03:21:14Z",
-    "headSha": "b7e4165db584d809994f9427903ffe010a756084",
+    "updatedAt": "2026-03-21T07:32:17Z",
+    "headSha": "466d08c7183d679f902d97c86e30ac30b5436cb4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/305",
     "authorLogin": "Naazimsnh02"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer transformer widens MLPs 3×, prepends BigramHash pairs, and uses SWA plus late QAT timing to stabilize int8+zlib quantized weights.",
+    "summary": "U-Net skips, resid-mix, and XSA enrich a 9-layer transformer using BigramHash tokens, with SWA and late QAT prepping it for int8.",
     "tags": [
       "architecture",
-      "quantization",
+      "attention",
       "training-schedule",
-      "regularization"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "MLP 3× expansion with BigramHash embeddings",
-      "SWA start at 40% and late QAT at 85% wallclock",
-      "0.04 weight decay with gradient clipping"
+      "U-Net skip connections with learned per-dim weights",
+      "ResMix blending plus BigramHash pair embeddings before the encoder",
+      "Late-start QAT with SWA averaging for int8 readiness"
     ]
   },
   "compatibility": {

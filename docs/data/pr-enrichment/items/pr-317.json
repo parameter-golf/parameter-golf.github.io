@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T07:29:47.111Z",
+  "generatedAt": "2026-03-21T07:59:23.844Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 317,
-    "title": "Record: 11L XSA4 + EMA + TTT + Int6 MLP3x (val_bpb=1.1419)",
+    "title": "Record: 11L XSA4 + EMA + TTT + Int6 MLP3x (val_bpb=1.1442)",
     "state": "open",
-    "updatedAt": "2026-03-21T07:04:30Z",
-    "headSha": "72fb6c9cff99c6b7792b3267e630af307a86ccd9",
+    "updatedAt": "2026-03-21T07:52:14Z",
+    "headSha": "40ffdcfba9e65efabb9d4bb0f566b00a58ea9d51",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/317",
     "authorLogin": "chris-buckley"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer MLP3x keeps SmearGate/BigramHash base with XSA on final layers, EMA training, int6 quantization, and full-model SGD test-time training.",
+    "summary": "Combines the 11L SmearGate/BigramHash/EMA int6 stack with a dequantized full-model SGD test-time tuning pass before scoring.",
     "tags": [
-      "architecture",
       "attention",
-      "optimizer",
-      "quantization"
+      "architecture",
+      "quantization",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "XSA on last 4 layers atop SmearGate+BigramHash",
-      "EMA training with int6+zstd-22 compression",
-      "Full-model SGD TTT for 3 epochs freezing first 2 blocks"
+      "- 11L MLP3x SmearGate + BigramHash + XSA4 modeling stack",
+      "- int6+zstd-22 mixed quantization with EMA and muP scaling",
+      "- dequantized full-model SGD test-time tuning (TTT)"
     ]
   },
   "compatibility": {

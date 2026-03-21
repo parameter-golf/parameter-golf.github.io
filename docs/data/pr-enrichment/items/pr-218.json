@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T14:53:41.681Z",
+  "generatedAt": "2026-03-21T07:59:42.631Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 218,
     "title": "qat + ttt + value embeddings",
-    "state": "open",
-    "updatedAt": "2026-03-20T14:32:21Z",
-    "headSha": "9d6b92ebe41cdb7baf8464eaf23ea1e13a750b5a",
+    "state": "closed",
+    "updatedAt": "2026-03-21T07:54:04Z",
+    "headSha": "54e6e379b79b0942f4eea5c57f485a034e0885dc",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/218",
     "authorLogin": "bopmite"
   },
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines per-row fake int8 QAT, shared gated value embeddings, and TTT LoRA with SWA plus temperature search atop a 10-layer Muon base.",
+    "summary": "Adds online learned logit bias during sliding-window eval on an 11L int6 SmearGate + Late QAT base to adapt logits without changing weights.",
     "tags": [
       "quantization",
-      "architecture",
-      "training-schedule"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "per-row fake int8 QAT with STE",
-      "shared gated value embeddings added to attention values",
-      "TTT LoRA plus SWA and logit temperature sweep"
+      "Online logit bias correction during eval",
+      "Late QAT int6 training base",
+      "Sliding-window evaluation adjustments"
     ]
   },
   "compatibility": {

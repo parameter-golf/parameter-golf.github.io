@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T07:30:09.037Z",
+  "generatedAt": "2026-03-21T07:59:42.661Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -143,17 +143,17 @@
     },
     {
       "prNumber": 317,
-      "title": "Record: 11L XSA4 + EMA + TTT + Int6 MLP3x (val_bpb=1.1419)",
+      "title": "Record: 11L XSA4 + EMA + TTT + Int6 MLP3x (val_bpb=1.1442)",
       "status": "open",
-      "updatedAt": "2026-03-21T07:04:30Z",
-      "headSha": "72fb6c9cff99c6b7792b3267e630af307a86ccd9",
-      "generatedAt": "2026-03-21T07:29:47.111Z",
-      "summary": "11-layer MLP3x keeps SmearGate/BigramHash base with XSA on final layers, EMA training, int6 quantization, and full-model SGD test-time training.",
+      "updatedAt": "2026-03-21T07:52:14Z",
+      "headSha": "40ffdcfba9e65efabb9d4bb0f566b00a58ea9d51",
+      "generatedAt": "2026-03-21T07:59:23.844Z",
+      "summary": "Combines the 11L SmearGate/BigramHash/EMA int6 stack with a dequantized full-model SGD test-time tuning pass before scoring.",
       "tags": [
-        "architecture",
         "attention",
-        "optimizer",
-        "quantization"
+        "architecture",
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -354,17 +354,17 @@
     },
     {
       "prNumber": 305,
-      "title": "[WIP] 10L MLP3x BigramHash(4096) + SWA + LateQAT + WD=0.04 — val_bpb=1.87, 14.77MB",
+      "title": "9L dim=512 + U-Net Skips + ResidMix + XSA + BigramHash + SWA + LateQAT — val_bpb=1.2390, 16.1MB",
       "status": "open",
-      "updatedAt": "2026-03-21T03:21:14Z",
-      "headSha": "b7e4165db584d809994f9427903ffe010a756084",
-      "generatedAt": "2026-03-21T03:27:33.169Z",
-      "summary": "10-layer transformer widens MLPs 3×, prepends BigramHash pairs, and uses SWA plus late QAT timing to stabilize int8+zlib quantized weights.",
+      "updatedAt": "2026-03-21T07:32:17Z",
+      "headSha": "466d08c7183d679f902d97c86e30ac30b5436cb4",
+      "generatedAt": "2026-03-21T07:59:32.938Z",
+      "summary": "U-Net skips, resid-mix, and XSA enrich a 9-layer transformer using BigramHash tokens, with SWA and late QAT prepping it for int8.",
       "tags": [
         "architecture",
-        "quantization",
+        "attention",
         "training-schedule",
-        "regularization"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -729,14 +729,14 @@
       "prNumber": 287,
       "title": "Record: 11L XSA + EMA + Int6 MLP3x + WD=0.04 (val_bpb: 1.1271)",
       "status": "open",
-      "updatedAt": "2026-03-21T04:19:48Z",
+      "updatedAt": "2026-03-21T07:55:09Z",
       "headSha": "d7583288464f252eeec6657c80f4cd3a74c0e5c5",
-      "generatedAt": "2026-03-21T04:28:59.335Z",
-      "summary": "11-layer muP transformer uses XSA on final layers with EMA averaging plus int6 quantization and SmearGate to tighten generalization and compression.",
+      "generatedAt": "2026-03-21T07:59:38.296Z",
+      "summary": "11-layer Transformer adds last-layer Exclusive Self Attention and EMA averaging atop int6 mixed quantization plus muon-tuned schedule.",
       "tags": [
         "attention",
-        "optimizer",
-        "quantization"
+        "quantization",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1876,15 +1876,14 @@
     {
       "prNumber": 218,
       "title": "qat + ttt + value embeddings",
-      "status": "open",
-      "updatedAt": "2026-03-20T14:32:21Z",
-      "headSha": "9d6b92ebe41cdb7baf8464eaf23ea1e13a750b5a",
-      "generatedAt": "2026-03-20T14:53:41.681Z",
-      "summary": "Combines per-row fake int8 QAT, shared gated value embeddings, and TTT LoRA with SWA plus temperature search atop a 10-layer Muon base.",
+      "status": "closed",
+      "updatedAt": "2026-03-21T07:54:04Z",
+      "headSha": "54e6e379b79b0942f4eea5c57f485a034e0885dc",
+      "generatedAt": "2026-03-21T07:59:42.631Z",
+      "summary": "Adds online learned logit bias during sliding-window eval on an 11L int6 SmearGate + Late QAT base to adapt logits without changing weights.",
       "tags": [
         "quantization",
-        "architecture",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
