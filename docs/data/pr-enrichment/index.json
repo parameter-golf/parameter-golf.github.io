@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-21T04:58:57.265Z",
+  "generatedAt": "2026-03-21T05:29:05.627Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 310,
+      "title": "Record: 10L Seq2048 TTT LoRA WarmdownQuant (val_bpb=1.1787)",
+      "status": "open",
+      "updatedAt": "2026-03-21T05:19:39Z",
+      "headSha": "918d34b13faef796aa67f14961bae10e75f6f10c",
+      "generatedAt": "2026-03-21T05:29:01.049Z",
+      "summary": "10-layer, 2048-token Transformer tightens weights via long warmdown for int8 readiness while using test-time LoRA on Q/V/LM for eval-time tuning.",
+      "tags": [
+        "training-schedule",
+        "quantization",
+        "muon"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-310.json"
+    },
     {
       "prNumber": 309,
       "title": "Record: CLASE-Quant adaptive layer quantization (val_bpb=1.1914)",
@@ -800,15 +823,15 @@
       "prNumber": 267,
       "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
       "status": "open",
-      "updatedAt": "2026-03-21T03:41:43Z",
-      "headSha": "07051ccd97ab2f21c8fbca54b73e6b697a3a81d3",
-      "generatedAt": "2026-03-21T03:58:11.519Z",
-      "summary": "11-layer int5-quantized GPT with EMA and XSA3 applies chunked causal TTT, evaluating each validation chunk before training in a single pass.",
+      "updatedAt": "2026-03-21T05:11:30Z",
+      "headSha": "945287b3955e46fba86f8bbb3c25a37e9cf861f4",
+      "generatedAt": "2026-03-21T05:29:05.587Z",
+      "summary": "Causal chunk-wise eval-first TTT on an 11L Muon + int5 model augmented with EMA and exclusive self-attention for the last layers.",
       "tags": [
         "val-only",
         "quantization",
-        "attention",
-        "training-schedule"
+        "optimizer",
+        "attention"
       ],
       "flags": {
         "usesValOnly": true,

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T03:58:11.519Z",
+  "generatedAt": "2026-03-21T05:29:05.587Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 267,
     "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
     "state": "open",
-    "updatedAt": "2026-03-21T03:41:43Z",
-    "headSha": "07051ccd97ab2f21c8fbca54b73e6b697a3a81d3",
+    "updatedAt": "2026-03-21T05:11:30Z",
+    "headSha": "945287b3955e46fba86f8bbb3c25a37e9cf861f4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/267",
     "authorLogin": "andrewgcodes"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer int5-quantized GPT with EMA and XSA3 applies chunked causal TTT, evaluating each validation chunk before training in a single pass.",
+    "summary": "Causal chunk-wise eval-first TTT on an 11L Muon + int5 model augmented with EMA and exclusive self-attention for the last layers.",
     "tags": [
       "val-only",
       "quantization",
-      "attention",
-      "training-schedule"
+      "optimizer",
+      "attention"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Training happens exclusively on validation chunks after they are scored, following the causal TTT eval-then-train regime.",
+    "valOnlyReasoning": "Per-chunk causal TTT evaluates each validation chunk before training on it, making training confined to validation shards.",
     "techniques": [
-      "Chunk-based eval-then-train causal TTT",
-      "Int5-all quantization with FP16 embeddings+EMA",
-      "Exclusive self-attention on final layers"
+      "Causal chunk eval-then-train TTT",
+      "Int5-all quantization with EMA averaging",
+      "Exclusive self-attention applied to final layers"
     ]
   },
   "compatibility": {

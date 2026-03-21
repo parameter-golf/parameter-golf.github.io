@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-21T04:58:49.265Z",
-  "lastSeenUpdatedAt": "2026-03-21T04:57:44Z",
+  "generatedAt": "2026-03-21T05:28:55.821Z",
+  "lastSeenUpdatedAt": "2026-03-21T05:19:39Z",
   "prs": {
     "1": {
       "number": 1,
@@ -14039,7 +14039,7 @@
     },
     "188": {
       "number": 188,
-      "updatedAt": "2026-03-21T03:45:31Z",
+      "updatedAt": "2026-03-21T05:11:35Z",
       "pr": {
         "number": 188,
         "title": "ROCm Support",
@@ -14050,8 +14050,8 @@
         "authorLogin": "reimorster",
         "authorName": null,
         "createdAt": "2026-03-20T07:28:43Z",
-        "updatedAt": "2026-03-21T03:45:31Z",
-        "headSha": "8014c9ec985503f56260882c95f729bac55a42e2",
+        "updatedAt": "2026-03-21T05:11:35Z",
+        "headSha": "b25d53add8d445e8e6a24acfb611817c17be7267",
         "headRepo": "reimorster/parameter-golf"
       },
       "submissions": []
@@ -19801,7 +19801,7 @@
     },
     "267": {
       "number": 267,
-      "updatedAt": "2026-03-21T03:41:43Z",
+      "updatedAt": "2026-03-21T05:11:30Z",
       "pr": {
         "number": 267,
         "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
@@ -19812,8 +19812,8 @@
         "authorLogin": "andrewgcodes",
         "authorName": null,
         "createdAt": "2026-03-20T21:14:38Z",
-        "updatedAt": "2026-03-21T03:41:43Z",
-        "headSha": "07051ccd97ab2f21c8fbca54b73e6b697a3a81d3",
+        "updatedAt": "2026-03-21T05:11:30Z",
+        "headSha": "945287b3955e46fba86f8bbb3c25a37e9cf861f4",
         "headRepo": "andrewgcodes/parameter-golf"
       },
       "submissions": [
@@ -19840,13 +19840,13 @@
           "submission": {
             "author": "devin-ai",
             "githubId": "andrewgcodes",
-            "name": "11L Int5-All + EMA + XSA3 + Causal TTT (12 epochs, 64 chunks)",
-            "blurb": "11 layers with int5 quantization for all weight categories. EMA (decay=0.997) for model averaging. Exclusive Self-Attention on last 3 layers. Legal causal test-time training: chunk-based eval-then-train on validation data (64 chunks, 12 SGD epochs per chunk). Muon WD=0.08. SmearGate + OrthoInit + zstd-22.",
+            "name": "11L Int5-All + EMA + XSA5 + Causal TTT (12 epochs, 64 chunks)",
+            "blurb": "11 layers with int5 quantization for all weight categories. EMA (decay=0.997) for model averaging. Exclusive Self-Attention on last 5 layers. Legal causal test-time training: chunk-based eval-then-train on validation data (64 chunks, 12 SGD epochs per chunk). Muon WD=0.08. SmearGate + OrthoInit + zstd-22.",
             "date": "2026-03-20"
           },
           "metrics": {
             "valBpb": null,
-            "valLoss": 1.92047,
+            "valLoss": 1.91941,
             "preQuantValBpb": null,
             "preQuantValLoss": null,
             "stepStop": null,
@@ -19854,7 +19854,7 @@
             "evalTimeSeconds": null
           },
           "artifact": {
-            "bytesTotal": 15516237,
+            "bytesTotal": 15929383,
             "bytesCode": null,
             "bytesModelInt8Zlib": null
           },
@@ -19875,16 +19875,16 @@
             "authorLogin": "andrewgcodes",
             "authorName": null,
             "createdAt": "2026-03-20T21:14:38Z",
-            "updatedAt": "2026-03-21T03:41:43Z",
-            "headSha": "07051ccd97ab2f21c8fbca54b73e6b697a3a81d3",
+            "updatedAt": "2026-03-21T05:11:30Z",
+            "headSha": "945287b3955e46fba86f8bbb3c25a37e9cf861f4",
             "headRepo": "andrewgcodes/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/07051ccd97ab2f21c8fbca54b73e6b697a3a81d3/records/track_10min_16mb/2026-03-20_CausalTTT_Int5MLP_BigramHash_SWA/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/07051ccd97ab2f21c8fbca54b73e6b697a3a81d3/records/track_10min_16mb/2026-03-20_CausalTTT_Int5MLP_BigramHash_SWA/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/07051ccd97ab2f21c8fbca54b73e6b697a3a81d3/records/track_10min_16mb/2026-03-20_CausalTTT_Int5MLP_BigramHash_SWA/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/07051ccd97ab2f21c8fbca54b73e6b697a3a81d3/records/track_10min_16mb/2026-03-20_CausalTTT_Int5MLP_BigramHash_SWA/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/07051ccd97ab2f21c8fbca54b73e6b697a3a81d3/records/track_10min_16mb/2026-03-20_CausalTTT_Int5MLP_BigramHash_SWA",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/945287b3955e46fba86f8bbb3c25a37e9cf861f4/records/track_10min_16mb/2026-03-20_CausalTTT_Int5MLP_BigramHash_SWA/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/945287b3955e46fba86f8bbb3c25a37e9cf861f4/records/track_10min_16mb/2026-03-20_CausalTTT_Int5MLP_BigramHash_SWA/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/945287b3955e46fba86f8bbb3c25a37e9cf861f4/records/track_10min_16mb/2026-03-20_CausalTTT_Int5MLP_BigramHash_SWA/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/945287b3955e46fba86f8bbb3c25a37e9cf861f4/records/track_10min_16mb/2026-03-20_CausalTTT_Int5MLP_BigramHash_SWA/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/945287b3955e46fba86f8bbb3c25a37e9cf861f4/records/track_10min_16mb/2026-03-20_CausalTTT_Int5MLP_BigramHash_SWA",
             "pr": "https://github.com/openai/parameter-golf/pull/267"
           }
         }
@@ -23740,7 +23740,7 @@
     },
     "310": {
       "number": 310,
-      "updatedAt": "2026-03-21T04:57:44Z",
+      "updatedAt": "2026-03-21T05:19:39Z",
       "pr": {
         "number": 310,
         "title": "Record: 10L Seq2048 TTT LoRA WarmdownQuant (val_bpb=1.1787)",
@@ -23751,9 +23751,119 @@
         "authorLogin": "vishesh9131",
         "authorName": null,
         "createdAt": "2026-03-21T04:52:27Z",
-        "updatedAt": "2026-03-21T04:57:44Z",
-        "headSha": "c7343f1f34b5c55ff339dfbf2e51ff7a33900bb3",
+        "updatedAt": "2026-03-21T05:19:39Z",
+        "headSha": "918d34b13faef796aa67f14961bae10e75f6f10c",
         "headRepo": "vishesh9131/parameter-golf-vishesh"
+      },
+      "submissions": [
+        {
+          "id": "pr-310-records-track_10min_16mb-2026-03-21_10L_Seq2048_TTT_WarmdownQuant-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-21_10L_Seq2048_TTT_WarmdownQuant",
+            "folderPath": "records/track_10min_16mb/2026-03-21_10L_Seq2048_TTT_WarmdownQuant",
+            "submissionPath": "records/track_10min_16mb/2026-03-21_10L_Seq2048_TTT_WarmdownQuant/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-21_10L_Seq2048_TTT_WarmdownQuant/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-21_10L_Seq2048_TTT_WarmdownQuant/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-21_10L_Seq2048_TTT_WarmdownQuant/train_gpt.py"
+          },
+          "submission": {
+            "author": "vishesh9131",
+            "githubId": "vishesh9131",
+            "name": "10L Seq2048 WarmdownQuant + TTT LoRA",
+            "blurb": "10 layers, seq_len 2048, Muon momentum 0.98, LR 0.03, always-decaying warmdown (WD=15000) for reduced int8 quant penalty, TTT LoRA eval (rank 8). Seed 1337: val_bpb=1.1787 pre-quant.",
+            "date": "2026-03-21"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": 1.1787,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15624941,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 310,
+            "title": "Record: 10L Seq2048 TTT LoRA WarmdownQuant (val_bpb=1.1787)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/310",
+            "authorLogin": "vishesh9131",
+            "authorName": null,
+            "createdAt": "2026-03-21T04:52:27Z",
+            "updatedAt": "2026-03-21T05:19:39Z",
+            "headSha": "918d34b13faef796aa67f14961bae10e75f6f10c",
+            "headRepo": "vishesh9131/parameter-golf-vishesh"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/918d34b13faef796aa67f14961bae10e75f6f10c/records/track_10min_16mb/2026-03-21_10L_Seq2048_TTT_WarmdownQuant/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/918d34b13faef796aa67f14961bae10e75f6f10c/records/track_10min_16mb/2026-03-21_10L_Seq2048_TTT_WarmdownQuant/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/918d34b13faef796aa67f14961bae10e75f6f10c/records/track_10min_16mb/2026-03-21_10L_Seq2048_TTT_WarmdownQuant/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/918d34b13faef796aa67f14961bae10e75f6f10c/records/track_10min_16mb/2026-03-21_10L_Seq2048_TTT_WarmdownQuant/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/918d34b13faef796aa67f14961bae10e75f6f10c/records/track_10min_16mb/2026-03-21_10L_Seq2048_TTT_WarmdownQuant",
+            "pr": "https://github.com/openai/parameter-golf/pull/310"
+          }
+        }
+      ]
+    },
+    "311": {
+      "number": 311,
+      "updatedAt": "2026-03-21T05:00:14Z",
+      "pr": {
+        "number": 311,
+        "title": "Non-record: Internal control port on the PR180 stack",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/311",
+        "authorLogin": "small-cactus",
+        "authorName": null,
+        "createdAt": "2026-03-21T05:00:14Z",
+        "updatedAt": "2026-03-21T05:00:14Z",
+        "headSha": "3cf231ffdde23dab2dada5c013776ca7cf4d5836",
+        "headRepo": "small-cactus/parameter-golf"
+      },
+      "submissions": []
+    },
+    "312": {
+      "number": 312,
+      "updatedAt": "2026-03-21T05:05:25Z",
+      "pr": {
+        "number": 312,
+        "title": "Record: Int6 + Canon ACD (K=3) + Muon WD 0.04 + SWA + Sliding Eval (val_bpb=1.1668)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/312",
+        "authorLogin": "chanwoo-park-official",
+        "authorName": null,
+        "createdAt": "2026-03-21T05:04:35Z",
+        "updatedAt": "2026-03-21T05:05:25Z",
+        "headSha": "0902543f57723f9338470fef627730955e9f64cd",
+        "headRepo": "chanwoo-park-official/parameter-golf"
       },
       "submissions": []
     }

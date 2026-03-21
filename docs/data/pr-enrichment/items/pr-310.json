@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-21T05:29:01.049Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 310,
+    "title": "Record: 10L Seq2048 TTT LoRA WarmdownQuant (val_bpb=1.1787)",
+    "state": "open",
+    "updatedAt": "2026-03-21T05:19:39Z",
+    "headSha": "918d34b13faef796aa67f14961bae10e75f6f10c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/310",
+    "authorLogin": "vishesh9131"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_10L_Seq2048_TTT_WarmdownQuant/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer, 2048-token Transformer tightens weights via long warmdown for int8 readiness while using test-time LoRA on Q/V/LM for eval-time tuning.",
+    "tags": [
+      "training-schedule",
+      "quantization",
+      "muon"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "10-layer, 2048-token architecture with overtone spectral init and phase-transition residual mixing",
+      "Always-decaying warmdown to constrain weights before int8 quantization",
+      "Batched test-time LoRA adapters on Q, V, and LM head"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
