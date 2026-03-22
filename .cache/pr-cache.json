@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-22T13:39:44.420Z",
-  "lastSeenUpdatedAt": "2026-03-22T13:39:13Z",
+  "generatedAt": "2026-03-22T14:09:41.479Z",
+  "lastSeenUpdatedAt": "2026-03-22T14:04:59Z",
   "prs": {
     "1": {
       "number": 1,
@@ -34263,10 +34263,10 @@
     },
     "412": {
       "number": 412,
-      "updatedAt": "2026-03-22T06:54:57Z",
+      "updatedAt": "2026-03-22T13:45:54Z",
       "pr": {
         "number": 412,
-        "title": "Shared depth training",
+        "title": "WIP: Shared depth training",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -34274,7 +34274,7 @@
         "authorLogin": "tranphat180603",
         "authorName": null,
         "createdAt": "2026-03-22T06:54:57Z",
-        "updatedAt": "2026-03-22T06:54:57Z",
+        "updatedAt": "2026-03-22T13:45:54Z",
         "headSha": "93f22008aebfd0f2a3dd58671e46dd4bbc8f4d1d",
         "headRepo": "tranphat180603/parameter-golf"
       },
@@ -35262,7 +35262,7 @@
     },
     "423": {
       "number": 423,
-      "updatedAt": "2026-03-22T13:36:35Z",
+      "updatedAt": "2026-03-22T13:46:48Z",
       "pr": {
         "number": 423,
         "title": "efficient recurrent gpt",
@@ -35273,8 +35273,8 @@
         "authorLogin": "GITHUB-SUBASHk",
         "authorName": null,
         "createdAt": "2026-03-22T13:36:35Z",
-        "updatedAt": "2026-03-22T13:36:35Z",
-        "headSha": "65c34ab0f93d655b703647632cd932608b08cc23",
+        "updatedAt": "2026-03-22T13:46:48Z",
+        "headSha": "403e9bddf3ab1f55e25ae0d132b452e026fd57a7",
         "headRepo": "GITHUB-SUBASHk/parameter-golf"
       },
       "submissions": []
@@ -35366,6 +35366,259 @@
             "script": "https://github.com/openai/parameter-golf/blob/94aeda35513990af3d2854bf3fa57b4006f0b399/records/track_non_record_16mb/2026-03-22_Baseline_EMA_AdaptiveExport/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/94aeda35513990af3d2854bf3fa57b4006f0b399/records/track_non_record_16mb/2026-03-22_Baseline_EMA_AdaptiveExport",
             "pr": "https://github.com/openai/parameter-golf/pull/424"
+          }
+        }
+      ]
+    },
+    "425": {
+      "number": 425,
+      "updatedAt": "2026-03-22T13:51:16Z",
+      "pr": {
+        "number": 425,
+        "title": "Codex/runpod 2026 03 20 checkpoint",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/425",
+        "authorLogin": "DeividasMat",
+        "authorName": null,
+        "createdAt": "2026-03-22T13:50:52Z",
+        "updatedAt": "2026-03-22T13:51:16Z",
+        "headSha": "981cd8e39a0fe33cb304626ae685565775342ab0",
+        "headRepo": "DeividasMat/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-425-records-_template-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "unknown",
+          "track": {
+            "path": "records/_template",
+            "slug": "_template",
+            "label": " template",
+            "official": false,
+            "category": "unknown"
+          },
+          "record": {
+            "folderName": "_template",
+            "folderPath": "records/_template",
+            "submissionPath": "records/_template/submission.json",
+            "readmePath": "records/_template/README.md",
+            "trainLogPath": "records/_template/train.log",
+            "scriptPath": "records/_template/train_gpt.py"
+          },
+          "submission": {
+            "author": "Your Name",
+            "githubId": "YourGitHubID",
+            "name": "Submission Name",
+            "blurb": null,
+            "date": "YYYY-MM-DD"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 425,
+            "title": "Codex/runpod 2026 03 20 checkpoint",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/425",
+            "authorLogin": "DeividasMat",
+            "authorName": null,
+            "createdAt": "2026-03-22T13:50:52Z",
+            "updatedAt": "2026-03-22T13:51:16Z",
+            "headSha": "981cd8e39a0fe33cb304626ae685565775342ab0",
+            "headRepo": "DeividasMat/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/981cd8e39a0fe33cb304626ae685565775342ab0/records/_template/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/981cd8e39a0fe33cb304626ae685565775342ab0/records/_template/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/981cd8e39a0fe33cb304626ae685565775342ab0/records/_template/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/981cd8e39a0fe33cb304626ae685565775342ab0/records/_template/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/981cd8e39a0fe33cb304626ae685565775342ab0/records/_template",
+            "pr": "https://github.com/openai/parameter-golf/pull/425"
+          }
+        },
+        {
+          "id": "pr-425-records-track_non_record_16mb-2026-03-20_Runpod1GPU_Ablations-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-20_Runpod1GPU_Ablations",
+            "folderPath": "records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations",
+            "submissionPath": "records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/train_gpt.py"
+          },
+          "submission": {
+            "author": "Deividas Mataciunas",
+            "githubId": "DeividasMat",
+            "name": "Runpod 1GPU Twicing Eval Split",
+            "blurb": "Exploratory 1x H100, 1-shard, 10-minute checkpoint run. The best balanced profile used ATTN_TWICE_ALPHA=0.05 with EVAL_SEQ_LEN=2048 and TTT_EVAL_SEQ_LEN=1024, reaching final_int8_ttt_lora val_bpb 1.3960 under the 16MB artifact cap.",
+            "date": "2026-03-20T18:30:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.396,
+            "valLoss": 2.3571,
+            "preQuantValBpb": 1.3805,
+            "preQuantValLoss": 2.3308,
+            "stepStop": 1075,
+            "wallclockSeconds": 600.439,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 10868875,
+            "bytesCode": 58584,
+            "bytesModelInt8Zlib": 10810291
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 425,
+            "title": "Codex/runpod 2026 03 20 checkpoint",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/425",
+            "authorLogin": "DeividasMat",
+            "authorName": null,
+            "createdAt": "2026-03-22T13:50:52Z",
+            "updatedAt": "2026-03-22T13:51:16Z",
+            "headSha": "981cd8e39a0fe33cb304626ae685565775342ab0",
+            "headRepo": "DeividasMat/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/981cd8e39a0fe33cb304626ae685565775342ab0/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/981cd8e39a0fe33cb304626ae685565775342ab0/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/981cd8e39a0fe33cb304626ae685565775342ab0/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/981cd8e39a0fe33cb304626ae685565775342ab0/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/981cd8e39a0fe33cb304626ae685565775342ab0/records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations",
+            "pr": "https://github.com/openai/parameter-golf/pull/425"
+          }
+        }
+      ]
+    },
+    "426": {
+      "number": 426,
+      "updatedAt": "2026-03-22T14:04:59Z",
+      "pr": {
+        "number": 426,
+        "title": "Record: 10L Int5-MLP + Mixed Quant + GradClip + Warmdown3k (mean val_bpb=1.20262)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/426",
+        "authorLogin": "aniketio-ctrl",
+        "authorName": null,
+        "createdAt": "2026-03-22T14:04:59Z",
+        "updatedAt": "2026-03-22T14:04:59Z",
+        "headSha": "2010a3929ffa0e7cc407fdc0d53ee8fde57b57a2",
+        "headRepo": "aniketio-ctrl/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-426-records-track_10min_16mb-2026-03-22_10L_Int5MLP_GradClip_Warmdown3k-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-22_10L_Int5MLP_GradClip_Warmdown3k",
+            "folderPath": "records/track_10min_16mb/2026-03-22_10L_Int5MLP_GradClip_Warmdown3k",
+            "submissionPath": "records/track_10min_16mb/2026-03-22_10L_Int5MLP_GradClip_Warmdown3k/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-22_10L_Int5MLP_GradClip_Warmdown3k/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-22_10L_Int5MLP_GradClip_Warmdown3k/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-22_10L_Int5MLP_GradClip_Warmdown3k/train_gpt.py"
+          },
+          "submission": {
+            "author": "aniketio-ctrl",
+            "githubId": "aniketio-ctrl",
+            "name": null,
+            "blurb": null,
+            "date": "2026-03-22T14:04:59Z"
+          },
+          "metrics": {
+            "valBpb": 1.20262,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 426,
+            "title": "Record: 10L Int5-MLP + Mixed Quant + GradClip + Warmdown3k (mean val_bpb=1.20262)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/426",
+            "authorLogin": "aniketio-ctrl",
+            "authorName": null,
+            "createdAt": "2026-03-22T14:04:59Z",
+            "updatedAt": "2026-03-22T14:04:59Z",
+            "headSha": "2010a3929ffa0e7cc407fdc0d53ee8fde57b57a2",
+            "headRepo": "aniketio-ctrl/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2010a3929ffa0e7cc407fdc0d53ee8fde57b57a2/records/track_10min_16mb/2026-03-22_10L_Int5MLP_GradClip_Warmdown3k/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/2010a3929ffa0e7cc407fdc0d53ee8fde57b57a2/records/track_10min_16mb/2026-03-22_10L_Int5MLP_GradClip_Warmdown3k/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/2010a3929ffa0e7cc407fdc0d53ee8fde57b57a2/records/track_10min_16mb/2026-03-22_10L_Int5MLP_GradClip_Warmdown3k/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/2010a3929ffa0e7cc407fdc0d53ee8fde57b57a2/records/track_10min_16mb/2026-03-22_10L_Int5MLP_GradClip_Warmdown3k/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/2010a3929ffa0e7cc407fdc0d53ee8fde57b57a2/records/track_10min_16mb/2026-03-22_10L_Int5MLP_GradClip_Warmdown3k",
+            "pr": "https://github.com/openai/parameter-golf/pull/426"
           }
         }
       ]

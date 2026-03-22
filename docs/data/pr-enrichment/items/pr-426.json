@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T14:09:48.726Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 426,
+    "title": "Record: 10L Int5-MLP + Mixed Quant + GradClip + Warmdown3k (mean val_bpb=1.20262)",
+    "state": "open",
+    "updatedAt": "2026-03-22T14:04:59Z",
+    "headSha": "2010a3929ffa0e7cc407fdc0d53ee8fde57b57a2",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/426",
+    "authorLogin": "aniketio-ctrl"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_10L_Int5MLP_GradClip_Warmdown3k/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Mixed Int5/Int6 quantization funds a 10-layer, 3× MLP expansion model with grad clipping and longer warmdown for training stability.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Mixed Int5/Int6 quantization to squeeze a 10th layer",
+      "3× MLP expansion with relu² and GQA attention",
+      "Extended warmdown iterations plus grad clipping"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

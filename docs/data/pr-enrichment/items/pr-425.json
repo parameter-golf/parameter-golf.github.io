@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-22T14:09:53.206Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 425,
+    "title": "Codex/runpod 2026 03 20 checkpoint",
+    "state": "open",
+    "updatedAt": "2026-03-22T13:51:16Z",
+    "headSha": "981cd8e39a0fe33cb304626ae685565775342ab0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/425",
+    "authorLogin": "DeividasMat"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_Runpod1GPU_Ablations/README.md",
+      "records/_template/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Single-H100 ablation splits eval lengths (2048 vs 1024) and tunes ATTN_TWICE alpha plus LoRA TTT settings to align roundtrip and TTT metrics in a 600s run.",
+    "tags": [
+      "attention",
+      "evaluation",
+      "regularization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "ATTN_TWICE alpha with split eval lengths for roundtrip vs TTT",
+      "LoRA TTT chunked eval using shorter eval seq and chunk size",
+      "Short 600s single-shard tuning run"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
