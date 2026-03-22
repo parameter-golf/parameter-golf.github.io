@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-22T22:43:02.970Z",
+  "generatedAt": "2026-03-22T23:13:27.710Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 471,
+      "title": "Add submission: 11L Frontier Stack + Value Residual + Gated Attention",
+      "status": "open",
+      "updatedAt": "2026-03-22T22:45:46Z",
+      "headSha": "698bab7f45515a5252e03f462012b0a2aeeab9a7",
+      "generatedAt": "2026-03-22T23:13:10.089Z",
+      "summary": "Frontier stack enriches an 11-layer architecture with cached layer-0 value residuals, per-head gated attention, and GPTQ-lite quant-aware tweaks.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "muon"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-471.json"
+    },
     {
       "prNumber": 470,
       "title": "Non-record: Shared-weight transformer with extended warmdown (1.1454 val_bpb)",
@@ -54,14 +78,14 @@
       "prNumber": 468,
       "title": "[track_10min_16mb] utkuaydiin 10L Muon — 15.46 MB",
       "status": "open",
-      "updatedAt": "2026-03-22T22:23:14Z",
-      "headSha": "1158c33e3c053b9d20c21bbde38f5ddfbf2b74e9",
-      "generatedAt": "2026-03-22T22:42:51.572Z",
-      "summary": "10-layer 448-dim Muon/AdamW hybrid uses BigramHash+SmearGate, SWA, pruning, and Int5/Int6 PTQ to hit ~15.5MB after zstd-22.",
+      "updatedAt": "2026-03-22T22:47:54Z",
+      "headSha": "4efe439325462000f51e675bfc2a8c412752e8ae",
+      "generatedAt": "2026-03-22T23:13:14.448Z",
+      "summary": "10-layer Muon model pairs BigramHash/SmearGate with Muon+AdamW+SWA and Int5/Int6 PTQ for a 15MB run on FineWeb data.",
       "tags": [
-        "architecture",
-        "optimizer",
+        "muon",
         "quantization",
+        "architecture",
         "training-schedule"
       ],
       "flags": {
@@ -1720,15 +1744,15 @@
       "prNumber": 376,
       "title": "Record: 11L Next-Gen Stack + Custom Kernels, val_bpb=1.1399",
       "status": "open",
-      "updatedAt": "2026-03-22T20:51:03Z",
-      "headSha": "c0b1fb91507bbfdd670a73c84b3172ef56784ca1",
-      "generatedAt": "2026-03-22T21:12:47.572Z",
-      "summary": "11-layer stack adds XSA, partial NTK-RoPE, SmearGate/BigramHash, tight SWA, and int5+zstd compression under the Muon optimizer.",
+      "updatedAt": "2026-03-22T23:05:03Z",
+      "headSha": "c9b6583b52e3590a7d0a570cdf5a1f952e1d6ffc",
+      "generatedAt": "2026-03-22T23:13:18.740Z",
+      "summary": "11-layer stack pairs XSA, NTK-aware RoPE, SmearGate+BigramHash features, int5+zstd compression, Muon+SWA schedule, and custom kernels for fast 10-min runs.",
       "tags": [
-        "architecture",
+        "sliding-window-eval",
         "quantization",
         "optimizer",
-        "training-schedule"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4483,16 +4507,16 @@
     },
     {
       "prNumber": 215,
-      "title": "Record: 11L Low-Rank Q192 (val_bpb=1.1548)",
+      "title": "Non-Record: 11L Low-Rank on Q192 (val_bpb=1.1548) 14.7MB in decimal",
       "status": "open",
-      "updatedAt": "2026-03-22T22:34:10Z",
+      "updatedAt": "2026-03-22T23:06:40Z",
       "headSha": "2dbf8aa64a0910aedcfa916d441f509139203920",
-      "generatedAt": "2026-03-22T22:43:02.940Z",
-      "summary": "Factoring each Q projection into rank-192 down/up matrices lets an 11-layer model fit 16MB while boosting int6 quantization and sliding-window eval.",
+      "generatedAt": "2026-03-22T23:13:23.028Z",
+      "summary": "Low-rank rank-192 Q factorization enables an 11-layer encoder-decoder under 16MB with int6-friendly weights and sliding-window evaluation.",
       "tags": [
-        "architecture",
         "quantization",
-        "compression"
+        "architecture",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -6174,15 +6198,15 @@
       "prNumber": 114,
       "title": "#1 on leaderboard: val_bpb=1.1574 — Int6 + MLP 3x + selective precision + optimized long-context training",
       "status": "open",
-      "updatedAt": "2026-03-20T08:26:03Z",
-      "headSha": "b8bcb79007187280240dfa9275c8d80ad98941f3",
-      "generatedAt": "2026-03-20T18:25:01.137Z",
-      "summary": "Selective fp16 passthrough atop int6 quantization frees budget for 3x MLP and 2048-token training, evaluated via stride-256 sliding windows.",
+      "updatedAt": "2026-03-22T22:43:21Z",
+      "headSha": "e19bb85d90504b6ec7d9a4ffa7fc54eb26fcf860",
+      "generatedAt": "2026-03-22T23:13:27.696Z",
+      "summary": "Int6 post-training quantization plus selective FP16 passthrough frees 15.98MB to triple the MLP, train@2048 with tuned clip/batch, and deploy stride-256 sliding eval.",
       "tags": [
         "quantization",
         "architecture",
-        "training-schedule",
-        "evaluation"
+        "sliding-window-eval",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

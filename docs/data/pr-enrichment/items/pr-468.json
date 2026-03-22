@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T22:42:51.572Z",
+  "generatedAt": "2026-03-22T23:13:14.448Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 468,
     "title": "[track_10min_16mb] utkuaydiin 10L Muon — 15.46 MB",
     "state": "open",
-    "updatedAt": "2026-03-22T22:23:14Z",
-    "headSha": "1158c33e3c053b9d20c21bbde38f5ddfbf2b74e9",
+    "updatedAt": "2026-03-22T22:47:54Z",
+    "headSha": "4efe439325462000f51e675bfc2a8c412752e8ae",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/468",
     "authorLogin": "utkuaydiin"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer 448-dim Muon/AdamW hybrid uses BigramHash+SmearGate, SWA, pruning, and Int5/Int6 PTQ to hit ~15.5MB after zstd-22.",
+    "summary": "10-layer Muon model pairs BigramHash/SmearGate with Muon+AdamW+SWA and Int5/Int6 PTQ for a 15MB run on FineWeb data.",
     "tags": [
-      "architecture",
-      "optimizer",
+      "muon",
       "quantization",
+      "architecture",
       "training-schedule"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Standard training on real FineWeb data, no validation-only scheme.",
+    "valOnlyReasoning": "Training used FineWeb data rather than an explicit validation-only regime.",
     "techniques": [
-      "Hybrid Muon+AdamW optimizer with SWA",
-      "BigramHash token mix with SmearGate gating",
-      "Global 5.5% prune before Int5/Int6 PTQ"
+      "Muon+AdamW optimizer mix with SWA",
+      "BigramHash(8192) + SmearGate in 10L/448d model",
+      "Mixed Int5/Int6 post-training quantization"
     ]
   },
   "compatibility": {

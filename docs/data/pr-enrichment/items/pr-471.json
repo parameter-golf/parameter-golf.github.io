@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T23:13:10.089Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 471,
+    "title": "Add submission: 11L Frontier Stack + Value Residual + Gated Attention",
+    "state": "open",
+    "updatedAt": "2026-03-22T22:45:46Z",
+    "headSha": "698bab7f45515a5252e03f462012b0a2aeeab9a7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/471",
+    "authorLogin": "yuvrajyadav17"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/submission/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Frontier stack enriches an 11-layer architecture with cached layer-0 value residuals, per-head gated attention, and GPTQ-lite quant-aware tweaks.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "muon"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11-layer Frontier stack with XSA and partial RoPE",
+      "Layer-0 value residual mixing across attention values",
+      "Per-head gated attention output plus GPTQ-lite post quant"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
