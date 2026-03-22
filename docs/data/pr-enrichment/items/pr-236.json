@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T07:30:00.577Z",
+  "generatedAt": "2026-03-22T01:36:20.270Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 236,
     "title": "4 the Leaderboard: 11L Int6 + SmearGate + Batch Optimization (val_bpb=1.1400)",
     "state": "open",
-    "updatedAt": "2026-03-21T07:10:46Z",
+    "updatedAt": "2026-03-22T01:10:06Z",
     "headSha": "2f9bda48b7dbeb0c5a0abe8278589088a7bc7c22",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/236",
     "authorLogin": "saml212"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer int6-quantized GPT with SmearGate + BigramHash, batched sliding eval, and smaller 524K-token batches to raise step count in 600s training.",
+    "summary": "11L int6 model with SmearGate+BigramHash widens the MLP, shrinks batch size for more steps in 600s, and pairs SWA with AdamW+Muon WD.",
     "tags": [
       "quantization",
       "architecture",
-      "training-schedule",
+      "optimizer",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 per-row quantization for attention/MLP and Int8 tied embeddings",
-      "SmearGate plus BigramHash in the 11-layer, 26.5M-parameter stack",
-      "Reduced 524K-token batch to maximize gradient steps within 600s"
+      "Per-row int6 for attention/MLP with int8 token embeddings",
+      "SmearGate+BigramHash features, SWA, and dual AdamW+Muon weight decay",
+      "Batched sliding-window eval (stride 64) for fast verification"
     ]
   },
   "compatibility": {

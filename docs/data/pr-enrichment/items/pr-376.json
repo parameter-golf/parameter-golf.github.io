@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T01:05:46.043Z",
+  "generatedAt": "2026-03-22T01:36:08.334Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 376,
     "title": "Record: 9L MLP3x Full Stack + Custom Kernel Pipeline, val_bpb=1.1401",
     "state": "open",
-    "updatedAt": "2026-03-22T00:41:29Z",
-    "headSha": "c262d1fd596e75d9576bc0d16b76ed53394ec8e6",
+    "updatedAt": "2026-03-22T01:27:56Z",
+    "headSha": "6596aed95fcd8414088fe2f3d5e2416581a3c726",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/376",
     "authorLogin": "anthony-maio"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "9-layer GQA transformer using SmearGate+BigramHash, Muon+SWA, NTK-RoPE, int6+zstd, and a custom Triton/CUDA kernel pipeline for fused ops.",
+    "summary": "9-layer 512-d GQA transformer pairs SmearGate+BigramHash token blending, int6 quantization, and Muon+SWA training with a custom Triton kernel pipeline for fused ops.",
     "tags": [
       "architecture",
       "optimizer",
       "quantization",
-      "compression"
+      "attention"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Muon optimizer with SWA warmdown plus NTK-RoPE and muP scaling",
-      "SmearGate-driven blending with BigramHash features and int6+zstd-22 compression",
-      "Custom Triton/CUDA pipeline fusing RMSNorm/QKV, ReLU² MLP, and loss ops"
+      "SmearGate+BigramHash token blending",
+      "Muon optimizer with SWA warmdown",
+      "Custom Triton kernels fusing RMSNorm/QKV/MLP"
     ]
   },
   "compatibility": {

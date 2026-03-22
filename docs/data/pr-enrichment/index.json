@@ -1,8 +1,78 @@
 {
-  "generatedAt": "2026-03-22T01:06:06.149Z",
+  "generatedAt": "2026-03-22T01:36:20.301Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 385,
+      "title": "Non-record: 11L Int6 QAT + SmearGate + SWA(0.4) + WD=0.04 (3-seed mean val_bpb=1.1488)",
+      "status": "open",
+      "updatedAt": "2026-03-22T01:34:45Z",
+      "headSha": "ded1a6d433bf98102774a4a935fb9d1a7f86870f",
+      "generatedAt": "2026-03-22T01:35:55.084Z",
+      "summary": "Int6 per-row QAT with SmearGate on an 11-layer Muon run, boosted by SWA averaging from 40% training and WD=0.04 before sliding-window eval.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-385.json"
+    },
+    {
+      "prNumber": 384,
+      "title": "Non-record: Meta-TTT + Cache/OGD Eval Stacking + Tokenizer Ablation",
+      "status": "open",
+      "updatedAt": "2026-03-22T01:26:16Z",
+      "headSha": "d79839b000b5c5c85bae6a38386c149dc31f68d5",
+      "generatedAt": "2026-03-22T01:36:00.724Z",
+      "summary": "Meta-TTT ablation plus eval-time cache+OGD stacking and tokenizer tweaks to probe adaptation strategies.",
+      "tags": [
+        "evaluation",
+        "tokenization",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-384.json"
+    },
+    {
+      "prNumber": 383,
+      "title": "Record: 11L Full Stack + XSA4 + Tight SWA + Late QAT (val_bpb=1.1320)",
+      "status": "open",
+      "updatedAt": "2026-03-22T01:07:59Z",
+      "headSha": "f8285185dc201abbdc561caf2776d3ff3865b8d8",
+      "generatedAt": "2026-03-22T01:36:04.581Z",
+      "summary": "11-layer GPT with U-Net skips uses XSA4, partial RoPE, shared value embeddings, tight SWA, and late QAT before int6 quantization.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-383.json"
+    },
     {
       "prNumber": 381,
       "title": "Non-record: 10L FP16-Embed + Warmdown20k",
@@ -101,15 +171,15 @@
       "prNumber": 376,
       "title": "Record: 9L MLP3x Full Stack + Custom Kernel Pipeline, val_bpb=1.1401",
       "status": "open",
-      "updatedAt": "2026-03-22T00:41:29Z",
-      "headSha": "c262d1fd596e75d9576bc0d16b76ed53394ec8e6",
-      "generatedAt": "2026-03-22T01:05:46.043Z",
-      "summary": "9-layer GQA transformer using SmearGate+BigramHash, Muon+SWA, NTK-RoPE, int6+zstd, and a custom Triton/CUDA kernel pipeline for fused ops.",
+      "updatedAt": "2026-03-22T01:27:56Z",
+      "headSha": "6596aed95fcd8414088fe2f3d5e2416581a3c726",
+      "generatedAt": "2026-03-22T01:36:08.334Z",
+      "summary": "9-layer 512-d GQA transformer pairs SmearGate+BigramHash token blending, int6 quantization, and Muon+SWA training with a custom Triton kernel pipeline for fused ops.",
       "tags": [
         "architecture",
         "optimizer",
         "quantization",
-        "compression"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1180,14 +1250,14 @@
       "prNumber": 317,
       "title": "Record: 11L XSA4 + EMA + TTT + Int6 MLP3x (val_bpb=1.1442)",
       "status": "open",
-      "updatedAt": "2026-03-21T07:52:14Z",
+      "updatedAt": "2026-03-22T01:08:35Z",
       "headSha": "40ffdcfba9e65efabb9d4bb0f566b00a58ea9d51",
-      "generatedAt": "2026-03-21T07:59:23.844Z",
-      "summary": "Combines the 11L SmearGate/BigramHash/EMA int6 stack with a dequantized full-model SGD test-time tuning pass before scoring.",
+      "generatedAt": "2026-03-22T01:36:13.159Z",
+      "summary": "Adds eval-time SGD TTT on the dequantized checkpoint to the 11L SmearGate/BigramHash/XSA4/EMA/int6 stack before scoring.",
       "tags": [
-        "attention",
         "architecture",
         "quantization",
+        "optimizer",
         "evaluation"
       ],
       "flags": {
@@ -2604,14 +2674,14 @@
       "prNumber": 236,
       "title": "4 the Leaderboard: 11L Int6 + SmearGate + Batch Optimization (val_bpb=1.1400)",
       "status": "open",
-      "updatedAt": "2026-03-21T07:10:46Z",
+      "updatedAt": "2026-03-22T01:10:06Z",
       "headSha": "2f9bda48b7dbeb0c5a0abe8278589088a7bc7c22",
-      "generatedAt": "2026-03-21T07:30:00.577Z",
-      "summary": "11-layer int6-quantized GPT with SmearGate + BigramHash, batched sliding eval, and smaller 524K-token batches to raise step count in 600s training.",
+      "generatedAt": "2026-03-22T01:36:20.270Z",
+      "summary": "11L int6 model with SmearGate+BigramHash widens the MLP, shrinks batch size for more steps in 600s, and pairs SWA with AdamW+Muon WD.",
       "tags": [
         "quantization",
         "architecture",
-        "training-schedule",
+        "optimizer",
         "evaluation"
       ],
       "flags": {

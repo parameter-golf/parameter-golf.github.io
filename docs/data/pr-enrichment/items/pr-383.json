@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-22T01:36:04.581Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 383,
+    "title": "Record: 11L Full Stack + XSA4 + Tight SWA + Late QAT (val_bpb=1.1320)",
+    "state": "open",
+    "updatedAt": "2026-03-22T01:07:59Z",
+    "headSha": "f8285185dc201abbdc561caf2776d3ff3865b8d8",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/383",
+    "authorLogin": "joelnishanth"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_XSA_QAT_FullStack/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer GPT with U-Net skips uses XSA4, partial RoPE, shared value embeddings, tight SWA, and late QAT before int6 quantization.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Partial RoPE with depth-aware LN scaling",
+      "XSA4 late-layer attention over U-Net skips",
+      "Late STE int6 QAT after tight SWA"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T01:36:00.724Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 384,
+    "title": "Non-record: Meta-TTT + Cache/OGD Eval Stacking + Tokenizer Ablation",
+    "state": "open",
+    "updatedAt": "2026-03-22T01:26:16Z",
+    "headSha": "d79839b000b5c5c85bae6a38386c149dc31f68d5",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/384",
+    "authorLogin": "anantdgoel"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_MetaTTT_CacheOGD_TokenizerAblation_anantdgoel/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Meta-TTT ablation plus eval-time cache+OGD stacking and tokenizer tweaks to probe adaptation strategies.",
+    "tags": [
+      "evaluation",
+      "tokenization",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "First-order MAML-style Meta-TTT ablation",
+      "Logit-space unigram cache plus OGD stacking",
+      "Tokenizer BPE parameter ablation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

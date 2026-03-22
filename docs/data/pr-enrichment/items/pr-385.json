@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-22T01:35:55.084Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 385,
+    "title": "Non-record: 11L Int6 QAT + SmearGate + SWA(0.4) + WD=0.04 (3-seed mean val_bpb=1.1488)",
+    "state": "open",
+    "updatedAt": "2026-03-22T01:34:45Z",
+    "headSha": "ded1a6d433bf98102774a4a935fb9d1a7f86870f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/385",
+    "authorLogin": "dentity007"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_11L_SmearGate_SWA04_WD04/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Int6 per-row QAT with SmearGate on an 11-layer Muon run, boosted by SWA averaging from 40% training and WD=0.04 before sliding-window eval.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- Int6 per-row QAT with SmearGate and Muon optimizer",
+      "- SWA averaging from 40% training with WD=0.04",
+      "- Sliding-window stride=64 evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
