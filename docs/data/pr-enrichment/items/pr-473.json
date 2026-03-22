@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-22T23:43:14.813Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 473,
+    "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1213",
+    "state": "open",
+    "updatedAt": "2026-03-22T23:30:44Z",
+    "headSha": "40de2786fdf2c65d54b8eb306e7581546e73f0ce",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/473",
+    "authorLogin": "abaybektursun"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_LegalTTT_ParallelMuon_1.1213/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Applies legal score-first TTT plus Parameter Banking and Parallel Muon on the quantized GPTQ-lite/VE128 stack to improve validation bpb.",
+    "tags": [
+      "val-only",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT trains on validation chunks after scoring them under inference mode to keep the protocol legal.",
+    "techniques": [
+      "Legal score-first TTT scoring before updates",
+      "Parameter Banking + Parallel Muon for banked weights",
+      "Quantized GPTQ-lite stack with VE128, Tight SWA, Partial RoPE"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

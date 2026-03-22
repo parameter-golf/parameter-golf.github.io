@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T01:36:20.270Z",
+  "generatedAt": "2026-03-22T23:43:19.411Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 236,
     "title": "4 the Leaderboard: 11L Int6 + SmearGate + Batch Optimization (val_bpb=1.1400)",
     "state": "open",
-    "updatedAt": "2026-03-22T01:10:06Z",
-    "headSha": "2f9bda48b7dbeb0c5a0abe8278589088a7bc7c22",
+    "updatedAt": "2026-03-22T23:42:31Z",
+    "headSha": "e0e524a41d75d8e6fd617a55f04a3f67b12195cc",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/236",
     "authorLogin": "saml212"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11L int6 model with SmearGate+BigramHash widens the MLP, shrinks batch size for more steps in 600s, and pairs SWA with AdamW+Muon WD.",
+    "summary": "11-layer int6 model pairs SmearGate + BigramHash with a smaller batch for more steps and batched stride-64 sliding eval within the 10-minute budget.",
     "tags": [
       "quantization",
       "architecture",
-      "optimizer",
+      "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-row int6 for attention/MLP with int8 token embeddings",
-      "SmearGate+BigramHash features, SWA, and dual AdamW+Muon weight decay",
-      "Batched sliding-window eval (stride 64) for fast verification"
+      "batch size reduction for more optimization steps",
+      "int6 per-row quantization plus int8 embeddings",
+      "batched sliding-window eval (stride=64)"
     ]
   },
   "compatibility": {
