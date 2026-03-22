@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T06:50:31.262Z",
+  "generatedAt": "2026-03-22T07:07:00.506Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -1304,8 +1304,8 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-22T05:15:58Z",
-        "updatedAt": "2026-03-22T06:48:48Z",
-        "headSha": "a31c39dc80c585e3f7bc12feba5bf44550c11cef",
+        "updatedAt": "2026-03-22T06:55:27Z",
+        "headSha": "170c6b771f7ae6e729d109170876ec2f90c0192d",
         "headRepo": "newjordan/parameter-golf"
       },
       "links": {
@@ -15030,6 +15030,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-03-22_ValueResidual_GatedAttention_anantdgoel",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-22_ValueResidual_GatedAttention_anantdgoel",
+        "folderPath": "records/track_non_record_16mb/2026-03-22_ValueResidual_GatedAttention_anantdgoel",
+        "submissionPath": "records/track_non_record_16mb/2026-03-22_ValueResidual_GatedAttention_anantdgoel/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-22_ValueResidual_GatedAttention_anantdgoel/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-22_ValueResidual_GatedAttention_anantdgoel/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-22_ValueResidual_GatedAttention_anantdgoel/train_gpt.py"
+      },
+      "submission": {
+        "author": "Anant Goel",
+        "githubId": "anantdgoel",
+        "name": "Value Residual + Gated Attention ablation",
+        "blurb": "Two novel architecture modifications: Value Residual (-0.015 BPB) caches layer-0 V vectors as skip connections, Gated Attention (-0.003 BPB) adds per-head sigmoid gates. They stack additively for -0.017 BPB. PPM-C context mixing is a negative result (+0.002 BPB) on SmearGate+BigramHash models.",
+        "date": "2026-03-22"
+      },
+      "metrics": {
+        "valBpb": 1.4525,
+        "valLoss": null,
+        "preQuantValBpb": 1.4525,
+        "preQuantValLoss": null,
+        "stepStop": 1000,
+        "wallclockSeconds": 5506,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 413,
+        "title": "Non-record: Value Residual (-0.015 BPB) + Gated Attention (-0.003 BPB) with ablations",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/413",
+        "authorLogin": "anantdgoel",
+        "authorName": null,
+        "createdAt": "2026-03-22T07:06:50Z",
+        "updatedAt": "2026-03-22T07:06:50Z",
+        "headSha": "c0a2939233e4fd8dc56c924f33a41e390d0fee2e",
+        "headRepo": "anantdgoel/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c0a2939233e4fd8dc56c924f33a41e390d0fee2e/records/track_non_record_16mb/2026-03-22_ValueResidual_GatedAttention_anantdgoel/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c0a2939233e4fd8dc56c924f33a41e390d0fee2e/records/track_non_record_16mb/2026-03-22_ValueResidual_GatedAttention_anantdgoel/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c0a2939233e4fd8dc56c924f33a41e390d0fee2e/records/track_non_record_16mb/2026-03-22_ValueResidual_GatedAttention_anantdgoel/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c0a2939233e4fd8dc56c924f33a41e390d0fee2e/records/track_non_record_16mb/2026-03-22_ValueResidual_GatedAttention_anantdgoel/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c0a2939233e4fd8dc56c924f33a41e390d0fee2e/records/track_non_record_16mb/2026-03-22_ValueResidual_GatedAttention_anantdgoel",
+        "pr": "https://github.com/openai/parameter-golf/pull/413",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-22_BatchOpt_MLP4_RoPE100k",
       "source": "pull_request",
       "status": "open",
@@ -16165,16 +16242,16 @@
         "authorLogin": "trasnake87",
         "authorName": null,
         "createdAt": "2026-03-20T23:38:53Z",
-        "updatedAt": "2026-03-22T06:37:02Z",
-        "headSha": "e96ac367498ad4224ffe7e09f1f2556c0685782a",
+        "updatedAt": "2026-03-22T07:03:15Z",
+        "headSha": "8914506c1485456cabd5cb7227c07b85f751a0cf",
         "headRepo": "trasnake87/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e96ac367498ad4224ffe7e09f1f2556c0685782a/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/e96ac367498ad4224ffe7e09f1f2556c0685782a/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/e96ac367498ad4224ffe7e09f1f2556c0685782a/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/e96ac367498ad4224ffe7e09f1f2556c0685782a/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/e96ac367498ad4224ffe7e09f1f2556c0685782a/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8914506c1485456cabd5cb7227c07b85f751a0cf/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8914506c1485456cabd5cb7227c07b85f751a0cf/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8914506c1485456cabd5cb7227c07b85f751a0cf/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8914506c1485456cabd5cb7227c07b85f751a0cf/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8914506c1485456cabd5cb7227c07b85f751a0cf/records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070",
         "pr": "https://github.com/openai/parameter-golf/pull/288",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

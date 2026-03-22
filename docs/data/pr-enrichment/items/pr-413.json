@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-22T07:07:04.570Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 413,
+    "title": "Non-record: Value Residual (-0.015 BPB) + Gated Attention (-0.003 BPB) with ablations",
+    "state": "open",
+    "updatedAt": "2026-03-22T07:06:50Z",
+    "headSha": "c0a2939233e4fd8dc56c924f33a41e390d0fee2e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/413",
+    "authorLogin": "anantdgoel"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_ValueResidual_GatedAttention_anantdgoel/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Caches layer-0 value vectors as learnable residual skip connections and adds sigmoid gates to each attention head output for more stable signal propagation.",
+    "tags": [
+      "architecture",
+      "attention",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Layer-0 V residual mixing across all layers",
+      "Per-head sigmoid gating after SDPA"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

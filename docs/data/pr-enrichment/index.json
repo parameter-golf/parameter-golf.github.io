@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-22T06:50:52.840Z",
+  "generatedAt": "2026-03-22T07:07:18.291Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 413,
+      "title": "Non-record: Value Residual (-0.015 BPB) + Gated Attention (-0.003 BPB) with ablations",
+      "status": "open",
+      "updatedAt": "2026-03-22T07:06:50Z",
+      "headSha": "c0a2939233e4fd8dc56c924f33a41e390d0fee2e",
+      "generatedAt": "2026-03-22T07:07:04.570Z",
+      "summary": "Caches layer-0 value vectors as learnable residual skip connections and adds sigmoid gates to each attention head output for more stable signal propagation.",
+      "tags": [
+        "architecture",
+        "attention",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-413.json"
+    },
     {
       "prNumber": 410,
       "title": "Record: 11L XSA4 + Tight SWA + Two-Phase TTT (val_bpb=1.1258)",
@@ -170,14 +193,14 @@
       "prNumber": 401,
       "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
       "status": "open",
-      "updatedAt": "2026-03-22T06:48:48Z",
-      "headSha": "a31c39dc80c585e3f7bc12feba5bf44550c11cef",
-      "generatedAt": "2026-03-22T06:50:49.242Z",
-      "summary": "Stack EMA + tight SWA, extend warmdown, and start earlier int6 QAT on an 11-layer 512-dim GQA model with partial RoPE and shared VE.",
+      "updatedAt": "2026-03-22T06:55:27Z",
+      "headSha": "170c6b771f7ae6e729d109170876ec2f90c0192d",
+      "generatedAt": "2026-03-22T07:07:13.450Z",
+      "summary": "Stacks EMA averaging before Tight SWA plus earlier late QAT while using partial RoPE/VE skip U-Net layout for the 11-layer int6-friendly transformer.",
       "tags": [
+        "architecture",
         "quantization",
-        "training-schedule",
-        "architecture"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2207,10 +2230,10 @@
       "prNumber": 288,
       "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
       "status": "open",
-      "updatedAt": "2026-03-22T06:37:02Z",
-      "headSha": "e96ac367498ad4224ffe7e09f1f2556c0685782a",
-      "generatedAt": "2026-03-22T06:50:52.798Z",
-      "summary": "Content-dependent SmearGate modulates the blend ratio based on adjacent-token similarity so similar embeddings mix more while dissimilar ones stay apart.",
+      "updatedAt": "2026-03-22T07:03:15Z",
+      "headSha": "8914506c1485456cabd5cb7227c07b85f751a0cf",
+      "generatedAt": "2026-03-22T07:07:18.250Z",
+      "summary": "Content-dependent SmearGate gates token blending by scaling a sigmoid of adjacent-token dot products so similar tokens mix more during embedding fusion.",
       "tags": [
         "architecture",
         "non-record"
