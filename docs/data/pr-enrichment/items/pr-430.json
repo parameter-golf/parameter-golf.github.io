@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-22T15:40:33.034Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 430,
+    "title": "TrigramHash + XSA + TTT on thwu1 SOTA stack - val_bpb pending H100",
+    "state": "open",
+    "updatedAt": "2026-03-22T15:12:58Z",
+    "headSha": "6b40382ee7f73fce400b039bb0c220e8d763b6da",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/430",
+    "authorLogin": "sahiee-dev"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_TrigramHash_sahiee-dev/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines trigram hashed embeddings, final-layer exclusive self-attention, and validation-only test-time SGD on frozen layers to boost the thwu1 stack.",
+    "tags": [
+      "architecture",
+      "attention",
+      "val-only"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT runs SGD on validation tokens before evaluation, finetuning the model on the val shard with bottom layers frozen.",
+    "techniques": [
+      "TrigramHash embeddings supplemented alongside BigramHash",
+      "Exclusive Self-Attention in the last four layers",
+      "Test-time training via SGD on validation tokens with frozen lower layers"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

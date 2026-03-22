@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T15:40:27.773Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 431,
+    "title": "Add non-record 1xH100 auto precision budget experiment",
+    "state": "open",
+    "updatedAt": "2026-03-22T15:30:33Z",
+    "headSha": "6de701e4ee5ae190f3925cef9723c45b0f6b39c9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/431",
+    "authorLogin": "spatnala18"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_AutoPrecisionBudget_10L_1xH100/README.md",
+      "records/track_10min_16mb/2026-03-19_WIP_PLACEHOLDER/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Auto precision budget run greedily promotes quantization-sensitive tensors using calibration feedback to stay under the 16MB artifact cap.",
+    "tags": [
+      "quantization",
+      "non-record",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- calibration-driven precision allocator",
+      "- greedy per-byte tensor promotion",
+      "- rank-0-only calibration path for scalability"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

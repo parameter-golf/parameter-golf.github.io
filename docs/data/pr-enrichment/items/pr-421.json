@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T13:40:08.560Z",
+  "generatedAt": "2026-03-22T15:40:38.960Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 421,
     "title": "Non-record: 11L mixed int5/int6 + working QAT + TTT (val_bpb=1.1466)",
     "state": "open",
-    "updatedAt": "2026-03-22T13:21:15Z",
-    "headSha": "c4d2bef540c7efba779e9130ee3640dfc26f9011",
+    "updatedAt": "2026-03-22T15:19:10Z",
+    "headSha": "75168efc0eed6e97de0dc6dba361d8d06766748a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/421",
     "authorLogin": "vytautas-bunevicius"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Fixes QAT compilation, uses mixed int5/int6 quant with pruning, then adds test-time training plus memory tokens, BigramHash, per-head temps, and a backout.",
+    "summary": "Fixes per-instance QAT then layers mixed int5/int6 quant plus pruning with TTT, large BigramHash, memory tokens, and stride-32 eval on the 11L base.",
     "tags": [
       "quantization",
       "evaluation",
-      "architecture"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Working QAT + mixed int5/int6 quant with magnitude pruning",
-      "Post-quant test-time training on validation tokens",
-      "BigramHash 10240 with memory tokens, backout connection, and per-head temperatures"
+      "Per-instance QAT workflow with mixed int5/6 quant and pruning",
+      "Test-time training with causal-safe scoring path",
+      "BigramHash10240 plus memory tokens/backout/temperature tweaks"
     ]
   },
   "compatibility": {

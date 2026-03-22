@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T10:08:34.973Z",
+  "generatedAt": "2026-03-22T15:40:57.146Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 376,
     "title": "Record: 11L Next-Gen Stack + Custom Kernels, val_bpb=1.1399",
     "state": "open",
-    "updatedAt": "2026-03-22T09:34:30Z",
-    "headSha": "e0cdc67f25483fda5479a0f5c1a6af17a47add3a",
+    "updatedAt": "2026-03-22T15:34:52Z",
+    "headSha": "f7889125c716c7fb4190791a2ab07c2fe7d01a2b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/376",
     "authorLogin": "anthony-maio"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11L GQA transformer using NTK-RoPE, SmearGate+BigramHash, int5+zstd compression, and Muon optimizer with SWA on sliding-window eval.",
+    "summary": "11-layer 512d transformer stacks XSA+GQA, NTK-RoPE, SmearGate/BigramHash, int5+zstd compression, Muon+SWA, and custom Triton kernels.",
     "tags": [
       "architecture",
       "attention",
       "quantization",
-      "compression"
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "GQA + NTK-aware RoPE",
-      "SmearGate/BigramHash inputs with int5+zstd compression",
-      "Muon optimizer with tight SWA on sliding-window eval"
+      "GQA+XSA transformer with NTK-RoPE adaptation",
+      "Muon optimizer with tight SWA warmdown",
+      "int5 quant + zstd compression powered by fused Triton kernels"
     ]
   },
   "compatibility": {

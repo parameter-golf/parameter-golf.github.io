@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-03-22T15:10:09.447Z",
+  "generatedAt": "2026-03-22T15:40:57.202Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 431,
+      "title": "Add non-record 1xH100 auto precision budget experiment",
+      "status": "open",
+      "updatedAt": "2026-03-22T15:30:33Z",
+      "headSha": "6de701e4ee5ae190f3925cef9723c45b0f6b39c9",
+      "generatedAt": "2026-03-22T15:40:27.773Z",
+      "summary": "Auto precision budget run greedily promotes quantization-sensitive tensors using calibration feedback to stay under the 16MB artifact cap.",
+      "tags": [
+        "quantization",
+        "non-record",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-431.json"
+    },
+    {
+      "prNumber": 430,
+      "title": "TrigramHash + XSA + TTT on thwu1 SOTA stack - val_bpb pending H100",
+      "status": "open",
+      "updatedAt": "2026-03-22T15:12:58Z",
+      "headSha": "6b40382ee7f73fce400b039bb0c220e8d763b6da",
+      "generatedAt": "2026-03-22T15:40:33.034Z",
+      "summary": "Combines trigram hashed embeddings, final-layer exclusive self-attention, and validation-only test-time SGD on frozen layers to boost the thwu1 stack.",
+      "tags": [
+        "architecture",
+        "attention",
+        "val-only"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-430.json"
+    },
     {
       "prNumber": 429,
       "title": "Non-record: 11L EMA + GPTQ-lite + warmdown3500 + QAT@0.15 control (val_bpb=1.1231, 8xH100 verified)",
@@ -149,14 +195,14 @@
       "prNumber": 421,
       "title": "Non-record: 11L mixed int5/int6 + working QAT + TTT (val_bpb=1.1466)",
       "status": "open",
-      "updatedAt": "2026-03-22T13:21:15Z",
-      "headSha": "c4d2bef540c7efba779e9130ee3640dfc26f9011",
-      "generatedAt": "2026-03-22T13:40:08.560Z",
-      "summary": "Fixes QAT compilation, uses mixed int5/int6 quant with pruning, then adds test-time training plus memory tokens, BigramHash, per-head temps, and a backout.",
+      "updatedAt": "2026-03-22T15:19:10Z",
+      "headSha": "75168efc0eed6e97de0dc6dba361d8d06766748a",
+      "generatedAt": "2026-03-22T15:40:38.960Z",
+      "summary": "Fixes per-instance QAT then layers mixed int5/int6 quant plus pruning with TTT, large BigramHash, memory tokens, and stride-32 eval on the 11L base.",
       "tags": [
         "quantization",
         "evaluation",
-        "architecture"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -474,12 +520,12 @@
     },
     {
       "prNumber": 399,
-      "title": "Record: Parallel Muon + Parameter Banking — 82.08ms/step (3.2% faster than PR #315)",
+      "title": "Record: Parallel Muon + Parameter Banking + Polar Express — 82.14ms/step (3.1% faster than PR #315)",
       "status": "open",
-      "updatedAt": "2026-03-22T14:20:43Z",
-      "headSha": "f7d7d566abadc57c4d0fc4f2faf31bf0feef470e",
-      "generatedAt": "2026-03-22T14:40:07.988Z",
-      "summary": "Optimizer rework banks projections into four large tensors and uses Parallel Muon async reduce-scatter/all-gather to overlap updates without DDP.",
+      "updatedAt": "2026-03-22T15:24:48Z",
+      "headSha": "4db00576f082f77a8e36104e354952d8702c7a8e",
+      "generatedAt": "2026-03-22T15:40:43.894Z",
+      "summary": "Optimizer overhaul swaps per-layer weights for contiguous banks, uses Polar Express orthogonalization, and coordinates Parallel Muon comm+PE overlap.",
       "tags": [
         "optimizer",
         "architecture"
@@ -850,14 +896,14 @@
       "prNumber": 377,
       "title": "Hybrid INL + Sort-Split MoE (1.41/1.46 bpb TTT, 15.5MB, 1xH100)",
       "status": "open",
-      "updatedAt": "2026-03-22T00:33:00Z",
-      "headSha": "6b0ad1b34f399a12a4bd36d0b9a359fcf90174a7",
-      "generatedAt": "2026-03-22T00:35:54.449Z",
-      "summary": "Hybrid GQA and INL layers feed sort-and-split MoE routing with ALiBi slopes to trade off representation building for faster, compact inference under 16MB.",
+      "updatedAt": "2026-03-22T15:33:16Z",
+      "headSha": "0cafe6ffa689021799d3edae7cf40afe3d91708c",
+      "generatedAt": "2026-03-22T15:40:51.680Z",
+      "summary": "Hybrid GQA+INL BetaMu layers with Sort-and-Split MoE routing and ALiBi slopes pairs representation building with fast error-driven inference.",
       "tags": [
-        "attention",
         "architecture",
-        "quantization"
+        "attention",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -873,15 +919,15 @@
       "prNumber": 376,
       "title": "Record: 11L Next-Gen Stack + Custom Kernels, val_bpb=1.1399",
       "status": "open",
-      "updatedAt": "2026-03-22T09:34:30Z",
-      "headSha": "e0cdc67f25483fda5479a0f5c1a6af17a47add3a",
-      "generatedAt": "2026-03-22T10:08:34.973Z",
-      "summary": "11L GQA transformer using NTK-RoPE, SmearGate+BigramHash, int5+zstd compression, and Muon optimizer with SWA on sliding-window eval.",
+      "updatedAt": "2026-03-22T15:34:52Z",
+      "headSha": "f7889125c716c7fb4190791a2ab07c2fe7d01a2b",
+      "generatedAt": "2026-03-22T15:40:57.146Z",
+      "summary": "11-layer 512d transformer stacks XSA+GQA, NTK-RoPE, SmearGate/BigramHash, int5+zstd compression, Muon+SWA, and custom Triton kernels.",
       "tags": [
         "architecture",
         "attention",
         "quantization",
-        "compression"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
