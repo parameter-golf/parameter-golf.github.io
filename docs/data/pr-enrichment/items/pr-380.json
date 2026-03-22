@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T00:35:45.176Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 380,
+    "title": "WIP: Triton-based quantization systems (non-record)",
+    "state": "open",
+    "updatedAt": "2026-03-22T00:24:09Z",
+    "headSha": "dcb3285c47b09b58f2d9fed1ab3124b2f2a44299",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/380",
+    "authorLogin": "turbo-indubitable"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_TritonQuantSystems/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Custom Triton kernels execute mixed-bitwidth quantized matmuls and fused chains to pack more parameters under the 16MB non-record limit.",
+    "tags": [
+      "quantization",
+      "mixed-precision",
+      "muon",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Triton fused quantized matmuls",
+      "per-layer mixed-bitwidth packing",
+      "Muon/SWA with sliding-window eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

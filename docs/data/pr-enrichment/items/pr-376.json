@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T23:35:40.628Z",
+  "generatedAt": "2026-03-22T00:35:59.914Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 376,
     "title": "Record: 9L MLP3x Full Stack + Custom Kernel Pipeline, val_bpb=1.1401",
     "state": "open",
-    "updatedAt": "2026-03-21T23:26:42Z",
-    "headSha": "2aa218d3594e32c75e092caece40c414bafa1f1a",
+    "updatedAt": "2026-03-22T00:18:01Z",
+    "headSha": "b2f81b0f8e75d9efe775cd42ff48f6d99cef81d7",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/376",
     "authorLogin": "anthony-maio"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "9-layer GQA transformer with MLP3x, NTK-RoPE, SmearGate+BigramHash, Muon+SWA tuning, and custom kernel pipeline for fused ops plus int6+zstd compression.",
+    "summary": "9-layer 512d transformer stacks GQA, NTK-RoPE, SmearGate/BigramHash, MLP 3x, muon+SWA, int6+zstd compression, and custom kernels for efficient sliding-window eval.",
     "tags": [
       "architecture",
       "optimizer",
       "compression",
-      "quantization"
+      "attention"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SmearGate and BigramHash hybrid embedding",
-      "Muon optimizer with SWA warmdown",
-      "Custom fused kernels with int6+zstd eval compression"
+      "GQA + NTK-RoPE with SmearGate/BigramHash token features",
+      "Muon optimizer warmup schedule with SWA warmdown averaging",
+      "Int6 + zstd-22 compression alongside Triton/CUDA kernel fusion"
     ]
   },
   "compatibility": {

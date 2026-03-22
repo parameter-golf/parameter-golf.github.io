@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T00:05:34.254Z",
+  "generatedAt": "2026-03-22T00:35:54.449Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 377,
     "title": "Hybrid INL + Sort-Split MoE (1.41/1.46 bpb TTT, 15.5MB, 1xH100)",
     "state": "open",
-    "updatedAt": "2026-03-21T23:54:39Z",
-    "headSha": "6142664bc90834a19c24435fd64aa21ae52e4a34",
+    "updatedAt": "2026-03-22T00:33:00Z",
+    "headSha": "6b0ad1b34f399a12a4bd36d0b9a359fcf90174a7",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/377",
     "authorLogin": "Complexity-ML"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Mixes early GQA+RoPE layers with later INL BetaMu attention and Sort-Split MoE routing plus ALiBi slopes for a compact, fast hybrid stack.",
+    "summary": "Hybrid GQA and INL layers feed sort-and-split MoE routing with ALiBi slopes to trade off representation building for faster, compact inference under 16MB.",
     "tags": [
-      "architecture",
       "attention",
-      "compression"
+      "architecture",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hybrid GQA+INL layers with BetaMu cumsum attention",
-      "Sort-and-split MoE routing with balanced experts",
-      "ALiBi slopes per head in INL layers"
+      "Hybrid GQA + BetaMu INL blocks for mixing built-in attention with O(n) dynamics",
+      "Sort-and-split MoE routing keeps experts fully active in fullgraph-friendly fashion",
+      "ALiBi slopes plus int8+zlib compression squeeze the model size"
     ]
   },
   "compatibility": {

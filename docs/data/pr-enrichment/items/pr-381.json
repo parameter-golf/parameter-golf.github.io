@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-22T00:35:41.685Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 381,
+    "title": "Non-record: 10L FP16-Embed + Warmdown20k",
+    "state": "open",
+    "updatedAt": "2026-03-22T00:22:50Z",
+    "headSha": "4a5a3674ba4db9d098c593827d46ebca8d68ba19",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/381",
+    "authorLogin": "codestrongestx"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_10L_FP16Embed_Warmdown20k_8xH100_seed42/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Extends the 10-layer FP16-embed sliding-window baseline by stretching the warmdown phase to 20k iterations while leaving other settings intact.",
+    "tags": [
+      "architecture",
+      "mixed-precision",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "10-layer FP16-embed sliding-window stack",
+      "Extended WARMDOWN_ITERS to 20k"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
