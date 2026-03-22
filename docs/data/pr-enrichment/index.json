@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-22T16:11:35.000Z",
+  "generatedAt": "2026-03-22T16:41:04.488Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 435,
+      "title": "Radial bitnet submission",
+      "status": "open",
+      "updatedAt": "2026-03-22T16:31:21Z",
+      "headSha": "277c34c0853d0e6786b61cfd8a22b9128535ca2f",
+      "generatedAt": "2026-03-22T16:40:50.446Z",
+      "summary": "Ternary BitNet architecture injects radial positional math and a fractal optimizer to squeeze 15.6M params under 16MB.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "positional-encoding"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-435.json"
+    },
     {
       "prNumber": 434,
       "title": "10L XSA + LeakyReLU² + Partial RoPE (val_bpb=1.1370)",
@@ -570,15 +593,14 @@
       "prNumber": 401,
       "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
       "status": "open",
-      "updatedAt": "2026-03-22T07:21:12Z",
-      "headSha": "525d75507f210a55378bf5bedf8f6413f4e7aba0",
-      "generatedAt": "2026-03-22T07:37:28.432Z",
-      "summary": "Stacks EMA with Tight SWA and earlier late int6 QAT over an 11-layer FlashAttention model with VE128 skips and extended warmdown.",
+      "updatedAt": "2026-03-22T16:36:51Z",
+      "headSha": "b8914a5ec4f5e753380415819a6d031ca5112097",
+      "generatedAt": "2026-03-22T16:40:54.334Z",
+      "summary": "Stack EMA with tight SWA, extend the warmdown tail, and trigger late int6 QAT earlier on the 11-layer VE128+Partial RoPE model with LN scaling.",
       "tags": [
-        "quantization",
+        "architecture",
         "training-schedule",
-        "optimizer",
-        "architecture"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -969,10 +991,10 @@
       "prNumber": 377,
       "title": "Hybrid INL + Sort-Split MoE (1.41/1.46 bpb TTT, 15.5MB, 1xH100)",
       "status": "open",
-      "updatedAt": "2026-03-22T16:06:02Z",
-      "headSha": "283b595ca6ec176b77db7ccbe015ab169c08324b",
-      "generatedAt": "2026-03-22T16:11:26.158Z",
-      "summary": "Hybrid GQA+RoPE attention early, later INL BetaMu layers, and Sort-and-Split MoE routing with ALiBi slopes.",
+      "updatedAt": "2026-03-22T16:31:19Z",
+      "headSha": "f922d0c44ccd00b730398a7bf203fd1fa88b6060",
+      "generatedAt": "2026-03-22T16:40:59.770Z",
+      "summary": "Stacks GQA+RoPE layers with INL BetaMu attention, Sort-Split MoE routing, and ALiBi slopes for a fast 16MB-constrained hybrid transformer.",
       "tags": [
         "architecture",
         "attention",
@@ -2608,10 +2630,10 @@
       "prNumber": 288,
       "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
       "status": "open",
-      "updatedAt": "2026-03-22T07:03:15Z",
-      "headSha": "8914506c1485456cabd5cb7227c07b85f751a0cf",
-      "generatedAt": "2026-03-22T07:07:18.250Z",
-      "summary": "Content-dependent SmearGate gates token blending by scaling a sigmoid of adjacent-token dot products so similar tokens mix more during embedding fusion.",
+      "updatedAt": "2026-03-22T16:19:00Z",
+      "headSha": "35dd5bf9e90f6b4a795a3af15ed93a06600e2bc7",
+      "generatedAt": "2026-03-22T16:41:04.445Z",
+      "summary": "Modulate SmearGate blend ratios with dot-product similarity between adjacent embeddings so similar tokens blend more while dissimilar ones stay independent.",
       "tags": [
         "architecture",
         "non-record"

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-22T16:40:50.446Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 435,
+    "title": "Radial bitnet submission",
+    "state": "open",
+    "updatedAt": "2026-03-22T16:31:21Z",
+    "headSha": "277c34c0853d0e6786b61cfd8a22b9128535ca2f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/435",
+    "authorLogin": "rthgit"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_RadialBitNet/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Ternary BitNet architecture injects radial positional math and a fractal optimizer to squeeze 15.6M params under 16MB.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "positional-encoding"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "strict ternary BitNet weight matrices across all projections",
+      "analytical radial encoding replaces learned positional embeddings",
+      "Fractal Resonant Optimization tailored for quantized convergence"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

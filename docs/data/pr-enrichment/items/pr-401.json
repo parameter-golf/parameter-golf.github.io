@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T07:37:28.432Z",
+  "generatedAt": "2026-03-22T16:40:54.334Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 401,
     "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
     "state": "open",
-    "updatedAt": "2026-03-22T07:21:12Z",
-    "headSha": "525d75507f210a55378bf5bedf8f6413f4e7aba0",
+    "updatedAt": "2026-03-22T16:36:51Z",
+    "headSha": "b8914a5ec4f5e753380415819a6d031ca5112097",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/401",
     "authorLogin": "newjordan"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacks EMA with Tight SWA and earlier late int6 QAT over an 11-layer FlashAttention model with VE128 skips and extended warmdown.",
+    "summary": "Stack EMA with tight SWA, extend the warmdown tail, and trigger late int6 QAT earlier on the 11-layer VE128+Partial RoPE model with LN scaling.",
     "tags": [
-      "quantization",
+      "architecture",
       "training-schedule",
-      "optimizer",
-      "architecture"
+      "quantization"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Standard training with EMA/SWA stacking and late QAT, no validation-only regime.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "EMA-fed Tight SWA stacking",
-      "extended warmdown with late int6 QAT",
-      "11-layer FlashAttention with VE128 skip connections"
+      "EMA + Tight SWA stacking",
+      "Earlier threshold for late int6 QAT",
+      "Longer warmdown convergence tail"
     ]
   },
   "compatibility": {

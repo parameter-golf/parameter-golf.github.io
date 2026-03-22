@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T07:07:18.250Z",
+  "generatedAt": "2026-03-22T16:41:04.445Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 288,
     "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
     "state": "open",
-    "updatedAt": "2026-03-22T07:03:15Z",
-    "headSha": "8914506c1485456cabd5cb7227c07b85f751a0cf",
+    "updatedAt": "2026-03-22T16:19:00Z",
+    "headSha": "35dd5bf9e90f6b4a795a3af15ed93a06600e2bc7",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/288",
     "authorLogin": "trasnake87"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Content-dependent SmearGate gates token blending by scaling a sigmoid of adjacent-token dot products so similar tokens mix more during embedding fusion.",
+    "summary": "Modulate SmearGate blend ratios with dot-product similarity between adjacent embeddings so similar tokens blend more while dissimilar ones stay independent.",
     "tags": [
       "architecture",
       "non-record"
@@ -27,8 +27,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "content-modulated SmearGate via similarity dot product",
-      "single learned scale for gate sensitivity"
+      "content-dependent gating via adjacent similarity",
+      "dot-product modulation of learned gate",
+      "sigmoid blend between current and previous embeddings"
     ]
   },
   "compatibility": {
