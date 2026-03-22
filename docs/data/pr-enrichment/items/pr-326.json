@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T08:29:45.132Z",
+  "generatedAt": "2026-03-22T00:05:44.015Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 326,
-    "title": "[Non-Record] QAT + NTK-4096 Eval + Cosine Warmdown + Aggressive SWA",
+    "title": "Non-Record: QAT + NTK-4096 Eval + Cosine Warmdown + Aggressive SWA (val_bpb=1.2890, 1xh100)",
     "state": "open",
-    "updatedAt": "2026-03-21T08:24:22Z",
+    "updatedAt": "2026-03-21T23:43:35Z",
     "headSha": "0e73fb9322b416f17a7dfbd7fca10392c3a30099",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/326",
     "authorLogin": "crony-io"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines 10-layer SmearGate+BigramHash with orthogonal U-Net skips, STE QAT int5/int6, cosine warmdown & SWA, and NTK-aware sliding-window eval.",
+    "summary": "Blends expanded SmearGate/BigramHash U-Net architecture with STE-based QAT, cosine warmdown + aggressive SWA, and NTK-aware sliding-window evaluation.",
     "tags": [
       "quantization",
       "optimizer",
-      "architecture",
-      "evaluation"
+      "evaluation",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SmearGate + BigramHash gating with U-Net skip init",
-      "QAT STE mixed int5/int6 plus cosine warmdown and aggressive SWA",
-      "NTK-aware RoPE scaling with sliding-window stride-64 eval"
+      "QAT STE fake quant int5/int6",
+      "NTK-aware RoPE sliding window eval",
+      "Cosine warmdown with aggressive SWA"
     ]
   },
   "compatibility": {

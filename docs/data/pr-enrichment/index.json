@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T23:35:40.682Z",
+  "generatedAt": "2026-03-22T00:05:44.059Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -7,14 +7,14 @@
       "prNumber": 377,
       "title": "Hybrid INL + Sort-Split MoE (1.41/1.46 bpb TTT, 15.5MB, 1xH100)",
       "status": "open",
-      "updatedAt": "2026-03-21T23:32:56Z",
-      "headSha": "2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e",
-      "generatedAt": "2026-03-21T23:35:35.660Z",
-      "summary": "Stacks GQA+RoPE attention layers then INL BetaMu layers, each using Sort-and-Split MoE routing with ALiBi slopes for efficient hybrid processing.",
+      "updatedAt": "2026-03-21T23:54:39Z",
+      "headSha": "6142664bc90834a19c24435fd64aa21ae52e4a34",
+      "generatedAt": "2026-03-22T00:05:34.254Z",
+      "summary": "Mixes early GQA+RoPE layers with later INL BetaMu attention and Sort-Split MoE routing plus ALiBi slopes for a compact, fast hybrid stack.",
       "tags": [
         "architecture",
         "attention",
-        "quantization"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -98,16 +98,16 @@
     {
       "prNumber": 373,
       "title": "Record: SwiGLU + BigramHash + SWA, val_bpb=1.1634 (8xH100 verified)",
-      "status": "open",
-      "updatedAt": "2026-03-21T21:34:45Z",
+      "status": "closed",
+      "updatedAt": "2026-03-21T23:47:03Z",
       "headSha": "d6b4606bf390c97d23e458d9be0a41f14dfaa3fb",
-      "generatedAt": "2026-03-21T21:35:08.006Z",
-      "summary": "Combines SwiGLU FFNs with BigramHash embeddings, Muon optimizer+SWA, and int6+zstd compression for efficient 10min/16MB performance.",
+      "generatedAt": "2026-03-22T00:05:39.630Z",
+      "summary": "GEPA-found SwiGLU FFN, BigramHash embeddings, SWA, and Muon optimizer plus int6+zstd compression tune a 10-layer 512-dim model within the 10min/16MB regime.",
       "tags": [
         "architecture",
+        "training-schedule",
         "optimizer",
-        "quantization",
-        "evaluation"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -918,17 +918,17 @@
     },
     {
       "prNumber": 326,
-      "title": "[Non-Record] QAT + NTK-4096 Eval + Cosine Warmdown + Aggressive SWA",
+      "title": "Non-Record: QAT + NTK-4096 Eval + Cosine Warmdown + Aggressive SWA (val_bpb=1.2890, 1xh100)",
       "status": "open",
-      "updatedAt": "2026-03-21T08:24:22Z",
+      "updatedAt": "2026-03-21T23:43:35Z",
       "headSha": "0e73fb9322b416f17a7dfbd7fca10392c3a30099",
-      "generatedAt": "2026-03-21T08:29:45.132Z",
-      "summary": "Combines 10-layer SmearGate+BigramHash with orthogonal U-Net skips, STE QAT int5/int6, cosine warmdown & SWA, and NTK-aware sliding-window eval.",
+      "generatedAt": "2026-03-22T00:05:44.015Z",
+      "summary": "Blends expanded SmearGate/BigramHash U-Net architecture with STE-based QAT, cosine warmdown + aggressive SWA, and NTK-aware sliding-window evaluation.",
       "tags": [
         "quantization",
         "optimizer",
-        "architecture",
-        "evaluation"
+        "evaluation",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,

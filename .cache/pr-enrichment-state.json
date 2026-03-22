@@ -2,7 +2,7 @@
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
-  "generatedAt": "2026-03-21T23:35:40.681Z",
+  "generatedAt": "2026-03-22T00:05:44.059Z",
   "prs": {
     "6": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:11373420c1f50e6a83599fb25bb73f38a6555cb7:closed:2026-03-18T18:34:32Z",
@@ -1223,9 +1223,9 @@
       "headSha": "b1f08746a4a958b2b0c2029cedbc94c134292eab"
     },
     "326": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:0e73fb9322b416f17a7dfbd7fca10392c3a30099:open:2026-03-21T08:24:22Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:0e73fb9322b416f17a7dfbd7fca10392c3a30099:open:2026-03-21T23:43:35Z",
       "file": "items/pr-326.json",
-      "updatedAt": "2026-03-21T08:24:22Z",
+      "updatedAt": "2026-03-21T23:43:35Z",
       "headSha": "0e73fb9322b416f17a7dfbd7fca10392c3a30099"
     },
     "327": {
@@ -1433,9 +1433,9 @@
       "headSha": "b45297b658958af70a5635110551d1b2f2ec6903"
     },
     "373": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:d6b4606bf390c97d23e458d9be0a41f14dfaa3fb:open:2026-03-21T21:34:45Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:d6b4606bf390c97d23e458d9be0a41f14dfaa3fb:closed:2026-03-21T23:47:03Z",
       "file": "items/pr-373.json",
-      "updatedAt": "2026-03-21T21:34:45Z",
+      "updatedAt": "2026-03-21T23:47:03Z",
       "headSha": "d6b4606bf390c97d23e458d9be0a41f14dfaa3fb"
     },
     "374": {
@@ -1457,10 +1457,10 @@
       "headSha": "2aa218d3594e32c75e092caece40c414bafa1f1a"
     },
     "377": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e:open:2026-03-21T23:32:56Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:6142664bc90834a19c24435fd64aa21ae52e4a34:open:2026-03-21T23:54:39Z",
       "file": "items/pr-377.json",
-      "updatedAt": "2026-03-21T23:32:56Z",
-      "headSha": "2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e"
+      "updatedAt": "2026-03-21T23:54:39Z",
+      "headSha": "6142664bc90834a19c24435fd64aa21ae52e4a34"
     }
   }
 }

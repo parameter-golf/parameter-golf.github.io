@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T21:35:08.006Z",
+  "generatedAt": "2026-03-22T00:05:39.630Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 373,
     "title": "Record: SwiGLU + BigramHash + SWA, val_bpb=1.1634 (8xH100 verified)",
-    "state": "open",
-    "updatedAt": "2026-03-21T21:34:45Z",
+    "state": "closed",
+    "updatedAt": "2026-03-21T23:47:03Z",
     "headSha": "d6b4606bf390c97d23e458d9be0a41f14dfaa3fb",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/373",
     "authorLogin": "JoeProAI"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines SwiGLU FFNs with BigramHash embeddings, Muon optimizer+SWA, and int6+zstd compression for efficient 10min/16MB performance.",
+    "summary": "GEPA-found SwiGLU FFN, BigramHash embeddings, SWA, and Muon optimizer plus int6+zstd compression tune a 10-layer 512-dim model within the 10min/16MB regime.",
     "tags": [
       "architecture",
+      "training-schedule",
       "optimizer",
-      "quantization",
-      "evaluation"
+      "quantization"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not val-only training; standard training with validation evaluation.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "SwiGLU feedforward with BigramHash embedding buckets",
-      "SWA checkpoints tuned with Muon optimizer",
-      "int6 quantization plus zstd-22 compression"
+      "GEPA-discovered SwiGLU activation",
+      "BigramHash embeddings with SWA",
+      "Int6 quantization with zstd-22"
     ]
   },
   "compatibility": {

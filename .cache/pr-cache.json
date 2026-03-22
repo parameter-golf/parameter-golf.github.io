@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-21T23:35:27.116Z",
-  "lastSeenUpdatedAt": "2026-03-21T23:32:56Z",
+  "generatedAt": "2026-03-22T00:05:28.922Z",
+  "lastSeenUpdatedAt": "2026-03-21T23:54:39Z",
   "prs": {
     "1": {
       "number": 1,
@@ -25407,10 +25407,10 @@
     },
     "326": {
       "number": 326,
-      "updatedAt": "2026-03-21T08:24:22Z",
+      "updatedAt": "2026-03-21T23:43:35Z",
       "pr": {
         "number": 326,
-        "title": "[Non-Record] QAT + NTK-4096 Eval + Cosine Warmdown + Aggressive SWA",
+        "title": "Non-Record: QAT + NTK-4096 Eval + Cosine Warmdown + Aggressive SWA (val_bpb=1.2890, 1xh100)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -25418,7 +25418,7 @@
         "authorLogin": "crony-io",
         "authorName": null,
         "createdAt": "2026-03-21T08:24:22Z",
-        "updatedAt": "2026-03-21T08:24:22Z",
+        "updatedAt": "2026-03-21T23:43:35Z",
         "headSha": "0e73fb9322b416f17a7dfbd7fca10392c3a30099",
         "headRepo": "crony-io/parameter-golf"
       },
@@ -25473,7 +25473,7 @@
           },
           "pr": {
             "number": 326,
-            "title": "[Non-Record] QAT + NTK-4096 Eval + Cosine Warmdown + Aggressive SWA",
+            "title": "Non-Record: QAT + NTK-4096 Eval + Cosine Warmdown + Aggressive SWA (val_bpb=1.2890, 1xh100)",
             "state": "open",
             "draft": false,
             "mergedAt": null,
@@ -25481,7 +25481,7 @@
             "authorLogin": "crony-io",
             "authorName": null,
             "createdAt": "2026-03-21T08:24:22Z",
-            "updatedAt": "2026-03-21T08:24:22Z",
+            "updatedAt": "2026-03-21T23:43:35Z",
             "headSha": "0e73fb9322b416f17a7dfbd7fca10392c3a30099",
             "headRepo": "crony-io/parameter-golf"
           },
@@ -30313,18 +30313,18 @@
     },
     "373": {
       "number": 373,
-      "updatedAt": "2026-03-21T21:34:45Z",
+      "updatedAt": "2026-03-21T23:47:03Z",
       "pr": {
         "number": 373,
         "title": "Record: SwiGLU + BigramHash + SWA, val_bpb=1.1634 (8xH100 verified)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/373",
         "authorLogin": "JoeProAI",
         "authorName": null,
         "createdAt": "2026-03-21T21:34:45Z",
-        "updatedAt": "2026-03-21T21:34:45Z",
+        "updatedAt": "2026-03-21T23:47:03Z",
         "headSha": "d6b4606bf390c97d23e458d9be0a41f14dfaa3fb",
         "headRepo": "JoeProAI/parameter-golf"
       },
@@ -30332,7 +30332,7 @@
         {
           "id": "pr-373-records-track_10min_16mb-2026-03-19_JoeProAI_FP16Embed_SlidingWindow-submission-json",
           "source": "pull_request",
-          "status": "open",
+          "status": "closed",
           "category": "main-track",
           "track": {
             "path": "records/track_10min_16mb",
@@ -30380,14 +30380,14 @@
           "pr": {
             "number": 373,
             "title": "Record: SwiGLU + BigramHash + SWA, val_bpb=1.1634 (8xH100 verified)",
-            "state": "open",
+            "state": "closed",
             "draft": false,
             "mergedAt": null,
             "htmlUrl": "https://github.com/openai/parameter-golf/pull/373",
             "authorLogin": "JoeProAI",
             "authorName": null,
             "createdAt": "2026-03-21T21:34:45Z",
-            "updatedAt": "2026-03-21T21:34:45Z",
+            "updatedAt": "2026-03-21T23:47:03Z",
             "headSha": "d6b4606bf390c97d23e458d9be0a41f14dfaa3fb",
             "headRepo": "JoeProAI/parameter-golf"
           },
@@ -30677,7 +30677,7 @@
     },
     "377": {
       "number": 377,
-      "updatedAt": "2026-03-21T23:32:56Z",
+      "updatedAt": "2026-03-21T23:54:39Z",
       "pr": {
         "number": 377,
         "title": "Hybrid INL + Sort-Split MoE (1.41/1.46 bpb TTT, 15.5MB, 1xH100)",
@@ -30688,8 +30688,8 @@
         "authorLogin": "Complexity-ML",
         "authorName": null,
         "createdAt": "2026-03-21T23:02:46Z",
-        "updatedAt": "2026-03-21T23:32:56Z",
-        "headSha": "2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e",
+        "updatedAt": "2026-03-21T23:54:39Z",
+        "headSha": "6142664bc90834a19c24435fd64aa21ae52e4a34",
         "headRepo": "Complexity-ML/parameter-golf"
       },
       "submissions": [
@@ -30751,16 +30751,16 @@
             "authorLogin": "Complexity-ML",
             "authorName": null,
             "createdAt": "2026-03-21T23:02:46Z",
-            "updatedAt": "2026-03-21T23:32:56Z",
-            "headSha": "2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e",
+            "updatedAt": "2026-03-21T23:54:39Z",
+            "headSha": "6142664bc90834a19c24435fd64aa21ae52e4a34",
             "headRepo": "Complexity-ML/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6142664bc90834a19c24435fd64aa21ae52e4a34/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/6142664bc90834a19c24435fd64aa21ae52e4a34/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/6142664bc90834a19c24435fd64aa21ae52e4a34/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/6142664bc90834a19c24435fd64aa21ae52e4a34/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/6142664bc90834a19c24435fd64aa21ae52e4a34/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID",
             "pr": "https://github.com/openai/parameter-golf/pull/377"
           }
         }
