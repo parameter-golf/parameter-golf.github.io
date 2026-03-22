@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T18:41:54.467Z",
+  "generatedAt": "2026-03-22T20:42:29.939Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 279,
     "title": "Title: AtomLogic v3.2 Universal SOTA - 1.15 BPB Target",
     "state": "open",
-    "updatedAt": "2026-03-22T18:27:08Z",
-    "headSha": "e243175d7e8b956d459b223739e2c94c67b402ee",
+    "updatedAt": "2026-03-22T20:21:39Z",
+    "headSha": "dc28366bfeed41432cad6be176c93cc9b5ce78bb",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/279",
     "authorLogin": "Evreu1pro"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Shared-block Universal Transformer depth, value-only MoE sparsity, and VeRA test-time adaptation combine with Muon+NF4 stability for a compact model.",
+    "summary": "Universal Transformer stacks 20 shared-block iterations with Value-Only MoE, VeRA TTT adaptation, and Muon/NF4 precision for a compact SOTA run.",
     "tags": [
       "architecture",
-      "attention",
       "optimizer",
+      "quantization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Universal Transformer iterative shared block",
-      "Value-only MoE with binary masks",
-      "VeRA TTT with Muon+NF4 stability"
+      "Shared 20-iteration Universal Transformer block",
+      "Value-Only MoE with 32 sparse experts",
+      "VeRA TTT adaptation plus Muon/NF4 precision"
     ]
   },
   "compatibility": {

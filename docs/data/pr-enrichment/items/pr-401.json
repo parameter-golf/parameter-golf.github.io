@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T20:12:17.198Z",
+  "generatedAt": "2026-03-22T20:42:24.777Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 401,
     "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
     "state": "open",
-    "updatedAt": "2026-03-22T20:04:29Z",
-    "headSha": "5f4eb5f45278f2748ed6ec6311e21fdbf1593b2a",
+    "updatedAt": "2026-03-22T20:24:22Z",
+    "headSha": "74eebb6aeaf35777b2db9cd8010f91024d0431d5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/401",
     "authorLogin": "newjordan"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacks EMA with tight SWA checkpoints, extends warmdown, and starts late int6 QAT earlier on the 11-layer GQA model with VE128 and partial RoPE.",
+    "summary": "Stack EMA averages into Tight SWA, lengthen warmdown, and initiate late int6 QAT sooner on the 11-layer GQA transformer with partial RoPE.",
     "tags": [
       "quantization",
-      "architecture",
+      "optimizer",
       "training-schedule",
-      "optimizer"
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA + Tight SWA stacking for dual averaging",
-      "Earlier late int6 QAT with longer warmdown",
-      "Partial RoPE + VE128 on 11-layer GQA setup"
+      "EMA weights feed Tight SWA every 50 steps for dual averaging.",
+      "Late int6 QAT (threshold 0.15) runs longer with a 3500-step warmdown.",
+      "Muon/AdamW mix with VE128, partial RoPE, LN scaling, and U-Net skips in 11-layer GQA."
     ]
   },
   "compatibility": {

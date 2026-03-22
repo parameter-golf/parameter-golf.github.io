@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-22T20:42:13.298Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 458,
+    "title": "10L XSA + EMA + Partial RoPE + LN Scale (val_bpb: 1.1365)",
+    "state": "open",
+    "updatedAt": "2026-03-22T20:32:55Z",
+    "headSha": "663a135c138bb4baa7378367a3a99932f657d578",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/458",
+    "authorLogin": "ofirkris"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_XSA_EMA_PartialRoPE_LNScale_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer 512d net applies XSA in its last four layers with EMA and partial RoPE while combining SmearGate bigram hashing and Int5/Int6 quantization.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "XSA restricted to last 4 layers with EMA 0.997 and partial RoPE 16/64",
+      "Int5 MLP plus Int6 attention quantization with FP16 embeds and ~3.2% pruning",
+      "SmearGate bigram hashing and sliding-window eval stride 64"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

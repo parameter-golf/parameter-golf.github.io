@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-22T20:12:17.259Z",
+  "generatedAt": "2026-03-22T20:42:29.981Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 458,
+      "title": "10L XSA + EMA + Partial RoPE + LN Scale (val_bpb: 1.1365)",
+      "status": "open",
+      "updatedAt": "2026-03-22T20:32:55Z",
+      "headSha": "663a135c138bb4baa7378367a3a99932f657d578",
+      "generatedAt": "2026-03-22T20:42:13.298Z",
+      "summary": "10-layer 512d net applies XSA in its last four layers with EMA and partial RoPE while combining SmearGate bigram hashing and Int5/Int6 quantization.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-458.json"
+    },
+    {
+      "prNumber": 457,
+      "title": "11L + XSA + VRL + SWA + seq4096 + cross-doc TTT - val_bpb 1.1839",
+      "status": "open",
+      "updatedAt": "2026-03-22T20:13:53Z",
+      "headSha": "2e3248732abf73549d51f85a7738541a2897b460",
+      "generatedAt": "2026-03-22T20:42:17.311Z",
+      "summary": "Long-context 11-layer base blends exclusive self-attention, value residual learning, SmearGate, SWA, and warmdown QAT with cross-document LoRA TTT.",
+      "tags": [
+        "attention",
+        "architecture",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-457.json"
+    },
     {
       "prNumber": 456,
       "title": "Non-record submission: Depth Recurrence + Legal Score-First TTT (10L, 1.1532 BPB)",
@@ -98,29 +145,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-453.json"
-    },
-    {
-      "prNumber": 452,
-      "title": "10L XSA + EMA + Partial RoPE + LN Scale (val_bpb: 1.1366)",
-      "status": "open",
-      "updatedAt": "2026-03-22T19:54:12Z",
-      "headSha": "31652365a8e6b7b353cb92537266e5e4fb3e5a3b",
-      "generatedAt": "2026-03-22T20:12:12.893Z",
-      "summary": "10L GPT mixes XSA on last layers, EMA, Partial RoPE, LN scale, int5/int6 quant, and Muon optimizer with sliding-window eval.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-452.json"
     },
     {
       "prNumber": 451,
@@ -1040,15 +1064,15 @@
       "prNumber": 401,
       "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
       "status": "open",
-      "updatedAt": "2026-03-22T20:04:29Z",
-      "headSha": "5f4eb5f45278f2748ed6ec6311e21fdbf1593b2a",
-      "generatedAt": "2026-03-22T20:12:17.198Z",
-      "summary": "Stacks EMA with tight SWA checkpoints, extends warmdown, and starts late int6 QAT earlier on the 11-layer GQA model with VE128 and partial RoPE.",
+      "updatedAt": "2026-03-22T20:24:22Z",
+      "headSha": "74eebb6aeaf35777b2db9cd8010f91024d0431d5",
+      "generatedAt": "2026-03-22T20:42:24.777Z",
+      "summary": "Stack EMA averages into Tight SWA, lengthen warmdown, and initiate late int6 QAT sooner on the 11-layer GQA transformer with partial RoPE.",
       "tags": [
         "quantization",
-        "architecture",
+        "optimizer",
         "training-schedule",
-        "optimizer"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -3197,14 +3221,14 @@
       "prNumber": 279,
       "title": "Title: AtomLogic v3.2 Universal SOTA - 1.15 BPB Target",
       "status": "open",
-      "updatedAt": "2026-03-22T18:27:08Z",
-      "headSha": "e243175d7e8b956d459b223739e2c94c67b402ee",
-      "generatedAt": "2026-03-22T18:41:54.467Z",
-      "summary": "Shared-block Universal Transformer depth, value-only MoE sparsity, and VeRA test-time adaptation combine with Muon+NF4 stability for a compact model.",
+      "updatedAt": "2026-03-22T20:21:39Z",
+      "headSha": "dc28366bfeed41432cad6be176c93cc9b5ce78bb",
+      "generatedAt": "2026-03-22T20:42:29.939Z",
+      "summary": "Universal Transformer stacks 20 shared-block iterations with Value-Only MoE, VeRA TTT adaptation, and Muon/NF4 precision for a compact SOTA run.",
       "tags": [
         "architecture",
-        "attention",
         "optimizer",
+        "quantization",
         "non-record"
       ],
       "flags": {

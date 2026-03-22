@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T20:42:17.311Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 457,
+    "title": "11L + XSA + VRL + SWA + seq4096 + cross-doc TTT - val_bpb 1.1839",
+    "state": "open",
+    "updatedAt": "2026-03-22T20:13:53Z",
+    "headSha": "2e3248732abf73549d51f85a7738541a2897b460",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/457",
+    "authorLogin": "carlesonielfa"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_11L_XSA_VRL_SWA_seq4096/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Long-context 11-layer base blends exclusive self-attention, value residual learning, SmearGate, SWA, and warmdown QAT with cross-document LoRA TTT.",
+    "tags": [
+      "attention",
+      "architecture",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Not val-only training; uses standard training with eval-time adapter tuning.",
+    "techniques": [
+      "seq=4096 long-context training",
+      "XSA+VRL enhanced attention flow",
+      "cross-doc LoRA TTT with SWA and warmdown QAT"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
