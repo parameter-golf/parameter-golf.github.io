@@ -2,7 +2,7 @@ const filters = {
   search: "",
   hideNonRecord: false,
   hideUnscored: false,
-  mergedOnly: false,
+  leaderboardOnly: false,
   includeValOnly: false,
   hideSummaries: false,
   hideTags: false,
@@ -284,10 +284,17 @@ function updateSummary(summary) {
   coverageCount.textContent = formatCount(summary.counts.openPr);
 }
 
-function buildVisibleSummary(summary, submissions) {
+function bestOfficialEntry(summary, allSubmissions) {
+  if (summary.best.officialMainTrack) {
+    return summary.best.officialMainTrack;
+  }
+  return allSubmissions.find((entry) => entry.status === "official" && entry.category === "main-track") || null;
+}
+
+function buildVisibleSummary(summary, submissions, allSubmissions) {
   const visible = [...submissions];
-  const visiblePrMain = visible
-    .filter((entry) => entry.pr?.number && entry.category === "main-track")
+  const visibleMain = visible
+    .filter((entry) => entry.category === "main-track")
     .sort(byScoreThenDate);
   const visiblePrCount = new Set(
     visible
@@ -301,8 +308,8 @@ function buildVisibleSummary(summary, submissions) {
       openPr: visiblePrCount
     },
     best: {
-      officialMainTrack: summary.best.officialMainTrack || null,
-      openPrMainTrack: visiblePrMain[0] || null
+      officialMainTrack: bestOfficialEntry(summary, allSubmissions),
+      openPrMainTrack: visibleMain[0] || null
     }
   };
 }
@@ -374,7 +381,7 @@ function filterSubmissions(submissions, enrichmentMap) {
   return submissions.filter((entry) => {
     const enrichment = getEnrichment(enrichmentMap, entry);
     const displayTags = buildDisplayTags(entry, enrichment);
-    if (filters.mergedOnly && entry.status !== "merged") {
+    if (filters.leaderboardOnly && !entry.provenance?.listedInReadme) {
       return false;
     }
     if (filters.hideNonRecord && entry.category === "non-record") {
@@ -630,7 +637,7 @@ function render(data) {
   const nextData = { ...data, availableTags };
   window.__GOLF_VIEWER_DATA__ = nextData;
   const filtered = filterSubmissions(displaySubmissions, nextData.enrichmentMap);
-  updateSummary(buildVisibleSummary(data.summary, filtered));
+  updateSummary(buildVisibleSummary(data.summary, filtered, displaySubmissions));
   renderRows(filtered);
   renderTagFilter(nextData);
   syncFilterControls();
@@ -704,10 +711,10 @@ if (hideUnscoredToggle) {
   });
 }
 
-const mergedOnlyToggle = document.getElementById("merged-only-toggle");
-if (mergedOnlyToggle) {
-  mergedOnlyToggle.addEventListener("change", (event) => {
-    filters.mergedOnly = event.target.checked;
+const leaderboardOnlyToggle = document.getElementById("leaderboard-only-toggle");
+if (leaderboardOnlyToggle) {
+  leaderboardOnlyToggle.addEventListener("change", (event) => {
+    filters.leaderboardOnly = event.target.checked;
     paginationState.page = 1;
     render(window.__GOLF_VIEWER_DATA__);
   });

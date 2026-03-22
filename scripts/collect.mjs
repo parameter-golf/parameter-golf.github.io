@@ -336,7 +336,8 @@ async function fetchReadmeListedFolders(report) {
   }
 }
 
-function preferredPr(currentPr, nextPr) {
+function preferredPr(currentPr, nextPr, options = {}) {
+  const { preferMerged = false } = options;
   if (!currentPr) {
     return nextPr;
   }
@@ -344,6 +345,15 @@ function preferredPr(currentPr, nextPr) {
     return currentPr;
   }
   const rank = (pr) => {
+    if (preferMerged) {
+      if (pr.mergedAt) {
+        return 3;
+      }
+      if (pr.state === "open") {
+        return 2;
+      }
+      return 1;
+    }
     if (pr.state === "open") {
       return 3;
     }
@@ -356,6 +366,14 @@ function preferredPr(currentPr, nextPr) {
   const nextRank = rank(nextPr);
   if (nextRank !== currentRank) {
     return nextRank > currentRank ? nextPr : currentPr;
+  }
+  if (preferMerged) {
+    if (currentPr.mergedAt && nextPr.mergedAt && currentPr.mergedAt !== nextPr.mergedAt) {
+      return nextPr.mergedAt < currentPr.mergedAt ? nextPr : currentPr;
+    }
+    return (nextPr.number || Number.POSITIVE_INFINITY) < (currentPr.number || Number.POSITIVE_INFINITY)
+      ? nextPr
+      : currentPr;
   }
   return (nextPr.number || 0) > (currentPr.number || 0) ? nextPr : currentPr;
 }
@@ -387,7 +405,9 @@ function mergeSubmissions(entries, readmeListedFolders) {
     current.provenance.onMain ||= entry.source === "official";
     current.provenance.hasPullRequest ||= Boolean(entry.pr);
     current.provenance.listedInReadme = readmeListedFolders.has(entry.record.folderPath);
-    current.pr = preferredPr(current.pr, entry.pr);
+    current.pr = preferredPr(current.pr, entry.pr, {
+      preferMerged: current.provenance.onMain
+    });
     current.links.pr = current.pr?.htmlUrl || null;
 
     if (entry.source === "official") {
@@ -404,7 +424,16 @@ function mergeSubmissions(entries, readmeListedFolders) {
 
   return [...merged.values()].map((entry) => {
     entry.source = entry.pr ? "pull_request" : "official";
+    const isOfficialBaseline = entry.provenance.onMain
+      && entry.category === "main-track"
+      && (
+        entry.submission.githubId === "openai"
+        || entry.submission.author === "Baseline"
+        || /baseline/i.test(entry.submission.name || entry.record.folderName)
+      );
     if (!entry.pr && entry.provenance.onMain) {
+      entry.status = "official";
+    } else if (isOfficialBaseline) {
       entry.status = "official";
     } else if (entry.pr?.state === "open") {
       entry.status = "open";
