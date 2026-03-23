@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T09:15:21.633Z",
+  "generatedAt": "2026-03-23T09:45:15.667Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 515,
     "title": "Record: Atris Labs — val_bpb=1.2015, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
     "state": "open",
-    "updatedAt": "2026-03-23T09:05:30Z",
-    "headSha": "b40f038c23beb62d1365bed630d37e02b8680380",
+    "updatedAt": "2026-03-23T09:34:10Z",
+    "headSha": "a7510192396394343457189a8fb380cc7016df47",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/515",
     "authorLogin": "keshav55"
   },
@@ -20,19 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Atris Labs stacks a 10-layer GQA transformer with BigramHash+SmearGate mixing and Int5/Int6 quantized weights, pairing SWA warmdown, pruning, and Muon/AdamW tuning.",
+    "summary": "10-layer MLP3x transformer adds BigramHash/SmearGate, SWA warmdown, and Int5/Int6 quantization with pruning for a compact 16MB artifact.",
     "tags": [
-      "quantization",
       "architecture",
-      "optimizer",
-      "compression"
+      "quantization",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "BigramHash with SmearGate per-token blending",
-      "Int5 MLP + Int6 attention quantization with pruning",
-      "Muon+AdamW training with SWA warmdown"
+      "SWA checkpoint averaging during warmdown",
+      "BigramHash embeddings with SmearGate gating",
+      "Int5/Int6 quantization plus 3% pruning"
     ]
   },
   "compatibility": {

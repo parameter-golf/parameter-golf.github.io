@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T09:45:05.101Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 518,
+    "title": "Record: 11L XSA4 + LeakyReLU(0.5)² + Cosine  TTT 50ep (val_bpb=1.0622)",
+    "state": "open",
+    "updatedAt": "2026-03-23T09:35:11Z",
+    "headSha": "e246baab66757006e172d06c3fc0884259f64dc7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/518",
+    "authorLogin": "sofiabod"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_11L-CosineTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Enhance the 11-layer XSA4 stack with LeakyReLU(0.5)² and 50-epoch cosine TTT using per-layer LR groups plus Int6 GPTQ-lite quantization.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU(0.5)² replacing ReLU²",
+      "50-epoch cosine TTT with per-layer LR scaling",
+      "Int6 GPTQ-lite quantization w/ EMA and Late QAT"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

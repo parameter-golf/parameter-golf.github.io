@@ -1,16 +1,39 @@
 {
-  "generatedAt": "2026-03-23T09:15:53.296Z",
+  "generatedAt": "2026-03-23T09:45:19.918Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 518,
+      "title": "Record: 11L XSA4 + LeakyReLU(0.5)² + Cosine  TTT 50ep (val_bpb=1.0622)",
+      "status": "open",
+      "updatedAt": "2026-03-23T09:35:11Z",
+      "headSha": "e246baab66757006e172d06c3fc0884259f64dc7",
+      "generatedAt": "2026-03-23T09:45:05.101Z",
+      "summary": "Enhance the 11-layer XSA4 stack with LeakyReLU(0.5)² and 50-epoch cosine TTT using per-layer LR groups plus Int6 GPTQ-lite quantization.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-518.json"
+    },
+    {
       "prNumber": 517,
       "title": "Record: 0.978 BPB — Goldfish ML Autonomous Research (100ep Cosine TTT)",
       "status": "open",
-      "updatedAt": "2026-03-23T09:13:28Z",
+      "updatedAt": "2026-03-23T09:15:20Z",
       "headSha": "5c2901a63a73adceae10f2a6f492d86427a6e4a8",
-      "generatedAt": "2026-03-23T09:15:11.117Z",
-      "summary": "Agent-run Goldfish/Meerkat experiments found that 100-epoch CosineAnnealingLR test-time training with per-layer LR tuning delivers the record BPB.",
+      "generatedAt": "2026-03-23T09:45:09.724Z",
+      "summary": "Autonomous Goldfish ML agent added CosineAnnealingLR to AdamW TTT across 100 epochs with documented experiment lineage.",
       "tags": [
         "training-schedule",
         "evaluation"
@@ -53,15 +76,14 @@
       "prNumber": 515,
       "title": "Record: Atris Labs — val_bpb=1.2015, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
       "status": "open",
-      "updatedAt": "2026-03-23T09:05:30Z",
-      "headSha": "b40f038c23beb62d1365bed630d37e02b8680380",
-      "generatedAt": "2026-03-23T09:15:21.633Z",
-      "summary": "Atris Labs stacks a 10-layer GQA transformer with BigramHash+SmearGate mixing and Int5/Int6 quantized weights, pairing SWA warmdown, pruning, and Muon/AdamW tuning.",
+      "updatedAt": "2026-03-23T09:34:10Z",
+      "headSha": "a7510192396394343457189a8fb380cc7016df47",
+      "generatedAt": "2026-03-23T09:45:15.667Z",
+      "summary": "10-layer MLP3x transformer adds BigramHash/SmearGate, SWA warmdown, and Int5/Int6 quantization with pruning for a compact 16MB artifact.",
       "tags": [
-        "quantization",
         "architecture",
-        "optimizer",
-        "compression"
+        "quantization",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1570,14 +1592,15 @@
       "prNumber": 435,
       "title": "Radial bitnet submission",
       "status": "open",
-      "updatedAt": "2026-03-23T09:11:07Z",
-      "headSha": "ccf913cc5c165ead49783c24cc1638aa1d871aca",
-      "generatedAt": "2026-03-23T09:15:47.208Z",
-      "summary": "Radial-BitNet fits ~15.6M params in 16MB via ternary BitNet projections, radial positional encoding, and the custom FRO optimizer in a 10-minute run.",
+      "updatedAt": "2026-03-23T09:24:52Z",
+      "headSha": "f534e009a327d97a65f1f4deda149ee8e20ed14c",
+      "generatedAt": "2026-03-23T09:45:19.852Z",
+      "summary": "Radial-BitNet pairs ternary BitNet projections with analytic Radial Encoding and FRO optimizer to cram 15.6M params into 16MB.",
       "tags": [
         "quantization",
+        "positional-encoding",
         "optimizer",
-        "positional-encoding"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
