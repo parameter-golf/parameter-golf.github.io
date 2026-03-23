@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T03:44:00.690Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 497,
+    "title": "Non-record: FP16 embed + MLP992 sliding-window size-repair probe",
+    "state": "open",
+    "updatedAt": "2026-03-23T03:37:44Z",
+    "headSha": "02f6bf1143e489e6a3ca453b45a965610f8a67ff",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/497",
+    "authorLogin": "THUQiXuan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_FP16Emb_MLP992_Slide64_SizeRepairProbe/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Probe keeps tied token embeddings in fp16 while trimming the MLP width to 992 and reusing stride-64 sliding-window eval to stay under the 16MB cap after int8+zlib export.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "FP16 tied-token embedding export",
+      "MLP_HIDDEN=992 size repair",
+      "Stride-64 sliding-window post-quant eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

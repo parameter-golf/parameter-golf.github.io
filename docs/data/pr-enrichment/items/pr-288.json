@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T22:13:06.254Z",
+  "generatedAt": "2026-03-23T03:44:18.987Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 288,
     "title": "Non-record: Hybrid Depth-Recurrent Transformer + Int5 Quantization Studies",
     "state": "open",
-    "updatedAt": "2026-03-22T21:48:59Z",
-    "headSha": "e351a4804de4d7fe83b8db5449b1b9c5c0d8c1e1",
+    "updatedAt": "2026-03-23T03:14:20Z",
+    "headSha": "b97dd45607ebc5a533af5a1d2d4d6abb1f943bba",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/288",
     "authorLogin": "trasnake87"
   },
@@ -20,7 +20,7 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Hybrid depth-recurrent transformer loops 8 shared layers with int6/int8 quantization plus novel precomputed word-position, copy, and unigram features to close quantization compounding.",
+    "summary": "Hybrid depth-recurrent loops with int6 entry/exit, int8 shared layers, and precomputed word-position/copy/frequency inputs to curb quantization compounding.",
     "tags": [
       "architecture",
       "quantization",
@@ -30,9 +30,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hybrid entry/exit int6 layers with looped int8 shared blocks",
-      "Precomputed word-position/copy/unigram features projected via zero-init",
-      "Block-level torch.compile and DDP tweaks for shared-loop params"
+      "Hybrid entry/exit quantization with int8-shared looped core",
+      "Depth recurrence for 16MB budget (8 layers × 2 loops)",
+      "Zero-cost word-position, copy-flag, and unigram frequency features"
     ]
   },
   "compatibility": {

@@ -1,36 +1,36 @@
 {
-  "generatedAt": "2026-03-23T00:43:42.143Z",
+  "generatedAt": "2026-03-23T03:44:06.638Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 484,
-    "title": "Non-record: EBLS (Empirical Bayes Layer Sharing) — learned sharing patterns",
+    "title": "Non-record: SwiGLU + EMA + AdamW TTT + EBLS Findings (val_bpb=1.1746 on H100 NVL)",
     "state": "open",
-    "updatedAt": "2026-03-23T00:40:58Z",
-    "headSha": "0e144e9a2e5174613478eb0ed63b7cb139e70d0b",
+    "updatedAt": "2026-03-23T03:26:38Z",
+    "headSha": "8d0d21aefe7becc62421b9bad3466a9de740666c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/484",
     "authorLogin": "Robby955"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-22_EBLS_Learned_Sharing/README.md"
+      "records/track_10min_16mb/2026-03-23_SwiGLU_EMA_TTT_EBLS/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "EBLS uses James-Stein shrinkage gammas to gate LoRA deviations across shared blocks, revealing layer-specific sharing while exposing quantization amplification.",
+    "summary": "Combines SwiGLU gating, EMA warmdown, eval-time AdamW TTT on MLPs, and EBLS layer-sharing insights to refine the shared-layer, quantized model.",
     "tags": [
       "architecture",
-      "compression",
-      "regularization"
+      "evaluation",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "James-Stein gating of LoRA deviations",
-      "Shared blocks with virtual layers",
-      "Int6 QAT with zstd-22 compression"
+      "SwiGLU MLP with EMA warmdown replacing ReLU²/SWA",
+      "Eval-time AdamW TTT adapts MLP weights per sliding window",
+      "EBLS depth-recurrent sharing exposes MLP invariance and quantization-noise amplification"
     ]
   },
   "compatibility": {
