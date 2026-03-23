@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T21:48:50.784Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 575,
+    "title": "Add 10min/16MB record: skinny RLM seq2048 (int8+zlib val_bpb 1.1750)",
+    "state": "open",
+    "updatedAt": "2026-03-23T21:34:56Z",
+    "headSha": "16b9e96a3aed33a22a4b9de404d6b2ec634eda4c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/575",
+    "authorLogin": "k-oconnor"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_repro_submit_2048_lr02/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Looped 6-layer RLM with a 2-block weight-tied core iterated thrice, Muon optimizer, GQA, ReLU² MLP, and STE 8-bit embeddings for 2048-token sequences.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Looped weight-tied transformer core",
+      "Muon matrix+scalar optimizer with WD",
+      "STE 8-bit embeddings with ReLU² MLP"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

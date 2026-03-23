@@ -1,20 +1,66 @@
 {
-  "generatedAt": "2026-03-23T21:18:24.700Z",
+  "generatedAt": "2026-03-23T21:49:01.232Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 576,
+      "title": "Record: Train Larger, Quantize Harder - 33.6M params / int5 GPTQ / (val_bpb: 1.1164)",
+      "status": "open",
+      "updatedAt": "2026-03-23T21:43:38Z",
+      "headSha": "011a09946e9f789c688caeac4a10ee0eb136d605",
+      "generatedAt": "2026-03-23T21:48:46.745Z",
+      "summary": "Deploys a 33.6M-parameter 11-layer Transformer quantized via GPTQ+QAT and counters score-first TTT overconfidence with a T=0.98 re-score.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-576.json"
+    },
+    {
+      "prNumber": 575,
+      "title": "Add 10min/16MB record: skinny RLM seq2048 (int8+zlib val_bpb 1.1750)",
+      "status": "open",
+      "updatedAt": "2026-03-23T21:34:56Z",
+      "headSha": "16b9e96a3aed33a22a4b9de404d6b2ec634eda4c",
+      "generatedAt": "2026-03-23T21:48:50.784Z",
+      "summary": "Looped 6-layer RLM with a 2-block weight-tied core iterated thrice, Muon optimizer, GQA, ReLU² MLP, and STE 8-bit embeddings for 2048-token sequences.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-575.json"
+    },
+    {
       "prNumber": 573,
       "title": "Record: 11L XSA4 + Multi-Pass Streaming Score-First Legal TTT (3-seed mean val_bpb=1.0523) ",
       "status": "open",
-      "updatedAt": "2026-03-23T21:08:54Z",
+      "updatedAt": "2026-03-23T21:39:03Z",
       "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
-      "generatedAt": "2026-03-23T21:18:24.606Z",
-      "summary": "Adds multi-pass streaming score-first legal TTT with per-token min-NLL ensembling plus a rotary cache fix on the 11L XSA stack’s quantized backbone.",
+      "generatedAt": "2026-03-23T21:48:56.888Z",
+      "summary": "Three-pass streaming score-first legal TTT ensembles shifted trajectories so every token gets an adapted min-NLL while fixing RoPE cache clones.",
       "tags": [
-        "evaluation",
-        "architecture",
-        "quantization"
+        "sliding-window-eval",
+        "quantization",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -5125,12 +5171,13 @@
       "prNumber": 288,
       "title": "Non-record: Hybrid Depth-Recurrent Transformer + Int5 Quantization Studies",
       "status": "open",
-      "updatedAt": "2026-03-23T18:36:18Z",
-      "headSha": "a38d06e1afad3c88aaa3b55c6eb754eec8824b1d",
-      "generatedAt": "2026-03-23T18:48:02.736Z",
-      "summary": "Hybrid depth-recurrent Transformer loops 8 layers twice with hybrid int6/int8 quantization to avoid compounding and adds precomputed position/copy/frequency features.",
+      "updatedAt": "2026-03-23T21:39:57Z",
+      "headSha": "3764c79d0761407408b705c5fd0a536bc2602cb3",
+      "generatedAt": "2026-03-23T21:49:01.190Z",
+      "summary": "Hybrid depth-recurrent transformer reruns 8 shared layers twice with int6 entry/exit plus int8 loops and precomputed word-copy-frequency inputs to fix quantization compounding.",
       "tags": [
         "architecture",
+        "depth-width",
         "quantization",
         "non-record"
       ],

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T21:18:24.606Z",
+  "generatedAt": "2026-03-23T21:48:56.888Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 573,
     "title": "Record: 11L XSA4 + Multi-Pass Streaming Score-First Legal TTT (3-seed mean val_bpb=1.0523) ",
     "state": "open",
-    "updatedAt": "2026-03-23T21:08:54Z",
+    "updatedAt": "2026-03-23T21:39:03Z",
     "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/573",
     "authorLogin": "Sarimsaljook"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds multi-pass streaming score-first legal TTT with per-token min-NLL ensembling plus a rotary cache fix on the 11L XSA stack’s quantized backbone.",
+    "summary": "Three-pass streaming score-first legal TTT ensembles shifted trajectories so every token gets an adapted min-NLL while fixing RoPE cache clones.",
     "tags": [
-      "evaluation",
-      "architecture",
-      "quantization"
+      "sliding-window-eval",
+      "quantization",
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Multi-pass score-first TTT with shifted trajectories and per-token min NLL",
-      "Rotary cache clone fix to allow backprop through partial RoPE",
-      "Quantized 11L XSA4 backbone with GPTQ-lite int6 + EMA/SWA/TTT stack"
+      "Multi-pass streaming score-first legal TTT",
+      "Min-NLL per token across shifted trajectories",
+      "Rotary cache clone fix for RoPE backprop"
     ]
   },
   "compatibility": {

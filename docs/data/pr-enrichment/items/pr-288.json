@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T18:48:02.736Z",
+  "generatedAt": "2026-03-23T21:49:01.190Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 288,
     "title": "Non-record: Hybrid Depth-Recurrent Transformer + Int5 Quantization Studies",
     "state": "open",
-    "updatedAt": "2026-03-23T18:36:18Z",
-    "headSha": "a38d06e1afad3c88aaa3b55c6eb754eec8824b1d",
+    "updatedAt": "2026-03-23T21:39:57Z",
+    "headSha": "3764c79d0761407408b705c5fd0a536bc2602cb3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/288",
     "authorLogin": "trasnake87"
   },
@@ -20,18 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Hybrid depth-recurrent Transformer loops 8 layers twice with hybrid int6/int8 quantization to avoid compounding and adds precomputed position/copy/frequency features.",
+    "summary": "Hybrid depth-recurrent transformer reruns 8 shared layers twice with int6 entry/exit plus int8 loops and precomputed word-copy-frequency inputs to fix quantization compounding.",
     "tags": [
       "architecture",
+      "depth-width",
       "quantization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "hybrid int6/int8 entry-exit quantization for looped layers",
-      "depth-recurrence via 8-layer loop executed twice",
-      "precomputed word-position/copy/frequency input features"
+      "hybrid entry/exit quantization mix",
+      "looped shared layers with per-loop scaling",
+      "precomputed word-position/copy/frequency inputs"
     ]
   },
   "compatibility": {
