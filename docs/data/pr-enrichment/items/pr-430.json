@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T07:44:57.197Z",
+  "generatedAt": "2026-03-23T08:15:18.478Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 430,
     "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
     "state": "open",
-    "updatedAt": "2026-03-23T07:28:28Z",
-    "headSha": "c4dff44853fd64293091a9052e37ab53da4ed5b4",
+    "updatedAt": "2026-03-23T08:07:41Z",
+    "headSha": "599f989096d9fea9df7f132a431e488b353c45d3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/430",
     "authorLogin": "sahiee-dev"
   },
@@ -19,24 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Enhances thwu1's 10L Int5-MLP stack with XSA in late layers plus layerwise value residuals/gated attention, EMA averaging, and AdamW-based TTT.",
+    "summary": "Adds Exclusive Self Attention, per-layer value-residual/gated attention hooks, EMA, and AdamW test-time training on thwu1 base to sharpen validation adaptation.",
     "tags": [
+      "val-only",
       "attention",
-      "architecture",
-      "training-schedule"
+      "optimizer",
+      "evaluation"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Performs AdamW test-time training on validation tokens across frozen bottom layers prior to evaluation.",
     "techniques": [
-      "XSA on last layers to orthogonally remove self-value bias",
-      "Layerwise value residuals and gating to modulate the raw input signal",
-      "EMA weights combined with AdamW-powered test-time training"
+      "XSA in final layers to remove self-value bias",
+      "Layer-wise value-residual and gated attention scalars",
+      "EMA weights plus AdamW TTT over validation data"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

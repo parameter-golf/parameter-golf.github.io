@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T00:43:46.973Z",
+  "generatedAt": "2026-03-23T08:15:12.179Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 483,
     "title": "Track 10min_16mb: PR #287 family rerun at 585s wallclock (mean val_bpb=1.1346)",
-    "state": "open",
-    "updatedAt": "2026-03-23T00:32:52Z",
+    "state": "closed",
+    "updatedAt": "2026-03-23T08:12:50Z",
     "headSha": "46b85783ec9c8c86b6c2cd8fa99b0f41f929d0b1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/483",
     "authorLogin": "tmustier"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Rerun of PR#287 family using FlashAttention3, XSA4, and BigramHash with EMA/QAT export within a 585s cap to stay under the 16MB artifact limit.",
+    "summary": "PR #287 rerun pairs XSA-4 bigram heads, EMA+Muon optimizer, and int6 QAT with FlashAttention 3 while capping to 585s to keep artifacts <16MB.",
     "tags": [
       "attention",
-      "architecture",
-      "mixed-precision",
+      "optimizer",
       "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "FlashAttention3 + XSA4 + BigramHash recipe",
-      "EMA-enabled training with QAT and int6 export",
-      "585s wallclock cap to constrain artifacts"
+      "FlashAttention 3 with XSA_LAST_N=4 and BigramHash embedding",
+      "EMA decay and Muon optimizer knobs with QAT-enabled int6 export",
+      "585s wallclock cap on 8×H100 SXM to comply with 16MB artifact limit"
     ]
   },
   "compatibility": {

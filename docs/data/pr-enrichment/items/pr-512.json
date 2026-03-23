@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T08:14:55.081Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 512,
+    "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9968)",
+    "state": "open",
+    "updatedAt": "2026-03-23T07:58:41Z",
+    "headSha": "6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/512",
+    "authorLogin": "MatoTeziTanka"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_PROTEUS_v7/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "PROTEUS v7 packs an 11-layer quantized transformer with depth-scaled residuals plus backward-looking per-document LoRA TTT adaptation.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Training is standard, with eval-time LoRA adaptation per validation document rather than a val-only training regime.",
+    "techniques": [
+      "INT6 uniform quantization across weight matrices",
+      "Depth-scaled residuals (1/√(layer+1)) for 11 layers",
+      "Backward-looking per-document LoRA TTT with multi-epoch passes"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

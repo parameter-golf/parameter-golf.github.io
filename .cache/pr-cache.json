@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-23T07:44:44.333Z",
-  "lastSeenUpdatedAt": "2026-03-23T07:28:28Z",
+  "generatedAt": "2026-03-23T08:14:47.146Z",
+  "lastSeenUpdatedAt": "2026-03-23T08:12:50Z",
   "prs": {
     "1": {
       "number": 1,
@@ -36040,7 +36040,7 @@
     },
     "430": {
       "number": 430,
-      "updatedAt": "2026-03-23T07:28:28Z",
+      "updatedAt": "2026-03-23T08:07:41Z",
       "pr": {
         "number": 430,
         "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
@@ -36051,8 +36051,8 @@
         "authorLogin": "sahiee-dev",
         "authorName": null,
         "createdAt": "2026-03-22T15:12:45Z",
-        "updatedAt": "2026-03-23T07:28:28Z",
-        "headSha": "c4dff44853fd64293091a9052e37ab53da4ed5b4",
+        "updatedAt": "2026-03-23T08:07:41Z",
+        "headSha": "599f989096d9fea9df7f132a431e488b353c45d3",
         "headRepo": "sahiee-dev/parameter-golf"
       },
       "submissions": [
@@ -36114,16 +36114,16 @@
             "authorLogin": "sahiee-dev",
             "authorName": null,
             "createdAt": "2026-03-22T15:12:45Z",
-            "updatedAt": "2026-03-23T07:28:28Z",
-            "headSha": "c4dff44853fd64293091a9052e37ab53da4ed5b4",
+            "updatedAt": "2026-03-23T08:07:41Z",
+            "headSha": "599f989096d9fea9df7f132a431e488b353c45d3",
             "headRepo": "sahiee-dev/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c4dff44853fd64293091a9052e37ab53da4ed5b4/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/c4dff44853fd64293091a9052e37ab53da4ed5b4/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/c4dff44853fd64293091a9052e37ab53da4ed5b4/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/c4dff44853fd64293091a9052e37ab53da4ed5b4/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/c4dff44853fd64293091a9052e37ab53da4ed5b4/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/599f989096d9fea9df7f132a431e488b353c45d3/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/599f989096d9fea9df7f132a431e488b353c45d3/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/599f989096d9fea9df7f132a431e488b353c45d3/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/599f989096d9fea9df7f132a431e488b353c45d3/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/599f989096d9fea9df7f132a431e488b353c45d3/records/track_10min_16mb/2026-03-22_XSA_EMA_TTT_sahiee-dev",
             "pr": "https://github.com/openai/parameter-golf/pull/430"
           }
         }
@@ -40787,18 +40787,18 @@
     },
     "483": {
       "number": 483,
-      "updatedAt": "2026-03-23T00:32:52Z",
+      "updatedAt": "2026-03-23T08:12:50Z",
       "pr": {
         "number": 483,
         "title": "Track 10min_16mb: PR #287 family rerun at 585s wallclock (mean val_bpb=1.1346)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/483",
         "authorLogin": "tmustier",
         "authorName": null,
         "createdAt": "2026-03-23T00:32:52Z",
-        "updatedAt": "2026-03-23T00:32:52Z",
+        "updatedAt": "2026-03-23T08:12:50Z",
         "headSha": "46b85783ec9c8c86b6c2cd8fa99b0f41f929d0b1",
         "headRepo": "tmustier/parameter-golf-1"
       },
@@ -40806,7 +40806,7 @@
         {
           "id": "pr-483-records-track_10min_16mb-2026-03-23_PR287_XSA4_EMA_FA3_585s-submission-json",
           "source": "pull_request",
-          "status": "open",
+          "status": "closed",
           "category": "main-track",
           "track": {
             "path": "records/track_10min_16mb",
@@ -40854,14 +40854,14 @@
           "pr": {
             "number": 483,
             "title": "Track 10min_16mb: PR #287 family rerun at 585s wallclock (mean val_bpb=1.1346)",
-            "state": "open",
+            "state": "closed",
             "draft": false,
             "mergedAt": null,
             "htmlUrl": "https://github.com/openai/parameter-golf/pull/483",
             "authorLogin": "tmustier",
             "authorName": null,
             "createdAt": "2026-03-23T00:32:52Z",
-            "updatedAt": "2026-03-23T00:32:52Z",
+            "updatedAt": "2026-03-23T08:12:50Z",
             "headSha": "46b85783ec9c8c86b6c2cd8fa99b0f41f929d0b1",
             "headRepo": "tmustier/parameter-golf-1"
           },
@@ -43255,6 +43255,188 @@
             "script": "https://github.com/openai/parameter-golf/blob/530f77f4304888c2f73cc9e8dbc5d948bc5128f4/records/track_non_record_16mb/2026-03-22_MUD_Int5MLP_BigramHash_SWA/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/530f77f4304888c2f73cc9e8dbc5d948bc5128f4/records/track_non_record_16mb/2026-03-22_MUD_Int5MLP_BigramHash_SWA",
             "pr": "https://github.com/openai/parameter-golf/pull/510"
+          }
+        }
+      ]
+    },
+    "511": {
+      "number": 511,
+      "updatedAt": "2026-03-23T08:05:50Z",
+      "pr": {
+        "number": 511,
+        "title": "Record: Add PPM heuristic for test time learning ",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/511",
+        "authorLogin": "AnirudhRahul",
+        "authorName": null,
+        "createdAt": "2026-03-23T07:45:03Z",
+        "updatedAt": "2026-03-23T08:05:50Z",
+        "headSha": "0bfdfe4453bd6319db2758c313be459d10bb9ac1",
+        "headRepo": "AnirudhRahul/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-511-records-track_10min_16mb-2026-03-23_10L_Int5MLP_DelayedPPM_K15-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-23_10L_Int5MLP_DelayedPPM_K15",
+            "folderPath": "records/track_10min_16mb/2026-03-23_10L_Int5MLP_DelayedPPM_K15",
+            "submissionPath": "records/track_10min_16mb/2026-03-23_10L_Int5MLP_DelayedPPM_K15/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-23_10L_Int5MLP_DelayedPPM_K15/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-23_10L_Int5MLP_DelayedPPM_K15/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-23_10L_Int5MLP_DelayedPPM_K15/train_gpt.py"
+          },
+          "submission": {
+            "author": "thwu1",
+            "githubId": "thwu1",
+            "name": "10L Int5-MLP + BigramHash(10240) + Delayed PPM K=15",
+            "blurb": "Same 10L Int5-MLP + BigramHash(10240) base model, with a strictly causal delayed PPM bank added only at inference. The bank is delayed by 2048 tokens so it can only use targets outside the model's current context window. Fixed config: k_values=[16,12,8,6], min_confs=[1.0,1.0,1.0,0.95], min_counts=[1,1,1,1], boost_k=15. Mean over 3 seeds improves baseline by -0.00125764 bpb, and all seeds remain under the 16MB limit.",
+            "date": "2026-03-23"
+          },
+          "metrics": {
+            "valBpb": 1.1417373,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15850793,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 511,
+            "title": "Record: Add PPM heuristic for test time learning ",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/511",
+            "authorLogin": "AnirudhRahul",
+            "authorName": null,
+            "createdAt": "2026-03-23T07:45:03Z",
+            "updatedAt": "2026-03-23T08:05:50Z",
+            "headSha": "0bfdfe4453bd6319db2758c313be459d10bb9ac1",
+            "headRepo": "AnirudhRahul/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0bfdfe4453bd6319db2758c313be459d10bb9ac1/records/track_10min_16mb/2026-03-23_10L_Int5MLP_DelayedPPM_K15/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/0bfdfe4453bd6319db2758c313be459d10bb9ac1/records/track_10min_16mb/2026-03-23_10L_Int5MLP_DelayedPPM_K15/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/0bfdfe4453bd6319db2758c313be459d10bb9ac1/records/track_10min_16mb/2026-03-23_10L_Int5MLP_DelayedPPM_K15/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/0bfdfe4453bd6319db2758c313be459d10bb9ac1/records/track_10min_16mb/2026-03-23_10L_Int5MLP_DelayedPPM_K15/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/0bfdfe4453bd6319db2758c313be459d10bb9ac1/records/track_10min_16mb/2026-03-23_10L_Int5MLP_DelayedPPM_K15",
+            "pr": "https://github.com/openai/parameter-golf/pull/511"
+          }
+        }
+      ]
+    },
+    "512": {
+      "number": 512,
+      "updatedAt": "2026-03-23T07:58:41Z",
+      "pr": {
+        "number": 512,
+        "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9968)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/512",
+        "authorLogin": "MatoTeziTanka",
+        "authorName": null,
+        "createdAt": "2026-03-23T07:58:41Z",
+        "updatedAt": "2026-03-23T07:58:41Z",
+        "headSha": "6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6",
+        "headRepo": "MatoTeziTanka/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-512-records-track_10min_16mb-2026-03-23_PROTEUS_v7-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-23_PROTEUS_v7",
+            "folderPath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7",
+            "submissionPath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7/train_gpt.py"
+          },
+          "submission": {
+            "author": "Mato (LightSpeedUp)",
+            "githubId": "MatoTeziTanka",
+            "name": "PROTEUS v7",
+            "blurb": "11L, INT6 uniform, depth-scaled residual, backward-looking LoRA TTT (batch=64, multi-epoch). Built with PROTEUS by LightSpeedUp — lightspeedup.com",
+            "date": "2026-03-23T07:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 0.9525,
+            "valLoss": 1.6068,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15429458,
+            "bytesCode": 67148,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 512,
+            "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9968)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/512",
+            "authorLogin": "MatoTeziTanka",
+            "authorName": null,
+            "createdAt": "2026-03-23T07:58:41Z",
+            "updatedAt": "2026-03-23T07:58:41Z",
+            "headSha": "6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6",
+            "headRepo": "MatoTeziTanka/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6/records/track_10min_16mb/2026-03-23_PROTEUS_v7/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6/records/track_10min_16mb/2026-03-23_PROTEUS_v7/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6/records/track_10min_16mb/2026-03-23_PROTEUS_v7/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6/records/track_10min_16mb/2026-03-23_PROTEUS_v7/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6/records/track_10min_16mb/2026-03-23_PROTEUS_v7",
+            "pr": "https://github.com/openai/parameter-golf/pull/512"
           }
         }
       ]

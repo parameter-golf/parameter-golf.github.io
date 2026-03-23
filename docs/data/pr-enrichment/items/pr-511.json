@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-23T08:15:01.647Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 511,
+    "title": "Record: Add PPM heuristic for test time learning ",
+    "state": "open",
+    "updatedAt": "2026-03-23T08:05:50Z",
+    "headSha": "0bfdfe4453bd6319db2758c313be459d10bb9ac1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/511",
+    "authorLogin": "AnirudhRahul"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_10L_Int5MLP_DelayedPPM_K15/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds delayed outside-context PPM bank reusing the 10L Int5-MLP BigramHash model to supply long-range targets during inference.",
+    "tags": [
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Delayed 2048-token PPM bank holding only targets beyond the current context",
+      "Fixed inference k/min/boost configuration for PPM bank",
+      "Self-contained trie-based inference snapshot for leaderboard submission"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

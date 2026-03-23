@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-23T07:44:44.362Z",
+  "generatedAt": "2026-03-23T08:14:47.171Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 397,
+    "submissions": 399,
     "official": 1,
-    "openPr": 341,
+    "openPr": 342,
     "mergedPr": 16,
-    "closedPr": 39,
-    "prBacked": 397,
+    "closedPr": 40,
+    "prBacked": 399,
     "readmeListed": 15,
     "collectorErrors": 0
   },
@@ -91,7 +91,7 @@
       }
     },
     "openPrMainTrack": {
-      "id": "record-records-track_10min_16mb-2026-03-19_PaidPrefix_8xH100",
+      "id": "record-records-track_10min_16mb-2026-03-23_PROTEUS_v7",
       "source": "pull_request",
       "status": "open",
       "category": "main-track",
@@ -103,23 +103,23 @@
         "category": "main-track"
       },
       "record": {
-        "folderName": "2026-03-19_PaidPrefix_8xH100",
-        "folderPath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100",
-        "submissionPath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/train_gpt.py"
+        "folderName": "2026-03-23_PROTEUS_v7",
+        "folderPath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7",
+        "submissionPath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7/train_gpt.py"
       },
       "submission": {
-        "author": "Spokane Way",
-        "githubId": "spokane-way",
-        "name": "Paid Prefix + Train-Only 7L 384d",
-        "blurb": "Two-part artifact: 8.75 MB lzma-compressed val target tokens (20.8% coverage, exact predictions) + 7.12 MB int8+zlib 7-layer 384d transformer trained exclusively on fineweb train data. Model never sees validation tokens before evaluation.",
-        "date": "2026-03-20T00:00:00Z"
+        "author": "Mato (LightSpeedUp)",
+        "githubId": "MatoTeziTanka",
+        "name": "PROTEUS v7",
+        "blurb": "11L, INT6 uniform, depth-scaled residual, backward-looking LoRA TTT (batch=64, multi-epoch). Built with PROTEUS by LightSpeedUp — lightspeedup.com",
+        "date": "2026-03-23T07:00:00Z"
       },
       "metrics": {
-        "valBpb": 1.02174288,
-        "valLoss": 1.72517006,
+        "valBpb": 0.9525,
+        "valLoss": 1.6068,
         "preQuantValBpb": null,
         "preQuantValLoss": null,
         "stepStop": null,
@@ -127,8 +127,8 @@
         "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": 15930371,
-        "bytesCode": 60315,
+        "bytesTotal": 15429458,
+        "bytesCode": 67148,
         "bytesModelInt8Zlib": null
       },
       "flags": {
@@ -139,26 +139,26 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 168,
-        "title": "SOTA Attempt: Paid prefix (val_bpb=1.0238)",
+        "number": 512,
+        "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9968)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/168",
-        "authorLogin": "spokane-way",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/512",
+        "authorLogin": "MatoTeziTanka",
         "authorName": null,
-        "createdAt": "2026-03-20T04:29:35Z",
-        "updatedAt": "2026-03-21T16:38:11Z",
-        "headSha": "83aee2852eb3375309580957f7d3ae6934488428",
-        "headRepo": "spokane-way/parameter-golf"
+        "createdAt": "2026-03-23T07:58:41Z",
+        "updatedAt": "2026-03-23T07:58:41Z",
+        "headSha": "6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6",
+        "headRepo": "MatoTeziTanka/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100",
-        "pr": "https://github.com/openai/parameter-golf/pull/168",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6/records/track_10min_16mb/2026-03-23_PROTEUS_v7/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6/records/track_10min_16mb/2026-03-23_PROTEUS_v7/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6/records/track_10min_16mb/2026-03-23_PROTEUS_v7/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6/records/track_10min_16mb/2026-03-23_PROTEUS_v7/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6/records/track_10min_16mb/2026-03-23_PROTEUS_v7",
+        "pr": "https://github.com/openai/parameter-golf/pull/512",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
