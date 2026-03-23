@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T20:18:13.638Z",
+  "generatedAt": "2026-03-23T23:49:49.502Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 568,
     "title": "Record: PROTEUS v8 — 11L INT6 + LoRA TTT 5ep cosine (mean val_bpb=0.7853, 4 seeds)",
     "state": "open",
-    "updatedAt": "2026-03-23T19:48:32Z",
+    "updatedAt": "2026-03-23T23:43:26Z",
     "headSha": "6b59f5e9e2c286ed655666b236e796e08163c8b4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/568",
     "authorLogin": "MatoTeziTanka"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "PROTEUS v8 adds 5-epoch cosine-scheduled LoRA TTT scoring each chunk/epoch to the same 11L INT6 model for clearer, compliant evaluation.",
+    "summary": "PROTEUS v8 keeps the 11L INT6 backbone while using five-epoch cosine-scheduled LoRA TTT that scores every epoch before training each chunk.",
     "tags": [
-      "evaluation",
       "training-schedule",
       "quantization",
-      "optimizer"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Backward-looking LoRA TTT scoring every epoch",
-      "Cosine LR across 5 sequential TTT epochs",
-      "INT6 quantized 11-layer transformer baseline"
+      "LoRA TTT with per-epoch scoring",
+      "Cosine LR decay across five TTT epochs",
+      "INT6 model with pruning to meet 16MB"
     ]
   },
   "compatibility": {

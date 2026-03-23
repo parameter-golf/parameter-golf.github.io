@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-23T23:19:04.205Z",
-  "lastSeenUpdatedAt": "2026-03-23T23:18:22Z",
+  "generatedAt": "2026-03-23T23:49:21.681Z",
+  "lastSeenUpdatedAt": "2026-03-23T23:45:03Z",
   "prs": {
     "1": {
       "number": 1,
@@ -41898,7 +41898,7 @@
     },
     "496": {
       "number": 496,
-      "updatedAt": "2026-03-23T02:52:55Z",
+      "updatedAt": "2026-03-23T23:23:36Z",
       "pr": {
         "number": 496,
         "title": "Non-record: O(n) field LM, 2L FP16 (no attention)",
@@ -41909,7 +41909,7 @@
         "authorLogin": "galaxy4552",
         "authorName": null,
         "createdAt": "2026-03-23T02:52:55Z",
-        "updatedAt": "2026-03-23T02:52:55Z",
+        "updatedAt": "2026-03-23T23:23:36Z",
         "headSha": "33b5ab1a1ae958c18dd2ab4c5bf159c7a0c89611",
         "headRepo": "galaxy4552/parameter-golf"
       },
@@ -41972,7 +41972,7 @@
             "authorLogin": "galaxy4552",
             "authorName": null,
             "createdAt": "2026-03-23T02:52:55Z",
-            "updatedAt": "2026-03-23T02:52:55Z",
+            "updatedAt": "2026-03-23T23:23:36Z",
             "headSha": "33b5ab1a1ae958c18dd2ab4c5bf159c7a0c89611",
             "headRepo": "galaxy4552/parameter-golf"
           },
@@ -43352,7 +43352,7 @@
     },
     "512": {
       "number": 512,
-      "updatedAt": "2026-03-23T19:44:01Z",
+      "updatedAt": "2026-03-23T23:45:03Z",
       "pr": {
         "number": 512,
         "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9512, 3 seeds)",
@@ -43363,7 +43363,7 @@
         "authorLogin": "MatoTeziTanka",
         "authorName": null,
         "createdAt": "2026-03-23T07:58:41Z",
-        "updatedAt": "2026-03-23T19:44:01Z",
+        "updatedAt": "2026-03-23T23:45:03Z",
         "headSha": "502a29f01510b50a872a8b3737dfe874a3478e2d",
         "headRepo": "MatoTeziTanka/parameter-golf"
       },
@@ -43426,7 +43426,7 @@
             "authorLogin": "MatoTeziTanka",
             "authorName": null,
             "createdAt": "2026-03-23T07:58:41Z",
-            "updatedAt": "2026-03-23T19:44:01Z",
+            "updatedAt": "2026-03-23T23:45:03Z",
             "headSha": "502a29f01510b50a872a8b3737dfe874a3478e2d",
             "headRepo": "MatoTeziTanka/parameter-golf"
           },
@@ -46090,18 +46090,18 @@
     },
     "541": {
       "number": 541,
-      "updatedAt": "2026-03-23T16:10:43Z",
+      "updatedAt": "2026-03-23T23:24:07Z",
       "pr": {
         "number": 541,
         "title": "Hybrid Hypergraph + Transformer approach",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/541",
         "authorLogin": "immartian",
         "authorName": null,
         "createdAt": "2026-03-23T15:21:42Z",
-        "updatedAt": "2026-03-23T16:10:43Z",
+        "updatedAt": "2026-03-23T23:24:07Z",
         "headSha": "3b9720b75b683f4584367f4788e56401a0258ff6",
         "headRepo": "immartian/parameter-golf"
       },
@@ -48398,7 +48398,7 @@
     },
     "568": {
       "number": 568,
-      "updatedAt": "2026-03-23T19:48:32Z",
+      "updatedAt": "2026-03-23T23:43:26Z",
       "pr": {
         "number": 568,
         "title": "Record: PROTEUS v8 — 11L INT6 + LoRA TTT 5ep cosine (mean val_bpb=0.7853, 4 seeds)",
@@ -48409,7 +48409,7 @@
         "authorLogin": "MatoTeziTanka",
         "authorName": null,
         "createdAt": "2026-03-23T19:43:44Z",
-        "updatedAt": "2026-03-23T19:48:32Z",
+        "updatedAt": "2026-03-23T23:43:26Z",
         "headSha": "6b59f5e9e2c286ed655666b236e796e08163c8b4",
         "headRepo": "MatoTeziTanka/parameter-golf"
       },
@@ -48472,7 +48472,7 @@
             "authorLogin": "MatoTeziTanka",
             "authorName": null,
             "createdAt": "2026-03-23T19:43:44Z",
-            "updatedAt": "2026-03-23T19:48:32Z",
+            "updatedAt": "2026-03-23T23:43:26Z",
             "headSha": "6b59f5e9e2c286ed655666b236e796e08163c8b4",
             "headRepo": "MatoTeziTanka/parameter-golf"
           },
@@ -49942,18 +49942,18 @@
     },
     "585": {
       "number": 585,
-      "updatedAt": "2026-03-23T23:14:19Z",
+      "updatedAt": "2026-03-23T23:28:17Z",
       "pr": {
         "number": 585,
         "title": "Record: int5 GPTQ + 33.6M model (3-seed mean val_bpb=1.1179)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/585",
         "authorLogin": "EthanYangTW",
         "authorName": null,
         "createdAt": "2026-03-23T23:07:57Z",
-        "updatedAt": "2026-03-23T23:14:19Z",
+        "updatedAt": "2026-03-23T23:28:17Z",
         "headSha": "e1595978f7da5e674ea976d4b832e7f81b4a94ed",
         "headRepo": "EthanYangTW/parameter-golf"
       },
@@ -49961,7 +49961,7 @@
         {
           "id": "pr-585-records-track_10min_16mb-2026-03-24_Int5GPTQ_33M_LegalTTT-submission-json",
           "source": "pull_request",
-          "status": "open",
+          "status": "closed",
           "category": "main-track",
           "track": {
             "path": "records/track_10min_16mb",
@@ -50009,14 +50009,14 @@
           "pr": {
             "number": 585,
             "title": "Record: int5 GPTQ + 33.6M model (3-seed mean val_bpb=1.1179)",
-            "state": "open",
+            "state": "closed",
             "draft": false,
             "mergedAt": null,
             "htmlUrl": "https://github.com/openai/parameter-golf/pull/585",
             "authorLogin": "EthanYangTW",
             "authorName": null,
             "createdAt": "2026-03-23T23:07:57Z",
-            "updatedAt": "2026-03-23T23:14:19Z",
+            "updatedAt": "2026-03-23T23:28:17Z",
             "headSha": "e1595978f7da5e674ea976d4b832e7f81b4a94ed",
             "headRepo": "EthanYangTW/parameter-golf"
           },
@@ -50118,6 +50118,207 @@
             "script": "https://github.com/openai/parameter-golf/blob/d06ff895821719c9e979e9c6097ff71e53c829e0/records/track_non_record_16mb/2026-03-24_Hadamard_VE128_QuIP-lite/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/d06ff895821719c9e979e9c6097ff71e53c829e0/records/track_non_record_16mb/2026-03-24_Hadamard_VE128_QuIP-lite",
             "pr": "https://github.com/openai/parameter-golf/pull/586"
+          }
+        }
+      ]
+    },
+    "587": {
+      "number": 587,
+      "updatedAt": "2026-03-23T23:20:11Z",
+      "pr": {
+        "number": 587,
+        "title": "XSA-11 + GPTQ b64/pd002 — 3-seed mean val_bpb 1.1208",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/587",
+        "authorLogin": "newjordan",
+        "authorName": null,
+        "createdAt": "2026-03-23T23:20:11Z",
+        "updatedAt": "2026-03-23T23:20:11Z",
+        "headSha": "303192e9ac65fa1673de647b02d1bb7365c37198",
+        "headRepo": "newjordan/parameter-golf-1"
+      },
+      "submissions": []
+    },
+    "588": {
+      "number": 588,
+      "updatedAt": "2026-03-23T23:31:24Z",
+      "pr": {
+        "number": 588,
+        "title": "[WIP][non-record] 8L/448 width branch local results",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/588",
+        "authorLogin": "andyluo22",
+        "authorName": null,
+        "createdAt": "2026-03-23T23:29:01Z",
+        "updatedAt": "2026-03-23T23:31:24Z",
+        "headSha": "152ca83d655f0a652421be66d81ac37309a87082",
+        "headRepo": "andyluo22/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-588-records-track_10min_16mb-2026-03-23_8L448_WD04_WidthBranch_WIP-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-23_8L448_WD04_WidthBranch_WIP",
+            "folderPath": "records/track_10min_16mb/2026-03-23_8L448_WD04_WidthBranch_WIP",
+            "submissionPath": "records/track_10min_16mb/2026-03-23_8L448_WD04_WidthBranch_WIP/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-23_8L448_WD04_WidthBranch_WIP/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-23_8L448_WD04_WidthBranch_WIP/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-23_8L448_WD04_WidthBranch_WIP/train_gpt.py"
+          },
+          "submission": {
+            "author": "Andy Luo",
+            "githubId": "andyluo22",
+            "name": "8L/448 Width Branch WIP",
+            "blurb": "Non-record WIP submission from local 1xGPU search. Confirmed 8L/448 width branch with sliding eval and Muon WD=0.04; best local exact roundtrip came from seed 42. Using this PR as a compute-grant reference while continuing official-track experiments.",
+            "date": "2026-03-23T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.41200403,
+            "valLoss": 2.38410966,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 7063821,
+            "bytesCode": 67050,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 588,
+            "title": "[WIP][non-record] 8L/448 width branch local results",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/588",
+            "authorLogin": "andyluo22",
+            "authorName": null,
+            "createdAt": "2026-03-23T23:29:01Z",
+            "updatedAt": "2026-03-23T23:31:24Z",
+            "headSha": "152ca83d655f0a652421be66d81ac37309a87082",
+            "headRepo": "andyluo22/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/152ca83d655f0a652421be66d81ac37309a87082/records/track_10min_16mb/2026-03-23_8L448_WD04_WidthBranch_WIP/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/152ca83d655f0a652421be66d81ac37309a87082/records/track_10min_16mb/2026-03-23_8L448_WD04_WidthBranch_WIP/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/152ca83d655f0a652421be66d81ac37309a87082/records/track_10min_16mb/2026-03-23_8L448_WD04_WidthBranch_WIP/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/152ca83d655f0a652421be66d81ac37309a87082/records/track_10min_16mb/2026-03-23_8L448_WD04_WidthBranch_WIP/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/152ca83d655f0a652421be66d81ac37309a87082/records/track_10min_16mb/2026-03-23_8L448_WD04_WidthBranch_WIP",
+            "pr": "https://github.com/openai/parameter-golf/pull/588"
+          }
+        }
+      ]
+    },
+    "589": {
+      "number": 589,
+      "updatedAt": "2026-03-23T23:44:39Z",
+      "pr": {
+        "number": 589,
+        "title": "Record: Late Soft-Round QAT + Score-First Backward-Looking TTT — val_bpb 1.1178",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/589",
+        "authorLogin": "RoyiRa",
+        "authorName": null,
+        "createdAt": "2026-03-23T23:44:39Z",
+        "updatedAt": "2026-03-23T23:44:39Z",
+        "headSha": "54e0d20f0a684f8af9e4aaa243dc2de919a2ff1d",
+        "headRepo": "RoyiRa/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-589-records-track_10min_16mb-2026-03-24_LeakyReLU2_LegalTTT_1-1178-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-24_LeakyReLU2_LegalTTT_1.1178",
+            "folderPath": "records/track_10min_16mb/2026-03-24_LeakyReLU2_LegalTTT_1.1178",
+            "submissionPath": "records/track_10min_16mb/2026-03-24_LeakyReLU2_LegalTTT_1.1178/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-24_LeakyReLU2_LegalTTT_1.1178/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-24_LeakyReLU2_LegalTTT_1.1178/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-24_LeakyReLU2_LegalTTT_1.1178/train_gpt.py"
+          },
+          "submission": {
+            "author": "royi",
+            "githubId": "royira",
+            "name": "Record: Late Soft-Round QAT + Score-First Backward-Looking TTT 3-seed mean val_bpb 1.1178",
+            "blurb": "LeakyReLU(0.5)² activation + legal score-first TTT (SGD, cosine decay, 32K chunks). Built on PR#414 stack (11L, XSA4, Partial RoPE 16/64, LN Scale, VE128, EMA, SWA, SmearGate, BigramHash 3072, int6+zstd).",
+            "date": "2026-03-24T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.11777448,
+            "valLoss": 1.88731039,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15752363,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 589,
+            "title": "Record: Late Soft-Round QAT + Score-First Backward-Looking TTT — val_bpb 1.1178",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/589",
+            "authorLogin": "RoyiRa",
+            "authorName": null,
+            "createdAt": "2026-03-23T23:44:39Z",
+            "updatedAt": "2026-03-23T23:44:39Z",
+            "headSha": "54e0d20f0a684f8af9e4aaa243dc2de919a2ff1d",
+            "headRepo": "RoyiRa/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/54e0d20f0a684f8af9e4aaa243dc2de919a2ff1d/records/track_10min_16mb/2026-03-24_LeakyReLU2_LegalTTT_1.1178/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/54e0d20f0a684f8af9e4aaa243dc2de919a2ff1d/records/track_10min_16mb/2026-03-24_LeakyReLU2_LegalTTT_1.1178/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/54e0d20f0a684f8af9e4aaa243dc2de919a2ff1d/records/track_10min_16mb/2026-03-24_LeakyReLU2_LegalTTT_1.1178/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/54e0d20f0a684f8af9e4aaa243dc2de919a2ff1d/records/track_10min_16mb/2026-03-24_LeakyReLU2_LegalTTT_1.1178/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/54e0d20f0a684f8af9e4aaa243dc2de919a2ff1d/records/track_10min_16mb/2026-03-24_LeakyReLU2_LegalTTT_1.1178",
+            "pr": "https://github.com/openai/parameter-golf/pull/589"
           }
         }
       ]

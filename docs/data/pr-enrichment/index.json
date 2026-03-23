@@ -1,8 +1,56 @@
 {
-  "generatedAt": "2026-03-23T23:19:19.851Z",
+  "generatedAt": "2026-03-23T23:50:01.323Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 589,
+      "title": "Record: Late Soft-Round QAT + Score-First Backward-Looking TTT — val_bpb 1.1178",
+      "status": "open",
+      "updatedAt": "2026-03-23T23:44:39Z",
+      "headSha": "54e0d20f0a684f8af9e4aaa243dc2de919a2ff1d",
+      "generatedAt": "2026-03-23T23:49:30.637Z",
+      "summary": "Uses late-stage soft-round STE surrogate for int6 QAT and score-first backward-looking TTT that sequentially adapts on validation chunks.",
+      "tags": [
+        "val-only",
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-589.json"
+    },
+    {
+      "prNumber": 588,
+      "title": "[WIP][non-record] 8L/448 width branch local results",
+      "status": "open",
+      "updatedAt": "2026-03-23T23:31:24Z",
+      "headSha": "152ca83d655f0a652421be66d81ac37309a87082",
+      "generatedAt": "2026-03-23T23:49:37.184Z",
+      "summary": "Local 8-layer/448-width branch finds width beats depth under the 16MB limit, combining sliding eval with Muon weight decay for compact scaling.",
+      "tags": [
+        "architecture",
+        "sliding-window-eval",
+        "muon",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-588.json"
+    },
     {
       "prNumber": 586,
       "title": "Record: 11L + Hadamard Rotation + VE128 + cuDNN SDPA (val_bpb: 1.1365)",
@@ -29,16 +77,15 @@
     {
       "prNumber": 585,
       "title": "Record: int5 GPTQ + 33.6M model (3-seed mean val_bpb=1.1179)",
-      "status": "open",
-      "updatedAt": "2026-03-23T23:14:19Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T23:28:17Z",
       "headSha": "e1595978f7da5e674ea976d4b832e7f81b4a94ed",
-      "generatedAt": "2026-03-23T23:19:15.951Z",
-      "summary": "Legal score-first TTT trains a 33.6M MLP/BigramHash model compressed via int5 GPTQ to squeeze under 16MB.",
+      "generatedAt": "2026-03-23T23:49:43.284Z",
+      "summary": "Int5 GPTQ compression enables a 33.6M MHA8/MLP3.5x BigramHash+XSA model to fit under 16MB while training with legal score-first TTT.",
       "tags": [
         "quantization",
         "architecture",
-        "training-schedule",
-        "evaluation"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -331,15 +378,14 @@
       "prNumber": 568,
       "title": "Record: PROTEUS v8 — 11L INT6 + LoRA TTT 5ep cosine (mean val_bpb=0.7853, 4 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-23T19:48:32Z",
+      "updatedAt": "2026-03-23T23:43:26Z",
       "headSha": "6b59f5e9e2c286ed655666b236e796e08163c8b4",
-      "generatedAt": "2026-03-23T20:18:13.638Z",
-      "summary": "PROTEUS v8 adds 5-epoch cosine-scheduled LoRA TTT scoring each chunk/epoch to the same 11L INT6 model for clearer, compliant evaluation.",
+      "generatedAt": "2026-03-23T23:49:49.502Z",
+      "summary": "PROTEUS v8 keeps the 11L INT6 backbone while using five-epoch cosine-scheduled LoRA TTT that scores every epoch before training each chunk.",
       "tags": [
-        "evaluation",
         "training-schedule",
         "quantization",
-        "optimizer"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1214,10 +1260,10 @@
       "prNumber": 512,
       "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9512, 3 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-23T19:44:01Z",
+      "updatedAt": "2026-03-23T23:45:03Z",
       "headSha": "502a29f01510b50a872a8b3737dfe874a3478e2d",
-      "generatedAt": "2026-03-23T19:47:49.325Z",
-      "summary": "11-layer INT6 quantized transformer uses depth-scaled residuals plus backward-looking multi-epoch LoRA TTT for stable evaluation adaptation.",
+      "generatedAt": "2026-03-23T23:49:56.179Z",
+      "summary": "11-layer INT6 transformer using depth-scaled residuals and backward-looking per-document LoRA TTT adaptation during evaluation.",
       "tags": [
         "val-only",
         "quantization",
@@ -1467,14 +1513,13 @@
       "prNumber": 496,
       "title": "Non-record: O(n) field LM, 2L FP16 (no attention)",
       "status": "open",
-      "updatedAt": "2026-03-23T02:52:55Z",
+      "updatedAt": "2026-03-23T23:23:36Z",
       "headSha": "33b5ab1a1ae958c18dd2ab4c5bf159c7a0c89611",
-      "generatedAt": "2026-03-23T03:14:04.907Z",
-      "summary": "Field-based Japanese LM uses linear scoring over compressed embeddings to replace transformer attention for deterministic CPU inference.",
+      "generatedAt": "2026-03-23T23:50:01.249Z",
+      "summary": "PipeOwl swaps transformers for a field-based FP16 embedding table plus linear scoring to enable non-attention O(n) inference within 16MB.",
       "tags": [
         "architecture",
-        "compression",
-        "mixed-precision",
+        "quantization",
         "non-record"
       ],
       "flags": {

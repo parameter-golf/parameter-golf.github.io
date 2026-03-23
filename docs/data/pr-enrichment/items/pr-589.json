@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T23:49:30.637Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 589,
+    "title": "Record: Late Soft-Round QAT + Score-First Backward-Looking TTT — val_bpb 1.1178",
+    "state": "open",
+    "updatedAt": "2026-03-23T23:44:39Z",
+    "headSha": "54e0d20f0a684f8af9e4aaa243dc2de919a2ff1d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/589",
+    "authorLogin": "RoyiRa"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_LeakyReLU2_LegalTTT_1.1178/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Uses late-stage soft-round STE surrogate for int6 QAT and score-first backward-looking TTT that sequentially adapts on validation chunks.",
+    "tags": [
+      "val-only",
+      "quantization",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT adaptation trains exclusively on segmented validation tokens, so the reported regime is val-only training.",
+    "techniques": [
+      "Late soft-round STE surrogate for int6 QAT",
+      "Score-first backward-looking TTT on sequential validation chunks"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T23:49:37.184Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 588,
+    "title": "[WIP][non-record] 8L/448 width branch local results",
+    "state": "open",
+    "updatedAt": "2026-03-23T23:31:24Z",
+    "headSha": "152ca83d655f0a652421be66d81ac37309a87082",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/588",
+    "authorLogin": "andyluo22"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_8L448_WD04_WidthBranch_WIP/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Local 8-layer/448-width branch finds width beats depth under the 16MB limit, combining sliding eval with Muon weight decay for compact scaling.",
+    "tags": [
+      "architecture",
+      "sliding-window-eval",
+      "muon",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "8-layer model widened to 448 dim within artifact cap",
+      "Muon weight decay (0.04) paired with sliding evaluation stride"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

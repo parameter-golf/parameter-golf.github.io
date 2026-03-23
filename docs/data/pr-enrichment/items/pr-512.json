@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T19:47:49.325Z",
+  "generatedAt": "2026-03-23T23:49:56.179Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 512,
     "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9512, 3 seeds)",
     "state": "open",
-    "updatedAt": "2026-03-23T19:44:01Z",
+    "updatedAt": "2026-03-23T23:45:03Z",
     "headSha": "502a29f01510b50a872a8b3737dfe874a3478e2d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/512",
     "authorLogin": "MatoTeziTanka"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer INT6 quantized transformer uses depth-scaled residuals plus backward-looking multi-epoch LoRA TTT for stable evaluation adaptation.",
+    "summary": "11-layer INT6 transformer using depth-scaled residuals and backward-looking per-document LoRA TTT adaptation during evaluation.",
     "tags": [
       "val-only",
       "quantization",
@@ -27,11 +27,11 @@
       "evaluation"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "LoRA weights are trained per validation document during multi-epoch test-time training, so adaptation occurs solely on the validation shards.",
+    "valOnlyReasoning": "LoRA adapters are trained on validation documents during multi-epoch TTT evaluation.",
     "techniques": [
-      "INT6 uniform quantization across weight matrices",
-      "Depth-scaled residuals (1/√(layer+1)) for stability",
-      "Backward-looking multi-epoch per-document LoRA TTT"
+      "INT6 uniform quantization with depth-scaled residual scaling",
+      "Backward-looking LoRA TTT per-document multi-epoch adaptation",
+      "Fresh model copy for torch.compile-compatible LoRA eval"
     ]
   },
   "compatibility": {
