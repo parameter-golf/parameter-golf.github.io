@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-24T17:25:56.661Z",
-  "lastSeenUpdatedAt": "2026-03-24T17:17:18Z",
+  "generatedAt": "2026-03-24T17:56:04.445Z",
+  "lastSeenUpdatedAt": "2026-03-24T17:48:12Z",
   "prs": {
     "1": {
       "number": 1,
@@ -27469,10 +27469,10 @@
     },
     "344": {
       "number": 344,
-      "updatedAt": "2026-03-24T10:34:16Z",
+      "updatedAt": "2026-03-24T17:41:21Z",
       "pr": {
         "number": 344,
-        "title": "Non-record: 11L Full SOTA Stack + Score-First TTT (val_bpb=1.1383, 1xH100)",
+        "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -27480,41 +27480,41 @@
         "authorLogin": "aryanbhosale",
         "authorName": null,
         "createdAt": "2026-03-21T14:57:21Z",
-        "updatedAt": "2026-03-24T10:34:16Z",
-        "headSha": "738f8ca8b5e14a788c4e4fc4d0a5caee2c138c7b",
+        "updatedAt": "2026-03-24T17:41:21Z",
+        "headSha": "56ac1b395f4364f1ebb7fe5f2f125e536e5193d3",
         "headRepo": "aryanbhosale/parameter-golf"
       },
       "submissions": [
         {
-          "id": "pr-344-records-track_non_record_16mb-2026-03-24_SOTA_11L_TTT-submission-json",
+          "id": "pr-344-records-track_10min_16mb-2026-03-24_11L_SOTA_MLP35x-submission-json",
           "source": "pull_request",
           "status": "open",
-          "category": "non-record",
+          "category": "main-track",
           "track": {
-            "path": "records/track_non_record_16mb",
-            "slug": "track_non_record_16mb",
-            "label": "Non-record / 16MB",
-            "official": false,
-            "category": "non-record"
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
           },
           "record": {
-            "folderName": "2026-03-24_SOTA_11L_TTT",
-            "folderPath": "records/track_non_record_16mb/2026-03-24_SOTA_11L_TTT",
-            "submissionPath": "records/track_non_record_16mb/2026-03-24_SOTA_11L_TTT/submission.json",
-            "readmePath": "records/track_non_record_16mb/2026-03-24_SOTA_11L_TTT/README.md",
-            "trainLogPath": "records/track_non_record_16mb/2026-03-24_SOTA_11L_TTT/train.log",
-            "scriptPath": "records/track_non_record_16mb/2026-03-24_SOTA_11L_TTT/train_gpt.py"
+            "folderName": "2026-03-24_11L_SOTA_MLP35x",
+            "folderPath": "records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x",
+            "submissionPath": "records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/train_gpt.py"
           },
           "submission": {
             "author": "Aryan Bhosale",
             "githubId": "aryanbhosale",
-            "name": "11L Full SOTA Stack + Score-First TTT (1xH100)",
-            "blurb": "11-layer transformer with LeakyReLU(0.5)^2, SmearGate, BigramHash(10240), TrigramHash(4096), Value Residual, Gated Attention, XSA-all-11, Partial RoPE(16/64), int6+GPTQ-lite+zstd-22. Score-first TTT with frozen embeddings, per-layer LR groups, cosine schedule. Validated on 1xH100 via 30-experiment autoresearch loop.",
-            "date": "2026-03-24T00:00:00Z"
+            "name": "11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330)",
+            "blurb": "11-layer 512d transformer with MLP 3.5x LeakyReLU(0.5)^2, SmearGate, BigramHash(10240), TrigramHash(4096), Value Residual, Gated Attention, XSA-all-11, Partial RoPE(16/64). Muon lr=0.03 WD=0.04, EMA(0.997), Late QAT, int6+GPTQ-lite+zstd-22. 3-seed mean 1.1330 (std=0.0007) on 8xH100 SXM.",
+            "date": "2026-03-24T12:00:00Z"
           },
           "metrics": {
-            "valBpb": 1.1383,
-            "valLoss": 1.919,
+            "valBpb": 1.133,
+            "valLoss": 1.9129,
             "preQuantValBpb": null,
             "preQuantValLoss": null,
             "stepStop": null,
@@ -27522,8 +27522,8 @@
             "evalTimeSeconds": null
           },
           "artifact": {
-            "bytesTotal": 8513097,
-            "bytesCode": 64193,
+            "bytesTotal": 10500000,
+            "bytesCode": 70872,
             "bytesModelInt8Zlib": null
           },
           "flags": {
@@ -27535,7 +27535,7 @@
           },
           "pr": {
             "number": 344,
-            "title": "Non-record: 11L Full SOTA Stack + Score-First TTT (val_bpb=1.1383, 1xH100)",
+            "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100)",
             "state": "open",
             "draft": false,
             "mergedAt": null,
@@ -27543,16 +27543,16 @@
             "authorLogin": "aryanbhosale",
             "authorName": null,
             "createdAt": "2026-03-21T14:57:21Z",
-            "updatedAt": "2026-03-24T10:34:16Z",
-            "headSha": "738f8ca8b5e14a788c4e4fc4d0a5caee2c138c7b",
+            "updatedAt": "2026-03-24T17:41:21Z",
+            "headSha": "56ac1b395f4364f1ebb7fe5f2f125e536e5193d3",
             "headRepo": "aryanbhosale/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/738f8ca8b5e14a788c4e4fc4d0a5caee2c138c7b/records/track_non_record_16mb/2026-03-24_SOTA_11L_TTT/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/738f8ca8b5e14a788c4e4fc4d0a5caee2c138c7b/records/track_non_record_16mb/2026-03-24_SOTA_11L_TTT/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/738f8ca8b5e14a788c4e4fc4d0a5caee2c138c7b/records/track_non_record_16mb/2026-03-24_SOTA_11L_TTT/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/738f8ca8b5e14a788c4e4fc4d0a5caee2c138c7b/records/track_non_record_16mb/2026-03-24_SOTA_11L_TTT/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/738f8ca8b5e14a788c4e4fc4d0a5caee2c138c7b/records/track_non_record_16mb/2026-03-24_SOTA_11L_TTT",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/56ac1b395f4364f1ebb7fe5f2f125e536e5193d3/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/56ac1b395f4364f1ebb7fe5f2f125e536e5193d3/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/56ac1b395f4364f1ebb7fe5f2f125e536e5193d3/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/56ac1b395f4364f1ebb7fe5f2f125e536e5193d3/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/56ac1b395f4364f1ebb7fe5f2f125e536e5193d3/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x",
             "pr": "https://github.com/openai/parameter-golf/pull/344"
           }
         }
@@ -51747,7 +51747,7 @@
     },
     "609": {
       "number": 609,
-      "updatedAt": "2026-03-24T16:12:32Z",
+      "updatedAt": "2026-03-24T17:43:05Z",
       "pr": {
         "number": 609,
         "title": "Record: 11L XSA-all + Full GPTQ + Selective Pruning (val_bpb=1.1154, 3-seed)",
@@ -51758,7 +51758,7 @@
         "authorLogin": "saml212",
         "authorName": null,
         "createdAt": "2026-03-24T10:01:14Z",
-        "updatedAt": "2026-03-24T16:12:32Z",
+        "updatedAt": "2026-03-24T17:43:05Z",
         "headSha": "e2868b319e4e1d2db4bf03703d686ccec4f6e94a",
         "headRepo": "saml212/parameter-golf"
       },
@@ -51821,7 +51821,7 @@
             "authorLogin": "saml212",
             "authorName": null,
             "createdAt": "2026-03-24T10:01:14Z",
-            "updatedAt": "2026-03-24T16:12:32Z",
+            "updatedAt": "2026-03-24T17:43:05Z",
             "headSha": "e2868b319e4e1d2db4bf03703d686ccec4f6e94a",
             "headRepo": "saml212/parameter-golf"
           },
@@ -53474,6 +53474,188 @@
             "script": "https://github.com/openai/parameter-golf/blob/40d8baf3dbc2b252e6080986710ab950b1468b24/records/track_10min_16mb/2026-03-24_PROTEUS_v9/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/40d8baf3dbc2b252e6080986710ab950b1468b24/records/track_10min_16mb/2026-03-24_PROTEUS_v9",
             "pr": "https://github.com/openai/parameter-golf/pull/633"
+          }
+        }
+      ]
+    },
+    "634": {
+      "number": 634,
+      "updatedAt": "2026-03-24T17:45:38Z",
+      "pr": {
+        "number": 634,
+        "title": "Record: 11L XSA-all + Full GPTQ + Parallel Muon + Selective Pruning (val_bpb: 1.1171)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/634",
+        "authorLogin": "raahilshah",
+        "authorName": null,
+        "createdAt": "2026-03-24T17:40:34Z",
+        "updatedAt": "2026-03-24T17:45:38Z",
+        "headSha": "4315a016ddfaec02f17120afddafcf12d43b9ed9",
+        "headRepo": "raahilshah/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-634-records-track_10min_16mb-2026-03-24_11L_XSA-all_GPTQ_ParallelMuon_1-1171-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-24_11L_XSA-all_GPTQ_ParallelMuon_1.1171",
+            "folderPath": "records/track_10min_16mb/2026-03-24_11L_XSA-all_GPTQ_ParallelMuon_1.1171",
+            "submissionPath": "records/track_10min_16mb/2026-03-24_11L_XSA-all_GPTQ_ParallelMuon_1.1171/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-24_11L_XSA-all_GPTQ_ParallelMuon_1.1171/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-24_11L_XSA-all_GPTQ_ParallelMuon_1.1171/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-24_11L_XSA-all_GPTQ_ParallelMuon_1.1171/train_gpt.py"
+          },
+          "submission": {
+            "author": "Raahil Shah",
+            "githubId": "raahilshah",
+            "name": "11L XSA-all + Full GPTQ + Parallel Muon + LZMA + Selective Pruning",
+            "blurb": "XSA on all 11 layers, Hessian-aware GPTQ with amax-aligned QAT, Parallel Muon optimizer with parameter banking, LZMA compression, selective ±1 magnitude pruning. LeakyReLU(0.5)² activation, EMA(0.997), Tight SWA, VE128, Partial RoPE 16/64, LN Scale, BigramHash(2048), U-Net skips.",
+            "date": "2026-03-24T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.11705625,
+            "valLoss": 1.8860977,
+            "preQuantValBpb": 1.1386,
+            "preQuantValLoss": 1.921,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15921954,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 634,
+            "title": "Record: 11L XSA-all + Full GPTQ + Parallel Muon + Selective Pruning (val_bpb: 1.1171)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/634",
+            "authorLogin": "raahilshah",
+            "authorName": null,
+            "createdAt": "2026-03-24T17:40:34Z",
+            "updatedAt": "2026-03-24T17:45:38Z",
+            "headSha": "4315a016ddfaec02f17120afddafcf12d43b9ed9",
+            "headRepo": "raahilshah/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4315a016ddfaec02f17120afddafcf12d43b9ed9/records/track_10min_16mb/2026-03-24_11L_XSA-all_GPTQ_ParallelMuon_1.1171/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/4315a016ddfaec02f17120afddafcf12d43b9ed9/records/track_10min_16mb/2026-03-24_11L_XSA-all_GPTQ_ParallelMuon_1.1171/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/4315a016ddfaec02f17120afddafcf12d43b9ed9/records/track_10min_16mb/2026-03-24_11L_XSA-all_GPTQ_ParallelMuon_1.1171/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/4315a016ddfaec02f17120afddafcf12d43b9ed9/records/track_10min_16mb/2026-03-24_11L_XSA-all_GPTQ_ParallelMuon_1.1171/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/4315a016ddfaec02f17120afddafcf12d43b9ed9/records/track_10min_16mb/2026-03-24_11L_XSA-all_GPTQ_ParallelMuon_1.1171",
+            "pr": "https://github.com/openai/parameter-golf/pull/634"
+          }
+        }
+      ]
+    },
+    "635": {
+      "number": 635,
+      "updatedAt": "2026-03-24T17:48:12Z",
+      "pr": {
+        "number": 635,
+        "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/635",
+        "authorLogin": "aryanbhosale",
+        "authorName": null,
+        "createdAt": "2026-03-24T17:48:12Z",
+        "updatedAt": "2026-03-24T17:48:12Z",
+        "headSha": "97212ce0c59651d660d87836b9bb970dd7553dce",
+        "headRepo": "aryanbhosale/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-635-records-track_10min_16mb-2026-03-24_11L_SOTA_MLP35x-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-24_11L_SOTA_MLP35x",
+            "folderPath": "records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x",
+            "submissionPath": "records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/train_gpt.py"
+          },
+          "submission": {
+            "author": "Aryan Bhosale",
+            "githubId": "aryanbhosale",
+            "name": "11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330)",
+            "blurb": "11-layer 512d transformer with MLP 3.5x LeakyReLU(0.5)^2, SmearGate, BigramHash(10240), TrigramHash(4096), Value Residual, Gated Attention, XSA-all-11, Partial RoPE(16/64). Muon lr=0.03 WD=0.04, EMA(0.997), Late QAT, int6+GPTQ-lite+zstd-22. 3-seed mean 1.1330 (std=0.0007) on 8xH100 SXM.",
+            "date": "2026-03-24T12:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.133,
+            "valLoss": 1.9129,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 10500000,
+            "bytesCode": 70872,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 635,
+            "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/635",
+            "authorLogin": "aryanbhosale",
+            "authorName": null,
+            "createdAt": "2026-03-24T17:48:12Z",
+            "updatedAt": "2026-03-24T17:48:12Z",
+            "headSha": "97212ce0c59651d660d87836b9bb970dd7553dce",
+            "headRepo": "aryanbhosale/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/97212ce0c59651d660d87836b9bb970dd7553dce/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/97212ce0c59651d660d87836b9bb970dd7553dce/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/97212ce0c59651d660d87836b9bb970dd7553dce/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/97212ce0c59651d660d87836b9bb970dd7553dce/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/97212ce0c59651d660d87836b9bb970dd7553dce/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x",
+            "pr": "https://github.com/openai/parameter-golf/pull/635"
           }
         }
       ]

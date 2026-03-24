@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-24T17:56:12.329Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 635,
+    "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
+    "state": "open",
+    "updatedAt": "2026-03-24T17:48:12Z",
+    "headSha": "97212ce0c59651d660d87836b9bb970dd7553dce",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/635",
+    "authorLogin": "aryanbhosale"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer 512d Transformer pairs MLP3.5x LeakyReLU² with Value Residual, gated attention, and hashing tricks plus sliding-window eval.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Muon optimizer with momentum warmup, EMA, warmdown, and Late QAT+clipping",
+      "Int6 GPTQ-lite quantization with zstd-22 compression and FP16 passthrough on tied embeddings",
+      "MLP3.5x with Partial RoPE, SmearGate, Gated Attention, XSA-all-11, and U-Net skip connections"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

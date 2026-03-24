@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-24T17:26:25.183Z",
+  "generatedAt": "2026-03-24T17:56:24.086Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 635,
+      "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
+      "status": "open",
+      "updatedAt": "2026-03-24T17:48:12Z",
+      "headSha": "97212ce0c59651d660d87836b9bb970dd7553dce",
+      "generatedAt": "2026-03-24T17:56:12.329Z",
+      "summary": "11-layer 512d Transformer pairs MLP3.5x LeakyReLU² with Value Residual, gated attention, and hashing tricks plus sliding-window eval.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-635.json"
+    },
+    {
+      "prNumber": 634,
+      "title": "Record: 11L XSA-all + Full GPTQ + Parallel Muon + Selective Pruning (val_bpb: 1.1171)",
+      "status": "open",
+      "updatedAt": "2026-03-24T17:45:38Z",
+      "headSha": "4315a016ddfaec02f17120afddafcf12d43b9ed9",
+      "generatedAt": "2026-03-24T17:56:17.533Z",
+      "summary": "Combines XSA on all 11 layers with Parallel Muon plus Hessian-aware GPTQ, selective ±1 pruning, and LZMA-compressed int6 weights.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-634.json"
+    },
     {
       "prNumber": 633,
       "title": "PROTEUS v9 — 11L INT6 + single-epoch LoRA TTT (mean val_bpb=1.1526, 3 seeds)",
@@ -404,14 +451,14 @@
       "prNumber": 609,
       "title": "Record: 11L XSA-all + Full GPTQ + Selective Pruning (val_bpb=1.1154, 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-24T16:12:32Z",
+      "updatedAt": "2026-03-24T17:43:05Z",
       "headSha": "e2868b319e4e1d2db4bf03703d686ccec4f6e94a",
-      "generatedAt": "2026-03-24T16:26:22.536Z",
-      "summary": "Builds on Parallel Muon by applying XSA across all 11 layers plus full Hessian GPTQ int6 and selective ±1 pruning to squeeze artifacts under 16MB.",
+      "generatedAt": "2026-03-24T17:56:23.985Z",
+      "summary": "Extends the Parallel Muon stack by applying XSA on every layer and using selective ±1 post-GPTQ pruning before artifact serialization.",
       "tags": [
-        "architecture",
         "attention",
-        "quantization"
+        "quantization",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4976,30 +5023,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-346.json"
-    },
-    {
-      "prNumber": 344,
-      "title": "Non-record: 11L Full SOTA Stack + Score-First TTT (val_bpb=1.1383, 1xH100)",
-      "status": "open",
-      "updatedAt": "2026-03-24T10:34:16Z",
-      "headSha": "738f8ca8b5e14a788c4e4fc4d0a5caee2c138c7b",
-      "generatedAt": "2026-03-24T10:53:59.437Z",
-      "summary": "11-layer transformer pairs SmearGate hash embeddings with Value Residual/Gated Attention+XSA and a 3-epoch score-first TTT using per-layer LR groups.",
-      "tags": [
-        "architecture",
-        "attention",
-        "training-schedule",
-        "quantization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-344.json"
     },
     {
       "prNumber": 342,

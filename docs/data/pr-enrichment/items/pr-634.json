@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-24T17:56:17.533Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 634,
+    "title": "Record: 11L XSA-all + Full GPTQ + Parallel Muon + Selective Pruning (val_bpb: 1.1171)",
+    "state": "open",
+    "updatedAt": "2026-03-24T17:45:38Z",
+    "headSha": "4315a016ddfaec02f17120afddafcf12d43b9ed9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/634",
+    "authorLogin": "raahilshah"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_11L_XSA-all_GPTQ_ParallelMuon_1.1171/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines XSA on all 11 layers with Parallel Muon plus Hessian-aware GPTQ, selective ±1 pruning, and LZMA-compressed int6 weights.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "optimizer",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Exclusive Self-Attention applied to every layer",
+      "Hessian-aware GPTQ with amax-aligned QAT and selective ±1 pruning",
+      "Parallel Muon optimizer with parameter banking and LZMA-compressed int6 weights"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

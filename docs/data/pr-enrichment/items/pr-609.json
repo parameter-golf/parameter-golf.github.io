@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T16:26:22.536Z",
+  "generatedAt": "2026-03-24T17:56:23.985Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 609,
     "title": "Record: 11L XSA-all + Full GPTQ + Selective Pruning (val_bpb=1.1154, 3-seed)",
     "state": "open",
-    "updatedAt": "2026-03-24T16:12:32Z",
+    "updatedAt": "2026-03-24T17:43:05Z",
     "headSha": "e2868b319e4e1d2db4bf03703d686ccec4f6e94a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/609",
     "authorLogin": "saml212"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Builds on Parallel Muon by applying XSA across all 11 layers plus full Hessian GPTQ int6 and selective ±1 pruning to squeeze artifacts under 16MB.",
+    "summary": "Extends the Parallel Muon stack by applying XSA on every layer and using selective ±1 post-GPTQ pruning before artifact serialization.",
     "tags": [
-      "architecture",
       "attention",
-      "quantization"
+      "quantization",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "XSA across every transformer layer",
-      "Full Hessian GPTQ int6 quantization",
-      "Selective ±1 magnitude pruning after quantization"
+      "XSA on every layer",
+      "Full Hessian GPTQ int6",
+      "Selective ±1 magnitude pruning"
     ]
   },
   "compatibility": {
