@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-24T06:21:56.384Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 600,
+    "title": "Non-record: TTT-LoRA Base — HumanAI Convention (val_bpb=1.2364)",
+    "state": "open",
+    "updatedAt": "2026-03-24T06:01:43Z",
+    "headSha": "6def989675e93b70d81acf8d404d84997c4bc541",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/600",
+    "authorLogin": "humanaiconvention"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-24_TTT-LoRA-Base/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds a SmearGate+GQA+orthogonal backbone with SWA and int6+zstd22 compression while paving per-document test-time LoRA adaptation during the eval budget.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Per-document test-time LoRA adapters trained on preceding chunks per doc",
+      "SmearGate/GQA backbone with orthogonal initialisation",
+      "SWA plus int6+zstd22 compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

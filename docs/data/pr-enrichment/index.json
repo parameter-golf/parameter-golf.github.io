@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-24T05:51:49.974Z",
+  "generatedAt": "2026-03-24T06:22:06.244Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 600,
+      "title": "Non-record: TTT-LoRA Base — HumanAI Convention (val_bpb=1.2364)",
+      "status": "open",
+      "updatedAt": "2026-03-24T06:01:43Z",
+      "headSha": "6def989675e93b70d81acf8d404d84997c4bc541",
+      "generatedAt": "2026-03-24T06:21:56.384Z",
+      "summary": "Adds a SmearGate+GQA+orthogonal backbone with SWA and int6+zstd22 compression while paving per-document test-time LoRA adaptation during the eval budget.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-600.json"
+    },
     {
       "prNumber": 599,
       "title": "[Non-Record] Hymba: Hybrid Attention + Mamba SSM (val_bpb 1.1828)",
@@ -336,10 +360,10 @@
       "prNumber": 579,
       "title": "The Frugendorff: Recursive Weight Sharing for Transformer Compression (1.1478 BPB, 15.19MB)",
       "status": "open",
-      "updatedAt": "2026-03-23T22:14:38Z",
+      "updatedAt": "2026-03-24T06:06:12Z",
       "headSha": "d0c4271d9134cfbacb008d7a66899cec228c964d",
-      "generatedAt": "2026-03-23T22:19:06.394Z",
-      "summary": "Recursive weight sharing reuses 6 distinct transformer blocks twice, freeing budget for 4× wider MLPs and loop-conditioned embeddings inside a 16 MB artifact.",
+      "generatedAt": "2026-03-24T06:22:06.153Z",
+      "summary": "Recursive transformer blocks share parameters across loops, funding 4x MLPs while an asymmetric crawler and bidirectional deliberation gate pair with GPTQ for compression.",
       "tags": [
         "architecture",
         "quantization",
