@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-24T01:20:17.634Z",
+  "generatedAt": "2026-03-24T01:50:23.212Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 593,
+      "title": "Record: Full GPTQ + LeakyReLU² + Parallel Muon — val_bpb 1.1170 (3-seed mean, no TTT)",
+      "status": "open",
+      "updatedAt": "2026-03-24T01:45:34Z",
+      "headSha": "7f652d2679759e18dce4daadf604c82e85424040",
+      "generatedAt": "2026-03-24T01:50:23.120Z",
+      "summary": "Augments the Parameter Banking + Parallel Muon stack with LeakyReLU² and full Hessian GPTQ (via an unbanked replica) to turn quantization into a net gain.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-593.json"
+    },
     {
       "prNumber": 592,
       "title": "Submission: 12L Int5-MLP BigramHash10K EMA (1.1476 BPB)",
