@@ -1,35 +1,37 @@
 {
-  "generatedAt": "2026-03-24T07:52:29.058Z",
+  "generatedAt": "2026-03-24T08:22:35.763Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 605,
     "title": "Record: 0.7227 BPB — 10L LoRA TTT 6ep + FlashAttention-3",
     "state": "open",
-    "updatedAt": "2026-03-24T07:49:42Z",
-    "headSha": "d65b3b2d8f1939153dcdb1f4e7295bf8bb71e0cb",
+    "updatedAt": "2026-03-24T07:58:10Z",
+    "headSha": "10bc6fc3a0b928ce76c8892dae900d87befb8893",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/605",
     "authorLogin": "bigbag"
   },
   "inputs": {
-    "hash": "072662c123505c465dfcb1e80cbfb797fc5a748edd0e2a3564b0b095cec763f8",
-    "readmePaths": [],
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_VA_LoRATTT_FA3/README.md"
+    ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "10L GQA model adds LoRA TTT per-document adaptation plus FlashAttention-3, EMA/SWA, and late QAT/int6 quantization with compiled Muon optimizer.",
+    "summary": "Per-document LoRA TTT on a 10L GQA model with FlashAttention-3, compiled Muon, and late int6 quantization for faster eval-adapted scoring.",
     "tags": [
       "architecture",
-      "quantization",
-      "optimizer",
-      "training-schedule"
+      "attention",
+      "training-schedule",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LoRA TTT per-document adaptation with bias tuning",
-      "FlashAttention-3 plus compiled Muon Newton-Schulz optimizer",
-      "Late QAT int6 quantization alongside EMA/SWA"
+      "Batched per-doc LoRA TTT with bias tuning and cosine lr decay",
+      "FlashAttention-3 + compiled Muon speedups for causal attention",
+      "Late QAT int6 quantization with zstd compression"
     ]
   },
   "compatibility": {

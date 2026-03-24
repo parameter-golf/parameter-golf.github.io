@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T07:52:23.718Z",
+  "generatedAt": "2026-03-24T08:22:28.032Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 606,
     "title": "Record: int5 GPTQ + Soft-Round QAT (3-seed mean 1.1162)",
     "state": "open",
-    "updatedAt": "2026-03-24T07:50:22Z",
+    "updatedAt": "2026-03-24T07:55:26Z",
     "headSha": "17836df54df77a51e47120c775cd7e722862c3e0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/606",
     "authorLogin": "EthanYangTW"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines int5 GPTQ with Soft-Round QAT and legal score-first TTT on a 33.6M XSA/BigramHash architecture to squeeze under 16MB.",
+    "summary": "Combines int5 GPTQ with soft-round QAT plus legal score-first AdamW TTT on a 33.6M 11-layer model for sub-16MB compression.",
     "tags": [
       "quantization",
       "architecture",
+      "optimizer",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int5 GPTQ with Hessian-aware error compensation",
-      "Soft-Round QAT using tanh anneal instead of STE",
-      "Legal score-first AdamW TTT over 131k-token chunks"
+      "int5 GPTQ with Hessian-aware column reordering and Cholesky compensation",
+      "Soft-Round QAT via tanh-based rounding with α anneal replacing STE",
+      "Legal score-first AdamW TTT over 131k-token chunks with cosine LR across chunks"
     ]
   },
   "compatibility": {

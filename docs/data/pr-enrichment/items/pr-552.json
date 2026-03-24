@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T16:46:47.377Z",
+  "generatedAt": "2026-03-24T08:22:39.634Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 552,
     "title": "Non-record subimission: RecurrentTiedDepth_8x2_FiLM records",
     "state": "open",
-    "updatedAt": "2026-03-23T16:45:59Z",
-    "headSha": "59c8382d5c05c0e81f41b80922cd12e7ae3255d6",
+    "updatedAt": "2026-03-24T08:03:10Z",
+    "headSha": "818e61a1609da25011c36bd91c3e6febe7bfea02",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/552",
     "authorLogin": "loveless2001"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Shared 8-block transformer loops twice with FiLM+U-Net gating to reuse parameters and widen effective depth while staying under 16MB.",
+    "summary": "Looped 8 shared Transformer blocks with FiLM and hashed n-gram sidecars to reuse depth budget while enriching lexical memory in a non-record run.",
     "tags": [
       "architecture",
-      "regularization",
-      "quantization",
+      "tokenization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Recurrent tied-depth loop with FiLM conditioning per iteration",
-      "U-Net skip connections bridging first and last loop",
-      "int6+zstd compression on Muon+WD/SWA stack"
+      "Recurrent loop of 8 unique blocks with FiLM per iteration",
+      "Bigram + trigram lexical hash sidecars",
+      "LeakyReLU² activation with int6+zstd compression"
     ]
   },
   "compatibility": {

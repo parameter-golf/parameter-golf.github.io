@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T07:52:51.772Z",
+  "generatedAt": "2026-03-24T08:22:39.721Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -7,13 +7,14 @@
       "prNumber": 606,
       "title": "Record: int5 GPTQ + Soft-Round QAT (3-seed mean 1.1162)",
       "status": "open",
-      "updatedAt": "2026-03-24T07:50:22Z",
+      "updatedAt": "2026-03-24T07:55:26Z",
       "headSha": "17836df54df77a51e47120c775cd7e722862c3e0",
-      "generatedAt": "2026-03-24T07:52:23.718Z",
-      "summary": "Combines int5 GPTQ with Soft-Round QAT and legal score-first TTT on a 33.6M XSA/BigramHash architecture to squeeze under 16MB.",
+      "generatedAt": "2026-03-24T08:22:28.032Z",
+      "summary": "Combines int5 GPTQ with soft-round QAT plus legal score-first AdamW TTT on a 33.6M 11-layer model for sub-16MB compression.",
       "tags": [
         "quantization",
         "architecture",
+        "optimizer",
         "training-schedule"
       ],
       "flags": {
@@ -30,15 +31,15 @@
       "prNumber": 605,
       "title": "Record: 0.7227 BPB — 10L LoRA TTT 6ep + FlashAttention-3",
       "status": "open",
-      "updatedAt": "2026-03-24T07:49:42Z",
-      "headSha": "d65b3b2d8f1939153dcdb1f4e7295bf8bb71e0cb",
-      "generatedAt": "2026-03-24T07:52:29.058Z",
-      "summary": "10L GQA model adds LoRA TTT per-document adaptation plus FlashAttention-3, EMA/SWA, and late QAT/int6 quantization with compiled Muon optimizer.",
+      "updatedAt": "2026-03-24T07:58:10Z",
+      "headSha": "10bc6fc3a0b928ce76c8892dae900d87befb8893",
+      "generatedAt": "2026-03-24T08:22:35.763Z",
+      "summary": "Per-document LoRA TTT on a 10L GQA model with FlashAttention-3, compiled Muon, and late int6 quantization for faster eval-adapted scoring.",
       "tags": [
         "architecture",
-        "quantization",
-        "optimizer",
-        "training-schedule"
+        "attention",
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -964,14 +965,13 @@
       "prNumber": 552,
       "title": "Non-record subimission: RecurrentTiedDepth_8x2_FiLM records",
       "status": "open",
-      "updatedAt": "2026-03-23T16:45:59Z",
-      "headSha": "59c8382d5c05c0e81f41b80922cd12e7ae3255d6",
-      "generatedAt": "2026-03-23T16:46:47.377Z",
-      "summary": "Shared 8-block transformer loops twice with FiLM+U-Net gating to reuse parameters and widen effective depth while staying under 16MB.",
+      "updatedAt": "2026-03-24T08:03:10Z",
+      "headSha": "818e61a1609da25011c36bd91c3e6febe7bfea02",
+      "generatedAt": "2026-03-24T08:22:39.634Z",
+      "summary": "Looped 8 shared Transformer blocks with FiLM and hashed n-gram sidecars to reuse depth budget while enriching lexical memory in a non-record run.",
       "tags": [
         "architecture",
-        "regularization",
-        "quantization",
+        "tokenization",
         "non-record"
       ],
       "flags": {

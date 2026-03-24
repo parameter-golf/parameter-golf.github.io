@@ -1,24 +1,17 @@
 {
-  "generatedAt": "2026-03-24T07:51:52.700Z",
+  "generatedAt": "2026-03-24T08:21:59.342Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [
-    {
-      "stage": "pull-request-readme",
-      "pr": 605,
-      "submissionPath": "records/track_10min_16mb/2026-03-24_VA_LoRATTT_FA3/submission.json",
-      "reason": "missing-or-unreadable-readme"
-    }
-  ],
+  "skipped": [],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-24T07:21:20Z",
+    "cutoffUpdatedAt": "2026-03-24T07:50:22Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 5,
-    "prsReused": 195,
+    "prsRefreshed": 3,
+    "prsReused": 197,
     "stoppedEarly": true,
     "refreshFailures": 0,
     "cacheEntries": 580,
