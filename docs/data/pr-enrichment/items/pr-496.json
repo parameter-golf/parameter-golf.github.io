@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T23:50:01.249Z",
+  "generatedAt": "2026-03-24T04:21:07.420Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 496,
     "title": "Non-record: O(n) field LM, 2L FP16 (no attention)",
     "state": "open",
-    "updatedAt": "2026-03-23T23:23:36Z",
-    "headSha": "33b5ab1a1ae958c18dd2ab4c5bf159c7a0c89611",
+    "updatedAt": "2026-03-24T04:07:13Z",
+    "headSha": "ebe437b8bc388c19972c60cef7647d482fe08920",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/496",
     "authorLogin": "galaxy4552"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "PipeOwl swaps transformers for a field-based FP16 embedding table plus linear scoring to enable non-attention O(n) inference within 16MB.",
+    "summary": "PipeOwl replaces attention with a field-based static embedding plus Δfield bias linear scorer for deterministic O(n) token interactions.",
     "tags": [
       "architecture",
-      "quantization",
+      "compression",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Field-based linear scoring",
-      "Static embeddings with Δfield bias",
-      "FP16 safetensors for compact inference"
+      "field-based linear scoring",
+      "static embeddings with Δfield bias",
+      "CPU-friendly deterministic inference"
     ]
   },
   "compatibility": {

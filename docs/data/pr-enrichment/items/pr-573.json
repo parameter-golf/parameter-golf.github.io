@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T03:50:44.882Z",
+  "generatedAt": "2026-03-24T04:20:58.943Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 573,
     "title": "Record: 11L XSA4 + Multi-Pass Streaming Score-First Legal TTT (3-seed mean val_bpb=1.0523) ",
     "state": "open",
-    "updatedAt": "2026-03-24T03:48:51Z",
+    "updatedAt": "2026-03-24T04:02:01Z",
     "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/573",
     "authorLogin": "Sarimsaljook"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Multi-pass legal TTT runs three score-first streaming passes with shifted orders and per-token min scoring so every token sees adapted context.",
+    "summary": "Multi-pass streaming score-first legal TTT uses shifted data orderings and per-token min-NLL with a RoPE cache clone fix for backprop.",
     "tags": [
       "val-only",
-      "training-schedule",
-      "sliding-window-eval"
+      "evaluation",
+      "training-schedule"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Legal TTT adaptation trains solely on validation shards after scoring each token, so all updates occur on validation data.",
+    "valOnlyReasoning": "TTT adapts solely on validation tokens, scoring each under inference_mode before any training pass.",
     "techniques": [
-      "Multi-pass score-first streaming TTT trajectories",
-      "Per-token min over passes for sliding-window–style scoring",
-      "Rotary cache clone fix for RoPE backprop during TTT"
+      "Multi-pass streaming score-first TTT with shifted trajectories",
+      "Per-token min-NLL ensemble across passes",
+      "Rotary cache clone fix enabling RoPE backprop"
     ]
   },
   "compatibility": {

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-24T04:20:51.155Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 597,
+    "title": "Non-record: M4 Air autoresearch bandit — mirrored recurrence + SwiGLU (val_bpb=1.9263)",
+    "state": "open",
+    "updatedAt": "2026-03-24T04:20:17Z",
+    "headSha": "be6dd131c52dad5da56b2f95e65ad8869d412950",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/597",
+    "authorLogin": "AnirudhaRamesh"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-23_M4Air_AutoresearchBandit_MirroredRecurrence/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Runs an evolutionary bandit over Mac-suitable candidates, iteratively training mirrored-recurrence + SwiGLU configs within 10-min M4 Air slices for rapid tuning.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Evolutionary bandit candidate loop on Mac-specific subset",
+      "Mirrored recurrence reuses four blocks across eight logical layers",
+      "SwiGLU with extended warmdown tuned for short M4 Air runs"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

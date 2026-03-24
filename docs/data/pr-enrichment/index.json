@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-24T03:50:50.150Z",
+  "generatedAt": "2026-03-24T04:21:15.847Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 597,
+      "title": "Non-record: M4 Air autoresearch bandit — mirrored recurrence + SwiGLU (val_bpb=1.9263)",
+      "status": "open",
+      "updatedAt": "2026-03-24T04:20:17Z",
+      "headSha": "be6dd131c52dad5da56b2f95e65ad8869d412950",
+      "generatedAt": "2026-03-24T04:20:51.155Z",
+      "summary": "Runs an evolutionary bandit over Mac-suitable candidates, iteratively training mirrored-recurrence + SwiGLU configs within 10-min M4 Air slices for rapid tuning.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-597.json"
+    },
     {
       "prNumber": 595,
       "title": "Record: Loqui Auris — 10L + SWA + Standard TTT (val_bpb=1.1100)",
@@ -333,14 +356,14 @@
       "prNumber": 573,
       "title": "Record: 11L XSA4 + Multi-Pass Streaming Score-First Legal TTT (3-seed mean val_bpb=1.0523) ",
       "status": "open",
-      "updatedAt": "2026-03-24T03:48:51Z",
+      "updatedAt": "2026-03-24T04:02:01Z",
       "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
-      "generatedAt": "2026-03-24T03:50:44.882Z",
-      "summary": "Multi-pass legal TTT runs three score-first streaming passes with shifted orders and per-token min scoring so every token sees adapted context.",
+      "generatedAt": "2026-03-24T04:20:58.943Z",
+      "summary": "Multi-pass streaming score-first legal TTT uses shifted data orderings and per-token min-NLL with a RoPE cache clone fix for backprop.",
       "tags": [
         "val-only",
-        "training-schedule",
-        "sliding-window-eval"
+        "evaluation",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": true,
@@ -1584,13 +1607,13 @@
       "prNumber": 496,
       "title": "Non-record: O(n) field LM, 2L FP16 (no attention)",
       "status": "open",
-      "updatedAt": "2026-03-23T23:23:36Z",
-      "headSha": "33b5ab1a1ae958c18dd2ab4c5bf159c7a0c89611",
-      "generatedAt": "2026-03-23T23:50:01.249Z",
-      "summary": "PipeOwl swaps transformers for a field-based FP16 embedding table plus linear scoring to enable non-attention O(n) inference within 16MB.",
+      "updatedAt": "2026-03-24T04:07:13Z",
+      "headSha": "ebe437b8bc388c19972c60cef7647d482fe08920",
+      "generatedAt": "2026-03-24T04:21:07.420Z",
+      "summary": "PipeOwl replaces attention with a field-based static embedding plus Δfield bias linear scorer for deterministic O(n) token interactions.",
       "tags": [
         "architecture",
-        "quantization",
+        "compression",
         "non-record"
       ],
       "flags": {
@@ -4071,15 +4094,16 @@
     {
       "prNumber": 362,
       "title": "Record: 11L Int6+Zstd MLP3x SmearGate BigramHash OrthoInit MuonWD EMA (mean val_bpb=1.1497)",
-      "status": "open",
-      "updatedAt": "2026-03-21T19:47:18Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T04:19:55Z",
       "headSha": "6772329803694c6ef7e983b87d480bc194aaef40",
-      "generatedAt": "2026-03-21T20:05:04.619Z",
-      "summary": "11-layer MLP3x transformer uses int6+zstd compression, SmearGate, BigramHash, OrthoInit, Muon WD, EMA, and sliding-window eval.",
+      "generatedAt": "2026-03-24T04:21:15.792Z",
+      "summary": "11-layer 512d transformer blends int6+Zstd compression with SmearGate, BigramHash, and Muon/EMA regularization under FP16 tied embeddings.",
       "tags": [
         "quantization",
-        "regularization",
-        "evaluation"
+        "architecture",
+        "muon",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,

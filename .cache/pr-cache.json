@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-24T03:50:36.913Z",
-  "lastSeenUpdatedAt": "2026-03-24T03:48:51Z",
+  "generatedAt": "2026-03-24T04:20:41.194Z",
+  "lastSeenUpdatedAt": "2026-03-24T04:20:17Z",
   "prs": {
     "1": {
       "number": 1,
@@ -29811,18 +29811,18 @@
     },
     "362": {
       "number": 362,
-      "updatedAt": "2026-03-21T19:47:18Z",
+      "updatedAt": "2026-03-24T04:19:55Z",
       "pr": {
         "number": 362,
         "title": "Record: 11L Int6+Zstd MLP3x SmearGate BigramHash OrthoInit MuonWD EMA (mean val_bpb=1.1497)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/362",
         "authorLogin": "mkenney2",
         "authorName": null,
         "createdAt": "2026-03-21T19:47:18Z",
-        "updatedAt": "2026-03-21T19:47:18Z",
+        "updatedAt": "2026-03-24T04:19:55Z",
         "headSha": "6772329803694c6ef7e983b87d480bc194aaef40",
         "headRepo": "mkenney2/parameter-golf"
       },
@@ -29830,7 +29830,7 @@
         {
           "id": "pr-362-records-track_10min_16mb-2026-03-21_11L_MLP3x_Int6_SmearGate_BigramHash_OrthoInit_WD_EMA-submission-json",
           "source": "pull_request",
-          "status": "open",
+          "status": "closed",
           "category": "main-track",
           "track": {
             "path": "records/track_10min_16mb",
@@ -29878,14 +29878,14 @@
           "pr": {
             "number": 362,
             "title": "Record: 11L Int6+Zstd MLP3x SmearGate BigramHash OrthoInit MuonWD EMA (mean val_bpb=1.1497)",
-            "state": "open",
+            "state": "closed",
             "draft": false,
             "mergedAt": null,
             "htmlUrl": "https://github.com/openai/parameter-golf/pull/362",
             "authorLogin": "mkenney2",
             "authorName": null,
             "createdAt": "2026-03-21T19:47:18Z",
-            "updatedAt": "2026-03-21T19:47:18Z",
+            "updatedAt": "2026-03-24T04:19:55Z",
             "headSha": "6772329803694c6ef7e983b87d480bc194aaef40",
             "headRepo": "mkenney2/parameter-golf"
           },
@@ -42040,7 +42040,7 @@
     },
     "496": {
       "number": 496,
-      "updatedAt": "2026-03-23T23:23:36Z",
+      "updatedAt": "2026-03-24T04:07:13Z",
       "pr": {
         "number": 496,
         "title": "Non-record: O(n) field LM, 2L FP16 (no attention)",
@@ -42051,8 +42051,8 @@
         "authorLogin": "galaxy4552",
         "authorName": null,
         "createdAt": "2026-03-23T02:52:55Z",
-        "updatedAt": "2026-03-23T23:23:36Z",
-        "headSha": "33b5ab1a1ae958c18dd2ab4c5bf159c7a0c89611",
+        "updatedAt": "2026-03-24T04:07:13Z",
+        "headSha": "ebe437b8bc388c19972c60cef7647d482fe08920",
         "headRepo": "galaxy4552/parameter-golf"
       },
       "submissions": [
@@ -42114,16 +42114,16 @@
             "authorLogin": "galaxy4552",
             "authorName": null,
             "createdAt": "2026-03-23T02:52:55Z",
-            "updatedAt": "2026-03-23T23:23:36Z",
-            "headSha": "33b5ab1a1ae958c18dd2ab4c5bf159c7a0c89611",
+            "updatedAt": "2026-03-24T04:07:13Z",
+            "headSha": "ebe437b8bc388c19972c60cef7647d482fe08920",
             "headRepo": "galaxy4552/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/33b5ab1a1ae958c18dd2ab4c5bf159c7a0c89611/records/track_non_record_16mb/2026-03-23_PipeOwl-1.8-jp-parameter-golf/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/33b5ab1a1ae958c18dd2ab4c5bf159c7a0c89611/records/track_non_record_16mb/2026-03-23_PipeOwl-1.8-jp-parameter-golf/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/33b5ab1a1ae958c18dd2ab4c5bf159c7a0c89611/records/track_non_record_16mb/2026-03-23_PipeOwl-1.8-jp-parameter-golf/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/33b5ab1a1ae958c18dd2ab4c5bf159c7a0c89611/records/track_non_record_16mb/2026-03-23_PipeOwl-1.8-jp-parameter-golf/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/33b5ab1a1ae958c18dd2ab4c5bf159c7a0c89611/records/track_non_record_16mb/2026-03-23_PipeOwl-1.8-jp-parameter-golf",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ebe437b8bc388c19972c60cef7647d482fe08920/records/track_non_record_16mb/2026-03-23_PipeOwl-1.8-jp-parameter-golf/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/ebe437b8bc388c19972c60cef7647d482fe08920/records/track_non_record_16mb/2026-03-23_PipeOwl-1.8-jp-parameter-golf/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/ebe437b8bc388c19972c60cef7647d482fe08920/records/track_non_record_16mb/2026-03-23_PipeOwl-1.8-jp-parameter-golf/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/ebe437b8bc388c19972c60cef7647d482fe08920/records/track_non_record_16mb/2026-03-23_PipeOwl-1.8-jp-parameter-golf/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/ebe437b8bc388c19972c60cef7647d482fe08920/records/track_non_record_16mb/2026-03-23_PipeOwl-1.8-jp-parameter-golf",
             "pr": "https://github.com/openai/parameter-golf/pull/496"
           }
         }
@@ -48995,7 +48995,7 @@
     },
     "573": {
       "number": 573,
-      "updatedAt": "2026-03-24T03:48:51Z",
+      "updatedAt": "2026-03-24T04:02:01Z",
       "pr": {
         "number": 573,
         "title": "Record: 11L XSA4 + Multi-Pass Streaming Score-First Legal TTT (3-seed mean val_bpb=1.0523) ",
@@ -49006,7 +49006,7 @@
         "authorLogin": "Sarimsaljook",
         "authorName": null,
         "createdAt": "2026-03-23T20:39:48Z",
-        "updatedAt": "2026-03-24T03:48:51Z",
+        "updatedAt": "2026-03-24T04:02:01Z",
         "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
         "headRepo": "Sarimsaljook/parameter-golf"
       },
@@ -49069,7 +49069,7 @@
             "authorLogin": "Sarimsaljook",
             "authorName": null,
             "createdAt": "2026-03-23T20:39:48Z",
-            "updatedAt": "2026-03-24T03:48:51Z",
+            "updatedAt": "2026-03-24T04:02:01Z",
             "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
             "headRepo": "Sarimsaljook/parameter-golf"
           },
@@ -50794,6 +50794,97 @@
         "headRepo": "AriaAnima/parameter-golf"
       },
       "submissions": []
+    },
+    "597": {
+      "number": 597,
+      "updatedAt": "2026-03-24T04:20:17Z",
+      "pr": {
+        "number": 597,
+        "title": "Non-record: M4 Air autoresearch bandit — mirrored recurrence + SwiGLU (val_bpb=1.9263)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/597",
+        "authorLogin": "AnirudhaRamesh",
+        "authorName": null,
+        "createdAt": "2026-03-24T04:13:57Z",
+        "updatedAt": "2026-03-24T04:20:17Z",
+        "headSha": "be6dd131c52dad5da56b2f95e65ad8869d412950",
+        "headRepo": "AnirudhaRamesh/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-597-records-track_non_record_16mb-2026-03-23_M4Air_AutoresearchBandit_MirroredRecurrence-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-23_M4Air_AutoresearchBandit_MirroredRecurrence",
+            "folderPath": "records/track_non_record_16mb/2026-03-23_M4Air_AutoresearchBandit_MirroredRecurrence",
+            "submissionPath": "records/track_non_record_16mb/2026-03-23_M4Air_AutoresearchBandit_MirroredRecurrence/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-23_M4Air_AutoresearchBandit_MirroredRecurrence/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-23_M4Air_AutoresearchBandit_MirroredRecurrence/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-23_M4Air_AutoresearchBandit_MirroredRecurrence/train_gpt.py"
+          },
+          "submission": {
+            "author": "Anirudha Ramesh",
+            "githubId": "AnirudhaRamesh",
+            "name": "M4 Air Autoresearch Bandit — Mirrored Recurrence + SwiGLU",
+            "blurb": "Distributed autoresearch with evolutionary bandit over 14 candidate architectures on M4 Air (16GB). 84 experiments overnight, 3.226 → 1.926 bpb. Best M4 Air score we're aware of. Key discoveries: warmdown schedule fix (-0.98 bpb), mirrored recurrence (4 unique blocks / 8 logical layers), SwiGLU, cross-pollination between candidates.",
+            "date": "2026-03-23T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.9263,
+            "valLoss": 3.2525,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": 807,
+            "wallclockSeconds": 600,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": 5958856
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 597,
+            "title": "Non-record: M4 Air autoresearch bandit — mirrored recurrence + SwiGLU (val_bpb=1.9263)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/597",
+            "authorLogin": "AnirudhaRamesh",
+            "authorName": null,
+            "createdAt": "2026-03-24T04:13:57Z",
+            "updatedAt": "2026-03-24T04:20:17Z",
+            "headSha": "be6dd131c52dad5da56b2f95e65ad8869d412950",
+            "headRepo": "AnirudhaRamesh/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/be6dd131c52dad5da56b2f95e65ad8869d412950/records/track_non_record_16mb/2026-03-23_M4Air_AutoresearchBandit_MirroredRecurrence/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/be6dd131c52dad5da56b2f95e65ad8869d412950/records/track_non_record_16mb/2026-03-23_M4Air_AutoresearchBandit_MirroredRecurrence/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/be6dd131c52dad5da56b2f95e65ad8869d412950/records/track_non_record_16mb/2026-03-23_M4Air_AutoresearchBandit_MirroredRecurrence/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/be6dd131c52dad5da56b2f95e65ad8869d412950/records/track_non_record_16mb/2026-03-23_M4Air_AutoresearchBandit_MirroredRecurrence/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/be6dd131c52dad5da56b2f95e65ad8869d412950/records/track_non_record_16mb/2026-03-23_M4Air_AutoresearchBandit_MirroredRecurrence",
+            "pr": "https://github.com/openai/parameter-golf/pull/597"
+          }
+        }
+      ]
     }
   }
 }
