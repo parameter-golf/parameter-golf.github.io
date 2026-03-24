@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-24T19:26:23.111Z",
-  "lastSeenUpdatedAt": "2026-03-24T19:22:31Z",
+  "generatedAt": "2026-03-24T19:56:22.781Z",
+  "lastSeenUpdatedAt": "2026-03-24T19:55:16Z",
   "prs": {
     "1": {
       "number": 1,
@@ -14253,7 +14253,7 @@
     },
     "188": {
       "number": 188,
-      "updatedAt": "2026-03-23T15:23:33Z",
+      "updatedAt": "2026-03-24T19:34:55Z",
       "pr": {
         "number": 188,
         "title": "Included AMDGPU ROCm Support",
@@ -14264,7 +14264,7 @@
         "authorLogin": "reimorster",
         "authorName": null,
         "createdAt": "2026-03-20T07:28:43Z",
-        "updatedAt": "2026-03-23T15:23:33Z",
+        "updatedAt": "2026-03-24T19:34:55Z",
         "headSha": "b25d53add8d445e8e6a24acfb611817c17be7267",
         "headRepo": "reimorster/parameter-golf"
       },
@@ -53935,10 +53935,10 @@
     },
     "639": {
       "number": 639,
-      "updatedAt": "2026-03-24T18:39:30Z",
+      "updatedAt": "2026-03-24T19:55:16Z",
       "pr": {
         "number": 639,
-        "title": "Non-record: Full GPTQ + EB-TTT + SWA/EMA (val_bpb=1.1173)",
+        "title": "Non-record: Full GPTQ + XSA-all + SWA/EMA (val_bpb=1.1158)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -53946,7 +53946,7 @@
         "authorLogin": "Robby955",
         "authorName": null,
         "createdAt": "2026-03-24T18:39:30Z",
-        "updatedAt": "2026-03-24T18:39:30Z",
+        "updatedAt": "2026-03-24T19:55:16Z",
         "headSha": "e6ff00857bdfb293f90e5864f59856ddf575bca2",
         "headRepo": "Robby955/parameter-golf"
       },
@@ -53973,10 +53973,10 @@
     },
     "641": {
       "number": 641,
-      "updatedAt": "2026-03-24T19:03:11Z",
+      "updatedAt": "2026-03-24T19:49:48Z",
       "pr": {
         "number": 641,
-        "title": "Notable Non-Record Submission: 1.1239 BPB - 106.2M Binary U-Net + NeoMuon + 4x relu²MLP + SmearGate + Factored Tied Emb + Poly5 Softcap + YaRN2048 + 8192BPE + FP8QAT + Bit-packing LZMA + Stride-16 Sliding",
+        "title": "Notable Non-Record Submission: 1.1239 BPB - 106.2M Binary Asymmetric U-Net + NeoMuon + 4x relu²MLP + SmearGate + Fact Tied Emb + Poly5 Softcap + YaRN2048 + 8192BPE + FP8 + Bit-packing LZMA + Stride-16 Eval - 2h Training",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -53984,7 +53984,7 @@
         "authorLogin": "CiprianFlorin-Ifrim",
         "authorName": null,
         "createdAt": "2026-03-24T19:02:34Z",
-        "updatedAt": "2026-03-24T19:03:11Z",
+        "updatedAt": "2026-03-24T19:49:48Z",
         "headSha": "d5534cfd1a5b2b2ff2e23c15506764dd3a5cc680",
         "headRepo": "CiprianFlorin-Ifrim/openai-parameter-golf-challenge"
       },
