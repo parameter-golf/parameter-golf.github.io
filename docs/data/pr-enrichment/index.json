@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T02:20:41.681Z",
+  "generatedAt": "2026-03-24T02:50:34.342Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -1701,15 +1701,14 @@
       "prNumber": 490,
       "title": "Record: 11L VR + GA + LeakyReLU² + Legal Score-First TTT (val_bpb=pending)",
       "status": "open",
-      "updatedAt": "2026-03-24T01:59:03Z",
-      "headSha": "05075423dddbc7d5055b77c8dec4435d772e35f3",
-      "generatedAt": "2026-03-24T02:20:41.604Z",
-      "summary": "11-layer stack uses value-residual + gated attention, LeakyReLU² MLPs, and legal score-first test-time training before scoring each chunk.",
+      "updatedAt": "2026-03-24T02:40:12Z",
+      "headSha": "a56d7f9f3c2ca7e2052be5b70057875a456ef5a4",
+      "generatedAt": "2026-03-24T02:50:34.271Z",
+      "summary": "Adds Value Residual, Gated Attention, and LeakyReLU² to the 11L stack with legal score-first TTT scoring each chunk before training.",
       "tags": [
         "val-only",
         "architecture",
-        "attention",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": true,

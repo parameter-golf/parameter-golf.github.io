@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-24T02:20:22.636Z",
-  "lastSeenUpdatedAt": "2026-03-24T02:06:03Z",
+  "generatedAt": "2026-03-24T02:50:28.190Z",
+  "lastSeenUpdatedAt": "2026-03-24T02:40:12Z",
   "prs": {
     "1": {
       "number": 1,
@@ -41352,7 +41352,7 @@
     },
     "490": {
       "number": 490,
-      "updatedAt": "2026-03-24T01:59:03Z",
+      "updatedAt": "2026-03-24T02:40:12Z",
       "pr": {
         "number": 490,
         "title": "Record: 11L VR + GA + LeakyReLU² + Legal Score-First TTT (val_bpb=pending)",
@@ -41363,8 +41363,8 @@
         "authorLogin": "amaljithkuttamath",
         "authorName": null,
         "createdAt": "2026-03-23T01:48:57Z",
-        "updatedAt": "2026-03-24T01:59:03Z",
-        "headSha": "05075423dddbc7d5055b77c8dec4435d772e35f3",
+        "updatedAt": "2026-03-24T02:40:12Z",
+        "headSha": "a56d7f9f3c2ca7e2052be5b70057875a456ef5a4",
         "headRepo": "amaljithkuttamath/parameter-golf"
       },
       "submissions": [
@@ -41426,16 +41426,16 @@
             "authorLogin": "amaljithkuttamath",
             "authorName": null,
             "createdAt": "2026-03-23T01:48:57Z",
-            "updatedAt": "2026-03-24T01:59:03Z",
-            "headSha": "05075423dddbc7d5055b77c8dec4435d772e35f3",
+            "updatedAt": "2026-03-24T02:40:12Z",
+            "headSha": "a56d7f9f3c2ca7e2052be5b70057875a456ef5a4",
             "headRepo": "amaljithkuttamath/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/05075423dddbc7d5055b77c8dec4435d772e35f3/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/05075423dddbc7d5055b77c8dec4435d772e35f3/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/05075423dddbc7d5055b77c8dec4435d772e35f3/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/05075423dddbc7d5055b77c8dec4435d772e35f3/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/05075423dddbc7d5055b77c8dec4435d772e35f3/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a56d7f9f3c2ca7e2052be5b70057875a456ef5a4/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/a56d7f9f3c2ca7e2052be5b70057875a456ef5a4/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/a56d7f9f3c2ca7e2052be5b70057875a456ef5a4/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/a56d7f9f3c2ca7e2052be5b70057875a456ef5a4/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/a56d7f9f3c2ca7e2052be5b70057875a456ef5a4/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891",
             "pr": "https://github.com/openai/parameter-golf/pull/490"
           }
         }
