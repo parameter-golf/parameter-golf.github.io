@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T15:02:11.125Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 726,
+    "title": "Memmap multi-shard data pipeline + GPU prefetch + LeakyReLU² + Legal TTT + Parallel Muon",
+    "state": "open",
+    "updatedAt": "2026-03-25T14:45:44Z",
+    "headSha": "21661294e55de6ccb982d98f934512c7ed714813",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/726",
+    "authorLogin": "DeepReinforce"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_Memmap_multi_shard_data_pipeline_GPU_prefetch_LeakyReLU_Legal_TTT_Parallel_Muon/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "DistributedTokenLoader memmaps shards, samples stratified coprime windows, and overlaps async GPU prefetch while keeping Parallel Muon and legal TTT defaults.",
+    "tags": [
+      "optimizer",
+      "muon",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Not using val-only training.",
+    "techniques": [
+      "Memmap multi-shard sampling with coprime strides",
+      "Async daemon thread plus CUDA prefetch for CPU→GPU overlap",
+      "Parallel Muon optimizer with legal score-first TTT defaults"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

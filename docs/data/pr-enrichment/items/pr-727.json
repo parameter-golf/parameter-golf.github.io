@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T15:02:02.479Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 727,
+    "title": "Record: Multi-order N-gram Backoff + Entropy-Adaptive Alpha (val_bpb=0.9674)",
+    "state": "open",
+    "updatedAt": "2026-03-25T14:58:23Z",
+    "headSha": "091afd7b00f5d1beb759496ec51e17caee1828b7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/727",
+    "authorLogin": "Asukabot0"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_Backoff_Entropy_Adaptive/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer GQA LM uses eval-time multi-order n-gram cache with entropy-adaptive alpha to balance neural logits and historical statistics.",
+    "tags": [
+      "architecture",
+      "attention",
+      "evaluation",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "entropy-adaptive alpha for n-gram interpolation",
+      "multi-order (2–7) backoff cache",
+      "GQA-based 11-layer model with Muon optimizer"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

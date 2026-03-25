@@ -1,8 +1,80 @@
 {
-  "generatedAt": "2026-03-25T14:32:08.033Z",
+  "generatedAt": "2026-03-25T15:02:25.518Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 727,
+      "title": "Record: Multi-order N-gram Backoff + Entropy-Adaptive Alpha (val_bpb=0.9674)",
+      "status": "open",
+      "updatedAt": "2026-03-25T14:58:23Z",
+      "headSha": "091afd7b00f5d1beb759496ec51e17caee1828b7",
+      "generatedAt": "2026-03-25T15:02:02.479Z",
+      "summary": "11-layer GQA LM uses eval-time multi-order n-gram cache with entropy-adaptive alpha to balance neural logits and historical statistics.",
+      "tags": [
+        "architecture",
+        "attention",
+        "evaluation",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-727.json"
+    },
+    {
+      "prNumber": 726,
+      "title": "Memmap multi-shard data pipeline + GPU prefetch + LeakyReLU² + Legal TTT + Parallel Muon",
+      "status": "open",
+      "updatedAt": "2026-03-25T14:45:44Z",
+      "headSha": "21661294e55de6ccb982d98f934512c7ed714813",
+      "generatedAt": "2026-03-25T15:02:11.125Z",
+      "summary": "DistributedTokenLoader memmaps shards, samples stratified coprime windows, and overlaps async GPU prefetch while keeping Parallel Muon and legal TTT defaults.",
+      "tags": [
+        "optimizer",
+        "muon",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-726.json"
+    },
+    {
+      "prNumber": 725,
+      "title": "Submit 1x A100 QAT Fix - 1.5252 BPB (Non-Record) [v5]",
+      "status": "open",
+      "updatedAt": "2026-03-25T14:47:48Z",
+      "headSha": "9bf5a5136f37eadb3d4c2c610840f356a151670f",
+      "generatedAt": "2026-03-25T15:02:16.087Z",
+      "summary": "Fits CastedLinear QAT with STE on single A100 by downsizing grad accum steps and replacing torch.quantile with w.abs().amax for efficient clipping.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-725.json"
+    },
     {
       "prNumber": 724,
       "title": "Record: 10L + 7-gram eval cache (mean val_bpb=1.0717)",
@@ -94,29 +166,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-720.json"
-    },
-    {
-      "prNumber": 719,
-      "title": "Submit 1x A100 QAT Fix - 1.5252 BPB (Non-Record) [v4]",
-      "status": "open",
-      "updatedAt": "2026-03-25T14:31:28Z",
-      "headSha": "9bf5a5136f37eadb3d4c2c610840f356a151670f",
-      "generatedAt": "2026-03-25T14:31:54.138Z",
-      "summary": "Tuned the modded-nanogpt QAT stack to fit a 10-minute single-A100 cap by switching CastedLinear clip estimation to w.abs().amax and scaling accumulation/LR schedule.",
-      "tags": [
-        "quantization",
-        "training-schedule",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-719.json"
     },
     {
       "prNumber": 718,
@@ -2037,15 +2086,15 @@
       "prNumber": 604,
       "title": "GolfStudent v2 14L: d=352, Value Residuals, GPTQ-lite, Schedule-Free, Muon+EMA",
       "status": "open",
-      "updatedAt": "2026-03-25T05:27:18Z",
-      "headSha": "7390475cb734c2d5624524d4999bc0f61f144c0c",
-      "generatedAt": "2026-03-25T05:29:27.803Z",
-      "summary": "Hybrid 14-layer LM interleaves GatedMLP recurrence with attention, ups d to 352, adds gated value residuals, GPTQ-lite INT8+zlib, Muon/EMA with schedule-free finish.",
+      "updatedAt": "2026-03-25T14:54:58Z",
+      "headSha": "8bdeef022b36c2d70e25fb745f37fab9bb68a5ca",
+      "generatedAt": "2026-03-25T15:02:25.428Z",
+      "summary": "14-layer hybrid (10 gated MLP, 4 attention) with value residual skip gates, GPTQ-lite INT8+zlib, Muon+EMA, and schedule-free final phase.",
       "tags": [
         "architecture",
-        "optimizer",
-        "training-schedule",
-        "quantization"
+        "quantization",
+        "muon",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
