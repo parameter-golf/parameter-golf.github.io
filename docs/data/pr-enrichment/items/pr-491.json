@@ -1,36 +1,38 @@
 {
-  "generatedAt": "2026-03-25T20:34:29.648Z",
+  "generatedAt": "2026-03-25T22:04:42.455Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 491,
     "title": "Value Residual + DenseFormer DWA + TTT",
     "state": "open",
-    "updatedAt": "2026-03-25T20:29:29Z",
-    "headSha": "ff4437cdd2cf905283a3a38c81dc8760e37f63ae",
+    "updatedAt": "2026-03-25T21:35:44Z",
+    "headSha": "6f4e4bc40cc9e994769acb364ef13a19f932e455",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/491",
     "authorLogin": "ahmettrkck"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-23_ValueResid_DWA_TTT/README.md"
+      "records/track_10min_16mb/2026-03-23_ValueResid_DWA_TTT/README.md",
+      "records/track_10min_16mb/2026-03-25_CTW_Mousse_OptRot/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Blends first-layer values into later layers, adds DenseFormer depth-weighted skip mixing, and test-time trains per validation window.",
+    "summary": "Combines value-residual blending, DenseFormer depth-weighted averaging, and test-time tuning on scored validation windows to extend the 10-layer base stack.",
     "tags": [
       "val-only",
-      "sliding-window-eval",
-      "attention"
+      "architecture",
+      "evaluation",
+      "training-schedule"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Fine-tunes on already-scored validation tokens during sliding-window eval (test-time training).",
+    "valOnlyReasoning": "Fine-tunes on already-scored validation tokens during sliding-window evaluation via AdamW test-time training.",
     "techniques": [
-      "value-residual mixing",
-      "DenseFormer depth-weighted averaging",
-      "test-time AdamW tuning on scored windows"
+      "Value-residual blending of first-layer V vectors",
+      "DenseFormer depth-weighted averaging over previous layers",
+      "AdamW test-time tuning on scored validation windows"
     ]
   },
   "compatibility": {

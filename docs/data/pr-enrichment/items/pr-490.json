@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T03:50:50.077Z",
+  "generatedAt": "2026-03-25T22:04:49.047Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 490,
     "title": "Record: 11L VR + GA + LeakyReLU² + Legal Score-First TTT (val_bpb=pending)",
     "state": "open",
-    "updatedAt": "2026-03-24T03:31:38Z",
+    "updatedAt": "2026-03-25T21:46:40Z",
     "headSha": "3c4c4bd3dfec3718e00b929ec25191e53d55598d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/490",
     "authorLogin": "amaljithkuttamath"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds value-residual + gated-attention blocks with LeakyReLU² MLPs while running legal score-first TTT on validation data.",
+    "summary": "11-layer stack adds Value Residual, gated attention, and LeakyReLU(0.5)^2 while applying legal score-first TTT to validation chunks.",
     "tags": [
       "val-only",
       "architecture",
@@ -27,11 +27,11 @@
       "training-schedule"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Legal score-first TTT trains on each validation chunk only after scoring it, so the tuning phase runs on validation shards.",
+    "valOnlyReasoning": "Legal score-first TTT trains directly on validation chunks immediately after scoring each one.",
     "techniques": [
-      "Value+gated attention fusion",
-      "LeakyReLU(0.5)² MLP activations",
-      "Score-first TTT with AdamW cosine schedule"
+      "Value Residual + gated attention in the 11L architecture",
+      "LeakyReLU(0.5)^2 nonlinearity in MLPs",
+      "Score-first TTT training on validation chunks"
     ]
   },
   "compatibility": {

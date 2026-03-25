@@ -1,8 +1,101 @@
 {
-  "generatedAt": "2026-03-25T21:34:49.738Z",
+  "generatedAt": "2026-03-25T22:04:56.338Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 777,
+      "title": "Record: 0.9623 BPB — 7-Gram Entropy Cache + XSA-all + EBLS",
+      "status": "open",
+      "updatedAt": "2026-03-25T22:02:26Z",
+      "headSha": "2e3d0cc2863eb71a4befd01e670c9da940694ff3",
+      "generatedAt": "2026-03-25T22:04:16.564Z",
+      "summary": "Blends a backward-only 7-gram PPM cache with entropy-adaptive mixing on top of EBLS/XSA-all layers plus val-calibrated GPTQ int6 quantization.",
+      "tags": [
+        "evaluation",
+        "quantization",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-777.json"
+    },
+    {
+      "prNumber": 776,
+      "title": "Record Submission: 0.9258 BPB — Kitchen Sink (7-gram + XSA6 + BigramHash4K + Cosine TTT)",
+      "status": "open",
+      "updatedAt": "2026-03-25T21:58:22Z",
+      "headSha": "b5bfc9aa533a0a86be1881bbc7bc747bf77848da",
+      "generatedAt": "2026-03-25T22:04:22.163Z",
+      "summary": "Combines expanded XSA6, 4096 bigram buckets, 7-gram cache, and Cosine TTT found via autoresearch-multi to tune the Kitchen Sink stack.",
+      "tags": [
+        "attention",
+        "tokenization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-776.json"
+    },
+    {
+      "prNumber": 774,
+      "title": "Record: Order-Adaptive Entropy Gating + XSA-All (val_bpb=0.9370)",
+      "status": "open",
+      "updatedAt": "2026-03-25T21:44:58Z",
+      "headSha": "b4edf2a84b069b2adae9ee590736aa2dd02fcf4b",
+      "generatedAt": "2026-03-25T22:04:26.375Z",
+      "summary": "XSA spans every layer while per-order entropy thresholds gate n-gram cache mixing so higher-order matches can override sooner.",
+      "tags": [
+        "attention",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-774.json"
+    },
+    {
+      "prNumber": 773,
+      "title": "Add non-record shared-weight Frugendorff submission",
+      "status": "open",
+      "updatedAt": "2026-03-25T21:40:25Z",
+      "headSha": "202d69ddcaf0450584ce52a7f6bd338f3051dbcb",
+      "generatedAt": "2026-03-25T22:04:31.437Z",
+      "summary": "Shared-weight Frugendorff host uses XSA on final layers, VE, late QAT, and int6+zstd export for a cleaner audited non-record path.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-773.json"
+    },
     {
       "prNumber": 771,
       "title": "Record: AdamW TTT 30ep Cosine + Per-Layer LR (val_bpb: 1.0705)",
@@ -859,29 +952,6 @@
       "file": "items/pr-721.json"
     },
     {
-      "prNumber": 720,
-      "title": "Record Submission: 1.1078 BPB — XSA6 + BigramHash4K on Hedge Mixer Stack",
-      "status": "open",
-      "updatedAt": "2026-03-25T13:47:10Z",
-      "headSha": "de025b4364f0468052eb12cbf01ef3ebf9e56fab",
-      "generatedAt": "2026-03-25T14:01:38.512Z",
-      "summary": "Extends the Hedge Mixer stack by expanding XSA depth to 6 layers and doubling BigramHash vocab via autoresearch-multi search.",
-      "tags": [
-        "architecture",
-        "attention",
-        "tokenization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-720.json"
-    },
-    {
       "prNumber": 718,
       "title": "Non-record Submission: CrystalGPT + Diamond Fusion — Ternary Crystal Architecture",
       "status": "open",
@@ -1282,15 +1352,15 @@
       "prNumber": 696,
       "title": "Add non-record JEPA byte-level encoder-decoder submission",
       "status": "open",
-      "updatedAt": "2026-03-25T08:25:12Z",
-      "headSha": "9fafabe59e0f2a6051e090eed579df00484634b5",
-      "generatedAt": "2026-03-25T08:30:09.870Z",
-      "summary": "Byte-level JEPA encoder-decoder with patch latents, INT6 optimal-clip quantization, and sliding-window SGD TTT replaces causal GPT for the 16MB track.",
+      "updatedAt": "2026-03-25T21:38:47Z",
+      "headSha": "f32b6c066d33ea42f555ce0bffcd60b0cd4fa452",
+      "generatedAt": "2026-03-25T22:04:36.349Z",
+      "summary": "Byte-level JEPA encoder-decoder with depth-recurrent encoder, patched latents, INT6 quantization, and sliding-window TTT adaptation.",
       "tags": [
         "architecture",
         "quantization",
         "compression",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4498,14 +4568,15 @@
       "prNumber": 491,
       "title": "Value Residual + DenseFormer DWA + TTT",
       "status": "open",
-      "updatedAt": "2026-03-25T20:29:29Z",
-      "headSha": "ff4437cdd2cf905283a3a38c81dc8760e37f63ae",
-      "generatedAt": "2026-03-25T20:34:29.648Z",
-      "summary": "Blends first-layer values into later layers, adds DenseFormer depth-weighted skip mixing, and test-time trains per validation window.",
+      "updatedAt": "2026-03-25T21:35:44Z",
+      "headSha": "6f4e4bc40cc9e994769acb364ef13a19f932e455",
+      "generatedAt": "2026-03-25T22:04:42.455Z",
+      "summary": "Combines value-residual blending, DenseFormer depth-weighted averaging, and test-time tuning on scored validation windows to extend the 10-layer base stack.",
       "tags": [
         "val-only",
-        "sliding-window-eval",
-        "attention"
+        "architecture",
+        "evaluation",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": true,
@@ -4521,10 +4592,10 @@
       "prNumber": 490,
       "title": "Record: 11L VR + GA + LeakyReLU² + Legal Score-First TTT (val_bpb=pending)",
       "status": "open",
-      "updatedAt": "2026-03-24T03:31:38Z",
+      "updatedAt": "2026-03-25T21:46:40Z",
       "headSha": "3c4c4bd3dfec3718e00b929ec25191e53d55598d",
-      "generatedAt": "2026-03-24T03:50:50.077Z",
-      "summary": "Adds value-residual + gated-attention blocks with LeakyReLU² MLPs while running legal score-first TTT on validation data.",
+      "generatedAt": "2026-03-25T22:04:49.047Z",
+      "summary": "11-layer stack adds Value Residual, gated attention, and LeakyReLU(0.5)^2 while applying legal score-first TTT to validation chunks.",
       "tags": [
         "val-only",
         "architecture",
@@ -9773,15 +9844,14 @@
       "prNumber": 182,
       "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
       "status": "open",
-      "updatedAt": "2026-03-25T20:51:37Z",
-      "headSha": "195d2f8b6649022caebde04957ea452a3323355c",
-      "generatedAt": "2026-03-25T21:04:46.023Z",
-      "summary": "Each block adds a linearized Titans-style memory (cumsum attention) with gated residuals plus LoRA TTT, overtone init, Muon WD, and int6/FP16 fusions.",
+      "updatedAt": "2026-03-25T21:37:02Z",
+      "headSha": "037295a885036f5d08153378696ae4aa5ac8dfb5",
+      "generatedAt": "2026-03-25T22:04:56.311Z",
+      "summary": "Blocks add linearized Titans-style neural memory via causal linear attention and gated residuals, paired with LoRA TTT, int6/FP16 tweaks, and Muon WD.",
       "tags": [
         "architecture",
         "attention",
-        "quantization",
-        "regularization"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

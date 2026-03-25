@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T22:04:16.564Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 777,
+    "title": "Record: 0.9623 BPB — 7-Gram Entropy Cache + XSA-all + EBLS",
+    "state": "open",
+    "updatedAt": "2026-03-25T22:02:26Z",
+    "headSha": "2e3d0cc2863eb71a4befd01e670c9da940694ff3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/777",
+    "authorLogin": "Robby955"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_7gram_Cache_XSA11_EBLS/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Blends a backward-only 7-gram PPM cache with entropy-adaptive mixing on top of EBLS/XSA-all layers plus val-calibrated GPTQ int6 quantization.",
+    "tags": [
+      "evaluation",
+      "quantization",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "7-gram entropy-adaptive causal cache",
+      "EBLS layer sharing with XSA-all and LoRA",
+      "Val-calibrated GPTQ int6 quant + LZMA"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

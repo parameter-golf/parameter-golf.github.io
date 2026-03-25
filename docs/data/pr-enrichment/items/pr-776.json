@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T22:04:22.163Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 776,
+    "title": "Record Submission: 0.9258 BPB — Kitchen Sink (7-gram + XSA6 + BigramHash4K + Cosine TTT)",
+    "state": "open",
+    "updatedAt": "2026-03-25T21:58:22Z",
+    "headSha": "b5bfc9aa533a0a86be1881bbc7bc747bf77848da",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/776",
+    "authorLogin": "agalimova"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_KitchenSink_7gram_CosineTTT_0.9258/README.md",
+      "records/track_10min_16mb/2026-03-25_XSA6_BigramHash4K_HedgeMixer_1.1078/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Combines expanded XSA6, 4096 bigram buckets, 7-gram cache, and Cosine TTT found via autoresearch-multi to tune the Kitchen Sink stack.",
+    "tags": [
+      "attention",
+      "tokenization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "autoresearch-multi combinatorial tuning",
+      "Cosine TTT over 7-gram cache",
+      "XSA6 + BigramHash4K hyperparameter boost"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

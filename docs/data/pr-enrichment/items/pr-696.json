@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T08:30:09.870Z",
+  "generatedAt": "2026-03-25T22:04:36.349Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 696,
     "title": "Add non-record JEPA byte-level encoder-decoder submission",
     "state": "open",
-    "updatedAt": "2026-03-25T08:25:12Z",
-    "headSha": "9fafabe59e0f2a6051e090eed579df00484634b5",
+    "updatedAt": "2026-03-25T21:38:47Z",
+    "headSha": "f32b6c066d33ea42f555ce0bffcd60b0cd4fa452",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/696",
     "authorLogin": "gravelBridge"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Byte-level JEPA encoder-decoder with patch latents, INT6 optimal-clip quantization, and sliding-window SGD TTT replaces causal GPT for the 16MB track.",
+    "summary": "Byte-level JEPA encoder-decoder with depth-recurrent encoder, patched latents, INT6 quantization, and sliding-window TTT adaptation.",
     "tags": [
       "architecture",
       "quantization",
       "compression",
-      "training-schedule"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "JEPA encoder-decoder with patch latents",
-      "INT6 optimal-clip + STE QAT warmdown",
-      "Sliding-window SGD test-time training"
+      "Byte-level JEPA encoder-decoder with depth-recurrent encoder and patched latent projection",
+      "INT6 optimal-clip quantization with STE QAT warmdown",
+      "Sliding-window test-time SGD adaptation across chunks"
     ]
   },
   "compatibility": {
