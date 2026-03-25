@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T00:58:13.508Z",
+  "generatedAt": "2026-03-25T01:28:24.267Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 659,
     "title": "Record: 5-gram Eval Cache + LeakyReLU² + Parallel Muon val_bpb: 1.0920 (3-seed mean, std 0.0007) | ~15.9 MB | 8×H100 SXM",
-    "state": "open",
-    "updatedAt": "2026-03-25T00:41:36Z",
+    "state": "closed",
+    "updatedAt": "2026-03-25T01:12:49Z",
     "headSha": "d9349d06fca5021e39ecb906d09516b2146f8114",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/659",
     "authorLogin": "deanbrr"
@@ -19,15 +19,15 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Sliding-window eval mixes base predictions with an online safety-gated 5-gram cache that updates from past tokens to capture repetition without retraining.",
+    "summary": "LeakyReLU Parallel Muon eval adds an online backward-looking 5-gram cache with confidence-gated mixing to sharpen predictions via CPU lookups.",
     "tags": [
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Online confidence-gated 5-gram cache mixing",
-      "Sliding-window eval with backward-only n-gram updates"
+      "Sliding-window eval with confidence-gated log-sum-exp mixing",
+      "Online CPU 5-gram cache built from already-scored tokens"
     ]
   },
   "compatibility": {

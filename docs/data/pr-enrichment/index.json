@@ -1,8 +1,80 @@
 {
-  "generatedAt": "2026-03-25T00:58:28.087Z",
+  "generatedAt": "2026-03-25T01:28:33.470Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 668,
+      "title": "Non-record: 11L GEPA + 30k Steps + Pure Int6 + Legal TTT (val_bpb=1.0920)",
+      "status": "open",
+      "updatedAt": "2026-03-25T01:25:36Z",
+      "headSha": "cbbf3d6347c1bb5230858f94b60186f6f3527330",
+      "generatedAt": "2026-03-25T01:28:06.625Z",
+      "summary": "11L GEPA uses an extended 60% warmdown, pure int6 GPTQ-lite quant, and legal SGD TTT refinement for a compact 13MB artifact.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-668.json"
+    },
+    {
+      "prNumber": 667,
+      "title": "Non-record: Fixed Bank QAT + XSA5 + Label Smoothing (1.1352)",
+      "status": "open",
+      "updatedAt": "2026-03-25T01:24:33Z",
+      "headSha": "3a4fa9c71c6347bd0f05a7f402c4476f2b353f3b",
+      "generatedAt": "2026-03-25T01:28:12.707Z",
+      "summary": "Fixes bank QAT with STE fake-quant in GPT.forward while expanding XSA to five layers and tweaking TTT+label-smoothing atop the LeakyReLU Muon stack.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "regularization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-667.json"
+    },
+    {
+      "prNumber": 666,
+      "title": "Non-record: BitNet Ternary — 65M params in 15.9MB (1.1932 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-25T01:12:44Z",
+      "headSha": "b205c8fd5f2a7794520b68baba956d6b89bee21f",
+      "generatedAt": "2026-03-25T01:28:19.167Z",
+      "summary": "65M GPT uses ternary STE training with U-Net skip connections so extreme quantization fits 16MB after a warmup-to-ternary schedule.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-666.json"
+    },
     {
       "prNumber": 665,
       "title": "Add LLMAdvisor submission: 1.14638 BPB (track_10min_16mb)",
@@ -146,11 +218,11 @@
     {
       "prNumber": 659,
       "title": "Record: 5-gram Eval Cache + LeakyReLU² + Parallel Muon val_bpb: 1.0920 (3-seed mean, std 0.0007) | ~15.9 MB | 8×H100 SXM",
-      "status": "open",
-      "updatedAt": "2026-03-25T00:41:36Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T01:12:49Z",
       "headSha": "d9349d06fca5021e39ecb906d09516b2146f8114",
-      "generatedAt": "2026-03-25T00:58:13.508Z",
-      "summary": "Sliding-window eval mixes base predictions with an online safety-gated 5-gram cache that updates from past tokens to capture repetition without retraining.",
+      "generatedAt": "2026-03-25T01:28:24.267Z",
+      "summary": "LeakyReLU Parallel Muon eval adds an online backward-looking 5-gram cache with confidence-gated mixing to sharpen predictions via CPU lookups.",
       "tags": [
         "evaluation"
       ],
@@ -984,15 +1056,15 @@
     {
       "prNumber": 606,
       "title": "Record: int5 GPTQ + Soft-Round QAT (3-seed mean 1.1162)",
-      "status": "open",
-      "updatedAt": "2026-03-24T08:36:29Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T01:02:17Z",
       "headSha": "17836df54df77a51e47120c775cd7e722862c3e0",
-      "generatedAt": "2026-03-24T08:53:04.033Z",
-      "summary": "int5 GPTQ with Hessian-aware compensation and Soft-Round QAT on an 11-layer 33.6M model combined with score-first AdamW TTT to hit 16MB.",
+      "generatedAt": "2026-03-25T01:28:28.421Z",
+      "summary": "Int5 GPTQ with Hessian-aware compensation, Soft-Round QAT, and legal score-first AdamW TTT stabilizes a 33.6M/16MB model.",
       "tags": [
         "quantization",
-        "architecture",
-        "training-schedule"
+        "training-schedule",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1032,10 +1104,10 @@
       "prNumber": 604,
       "title": "GolfStudent v2 14L: d=352, Value Residuals, GPTQ-lite, Schedule-Free, Muon+EMA",
       "status": "open",
-      "updatedAt": "2026-03-25T00:45:16Z",
+      "updatedAt": "2026-03-25T01:07:16Z",
       "headSha": "2b2b9a679b3d76a08ba9678954cf5ad3d28dca3a",
-      "generatedAt": "2026-03-25T00:58:23.631Z",
-      "summary": "14-layer GatedMLP/attention hybrid (d=352) adds value-residual skip gates, Muon+EMA, GPTQ-lite quantization, and a schedule-free final stage.",
+      "generatedAt": "2026-03-25T01:28:33.378Z",
+      "summary": "Hybrid 14-layer model ups d to 352, mixes gated MLP recurrence with attention, adds value residual skip gates, GPTQ-lite INT8, and a schedule-free finish.",
       "tags": [
         "architecture",
         "quantization",

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T01:28:19.167Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 666,
+    "title": "Non-record: BitNet Ternary — 65M params in 15.9MB (1.1932 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-25T01:12:44Z",
+    "headSha": "b205c8fd5f2a7794520b68baba956d6b89bee21f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/666",
+    "authorLogin": "chrislovescoding"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-25_BitNet_Ternary_65M_12x768/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "65M GPT uses ternary STE training with U-Net skip connections so extreme quantization fits 16MB after a warmup-to-ternary schedule.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Ternary STE with per-row scaling and warmup-to-ternary transition",
+      "12-layer GPT with U-Net skips, 3× MLP, LeakyReLU², and GQA",
+      "Compress ternary ints with zlib-9 to pack 65M params into 15.9MB"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

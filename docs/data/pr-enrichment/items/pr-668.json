@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T01:28:06.625Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 668,
+    "title": "Non-record: 11L GEPA + 30k Steps + Pure Int6 + Legal TTT (val_bpb=1.0920)",
+    "state": "open",
+    "updatedAt": "2026-03-25T01:25:36Z",
+    "headSha": "cbbf3d6347c1bb5230858f94b60186f6f3527330",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/668",
+    "authorLogin": "Christopher-Lee-McClendon"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-24_11L_GEPA_30kSteps_PureInt6_LegalTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11L GEPA uses an extended 60% warmdown, pure int6 GPTQ-lite quant, and legal SGD TTT refinement for a compact 13MB artifact.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Long 60% warmdown schedule to shrink the quant gap",
+      "Pure int6 per-row GPTQ-lite quantization with zstd-22 compression",
+      "Legal SGD test-time training on frozen early layers"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

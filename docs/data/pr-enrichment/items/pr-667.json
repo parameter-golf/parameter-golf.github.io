@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T01:28:12.707Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 667,
+    "title": "Non-record: Fixed Bank QAT + XSA5 + Label Smoothing (1.1352)",
+    "state": "open",
+    "updatedAt": "2026-03-25T01:24:33Z",
+    "headSha": "3a4fa9c71c6347bd0f05a7f402c4476f2b353f3b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/667",
+    "authorLogin": "suchitj2702"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_FixedQAT_XSA5_LabelSmoothing/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Fixes bank QAT with STE fake-quant in GPT.forward while expanding XSA to five layers and tweaking TTT+label-smoothing atop the LeakyReLU Muon stack.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "regularization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "STE int6 fake-quant in GPT.forward for bank params",
+      "XSA stack expanded to last five layers",
+      "TTT LR/momentum tweak with 0.05 label smoothing"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
