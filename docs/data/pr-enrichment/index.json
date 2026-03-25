@@ -1,8 +1,52 @@
 {
-  "generatedAt": "2026-03-25T15:33:24.042Z",
+  "generatedAt": "2026-03-25T16:03:09.677Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 737,
+      "title": "[Non Record] Online Curriculum Learning ",
+      "status": "open",
+      "updatedAt": "2026-03-25T15:58:54Z",
+      "headSha": "bca5086f76bfe786ecf85fdf9e71f4a5f8e65253",
+      "generatedAt": "2026-03-25T16:02:29.281Z",
+      "summary": "Runs per-batch entropy-ranked sequences through a V-shaped difficulty target, oversampling 2× to align easy-hard-easy data with LR/SWA phases.",
+      "tags": [
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-737.json"
+    },
+    {
+      "prNumber": 736,
+      "title": "Submit 9L 2xMLP optimized parameter run with val_bpb 1.2168",
+      "status": "open",
+      "updatedAt": "2026-03-25T15:50:53Z",
+      "headSha": "5e6783a632c53c7437d5175918a251e06033abd5",
+      "generatedAt": "2026-03-25T16:02:35.110Z",
+      "summary": "Expanded 9L 2xMLP uses 2048 context, tuned 0.055 matrix LR, and 3600-step warmdown to stay within the 16MB cap.",
+      "tags": [
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-736.json"
+    },
     {
       "prNumber": 734,
       "title": "Non-record: Full GPTQ + XSA-4 + Score-First TTT (3-seed mean 1.1198)",
@@ -449,13 +493,14 @@
       "prNumber": 709,
       "title": "Results of 2026-03-23_MixedQAT_Int5MLP_Int6Attn",
       "status": "open",
-      "updatedAt": "2026-03-25T15:24:00Z",
-      "headSha": "490bc6ee6c49d678d2d9a7d8718e60aa74449d3d",
-      "generatedAt": "2026-03-25T15:32:56.406Z",
-      "summary": "Runs mixed int5/int6 STE QAT from step 0 on top of the full SOTA stack to align training with the export quantization scheme.",
+      "updatedAt": "2026-03-25T15:48:46Z",
+      "headSha": "266acb8a2cc0939e2ffc20b841f712572189e711",
+      "generatedAt": "2026-03-25T16:02:41.053Z",
+      "summary": "Applies mixed-precision QAT with int5 MLP/int6 attention STE and export-aligned clip ranges atop the full SOTA stack to shrink the quantization gap.",
       "tags": [
         "quantization",
-        "mixed-precision"
+        "mixed-precision",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -938,13 +983,14 @@
     },
     {
       "prNumber": 678,
-      "title": "Attention Warm-Start: Initializing Q/K from Bigram Co-occurrence SVD",
+      "title": "[Non Record] Attention Warm-Start: Initializing Q/K from Bigram Co-occurrence SVD",
       "status": "open",
-      "updatedAt": "2026-03-25T04:36:28Z",
+      "updatedAt": "2026-03-25T16:00:59Z",
       "headSha": "f7a9e2decc4d26012d2220d7fe746e5ace983a09",
-      "generatedAt": "2026-03-25T04:59:05.672Z",
-      "summary": "Warm-starts layer-0 attention by initializing Q/K from PMI-like bigram co-occurrence SVD projected into model space before training.",
+      "generatedAt": "2026-03-25T16:02:46.140Z",
+      "summary": "Layer-0 Q/K are SVD-initialized from bigram co-occurrence stats via random projection so early attention mirrors token relationships before training.",
       "tags": [
+        "attention",
         "architecture",
         "non-record"
       ],
@@ -1660,15 +1706,14 @@
       "prNumber": 635,
       "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
       "status": "open",
-      "updatedAt": "2026-03-25T12:42:11Z",
-      "headSha": "fa55661b17f09b43c110de8a34f438b7d238e6e4",
-      "generatedAt": "2026-03-25T13:01:59.555Z",
-      "summary": "11L 512d transformer pairs MLP3.5x LeakyReLU(0.5)^2 with SmearGate, Value Residual, gated XSA, Partial RoPE, late QAT, and int6 GPTQ compression.",
+      "updatedAt": "2026-03-25T15:55:29Z",
+      "headSha": "76039abdb2030c6cc06e2061297f8885c52beffb",
+      "generatedAt": "2026-03-25T16:02:58.414Z",
+      "summary": "11-layer 512d GQA transformer couples MLP 3.5x LeakyReLU(0.5)^2 with Value Residual, Gated Attention, XSA, partial RoPE, Muon schedule, int6 GPTQ-lite quant.",
       "tags": [
         "architecture",
         "quantization",
-        "training-schedule",
-        "evaluation"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2176,10 +2221,10 @@
       "prNumber": 604,
       "title": "GolfStudent v2 14L: d=352, Value Residuals, GPTQ-lite, Schedule-Free, Muon+EMA",
       "status": "open",
-      "updatedAt": "2026-03-25T15:21:31Z",
-      "headSha": "bc96740ca8b21250c358321c5ed7205f03437a82",
-      "generatedAt": "2026-03-25T15:33:23.950Z",
-      "summary": "GolfStudent v2 builds a 14-layer d=352 GatedMLP/attention stack with value-residual skips, Muon+EMA training, and a schedule-free final phase before GPTQ-lite quantization.",
+      "updatedAt": "2026-03-25T15:52:57Z",
+      "headSha": "ea41d5b512a32d33390b8d4d51af56c0b92cdf75",
+      "generatedAt": "2026-03-25T16:03:04.419Z",
+      "summary": "Hybrid 14-layer LM mixes gated MLP recurrence with periodic attention, value-residual gates, Muon optimizer schedule-free finish, GPTQ-lite INT8.",
       "tags": [
         "architecture",
         "optimizer",
@@ -6732,14 +6777,14 @@
       "prNumber": 330,
       "title": "Non-record: 11L Int6 + Online Logit Bias (val_bpb=1.1609)",
       "status": "open",
-      "updatedAt": "2026-03-21T09:09:45Z",
-      "headSha": "809785e72f792e28ed20922a4c69de3626305c90",
-      "generatedAt": "2026-03-21T09:30:22.321Z",
-      "summary": "11-layer int6 GPT uses a muon-style stack and eval-time online logit-bias updates during sliding-window scoring.",
+      "updatedAt": "2026-03-25T15:34:24Z",
+      "headSha": "96cb9084602bcb632ee38e17a65ab58bedb2cf0e",
+      "generatedAt": "2026-03-25T16:03:09.626Z",
+      "summary": "11-layer int6 GPTQ model using gated attention/VRL, 7-gram cache, and online logit bias with cosine TTT.",
       "tags": [
         "quantization",
-        "architecture",
-        "sliding-window-eval",
+        "attention",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {

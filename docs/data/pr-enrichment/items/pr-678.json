@@ -1,36 +1,36 @@
 {
-  "generatedAt": "2026-03-25T04:59:05.672Z",
+  "generatedAt": "2026-03-25T16:02:46.140Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 678,
-    "title": "Attention Warm-Start: Initializing Q/K from Bigram Co-occurrence SVD",
+    "title": "[Non Record] Attention Warm-Start: Initializing Q/K from Bigram Co-occurrence SVD",
     "state": "open",
-    "updatedAt": "2026-03-25T04:36:28Z",
+    "updatedAt": "2026-03-25T16:00:59Z",
     "headSha": "f7a9e2decc4d26012d2220d7fe746e5ace983a09",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/678",
     "authorLogin": "SPThole"
   },
   "inputs": {
-    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/README.md",
       "records/track_non_record_16mb/2026_03_24_cooccurrence-qk-init_from-exp18/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 1
   },
   "output": {
-    "summary": "Warm-starts layer-0 attention by initializing Q/K from PMI-like bigram co-occurrence SVD projected into model space before training.",
+    "summary": "Layer-0 Q/K are SVD-initialized from bigram co-occurrence stats via random projection so early attention mirrors token relationships before training.",
     "tags": [
+      "attention",
       "architecture",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Layer-0 Q/K initialized from PMI-like bigram counts via SVD to embed real token relationships",
-      "Fixed random projection compresses the 1024×1024 co-occurrence matrix into the 512-d model space before factorization",
-      "Sequential SVD slices feed each head while norm rescaling matches the default orthogonal init"
+      "Bigram co-occurrence matrix → log/center/PCA projection",
+      "SVD split assigns components to each head to cover frequency bands",
+      "Scale-normalized Q/K to match default initialization norm"
     ]
   },
   "compatibility": {

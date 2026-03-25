@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T16:02:29.281Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 737,
+    "title": "[Non Record] Online Curriculum Learning ",
+    "state": "open",
+    "updatedAt": "2026-03-25T15:58:54Z",
+    "headSha": "bca5086f76bfe786ecf85fdf9e71f4a5f8e65253",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/737",
+    "authorLogin": "SPThole"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2025-03-24_AWQ_CyclMom_11L_shared/README.md",
+      "records/track_non_record_16mb/2026_03_24_seq-v_curriculum/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Runs per-batch entropy-ranked sequences through a V-shaped difficulty target, oversampling 2× to align easy-hard-easy data with LR/SWA phases.",
+    "tags": [
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Entropy-based per-sequence difficulty scoring",
+      "V-shaped curriculum target aligned to LR warmdown and SWA",
+      "2× oversampling with windowed selection per batch"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

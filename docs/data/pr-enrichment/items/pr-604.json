@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T15:33:23.950Z",
+  "generatedAt": "2026-03-25T16:03:04.419Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 604,
     "title": "GolfStudent v2 14L: d=352, Value Residuals, GPTQ-lite, Schedule-Free, Muon+EMA",
     "state": "open",
-    "updatedAt": "2026-03-25T15:21:31Z",
-    "headSha": "bc96740ca8b21250c358321c5ed7205f03437a82",
+    "updatedAt": "2026-03-25T15:52:57Z",
+    "headSha": "ea41d5b512a32d33390b8d4d51af56c0b92cdf75",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/604",
     "authorLogin": "whitestone1121-web"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "GolfStudent v2 builds a 14-layer d=352 GatedMLP/attention stack with value-residual skips, Muon+EMA training, and a schedule-free final phase before GPTQ-lite quantization.",
+    "summary": "Hybrid 14-layer LM mixes gated MLP recurrence with periodic attention, value-residual gates, Muon optimizer schedule-free finish, GPTQ-lite INT8.",
     "tags": [
       "architecture",
       "optimizer",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hybrid GatedMLP+attention RoPE layers with weight-tied embeddings",
-      "Value residual tanh-gated skip scalars every three blocks",
-      "Muon optimizer with momentum warmup+EMA and schedule-free final window"
+      "Gated MLP+attention hybrid with RoPE",
+      "Muon optimizer with schedule-free final LR floor",
+      "GPTQ-lite per-row INT8 + zlib"
     ]
   },
   "compatibility": {

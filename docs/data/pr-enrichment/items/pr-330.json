@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T09:30:22.321Z",
+  "generatedAt": "2026-03-25T16:03:09.626Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 330,
     "title": "Non-record: 11L Int6 + Online Logit Bias (val_bpb=1.1609)",
     "state": "open",
-    "updatedAt": "2026-03-21T09:09:45Z",
-    "headSha": "809785e72f792e28ed20922a4c69de3626305c90",
+    "updatedAt": "2026-03-25T15:34:24Z",
+    "headSha": "96cb9084602bcb632ee38e17a65ab58bedb2cf0e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/330",
     "authorLogin": "bopmite"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer int6 GPT uses a muon-style stack and eval-time online logit-bias updates during sliding-window scoring.",
+    "summary": "11-layer int6 GPTQ model using gated attention/VRL, 7-gram cache, and online logit bias with cosine TTT.",
     "tags": [
       "quantization",
-      "architecture",
-      "sliding-window-eval",
+      "attention",
+      "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "11L int6 GPT with muon+NTK RoPE stack",
-      "eval-time online logit bias per token",
-      "sliding-window stride-64 scoring"
+      "Int6 GPTQ compression with pruning",
+      "7-gram adaptive cache plus online logit bias",
+      "100-epoch cosine test-time training (TTT)"
     ]
   },
   "compatibility": {

@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-25T16:02:35.110Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 736,
+    "title": "Submit 9L 2xMLP optimized parameter run with val_bpb 1.2168",
+    "state": "open",
+    "updatedAt": "2026-03-25T15:50:53Z",
+    "headSha": "5e6783a632c53c7437d5175918a251e06033abd5",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/736",
+    "authorLogin": "Git-Aarya"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/9L_2xMLP/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Expanded 9L 2xMLP uses 2048 context, tuned 0.055 matrix LR, and 3600-step warmdown to stay within the 16MB cap.",
+    "tags": [
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "9L 2xMLP with 2048-context sequences",
+      "Matrix LR 0.055 paired with 3600 warmdown iterations"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
