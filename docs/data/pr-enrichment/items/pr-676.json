@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-25T04:28:50.906Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 676,
+    "title": "SwiGLU MLP: parameter-neutral gated activation over LeakyReLU^2",
+    "state": "open",
+    "updatedAt": "2026-03-25T04:12:57Z",
+    "headSha": "697f4ce12cff9a911d00417ab6b5378660cf91a6",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/676",
+    "authorLogin": "they-call-me-god"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_SwiGLU_LeakyReLU2_LegalTTT_ParallelMuon/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Replace the LeakyReLU² MLP with parameter-neutral SwiGLU gating atop the PR #549 stack to add learned multiplicative routing without extra params.",
+    "tags": [
+      "architecture",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Parameter-neutral SwiGLU gating instead of LeakyReLU²",
+      "Legal score-first TTT plus Parallel Muon training stack"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

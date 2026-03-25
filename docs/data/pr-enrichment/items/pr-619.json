@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-24T22:57:30.188Z",
+  "generatedAt": "2026-03-25T04:29:09.068Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 619,
     "title": "non-record 16MB A100 SXM run (10L mixed int5/int6 + EMA + QAT)",
     "state": "open",
-    "updatedAt": "2026-03-24T22:40:52Z",
-    "headSha": "2c3364deaf9ac054a768309035ede73fcc5d5a34",
+    "updatedAt": "2026-03-25T04:25:44Z",
+    "headSha": "ed68090dfb54e2ebc8ed8b7b15d7fe9974ed0c54",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/619",
     "authorLogin": "zeal175"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer model pairs mixed int5/int6 quantization with EMA-exported weights and 15% late QAT plus BigramHash for a 16MB non-record run on A100.",
+    "summary": "10-layer Transformer mixes int5/int6 quant for MLP vs attention, adds EMA exports with final-fraction QAT, and leverages BigramHash on 1xA100 SXM.",
     "tags": [
       "quantization",
-      "optimizer",
-      "tokenization",
-      "non-record"
+      "architecture",
+      "training-schedule",
+      "tokenization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Mixed int5/int6 quantization split between MLP and attention/bigram weights",
-      "EMA-exported weights with late-stage 15% QAT",
-      "BigramHash vocabulary/dimension to enrich token encoding"
+      "Mixed int5/int6 quantization across MLP and attention weights with late QAT",
+      "EMA-smoothed export weights synced to final-fraction quantization schedule",
+      "BigramHash vocabulary expansion for tokenization"
     ]
   },
   "compatibility": {

@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-03-25T03:58:45.316Z",
+  "generatedAt": "2026-03-25T04:29:09.165Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 676,
+      "title": "SwiGLU MLP: parameter-neutral gated activation over LeakyReLU^2",
+      "status": "open",
+      "updatedAt": "2026-03-25T04:12:57Z",
+      "headSha": "697f4ce12cff9a911d00417ab6b5378660cf91a6",
+      "generatedAt": "2026-03-25T04:28:50.906Z",
+      "summary": "Replace the LeakyReLU² MLP with parameter-neutral SwiGLU gating atop the PR #549 stack to add learned multiplicative routing without extra params.",
+      "tags": [
+        "architecture",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-676.json"
+    },
+    {
+      "prNumber": 675,
+      "title": "Non-record: LeakyReLU² + LAWA + Ramping WD + Val Training (val_bpb=1.2302, 1xH100)",
+      "status": "open",
+      "updatedAt": "2026-03-25T03:58:35Z",
+      "headSha": "fe396537ccfa66c2e23165cff1a7d6dd3bee58d9",
+      "generatedAt": "2026-03-25T04:28:57.402Z",
+      "summary": "Stacks LeakyReLU², LAWA averaging, ramping weight decay, and val-set training on a 10-layer baseline with LZMA compression.",
+      "tags": [
+        "val-only",
+        "compression",
+        "training-schedule",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-675.json"
+    },
     {
       "prNumber": 673,
       "title": "Add submission snapshots for grant-backed runs",
@@ -872,14 +918,15 @@
       "prNumber": 623,
       "title": "[10min/16MB]  AWQ + Cyclic Momentum + ReLU² + 11L Shared — 1.1507 bpb",
       "status": "open",
-      "updatedAt": "2026-03-24T14:54:41Z",
-      "headSha": "a029a319a44a3c4369b32facc45b7ba7967d899e",
-      "generatedAt": "2026-03-24T14:55:32.499Z",
-      "summary": "Combines AWQ int5/int6 calibration, cyclic Muon momentum, ReLU² MLPs, and 11-layer weight sharing for a compact 16MB model.",
+      "updatedAt": "2026-03-25T04:25:46Z",
+      "headSha": "d7ec40c18f1ec8f95d1411a5e2d24689172b8da8",
+      "generatedAt": "2026-03-25T04:29:03.346Z",
+      "summary": "Combines AWQ per-channel quant scaling with cyclic Muon momentum, ReLU² MLPs, and a shared 11th layer to keep the 16MB model compact.",
       "tags": [
         "quantization",
         "optimizer",
-        "architecture"
+        "architecture",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -943,15 +990,15 @@
       "prNumber": 619,
       "title": "non-record 16MB A100 SXM run (10L mixed int5/int6 + EMA + QAT)",
       "status": "open",
-      "updatedAt": "2026-03-24T22:40:52Z",
-      "headSha": "2c3364deaf9ac054a768309035ede73fcc5d5a34",
-      "generatedAt": "2026-03-24T22:57:30.188Z",
-      "summary": "10-layer model pairs mixed int5/int6 quantization with EMA-exported weights and 15% late QAT plus BigramHash for a 16MB non-record run on A100.",
+      "updatedAt": "2026-03-25T04:25:44Z",
+      "headSha": "ed68090dfb54e2ebc8ed8b7b15d7fe9974ed0c54",
+      "generatedAt": "2026-03-25T04:29:09.068Z",
+      "summary": "10-layer Transformer mixes int5/int6 quant for MLP vs attention, adds EMA exports with final-fraction QAT, and leverages BigramHash on 1xA100 SXM.",
       "tags": [
         "quantization",
-        "optimizer",
-        "tokenization",
-        "non-record"
+        "architecture",
+        "training-schedule",
+        "tokenization"
       ],
       "flags": {
         "usesValOnly": false,
