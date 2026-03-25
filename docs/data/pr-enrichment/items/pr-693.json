@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T07:30:02.410Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 693,
+    "title": "Record: CROWN-Q + Full GPTQ + SWA/EMA Blend — val_bpb 1.1186 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-25T07:28:34Z",
+    "headSha": "f4636fd77c1342b93ae5a9ed80bf922775c54be3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/693",
+    "authorLogin": "EthanYangTW"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_CROWNQ_GPTQ_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Warmdown CROWN-Q curvature penalty steers weights into flat minima before full Cholesky GPTQ, then a SWA/EMA blend is exported and sliding-window evaluated.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "CROWN-Q warmdown curvature penalty",
+      "Full Cholesky GPTQ calibration",
+      "SWA/EMA blend with sliding-window eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

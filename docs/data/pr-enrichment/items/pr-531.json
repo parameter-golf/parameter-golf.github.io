@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T13:46:05.803Z",
+  "generatedAt": "2026-03-25T07:30:33.916Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 531,
     "title": "Record: 11L + XSA4 + EMA + Late QAT + GPTQ-lite (1.1325 BPB)",
-    "state": "open",
-    "updatedAt": "2026-03-23T13:42:35Z",
+    "state": "closed",
+    "updatedAt": "2026-03-25T07:13:55Z",
     "headSha": "5b197bed4ef50662d43f9b74826031d3cdd17c46",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/531",
     "authorLogin": "pragnyanramtha"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines XSA4 parameter reuse with 11-layer GPT, EMA, late QAT, and GPTQ-lite quantization under fullgraph compilation for the 10m/16MB run.",
+    "summary": "Paired 11-layer GPT with XSA4, EMA, Late QAT, and GPTQ-lite while keeping fullgraph compile for the 16MB 10-minute run.",
     "tags": [
       "attention",
-      "architecture",
+      "optimizer",
       "quantization",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Cross-layer Shared Attention frees params so 11-layer GPT fits the budget",
-      "Full-training EMA plus late-stage QAT before int6 GPTQ-lite clipping",
-      "fullgraph=True compilation to squeeze extra steps in 10-minute budget"
+      "XSA4 cross-layer subtraction reuses attention outputs to save params",
+      "EMA from step 0 plus LR-triggered Late QAT before full quantization",
+      "GPTQ-lite percentile search for int6 attention clipping"
     ]
   },
   "compatibility": {

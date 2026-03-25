@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T07:30:12.378Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 691,
+    "title": "PR #414 + 30-Epoch Cosine TTT (1.0988 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-25T07:08:32Z",
+    "headSha": "0a2a1ac5f76d71c698b46d397da057349a40af58",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/691",
+    "authorLogin": "xexyz"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_PR414_CosineTTT30ep_1.0988/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "30-epoch cosine LR Test-Time Training adapts the PR #414 int6 stack on validation data before the sliding-window evaluation.",
+    "tags": [
+      "val-only",
+      "sliding-window-eval",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Fine-tunes the quantized model on validation shards via Test-Time Training prior to the sliding-window eval.",
+    "techniques": [
+      "Cosine LR Test-Time Training on quantized stack",
+      "Per-layer LR multipliers during val-only fine-tuning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

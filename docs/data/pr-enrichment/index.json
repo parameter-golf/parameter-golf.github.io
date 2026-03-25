@@ -1,8 +1,56 @@
 {
-  "generatedAt": "2026-03-25T07:00:13.558Z",
+  "generatedAt": "2026-03-25T07:30:33.999Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 693,
+      "title": "Record: CROWN-Q + Full GPTQ + SWA/EMA Blend — val_bpb 1.1186 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-25T07:28:34Z",
+      "headSha": "f4636fd77c1342b93ae5a9ed80bf922775c54be3",
+      "generatedAt": "2026-03-25T07:30:02.410Z",
+      "summary": "Warmdown CROWN-Q curvature penalty steers weights into flat minima before full Cholesky GPTQ, then a SWA/EMA blend is exported and sliding-window evaluated.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-693.json"
+    },
+    {
+      "prNumber": 691,
+      "title": "PR #414 + 30-Epoch Cosine TTT (1.0988 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-25T07:08:32Z",
+      "headSha": "0a2a1ac5f76d71c698b46d397da057349a40af58",
+      "generatedAt": "2026-03-25T07:30:12.378Z",
+      "summary": "30-epoch cosine LR Test-Time Training adapts the PR #414 int6 stack on validation data before the sliding-window evaluation.",
+      "tags": [
+        "val-only",
+        "sliding-window-eval",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-691.json"
+    },
     {
       "prNumber": 688,
       "title": "Record: 5-expert Hedge Mixer + TTT (3-seed mean val_bpb=1.0745)",
@@ -820,15 +868,14 @@
       "prNumber": 638,
       "title": "Record: 11L XSA-all + LeakyReLU(0.5)² + VR + GA (val_bpb=1.1164, pending 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-24T18:36:15Z",
-      "headSha": "af58387ef95876c80bff71867bf92a60df40ac04",
-      "generatedAt": "2026-03-24T18:56:51.522Z",
-      "summary": "11-layer 512d GQA uses XSA on every layer, LeakyReLU(0.5)^2, and Value Residual+Gated Attention with Int6 sliding eval compression.",
+      "updatedAt": "2026-03-25T07:03:42Z",
+      "headSha": "320bdb3c548daeccc226847c10ab248113a244ee",
+      "generatedAt": "2026-03-25T07:30:19.896Z",
+      "summary": "11-layer GQA stack applies XSA everywhere plus LeakyReLU(0.5)^2 with value-residual and gated attention, then int6+zstd-21 compresses the artifact.",
       "tags": [
         "architecture",
         "attention",
-        "quantization",
-        "evaluation"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -891,15 +938,15 @@
       "prNumber": 635,
       "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
       "status": "open",
-      "updatedAt": "2026-03-25T06:46:16Z",
-      "headSha": "b58dba85e2b2892bd85542b4827ef914ba6e1eff",
-      "generatedAt": "2026-03-25T06:59:59.415Z",
-      "summary": "11-layer 512d transformer pairs MLP3.5x LeakyReLU^2 with SmearGate, Bigram/Trigram hashing, Value Residual, gated/XSA attention, partial RoPE, and late QAT/int6 stack.",
+      "updatedAt": "2026-03-25T07:28:27Z",
+      "headSha": "3b95b3cbbf5826f40f303ef0ea2947f866852e3c",
+      "generatedAt": "2026-03-25T07:30:28.195Z",
+      "summary": "11-layer 512d transformer stacks MLP 3.5x with LeakyReLU(0.5)^2, SmearGate, gated/XSA attention, and Value Residuals with Partial RoPE to boost expressivity.",
       "tags": [
         "architecture",
-        "attention",
+        "training-schedule",
         "quantization",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2614,14 +2661,14 @@
     {
       "prNumber": 531,
       "title": "Record: 11L + XSA4 + EMA + Late QAT + GPTQ-lite (1.1325 BPB)",
-      "status": "open",
-      "updatedAt": "2026-03-23T13:42:35Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T07:13:55Z",
       "headSha": "5b197bed4ef50662d43f9b74826031d3cdd17c46",
-      "generatedAt": "2026-03-23T13:46:05.803Z",
-      "summary": "Combines XSA4 parameter reuse with 11-layer GPT, EMA, late QAT, and GPTQ-lite quantization under fullgraph compilation for the 10m/16MB run.",
+      "generatedAt": "2026-03-25T07:30:33.916Z",
+      "summary": "Paired 11-layer GPT with XSA4, EMA, Late QAT, and GPTQ-lite while keeping fullgraph compile for the 16MB 10-minute run.",
       "tags": [
         "attention",
-        "architecture",
+        "optimizer",
         "quantization",
         "training-schedule"
       ],
