@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T17:33:00.164Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 746,
+    "title": "Seq2048 + torch.compile + mid LR (1xA100 draft)",
+    "state": "open",
+    "updatedAt": "2026-03-25T17:13:32Z",
+    "headSha": "fa8cd9947410c0ea9003835722bcb402f3e1af89",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/746",
+    "authorLogin": "C0neF"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-26_Seq2048_Compile_1xA100_Draft/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Single-A100 seq2048 tuning pairs torch.compile with mid learning rates so the baseline gets extra optimization steps within a 600s budget before record validation.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Seq len 2048 with 9L/512d base layout",
+      "Torch.compile boosts throughput within the single-A100 budget",
+      "Moderately reduced learning rates stabilize training"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

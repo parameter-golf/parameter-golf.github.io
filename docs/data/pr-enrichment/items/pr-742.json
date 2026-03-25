@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T17:02:53.594Z",
+  "generatedAt": "2026-03-25T17:33:13.243Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 742,
     "title": "EPSILON-AETHER Geometric Sparse Attention (12L Record Attempt)",
     "state": "open",
-    "updatedAt": "2026-03-25T16:42:59Z",
-    "headSha": "257d72ed81809806bba0eb736022db0e2ad3aedd",
+    "updatedAt": "2026-03-25T17:13:18Z",
+    "headSha": "8740d664bc27391ced54a5a13008072a8df2d027",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/742",
     "authorLogin": "teerthsharma"
   },
@@ -20,18 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Fuses EPSILON’s JL-projected S^31 scoring with AETHER block-sparse attention plus Lyapunov governor for faster 12-layer runs.",
+    "summary": "EPSILON-AETHER maps Q/K via seeded JL onto S^31 so block-sparse AETHER attention scores in O(32N), enabling 12-layer runs within the 10-min 8×H100 budget.",
     "tags": [
       "attention",
       "architecture",
-      "training-schedule"
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Seeded Johnson-Lindenstrauss mapping to S^31 for O(32) scoring",
-      "AETHER block-sparse attention with governor-scheduled block selection",
-      "Formal Lean4 proofs for pruning and governor stability"
+      "JL projection to S^31 for compressed block scoring",
+      "AETHER block pruning governed by Lyapunov-stable controller",
+      "PyTorch-native sparse SDPA implementation"
     ]
   },
   "compatibility": {

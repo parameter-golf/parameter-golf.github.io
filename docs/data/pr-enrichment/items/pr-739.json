@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T17:03:06.831Z",
+  "generatedAt": "2026-03-25T17:33:19.899Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 739,
     "title": "T5: Phase-Based Depth Recurrence + MLA + Graduated Precision (Non-Record)",
     "state": "open",
-    "updatedAt": "2026-03-25T16:57:38Z",
-    "headSha": "84a80d03b54c38192bf17a650297181d7753b907",
+    "updatedAt": "2026-03-25T17:17:54Z",
+    "headSha": "c1020ba9deb3debc792b617a10470177bd7bfb2d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/739",
     "authorLogin": "Jonas-T5"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Phase-based recurrence shares 8 transformers across four specialized phases with MLA and graduated precision to deliver 40 effective layers in ~13MB.",
+    "summary": "Phase-based recurrence reuses 8 blocks across 4 specialized phases, combining MLA with graduated FP4→Int6 quantization and FP8 state to emulate 40-layer T5 depth.",
     "tags": [
       "architecture",
       "attention",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Phase-based recurrence of 8 blocks across four specialized phases",
-      "MLA low-rank KV compression within attention",
-      "Graduated FP4/Int6 precision with FP8 training"
+      "Phase-specialized depth recurrence",
+      "Multi-Head Latent Attention for low-rank KV",
+      "Graduated FP4→Int6 quantization with FP8 persistent state"
     ]
   },
   "compatibility": {

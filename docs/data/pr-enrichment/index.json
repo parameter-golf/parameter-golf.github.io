@@ -1,8 +1,78 @@
 {
-  "generatedAt": "2026-03-25T17:03:33.792Z",
+  "generatedAt": "2026-03-25T17:33:37.680Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 749,
+      "title": "Add 11L 448x2 PairHash int8+zstd 10-minute submission record",
+      "status": "open",
+      "updatedAt": "2026-03-25T17:31:50Z",
+      "headSha": "95108ff4ac9fdf0ade6966679dea8459f89f7937",
+      "generatedAt": "2026-03-25T17:32:54.580Z",
+      "summary": "11-layer 448-dim GQA uses PairHash embeddings and int8+zstd export to hit the 10-minute/16MB track while improving the reference path.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-749.json"
+    },
+    {
+      "prNumber": 746,
+      "title": "Seq2048 + torch.compile + mid LR (1xA100 draft)",
+      "status": "open",
+      "updatedAt": "2026-03-25T17:13:32Z",
+      "headSha": "fa8cd9947410c0ea9003835722bcb402f3e1af89",
+      "generatedAt": "2026-03-25T17:33:00.164Z",
+      "summary": "Single-A100 seq2048 tuning pairs torch.compile with mid learning rates so the baseline gets extra optimization steps within a 600s budget before record validation.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-746.json"
+    },
+    {
+      "prNumber": 745,
+      "title": "Record: XSA-all + Depth Recurrence + Hedge Mixer TTT (val_bpb=1.0222, 3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-25T17:08:04Z",
+      "headSha": "4df68eebf2e83494de4ad0a0b8c4d402a422490d",
+      "generatedAt": "2026-03-25T17:33:07.289Z",
+      "summary": "Combines XSA-all, gated value residuals, depth recurrence, CROWN-Q quant, and Hedge-Mixer TTT mixing neural and n-gram experts with GPTQ-lite.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-745.json"
+    },
     {
       "prNumber": 744,
       "title": "WSD Cosine Decay Schedule + 10L Int5-MLP BigramHash SmearGate SWA",
@@ -31,14 +101,14 @@
       "prNumber": 742,
       "title": "EPSILON-AETHER Geometric Sparse Attention (12L Record Attempt)",
       "status": "open",
-      "updatedAt": "2026-03-25T16:42:59Z",
-      "headSha": "257d72ed81809806bba0eb736022db0e2ad3aedd",
-      "generatedAt": "2026-03-25T17:02:53.594Z",
-      "summary": "Fuses EPSILON’s JL-projected S^31 scoring with AETHER block-sparse attention plus Lyapunov governor for faster 12-layer runs.",
+      "updatedAt": "2026-03-25T17:13:18Z",
+      "headSha": "8740d664bc27391ced54a5a13008072a8df2d027",
+      "generatedAt": "2026-03-25T17:33:13.243Z",
+      "summary": "EPSILON-AETHER maps Q/K via seeded JL onto S^31 so block-sparse AETHER attention scores in O(32N), enabling 12-layer runs within the 10-min 8×H100 budget.",
       "tags": [
         "attention",
         "architecture",
-        "training-schedule"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -77,10 +147,10 @@
       "prNumber": 739,
       "title": "T5: Phase-Based Depth Recurrence + MLA + Graduated Precision (Non-Record)",
       "status": "open",
-      "updatedAt": "2026-03-25T16:57:38Z",
-      "headSha": "84a80d03b54c38192bf17a650297181d7753b907",
-      "generatedAt": "2026-03-25T17:03:06.831Z",
-      "summary": "Phase-based recurrence shares 8 transformers across four specialized phases with MLA and graduated precision to deliver 40 effective layers in ~13MB.",
+      "updatedAt": "2026-03-25T17:17:54Z",
+      "headSha": "c1020ba9deb3debc792b617a10470177bd7bfb2d",
+      "generatedAt": "2026-03-25T17:33:19.899Z",
+      "summary": "Phase-based recurrence reuses 8 blocks across 4 specialized phases, combining MLA with graduated FP4→Int6 quantization and FP8 state to emulate 40-layer T5 depth.",
       "tags": [
         "architecture",
         "attention",
@@ -187,30 +257,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-734.json"
-    },
-    {
-      "prNumber": 733,
-      "title": "Record: XSA-all + Depth Recurrence + Hedge Mixer TTT (val_bpb=1.0278, 3-seed mean)",
-      "status": "closed",
-      "updatedAt": "2026-03-25T15:27:03Z",
-      "headSha": "cada1c8a02cb8ccbaa2c1613146f1988688d2b48",
-      "generatedAt": "2026-03-25T15:32:21.365Z",
-      "summary": "Applies XSA everywhere along with value residuals, depth recurrence, and CROWN-Q while using Hedge Mixer score-first TTT scoring.",
-      "tags": [
-        "attention",
-        "architecture",
-        "training-schedule",
-        "quantization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-733.json"
     },
     {
       "prNumber": 731,
@@ -6617,14 +6663,13 @@
       "prNumber": 347,
       "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
       "status": "open",
-      "updatedAt": "2026-03-25T16:30:01Z",
-      "headSha": "15e6d9ec60378a6c539859150178577c6ac70bcc",
-      "generatedAt": "2026-03-25T16:33:25.013Z",
-      "summary": "Extends the PR#549 stack to 4096-token context while probing nibble-packed 16-layer int4/int6 QAT (including bank weights) under the 16MB budget.",
+      "updatedAt": "2026-03-25T17:29:53Z",
+      "headSha": "ee26d04066533914a042561c19db73a636f88505",
+      "generatedAt": "2026-03-25T17:33:28.555Z",
+      "summary": "Extends the PR #549 SOTA stack to 4096 context and 16 layers via int4 nibble packing plus full-model QAT on CastedLinear and bank weights.",
       "tags": [
-        "architecture",
         "quantization",
-        "training-schedule"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -10175,15 +10220,15 @@
       "prNumber": 139,
       "title": "Non-record: BitNet b1.58 — 65M ternary params beat 4-hour baseline in 10 minutes (val_bpb=1.2029)",
       "status": "open",
-      "updatedAt": "2026-03-25T16:16:45Z",
+      "updatedAt": "2026-03-25T17:22:19Z",
       "headSha": "5eea63a4457c78018a954aadc07d582e534cb7e1",
-      "generatedAt": "2026-03-25T16:33:29.428Z",
-      "summary": "BitLinear STE ternary weights with base-3 packing plus Muon/Adam training maximize Chinchilla scaling inside 15MB without a post-quant gap.",
+      "generatedAt": "2026-03-25T17:33:37.658Z",
+      "summary": "BitNet b1.58 trains a 12-layer Chinchilla-scaled transformer with ternary BitLinear weights and base-3 packing to fit 64.5M params in 15MB.",
       "tags": [
         "quantization",
-        "optimizer",
         "architecture",
-        "non-record"
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

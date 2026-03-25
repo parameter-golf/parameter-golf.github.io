@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T17:32:54.580Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 749,
+    "title": "Add 11L 448x2 PairHash int8+zstd 10-minute submission record",
+    "state": "open",
+    "updatedAt": "2026-03-25T17:31:50Z",
+    "headSha": "95108ff4ac9fdf0ade6966679dea8459f89f7937",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/749",
+    "authorLogin": "FyeJordy"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_11L448x2_PairHash_Int8Zstd/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer 448-dim GQA uses PairHash embeddings and int8+zstd export to hit the 10-minute/16MB track while improving the reference path.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "PairHash embeddings with 8192 buckets and 96 pair dims",
+      "int8+zstd export to stay under the 16MB cap",
+      "Periodic validation every 2000 steps on fineweb_val_*"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
