@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-25T20:34:07.278Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 762,
+    "title": "Record: LeakyReLU(0.5)² + Legal Per-Document LoRA TTT + GPTQ-lite (mean val_bpb=0.7139, 3 seeds)",
+    "state": "open",
+    "updatedAt": "2026-03-25T20:33:16Z",
+    "headSha": "2ce25a722f02725ed692cfd1a18e718fc669cb6a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/762",
+    "authorLogin": "robinojw"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_LegalTTT_GPTQLite/README.md",
+      "records/track_10min_16mb/2026-03-23_LeakyReLU/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "LeakyReLU² U-Net leverages legal per-document LoRA TTT with extended budget and GPTQ-lite multi-percentile int6 quant to refine evaluation-time adaptation.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU(0.5)² U-Net with depth-scaled residuals",
+      "Legal per-document LoRA TTT scoring across configurable epochs",
+      "GPTQ-lite multi-percentile int6 quant search per row"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T20:34:02.044Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 763,
+    "title": "Record: 11L XSA-all + backoff 7-gram (mean val_bpb=0.9917)",
+    "state": "open",
+    "updatedAt": "2026-03-25T20:24:49Z",
+    "headSha": "ca69216314137bbe9680d946e769c992222d5c78",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/763",
+    "authorLogin": "hypery11"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_11L_XSA_backoff_7gram/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer XSA-all transformer with gated/value residual SmearGate BigramHash features, GPTQ-lite int6 + EMA/SWA/QAT stack, and deterministic backoff 2-7gram eval cache.",
+    "tags": [
+      "attention",
+      "quantization",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "XSA-all with gated/value residual + SmearGate BigramHash enhancements",
+      "GPTQ-lite int6 quant + EMA, tight SWA, and late QAT training stack",
+      "Deterministic multi-order backoff n-gram eval cache (orders 2–7)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

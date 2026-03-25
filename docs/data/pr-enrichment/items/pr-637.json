@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T18:56:58.267Z",
+  "generatedAt": "2026-03-25T20:34:23.694Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 637,
     "title": "Non-record submission: BigramDim160 + 10% Prune + SWA (1.14767 bpb, 2 seeds)",
     "state": "open",
-    "updatedAt": "2026-03-24T18:32:15Z",
+    "updatedAt": "2026-03-25T20:24:48Z",
     "headSha": "2536ba64e6938ea866cddbefe97263a58c5f9aa6",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/637",
     "authorLogin": "bryjudy"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Cuts BigramHash dim to 160 and prunes 10% post-SWA before Int6+zstd compressing the SmearGate/GQA base to stay under 16MB.",
+    "summary": "Capped artifacts by cutting BigramHash dim to 160 and applying post-SWA 10% pruning alongside known quantization/compression stack.",
     "tags": [
-      "quantization",
       "architecture",
-      "compression"
+      "compression",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Reduced BigramHash embedding dim to 160 to trim artifact size headroom",
-      "Applied 10% post-SWA pruning on non-embedding linear layers prior to quantization",
-      "Retained SmearGate/OrthoInit + GQA baseline with Int6+zstd-22 compression"
+      "BigramHash dim160 to control artifact size",
+      "10% post-SWA pruning on non-embedding linear weights",
+      "Int6+zstd-22 quantization with SmearGate/OrthoInit groundwork"
     ]
   },
   "compatibility": {

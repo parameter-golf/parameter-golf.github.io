@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T18:03:37.400Z",
+  "generatedAt": "2026-03-25T20:34:29.648Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 491,
     "title": "Value Residual + DenseFormer DWA + TTT",
     "state": "open",
-    "updatedAt": "2026-03-25T17:32:37Z",
-    "headSha": "3e7afeaf3235657f58bfee86b4fc408661ed5573",
+    "updatedAt": "2026-03-25T20:29:29Z",
+    "headSha": "ff4437cdd2cf905283a3a38c81dc8760e37f63ae",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/491",
     "authorLogin": "ahmettrkck"
   },
@@ -19,24 +19,24 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Blend first-layer value residuals, DenseFormer depth-weighted averaging, and test-time AdamW tuning on scored windows to better adapt evaluation behavior.",
+    "summary": "Blends first-layer values into later layers, adds DenseFormer depth-weighted skip mixing, and test-time trains per validation window.",
     "tags": [
-      "attention",
-      "architecture",
-      "training-schedule"
+      "val-only",
+      "sliding-window-eval",
+      "attention"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Fine-tunes on already-scored validation tokens during sliding-window eval (test-time training).",
     "techniques": [
-      "Value residual blending across layers",
-      "DenseFormer depth-weighted averaging replaces skips",
-      "Sliding-window test-time AdamW fine-tuning"
+      "value-residual mixing",
+      "DenseFormer depth-weighted averaging",
+      "test-time AdamW tuning on scored windows"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

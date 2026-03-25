@@ -1,8 +1,103 @@
 {
-  "generatedAt": "2026-03-25T20:04:01.426Z",
+  "generatedAt": "2026-03-25T20:34:36.029Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 764,
+      "title": "Record: Curriculum Learning + LeakyReLU(0.9)² + 7-gram Backoff (val_bpb=0.9633)",
+      "status": "open",
+      "updatedAt": "2026-03-25T20:26:04Z",
+      "headSha": "36e9649dd5c8dd0f092a5080aa154e89437bb5bc",
+      "generatedAt": "2026-03-25T20:33:57.166Z",
+      "summary": "Hardest-first perplexity-based shard ordering, steeper LeakyReLU(0.9)² activation, and backward-looking 7-gram eval cache atop the Podracing II stack.",
+      "tags": [
+        "training-schedule",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-764.json"
+    },
+    {
+      "prNumber": 763,
+      "title": "Record: 11L XSA-all + backoff 7-gram (mean val_bpb=0.9917)",
+      "status": "open",
+      "updatedAt": "2026-03-25T20:24:49Z",
+      "headSha": "ca69216314137bbe9680d946e769c992222d5c78",
+      "generatedAt": "2026-03-25T20:34:02.044Z",
+      "summary": "11-layer XSA-all transformer with gated/value residual SmearGate BigramHash features, GPTQ-lite int6 + EMA/SWA/QAT stack, and deterministic backoff 2-7gram eval cache.",
+      "tags": [
+        "attention",
+        "quantization",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-763.json"
+    },
+    {
+      "prNumber": 762,
+      "title": "Record: LeakyReLU(0.5)² + Legal Per-Document LoRA TTT + GPTQ-lite (mean val_bpb=0.7139, 3 seeds)",
+      "status": "open",
+      "updatedAt": "2026-03-25T20:33:16Z",
+      "headSha": "2ce25a722f02725ed692cfd1a18e718fc669cb6a",
+      "generatedAt": "2026-03-25T20:34:07.278Z",
+      "summary": "LeakyReLU² U-Net leverages legal per-document LoRA TTT with extended budget and GPTQ-lite multi-percentile int6 quant to refine evaluation-time adaptation.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-762.json"
+    },
+    {
+      "prNumber": 761,
+      "title": "Record: Score-First TTT + N-gram Backoff (3-seed mean val_bpb=0.9581)",
+      "status": "open",
+      "updatedAt": "2026-03-25T20:13:31Z",
+      "headSha": "682797376f06e5c2297f4ffcc6fe45aaeba5c108",
+      "generatedAt": "2026-03-25T20:34:13.796Z",
+      "summary": "Combines Score-First TTT on sequential val chunks with entropy-adaptive multi-order n-gram backoff atop an 11-layer gated-attention/U-Net skip architecture.",
+      "tags": [
+        "val-only",
+        "architecture",
+        "attention",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-761.json"
+    },
     {
       "prNumber": 760,
       "title": "Add BitNet b1.58 Ternary Quantization (non-record submission)",
@@ -1375,15 +1470,15 @@
       "prNumber": 675,
       "title": "Non-record: LeakyReLU² + LAWA + Ramping WD + Val Training (val_bpb=1.2302, 1xH100)",
       "status": "open",
-      "updatedAt": "2026-03-25T19:54:23Z",
-      "headSha": "2b04f15aae7a307801e0c4246e07041d09352278",
-      "generatedAt": "2026-03-25T20:03:55.656Z",
-      "summary": "Stacked a 10-layer model with LeakyReLU(0.5)², LAWA+warmdown weight decay, and val-set training to boost pre-quant quality before the int8+lzma roundtrip.",
+      "updatedAt": "2026-03-25T20:13:29Z",
+      "headSha": "67a71d68edf78773742f924beb0ea865dac3f1f7",
+      "generatedAt": "2026-03-25T20:34:19.139Z",
+      "summary": "Stacks LeakyReLU², LAWA averaging, ramped WD warmdown, lzma compression, and validation-set training on the 10-layer baseline model.",
       "tags": [
         "val-only",
-        "architecture",
         "compression",
-        "training-schedule"
+        "training-schedule",
+        "regularization"
       ],
       "flags": {
         "usesValOnly": true,
@@ -1748,30 +1843,6 @@
       "file": "items/pr-658.json"
     },
     {
-      "prNumber": 657,
-      "title": "Record: 11L LeakyReLU² + VRL + lzma — val_bpb 1.1229 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-03-25T18:13:49Z",
-      "headSha": "5e0e793cac9a8bec098018bd51cb466152b74522",
-      "generatedAt": "2026-03-25T18:33:19.087Z",
-      "summary": "Combines LeakyReLU(0.5)^2 MLP, VRL gating, GPTQ-lite int6, and lzma compression to pack a full 11L stack within 16MB.",
-      "tags": [
-        "architecture",
-        "attention",
-        "quantization",
-        "compression"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-657.json"
-    },
-    {
       "prNumber": 653,
       "title": "feat(arch): Mish² Activation & PyTorch Native SDPA GQA Core (1.155 BPB) 8xH100",
       "status": "open",
@@ -1980,40 +2051,17 @@
       "file": "items/pr-642.json"
     },
     {
-      "prNumber": 638,
-      "title": "Record: 11L XSA-all + LeakyReLU(0.5)² + VR + GA (val_bpb=1.1164, pending 3-seed)",
-      "status": "open",
-      "updatedAt": "2026-03-25T20:03:43Z",
-      "headSha": "443f565c2e522013a94d62d332a5d87b234c9c20",
-      "generatedAt": "2026-03-25T20:04:01.336Z",
-      "summary": "XSA on every layer, LeakyReLU(0.5)^2, and Value Residual with Gated Attention drive this int6-per-row quantized stack.",
-      "tags": [
-        "architecture",
-        "attention",
-        "quantization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-638.json"
-    },
-    {
       "prNumber": 637,
       "title": "Non-record submission: BigramDim160 + 10% Prune + SWA (1.14767 bpb, 2 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-24T18:32:15Z",
+      "updatedAt": "2026-03-25T20:24:48Z",
       "headSha": "2536ba64e6938ea866cddbefe97263a58c5f9aa6",
-      "generatedAt": "2026-03-24T18:56:58.267Z",
-      "summary": "Cuts BigramHash dim to 160 and prunes 10% post-SWA before Int6+zstd compressing the SmearGate/GQA base to stay under 16MB.",
+      "generatedAt": "2026-03-25T20:34:23.694Z",
+      "summary": "Capped artifacts by cutting BigramHash dim to 160 and applying post-SWA 10% pruning alongside known quantization/compression stack.",
       "tags": [
-        "quantization",
         "architecture",
-        "compression"
+        "compression",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2259,30 +2307,6 @@
         "valOnlyMatchesCollector": false
       },
       "file": "items/pr-622.json"
-    },
-    {
-      "prNumber": 620,
-      "title": "Record: LeakyReLU(0.5)² + Per-Document LoRA TTT (mean val_bpb=0.9443, 3 seeds)",
-      "status": "closed",
-      "updatedAt": "2026-03-24T15:58:33Z",
-      "headSha": "e323a65682be6692b48855edd50d3b2b7742ac22",
-      "generatedAt": "2026-03-24T16:26:16.555Z",
-      "summary": "U-Net swaps in LeakyReLU(0.5)² while applying per-document LoRA TTT with Muon/SWA and int8+zstd compression for adaptive inference.",
-      "tags": [
-        "architecture",
-        "optimizer",
-        "evaluation",
-        "quantization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-620.json"
     },
     {
       "prNumber": 619,
@@ -4312,22 +4336,22 @@
       "prNumber": 491,
       "title": "Value Residual + DenseFormer DWA + TTT",
       "status": "open",
-      "updatedAt": "2026-03-25T17:32:37Z",
-      "headSha": "3e7afeaf3235657f58bfee86b4fc408661ed5573",
-      "generatedAt": "2026-03-25T18:03:37.400Z",
-      "summary": "Blend first-layer value residuals, DenseFormer depth-weighted averaging, and test-time AdamW tuning on scored windows to better adapt evaluation behavior.",
+      "updatedAt": "2026-03-25T20:29:29Z",
+      "headSha": "ff4437cdd2cf905283a3a38c81dc8760e37f63ae",
+      "generatedAt": "2026-03-25T20:34:29.648Z",
+      "summary": "Blends first-layer values into later layers, adds DenseFormer depth-weighted skip mixing, and test-time trains per validation window.",
       "tags": [
-        "attention",
-        "architecture",
-        "training-schedule"
+        "val-only",
+        "sliding-window-eval",
+        "attention"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-491.json"
     },
@@ -9726,16 +9750,16 @@
     },
     {
       "prNumber": 175,
-      "title": "Record: TTT LoRA + SOTA Training (10L MuonWD FP16Emb OvertoneInit)",
-      "status": "closed",
-      "updatedAt": "2026-03-25T17:44:35Z",
-      "headSha": "5ac580926351fbc5e51c84170068214b9bcbe3f9",
-      "generatedAt": "2026-03-25T18:03:51.014Z",
-      "summary": "Combines the SOTA 10L MuonWD FP16 tied-embed training recipe with per-document LoRA TTT evaluation for adaptive inference.",
+      "title": "Record: 11L LeakyReLU² + VRL + lzma — val_bpb 1.1229 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-25T20:16:40Z",
+      "headSha": "8f7ff2785ebae1494b53a11759528d6f8ce83e34",
+      "generatedAt": "2026-03-25T20:34:36.004Z",
+      "summary": "VRL gating and LeakyReLU(0.5)^2 plus lzma-compressed GPTQ-lite int6 pack an 11L XSA/GQA stack under 16MB.",
       "tags": [
-        "optimizer",
-        "attention",
-        "evaluation"
+        "architecture",
+        "compression",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

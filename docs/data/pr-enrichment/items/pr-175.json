@@ -1,36 +1,36 @@
 {
-  "generatedAt": "2026-03-25T18:03:51.014Z",
+  "generatedAt": "2026-03-25T20:34:36.004Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 175,
-    "title": "Record: TTT LoRA + SOTA Training (10L MuonWD FP16Emb OvertoneInit)",
-    "state": "closed",
-    "updatedAt": "2026-03-25T17:44:35Z",
-    "headSha": "5ac580926351fbc5e51c84170068214b9bcbe3f9",
+    "title": "Record: 11L LeakyReLU² + VRL + lzma — val_bpb 1.1229 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-25T20:16:40Z",
+    "headSha": "8f7ff2785ebae1494b53a11759528d6f8ce83e34",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/175",
     "authorLogin": "anthony-maio"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-20_TTT_SlidingWindow_FP16Emb_10L_MuonWD_OvertoneInit/README.md"
+      "records/track_10min_16mb/2026-03-24_LeakyReLU2_VRL_LZMA/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines the SOTA 10L MuonWD FP16 tied-embed training recipe with per-document LoRA TTT evaluation for adaptive inference.",
+    "summary": "VRL gating and LeakyReLU(0.5)^2 plus lzma-compressed GPTQ-lite int6 pack an 11L XSA/GQA stack under 16MB.",
     "tags": [
-      "optimizer",
-      "attention",
-      "evaluation"
+      "architecture",
+      "compression",
+      "quantization"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "N/A",
+    "valOnlyReasoning": "",
     "techniques": [
-      "10L MuonWD FP16 tied-embed training recipe",
-      "Document-isolated chunked LoRA TTT evaluation",
-      "Optional attention LoRA hooks for inference adaptation"
+      "LeakyReLU(0.5)^2 MLP activation",
+      "Value Residual Learning gating across attention",
+      "lzma-compressed GPTQ-lite int6 weights"
     ]
   },
   "compatibility": {

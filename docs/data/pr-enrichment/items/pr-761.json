@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-25T20:34:13.796Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 761,
+    "title": "Record: Score-First TTT + N-gram Backoff (3-seed mean val_bpb=0.9581)",
+    "state": "open",
+    "updatedAt": "2026-03-25T20:13:31Z",
+    "headSha": "682797376f06e5c2297f4ffcc6fe45aaeba5c108",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/761",
+    "authorLogin": "Asukabot0"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_ScoreFirst_TTT_Ngram_Backoff/README.md",
+      "records/track_10min_16mb/2026-03-25_XSA_all_LeakyReLU_VR_GA/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Combines Score-First TTT on sequential val chunks with entropy-adaptive multi-order n-gram backoff atop an 11-layer gated-attention/U-Net skip architecture.",
+    "tags": [
+      "val-only",
+      "architecture",
+      "attention",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Score-first TTT trains on validation tokens (scored under inference_mode) before including them in training, so the run uses only validation shards.",
+    "techniques": [
+      "Score-First TTT on sequential val chunks",
+      "Entropy-adaptive multi-order n-gram backoff lookup",
+      "Gated attention/VR with U-Net skip connections"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

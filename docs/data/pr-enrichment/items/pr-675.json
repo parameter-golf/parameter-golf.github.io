@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T20:03:55.656Z",
+  "generatedAt": "2026-03-25T20:34:19.139Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 675,
     "title": "Non-record: LeakyReLU² + LAWA + Ramping WD + Val Training (val_bpb=1.2302, 1xH100)",
     "state": "open",
-    "updatedAt": "2026-03-25T19:54:23Z",
-    "headSha": "2b04f15aae7a307801e0c4246e07041d09352278",
+    "updatedAt": "2026-03-25T20:13:29Z",
+    "headSha": "67a71d68edf78773742f924beb0ea865dac3f1f7",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/675",
     "authorLogin": "ChideraIbe123"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacked a 10-layer model with LeakyReLU(0.5)², LAWA+warmdown weight decay, and val-set training to boost pre-quant quality before the int8+lzma roundtrip.",
+    "summary": "Stacks LeakyReLU², LAWA averaging, ramped WD warmdown, lzma compression, and validation-set training on the 10-layer baseline model.",
     "tags": [
       "val-only",
-      "architecture",
       "compression",
-      "training-schedule"
+      "training-schedule",
+      "regularization"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Trained directly on the validation split under the allowed val-training regime to squeeze extra bits-per-byte gains.",
+    "valOnlyReasoning": "Explicitly trains on the validation shard as allowed to maximize performance under the val-only regime.",
     "techniques": [
-      "10-layer LeakyReLU(0.5)² MLP with LAWA checkpoint averaging",
-      "Ramping weight decay during warmdown",
-      "Val-set training plus int8→lzma compression roundtrip"
+      "LeakyReLU(0.5)² MLP with LAWA checkpoint averaging",
+      "Validation-set training combined with ramping weight decay during warmdown",
+      "Lzma-compressed artifact storage to stay within 16MB"
     ]
   },
   "compatibility": {
