@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T05:59:27.985Z",
+  "generatedAt": "2026-03-25T06:29:29.231Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 686,
-    "title": "Submission/2026 03 25 recur layers ttt",
+    "title": "Record:  Depth Recurrence (layers 4 and 5 repeated): val_bpb 1.1182",
     "state": "open",
-    "updatedAt": "2026-03-25T05:58:51Z",
+    "updatedAt": "2026-03-25T06:05:12Z",
     "headSha": "174142c39b029b55031e4a60c155f1124571711f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/686",
     "authorLogin": "msisovic"
@@ -19,19 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Dual depth recurrence reuses layers 4/5 with independent block scalars for 13 virtual layers, paired with TTT/SWA and Muon optimizer under the 16MB budget.",
+    "summary": "Dual depth recurrence replays layers 4 and 5 with learnable scalars to emulate 13 virtual layers from 11 real ones while staying under the 16MB budget with the existing TTT/optimizer stack.",
     "tags": [
       "architecture",
-      "training-schedule",
-      "optimizer",
-      "quantization"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Dual depth recurrence on layers 4/5 with independent block scalars",
-      "Test-time training (TTT) with SWA adaptation",
-      "Muon optimizer with weight decay"
+      "Depth recurrence on layers 4 & 5 via sequential replay with independent block scalars",
+      "Tied test-time training layered atop the inherited Muon optimizer + SWA pipeline",
+      "Artifact-sized constrained int6+lzma quantization to keep the recurrent model under 16MB"
     ]
   },
   "compatibility": {

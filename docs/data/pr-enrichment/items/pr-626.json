@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T15:55:24.234Z",
+  "generatedAt": "2026-03-25T06:29:43.855Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 626,
     "title": "Record: Full GPTQ + LeakyReLU² + Parallel Muon (3-seed mean 1.1180)",
-    "state": "open",
-    "updatedAt": "2026-03-24T15:36:34Z",
+    "state": "closed",
+    "updatedAt": "2026-03-25T06:17:28Z",
     "headSha": "ff8f2c5b1b98c9faeea37e18f9a50ea4780bf5e4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/626",
     "authorLogin": "kshitizz36"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines full GPTQ quantization with LeakyReLU² activations, Parallel Muon depth, and BigramHash to maximize 16MB track performance.",
+    "summary": "Full GPTQ quantization with LeakyReLU² activations and parallel Muon compute plus BigramHash tokenization for the 16MB sliding-window track.",
     "tags": [
       "quantization",
-      "muon",
-      "architecture"
+      "architecture",
+      "tokenization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Full GPTQ quantization for post-training compression",
-      "LeakyReLU² activations with Parallel Muon layout",
-      "BigramHash(3072,80) context encoding"
+      "- Full GPTQ quantization pipeline",
+      "- LeakyReLU² activations across the model",
+      "- Parallel Muon compute with BigramHash tokenization"
     ]
   },
   "compatibility": {

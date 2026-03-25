@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T05:59:19.391Z",
+  "generatedAt": "2026-03-25T06:29:21.838Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -3485,7 +3485,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-24_FullGPTQ_LeakyReLU2_ParallelMuon_3seed",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -3533,14 +3533,14 @@
       "pr": {
         "number": 626,
         "title": "Record: Full GPTQ + LeakyReLU² + Parallel Muon (3-seed mean 1.1180)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/626",
         "authorLogin": "kshitizz36",
         "authorName": null,
         "createdAt": "2026-03-24T15:36:34Z",
-        "updatedAt": "2026-03-24T15:36:34Z",
+        "updatedAt": "2026-03-25T06:17:28Z",
         "headSha": "ff8f2c5b1b98c9faeea37e18f9a50ea4780bf5e4",
         "headRepo": "kshitizz36/parameter-golf"
       },
@@ -3609,7 +3609,7 @@
       },
       "pr": {
         "number": 686,
-        "title": "Submission/2026 03 25 recur layers ttt",
+        "title": "Record:  Depth Recurrence (layers 4 and 5 repeated): val_bpb 1.1182",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -3617,7 +3617,7 @@
         "authorLogin": "msisovic",
         "authorName": null,
         "createdAt": "2026-03-25T05:58:51Z",
-        "updatedAt": "2026-03-25T05:58:51Z",
+        "updatedAt": "2026-03-25T06:05:12Z",
         "headSha": "174142c39b029b55031e4a60c155f1124571711f",
         "headRepo": "msisovic/parameter-golf"
       },
@@ -6774,8 +6774,8 @@
         "authorLogin": "aryanbhosale",
         "authorName": null,
         "createdAt": "2026-03-24T17:48:12Z",
-        "updatedAt": "2026-03-25T05:54:06Z",
-        "headSha": "f0abe79bd4ffe5d4f171537d7d9391da8c8777a2",
+        "updatedAt": "2026-03-25T06:24:45Z",
+        "headSha": "a0581d9df0047a20cb9118910d01f9d14ffee07c",
         "headRepo": "aryanbhosale/parameter-golf"
       },
       "links": {

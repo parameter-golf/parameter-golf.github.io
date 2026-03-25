@@ -2,7 +2,7 @@
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
-  "generatedAt": "2026-03-25T05:59:57.865Z",
+  "generatedAt": "2026-03-25T06:29:43.954Z",
   "prs": {
     "6": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:11373420c1f50e6a83599fb25bb73f38a6555cb7:closed:2026-03-18T18:34:32Z",
@@ -2627,9 +2627,9 @@
       "headSha": "15aa8816a3ec308b698cdf93284d949488259c90"
     },
     "626": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:ff8f2c5b1b98c9faeea37e18f9a50ea4780bf5e4:open:2026-03-24T15:36:34Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:ff8f2c5b1b98c9faeea37e18f9a50ea4780bf5e4:closed:2026-03-25T06:17:28Z",
       "file": "items/pr-626.json",
-      "updatedAt": "2026-03-24T15:36:34Z",
+      "updatedAt": "2026-03-25T06:17:28Z",
       "headSha": "ff8f2c5b1b98c9faeea37e18f9a50ea4780bf5e4"
     },
     "628": {
@@ -2663,10 +2663,10 @@
       "headSha": "4315a016ddfaec02f17120afddafcf12d43b9ed9"
     },
     "635": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:f0abe79bd4ffe5d4f171537d7d9391da8c8777a2:open:2026-03-25T05:54:06Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:a0581d9df0047a20cb9118910d01f9d14ffee07c:open:2026-03-25T06:24:45Z",
       "file": "items/pr-635.json",
-      "updatedAt": "2026-03-25T05:54:06Z",
-      "headSha": "f0abe79bd4ffe5d4f171537d7d9391da8c8777a2"
+      "updatedAt": "2026-03-25T06:24:45Z",
+      "headSha": "a0581d9df0047a20cb9118910d01f9d14ffee07c"
     },
     "636": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:34494eb6d1cae616587dfa404ab2c8ed8e83ba5a:open:2026-03-24T18:20:23Z",
@@ -2885,9 +2885,9 @@
       "headSha": "c6f2728a9a9d6608148bc18a6d577a2241353b66"
     },
     "686": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:174142c39b029b55031e4a60c155f1124571711f:open:2026-03-25T05:58:51Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:174142c39b029b55031e4a60c155f1124571711f:open:2026-03-25T06:05:12Z",
       "file": "items/pr-686.json",
-      "updatedAt": "2026-03-25T05:58:51Z",
+      "updatedAt": "2026-03-25T06:05:12Z",
       "headSha": "174142c39b029b55031e4a60c155f1124571711f"
     }
   }

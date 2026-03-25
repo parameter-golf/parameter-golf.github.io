@@ -1,21 +1,19 @@
 {
-  "generatedAt": "2026-03-25T05:59:57.865Z",
+  "generatedAt": "2026-03-25T06:29:43.954Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
       "prNumber": 686,
-      "title": "Submission/2026 03 25 recur layers ttt",
+      "title": "Record:  Depth Recurrence (layers 4 and 5 repeated): val_bpb 1.1182",
       "status": "open",
-      "updatedAt": "2026-03-25T05:58:51Z",
+      "updatedAt": "2026-03-25T06:05:12Z",
       "headSha": "174142c39b029b55031e4a60c155f1124571711f",
-      "generatedAt": "2026-03-25T05:59:27.985Z",
-      "summary": "Dual depth recurrence reuses layers 4/5 with independent block scalars for 13 virtual layers, paired with TTT/SWA and Muon optimizer under the 16MB budget.",
+      "generatedAt": "2026-03-25T06:29:29.231Z",
+      "summary": "Dual depth recurrence replays layers 4 and 5 with learnable scalars to emulate 13 virtual layers from 11 real ones while staying under the 16MB budget with the existing TTT/optimizer stack.",
       "tags": [
         "architecture",
-        "training-schedule",
-        "optimizer",
-        "quantization"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -869,15 +867,15 @@
       "prNumber": 635,
       "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
       "status": "open",
-      "updatedAt": "2026-03-25T05:54:06Z",
-      "headSha": "f0abe79bd4ffe5d4f171537d7d9391da8c8777a2",
-      "generatedAt": "2026-03-25T05:59:57.768Z",
-      "summary": "11-layer 512d GQA transformer pairs MLP3.5x LeakyReLU(0.5)^2, SmearGate, hash embeddings, Value Residual/Gated Attention, and late QAT with int6 GPTQ-lite.",
+      "updatedAt": "2026-03-25T06:24:45Z",
+      "headSha": "a0581d9df0047a20cb9118910d01f9d14ffee07c",
+      "generatedAt": "2026-03-25T06:29:35.714Z",
+      "summary": "11-layer 512d transformer stacks MLP3.5x LeakyReLU^2, partial RoPE, SmearGate+hash cascading, gated attention, Value Residual and U-Net skips.",
       "tags": [
         "architecture",
-        "quantization",
+        "attention",
         "optimizer",
-        "evaluation"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1009,15 +1007,15 @@
     {
       "prNumber": 626,
       "title": "Record: Full GPTQ + LeakyReLU² + Parallel Muon (3-seed mean 1.1180)",
-      "status": "open",
-      "updatedAt": "2026-03-24T15:36:34Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T06:17:28Z",
       "headSha": "ff8f2c5b1b98c9faeea37e18f9a50ea4780bf5e4",
-      "generatedAt": "2026-03-24T15:55:24.234Z",
-      "summary": "Combines full GPTQ quantization with LeakyReLU² activations, Parallel Muon depth, and BigramHash to maximize 16MB track performance.",
+      "generatedAt": "2026-03-25T06:29:43.855Z",
+      "summary": "Full GPTQ quantization with LeakyReLU² activations and parallel Muon compute plus BigramHash tokenization for the 16MB sliding-window track.",
       "tags": [
         "quantization",
-        "muon",
-        "architecture"
+        "architecture",
+        "tokenization"
       ],
       "flags": {
         "usesValOnly": false,

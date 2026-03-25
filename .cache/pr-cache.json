@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-25T05:59:19.358Z",
-  "lastSeenUpdatedAt": "2026-03-25T05:58:51Z",
+  "generatedAt": "2026-03-25T06:29:21.805Z",
+  "lastSeenUpdatedAt": "2026-03-25T06:27:28Z",
   "prs": {
     "1": {
       "number": 1,
@@ -52987,18 +52987,18 @@
     },
     "626": {
       "number": 626,
-      "updatedAt": "2026-03-24T15:36:34Z",
+      "updatedAt": "2026-03-25T06:17:28Z",
       "pr": {
         "number": 626,
         "title": "Record: Full GPTQ + LeakyReLU² + Parallel Muon (3-seed mean 1.1180)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/626",
         "authorLogin": "kshitizz36",
         "authorName": null,
         "createdAt": "2026-03-24T15:36:34Z",
-        "updatedAt": "2026-03-24T15:36:34Z",
+        "updatedAt": "2026-03-25T06:17:28Z",
         "headSha": "ff8f2c5b1b98c9faeea37e18f9a50ea4780bf5e4",
         "headRepo": "kshitizz36/parameter-golf"
       },
@@ -53006,7 +53006,7 @@
         {
           "id": "pr-626-records-track_10min_16mb-2026-03-24_FullGPTQ_LeakyReLU2_ParallelMuon_3seed-submission-json",
           "source": "pull_request",
-          "status": "open",
+          "status": "closed",
           "category": "main-track",
           "track": {
             "path": "records/track_10min_16mb",
@@ -53054,14 +53054,14 @@
           "pr": {
             "number": 626,
             "title": "Record: Full GPTQ + LeakyReLU² + Parallel Muon (3-seed mean 1.1180)",
-            "state": "open",
+            "state": "closed",
             "draft": false,
             "mergedAt": null,
             "htmlUrl": "https://github.com/openai/parameter-golf/pull/626",
             "authorLogin": "kshitizz36",
             "authorName": null,
             "createdAt": "2026-03-24T15:36:34Z",
-            "updatedAt": "2026-03-24T15:36:34Z",
+            "updatedAt": "2026-03-25T06:17:28Z",
             "headSha": "ff8f2c5b1b98c9faeea37e18f9a50ea4780bf5e4",
             "headRepo": "kshitizz36/parameter-golf"
           },
@@ -53571,7 +53571,7 @@
     },
     "635": {
       "number": 635,
-      "updatedAt": "2026-03-25T05:54:06Z",
+      "updatedAt": "2026-03-25T06:24:45Z",
       "pr": {
         "number": 635,
         "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
@@ -53582,8 +53582,8 @@
         "authorLogin": "aryanbhosale",
         "authorName": null,
         "createdAt": "2026-03-24T17:48:12Z",
-        "updatedAt": "2026-03-25T05:54:06Z",
-        "headSha": "f0abe79bd4ffe5d4f171537d7d9391da8c8777a2",
+        "updatedAt": "2026-03-25T06:24:45Z",
+        "headSha": "a0581d9df0047a20cb9118910d01f9d14ffee07c",
         "headRepo": "aryanbhosale/parameter-golf"
       },
       "submissions": [
@@ -53645,16 +53645,16 @@
             "authorLogin": "aryanbhosale",
             "authorName": null,
             "createdAt": "2026-03-24T17:48:12Z",
-            "updatedAt": "2026-03-25T05:54:06Z",
-            "headSha": "f0abe79bd4ffe5d4f171537d7d9391da8c8777a2",
+            "updatedAt": "2026-03-25T06:24:45Z",
+            "headSha": "a0581d9df0047a20cb9118910d01f9d14ffee07c",
             "headRepo": "aryanbhosale/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f0abe79bd4ffe5d4f171537d7d9391da8c8777a2/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/f0abe79bd4ffe5d4f171537d7d9391da8c8777a2/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/f0abe79bd4ffe5d4f171537d7d9391da8c8777a2/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/f0abe79bd4ffe5d4f171537d7d9391da8c8777a2/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/f0abe79bd4ffe5d4f171537d7d9391da8c8777a2/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a0581d9df0047a20cb9118910d01f9d14ffee07c/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/a0581d9df0047a20cb9118910d01f9d14ffee07c/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/a0581d9df0047a20cb9118910d01f9d14ffee07c/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/a0581d9df0047a20cb9118910d01f9d14ffee07c/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/a0581d9df0047a20cb9118910d01f9d14ffee07c/records/track_10min_16mb/2026-03-24_11L_SOTA_MLP35x",
             "pr": "https://github.com/openai/parameter-golf/pull/635"
           }
         }
@@ -53935,18 +53935,18 @@
     },
     "639": {
       "number": 639,
-      "updatedAt": "2026-03-25T03:51:26Z",
+      "updatedAt": "2026-03-25T06:18:44Z",
       "pr": {
         "number": 639,
-        "title": "Full GPTQ + XSA-all + SWA/EMA (val_bpb=1.1158, 3-seed mean=1.1163)",
-        "state": "open",
+        "title": "Full GPTQ + XSA-all + SWA/EMA + Score-First TTT (compliant BPB=1.1175, 1-seed)",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/639",
         "authorLogin": "Robby955",
         "authorName": null,
         "createdAt": "2026-03-24T18:39:30Z",
-        "updatedAt": "2026-03-25T03:51:26Z",
+        "updatedAt": "2026-03-25T06:18:44Z",
         "headSha": "e6ff00857bdfb293f90e5864f59856ddf575bca2",
         "headRepo": "Robby955/parameter-golf"
       },
@@ -54906,18 +54906,18 @@
     },
     "656": {
       "number": 656,
-      "updatedAt": "2026-03-25T00:22:50Z",
+      "updatedAt": "2026-03-25T06:20:18Z",
       "pr": {
         "number": 656,
         "title": "Three Breadsticks: 1.1190 BPB (3-seed mean 1.1195)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/656",
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-24T23:17:18Z",
-        "updatedAt": "2026-03-25T00:22:50Z",
+        "updatedAt": "2026-03-25T06:20:18Z",
         "headSha": "896c3254407bfd4df7a1d80a1747770803a1f333",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -56616,18 +56616,18 @@
     },
     "674": {
       "number": 674,
-      "updatedAt": "2026-03-25T04:30:23Z",
+      "updatedAt": "2026-03-25T06:23:09Z",
       "pr": {
         "number": 674,
         "title": "Podracing: 1.0461 BPB (3-seed mean)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/674",
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-25T03:50:12Z",
-        "updatedAt": "2026-03-25T04:30:23Z",
+        "updatedAt": "2026-03-25T06:23:09Z",
         "headSha": "a417febf795d447bb8f188684647075ff1ba80f1",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -57472,10 +57472,10 @@
     },
     "686": {
       "number": 686,
-      "updatedAt": "2026-03-25T05:58:51Z",
+      "updatedAt": "2026-03-25T06:05:12Z",
       "pr": {
         "number": 686,
-        "title": "Submission/2026 03 25 recur layers ttt",
+        "title": "Record:  Depth Recurrence (layers 4 and 5 repeated): val_bpb 1.1182",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -57483,7 +57483,7 @@
         "authorLogin": "msisovic",
         "authorName": null,
         "createdAt": "2026-03-25T05:58:51Z",
-        "updatedAt": "2026-03-25T05:58:51Z",
+        "updatedAt": "2026-03-25T06:05:12Z",
         "headSha": "174142c39b029b55031e4a60c155f1124571711f",
         "headRepo": "msisovic/parameter-golf"
       },
@@ -57538,7 +57538,7 @@
           },
           "pr": {
             "number": 686,
-            "title": "Submission/2026 03 25 recur layers ttt",
+            "title": "Record:  Depth Recurrence (layers 4 and 5 repeated): val_bpb 1.1182",
             "state": "open",
             "draft": false,
             "mergedAt": null,
@@ -57546,7 +57546,7 @@
             "authorLogin": "msisovic",
             "authorName": null,
             "createdAt": "2026-03-25T05:58:51Z",
-            "updatedAt": "2026-03-25T05:58:51Z",
+            "updatedAt": "2026-03-25T06:05:12Z",
             "headSha": "174142c39b029b55031e4a60c155f1124571711f",
             "headRepo": "msisovic/parameter-golf"
           },
@@ -57560,6 +57560,25 @@
           }
         }
       ]
+    },
+    "687": {
+      "number": 687,
+      "updatedAt": "2026-03-25T06:27:28Z",
+      "pr": {
+        "number": 687,
+        "title": "Record: 5-expert Hedge Mixer + TTT (3-seed mean val_bpb=1.0745)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/687",
+        "authorLogin": "RoyiRa",
+        "authorName": null,
+        "createdAt": "2026-03-25T06:26:03Z",
+        "updatedAt": "2026-03-25T06:27:28Z",
+        "headSha": "037a2398e10dc844d16d2f756ec97d08a6e9cff2",
+        "headRepo": "RoyiRa/parameter-golf"
+      },
+      "submissions": []
     }
   }
 }
