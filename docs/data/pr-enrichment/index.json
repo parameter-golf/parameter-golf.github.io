@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-03-26T06:06:51.972Z",
+  "generatedAt": "2026-03-26T06:37:03.475Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 818,
+      "title": "[record] add HWNODE record - 0.5527",
+      "status": "open",
+      "updatedAt": "2026-03-26T06:28:59Z",
+      "headSha": "54e7686674675775fe43e372d9bf6d5c1e428dab",
+      "generatedAt": "2026-03-26T06:36:41.779Z",
+      "summary": "HWNODE wraps a linear Neural ODE between Hammerstein-Wiener projections and uses a truncated Taylor series to emulate multiple layers from shared weights.",
+      "tags": [
+        "architecture",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-818.json"
+    },
     {
       "prNumber": 816,
       "title": "Record submission: Poly5 Softcap + BigramHash(3072) + Wider GPTQ-lite…",
@@ -442,13 +464,14 @@
       "prNumber": 796,
       "title": "Record: 0.4374 BPB — Distributed Prefill + Order-Adaptive 15-Gram + EBLS",
       "status": "open",
-      "updatedAt": "2026-03-26T05:28:20Z",
+      "updatedAt": "2026-03-26T06:35:56Z",
       "headSha": "d19036d842535f8acce816fcdc5b2c93fa0a4d9c",
-      "generatedAt": "2026-03-26T05:37:23.296Z",
-      "summary": "Distributed prefill of 15-gram caches plus order-adaptive entropy gating on EBLS/LoRA keeps multi-GPU sliding eval aligned with sequential scoring.",
+      "generatedAt": "2026-03-26T06:36:47.354Z",
+      "summary": "Looped EBLS + per-layer LoRA meets distributed n-gram cache prefill and order-adaptive entropy gating to align 8-GPU sliding eval with sequential scoring.",
       "tags": [
         "architecture",
-        "evaluation"
+        "evaluation",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1229,23 +1252,23 @@
       "prNumber": 754,
       "title": "Non-Record: 11L Parallel Muon + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1253)",
       "status": "open",
-      "updatedAt": "2026-03-26T05:41:44Z",
-      "headSha": "db0b95882522fe61cf043f7733b478e904987000",
-      "generatedAt": "2026-03-26T06:06:45.632Z",
-      "summary": "11L transformer leverages Parallel Muon banking, LeakyReLU² MLP3x, and legal score-first TTT with sliding-window scoring plus SGD refinement before quantization.",
+      "updatedAt": "2026-03-26T06:36:16Z",
+      "headSha": "a4ab3ad3e8e581a3ab7d284d1c80ec037af149a2",
+      "generatedAt": "2026-03-26T06:36:58.195Z",
+      "summary": "11L/512d Parallel Muon transformer banks parameters with batched Newton-Schulz, LeakyReLU² MLP3×, legal score-first TTT, and late QAT/quantization.",
       "tags": [
         "architecture",
-        "training-schedule",
         "quantization",
-        "evaluation"
+        "evaluation",
+        "val-only"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-754.json"
     },
@@ -6333,24 +6356,25 @@
     },
     {
       "prNumber": 430,
-      "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
+      "title": "GatedAttn + ValueResid + XSA6 + HedgeMixer + Legal TTT — val_bpb: 1.08965 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-26T06:06:20Z",
-      "headSha": "6bd838c1d549ea5885c4ad7c101f197597863dc2",
-      "generatedAt": "2026-03-26T06:06:51.906Z",
-      "summary": "Adds SwiGLU, value residuals, gated attention, XSA, EMA, and AdamW test-time training to the thwu1 base to refine attention contributions.",
+      "updatedAt": "2026-03-26T06:16:53Z",
+      "headSha": "e0bb22c8c700f2282ac400509fb082dfb8c977cf",
+      "generatedAt": "2026-03-26T06:37:03.412Z",
+      "summary": "10-layer GQA stack augments thwu1 base with SwiGLU, value residual+gated attention, XSA, EMA, and AdamW test-time training.",
       "tags": [
-        "val-only",
-        "architecture",
-        "training-schedule"
+        "attention",
+        "training-schedule",
+        "optimizer",
+        "architecture"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-430.json"
     },

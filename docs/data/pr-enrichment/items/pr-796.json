@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T05:37:23.296Z",
+  "generatedAt": "2026-03-26T06:36:47.354Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 796,
     "title": "Record: 0.4374 BPB — Distributed Prefill + Order-Adaptive 15-Gram + EBLS",
     "state": "open",
-    "updatedAt": "2026-03-26T05:28:20Z",
+    "updatedAt": "2026-03-26T06:35:56Z",
     "headSha": "d19036d842535f8acce816fcdc5b2c93fa0a4d9c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/796",
     "authorLogin": "Robby955"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Distributed prefill of 15-gram caches plus order-adaptive entropy gating on EBLS/LoRA keeps multi-GPU sliding eval aligned with sequential scoring.",
+    "summary": "Looped EBLS + per-layer LoRA meets distributed n-gram cache prefill and order-adaptive entropy gating to align 8-GPU sliding eval with sequential scoring.",
     "tags": [
       "architecture",
-      "evaluation"
+      "evaluation",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Distributed cache pre-fill before scoring to mirror single-GPU context history",
-      "Order-adaptive entropy gating with sigmoid interpolation across 2–15 gram orders",
-      "EBLS shared-block + LoRA deviations to fit transformer in 16MB"
+      "EBLS shared-block loops with rank-8 LoRA deviations",
+      "Distributed prefill of 2–15-gram hash tables per GPU rank",
+      "Order-adaptive entropy gating for multi-order backoff"
     ]
   },
   "compatibility": {

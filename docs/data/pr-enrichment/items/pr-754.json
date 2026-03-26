@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T06:06:45.632Z",
+  "generatedAt": "2026-03-26T06:36:58.195Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 754,
     "title": "Non-Record: 11L Parallel Muon + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1253)",
     "state": "open",
-    "updatedAt": "2026-03-26T05:41:44Z",
-    "headSha": "db0b95882522fe61cf043f7733b478e904987000",
+    "updatedAt": "2026-03-26T06:36:16Z",
+    "headSha": "a4ab3ad3e8e581a3ab7d284d1c80ec037af149a2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/754",
     "authorLogin": "aryanbhosale"
   },
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11L transformer leverages Parallel Muon banking, LeakyReLU² MLP3x, and legal score-first TTT with sliding-window scoring plus SGD refinement before quantization.",
+    "summary": "11L/512d Parallel Muon transformer banks parameters with batched Newton-Schulz, LeakyReLU² MLP3×, legal score-first TTT, and late QAT/quantization.",
     "tags": [
       "architecture",
-      "training-schedule",
       "quantization",
-      "evaluation"
+      "evaluation",
+      "val-only"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Legal score-first TTT trains on validation chunks via SGD after scoring, so the reported tuning occurs directly on validation data.",
     "techniques": [
       "Parallel Muon parameter banking with batched Newton-Schulz",
-      "LeakyReLU(0.5)² MLP3x with gating, residuals, and partial RoPE",
-      "Legal score-first TTT using sliding-window scoring then SGD before quantized deployment"
+      "LeakyReLU² MLP3× with SmearGate/Gated Attention enhancements",
+      "Legal score-first TTT followed by late QAT int6 quantization"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

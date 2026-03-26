@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-26T06:36:41.779Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 818,
+    "title": "[record] add HWNODE record - 0.5527",
+    "state": "open",
+    "updatedAt": "2026-03-26T06:28:59Z",
+    "headSha": "54e7686674675775fe43e372d9bf6d5c1e428dab",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/818",
+    "authorLogin": "lucamignatti"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_11L_HWNODE_864dim_0.5527/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "HWNODE wraps a linear Neural ODE between Hammerstein-Wiener projections and uses a truncated Taylor series to emulate multiple layers from shared weights.",
+    "tags": [
+      "architecture",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Hammerstein-Wiener Neural ODE sharing weights for dynamic layer generation",
+      "Taylor-expanded matrix exponential truncated at order 2 for fast continuous depth",
+      "Spectral normalization to stabilize generated layers"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

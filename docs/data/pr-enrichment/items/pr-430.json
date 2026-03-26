@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T06:06:51.906Z",
+  "generatedAt": "2026-03-26T06:37:03.412Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 430,
-    "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
+    "title": "GatedAttn + ValueResid + XSA6 + HedgeMixer + Legal TTT — val_bpb: 1.08965 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-26T06:06:20Z",
-    "headSha": "6bd838c1d549ea5885c4ad7c101f197597863dc2",
+    "updatedAt": "2026-03-26T06:16:53Z",
+    "headSha": "e0bb22c8c700f2282ac400509fb082dfb8c977cf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/430",
     "authorLogin": "sahiee-dev"
   },
@@ -19,24 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds SwiGLU, value residuals, gated attention, XSA, EMA, and AdamW test-time training to the thwu1 base to refine attention contributions.",
+    "summary": "10-layer GQA stack augments thwu1 base with SwiGLU, value residual+gated attention, XSA, EMA, and AdamW test-time training.",
     "tags": [
-      "val-only",
-      "architecture",
-      "training-schedule"
+      "attention",
+      "training-schedule",
+      "optimizer",
+      "architecture"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Runs three AdamW epochs over validation tokens before evaluation to adapt the model weights and restore afterward.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Iso-param SwiGLU MLP with GQA-aware attention",
-      "Value residuals + gated attention with last-layer XSA",
-      "EMA shadow weights + AdamW TTT over validation data"
+      "SwiGLU MLP with Value Residual and per-layer attention gates",
+      "Exclusive Self Attention on final layers plus EMA shadow weights",
+      "AdamW-based test-time training over validation shards"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }
