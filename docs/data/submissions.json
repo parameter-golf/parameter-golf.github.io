@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T12:39:00.487Z",
+  "generatedAt": "2026-03-26T13:08:58.110Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -29047,6 +29047,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100",
+        "folderPath": "records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100",
+        "submissionPath": "records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/train_gpt.py"
+      },
+      "submission": {
+        "author": "JUSTSUJAY",
+        "githubId": "JUSTSUJAY",
+        "name": "5L MLP4x + BigramHash + SmearGate + OrthoInit + SWA + QAT + Sliding Window (1xH100)",
+        "blurb": "Non-record 1xH100 submission: 20+ experiments exploring width-vs-depth tradeoffs, discovering that 5-layer MLP4x (hidden=2048) significantly outperforms deeper narrower architectures. Combined with BigramHash(4096), SmearGate, orthogonal init, QAT (int8 STE), SWA (38 checkpoints), and sliding window eval (stride=64). Post-quant val_bpb 1.3380 with 10-minute training budget on 1xH100 80GB (14.5MB artifact). Autonomous AI-driven experimentation using autoresearch framework.",
+        "date": "2026-03-26T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.337977,
+        "valLoss": null,
+        "preQuantValBpb": 1.337463,
+        "preQuantValLoss": null,
+        "stepStop": 9353,
+        "wallclockSeconds": 600,
+        "evalTimeSeconds": 227.3
+      },
+      "artifact": {
+        "bytesTotal": 14511799,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 842,
+        "title": "Non-record: 5L MLP4x + SlidingWindow + SWA + QAT — val_bpb 1.33 (1xH100)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/842",
+        "authorLogin": "JUSTSUJAY",
+        "authorName": null,
+        "createdAt": "2026-03-26T11:42:27Z",
+        "updatedAt": "2026-03-26T12:59:41Z",
+        "headSha": "a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2",
+        "headRepo": "JUSTSUJAY/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100",
+        "pr": "https://github.com/openai/parameter-golf/pull/842",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-22_EBLS_LearnedSharing",
       "source": "pull_request",
       "status": "closed",
@@ -30424,83 +30501,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/d8435b80a3488cad86d32452c32e0aab8e3ca316/records/track_non_record_16mb/2026-03-21_Baseline_FineWeb_8GPU_Best/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/d8435b80a3488cad86d32452c32e0aab8e3ca316/records/track_non_record_16mb/2026-03-21_Baseline_FineWeb_8GPU_Best",
         "pr": "https://github.com/openai/parameter-golf/pull/196",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_non_record_16mb-2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100",
-      "source": "pull_request",
-      "status": "open",
-      "category": "non-record",
-      "track": {
-        "path": "records/track_non_record_16mb",
-        "slug": "track_non_record_16mb",
-        "label": "Non-record / 16MB",
-        "official": false,
-        "category": "non-record"
-      },
-      "record": {
-        "folderName": "2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100",
-        "folderPath": "records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100",
-        "submissionPath": "records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/submission.json",
-        "readmePath": "records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/README.md",
-        "trainLogPath": "records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/train.log",
-        "scriptPath": "records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/train_gpt.py"
-      },
-      "submission": {
-        "author": "JUSTSUJAY",
-        "githubId": "JUSTSUJAY",
-        "name": "5L MLP4x + BigramHash + SmearGate + OrthoInit + SWA + QAT + Sliding Window (1xH100)",
-        "blurb": "Non-record 1xH100 submission: 15 experiments exploring width-vs-depth tradeoffs, discovering that 5-layer MLP4x (hidden=2048) significantly outperforms deeper narrower architectures. Combined with BigramHash(4096), SmearGate, orthogonal init, QAT (int8 STE), SWA (18 checkpoints), and sliding window eval (stride=64). Post-quant val_bpb 1.3827 under the 16MB artifact cap. Autonomous AI-driven experimentation using autoresearch framework.",
-        "date": "2026-03-26T00:00:00Z"
-      },
-      "metrics": {
-        "valBpb": 1.38272,
-        "valLoss": null,
-        "preQuantValBpb": 1.382291,
-        "preQuantValLoss": null,
-        "stepStop": 4573,
-        "wallclockSeconds": 300,
-        "evalTimeSeconds": 235.6
-      },
-      "artifact": {
-        "bytesTotal": 14621542,
-        "bytesCode": null,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 842,
-        "title": "Non-record: 5L MLP4x + SlidingWindow + SWA + QAT — val_bpb 1.3827 (1xH100)",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/842",
-        "authorLogin": "JUSTSUJAY",
-        "authorName": null,
-        "createdAt": "2026-03-26T11:42:27Z",
-        "updatedAt": "2026-03-26T11:42:27Z",
-        "headSha": "9b6c41bb6a24e5103325e5d8eda8897203f47a0c",
-        "headRepo": "JUSTSUJAY/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9b6c41bb6a24e5103325e5d8eda8897203f47a0c/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/9b6c41bb6a24e5103325e5d8eda8897203f47a0c/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/9b6c41bb6a24e5103325e5d8eda8897203f47a0c/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/9b6c41bb6a24e5103325e5d8eda8897203f47a0c/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/9b6c41bb6a24e5103325e5d8eda8897203f47a0c/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100",
-        "pr": "https://github.com/openai/parameter-golf/pull/842",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

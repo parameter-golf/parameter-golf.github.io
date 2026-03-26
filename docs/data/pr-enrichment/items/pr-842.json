@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T12:09:11.812Z",
+  "generatedAt": "2026-03-26T13:09:07.959Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 842,
-    "title": "Non-record: 5L MLP4x + SlidingWindow + SWA + QAT — val_bpb 1.3827 (1xH100)",
+    "title": "Non-record: 5L MLP4x + SlidingWindow + SWA + QAT — val_bpb 1.33 (1xH100)",
     "state": "open",
-    "updatedAt": "2026-03-26T11:42:27Z",
-    "headSha": "9b6c41bb6a24e5103325e5d8eda8897203f47a0c",
+    "updatedAt": "2026-03-26T12:59:41Z",
+    "headSha": "a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/842",
     "authorLogin": "JUSTSUJAY"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Autonomous search picked a width-focused 5-layer MLP4x with BigramHash/SmearGate, QAT, SWA, and sliding-window eval to stay under 16MB.",
+    "summary": "Autonomous search favors a 5-layer MLP4x with BigramHash+SmearGate, QAT, SWA, and sliding-window eval on one H100.",
     "tags": [
       "architecture",
       "quantization",
-      "regularization",
-      "sliding-window-eval"
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Width-focused 5-layer MLP4x backbone with BigramHash embeddings and SmearGate gating.",
-      "QAT with int8 STE during training plus SWA over 18 checkpoints for smoother weights.",
-      "Sliding-window evaluation with stride 64 to reuse long-context scoring."
+      "5-layer wide MLP4x with BigramHash embeddings and SmearGate",
+      "QAT with STE plus SWA checkpoint averaging",
+      "Sliding-window stride-64 evaluation"
     ]
   },
   "compatibility": {

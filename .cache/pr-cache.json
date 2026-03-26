@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-26T12:39:00.452Z",
-  "lastSeenUpdatedAt": "2026-03-26T12:38:18Z",
+  "generatedAt": "2026-03-26T13:08:58.077Z",
+  "lastSeenUpdatedAt": "2026-03-26T12:59:41Z",
   "prs": {
     "1": {
       "number": 1,
@@ -72334,10 +72334,10 @@
     },
     "842": {
       "number": 842,
-      "updatedAt": "2026-03-26T11:42:27Z",
+      "updatedAt": "2026-03-26T12:59:41Z",
       "pr": {
         "number": 842,
-        "title": "Non-record: 5L MLP4x + SlidingWindow + SWA + QAT — val_bpb 1.3827 (1xH100)",
+        "title": "Non-record: 5L MLP4x + SlidingWindow + SWA + QAT — val_bpb 1.33 (1xH100)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -72345,8 +72345,8 @@
         "authorLogin": "JUSTSUJAY",
         "authorName": null,
         "createdAt": "2026-03-26T11:42:27Z",
-        "updatedAt": "2026-03-26T11:42:27Z",
-        "headSha": "9b6c41bb6a24e5103325e5d8eda8897203f47a0c",
+        "updatedAt": "2026-03-26T12:59:41Z",
+        "headSha": "a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2",
         "headRepo": "JUSTSUJAY/parameter-golf"
       },
       "submissions": [
@@ -72374,20 +72374,20 @@
             "author": "JUSTSUJAY",
             "githubId": "JUSTSUJAY",
             "name": "5L MLP4x + BigramHash + SmearGate + OrthoInit + SWA + QAT + Sliding Window (1xH100)",
-            "blurb": "Non-record 1xH100 submission: 15 experiments exploring width-vs-depth tradeoffs, discovering that 5-layer MLP4x (hidden=2048) significantly outperforms deeper narrower architectures. Combined with BigramHash(4096), SmearGate, orthogonal init, QAT (int8 STE), SWA (18 checkpoints), and sliding window eval (stride=64). Post-quant val_bpb 1.3827 under the 16MB artifact cap. Autonomous AI-driven experimentation using autoresearch framework.",
+            "blurb": "Non-record 1xH100 submission: 20+ experiments exploring width-vs-depth tradeoffs, discovering that 5-layer MLP4x (hidden=2048) significantly outperforms deeper narrower architectures. Combined with BigramHash(4096), SmearGate, orthogonal init, QAT (int8 STE), SWA (38 checkpoints), and sliding window eval (stride=64). Post-quant val_bpb 1.3380 with 10-minute training budget on 1xH100 80GB (14.5MB artifact). Autonomous AI-driven experimentation using autoresearch framework.",
             "date": "2026-03-26T00:00:00Z"
           },
           "metrics": {
-            "valBpb": 1.38272,
+            "valBpb": 1.337977,
             "valLoss": null,
-            "preQuantValBpb": 1.382291,
+            "preQuantValBpb": 1.337463,
             "preQuantValLoss": null,
-            "stepStop": 4573,
-            "wallclockSeconds": 300,
-            "evalTimeSeconds": 235.6
+            "stepStop": 9353,
+            "wallclockSeconds": 600,
+            "evalTimeSeconds": 227.3
           },
           "artifact": {
-            "bytesTotal": 14621542,
+            "bytesTotal": 14511799,
             "bytesCode": null,
             "bytesModelInt8Zlib": null
           },
@@ -72400,7 +72400,7 @@
           },
           "pr": {
             "number": 842,
-            "title": "Non-record: 5L MLP4x + SlidingWindow + SWA + QAT — val_bpb 1.3827 (1xH100)",
+            "title": "Non-record: 5L MLP4x + SlidingWindow + SWA + QAT — val_bpb 1.33 (1xH100)",
             "state": "open",
             "draft": false,
             "mergedAt": null,
@@ -72408,16 +72408,16 @@
             "authorLogin": "JUSTSUJAY",
             "authorName": null,
             "createdAt": "2026-03-26T11:42:27Z",
-            "updatedAt": "2026-03-26T11:42:27Z",
-            "headSha": "9b6c41bb6a24e5103325e5d8eda8897203f47a0c",
+            "updatedAt": "2026-03-26T12:59:41Z",
+            "headSha": "a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2",
             "headRepo": "JUSTSUJAY/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9b6c41bb6a24e5103325e5d8eda8897203f47a0c/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/9b6c41bb6a24e5103325e5d8eda8897203f47a0c/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/9b6c41bb6a24e5103325e5d8eda8897203f47a0c/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/9b6c41bb6a24e5103325e5d8eda8897203f47a0c/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/9b6c41bb6a24e5103325e5d8eda8897203f47a0c/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2/records/track_non_record_16mb/2026-03-26_5L_MLP4x_SlidingWindow_SWA_QAT_1xH100",
             "pr": "https://github.com/openai/parameter-golf/pull/842"
           }
         }

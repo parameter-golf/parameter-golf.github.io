@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T12:39:16.794Z",
+  "generatedAt": "2026-03-26T13:09:08.086Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -48,17 +48,17 @@
     },
     {
       "prNumber": 842,
-      "title": "Non-record: 5L MLP4x + SlidingWindow + SWA + QAT — val_bpb 1.3827 (1xH100)",
+      "title": "Non-record: 5L MLP4x + SlidingWindow + SWA + QAT — val_bpb 1.33 (1xH100)",
       "status": "open",
-      "updatedAt": "2026-03-26T11:42:27Z",
-      "headSha": "9b6c41bb6a24e5103325e5d8eda8897203f47a0c",
-      "generatedAt": "2026-03-26T12:09:11.812Z",
-      "summary": "Autonomous search picked a width-focused 5-layer MLP4x with BigramHash/SmearGate, QAT, SWA, and sliding-window eval to stay under 16MB.",
+      "updatedAt": "2026-03-26T12:59:41Z",
+      "headSha": "a0af08ac5925a472ae3ab62e647da7cfb4cbbbe2",
+      "generatedAt": "2026-03-26T13:09:07.959Z",
+      "summary": "Autonomous search favors a 5-layer MLP4x with BigramHash+SmearGate, QAT, SWA, and sliding-window eval on one H100.",
       "tags": [
         "architecture",
         "quantization",
-        "regularization",
-        "sliding-window-eval"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
