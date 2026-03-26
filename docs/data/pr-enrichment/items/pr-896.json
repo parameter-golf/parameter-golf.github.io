@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T20:42:53.166Z",
+  "generatedAt": "2026-03-26T21:42:26.236Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 896,
     "title": "[Non-Record] JEPA Self-Distillation with EMA Target Encoder for Autoregressive LM (val_bpb: 1.19) | Current Noisy/Negative Result",
     "state": "open",
-    "updatedAt": "2026-03-26T20:41:17Z",
+    "updatedAt": "2026-03-26T21:40:51Z",
     "headSha": "78006f176c7cf5f36d8ebd665a761b1457d4a90d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/896",
     "authorLogin": "MVPandey"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds JEPA-style EMA target encoder self-distillation aux loss to a causal transformer, pairing predictor MLP forecasts with VICReg-regularized latents alongside CE training.",
+    "summary": "JEPA self-distillation on a causal LM via EMA target encoder plus predictor MLP with VICReg-stabilized loss, keeping only the context encoder for inference.",
     "tags": [
       "architecture",
       "regularization",
-      "evaluation",
+      "training-schedule",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA target encoder providing slowly evolving latent targets",
-      "Predictor MLP forecasting next-token representations for JEPA loss",
-      "VICReg applied to target latents to prevent collapse"
+      "JEPA auxiliary loss with EMA target encoder",
+      "Predictor MLP forecasts next-token latent representation",
+      "VICReg applied to target representations to prevent collapse"
     ]
   },
   "compatibility": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T20:13:12.522Z",
+  "generatedAt": "2026-03-26T21:42:32.936Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 728,
     "title": "Record: Val-Calibrated GPTQ + XSA-all + BigramHash 3072×112 — val_bpb 1.1142 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-26T19:59:17Z",
+    "updatedAt": "2026-03-26T21:37:49Z",
     "headSha": "713bb3fcd9017ba01d104723b3f873201976bab8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/728",
     "authorLogin": "abaybektursun"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "GPTQ quantization calibrates on validation activations to avoid eval-time train data while using XSA-all and BigramHash 3072×112 within the 16MB stack.",
+    "summary": "XSA-all 11-layer model quantized with GPTQ int6, using BigramHash 3072×112 and val/self-gen calibration to avoid post-600s train-data access.",
     "tags": [
       "quantization",
-      "attention",
-      "architecture"
+      "architecture",
+      "attention"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not training on validation data; calibration uses val tokens read-only after training.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Val-data GPTQ calibration for read-only Hessian rounding",
-      "11-layer XSA-all architecture with BigramHash 3072×112",
-      "Full Hessian int6 quantization pipeline"
+      "Full Hessian GPTQ int6 with BigramHash 3072×112",
+      "Validation and autoregressive self-gen calibration for legality",
+      "XSA-all 11-layer stacking from PR609 lineage"
     ]
   },
   "compatibility": {

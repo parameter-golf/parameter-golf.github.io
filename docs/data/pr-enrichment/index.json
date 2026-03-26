@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T21:12:46.689Z",
+  "generatedAt": "2026-03-26T21:42:33.042Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -7,14 +7,14 @@
       "prNumber": 896,
       "title": "[Non-Record] JEPA Self-Distillation with EMA Target Encoder for Autoregressive LM (val_bpb: 1.19) | Current Noisy/Negative Result",
       "status": "open",
-      "updatedAt": "2026-03-26T20:41:17Z",
+      "updatedAt": "2026-03-26T21:40:51Z",
       "headSha": "78006f176c7cf5f36d8ebd665a761b1457d4a90d",
-      "generatedAt": "2026-03-26T20:42:53.166Z",
-      "summary": "Adds JEPA-style EMA target encoder self-distillation aux loss to a causal transformer, pairing predictor MLP forecasts with VICReg-regularized latents alongside CE training.",
+      "generatedAt": "2026-03-26T21:42:26.236Z",
+      "summary": "JEPA self-distillation on a causal LM via EMA target encoder plus predictor MLP with VICReg-stabilized loss, keeping only the context encoder for inference.",
       "tags": [
         "architecture",
         "regularization",
-        "evaluation",
+        "training-schedule",
         "non-record"
       ],
       "flags": {
@@ -2728,14 +2728,14 @@
       "prNumber": 728,
       "title": "Record: Val-Calibrated GPTQ + XSA-all + BigramHash 3072×112 — val_bpb 1.1142 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-26T19:59:17Z",
+      "updatedAt": "2026-03-26T21:37:49Z",
       "headSha": "713bb3fcd9017ba01d104723b3f873201976bab8",
-      "generatedAt": "2026-03-26T20:13:12.522Z",
-      "summary": "GPTQ quantization calibrates on validation activations to avoid eval-time train data while using XSA-all and BigramHash 3072×112 within the 16MB stack.",
+      "generatedAt": "2026-03-26T21:42:32.936Z",
+      "summary": "XSA-all 11-layer model quantized with GPTQ int6, using BigramHash 3072×112 and val/self-gen calibration to avoid post-600s train-data access.",
       "tags": [
         "quantization",
-        "attention",
-        "architecture"
+        "architecture",
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
