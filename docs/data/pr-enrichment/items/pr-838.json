@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T14:10:04.899Z",
+  "generatedAt": "2026-03-26T14:41:19.939Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 838,
     "title": "Non-Record: 11L Parallel Muon + LN Scale + LeakyReLU² MLP3x + Legal TTT — val_bpb 1.1215 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-26T13:51:44Z",
-    "headSha": "d7900e2f0052f3ced51f6d16ec45240dcb7035e0",
+    "updatedAt": "2026-03-26T14:38:33Z",
+    "headSha": "ab25191e76658a485f9d1802c46185c95b62938b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/838",
     "authorLogin": "aryanbhosale"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11L transformer pairs Parallel Muon banking with LN Scale and LeakyReLU² MLP3x, then legal score-first TTT plus late QAT/GPTQ-lite int6 quantization.",
+    "summary": "11-layer transformer pairs Parallel Muon banking and batched Newton-Schulz with depth-scaled LN, LeakyReLU² MLP3x, and legal score-first TTT SGD.",
     "tags": [
-      "muon",
+      "architecture",
+      "optimizer",
       "training-schedule",
-      "quantization",
-      "attention"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Parallel Muon parameter banking with batched Newton-Schulz solve",
-      "Depth-scaled LN plus LeakyReLU² MLP3x with SmearGate/BigramHash layers",
-      "Legal score-first TTT pipeline with late QAT and GPTQ-lite int6 quant"
+      "Parallel Muon banking with batched Newton-Schulz updates",
+      "Depth-scaled LN plus LeakyReLU² MLP3x for stable deep dynamics",
+      "Legal score-first TTT sliding-window scoring before SGD updates"
     ]
   },
   "compatibility": {

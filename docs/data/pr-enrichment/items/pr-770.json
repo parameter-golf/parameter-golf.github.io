@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T21:34:12.189Z",
+  "generatedAt": "2026-03-26T14:42:31.652Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 770,
     "title": "Record: 11L + Multi-Order N-gram Backoff + Entropy-Adaptive Alpha (val_bpb=0.6672)",
     "state": "open",
-    "updatedAt": "2026-03-25T21:30:28Z",
-    "headSha": "2ff44a66f62759b9a75db642e35a1623f998e304",
+    "updatedAt": "2026-03-26T14:14:23Z",
+    "headSha": "7b786ba0b3dc778d02f179be697a020623a2da36",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/770",
     "authorLogin": "minh-stakc"
   },
@@ -19,15 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Multi-order n-gram cache backoff (orders 2-7) blends with the 11L LM via entropy-adaptive alpha during sliding eval.",
+    "summary": "11-layer GQA base augmented with eval-time multi-order n-gram cache and entropy-driven interpolation to blend neural and cache predictions.",
     "tags": [
-      "evaluation"
+      "architecture",
+      "evaluation",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Multi-order n-gram cache backoff (orders 2-7)",
-      "Entropy-adaptive interpolation driven by model entropy"
+      "GQA 11L base with XSA4/VE128 and quantized int6/GPTQ-lite stack",
+      "Sliding-window n-gram cache (orders 2-7) backing off on misses",
+      "Entropy-adaptive alpha weighting n-gram vs. LM outputs"
     ]
   },
   "compatibility": {

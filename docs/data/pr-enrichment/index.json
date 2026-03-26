@@ -1,8 +1,101 @@
 {
-  "generatedAt": "2026-03-26T14:10:11.047Z",
+  "generatedAt": "2026-03-26T14:43:00.583Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 855,
+      "title": "Non-Record: First Viable 3-Loop Recurrence — Birkhoff + Output-LN + Timestep Scaling (val_bpb=1.2659, 14 eff layers from 6 unique blocks)",
+      "status": "open",
+      "updatedAt": "2026-03-26T14:36:10Z",
+      "headSha": "a3a861317bac7e9b6c3a7226c80cac8495a32774",
+      "generatedAt": "2026-03-26T14:40:17.462Z",
+      "summary": "Shared 3-loop recurrence stabilizes via Output-LN, Birkhoff-constrained mixing, and capped timestep scaling to tame quantization blowup across iterations.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-855.json"
+    },
+    {
+      "prNumber": 854,
+      "title": "Non-record submission: MLP3x 9L 512d, 1.4530 bpb (1xRTX 4090)",
+      "status": "open",
+      "updatedAt": "2026-03-26T14:35:02Z",
+      "headSha": "d9140d154cfd7ec4ecd761c3b848c66c014c7eef",
+      "generatedAt": "2026-03-26T14:40:21.512Z",
+      "summary": "Automated sweep on RTX4090 showed 9-layer GPT with 3x FFN width and GQA attention beats deeper configs at ~22M params using Muon int8+zlib.",
+      "tags": [
+        "architecture",
+        "muon",
+        "quantization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-854.json"
+    },
+    {
+      "prNumber": 853,
+      "title": "Record: Two-Pass Order-12 N-gram Backoff + 256K Chunks — 0.1315 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-26T14:20:25Z",
+      "headSha": "8ddb8871b4cf61942282639a8ce11429db67eab8",
+      "generatedAt": "2026-03-26T14:40:25.539Z",
+      "summary": "Two-pass eval-time n-gram rescoring with order-12 backoff on 256K token chunks and α_max=0.70 for cache-driven compression.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-853.json"
+    },
+    {
+      "prNumber": 852,
+      "title": "Hymba-11L: SOTA High-Density Takeover (1.1189 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-26T14:20:12Z",
+      "headSha": "b8b44bd26693031d7058a7b1021f35b947bb8536",
+      "generatedAt": "2026-03-26T14:40:37.514Z",
+      "summary": "Parallel Muon overlap powers a 3D-parameter-banked Selective Scan and Rotary hybrid with TurboQuant 4-bit QAT to unlock extended 3-epoch test-time training.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-852.json"
+    },
     {
       "prNumber": 851,
       "title": "submission: Order-Adaptive N-gram Cache — 0.2071 BPB",
@@ -76,10 +169,10 @@
       "prNumber": 846,
       "title": "Record: Two-Pass N-gram Rescoring (val_bpb 0.1434)",
       "status": "open",
-      "updatedAt": "2026-03-26T14:05:24Z",
+      "updatedAt": "2026-03-26T14:36:06Z",
       "headSha": "e4cea2ccf12853e4b8dbca827216211a68d18311",
-      "generatedAt": "2026-03-26T14:09:58.468Z",
-      "summary": "Two-pass n-gram rescoring reuses the full cache to rewind early chunks while building on score-first TTT adaptation and GPTQ-Int5 export.",
+      "generatedAt": "2026-03-26T14:41:13.042Z",
+      "summary": "Two-pass n-gram evaluation rescoring early cold-cache chunks with the full cache after score-first TTT+GPTQ-Int5 export.",
       "tags": [
         "evaluation",
         "quantization",
@@ -167,15 +260,15 @@
       "prNumber": 838,
       "title": "Non-Record: 11L Parallel Muon + LN Scale + LeakyReLU² MLP3x + Legal TTT — val_bpb 1.1215 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-26T13:51:44Z",
-      "headSha": "d7900e2f0052f3ced51f6d16ec45240dcb7035e0",
-      "generatedAt": "2026-03-26T14:10:04.899Z",
-      "summary": "11L transformer pairs Parallel Muon banking with LN Scale and LeakyReLU² MLP3x, then legal score-first TTT plus late QAT/GPTQ-lite int6 quantization.",
+      "updatedAt": "2026-03-26T14:38:33Z",
+      "headSha": "ab25191e76658a485f9d1802c46185c95b62938b",
+      "generatedAt": "2026-03-26T14:41:19.939Z",
+      "summary": "11-layer transformer pairs Parallel Muon banking and batched Newton-Schulz with depth-scaled LN, LeakyReLU² MLP3x, and legal score-first TTT SGD.",
       "tags": [
-        "muon",
+        "architecture",
+        "optimizer",
         "training-schedule",
-        "quantization",
-        "attention"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -306,14 +399,14 @@
       "prNumber": 828,
       "title": "Record: 0.9076 BPB — 10L + N-gram Backoff + Matrix LR 0.03",
       "status": "open",
-      "updatedAt": "2026-03-26T08:49:04Z",
+      "updatedAt": "2026-03-26T14:24:44Z",
       "headSha": "3054956edded5ed9624d793371bacb8f1abe0dd8",
-      "generatedAt": "2026-03-26T09:08:03.563Z",
-      "summary": "10-layer GQA int5/6-quantized model runs Muon with MATRIX_LR=0.03 and keeps the multi-order n-gram backoff scoring from PR #802.",
+      "generatedAt": "2026-03-26T14:41:24.969Z",
+      "summary": "10L GQA with mixed int quantization and multi-order n-gram backoff, raising the Muon matrix lr to 0.03 after systematic screening.",
       "tags": [
         "architecture",
-        "optimizer",
         "quantization",
+        "optimizer",
         "evaluation"
       ],
       "flags": {
@@ -353,15 +446,14 @@
       "prNumber": 825,
       "title": "Record: Order-Adaptive BackoffMixer (mean val_bpb=0.5440)",
       "status": "open",
-      "updatedAt": "2026-03-26T07:07:51Z",
+      "updatedAt": "2026-03-26T14:30:48Z",
       "headSha": "79ae889affcfa7d1f97534206adfac413ef61f34",
-      "generatedAt": "2026-03-26T07:37:03.095Z",
-      "summary": "11-layer XSA-all transformer with int5 Soft-Round QAT feeds an order-adaptive entropy-gated BackoffNgramMixer that blends multi-order scores via per-order thresholds.",
+      "generatedAt": "2026-03-26T14:41:30.637Z",
+      "summary": "11-layer XSA-all transformer runs entropy-gated order-adaptive BackoffNgramMixer with per-order thresholds for score-first eval mixing.",
       "tags": [
         "architecture",
-        "attention",
-        "compression",
-        "evaluation"
+        "evaluation",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -633,15 +725,15 @@
       "prNumber": 810,
       "title": "Record: Per-Order Adaptive Alpha + N-gram Backoff (val_bpb=0.2995, 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-26T07:52:52Z",
+      "updatedAt": "2026-03-26T14:16:54Z",
       "headSha": "bdd17d5f474a23c4366512b159f2706e4285711d",
-      "generatedAt": "2026-03-26T08:07:57.235Z",
-      "summary": "Combines two-phase shared global n-gram cache with per-order entropy-adaptive alpha, pre-enrichment confidence signals, and GPU-resident EMA.",
+      "generatedAt": "2026-03-26T14:41:38.628Z",
+      "summary": "Uses GPU-resident EMA, GELU pre-enrichment with SmearGate+BigramHash, and two-phase shared n-gram backoff with per-order adaptive alpha/confidence weighting.",
       "tags": [
         "architecture",
+        "attention",
         "evaluation",
-        "optimizer",
-        "quantization"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -679,13 +771,12 @@
       "prNumber": 808,
       "title": "Record: 0.6364 BPB - Depth Recurrence + Multi-Order N-gram Backoff",
       "status": "open",
-      "updatedAt": "2026-03-26T04:18:04Z",
+      "updatedAt": "2026-03-26T14:24:53Z",
       "headSha": "b00c823bc9e3e32214324efb68f18eea43f9f50c",
-      "generatedAt": "2026-03-26T04:36:44.868Z",
-      "summary": "Depth recurrence stack augmented with entropy-weighted multi-order n-gram backoff and multi-GPU prefill for eval-time scoring.",
+      "generatedAt": "2026-03-26T14:42:17.431Z",
+      "summary": "Depth recurrence reuses layers 4/5 for virtual depth while eval-time multi-order n-gram backoff with entropy-adaptive blending plus multi-GPU prefill refines scoring.",
       "tags": [
         "architecture",
-        "depth-width",
         "evaluation"
       ],
       "flags": {
@@ -725,13 +816,14 @@
       "prNumber": 806,
       "title": "Record: Backoff N-gram Cache + LeakyReLU(0.9)² (val_bpb=0.6678)",
       "status": "open",
-      "updatedAt": "2026-03-26T03:47:28Z",
+      "updatedAt": "2026-03-26T14:24:50Z",
       "headSha": "9876d60008393c88f90b38b53329dfdaf74f64e8",
-      "generatedAt": "2026-03-26T04:06:40.595Z",
-      "summary": "Uses entropy-adaptive backoff n-gram cache plus distributed GPU prefill and LeakyReLU(0.9)² on an 11L 512d transformer.",
+      "generatedAt": "2026-03-26T14:42:23.607Z",
+      "summary": "Backoff n-gram cache mixes entropy-adaptive alpha, uses distributed pre-fill, and swaps relu² for LeakyReLU(0.9)² atop the 11L base.",
       "tags": [
-        "architecture",
-        "evaluation"
+        "sliding-window-eval",
+        "muon",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1391,12 +1483,14 @@
       "prNumber": 770,
       "title": "Record: 11L + Multi-Order N-gram Backoff + Entropy-Adaptive Alpha (val_bpb=0.6672)",
       "status": "open",
-      "updatedAt": "2026-03-25T21:30:28Z",
-      "headSha": "2ff44a66f62759b9a75db642e35a1623f998e304",
-      "generatedAt": "2026-03-25T21:34:12.189Z",
-      "summary": "Multi-order n-gram cache backoff (orders 2-7) blends with the 11L LM via entropy-adaptive alpha during sliding eval.",
+      "updatedAt": "2026-03-26T14:14:23Z",
+      "headSha": "7b786ba0b3dc778d02f179be697a020623a2da36",
+      "generatedAt": "2026-03-26T14:42:31.652Z",
+      "summary": "11-layer GQA base augmented with eval-time multi-order n-gram cache and entropy-driven interpolation to blend neural and cache predictions.",
       "tags": [
-        "evaluation"
+        "architecture",
+        "evaluation",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1412,14 +1506,13 @@
       "prNumber": 769,
       "title": "PROTEUS+STYX — val_bpb 0.8495 (3-seed mean) — LeakyReLU(0.9)² + 5-gram Eval Cache",
       "status": "open",
-      "updatedAt": "2026-03-26T06:36:24Z",
+      "updatedAt": "2026-03-26T14:31:24Z",
       "headSha": "ca847e29a3ce3d61b7cf41f14828a6b95dca13c4",
-      "generatedAt": "2026-03-26T07:07:36.582Z",
-      "summary": "Uses PROTEUS+STYX with LeakyReLU(0.9)² and a backward-looking 5-gram hash cache blended into sliding-window eval predictions.",
+      "generatedAt": "2026-03-26T14:42:37.362Z",
+      "summary": "11L Proteus+Styx swaps in LeakyReLU(0.9)² and blends a backward-looking 5-gram hash cache during sliding-window eval for smoother predictions.",
       "tags": [
         "architecture",
-        "evaluation",
-        "quantization"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1506,13 +1599,12 @@
       "prNumber": 764,
       "title": "Record: Curriculum Learning + LeakyReLU(0.9)² + 7-gram Backoff (val_bpb=0.9633)",
       "status": "open",
-      "updatedAt": "2026-03-26T10:04:15Z",
+      "updatedAt": "2026-03-26T14:24:47Z",
       "headSha": "519eec39fb729490d279d6a7fa46d644f2b248ef",
-      "generatedAt": "2026-03-26T10:08:20.261Z",
-      "summary": "Curriculum shard ordering by perplexity plus tuned LeakyReLU(0.9)² on the Podracing II stack, paired with a 7-gram backoff eval cache.",
+      "generatedAt": "2026-03-26T14:42:43.980Z",
+      "summary": "Hardest-first shard ordering plus LeakyReLU(0.9)^2 and a 7-gram backoff cache extend the Podracing II stack.",
       "tags": [
         "training-schedule",
-        "regularization",
         "evaluation"
       ],
       "flags": {
@@ -2458,15 +2550,13 @@
       "prNumber": 701,
       "title": "Add classical 4-gram non-record submission",
       "status": "open",
-      "updatedAt": "2026-03-25T11:33:13Z",
+      "updatedAt": "2026-03-26T14:12:01Z",
       "headSha": "c911fa98008685a8f3ada62c75e630a9b69a9a82",
-      "generatedAt": "2026-03-25T12:01:38.795Z",
-      "summary": "Discounted hashed classical 4-gram with unigram/bigram backoff built from 10M tokens, packaged as a compressed artifact for full FineWeb validation.",
+      "generatedAt": "2026-03-26T14:42:52.300Z",
+      "summary": "Classical discounted hashed 4-gram built from 10M tokens, stored under 16MB, and evaluated exactly on the FineWeb validation split from the saved artifact.",
       "tags": [
-        "architecture",
-        "evaluation",
-        "compression",
-        "non-record"
+        "non-record",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -10876,22 +10966,22 @@
       "prNumber": 181,
       "title": "Aweb Optimized Baseline — 1.2194 BPB",
       "status": "open",
-      "updatedAt": "2026-03-21T14:13:16Z",
-      "headSha": "bb34f95624c2dd78396ec295b814f0147fc54fd6",
-      "generatedAt": "2026-03-21T14:33:29.782Z",
-      "summary": "Baseline transformer with env-var Muon tuning (higher momentum, lower LR, longer warmdown, grad clip) plus 3× MLP and 2048-token context.",
+      "updatedAt": "2026-03-26T14:32:07Z",
+      "headSha": "5dd1ff82377b7b55f9e9aacf2d2aa12438b951fc",
+      "generatedAt": "2026-03-26T14:43:00.558Z",
+      "summary": "Baseline GPT setup tuned via Muon optimizer tweaks, 3× MLP, 2048-length training, and train-on-val env overrides for smoother int8 convergence.",
       "tags": [
         "optimizer",
         "training-schedule",
-        "regularization"
+        "val-only"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-181.json"
     },

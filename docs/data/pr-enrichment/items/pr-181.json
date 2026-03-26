@@ -1,45 +1,46 @@
 {
-  "generatedAt": "2026-03-21T14:33:29.782Z",
+  "generatedAt": "2026-03-26T14:43:00.558Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 181,
     "title": "Aweb Optimized Baseline — 1.2194 BPB",
     "state": "open",
-    "updatedAt": "2026-03-21T14:13:16Z",
-    "headSha": "bb34f95624c2dd78396ec295b814f0147fc54fd6",
+    "updatedAt": "2026-03-26T14:32:07Z",
+    "headSha": "5dd1ff82377b7b55f9e9aacf2d2aa12438b951fc",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/181",
     "authorLogin": "manfromnowhere143"
   },
   "inputs": {
-    "hash": "579bb5ffe0be0c1712f71e5520c59dac8d390132277b2852c9d7b29d19e6e091",
+    "hash": "5628975727839fe80347056ca1c4254c8770063b4860ce2e5be72d80a98f9087",
     "readmePaths": [
       "records/track_10min_16mb/2026-03-20_AwebOptimizedBaseline/README.md",
+      "records/track_10min_16mb/2026-03-23_AwebUltimate/README.md",
       "records/track_10min_16mb/2026-03-21_AwebSOTA/README.md",
       "records/track_10min_16mb/2026-03-18_AwebBitNet/README.md",
       "records/track_10min_16mb/2026-03-18_AwebDepthRecurrence/README.md"
     ],
-    "submissionCount": 4
+    "submissionCount": 5
   },
   "output": {
-    "summary": "Baseline transformer with env-var Muon tuning (higher momentum, lower LR, longer warmdown, grad clip) plus 3× MLP and 2048-token context.",
+    "summary": "Baseline GPT setup tuned via Muon optimizer tweaks, 3× MLP, 2048-length training, and train-on-val env overrides for smoother int8 convergence.",
     "tags": [
       "optimizer",
       "training-schedule",
-      "regularization"
+      "val-only"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "TRAIN_ON_VAL=1 env var explicitly trains on the validation shard as documented by the author.",
     "techniques": [
-      "Muon optimizer tuning (momentum 0.99, halved LRs, extended warmdown)",
-      "Longer 2048-token training with grad clipping for stability",
-      "MLP width scaled to 3× via environment variables"
+      "Muon optimizer tuning: 0.99 momentum, longer warmdown/warmup, halved matrix/scalar LR, grad clip",
+      "Larger MLP (3×) with 2048-token sequences for more capacity/context",
+      "Train-on-val enabled purely through env vars without code edits"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

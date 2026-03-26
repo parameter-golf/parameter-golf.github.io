@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T04:36:44.868Z",
+  "generatedAt": "2026-03-26T14:42:17.431Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 808,
     "title": "Record: 0.6364 BPB - Depth Recurrence + Multi-Order N-gram Backoff",
     "state": "open",
-    "updatedAt": "2026-03-26T04:18:04Z",
+    "updatedAt": "2026-03-26T14:24:53Z",
     "headSha": "b00c823bc9e3e32214324efb68f18eea43f9f50c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/808",
     "authorLogin": "Naazimsnh02"
@@ -20,18 +20,17 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Depth recurrence stack augmented with entropy-weighted multi-order n-gram backoff and multi-GPU prefill for eval-time scoring.",
+    "summary": "Depth recurrence reuses layers 4/5 for virtual depth while eval-time multi-order n-gram backoff with entropy-adaptive blending plus multi-GPU prefill refines scoring.",
     "tags": [
       "architecture",
-      "depth-width",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence stacking of layers 4 and 5",
-      "Entropy-adaptive multi-order n-gram backoff",
-      "Multi-GPU n-gram hash-table prefill"
+      "Depth recurrence repeating layers 4/5 for 13 virtual layers",
+      "Eval-time multi-order n-gram backoff (orders 2-7) with entropy-adaptive alpha",
+      "Multi-GPU n-gram prefill to avoid hash-table fragmentation"
     ]
   },
   "compatibility": {

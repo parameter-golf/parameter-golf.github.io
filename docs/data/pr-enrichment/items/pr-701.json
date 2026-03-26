@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T12:01:38.795Z",
+  "generatedAt": "2026-03-26T14:42:52.300Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 701,
     "title": "Add classical 4-gram non-record submission",
     "state": "open",
-    "updatedAt": "2026-03-25T11:33:13Z",
+    "updatedAt": "2026-03-26T14:12:01Z",
     "headSha": "c911fa98008685a8f3ada62c75e630a9b69a9a82",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/701",
     "authorLogin": "Muhtasham"
@@ -19,19 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Discounted hashed classical 4-gram with unigram/bigram backoff built from 10M tokens, packaged as a compressed artifact for full FineWeb validation.",
+    "summary": "Classical discounted hashed 4-gram built from 10M tokens, stored under 16MB, and evaluated exactly on the FineWeb validation split from the saved artifact.",
     "tags": [
-      "architecture",
-      "evaluation",
-      "compression",
-      "non-record"
+      "non-record",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hashed 4-gram with unigram/bigram backoff",
-      "Absolute discount 0.75 and no mix-backoff experts",
-      "Artifact-loaded full validation run"
+      "Discounted hashed 4-gram with unigram/bigram backoff",
+      "Artifact built from 10M train tokens within 16MB cap",
+      "Exact FineWeb validation run from saved artifact"
     ]
   },
   "compatibility": {

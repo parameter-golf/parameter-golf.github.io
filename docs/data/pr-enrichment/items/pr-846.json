@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T14:09:58.468Z",
+  "generatedAt": "2026-03-26T14:41:13.042Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 846,
     "title": "Record: Two-Pass N-gram Rescoring (val_bpb 0.1434)",
     "state": "open",
-    "updatedAt": "2026-03-26T14:05:24Z",
+    "updatedAt": "2026-03-26T14:36:06Z",
     "headSha": "e4cea2ccf12853e4b8dbca827216211a68d18311",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/846",
     "authorLogin": "himanshudongre"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Two-pass n-gram rescoring reuses the full cache to rewind early chunks while building on score-first TTT adaptation and GPTQ-Int5 export.",
+    "summary": "Two-pass n-gram evaluation rescoring early cold-cache chunks with the full cache after score-first TTT+GPTQ-Int5 export.",
     "tags": [
       "evaluation",
       "quantization",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Two-pass n-gram rescoring of initial chunks with the complete cache from pass 1",
-      "Score-first TTT adaptation before n-gram evaluation",
-      "GPTQ-Int5 export from Muon/AdamW-trained model"
+      "Two-pass n-gram rescore of first 15 chunks",
+      "Score-first TTT with Muon+AdamW adaptation",
+      "GPTQ-Int5 export after EMA"
     ]
   },
   "compatibility": {

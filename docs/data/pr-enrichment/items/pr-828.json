@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T09:08:03.563Z",
+  "generatedAt": "2026-03-26T14:41:24.969Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 828,
     "title": "Record: 0.9076 BPB — 10L + N-gram Backoff + Matrix LR 0.03",
     "state": "open",
-    "updatedAt": "2026-03-26T08:49:04Z",
+    "updatedAt": "2026-03-26T14:24:44Z",
     "headSha": "3054956edded5ed9624d793371bacb8f1abe0dd8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/828",
     "authorLogin": "bigbag"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer GQA int5/6-quantized model runs Muon with MATRIX_LR=0.03 and keeps the multi-order n-gram backoff scoring from PR #802.",
+    "summary": "10L GQA with mixed int quantization and multi-order n-gram backoff, raising the Muon matrix lr to 0.03 after systematic screening.",
     "tags": [
       "architecture",
-      "optimizer",
       "quantization",
+      "optimizer",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Matrix LR set to 0.03",
-      "Mixed int5-MLP/int6-attn quantization",
-      "Multi-order n-gram backoff evaluation"
+      "Mixed int5-MLP/int6-attn quantization with zstd compression",
+      "Score-first multi-order n-gram backoff caching",
+      "Muon optimizer matrix lr tuned to 0.03 via screening"
     ]
   },
   "compatibility": {

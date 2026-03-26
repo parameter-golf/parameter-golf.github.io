@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T08:07:57.235Z",
+  "generatedAt": "2026-03-26T14:41:38.628Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 810,
     "title": "Record: Per-Order Adaptive Alpha + N-gram Backoff (val_bpb=0.2995, 3-seed)",
     "state": "open",
-    "updatedAt": "2026-03-26T07:52:52Z",
+    "updatedAt": "2026-03-26T14:16:54Z",
     "headSha": "bdd17d5f474a23c4366512b159f2706e4285711d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/810",
     "authorLogin": "Idan3011"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines two-phase shared global n-gram cache with per-order entropy-adaptive alpha, pre-enrichment confidence signals, and GPU-resident EMA.",
+    "summary": "Uses GPU-resident EMA, GELU pre-enrichment with SmearGate+BigramHash, and two-phase shared n-gram backoff with per-order adaptive alpha/confidence weighting.",
     "tags": [
       "architecture",
+      "attention",
       "evaluation",
-      "optimizer",
-      "quantization"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-order entropy centers/weights for adaptive backoff alpha",
-      "Pre-enrichment confidence signal modulates n-gram trust",
-      "GPU-resident EMA plus GELU pre-enrichment with SmearGate/BigramHash"
+      "GELU pre-enrichment + SmearGate/BigramHash front-end",
+      "GPU-resident EMA for faster updates",
+      "Two-phase shared n-gram cache with per-order adaptive alpha"
     ]
   },
   "compatibility": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T04:06:40.595Z",
+  "generatedAt": "2026-03-26T14:42:23.607Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 806,
     "title": "Record: Backoff N-gram Cache + LeakyReLU(0.9)² (val_bpb=0.6678)",
     "state": "open",
-    "updatedAt": "2026-03-26T03:47:28Z",
+    "updatedAt": "2026-03-26T14:24:50Z",
     "headSha": "9876d60008393c88f90b38b53329dfdaf74f64e8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/806",
     "authorLogin": "ibarrajo"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Uses entropy-adaptive backoff n-gram cache plus distributed GPU prefill and LeakyReLU(0.9)² on an 11L 512d transformer.",
+    "summary": "Backoff n-gram cache mixes entropy-adaptive alpha, uses distributed pre-fill, and swaps relu² for LeakyReLU(0.9)² atop the 11L base.",
     "tags": [
-      "architecture",
-      "evaluation"
+      "sliding-window-eval",
+      "muon",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Entropy-adaptive alpha mixing over orders 2-7 n-gram cache",
-      "Distributed cache prefill so every rank sees full history",
-      "LeakyReLU(0.9)² activation instead of ReLU²"
+      "Backoff multi-order n-gram cache with entropy-adaptive mixing",
+      "Distributed GPU cache pre-fill for coherent history",
+      "LeakyReLU(0.9)² activation in 11-layer transformer"
     ]
   },
   "compatibility": {
