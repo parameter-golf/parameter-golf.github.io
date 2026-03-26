@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-26T05:37:28.297Z",
+  "generatedAt": "2026-03-26T06:06:51.972Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 816,
+      "title": "Record submission: Poly5 Softcap + BigramHash(3072) + Wider GPTQ-lite…",
+      "status": "open",
+      "updatedAt": "2026-03-26T05:44:06Z",
+      "headSha": "7218f44101bfaa1278a2534321f4f5d691ca7ba6",
+      "generatedAt": "2026-03-26T06:06:40.109Z",
+      "summary": "Builds on LeakyReLU²+Legal TTT SOTA by replacing tanh with a Poly-5 softcap, widening BigramHash/GPTQ-lite, and tuning eval/regularization.",
+      "tags": [
+        "quantization",
+        "regularization",
+        "compression",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-816.json"
+    },
     {
       "prNumber": 814,
       "title": "Record: X-WING 3D Cubric + Complementary Training (val_bpb=0.4820)",
@@ -1205,15 +1229,15 @@
       "prNumber": 754,
       "title": "Non-Record: 11L Parallel Muon + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1253)",
       "status": "open",
-      "updatedAt": "2026-03-25T18:15:53Z",
-      "headSha": "f47617350557fa7c4b209aaceee4351f7dca2c02",
-      "generatedAt": "2026-03-25T18:33:09.678Z",
-      "summary": "Parallel Muon banking + batched Newton-Schulz and LeakyReLU(0.5)² MLP3× feed a gated GQA stack before legal score-first TTT fine-tuning with sliding-window scoring.",
+      "updatedAt": "2026-03-26T05:41:44Z",
+      "headSha": "db0b95882522fe61cf043f7733b478e904987000",
+      "generatedAt": "2026-03-26T06:06:45.632Z",
+      "summary": "11L transformer leverages Parallel Muon banking, LeakyReLU² MLP3x, and legal score-first TTT with sliding-window scoring plus SGD refinement before quantization.",
       "tags": [
         "architecture",
-        "optimizer",
-        "sliding-window-eval",
-        "quantization"
+        "training-schedule",
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -6311,22 +6335,22 @@
       "prNumber": 430,
       "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
       "status": "open",
-      "updatedAt": "2026-03-26T04:30:22Z",
-      "headSha": "6efe80079ac82a854655b182df6a0c17d6ebcf35",
-      "generatedAt": "2026-03-26T04:36:58.884Z",
-      "summary": "Adds SwiGLU, value-residual+gated attention, XSA, EMA, and AdamW test-time training on thwu1 base to sharpen deep-layer signals before eval.",
+      "updatedAt": "2026-03-26T06:06:20Z",
+      "headSha": "6bd838c1d549ea5885c4ad7c101f197597863dc2",
+      "generatedAt": "2026-03-26T06:06:51.906Z",
+      "summary": "Adds SwiGLU, value residuals, gated attention, XSA, EMA, and AdamW test-time training to the thwu1 base to refine attention contributions.",
       "tags": [
-        "attention",
+        "val-only",
         "architecture",
         "training-schedule"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-430.json"
     },

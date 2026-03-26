@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-26T06:06:40.109Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 816,
+    "title": "Record submission: Poly5 Softcap + BigramHash(3072) + Wider GPTQ-lite…",
+    "state": "open",
+    "updatedAt": "2026-03-26T05:44:06Z",
+    "headSha": "7218f44101bfaa1278a2534321f4f5d691ca7ba6",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/816",
+    "authorLogin": "jimliu741523"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_Poly5Softcap_BigramHash3072_WiderGPTQ_TempScale/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Builds on LeakyReLU²+Legal TTT SOTA by replacing tanh with a Poly-5 softcap, widening BigramHash/GPTQ-lite, and tuning eval/regularization.",
+    "tags": [
+      "quantization",
+      "regularization",
+      "compression",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Poly-5 softcap for fused activation gradients",
+      "BigramHash 3072 + GPTQ-lite int6 with wider percentile search",
+      "Eval temperature scaling T=0.95 plus Z-loss regularization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

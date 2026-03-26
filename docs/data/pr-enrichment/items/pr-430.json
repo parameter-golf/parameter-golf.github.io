@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T04:36:58.884Z",
+  "generatedAt": "2026-03-26T06:06:51.906Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 430,
     "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
     "state": "open",
-    "updatedAt": "2026-03-26T04:30:22Z",
-    "headSha": "6efe80079ac82a854655b182df6a0c17d6ebcf35",
+    "updatedAt": "2026-03-26T06:06:20Z",
+    "headSha": "6bd838c1d549ea5885c4ad7c101f197597863dc2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/430",
     "authorLogin": "sahiee-dev"
   },
@@ -19,24 +19,24 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds SwiGLU, value-residual+gated attention, XSA, EMA, and AdamW test-time training on thwu1 base to sharpen deep-layer signals before eval.",
+    "summary": "Adds SwiGLU, value residuals, gated attention, XSA, EMA, and AdamW test-time training to the thwu1 base to refine attention contributions.",
     "tags": [
-      "attention",
+      "val-only",
       "architecture",
       "training-schedule"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Runs three AdamW epochs over validation tokens before evaluation to adapt the model weights and restore afterward.",
     "techniques": [
-      "SwiGLU with gated attention + value residual per block",
-      "Exclusive self-attention in final layers with EMA shadow weights",
-      "AdamW test-time training on validation tokens"
+      "Iso-param SwiGLU MLP with GQA-aware attention",
+      "Value residuals + gated attention with last-layer XSA",
+      "EMA shadow weights + AdamW TTT over validation data"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }
