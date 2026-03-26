@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T14:40:37.514Z",
+  "generatedAt": "2026-03-26T15:11:43.197Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 852,
     "title": "Hymba-11L: SOTA High-Density Takeover (1.1189 BPB)",
     "state": "open",
-    "updatedAt": "2026-03-26T14:20:12Z",
+    "updatedAt": "2026-03-26T14:58:43Z",
     "headSha": "b8b44bd26693031d7058a7b1021f35b947bb8536",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/852",
     "authorLogin": "Prush69"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Parallel Muon overlap powers a 3D-parameter-banked Selective Scan and Rotary hybrid with TurboQuant 4-bit QAT to unlock extended 3-epoch test-time training.",
+    "summary": "11-layer Selective Scan + Rotary Attention hybrid pairs a sharded Muon optimizer/3D parameter bank with 3-epoch TTT and TurboQuant QAT for high-density compression.",
     "tags": [
-      "architecture",
       "optimizer",
-      "quantization",
-      "training-schedule"
+      "architecture",
+      "training-schedule",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Parallel Muon async reduction overlap",
-      "3D parameter banking for bulk sharding",
-      "TurboQuant 4-bit QAT with extended TTT"
+      "Sharded Muon optimizer overlapping comms with backward pass",
+      "3D parameter bank for bulk sharding across 8×H100",
+      "3-epoch test-time training with TurboQuant QAT"
     ]
   },
   "compatibility": {

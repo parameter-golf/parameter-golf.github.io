@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2026-03-26T15:11:25.966Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 856,
+    "title": "Progressive Depth + Hedge Mixer — val_bpb 1.1454",
+    "state": "open",
+    "updatedAt": "2026-03-26T14:51:46Z",
+    "headSha": "2f25412ebb4fc7163d6d13b1b8aa04eb8a1ee163",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/856",
+    "authorLogin": "iverbovoy"
+  },
+  "inputs": {
+    "hash": "579bb5ffe0be0c1712f71e5520c59dac8d390132277b2852c9d7b29d19e6e091",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer/README.md",
+      "records/track_10min_16mb/2026-03-26_ProgressiveDepth/README.md",
+      "records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU/README.md",
+      "records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip/README.md"
+    ],
+    "submissionCount": 4
+  },
+  "output": {
+    "summary": "Progressive depth recurrence with XSA/LeakyReLU² shared blocks plus Hedge Mixer blending neural and n-gram experts at eval.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "shared-weight progressive depth recurrence",
+      "XSA + LeakyReLU² + Cross-Repeat Skip",
+      "Hedge Mixer eval ensemble of neural and n-gram experts"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

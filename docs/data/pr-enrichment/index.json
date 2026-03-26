@@ -1,20 +1,67 @@
 {
-  "generatedAt": "2026-03-26T14:43:00.583Z",
+  "generatedAt": "2026-03-26T15:12:23.180Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 855,
-      "title": "Non-Record: First Viable 3-Loop Recurrence — Birkhoff + Output-LN + Timestep Scaling (val_bpb=1.2659, 14 eff layers from 6 unique blocks)",
+      "prNumber": 857,
+      "title": "Record: 15L Depth Recurrence + LeakyReLU² + Cosine TTT (3-seed mean val_bpb=1.1093)",
       "status": "open",
-      "updatedAt": "2026-03-26T14:36:10Z",
-      "headSha": "a3a861317bac7e9b6c3a7226c80cac8495a32774",
-      "generatedAt": "2026-03-26T14:40:17.462Z",
-      "summary": "Shared 3-loop recurrence stabilizes via Output-LN, Birkhoff-constrained mixing, and capped timestep scaling to tame quantization blowup across iterations.",
+      "updatedAt": "2026-03-26T15:05:13Z",
+      "headSha": "77ac2c6a4019b9b114fe3cad9dcf4d7cc01d526d",
+      "generatedAt": "2026-03-26T15:11:15.197Z",
+      "summary": "BI-guided depth recurrence ties layers 9-13 to one block while using LeakyReLU² and cosine TTT to stretch 15-layer depth under the 16MB budget.",
       "tags": [
         "architecture",
         "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-857.json"
+    },
+    {
+      "prNumber": 856,
+      "title": "Progressive Depth + Hedge Mixer — val_bpb 1.1454",
+      "status": "open",
+      "updatedAt": "2026-03-26T14:51:46Z",
+      "headSha": "2f25412ebb4fc7163d6d13b1b8aa04eb8a1ee163",
+      "generatedAt": "2026-03-26T15:11:25.966Z",
+      "summary": "Progressive depth recurrence with XSA/LeakyReLU² shared blocks plus Hedge Mixer blending neural and n-gram experts at eval.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-856.json"
+    },
+    {
+      "prNumber": 855,
+      "title": "Non-Record: First Viable 3-Loop Recurrence — Birkhoff + Output-LN + Timestep Scaling (val_bpb=1.2659, 14 eff layers from 6 unique blocks)",
+      "status": "open",
+      "updatedAt": "2026-03-26T14:41:29Z",
+      "headSha": "a3a861317bac7e9b6c3a7226c80cac8495a32774",
+      "generatedAt": "2026-03-26T15:11:35.291Z",
+      "summary": "Three-loop recurrence with prelude/coda uses Output-LN, Birkhoff mixing, and capped timestep scales to tame quantization blowup across shared blocks.",
+      "tags": [
+        "architecture",
         "regularization",
+        "quantization",
         "non-record"
       ],
       "flags": {
@@ -76,15 +123,15 @@
       "prNumber": 852,
       "title": "Hymba-11L: SOTA High-Density Takeover (1.1189 BPB)",
       "status": "open",
-      "updatedAt": "2026-03-26T14:20:12Z",
+      "updatedAt": "2026-03-26T14:58:43Z",
       "headSha": "b8b44bd26693031d7058a7b1021f35b947bb8536",
-      "generatedAt": "2026-03-26T14:40:37.514Z",
-      "summary": "Parallel Muon overlap powers a 3D-parameter-banked Selective Scan and Rotary hybrid with TurboQuant 4-bit QAT to unlock extended 3-epoch test-time training.",
+      "generatedAt": "2026-03-26T15:11:43.197Z",
+      "summary": "11-layer Selective Scan + Rotary Attention hybrid pairs a sharded Muon optimizer/3D parameter bank with 3-epoch TTT and TurboQuant QAT for high-density compression.",
       "tags": [
-        "architecture",
         "optimizer",
-        "quantization",
-        "training-schedule"
+        "architecture",
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -301,30 +348,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-836.json"
-    },
-    {
-      "prNumber": 835,
-      "title": "Progressive Depth Training — val_bpb 1.1980",
-      "status": "open",
-      "updatedAt": "2026-03-26T08:26:21Z",
-      "headSha": "c0ce492f9efc3f2960efd5b5564cd6b1433f5216",
-      "generatedAt": "2026-03-26T08:37:53.039Z",
-      "summary": "Shared-weight recurrence uses a 2→3→4 repeat schedule with Cross-Repeat Skip plus XSA/LeakyReLU² to grow effective depth during training.",
-      "tags": [
-        "architecture",
-        "training-schedule",
-        "evaluation",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-835.json"
     },
     {
       "prNumber": 832,
@@ -10964,24 +10987,25 @@
     },
     {
       "prNumber": 181,
-      "title": "Aweb Optimized Baseline — 1.2194 BPB",
+      "title": "Aweb Ultimate — 1.1210 BPB | 11L LeakyReLU² XSA4 PartialRoPE EMA ParallelMuon",
       "status": "open",
-      "updatedAt": "2026-03-26T14:32:07Z",
-      "headSha": "5dd1ff82377b7b55f9e9aacf2d2aa12438b951fc",
-      "generatedAt": "2026-03-26T14:43:00.558Z",
-      "summary": "Baseline GPT setup tuned via Muon optimizer tweaks, 3× MLP, 2048-length training, and train-on-val env overrides for smoother int8 convergence.",
+      "updatedAt": "2026-03-26T15:09:57Z",
+      "headSha": "f1ab6c85bee065db27650e82467a9dd4abd758e2",
+      "generatedAt": "2026-03-26T15:12:23.154Z",
+      "summary": "11-layer LeakyReLU² model with last-layer XSA, Partial RoPE, EMA, and Parallel Muon training, then GPTQ-lite int6/int8 quantization plus LZMA compression.",
       "tags": [
+        "architecture",
+        "attention",
         "optimizer",
-        "training-schedule",
-        "val-only"
+        "quantization"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-181.json"
     },

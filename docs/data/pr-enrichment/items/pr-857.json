@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T15:11:15.197Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 857,
+    "title": "Record: 15L Depth Recurrence + LeakyReLU² + Cosine TTT (3-seed mean val_bpb=1.1093)",
+    "state": "open",
+    "updatedAt": "2026-03-26T15:05:13Z",
+    "headSha": "77ac2c6a4019b9b114fe3cad9dcf4d7cc01d526d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/857",
+    "authorLogin": "aruniyer"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_15L_DepthRecurrence_LeakyReLU2_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "BI-guided depth recurrence ties layers 9-13 to one block while using LeakyReLU² and cosine TTT to stretch 15-layer depth under the 16MB budget.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "BI-guided layer tying for depth recurrence",
+      "LeakyReLU(0.5)² MLP nonlinearity",
+      "20-epoch cosine test-time training"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

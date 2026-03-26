@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T14:40:17.462Z",
+  "generatedAt": "2026-03-26T15:11:35.291Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 855,
     "title": "Non-Record: First Viable 3-Loop Recurrence — Birkhoff + Output-LN + Timestep Scaling (val_bpb=1.2659, 14 eff layers from 6 unique blocks)",
     "state": "open",
-    "updatedAt": "2026-03-26T14:36:10Z",
+    "updatedAt": "2026-03-26T14:41:29Z",
     "headSha": "a3a861317bac7e9b6c3a7226c80cac8495a32774",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/855",
     "authorLogin": "aazizyan"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Shared 3-loop recurrence stabilizes via Output-LN, Birkhoff-constrained mixing, and capped timestep scaling to tame quantization blowup across iterations.",
+    "summary": "Three-loop recurrence with prelude/coda uses Output-LN, Birkhoff mixing, and capped timestep scales to tame quantization blowup across shared blocks.",
     "tags": [
       "architecture",
-      "quantization",
       "regularization",
+      "quantization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Output-LN on MLP outputs for loop-specific magnitudes",
-      "Birkhoff-constrained residual mixing with spectral norm ≤1",
-      "Float16-capped timestep scalars to shrink the Q-gap"
+      "Output-LN on MLP outputs preserves per-loop magnitude gradients",
+      "Birkhoff-constrained residual mix keeps shared loops spectral norm ≤1",
+      "Float16-capped timestep scales bypass int8 quantization collapse"
     ]
   },
   "compatibility": {

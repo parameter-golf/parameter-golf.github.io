@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-03-26T14:43:00.558Z",
+  "generatedAt": "2026-03-26T15:12:23.154Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 181,
-    "title": "Aweb Optimized Baseline — 1.2194 BPB",
+    "title": "Aweb Ultimate — 1.1210 BPB | 11L LeakyReLU² XSA4 PartialRoPE EMA ParallelMuon",
     "state": "open",
-    "updatedAt": "2026-03-26T14:32:07Z",
-    "headSha": "5dd1ff82377b7b55f9e9aacf2d2aa12438b951fc",
+    "updatedAt": "2026-03-26T15:09:57Z",
+    "headSha": "f1ab6c85bee065db27650e82467a9dd4abd758e2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/181",
     "authorLogin": "manfromnowhere143"
   },
   "inputs": {
     "hash": "5628975727839fe80347056ca1c4254c8770063b4860ce2e5be72d80a98f9087",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-20_AwebOptimizedBaseline/README.md",
       "records/track_10min_16mb/2026-03-23_AwebUltimate/README.md",
+      "records/track_10min_16mb/2026-03-20_AwebOptimizedBaseline/README.md",
       "records/track_10min_16mb/2026-03-21_AwebSOTA/README.md",
       "records/track_10min_16mb/2026-03-18_AwebBitNet/README.md",
       "records/track_10min_16mb/2026-03-18_AwebDepthRecurrence/README.md"
@@ -23,24 +23,25 @@
     "submissionCount": 5
   },
   "output": {
-    "summary": "Baseline GPT setup tuned via Muon optimizer tweaks, 3× MLP, 2048-length training, and train-on-val env overrides for smoother int8 convergence.",
+    "summary": "11-layer LeakyReLU² model with last-layer XSA, Partial RoPE, EMA, and Parallel Muon training, then GPTQ-lite int6/int8 quantization plus LZMA compression.",
     "tags": [
+      "architecture",
+      "attention",
       "optimizer",
-      "training-schedule",
-      "val-only"
+      "quantization"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "TRAIN_ON_VAL=1 env var explicitly trains on the validation shard as documented by the author.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Muon optimizer tuning: 0.99 momentum, longer warmdown/warmup, halved matrix/scalar LR, grad clip",
-      "Larger MLP (3×) with 2048-token sequences for more capacity/context",
-      "Train-on-val enabled purely through env vars without code edits"
+      "LeakyReLU² + last-layer XSA with Partial RoPE encoding",
+      "Parallel Muon optimizer with EMA smoothing",
+      "GPTQ-lite mixed int6/int8 quantization plus LZMA compression"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }
