@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T20:12:51.904Z",
+  "generatedAt": "2026-03-26T20:42:45.271Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -138,7 +138,7 @@
         "authorLogin": "simon-marcus",
         "authorName": null,
         "createdAt": "2026-03-26T17:05:21Z",
-        "updatedAt": "2026-03-26T17:07:34Z",
+        "updatedAt": "2026-03-26T20:23:34Z",
         "headSha": "21b493b8d57fc5eb87e8fa7f91cfc05d57dae449",
         "headRepo": "simon-marcus/parameter-golf-fork"
       },
@@ -5778,6 +5778,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/c0d2a504839c847e3f9ea7380599bcb529551520/records/track_10min_16mb/2026-03-23_LoquiAuris_10L_LoRA_TTT_1.0865/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/c0d2a504839c847e3f9ea7380599bcb529551520/records/track_10min_16mb/2026-03-23_LoquiAuris_10L_LoRA_TTT_1.0865",
         "pr": "https://github.com/openai/parameter-golf/pull/548",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-26_ProgressiveDepth_4hour",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-26_ProgressiveDepth_4hour",
+        "folderPath": "records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour",
+        "submissionPath": "records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/train_gpt.py"
+      },
+      "submission": {
+        "author": "Ivan Verbovoy",
+        "githubId": "iverbovoy",
+        "name": "Progressive Depth 4-Hour: Depth Recurrence Scaling Study",
+        "blurb": "4-hour unlimited compute run exploring how depth recurrence scales. 3 shared blocks, progressive depth 2→3→4→5 repeats (15 effective layers), 132K steps, 38 SWA checkpoints, Hedge Mixer eval. First data point on depth recurrence scaling with compute.",
+        "date": "2026-03-26T19:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.0889239,
+        "valLoss": 1.83860318,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": 132937,
+        "wallclockSeconds": 14400.16,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15888183,
+        "bytesCode": 65854,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 895,
+        "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
+        "authorLogin": "iverbovoy",
+        "authorName": null,
+        "createdAt": "2026-03-26T20:25:58Z",
+        "updatedAt": "2026-03-26T20:25:59Z",
+        "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
+        "headRepo": "iverbovoy/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour",
+        "pr": "https://github.com/openai/parameter-golf/pull/895",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -14850,17 +14927,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 856,
-        "title": "Progressive Depth + Hedge Mixer — val_bpb 1.1454",
+        "number": 895,
+        "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/856",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
         "authorLogin": "iverbovoy",
         "authorName": null,
-        "createdAt": "2026-03-26T14:51:46Z",
-        "updatedAt": "2026-03-26T14:51:46Z",
-        "headSha": "2f25412ebb4fc7163d6d13b1b8aa04eb8a1ee163",
+        "createdAt": "2026-03-26T20:25:58Z",
+        "updatedAt": "2026-03-26T20:25:59Z",
+        "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
         "headRepo": "iverbovoy/parameter-golf"
       },
       "links": {
@@ -14869,7 +14946,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/2f25412ebb4fc7163d6d13b1b8aa04eb8a1ee163/records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/2f25412ebb4fc7163d6d13b1b8aa04eb8a1ee163/records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/2f25412ebb4fc7163d6d13b1b8aa04eb8a1ee163/records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer",
-        "pr": "https://github.com/openai/parameter-golf/pull/856",
+        "pr": "https://github.com/openai/parameter-golf/pull/895",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -24706,17 +24783,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 856,
-        "title": "Progressive Depth + Hedge Mixer — val_bpb 1.1454",
+        "number": 895,
+        "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/856",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
         "authorLogin": "iverbovoy",
         "authorName": null,
-        "createdAt": "2026-03-26T14:51:46Z",
-        "updatedAt": "2026-03-26T14:51:46Z",
-        "headSha": "2f25412ebb4fc7163d6d13b1b8aa04eb8a1ee163",
+        "createdAt": "2026-03-26T20:25:58Z",
+        "updatedAt": "2026-03-26T20:25:59Z",
+        "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
         "headRepo": "iverbovoy/parameter-golf"
       },
       "links": {
@@ -24725,7 +24802,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/c0ce492f9efc3f2960efd5b5564cd6b1433f5216/records/track_10min_16mb/2026-03-26_ProgressiveDepth/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/c0ce492f9efc3f2960efd5b5564cd6b1433f5216/records/track_10min_16mb/2026-03-26_ProgressiveDepth/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/c0ce492f9efc3f2960efd5b5564cd6b1433f5216/records/track_10min_16mb/2026-03-26_ProgressiveDepth",
-        "pr": "https://github.com/openai/parameter-golf/pull/856",
+        "pr": "https://github.com/openai/parameter-golf/pull/895",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -25707,17 +25784,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 856,
-        "title": "Progressive Depth + Hedge Mixer — val_bpb 1.1454",
+        "number": 895,
+        "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/856",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
         "authorLogin": "iverbovoy",
         "authorName": null,
-        "createdAt": "2026-03-26T14:51:46Z",
-        "updatedAt": "2026-03-26T14:51:46Z",
-        "headSha": "2f25412ebb4fc7163d6d13b1b8aa04eb8a1ee163",
+        "createdAt": "2026-03-26T20:25:58Z",
+        "updatedAt": "2026-03-26T20:25:59Z",
+        "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
         "headRepo": "iverbovoy/parameter-golf"
       },
       "links": {
@@ -25726,7 +25803,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/697f820632b8682a927a1c37957498b0ae64dd4b/records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/697f820632b8682a927a1c37957498b0ae64dd4b/records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/697f820632b8682a927a1c37957498b0ae64dd4b/records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU",
-        "pr": "https://github.com/openai/parameter-golf/pull/856",
+        "pr": "https://github.com/openai/parameter-golf/pull/895",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -27093,17 +27170,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 856,
-        "title": "Progressive Depth + Hedge Mixer — val_bpb 1.1454",
+        "number": 895,
+        "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/856",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
         "authorLogin": "iverbovoy",
         "authorName": null,
-        "createdAt": "2026-03-26T14:51:46Z",
-        "updatedAt": "2026-03-26T14:51:46Z",
-        "headSha": "2f25412ebb4fc7163d6d13b1b8aa04eb8a1ee163",
+        "createdAt": "2026-03-26T20:25:58Z",
+        "updatedAt": "2026-03-26T20:25:59Z",
+        "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
         "headRepo": "iverbovoy/parameter-golf"
       },
       "links": {
@@ -27112,7 +27189,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/fa293060e34a5cc455e6392fbcb337c4f1a5b42f/records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/fa293060e34a5cc455e6392fbcb337c4f1a5b42f/records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/fa293060e34a5cc455e6392fbcb337c4f1a5b42f/records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip",
-        "pr": "https://github.com/openai/parameter-golf/pull/856",
+        "pr": "https://github.com/openai/parameter-golf/pull/895",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -39966,7 +40043,7 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-26T19:03:36Z",
-        "updatedAt": "2026-03-26T20:11:11Z",
+        "updatedAt": "2026-03-26T20:38:45Z",
         "headSha": "4555280179944f63c90a7c73572a6a26d8651ee0",
         "headRepo": "abaybektursun/parameter-golf"
       },
@@ -40054,6 +40131,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/a4bad34af30efdd4076971552fc6c75c2ecc338d/records/track_non_record_16mb/2026-03-26_Technique_Taxonomy_Research/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/a4bad34af30efdd4076971552fc6c75c2ecc338d/records/track_non_record_16mb/2026-03-26_Technique_Taxonomy_Research",
         "pr": "https://github.com/openai/parameter-golf/pull/892",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-26_JEPA_SelfDistillation_20L_512d",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-26_JEPA_SelfDistillation_20L_512d",
+        "folderPath": "records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d",
+        "submissionPath": "records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/train_gpt.py"
+      },
+      "submission": {
+        "author": "Manav Pandey",
+        "githubId": "MVPandey",
+        "name": "JEPA Self-Distillation: Negative Results",
+        "blurb": "Controlled A/B showing JEPA auxiliary self-distillation with EMA target encoder doesn't help autoregressive LM. Vanilla CE is 40% faster and converges to same or better BPB. Pushing in the spirit of good science.",
+        "date": "2026-03-26"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": 1800,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 896,
+        "title": "[Non-Record] JEPA Self-Distillation with EMA Target Encoder for Autoregressive LM (val_bpb: 1.19) | Current Noisy/Negative Result",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/896",
+        "authorLogin": "MVPandey",
+        "authorName": null,
+        "createdAt": "2026-03-26T20:40:37Z",
+        "updatedAt": "2026-03-26T20:41:17Z",
+        "headSha": "78006f176c7cf5f36d8ebd665a761b1457d4a90d",
+        "headRepo": "MVPandey/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/78006f176c7cf5f36d8ebd665a761b1457d4a90d/records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/78006f176c7cf5f36d8ebd665a761b1457d4a90d/records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/78006f176c7cf5f36d8ebd665a761b1457d4a90d/records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/78006f176c7cf5f36d8ebd665a761b1457d4a90d/records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/78006f176c7cf5f36d8ebd665a761b1457d4a90d/records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d",
+        "pr": "https://github.com/openai/parameter-golf/pull/896",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T17:41:35.020Z",
+  "generatedAt": "2026-03-26T20:43:18.464Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 870,
     "title": "Record: BROADSIDE — Full-Rescore N-gram Cache (val_bpb 0.0935)",
     "state": "open",
-    "updatedAt": "2026-03-26T17:07:34Z",
+    "updatedAt": "2026-03-26T20:23:34Z",
     "headSha": "21b493b8d57fc5eb87e8fa7f91cfc05d57dae449",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/870",
     "authorLogin": "simon-marcus"
@@ -19,16 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Decoupled sliding-window eval to store logits, vectorized build of the full n-gram cache, then pure-CPU rescore of every token with entropy-adaptive blending.",
+    "summary": "Stores all sliding-window logits then vectorizes n-gram cache build/rescore so every token is blended with the global cache without rerunning the model.",
     "tags": [
-      "evaluation"
+      "evaluation",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "store per-token logits during sliding eval",
-      "build complete n-gram cache via np.bincount",
-      "rescore all tokens with entropy-adaptive n-gram blending"
+      "stored per-token probabilities and entropies during sliding-window eval",
+      "vectorized numpy cache build followed by full-token rescore",
+      "entropy-adaptive alphas with order multipliers"
     ]
   },
   "compatibility": {

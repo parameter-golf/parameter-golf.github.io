@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T20:13:02.803Z",
+  "generatedAt": "2026-03-26T20:43:13.919Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 886,
     "title": "RFC: A framework for deciding the n-gram question",
     "state": "open",
-    "updatedAt": "2026-03-26T20:11:11Z",
+    "updatedAt": "2026-03-26T20:38:45Z",
     "headSha": "4555280179944f63c90a7c73572a6a26d8651ee0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/886",
     "authorLogin": "abaybektursun"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Eval-time n-gram hash caching mixed with transformer logits (and global sync) reveals how huge hash tables inflate effective model size during evaluation.",
+    "summary": "Eval-time n-gram cache builds hash tables from scored tokens, blends the estimates with neural logits, and leans on collisions to clear the min_count threshold.",
     "tags": [
+      "non-record",
       "evaluation",
-      "compression",
-      "non-record"
+      "compression"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "This is a non-record evaluation study, not a val-only training regime.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "- causal n-gram hash cache mixed with neural logits",
-      "- global cache synchronization via all-reduce",
-      "- hash collisions acting as lossy sketches for high orders"
+      "strictly causal n-gram cache updates from scored tokens",
+      "alpha blending between cache probabilities and neural logits",
+      "dense hashing so collisions push counts over the min_count cliff"
     ]
   },
   "compatibility": {

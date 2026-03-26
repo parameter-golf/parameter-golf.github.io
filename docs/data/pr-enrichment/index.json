@@ -1,8 +1,56 @@
 {
-  "generatedAt": "2026-03-26T20:13:12.626Z",
+  "generatedAt": "2026-03-26T20:43:18.587Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 896,
+      "title": "[Non-Record] JEPA Self-Distillation with EMA Target Encoder for Autoregressive LM (val_bpb: 1.19) | Current Noisy/Negative Result",
+      "status": "open",
+      "updatedAt": "2026-03-26T20:41:17Z",
+      "headSha": "78006f176c7cf5f36d8ebd665a761b1457d4a90d",
+      "generatedAt": "2026-03-26T20:42:53.166Z",
+      "summary": "Adds JEPA-style EMA target encoder self-distillation aux loss to a causal transformer, pairing predictor MLP forecasts with VICReg-regularized latents alongside CE training.",
+      "tags": [
+        "architecture",
+        "regularization",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-896.json"
+    },
+    {
+      "prNumber": 895,
+      "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
+      "status": "open",
+      "updatedAt": "2026-03-26T20:25:59Z",
+      "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
+      "generatedAt": "2026-03-26T20:43:03.918Z",
+      "summary": "Progressively increases repeats on three shared transformer blocks, using SWA checkpoints and Hedge Mixer evaluation to explore recurrence scaling.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-895.json"
+    },
     {
       "prNumber": 893,
       "title": "Record: Two-Pass Order-12 N-gram Backoff + Parallel Muon — val_bpb 0.1310 (3-seed)",
@@ -144,14 +192,14 @@
       "prNumber": 886,
       "title": "RFC: A framework for deciding the n-gram question",
       "status": "open",
-      "updatedAt": "2026-03-26T20:11:11Z",
+      "updatedAt": "2026-03-26T20:38:45Z",
       "headSha": "4555280179944f63c90a7c73572a6a26d8651ee0",
-      "generatedAt": "2026-03-26T20:13:02.803Z",
-      "summary": "Eval-time n-gram hash caching mixed with transformer logits (and global sync) reveals how huge hash tables inflate effective model size during evaluation.",
+      "generatedAt": "2026-03-26T20:43:13.919Z",
+      "summary": "Eval-time n-gram cache builds hash tables from scored tokens, blends the estimates with neural logits, and leans on collisions to clear the min_count threshold.",
       "tags": [
+        "non-record",
         "evaluation",
-        "compression",
-        "non-record"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -421,12 +469,13 @@
       "prNumber": 870,
       "title": "Record: BROADSIDE — Full-Rescore N-gram Cache (val_bpb 0.0935)",
       "status": "open",
-      "updatedAt": "2026-03-26T17:07:34Z",
+      "updatedAt": "2026-03-26T20:23:34Z",
       "headSha": "21b493b8d57fc5eb87e8fa7f91cfc05d57dae449",
-      "generatedAt": "2026-03-26T17:41:35.020Z",
-      "summary": "Decoupled sliding-window eval to store logits, vectorized build of the full n-gram cache, then pure-CPU rescore of every token with entropy-adaptive blending.",
+      "generatedAt": "2026-03-26T20:43:18.464Z",
+      "summary": "Stores all sliding-window logits then vectorizes n-gram cache build/rescore so every token is blended with the global cache without rerunning the model.",
       "tags": [
-        "evaluation"
+        "evaluation",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -644,30 +693,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-857.json"
-    },
-    {
-      "prNumber": 856,
-      "title": "Progressive Depth + Hedge Mixer — val_bpb 1.1454",
-      "status": "open",
-      "updatedAt": "2026-03-26T14:51:46Z",
-      "headSha": "2f25412ebb4fc7163d6d13b1b8aa04eb8a1ee163",
-      "generatedAt": "2026-03-26T15:11:25.966Z",
-      "summary": "Progressive depth recurrence with XSA/LeakyReLU² shared blocks plus Hedge Mixer blending neural and n-gram experts at eval.",
-      "tags": [
-        "architecture",
-        "training-schedule",
-        "evaluation",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-856.json"
     },
     {
       "prNumber": 855,

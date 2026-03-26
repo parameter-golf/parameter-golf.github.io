@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-26T20:12:51.867Z",
-  "lastSeenUpdatedAt": "2026-03-26T20:12:26Z",
+  "generatedAt": "2026-03-26T20:42:45.230Z",
+  "lastSeenUpdatedAt": "2026-03-26T20:41:17Z",
   "prs": {
     "1": {
       "number": 1,
@@ -75052,7 +75052,7 @@
     },
     "870": {
       "number": 870,
-      "updatedAt": "2026-03-26T17:07:34Z",
+      "updatedAt": "2026-03-26T20:23:34Z",
       "pr": {
         "number": 870,
         "title": "Record: BROADSIDE — Full-Rescore N-gram Cache (val_bpb 0.0935)",
@@ -75063,7 +75063,7 @@
         "authorLogin": "simon-marcus",
         "authorName": null,
         "createdAt": "2026-03-26T17:05:21Z",
-        "updatedAt": "2026-03-26T17:07:34Z",
+        "updatedAt": "2026-03-26T20:23:34Z",
         "headSha": "21b493b8d57fc5eb87e8fa7f91cfc05d57dae449",
         "headRepo": "simon-marcus/parameter-golf-fork"
       },
@@ -75126,7 +75126,7 @@
             "authorLogin": "simon-marcus",
             "authorName": null,
             "createdAt": "2026-03-26T17:05:21Z",
-            "updatedAt": "2026-03-26T17:07:34Z",
+            "updatedAt": "2026-03-26T20:23:34Z",
             "headSha": "21b493b8d57fc5eb87e8fa7f91cfc05d57dae449",
             "headRepo": "simon-marcus/parameter-golf-fork"
           },
@@ -76505,7 +76505,7 @@
     },
     "886": {
       "number": 886,
-      "updatedAt": "2026-03-26T20:11:11Z",
+      "updatedAt": "2026-03-26T20:38:45Z",
       "pr": {
         "number": 886,
         "title": "RFC: A framework for deciding the n-gram question",
@@ -76516,7 +76516,7 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-26T19:03:36Z",
-        "updatedAt": "2026-03-26T20:11:11Z",
+        "updatedAt": "2026-03-26T20:38:45Z",
         "headSha": "4555280179944f63c90a7c73572a6a26d8651ee0",
         "headRepo": "abaybektursun/parameter-golf"
       },
@@ -76579,7 +76579,7 @@
             "authorLogin": "abaybektursun",
             "authorName": null,
             "createdAt": "2026-03-26T19:03:36Z",
-            "updatedAt": "2026-03-26T20:11:11Z",
+            "updatedAt": "2026-03-26T20:38:45Z",
             "headSha": "4555280179944f63c90a7c73572a6a26d8651ee0",
             "headRepo": "abaybektursun/parameter-golf"
           },
@@ -77304,7 +77304,7 @@
     },
     "894": {
       "number": 894,
-      "updatedAt": "2026-03-26T20:12:26Z",
+      "updatedAt": "2026-03-26T20:12:53Z",
       "pr": {
         "number": 894,
         "title": "Non-record: Semantic Tube Regularization — Geometry Improves, BPB Doesn't (Compute–Regularization Tradeoff)",
@@ -77315,11 +77315,477 @@
         "authorLogin": "albertorkive",
         "authorName": null,
         "createdAt": "2026-03-26T19:46:10Z",
-        "updatedAt": "2026-03-26T20:12:26Z",
-        "headSha": "f1b22b815d7920d32def86a7329e6ae7fe994360",
+        "updatedAt": "2026-03-26T20:12:53Z",
+        "headSha": "b6b46921b1a93f27e2034c8c99a65e7330ea1dac",
         "headRepo": "albertorkive/parameter-golf"
       },
       "submissions": []
+    },
+    "895": {
+      "number": 895,
+      "updatedAt": "2026-03-26T20:25:59Z",
+      "pr": {
+        "number": 895,
+        "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
+        "authorLogin": "iverbovoy",
+        "authorName": null,
+        "createdAt": "2026-03-26T20:25:58Z",
+        "updatedAt": "2026-03-26T20:25:59Z",
+        "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
+        "headRepo": "iverbovoy/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-895-records-track_10min_16mb-2026-03-20_DepthRecurrence_CrossRepeatSkip-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-20_DepthRecurrence_CrossRepeatSkip",
+            "folderPath": "records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip",
+            "submissionPath": "records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip/train_gpt.py"
+          },
+          "submission": {
+            "author": "Ivan Verbovoy",
+            "githubId": "iverbovoy",
+            "name": "Depth Recurrence + Cross-Repeat Skip + Value Embeddings + Sliding Window",
+            "blurb": "3 unique blocks x 4 repeats (12 effective layers), dim=832, with Cross-Repeat Skip (stateful recurrence), 2 Value Embedding tables, LR x0.3, sliding window eval (stride=256). 4494 steps in 600s on 8xH100.",
+            "date": "2026-03-20T02:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.21958209,
+            "valLoss": 2.05921204,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": 4494,
+            "wallclockSeconds": 600.133,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 12829176,
+            "bytesCode": 58055,
+            "bytesModelInt8Zlib": 12771121
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 895,
+            "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
+            "authorLogin": "iverbovoy",
+            "authorName": null,
+            "createdAt": "2026-03-26T20:25:58Z",
+            "updatedAt": "2026-03-26T20:25:59Z",
+            "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
+            "headRepo": "iverbovoy/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip",
+            "pr": "https://github.com/openai/parameter-golf/pull/895"
+          }
+        },
+        {
+          "id": "pr-895-records-track_10min_16mb-2026-03-26_ProgressiveDepth-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-26_ProgressiveDepth",
+            "folderPath": "records/track_10min_16mb/2026-03-26_ProgressiveDepth",
+            "submissionPath": "records/track_10min_16mb/2026-03-26_ProgressiveDepth/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-26_ProgressiveDepth/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-26_ProgressiveDepth/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-26_ProgressiveDepth/train_gpt.py"
+          },
+          "submission": {
+            "author": "Ivan Verbovoy",
+            "githubId": "iverbovoy",
+            "name": "Progressive Depth + Depth Recurrence + XSA + LeakyReLU²",
+            "blurb": "3 unique blocks with progressive depth scheduling (2→3→4 repeats), XSA on last 4 layers, LeakyReLU(0.5)² MLP, SWA over 18 checkpoints, GPTQ-lite int8+zstd22 compression. 5861 steps in 600s on 8xH100.",
+            "date": "2026-03-26T07:40:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.19800347,
+            "valLoss": 2.02277954,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": 5861,
+            "wallclockSeconds": 600.14,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15875591,
+            "bytesCode": 60220,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 895,
+            "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
+            "authorLogin": "iverbovoy",
+            "authorName": null,
+            "createdAt": "2026-03-26T20:25:58Z",
+            "updatedAt": "2026-03-26T20:25:59Z",
+            "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
+            "headRepo": "iverbovoy/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-26_ProgressiveDepth/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-26_ProgressiveDepth/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-26_ProgressiveDepth/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-26_ProgressiveDepth/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-26_ProgressiveDepth",
+            "pr": "https://github.com/openai/parameter-golf/pull/895"
+          }
+        },
+        {
+          "id": "pr-895-records-track_10min_16mb-2026-03-26_ProgressiveDepth_HedgeMixer-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-26_ProgressiveDepth_HedgeMixer",
+            "folderPath": "records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer",
+            "submissionPath": "records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer/train_gpt.py"
+          },
+          "submission": {
+            "author": "Ivan Verbovoy",
+            "githubId": "iverbovoy",
+            "name": "Progressive Depth + Hedge Mixer (5-expert online ensemble)",
+            "blurb": "3 unique blocks with progressive depth scheduling (2→3→4 repeats), XSA, LeakyReLU², Cross-Repeat Skip, SWA, int8+zstd22. Eval: 5-expert Hedge Mixer (neural + unigram + bigram + trigram + entropy) with online multiplicative weight updates. 5673 steps in 600s train, 579s eval on 8xH100.",
+            "date": "2026-03-26T15:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.14544202,
+            "valLoss": 1.93403169,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": 5673,
+            "wallclockSeconds": 600.218,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15884272,
+            "bytesCode": 65854,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 895,
+            "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
+            "authorLogin": "iverbovoy",
+            "authorName": null,
+            "createdAt": "2026-03-26T20:25:58Z",
+            "updatedAt": "2026-03-26T20:25:59Z",
+            "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
+            "headRepo": "iverbovoy/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer",
+            "pr": "https://github.com/openai/parameter-golf/pull/895"
+          }
+        },
+        {
+          "id": "pr-895-records-track_non_record_16mb-2026-03-26_DepthRecurrence_XSA_LeakyReLU-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-26_DepthRecurrence_XSA_LeakyReLU",
+            "folderPath": "records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU",
+            "submissionPath": "records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU/train_gpt.py"
+          },
+          "submission": {
+            "author": "Ivan Verbovoy",
+            "githubId": "iverbovoy",
+            "name": "Depth Recurrence + XSA + LeakyReLU² + GPTQ-lite + zstd-22",
+            "blurb": "3 unique blocks x 4 repeats (12 effective layers), dim=832, with Cross-Repeat Skip, XSA on last 4 layers, LeakyReLU(0.5)², GPTQ-lite quantization, SWA, Muon WD=0.04, zstd-22 compression. 4300 steps in 600s on 8xH100.",
+            "date": "2026-03-26T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.20649213,
+            "valLoss": 2.03711228,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": 4300,
+            "wallclockSeconds": 600.151,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15873439,
+            "bytesCode": 63075,
+            "bytesModelInt8Zlib": 15810364
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 895,
+            "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
+            "authorLogin": "iverbovoy",
+            "authorName": null,
+            "createdAt": "2026-03-26T20:25:58Z",
+            "updatedAt": "2026-03-26T20:25:59Z",
+            "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
+            "headRepo": "iverbovoy/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU",
+            "pr": "https://github.com/openai/parameter-golf/pull/895"
+          }
+        },
+        {
+          "id": "pr-895-records-track_non_record_16mb-2026-03-26_ProgressiveDepth_4hour-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-26_ProgressiveDepth_4hour",
+            "folderPath": "records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour",
+            "submissionPath": "records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/train_gpt.py"
+          },
+          "submission": {
+            "author": "Ivan Verbovoy",
+            "githubId": "iverbovoy",
+            "name": "Progressive Depth 4-Hour: Depth Recurrence Scaling Study",
+            "blurb": "4-hour unlimited compute run exploring how depth recurrence scales. 3 shared blocks, progressive depth 2→3→4→5 repeats (15 effective layers), 132K steps, 38 SWA checkpoints, Hedge Mixer eval. First data point on depth recurrence scaling with compute.",
+            "date": "2026-03-26T19:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.0889239,
+            "valLoss": 1.83860318,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": 132937,
+            "wallclockSeconds": 14400.16,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15888183,
+            "bytesCode": 65854,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 895,
+            "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/895",
+            "authorLogin": "iverbovoy",
+            "authorName": null,
+            "createdAt": "2026-03-26T20:25:58Z",
+            "updatedAt": "2026-03-26T20:25:59Z",
+            "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
+            "headRepo": "iverbovoy/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764/records/track_non_record_16mb/2026-03-26_ProgressiveDepth_4hour",
+            "pr": "https://github.com/openai/parameter-golf/pull/895"
+          }
+        }
+      ]
+    },
+    "896": {
+      "number": 896,
+      "updatedAt": "2026-03-26T20:41:17Z",
+      "pr": {
+        "number": 896,
+        "title": "[Non-Record] JEPA Self-Distillation with EMA Target Encoder for Autoregressive LM (val_bpb: 1.19) | Current Noisy/Negative Result",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/896",
+        "authorLogin": "MVPandey",
+        "authorName": null,
+        "createdAt": "2026-03-26T20:40:37Z",
+        "updatedAt": "2026-03-26T20:41:17Z",
+        "headSha": "78006f176c7cf5f36d8ebd665a761b1457d4a90d",
+        "headRepo": "MVPandey/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-896-records-track_non_record_16mb-2026-03-26_JEPA_SelfDistillation_20L_512d-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-26_JEPA_SelfDistillation_20L_512d",
+            "folderPath": "records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d",
+            "submissionPath": "records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/train_gpt.py"
+          },
+          "submission": {
+            "author": "Manav Pandey",
+            "githubId": "MVPandey",
+            "name": "JEPA Self-Distillation: Negative Results",
+            "blurb": "Controlled A/B showing JEPA auxiliary self-distillation with EMA target encoder doesn't help autoregressive LM. Vanilla CE is 40% faster and converges to same or better BPB. Pushing in the spirit of good science.",
+            "date": "2026-03-26"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": 1800,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 896,
+            "title": "[Non-Record] JEPA Self-Distillation with EMA Target Encoder for Autoregressive LM (val_bpb: 1.19) | Current Noisy/Negative Result",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/896",
+            "authorLogin": "MVPandey",
+            "authorName": null,
+            "createdAt": "2026-03-26T20:40:37Z",
+            "updatedAt": "2026-03-26T20:41:17Z",
+            "headSha": "78006f176c7cf5f36d8ebd665a761b1457d4a90d",
+            "headRepo": "MVPandey/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/78006f176c7cf5f36d8ebd665a761b1457d4a90d/records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/78006f176c7cf5f36d8ebd665a761b1457d4a90d/records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/78006f176c7cf5f36d8ebd665a761b1457d4a90d/records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/78006f176c7cf5f36d8ebd665a761b1457d4a90d/records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/78006f176c7cf5f36d8ebd665a761b1457d4a90d/records/track_non_record_16mb/2026-03-26_JEPA_SelfDistillation_20L_512d",
+            "pr": "https://github.com/openai/parameter-golf/pull/896"
+          }
+        }
+      ]
     }
   }
 }
