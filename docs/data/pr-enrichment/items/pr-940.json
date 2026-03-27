@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-27T08:45:04.776Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 940,
+    "title": "Record: Score-First TTT + Multi-Order N-gram Backoff (3-seed mean val_bpb=0.9581)",
+    "state": "open",
+    "updatedAt": "2026-03-27T08:23:12Z",
+    "headSha": "682797376f06e5c2297f4ffcc6fe45aaeba5c108",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/940",
+    "authorLogin": "antaloaalonso"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_ScoreFirst_TTT_Ngram_Backoff/README.md",
+      "records/track_10min_16mb/2026-03-25_XSA_all_LeakyReLU_VR_GA/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Score-first TTT with entropy-adaptive multi-order n-gram backoff complements the gated GQA/VR/LeakyReLU² architecture so each validation token is scored before it is trained on.",
+    "tags": [
+      "architecture",
+      "attention",
+      "evaluation",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Not a val-only training regime; standard training complemented by TTT evaluation.",
+    "techniques": [
+      "Score-first TTT scoring before training",
+      "Entropy-adaptive multi-order backward n-gram cache",
+      "Gated GQA with Value Residual and LeakyReLU²"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

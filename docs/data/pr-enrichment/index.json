@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-27T07:44:59.598Z",
+  "generatedAt": "2026-03-27T08:45:04.926Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 941,
+      "title": "submission: LeakyReLU² + EMA + BigramHash(20480) + MLP3.5x",
+      "status": "open",
+      "updatedAt": "2026-03-27T08:39:46Z",
+      "headSha": "83e01a91ab06df5655950c5c51e5015c4081e7a4",
+      "generatedAt": "2026-03-27T08:44:55.680Z",
+      "summary": "11-layer 512d net pairs LeakyReLU², EMA/late QAT, Partial RoPE+LN scale with BigramHash(20K) and MLP3.5x before mixed int5/int6 quantization.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-941.json"
+    },
+    {
+      "prNumber": 940,
+      "title": "Record: Score-First TTT + Multi-Order N-gram Backoff (3-seed mean val_bpb=0.9581)",
+      "status": "open",
+      "updatedAt": "2026-03-27T08:23:12Z",
+      "headSha": "682797376f06e5c2297f4ffcc6fe45aaeba5c108",
+      "generatedAt": "2026-03-27T08:45:04.776Z",
+      "summary": "Score-first TTT with entropy-adaptive multi-order n-gram backoff complements the gated GQA/VR/LeakyReLU² architecture so each validation token is scored before it is trained on.",
+      "tags": [
+        "architecture",
+        "attention",
+        "evaluation",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-940.json"
+    },
     {
       "prNumber": 939,
       "title": "Non-record: GatedDeltaNet, 32K Context, Document-Boundary State Reset",
@@ -2996,30 +3043,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-762.json"
-    },
-    {
-      "prNumber": 761,
-      "title": "Record: Score-First TTT + N-gram Backoff (3-seed mean val_bpb=0.9581)",
-      "status": "open",
-      "updatedAt": "2026-03-25T20:13:31Z",
-      "headSha": "682797376f06e5c2297f4ffcc6fe45aaeba5c108",
-      "generatedAt": "2026-03-25T20:34:13.796Z",
-      "summary": "Combines Score-First TTT on sequential val chunks with entropy-adaptive multi-order n-gram backoff atop an 11-layer gated-attention/U-Net skip architecture.",
-      "tags": [
-        "val-only",
-        "architecture",
-        "attention",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": false
-      },
-      "file": "items/pr-761.json"
     },
     {
       "prNumber": 760,

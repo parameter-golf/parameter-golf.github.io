@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T08:44:55.680Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 941,
+    "title": "submission: LeakyReLU² + EMA + BigramHash(20480) + MLP3.5x",
+    "state": "open",
+    "updatedAt": "2026-03-27T08:39:46Z",
+    "headSha": "83e01a91ab06df5655950c5c51e5015c4081e7a4",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/941",
+    "authorLogin": "aptsalt"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_LeakyReLU2_EMA_QAT_BigramHash20K_MLP35x/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer 512d net pairs LeakyReLU², EMA/late QAT, Partial RoPE+LN scale with BigramHash(20K) and MLP3.5x before mixed int5/int6 quantization.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU²+EMA+late QAT workflow",
+      "BigramHash(20480)+MLP3.5x scale-up",
+      "Mixed int5/int6 quantization + zstd-22"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
