@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T04:13:43.150Z",
+  "generatedAt": "2026-03-27T04:44:10.159Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 900,
     "title": "Record: Two-Level Dirichlet Posterior Mixing with Per-Order OBCL -- 0.1156 BPB",
     "state": "open",
-    "updatedAt": "2026-03-27T04:13:05Z",
+    "updatedAt": "2026-03-27T04:17:30Z",
     "headSha": "1190eebd8670aa31c74488836a1b80f7c062fb61",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/900",
     "authorLogin": "Robby955"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hierarchical Dirichlet-Multinomial smoothing mixes a neural EBLS base with per-order OBCL concentrations and phrase suffix caches.",
+    "summary": "Combines two-level Dirichlet-multinomial caching with OBCL-learned per-order concentrations for n-grams and phrase suffix matches atop a neural base LM.",
     "tags": [
       "architecture",
-      "regularization",
-      "evaluation"
+      "regularization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-order OBCL concentrations for 2–15 gram backoff",
-      "Phrase suffix cache with Dirichlet smoothing on 16/20-token probes",
-      "Neural EBLS LM as the base measure for higher-level counts"
+      "Dirichlet-multinomial two-level cache hierarchy",
+      "OBCL per-order concentration learning",
+      "Neural LM as hierarchical prior"
     ]
   },
   "compatibility": {

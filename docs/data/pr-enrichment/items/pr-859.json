@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T16:10:26.891Z",
+  "generatedAt": "2026-03-27T04:44:21.717Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 859,
-    "title": "Record: 0.1582 BPB — Learned Mixer Head + No TTT + Matrix LR 0.03",
+    "title": "Non Record: 0.1582 BPB — Learned Mixer Head + No TTT + Matrix LR 0.03",
     "state": "open",
-    "updatedAt": "2026-03-26T16:06:09Z",
+    "updatedAt": "2026-03-27T04:20:50Z",
     "headSha": "66fd46de9971434a742e65683b81400539697f0f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/859",
     "authorLogin": "bigbag"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Learned mixer gating head predicts token-specific weights over frozen n-gram experts with higher matrix LR and no TTT.",
+    "summary": "Higher MATRIX_LR plus a learned mixer head with a frozen n-gram oracle removes TTT while keeping neural gating for per-token expert mixing.",
     "tags": [
       "architecture",
-      "training-schedule",
-      "evaluation"
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Learned per-token mixer head combining neural and n-gram experts",
-      "Higher MATRIX_LR=0.03 with TTT disabled",
-      "Score-first backward-looking n-gram cache"
+      "Learned mixer head mixes neural model with frozen n-gram experts per token",
+      "Higher MATRIX_LR=0.03 trains the gate without TTT",
+      "Score-first backward-looking n-gram cache for eval mixing"
     ]
   },
   "compatibility": {

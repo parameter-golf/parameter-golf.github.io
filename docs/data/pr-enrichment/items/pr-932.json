@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T04:43:42.472Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 932,
+    "title": "Non-record: CoDA-GQA Differential Attention — First Differential Attention Submission (val_bpb=1.1580)",
+    "state": "open",
+    "updatedAt": "2026-03-27T04:33:36Z",
+    "headSha": "99a188bff6369b1cb74515f0b283b1ffd0cc2423",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/932",
+    "authorLogin": "anthony-maio"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-26_CoDA_GQA_DifferentialAttention/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Applies CoDA-GQA differential attention with orthogonal noise query rotation and gated subtraction to sharpen Transformer attention without an extra W_q projection.",
+    "tags": [
+      "attention",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "orthogonal noise query rotation",
+      "gated subtraction of noise attention",
+      "RMS-normed signal recombination"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

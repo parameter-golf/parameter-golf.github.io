@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T00:43:40.543Z",
+  "generatedAt": "2026-03-27T04:44:05.125Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 913,
     "title": "Record: Cache Is All You Need — val_bpb 0.0887, 622KB artifact (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-27T00:13:33Z",
+    "updatedAt": "2026-03-27T04:19:39Z",
     "headSha": "64c9d07a00e618ebd4f74ee9b2e2d6f2a7ef4f58",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/913",
     "authorLogin": "RoyiRa"
@@ -19,15 +19,14 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds compact eval-time n-gram and long-phrase caches with adaptive entropy-weighted blending on top of a tiny GPT baseline for stronger scoring.",
+    "summary": "Eval-time n-gram and long-phrase caches adaptively blend with base GPT logits via sliding-window scoring for compact inference.",
     "tags": [
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "N/A",
     "techniques": [
-      "Eval-time n-gram + phrase cache blending",
-      "Entropy-based cache weight adaptation",
+      "Eval-time n-gram & phrase cache blending",
       "Sliding-window scoring with online cache updates"
     ]
   },

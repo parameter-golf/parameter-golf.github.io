@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T01:44:28.004Z",
+  "generatedAt": "2026-03-27T04:44:28.203Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 181,
-    "title": "Aweb Ultimate — 1.1190 BPB | #1 | 11L LeakyReLU² XSA4 EMA TTT",
+    "title": "1.1190 BPB — 11L LeakyReLU² XSA4 PartialRoPE LNScale EMA ParallelMuon TTT",
     "state": "open",
-    "updatedAt": "2026-03-27T01:40:25Z",
-    "headSha": "575d983d4325198755525473ef53ab318a68e179",
+    "updatedAt": "2026-03-27T04:36:01Z",
+    "headSha": "ee202514f6b26687c3530d1abdfa79eea8be4312",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/181",
     "authorLogin": "manfromnowhere143"
   },
@@ -23,19 +23,19 @@
     "submissionCount": 5
   },
   "output": {
-    "summary": "11-layer LeakyReLU² model with XSA on final layers, Partial RoPE, U-Net skips, SmearGate/BigramHash, Muon optimizer, GPTQ-lite quant, and legal TTT sliding-window eval.",
+    "summary": "11-layer 512d GQA model blends LeakyReLU², Partial RoPE, XSA4, LN scale, Parallel Muon, GPTQ-lite int6/int8 quantization, and TTT-aware sliding-window eval.",
     "tags": [
       "architecture",
-      "attention",
+      "optimizer",
       "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Not val-only: trained normally with TTT applied only during evaluation.",
     "techniques": [
-      "LeakyReLU² + XSA4 + Partial RoPE + learned skip/U-Net pathways",
-      "Parallel Muon optimizer with EMA/SWA and late int6/int8 QAT",
-      "Sliding-window evaluation with legal score-first TTT and SmearGate/BigramHash input enrichment"
+      "LeakyReLU² + Partial RoPE + XSA4 with LN scale",
+      "Parallel Muon + EMA/SWA with GPTQ-lite int6/int8 quant",
+      "Sliding-window evaluation paired with Legal Score-First TTT"
     ]
   },
   "compatibility": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T17:41:24.936Z",
+  "generatedAt": "2026-03-27T04:44:16.933Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 873,
     "title": "E2E TTT: End-to-End Test-Time Training with Meta-Learning (1.0467 BPB)",
-    "state": "open",
-    "updatedAt": "2026-03-26T17:21:26Z",
+    "state": "closed",
+    "updatedAt": "2026-03-27T04:14:47Z",
     "headSha": "d2c823a23648916f5f6808f1ed50e2afa53900df",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/873",
     "authorLogin": "gowtham0992"
@@ -19,17 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Applies MAML-style meta-learning in the final 20% of training so the Transformer learns weights optimized for test-time adaptation.",
+    "summary": "Meta-learns an 11L Transformer by backpropagating through inner-loop MLP gradient steps so test-time adaptation is optimized during training.",
     "tags": [
-      "training-schedule",
-      "optimizer",
-      "architecture"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "inner GD on last-block MLPs with create_graph meta-gradients",
-      "phase 2 uncompiled fine-tune for score-first TTT readiness"
+      "MAML-style meta-training with create_graph inner-loop updates on MLP weights",
+      "Manual forward pass swapping inner weights to keep autodiff paths intact",
+      "Phased run: standard compile training then slower meta-learning fine-tune"
     ]
   },
   "compatibility": {

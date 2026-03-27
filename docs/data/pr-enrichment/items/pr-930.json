@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-27T04:43:50.618Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 930,
+    "title": "Non-record: Entropy-regularized QAT (WIP, pending compute)",
+    "state": "open",
+    "updatedAt": "2026-03-27T04:19:42Z",
+    "headSha": "58fce58e8c3539b9a21de62815815fa247e9c196",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/930",
+    "authorLogin": "lamb356"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_EntropyRegularized/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds entropy penalty on quantized weight symbols during late-stage QAT to improve compressibility-aware training.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "compression",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "int6 weight entropy penalty",
+      "late QAT gating via LR scale",
+      "LeakyReLU(0.5) activation change"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

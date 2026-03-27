@@ -1,8 +1,102 @@
 {
-  "generatedAt": "2026-03-27T04:13:59.533Z",
+  "generatedAt": "2026-03-27T04:44:28.229Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 932,
+      "title": "Non-record: CoDA-GQA Differential Attention — First Differential Attention Submission (val_bpb=1.1580)",
+      "status": "open",
+      "updatedAt": "2026-03-27T04:33:36Z",
+      "headSha": "99a188bff6369b1cb74515f0b283b1ffd0cc2423",
+      "generatedAt": "2026-03-27T04:43:42.472Z",
+      "summary": "Applies CoDA-GQA differential attention with orthogonal noise query rotation and gated subtraction to sharpen Transformer attention without an extra W_q projection.",
+      "tags": [
+        "attention",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-932.json"
+    },
+    {
+      "prNumber": 931,
+      "title": "Record: 0.0498 bpb - Packed Training N-gram Artifact + Learned Weighting Gate",
+      "status": "open",
+      "updatedAt": "2026-03-27T04:36:00Z",
+      "headSha": "5e6c5de2aebbe7bf6b9a93e95b08d0c8ab80669d",
+      "generatedAt": "2026-03-27T04:43:46.657Z",
+      "summary": "Learned gate mixes neural probabilities with order-2..9 n-gram experts while eval loads a packed training cache for a single-path causal scoring flow.",
+      "tags": [
+        "architecture",
+        "compression",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-931.json"
+    },
+    {
+      "prNumber": 930,
+      "title": "Non-record: Entropy-regularized QAT (WIP, pending compute)",
+      "status": "open",
+      "updatedAt": "2026-03-27T04:19:42Z",
+      "headSha": "58fce58e8c3539b9a21de62815815fa247e9c196",
+      "generatedAt": "2026-03-27T04:43:50.618Z",
+      "summary": "Adds entropy penalty on quantized weight symbols during late-stage QAT to improve compressibility-aware training.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "compression",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-930.json"
+    },
+    {
+      "prNumber": 929,
+      "title": "Add record: 9L MLP3x LeakyReLU(0.5)² QAT Int6+zstd (val_bpb=1.1653)",
+      "status": "open",
+      "updatedAt": "2026-03-27T04:19:25Z",
+      "headSha": "c2fb71404e962c6f99186f38f3e86bfc33b9c62e",
+      "generatedAt": "2026-03-27T04:44:00.354Z",
+      "summary": "MLP3x 9-layer with LeakyReLU(0.5)^2, Int6 QAT+zstd-22, FP16 embedding passthrough, sliding-window stride-64 eval, seq2048 training, and tuned optimizer.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-929.json"
+    },
     {
       "prNumber": 928,
       "title": "Non-record: XSA-all + mHC + Full QAT (val_bpb=1.1211)",
@@ -286,10 +380,10 @@
       "prNumber": 913,
       "title": "Record: Cache Is All You Need — val_bpb 0.0887, 622KB artifact (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-27T00:13:33Z",
+      "updatedAt": "2026-03-27T04:19:39Z",
       "headSha": "64c9d07a00e618ebd4f74ee9b2e2d6f2a7ef4f58",
-      "generatedAt": "2026-03-27T00:43:40.543Z",
-      "summary": "Adds compact eval-time n-gram and long-phrase caches with adaptive entropy-weighted blending on top of a tiny GPT baseline for stronger scoring.",
+      "generatedAt": "2026-03-27T04:44:05.125Z",
+      "summary": "Eval-time n-gram and long-phrase caches adaptively blend with base GPT logits via sliding-window scoring for compact inference.",
       "tags": [
         "evaluation"
       ],
@@ -470,14 +564,13 @@
       "prNumber": 900,
       "title": "Record: Two-Level Dirichlet Posterior Mixing with Per-Order OBCL -- 0.1156 BPB",
       "status": "open",
-      "updatedAt": "2026-03-27T04:13:05Z",
+      "updatedAt": "2026-03-27T04:17:30Z",
       "headSha": "1190eebd8670aa31c74488836a1b80f7c062fb61",
-      "generatedAt": "2026-03-27T04:13:43.150Z",
-      "summary": "Hierarchical Dirichlet-Multinomial smoothing mixes a neural EBLS base with per-order OBCL concentrations and phrase suffix caches.",
+      "generatedAt": "2026-03-27T04:44:10.159Z",
+      "summary": "Combines two-level Dirichlet-multinomial caching with OBCL-learned per-order concentrations for n-grams and phrase suffix matches atop a neural base LM.",
       "tags": [
         "architecture",
-        "regularization",
-        "evaluation"
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -904,15 +997,13 @@
     {
       "prNumber": 873,
       "title": "E2E TTT: End-to-End Test-Time Training with Meta-Learning (1.0467 BPB)",
-      "status": "open",
-      "updatedAt": "2026-03-26T17:21:26Z",
+      "status": "closed",
+      "updatedAt": "2026-03-27T04:14:47Z",
       "headSha": "d2c823a23648916f5f6808f1ed50e2afa53900df",
-      "generatedAt": "2026-03-26T17:41:24.936Z",
-      "summary": "Applies MAML-style meta-learning in the final 20% of training so the Transformer learns weights optimized for test-time adaptation.",
+      "generatedAt": "2026-03-27T04:44:16.933Z",
+      "summary": "Meta-learns an 11L Transformer by backpropagating through inner-loop MLP gradient steps so test-time adaptation is optimized during training.",
       "tags": [
-        "training-schedule",
-        "optimizer",
-        "architecture"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1084,16 +1175,15 @@
     },
     {
       "prNumber": 859,
-      "title": "Record: 0.1582 BPB — Learned Mixer Head + No TTT + Matrix LR 0.03",
+      "title": "Non Record: 0.1582 BPB — Learned Mixer Head + No TTT + Matrix LR 0.03",
       "status": "open",
-      "updatedAt": "2026-03-26T16:06:09Z",
+      "updatedAt": "2026-03-27T04:20:50Z",
       "headSha": "66fd46de9971434a742e65683b81400539697f0f",
-      "generatedAt": "2026-03-26T16:10:26.891Z",
-      "summary": "Learned mixer gating head predicts token-specific weights over frozen n-gram experts with higher matrix LR and no TTT.",
+      "generatedAt": "2026-03-27T04:44:21.717Z",
+      "summary": "Higher MATRIX_LR plus a learned mixer head with a frozen n-gram oracle removes TTT while keeping neural gating for per-token expert mixing.",
       "tags": [
         "architecture",
-        "training-schedule",
-        "evaluation"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -9768,30 +9858,6 @@
       "file": "items/pr-322.json"
     },
     {
-      "prNumber": 321,
-      "title": "Add record: Optimizer Tuning + Sliding Window Eval (val_bpb=1.1864)",
-      "status": "open",
-      "updatedAt": "2026-03-27T03:55:20Z",
-      "headSha": "c2fb71404e962c6f99186f38f3e86bfc33b9c62e",
-      "generatedAt": "2026-03-27T04:13:55.284Z",
-      "summary": "Optimizer warmdown/muon tuning with seq2048 training feeds sliding-window stride-64 evaluation on baseline plus int8+zlib quantization.",
-      "tags": [
-        "optimizer",
-        "training-schedule",
-        "evaluation",
-        "quantization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-321.json"
-    },
-    {
       "prNumber": 320,
       "title": "Minimal recurrent motif (sb1 rs2 g0.18) – non-record submission",
       "status": "open",
@@ -12039,15 +12105,15 @@
     },
     {
       "prNumber": 181,
-      "title": "Aweb Ultimate — 1.1190 BPB | #1 | 11L LeakyReLU² XSA4 EMA TTT",
+      "title": "1.1190 BPB — 11L LeakyReLU² XSA4 PartialRoPE LNScale EMA ParallelMuon TTT",
       "status": "open",
-      "updatedAt": "2026-03-27T01:40:25Z",
-      "headSha": "575d983d4325198755525473ef53ab318a68e179",
-      "generatedAt": "2026-03-27T01:44:28.004Z",
-      "summary": "11-layer LeakyReLU² model with XSA on final layers, Partial RoPE, U-Net skips, SmearGate/BigramHash, Muon optimizer, GPTQ-lite quant, and legal TTT sliding-window eval.",
+      "updatedAt": "2026-03-27T04:36:01Z",
+      "headSha": "ee202514f6b26687c3530d1abdfa79eea8be4312",
+      "generatedAt": "2026-03-27T04:44:28.203Z",
+      "summary": "11-layer 512d GQA model blends LeakyReLU², Partial RoPE, XSA4, LN scale, Parallel Muon, GPTQ-lite int6/int8 quantization, and TTT-aware sliding-window eval.",
       "tags": [
         "architecture",
-        "attention",
+        "optimizer",
         "quantization",
         "evaluation"
       ],
