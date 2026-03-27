@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T16:17:15.947Z",
+  "generatedAt": "2026-03-27T16:47:17.703Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 425,
     "title": "Codex/runpod 2026 03 20 checkpoint",
     "state": "open",
-    "updatedAt": "2026-03-27T16:15:36Z",
-    "headSha": "681c41d7d5c8f1841dee8a3b1defb997b6a59c29",
+    "updatedAt": "2026-03-27T16:18:16Z",
+    "headSha": "ad84ca93dcc176b4d7a5c0cc9849bc77f7297bcd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/425",
     "authorLogin": "DeividasMat"
   },
@@ -20,19 +20,17 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Runpod H100 ablation paired ATTN_TWICE_ALPHA=0.05 with split EVAL_SEQ_LEN/TTT_EVAL_SEQ_LEN to balance roundtrip and TTT scoring under single-GPU cap.",
+    "summary": "Single H100 run pairs ATTN_TWICE_ALPHA tuning with split eval lengths (2048 vs 1024) to balance roundtrip and TTT scoring for compact checkpoints.",
     "tags": [
-      "attention",
       "evaluation",
-      "training-schedule",
+      "attention",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Alpha-weighted twice attention eval",
-      "Split long/short eval lengths for roundtrip vs TTT",
-      "LoRA-augmented TTT chunks"
+      "Split eval lengths for separate roundtrip versus TTT scoring",
+      "Tune ATTN_TWICE_ALPHA=0.05 with LoRA TTT parameters for compact checkpoints"
     ]
   },
   "compatibility": {

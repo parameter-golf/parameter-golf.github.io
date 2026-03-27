@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-27T16:16:38.759Z",
+  "generatedAt": "2026-03-27T16:46:47.131Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 742,
+    "submissions": 743,
     "official": 1,
     "openPr": 611,
     "mergedPr": 22,
-    "closedPr": 108,
-    "prBacked": 742,
+    "closedPr": 109,
+    "prBacked": 743,
     "readmeListed": 20,
     "collectorErrors": 0
   },
@@ -91,7 +91,7 @@
       }
     },
     "openPrMainTrack": {
-      "id": "record-records-track_10min_16mb-2026-03-27_NacrithLogBias_FullRescore_8xH100",
+      "id": "record-records-track_10min_16mb-2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100",
       "source": "pull_request",
       "status": "open",
       "category": "main-track",
@@ -103,22 +103,22 @@
         "category": "main-track"
       },
       "record": {
-        "folderName": "2026-03-27_NacrithLogBias_FullRescore_8xH100",
-        "folderPath": "records/track_10min_16mb/2026-03-27_NacrithLogBias_FullRescore_8xH100",
-        "submissionPath": "records/track_10min_16mb/2026-03-27_NacrithLogBias_FullRescore_8xH100/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-27_NacrithLogBias_FullRescore_8xH100/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-27_NacrithLogBias_FullRescore_8xH100/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-27_NacrithLogBias_FullRescore_8xH100/train_gpt.py"
+        "folderName": "2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100",
+        "folderPath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100",
+        "submissionPath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/train_gpt.py"
       },
       "submission": {
-        "author": "Ishan Ramrakhiani",
-        "githubId": "himanalot",
-        "name": "Nacrith Log-Bias + Full-Rescore N-gram (3-seed)",
-        "blurb": "Adaptive log-space per-token bias learned via online SGD during score-first eval. Combined with log-odds mixing and full-rescore two-pass N-gram evaluation. Inspired by Nacrith (arXiv:2602.19626) ensemble context modeling.",
+        "author": "Aamod Bhatt",
+        "githubId": "aamodbhatt",
+        "name": "Compliance-First Packed Causal Memory + Dirichlet Mixing (3-seed)",
+        "blurb": "Single-pass causal score-first evaluation with packed n-gram memory and Dirichlet-normalized multi-order mixing. Includes explicit compliance guards for time/size/ordering. 3-seed mean score-first val_bpb 0.01654407.",
         "date": "2026-03-27"
       },
       "metrics": {
-        "valBpb": 3.5e-7,
+        "valBpb": 0.01654407,
         "valLoss": null,
         "preQuantValBpb": null,
         "preQuantValLoss": null,
@@ -139,26 +139,26 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 959,
-        "title": "Record: Nacrith Log-Bias + Full-Rescore N-gram — val_bpb 0.00000035 (3-seed mean)",
+        "number": 944,
+        "title": "Record: Compliance-First Packed Causal Memory + Dirichlet Mixing — val_bpb 0.01654407 (3-seed mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/959",
-        "authorLogin": "himanalot",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/944",
+        "authorLogin": "aamodbhatt",
         "authorName": null,
-        "createdAt": "2026-03-27T14:23:22Z",
-        "updatedAt": "2026-03-27T15:59:48Z",
-        "headSha": "5aede00a343bfac5c47093f5860ad93df40cc1f1",
-        "headRepo": "himanalot/parameter-golf"
+        "createdAt": "2026-03-27T09:03:29Z",
+        "updatedAt": "2026-03-27T09:04:24Z",
+        "headSha": "2c6b8082d30626563556fe8f68475a19b888cacd",
+        "headRepo": "aamodbhatt/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5aede00a343bfac5c47093f5860ad93df40cc1f1/records/track_10min_16mb/2026-03-27_NacrithLogBias_FullRescore_8xH100/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/5aede00a343bfac5c47093f5860ad93df40cc1f1/records/track_10min_16mb/2026-03-27_NacrithLogBias_FullRescore_8xH100/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/5aede00a343bfac5c47093f5860ad93df40cc1f1/records/track_10min_16mb/2026-03-27_NacrithLogBias_FullRescore_8xH100/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/5aede00a343bfac5c47093f5860ad93df40cc1f1/records/track_10min_16mb/2026-03-27_NacrithLogBias_FullRescore_8xH100/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/5aede00a343bfac5c47093f5860ad93df40cc1f1/records/track_10min_16mb/2026-03-27_NacrithLogBias_FullRescore_8xH100",
-        "pr": "https://github.com/openai/parameter-golf/pull/959",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100",
+        "pr": "https://github.com/openai/parameter-golf/pull/944",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

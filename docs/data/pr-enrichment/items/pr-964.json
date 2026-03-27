@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-27T16:46:54.841Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 964,
+    "title": "Record: Doc-Isolated TTT + Eval Optimizations",
+    "state": "open",
+    "updatedAt": "2026-03-27T16:29:46Z",
+    "headSha": "47c8b7f7cfa7e9eb4e81c54f401805e0dc6a0651",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/964",
+    "authorLogin": "vivekvar-dl"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_DocIsolatedTTT_EvalOpt/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Document-isolated TTT resets optimizer state at BOS boundaries and adds eval temperature scaling atop the base 11L/512d Parallel Muon architecture.",
+    "tags": [
+      "optimizer",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Document-boundary optimizer reset for TTT",
+      "Eval-time temperature scaling grid search"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
