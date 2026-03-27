@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-27T20:18:40.786Z",
+  "generatedAt": "2026-03-27T20:48:38.138Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 982,
+      "title": " Record: Fort Knox — Legal Packed Training Cache, Zero Val Adaptation (val_bpb 0.0638, 3-seed)",
+      "status": "open",
+      "updatedAt": "2026-03-27T20:42:52Z",
+      "headSha": "2c970e959c151916411737173c7eba618975d879",
+      "generatedAt": "2026-03-27T20:48:25.453Z",
+      "summary": "Tiny 6L/256d FP16 model blends frozen training-built packed n-gram cache with tempered logits, keeping eval stateless and legal.",
+      "tags": [
+        "val-only",
+        "architecture",
+        "compression",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": true
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-982.json"
+    },
+    {
+      "prNumber": 981,
+      "title": "Non-record: Sliding Patch Attentions + MoE (2-layer compact run)",
+      "status": "open",
+      "updatedAt": "2026-03-27T20:32:29Z",
+      "headSha": "a94418aac299c017d9dc9ea0bced4d516715f896",
+      "generatedAt": "2026-03-27T20:48:29.718Z",
+      "summary": "Experimental train_gpt adds sliding patch attention and router/MoE paths while the non-record log yields a compact 2-layer baseline without active MoE.",
+      "tags": [
+        "attention",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-981.json"
+    },
     {
       "prNumber": 979,
       "title": "Record: 1.1387 BPB — 11L LeakyReLU² + Early QAT@0.5 + GPTQ-lite + EMA",
@@ -1205,14 +1252,13 @@
       "prNumber": 911,
       "title": "KoopCaps-HRM Ternary Reasoner — Koopman Capsule Dynamics + Adaptive Halting",
       "status": "open",
-      "updatedAt": "2026-03-27T20:13:37Z",
-      "headSha": "b0967491168104c8ce42916cc3d1b3f6e809f12c",
-      "generatedAt": "2026-03-27T20:18:30.881Z",
-      "summary": "Ternary-packed U-Net with Koopman capsule dynamics, adaptive halting, and cross-window carry for iterative refinement inside 12MB.",
+      "updatedAt": "2026-03-27T20:27:15Z",
+      "headSha": "da77da82bd2cccd6f8e186f6b0a78d79908d8c75",
+      "generatedAt": "2026-03-27T20:48:33.711Z",
+      "summary": "Ternary U-Net with Koopman capsule dynamics and adaptive halting adds predictive iterative reasoning plus cross-window capsule carry in a 16MB stack.",
       "tags": [
-        "architecture",
         "quantization",
-        "attention",
+        "architecture",
         "evaluation"
       ],
       "flags": {
@@ -1365,14 +1411,15 @@
     {
       "prNumber": 900,
       "title": "Record: Two-Level Dirichlet Posterior Mixing with Per-Order OBCL -- 0.1156 BPB",
-      "status": "open",
-      "updatedAt": "2026-03-27T06:12:54Z",
+      "status": "closed",
+      "updatedAt": "2026-03-27T20:20:44Z",
       "headSha": "1190eebd8670aa31c74488836a1b80f7c062fb61",
-      "generatedAt": "2026-03-27T06:14:40.224Z",
-      "summary": "Hierarchical Dirichlet mixing with phrase suffix caching and per-order OBCL smoothing adapts n-gram concentrations over a neural base measure.",
+      "generatedAt": "2026-03-27T20:48:37.996Z",
+      "summary": "Two-level Dirichlet mixing hierarchically backs off to an EBLS/GPTQ neural base while OBCL learns per-order concentrations before phrase-level smoothing.",
       "tags": [
         "architecture",
-        "regularization"
+        "regularization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

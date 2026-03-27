@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T20:48:29.718Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 981,
+    "title": "Non-record: Sliding Patch Attentions + MoE (2-layer compact run)",
+    "state": "open",
+    "updatedAt": "2026-03-27T20:32:29Z",
+    "headSha": "a94418aac299c017d9dc9ea0bced4d516715f896",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/981",
+    "authorLogin": "BurguerJohn"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_SlidingPatchAttentions_Plus_Moe/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Experimental train_gpt adds sliding patch attention and router/MoE paths while the non-record log yields a compact 2-layer baseline without active MoE.",
+    "tags": [
+      "attention",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "sliding patch attention with router-aware path",
+      "MoE/router code present but disabled for this run",
+      "compact 2-layer vanilla transformer configuration"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

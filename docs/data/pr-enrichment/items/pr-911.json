@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T20:18:30.881Z",
+  "generatedAt": "2026-03-27T20:48:33.711Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 911,
     "title": "KoopCaps-HRM Ternary Reasoner — Koopman Capsule Dynamics + Adaptive Halting",
     "state": "open",
-    "updatedAt": "2026-03-27T20:13:37Z",
-    "headSha": "b0967491168104c8ce42916cc3d1b3f6e809f12c",
+    "updatedAt": "2026-03-27T20:27:15Z",
+    "headSha": "da77da82bd2cccd6f8e186f6b0a78d79908d8c75",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/911",
     "authorLogin": "Akhilesh-Gogikar"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Ternary-packed U-Net with Koopman capsule dynamics, adaptive halting, and cross-window carry for iterative refinement inside 12MB.",
+    "summary": "Ternary U-Net with Koopman capsule dynamics and adaptive halting adds predictive iterative reasoning plus cross-window capsule carry in a 16MB stack.",
     "tags": [
-      "architecture",
       "quantization",
-      "attention",
+      "architecture",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Ternary-packed encoder-decoder U-Net",
-      "Koopman capsule prediction with adaptive halting",
-      "Cross-window capsule carry plus Hadamard-gated feedback"
+      "ternary U-Net with base-3 packed params",
+      "Koopman capsule dynamics with low-rank predictive updates",
+      "adaptive halting plus cross-window capsule carry"
     ]
   },
   "compatibility": {
