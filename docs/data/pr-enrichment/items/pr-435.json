@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T09:44:59.473Z",
+  "generatedAt": "2026-03-27T23:49:04.768Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 435,
-    "title": "Radial bitnet submission",
+    "title": "Radial Fro submission",
     "state": "open",
-    "updatedAt": "2026-03-27T09:42:55Z",
+    "updatedAt": "2026-03-27T23:47:26Z",
     "headSha": "fabca72d94fce88e7c4cc4856f4db126f7fe1b5e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/435",
     "authorLogin": "rthgit"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Dual-branch transformer fuses asymmetric layers with radial 10-bit token geometry and bigram hash context while training via FROStable+AdamW on H100.",
+    "summary": "Dual-branch transformer fuses radial token geometry and bigram hash context via residual-B, trained with FROStable + AdamW and mixed int8/int6 quantization.",
     "tags": [
       "architecture",
-      "tokenization",
-      "optimizer"
+      "optimizer",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Dual-branch asymmetric transformer fused via residual-B at dim 448",
-      "Radial 10-bit token geometry complemented by 1024-bucket bigram hash with gain clamping",
-      "FROStable on transformer weights plus AdamW on embeddings with warmup/cosine schedule"
+      "Dual-branch residual-B fusion",
+      "Radial token geometry plus hashed lexical branch",
+      "FROStable + AdamW mix"
     ]
   },
   "compatibility": {

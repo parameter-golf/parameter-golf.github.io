@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T23:21:02.435Z",
+  "generatedAt": "2026-03-27T23:49:04.841Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -52,10 +52,10 @@
       "prNumber": 986,
       "title": "Record: Packed N-gram + Two-Pass   Dirichlet CTW — val_bpb 0.0830 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-27T21:32:28Z",
+      "updatedAt": "2026-03-27T23:31:16Z",
       "headSha": "1c70fa129218ea7107a314c465c74588a1af7b9f",
-      "generatedAt": "2026-03-27T21:48:32.261Z",
-      "summary": "Prebuilt packed order-2–13 n-gram tables and two-pass rescore feed a hierarchical Dirichlet CTW mixer allowing the vestigial GPT to defer to rich caches.",
+      "generatedAt": "2026-03-27T23:48:56.677Z",
+      "summary": "Pre-compute packed order-2-13 n-gram artifact with phrase cache, then two-pass eval with hierarchical Dirichlet CTW mixing to fully warm the cache.",
       "tags": [
         "architecture",
         "evaluation",
@@ -326,10 +326,10 @@
       "prNumber": 973,
       "title": "Non-record: BESE Novel Tokenizer — 38-Token Structured Alphabet + BPE, 288 Vocab, 12.9MB",
       "status": "open",
-      "updatedAt": "2026-03-27T18:49:39Z",
-      "headSha": "3be7151200565147b2d58a550122a22f5f7aec6e",
-      "generatedAt": "2026-03-27T19:18:07.271Z",
-      "summary": "BESE swaps the 1,024-token vocab for a 38-token structured alphabet with 250 BPE merges to cut embeddings and free params for extra layers.",
+      "updatedAt": "2026-03-27T23:27:32Z",
+      "headSha": "9d7f505a162eb89854c3f2dcaee9ac4b88e73874",
+      "generatedAt": "2026-03-27T23:49:00.926Z",
+      "summary": "BESE pairs a 38-token structured alphabet with 250 BPE merges to shrink vocab and free embedding budget for extra depth.",
       "tags": [
         "tokenization",
         "compression",
@@ -8787,16 +8787,16 @@
     },
     {
       "prNumber": 435,
-      "title": "Radial bitnet submission",
+      "title": "Radial Fro submission",
       "status": "open",
-      "updatedAt": "2026-03-27T09:42:55Z",
+      "updatedAt": "2026-03-27T23:47:26Z",
       "headSha": "fabca72d94fce88e7c4cc4856f4db126f7fe1b5e",
-      "generatedAt": "2026-03-27T09:44:59.473Z",
-      "summary": "Dual-branch transformer fuses asymmetric layers with radial 10-bit token geometry and bigram hash context while training via FROStable+AdamW on H100.",
+      "generatedAt": "2026-03-27T23:49:04.768Z",
+      "summary": "Dual-branch transformer fuses radial token geometry and bigram hash context via residual-B, trained with FROStable + AdamW and mixed int8/int6 quantization.",
       "tags": [
         "architecture",
-        "tokenization",
-        "optimizer"
+        "optimizer",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

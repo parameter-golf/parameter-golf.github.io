@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T23:19:09.244Z",
+  "generatedAt": "2026-03-27T23:48:47.689Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -834,7 +834,7 @@
         "authorLogin": "sofiabod",
         "authorName": null,
         "createdAt": "2026-03-27T21:32:05Z",
-        "updatedAt": "2026-03-27T21:32:28Z",
+        "updatedAt": "2026-03-27T23:31:16Z",
         "headSha": "1c70fa129218ea7107a314c465c74588a1af7b9f",
         "headRepo": "sofiabod/parameter-golf"
       },
@@ -2836,7 +2836,7 @@
         "authorLogin": "sofiabod",
         "authorName": null,
         "createdAt": "2026-03-27T21:32:05Z",
-        "updatedAt": "2026-03-27T21:32:28Z",
+        "updatedAt": "2026-03-27T23:31:16Z",
         "headSha": "1c70fa129218ea7107a314c465c74588a1af7b9f",
         "headRepo": "sofiabod/parameter-golf"
       },
@@ -41552,7 +41552,7 @@
         "author": "Omer Bese",
         "githubId": "mrbese",
         "name": "BESE: Base-Efficient Subword Encoding — Novel 38-Token Structured Alphabet + BPE",
-        "blurb": "Novel two-layer tokenizer: 38-token linguistically structured alphabet (frequency-optimized single/group encodings, bigram-analyzed context disambiguation, case-insensitive) + 250 BPE merges = 288 vocab. Saves ~295KB of embedding parameters vs 1024-vocab baseline, enough for 2-3 extra transformer layers. Tokenizer verified byte-accurate (100/100 docs). High BPB due to 80x data starvation (12.6M vs 1B tokens), not tokenizer flaw — train loss drops normally (5.69->1.22). Full-data run pending.",
+        "blurb": null,
         "date": "2026-03-27"
       },
       "metrics": {
@@ -41565,7 +41565,7 @@
         "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": 12900000,
+        "bytesTotal": null,
         "bytesCode": null,
         "bytesModelInt8Zlib": null
       },
@@ -41586,16 +41586,16 @@
         "authorLogin": "mrbese",
         "authorName": null,
         "createdAt": "2026-03-27T18:37:15Z",
-        "updatedAt": "2026-03-27T18:49:39Z",
-        "headSha": "3be7151200565147b2d58a550122a22f5f7aec6e",
+        "updatedAt": "2026-03-27T23:27:32Z",
+        "headSha": "9d7f505a162eb89854c3f2dcaee9ac4b88e73874",
         "headRepo": "mrbese/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/3be7151200565147b2d58a550122a22f5f7aec6e/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/3be7151200565147b2d58a550122a22f5f7aec6e/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/3be7151200565147b2d58a550122a22f5f7aec6e/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/3be7151200565147b2d58a550122a22f5f7aec6e/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/3be7151200565147b2d58a550122a22f5f7aec6e/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9d7f505a162eb89854c3f2dcaee9ac4b88e73874/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/9d7f505a162eb89854c3f2dcaee9ac4b88e73874/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/9d7f505a162eb89854c3f2dcaee9ac4b88e73874/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/9d7f505a162eb89854c3f2dcaee9ac4b88e73874/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/9d7f505a162eb89854c3f2dcaee9ac4b88e73874/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab",
         "pr": "https://github.com/openai/parameter-golf/pull/973",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -51203,7 +51203,7 @@
       },
       "pr": {
         "number": 435,
-        "title": "Radial bitnet submission",
+        "title": "Radial Fro submission",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -51211,7 +51211,7 @@
         "authorLogin": "rthgit",
         "authorName": null,
         "createdAt": "2026-03-22T16:31:21Z",
-        "updatedAt": "2026-03-27T09:42:55Z",
+        "updatedAt": "2026-03-27T23:47:26Z",
         "headSha": "fabca72d94fce88e7c4cc4856f4db126f7fe1b5e",
         "headRepo": "rthgit/parameter-golf"
       },
