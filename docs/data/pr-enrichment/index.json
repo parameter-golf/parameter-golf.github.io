@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-27T02:13:53.185Z",
+  "generatedAt": "2026-03-27T02:43:31.209Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 924,
+      "title": "Order-16 Frozen N-gram Oracle + Score-First TTT (0.02801 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-27T02:40:23Z",
+      "headSha": "d3650d6278f1bdd590ada76219593d66e2b5b0ea",
+      "generatedAt": "2026-03-27T02:43:31.073Z",
+      "summary": "Prefill order-16 n-gram oracles mixed via a learned alpha head, then apply score-first TTT on validation chunks for legal eval-time updates.",
+      "tags": [
+        "val-only",
+        "architecture",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-924.json"
+    },
     {
       "prNumber": 922,
       "title": "Record: Order-14 N-gram Full-Rescore — val_bpb 0.0972",

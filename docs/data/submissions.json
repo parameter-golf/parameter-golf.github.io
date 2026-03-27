@@ -1,8 +1,85 @@
 {
-  "generatedAt": "2026-03-27T02:13:28.256Z",
+  "generatedAt": "2026-03-27T02:43:22.043Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
+    {
+      "id": "record-records-track_10min_16mb-2026-03-27_FrozenNgramOracle_order16_TTT1epoch",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-27_FrozenNgramOracle_order16_TTT1epoch",
+        "folderPath": "records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch",
+        "submissionPath": "records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/train_gpt.py"
+      },
+      "submission": {
+        "author": "THUQiXuan",
+        "githubId": "THUQiXuan",
+        "name": "Order-16 Frozen N-gram Oracle + Score-First TTT",
+        "blurb": "Pre-fill order-16 n-gram tables from all 8B training tokens (15-token context window). BackoffNgramMixer combines neural + 15 n-gram expert predictions via learned alpha_head weights. Score-first TTT adapts neural weights at eval time without data contamination.",
+        "date": "2026-03-27"
+      },
+      "metrics": {
+        "valBpb": 0.02800607,
+        "valLoss": 0.04728708,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 13465940,
+        "bytesCode": 98302,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 924,
+        "title": "Order-16 Frozen N-gram Oracle + Score-First TTT (0.02801 BPB)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/924",
+        "authorLogin": "THUQiXuan",
+        "authorName": null,
+        "createdAt": "2026-03-27T02:40:23Z",
+        "updatedAt": "2026-03-27T02:40:23Z",
+        "headSha": "d3650d6278f1bdd590ada76219593d66e2b5b0ea",
+        "headRepo": "THUQiXuan/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d3650d6278f1bdd590ada76219593d66e2b5b0ea/records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/d3650d6278f1bdd590ada76219593d66e2b5b0ea/records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/d3650d6278f1bdd590ada76219593d66e2b5b0ea/records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/d3650d6278f1bdd590ada76219593d66e2b5b0ea/records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/d3650d6278f1bdd590ada76219593d66e2b5b0ea/records/track_10min_16mb/2026-03-27_FrozenNgramOracle_order16_TTT1epoch",
+        "pr": "https://github.com/openai/parameter-golf/pull/924",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
     {
       "id": "record-records-track_10min_16mb-2026-03-26_OrderN_TTT_NgramOracle",
       "source": "pull_request",
