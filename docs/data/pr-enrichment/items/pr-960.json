@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-03-27T14:46:35.452Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 960,
+    "title": "Preliminary: 11L VRL + Full GPTQ + Parallel Muon + Legal TTT — val_bpb 1.1882 (ADIITJ)",
+    "state": "open",
+    "updatedAt": "2026-03-27T14:40:57Z",
+    "headSha": "a2b2b3d0b1b8f5df9c3cd6471342cb7cb4b17844",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/960",
+    "authorLogin": "ADIITJ"
+  },
+  "inputs": {
+    "hash": "27abfc0912818017ec8e30acbe023cf6abe11f570c1c32f867b41cca2f3aade2",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_VRL_FullGPTQ_ParallelMuon_LegalTTT/README.md",
+      "records/track_10min_16mb/2026-03-24_VRL_FullGPTQ_LoRATTT/README.md",
+      "records/track_10min_16mb/2026-03-23_LoRA_TTT_Int5Int6/README.md",
+      "records/track_10min_16mb/2026-03-23_ADIITJ_ProteusPlus/README.md"
+    ],
+    "submissionCount": 5
+  },
+  "output": {
+    "summary": "Builds on PR #549 by adding Layer0 VRL, full Hessian-aware GPTQ, and tight SWA to the Parallel Muon + legal TTT stack for faster 11-layer training.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Layer-0 value residual blending via learned sigmoid VRL gates",
+      "Full GPTQ int6 with Hessian Cholesky error propagation",
+      "Tight SWA snapshot averaging replacing EMA during Muon training"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,16 +1,60 @@
 {
-  "generatedAt": "2026-03-27T14:16:49.658Z",
+  "generatedAt": "2026-03-27T14:47:09.680Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 958,
-      "title": "Record: DominationV2 + BOS-Reset Bigram Cache + TTT (val_bpb=1.1382, 3-seed mean)",
+      "prNumber": 960,
+      "title": "Preliminary: 11L VRL + Full GPTQ + Parallel Muon + Legal TTT — val_bpb 1.1882 (ADIITJ)",
       "status": "open",
-      "updatedAt": "2026-03-27T14:07:54Z",
+      "updatedAt": "2026-03-27T14:40:57Z",
+      "headSha": "a2b2b3d0b1b8f5df9c3cd6471342cb7cb4b17844",
+      "generatedAt": "2026-03-27T14:46:35.452Z",
+      "summary": "Builds on PR #549 by adding Layer0 VRL, full Hessian-aware GPTQ, and tight SWA to the Parallel Muon + legal TTT stack for faster 11-layer training.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-960.json"
+    },
+    {
+      "prNumber": 959,
+      "title": "Record: Nacrith Log-Bias + Full-Rescore N-gram — val_bpb 0.00000035 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-27T14:28:11Z",
+      "headSha": "5aede00a343bfac5c47093f5860ad93df40cc1f1",
+      "generatedAt": "2026-03-27T14:46:41.958Z",
+      "summary": "Two-pass full-rescore n-gram eval adds online per-token log-space bias with log-odds blending after each score to exploit cache-wide statistics.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-959.json"
+    },
+    {
+      "prNumber": 958,
+      "title": "Submission: DominationV2 + BOS-Reset Bigram Cache + TTT (val_bpb=1.1382, 3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-27T14:32:21Z",
       "headSha": "2eb49c166a64b644231fe11db1be9bbc7f9bf782",
-      "generatedAt": "2026-03-27T14:16:31.100Z",
-      "summary": "DominationV2 U-Net stack adds eval-time BOS-reset bigram cache blending entropy-gated counts with model probs after TTT and quantization.",
+      "generatedAt": "2026-03-27T14:46:48.472Z",
+      "summary": "DominationV2’s U-Net/SmearGate stack adds TTT plus a BOS-reset bigram cache that entropy-weights doc-local counts with model probabilities after quantization.",
       "tags": [
         "architecture",
         "quantization",
@@ -97,16 +141,16 @@
     },
     {
       "prNumber": 953,
-      "title": "  Record: 1.1069 BPB — Improved TTT + HedgeMixer with Per-Layer LR Groups",
+      "title": "Record: 1.0722 BPB — Improved TTT + HedgeMixer with Per-Layer LR Groups",
       "status": "open",
-      "updatedAt": "2026-03-27T13:31:45Z",
-      "headSha": "eec51eaef5cfb1227f0126e0730e5062d7bf6b6e",
-      "generatedAt": "2026-03-27T13:46:11.380Z",
-      "summary": "Improved TTT on XSA+HedgeMixer uses per-layer LR groups, cosine chunk schedule, and only one frozen block for richer test-time adaptation.",
+      "updatedAt": "2026-03-27T14:46:41Z",
+      "headSha": "27b39c622da3a7f289ec0f81557e0f60455c4eb9",
+      "generatedAt": "2026-03-27T14:46:57.495Z",
+      "summary": "Test-time training pairs per-layer LR groups with a cosine schedule, four epochs, and only one frozen block to boost HedgeMixer adaptation.",
       "tags": [
         "training-schedule",
-        "attention",
-        "regularization"
+        "optimizer",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1206,12 +1250,12 @@
     },
     {
       "prNumber": 886,
-      "title": "RFC: A framework for deciding the n-gram question",
+      "title": "RFC: N-gram scores need a distribution validity check",
       "status": "open",
-      "updatedAt": "2026-03-27T13:48:33Z",
-      "headSha": "9671d3d9d8e7f1bb98e4ac52cd84ebd612a5b3aa",
-      "generatedAt": "2026-03-27T14:16:49.528Z",
-      "summary": "Study of strictly causal eval-time n-gram caching that blends cached counts with LM logits, exposing inflated scores and prompting cache-size/distribution rules.",
+      "updatedAt": "2026-03-27T14:39:43Z",
+      "headSha": "37aa1892cd4607a4a20a2027067b8f86b0244da4",
+      "generatedAt": "2026-03-27T14:47:05.289Z",
+      "summary": "Validates n-gram cache eval by checking probability sums, banning two-pass rescoring, and proposing caps on eval-time auxiliary state/latency.",
       "tags": [
         "evaluation",
         "non-record"
@@ -7835,30 +7879,6 @@
       "file": "items/pr-468.json"
     },
     {
-      "prNumber": 467,
-      "title": "[track_10min_16mb] 50-Epoch Cosine LoRA TTT + SOTA (10L Int5/Int6 BigramHash SWA) — Atharva Date (ADIITJ)",
-      "status": "open",
-      "updatedAt": "2026-03-23T10:00:38Z",
-      "headSha": "148aa6bef69342763ba425b4061dda0ef2f41034",
-      "generatedAt": "2026-03-23T10:15:38.894Z",
-      "summary": "Pairs the 10-layer Int5/Int6 SOTA base with document-isolated 50-epoch cosine LoRA TTT on Q/V adapters, scoring only after adapter resets per document.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "training-schedule",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-467.json"
-    },
-    {
       "prNumber": 466,
       "title": "Record: 11L EMA + BigramHash(12288) + Mixed Int5 + FA3 (1.1354)",
       "status": "open",
@@ -8608,14 +8628,14 @@
       "prNumber": 425,
       "title": "Codex/runpod 2026 03 20 checkpoint",
       "status": "open",
-      "updatedAt": "2026-03-24T13:41:32Z",
-      "headSha": "38c4dbf3fa8777ff605b7aa58c4cecb0dc14cb18",
-      "generatedAt": "2026-03-24T13:55:27.773Z",
-      "summary": "1×H100 ablation splits eval seq lengths and adds ATTN_TWICE_ALPHA=0.05 with TTT LoRA to balance roundtrip vs TTT metrics under a 600s cap.",
+      "updatedAt": "2026-03-27T14:31:44Z",
+      "headSha": "4477c99b339de71f68025be0184c73a0c4c1aaaa",
+      "generatedAt": "2026-03-27T14:47:09.619Z",
+      "summary": "Single-GPU 600s ablation stacks ATTN_TWICE_ALPHA=0.05 with split eval seq lengths to balance roundtrip and TTT scoring under size limits.",
       "tags": [
         "attention",
-        "training-schedule",
         "evaluation",
+        "training-schedule",
         "non-record"
       ],
       "flags": {

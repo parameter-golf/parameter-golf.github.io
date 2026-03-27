@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T14:16:49.528Z",
+  "generatedAt": "2026-03-27T14:47:05.289Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 886,
-    "title": "RFC: A framework for deciding the n-gram question",
+    "title": "RFC: N-gram scores need a distribution validity check",
     "state": "open",
-    "updatedAt": "2026-03-27T13:48:33Z",
-    "headSha": "9671d3d9d8e7f1bb98e4ac52cd84ebd612a5b3aa",
+    "updatedAt": "2026-03-27T14:39:43Z",
+    "headSha": "37aa1892cd4607a4a20a2027067b8f86b0244da4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/886",
     "authorLogin": "abaybektursun"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Study of strictly causal eval-time n-gram caching that blends cached counts with LM logits, exposing inflated scores and prompting cache-size/distribution rules.",
+    "summary": "Validates n-gram cache eval by checking probability sums, banning two-pass rescoring, and proposing caps on eval-time auxiliary state/latency.",
     "tags": [
       "evaluation",
       "non-record"
@@ -27,9 +27,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Strictly causal n-gram cache blending stored ratios with LM logits",
-      "Global all-reduce sync of cache state to close shared statistics gaps",
-      "Hash-bucket sweep exposing collision-driven probability inflation"
+      "distribution sum checks",
+      "causality rule",
+      "auxiliary state/latency caps"
     ]
   },
   "compatibility": {

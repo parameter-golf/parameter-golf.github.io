@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-27T14:46:41.958Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 959,
+    "title": "Record: Nacrith Log-Bias + Full-Rescore N-gram — val_bpb 0.00000035 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-27T14:28:11Z",
+    "headSha": "5aede00a343bfac5c47093f5860ad93df40cc1f1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/959",
+    "authorLogin": "himanalot"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_NacrithLogBias_FullRescore_8xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Two-pass full-rescore n-gram eval adds online per-token log-space bias with log-odds blending after each score to exploit cache-wide statistics.",
+    "tags": [
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Nacrith-style online per-token log bias",
+      "PAQ log-odds blending for neural+ngram fusion",
+      "Full-rescore two-pass n-gram cache usage"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

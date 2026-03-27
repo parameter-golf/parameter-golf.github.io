@@ -1,36 +1,36 @@
 {
-  "generatedAt": "2026-03-27T13:46:11.380Z",
+  "generatedAt": "2026-03-27T14:46:57.495Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 953,
-    "title": "  Record: 1.1069 BPB — Improved TTT + HedgeMixer with Per-Layer LR Groups",
+    "title": "Record: 1.0722 BPB — Improved TTT + HedgeMixer with Per-Layer LR Groups",
     "state": "open",
-    "updatedAt": "2026-03-27T13:31:45Z",
-    "headSha": "eec51eaef5cfb1227f0126e0730e5062d7bf6b6e",
+    "updatedAt": "2026-03-27T14:46:41Z",
+    "headSha": "27b39c622da3a7f289ec0f81557e0f60455c4eb9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/953",
     "authorLogin": "dexhunter"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-27_ImprovedTTT_HedgeMixer_PerLayerLR_1.1069/README.md"
+      "records/track_10min_16mb/2026-03-27_ImprovedTTT_HedgeMixer_PerLayerLR_1.0722/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Improved TTT on XSA+HedgeMixer uses per-layer LR groups, cosine chunk schedule, and only one frozen block for richer test-time adaptation.",
+    "summary": "Test-time training pairs per-layer LR groups with a cosine schedule, four epochs, and only one frozen block to boost HedgeMixer adaptation.",
     "tags": [
       "training-schedule",
-      "attention",
-      "regularization"
+      "optimizer",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "per-layer LR scaling for output vs. input projections",
-      "cosine annealed LR across TTT chunks",
-      "freeze only one block during adaptation"
+      "Per-layer LR groups for TTT",
+      "Cosine LR annealing within adaptation",
+      "Four TTT epochs with one frozen block"
     ]
   },
   "compatibility": {

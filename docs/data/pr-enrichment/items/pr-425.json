@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-24T13:55:27.773Z",
+  "generatedAt": "2026-03-27T14:47:09.619Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 425,
     "title": "Codex/runpod 2026 03 20 checkpoint",
     "state": "open",
-    "updatedAt": "2026-03-24T13:41:32Z",
-    "headSha": "38c4dbf3fa8777ff605b7aa58c4cecb0dc14cb18",
+    "updatedAt": "2026-03-27T14:31:44Z",
+    "headSha": "4477c99b339de71f68025be0184c73a0c4c1aaaa",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/425",
     "authorLogin": "DeividasMat"
   },
@@ -20,19 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "1×H100 ablation splits eval seq lengths and adds ATTN_TWICE_ALPHA=0.05 with TTT LoRA to balance roundtrip vs TTT metrics under a 600s cap.",
+    "summary": "Single-GPU 600s ablation stacks ATTN_TWICE_ALPHA=0.05 with split eval seq lengths to balance roundtrip and TTT scoring under size limits.",
     "tags": [
       "attention",
-      "training-schedule",
       "evaluation",
+      "training-schedule",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Dual eval seq lengths for roundtrip vs TTT",
-      "ATTN_TWICE_ALPHA=0.05 with TTT LoRA tuning",
-      "600s single-shard ablation for quick feedback"
+      "split eval lengths for roundtrip vs TTT",
+      "ATTN_TWICE_ALPHA tuning",
+      "short capped ablation run"
     ]
   },
   "compatibility": {
