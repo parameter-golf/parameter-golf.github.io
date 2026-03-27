@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T05:44:59.443Z",
+  "generatedAt": "2026-03-27T06:14:46.224Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -632,10 +632,10 @@
       "prNumber": 900,
       "title": "Record: Two-Level Dirichlet Posterior Mixing with Per-Order OBCL -- 0.1156 BPB",
       "status": "open",
-      "updatedAt": "2026-03-27T04:17:30Z",
+      "updatedAt": "2026-03-27T06:12:54Z",
       "headSha": "1190eebd8670aa31c74488836a1b80f7c062fb61",
-      "generatedAt": "2026-03-27T04:44:10.159Z",
-      "summary": "Combines two-level Dirichlet-multinomial caching with OBCL-learned per-order concentrations for n-grams and phrase suffix matches atop a neural base LM.",
+      "generatedAt": "2026-03-27T06:14:40.224Z",
+      "summary": "Hierarchical Dirichlet mixing with phrase suffix caching and per-order OBCL smoothing adapts n-gram concentrations over a neural base measure.",
       "tags": [
         "architecture",
         "regularization"
@@ -12154,15 +12154,15 @@
       "prNumber": 182,
       "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
       "status": "open",
-      "updatedAt": "2026-03-27T05:26:05Z",
-      "headSha": "b9370c00a78769e7553be6ad2275f51e7d612816",
-      "generatedAt": "2026-03-27T05:44:59.417Z",
-      "summary": "Adds linearized Titans-style neural memory per block via causal cumsum attention, paired with LoRA TTT eval, int6 quantization, Muon WD, and spectral init.",
+      "updatedAt": "2026-03-27T05:52:10Z",
+      "headSha": "3ff1cd54c9e9cc4971d14341868d856c66dad2ea",
+      "generatedAt": "2026-03-27T06:14:46.189Z",
+      "summary": "Adds per-block linearized Titans-style memory via causal linear attention updates alongside LoRA TTT, overtone init, and int6/FP16 bypass.",
       "tags": [
         "architecture",
         "attention",
         "quantization",
-        "regularization"
+        "mixed-precision"
       ],
       "flags": {
         "usesValOnly": false,

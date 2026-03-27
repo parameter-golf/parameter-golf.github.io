@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-27T05:44:24.723Z",
-  "lastSeenUpdatedAt": "2026-03-27T05:36:34Z",
+  "generatedAt": "2026-03-27T06:14:33.066Z",
+  "lastSeenUpdatedAt": "2026-03-27T06:12:54Z",
   "prs": {
     "1": {
       "number": 1,
@@ -13920,7 +13920,7 @@
     },
     "182": {
       "number": 182,
-      "updatedAt": "2026-03-27T05:26:05Z",
+      "updatedAt": "2026-03-27T05:52:10Z",
       "pr": {
         "number": 182,
         "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
@@ -13931,8 +13931,8 @@
         "authorLogin": "mihir-s-05",
         "authorName": null,
         "createdAt": "2026-03-20T07:06:15Z",
-        "updatedAt": "2026-03-27T05:26:05Z",
-        "headSha": "b9370c00a78769e7553be6ad2275f51e7d612816",
+        "updatedAt": "2026-03-27T05:52:10Z",
+        "headSha": "3ff1cd54c9e9cc4971d14341868d856c66dad2ea",
         "headRepo": "mihir-s-05/parameter-golf"
       },
       "submissions": [
@@ -13994,16 +13994,16 @@
             "authorLogin": "mihir-s-05",
             "authorName": null,
             "createdAt": "2026-03-20T07:06:15Z",
-            "updatedAt": "2026-03-27T05:26:05Z",
-            "headSha": "b9370c00a78769e7553be6ad2275f51e7d612816",
+            "updatedAt": "2026-03-27T05:52:10Z",
+            "headSha": "3ff1cd54c9e9cc4971d14341868d856c66dad2ea",
             "headRepo": "mihir-s-05/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b9370c00a78769e7553be6ad2275f51e7d612816/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/b9370c00a78769e7553be6ad2275f51e7d612816/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/b9370c00a78769e7553be6ad2275f51e7d612816/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/b9370c00a78769e7553be6ad2275f51e7d612816/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/b9370c00a78769e7553be6ad2275f51e7d612816/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/3ff1cd54c9e9cc4971d14341868d856c66dad2ea/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/3ff1cd54c9e9cc4971d14341868d856c66dad2ea/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/3ff1cd54c9e9cc4971d14341868d856c66dad2ea/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/3ff1cd54c9e9cc4971d14341868d856c66dad2ea/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/3ff1cd54c9e9cc4971d14341868d856c66dad2ea/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT",
             "pr": "https://github.com/openai/parameter-golf/pull/182"
           }
         }
@@ -77951,7 +77951,7 @@
     },
     "900": {
       "number": 900,
-      "updatedAt": "2026-03-27T04:17:30Z",
+      "updatedAt": "2026-03-27T06:12:54Z",
       "pr": {
         "number": 900,
         "title": "Record: Two-Level Dirichlet Posterior Mixing with Per-Order OBCL -- 0.1156 BPB",
@@ -77962,7 +77962,7 @@
         "authorLogin": "Robby955",
         "authorName": null,
         "createdAt": "2026-03-26T22:07:10Z",
-        "updatedAt": "2026-03-27T04:17:30Z",
+        "updatedAt": "2026-03-27T06:12:54Z",
         "headSha": "1190eebd8670aa31c74488836a1b80f7c062fb61",
         "headRepo": "Robby955/parameter-golf"
       },
@@ -78025,7 +78025,7 @@
             "authorLogin": "Robby955",
             "authorName": null,
             "createdAt": "2026-03-26T22:07:10Z",
-            "updatedAt": "2026-03-27T04:17:30Z",
+            "updatedAt": "2026-03-27T06:12:54Z",
             "headSha": "1190eebd8670aa31c74488836a1b80f7c062fb61",
             "headRepo": "Robby955/parameter-golf"
           },
