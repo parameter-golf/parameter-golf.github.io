@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-27T03:43:53.359Z",
+  "generatedAt": "2026-03-27T04:13:59.533Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 928,
+      "title": "Non-record: XSA-all + mHC + Full QAT (val_bpb=1.1211)",
+      "status": "open",
+      "updatedAt": "2026-03-27T03:58:04Z",
+      "headSha": "8294a75b78ca3bdbb7ecf641001d7bc358f4fe34",
+      "generatedAt": "2026-03-27T04:13:36.474Z",
+      "summary": "XSA on every layer plus learned norm-constrained residual mixing and end-to-end QAT trains a quantization-friendly GPT stack.",
+      "tags": [
+        "attention",
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-928.json"
+    },
     {
       "prNumber": 927,
       "title": "Recursive Transformer 4B/7L + VE + QAT + TTT — val_bpb 1.1696 (3-seed mean)",
@@ -446,13 +470,14 @@
       "prNumber": 900,
       "title": "Record: Two-Level Dirichlet Posterior Mixing with Per-Order OBCL -- 0.1156 BPB",
       "status": "open",
-      "updatedAt": "2026-03-27T02:09:44Z",
+      "updatedAt": "2026-03-27T04:13:05Z",
       "headSha": "1190eebd8670aa31c74488836a1b80f7c062fb61",
-      "generatedAt": "2026-03-27T02:13:39.079Z",
-      "summary": "Two-level Dirichlet hierarchy with neural base, per-order OBCL-tuned concentrations across 2–15 grams, and phrase suffix smoothing.",
+      "generatedAt": "2026-03-27T04:13:43.150Z",
+      "summary": "Hierarchical Dirichlet-Multinomial smoothing mixes a neural EBLS base with per-order OBCL concentrations and phrase suffix caches.",
       "tags": [
         "architecture",
-        "regularization"
+        "regularization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -537,11 +562,12 @@
       "prNumber": 893,
       "title": "Record: Two-Pass Order-12 N-gram Backoff + Parallel Muon — val_bpb 0.1310 (3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-26T19:32:05Z",
+      "updatedAt": "2026-03-27T04:12:39Z",
       "headSha": "30f414b5cd732070f5df466f1938ad033c288c65",
-      "generatedAt": "2026-03-26T19:43:07.611Z",
-      "summary": "Two-pass evaluation builds order-12 n-gram cache from warm tokens, then rescoring cold chunks atop an 11-layer Parallel Muon stack.",
+      "generatedAt": "2026-03-27T04:13:49.539Z",
+      "summary": "11L Parallel Muon transformer uses a two-pass order-12 n-gram backoff cache rescoring pipeline with BigramHash/Gated Attention and GPTQ-lite int6 quantization.",
       "tags": [
+        "muon",
         "architecture",
         "evaluation",
         "quantization"
@@ -9745,14 +9771,15 @@
       "prNumber": 321,
       "title": "Add record: Optimizer Tuning + Sliding Window Eval (val_bpb=1.1864)",
       "status": "open",
-      "updatedAt": "2026-03-21T07:04:44Z",
-      "headSha": "1060c3692b3ae2fa8c6d36538194c803a4beab88",
-      "generatedAt": "2026-03-21T07:29:36.487Z",
-      "summary": "Baseline ReLU² model trained at seq2048 with tuned Muon optimizer hyperparameters and sliding-window stride-64 evaluation.",
+      "updatedAt": "2026-03-27T03:55:20Z",
+      "headSha": "c2fb71404e962c6f99186f38f3e86bfc33b9c62e",
+      "generatedAt": "2026-03-27T04:13:55.284Z",
+      "summary": "Optimizer warmdown/muon tuning with seq2048 training feeds sliding-window stride-64 evaluation on baseline plus int8+zlib quantization.",
       "tags": [
         "optimizer",
         "training-schedule",
-        "evaluation"
+        "evaluation",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -11991,15 +12018,14 @@
       "prNumber": 182,
       "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
       "status": "open",
-      "updatedAt": "2026-03-27T03:25:02Z",
-      "headSha": "8f052a028dead780f9e727434ac1d89df622b2a5",
-      "generatedAt": "2026-03-27T03:43:53.331Z",
-      "summary": "Titans-style neural memory linearized to causal attention via cumsum between attention and MLP, paired with LoRA TTT, int6, Muon WD, and overtone init.",
+      "updatedAt": "2026-03-27T04:02:21Z",
+      "headSha": "0b4d311abb0cfd31fc2e4f960f7a16f9bb61bccf",
+      "generatedAt": "2026-03-27T04:13:59.507Z",
+      "summary": "Linearized Titans-style memory per block via causal linear attention plus LoRA TTT and FP16/int6 tricks for compact evaluation.",
       "tags": [
         "architecture",
         "attention",
-        "quantization",
-        "muon"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

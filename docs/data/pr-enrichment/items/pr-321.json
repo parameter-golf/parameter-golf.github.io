@@ -1,36 +1,38 @@
 {
-  "generatedAt": "2026-03-21T07:29:36.487Z",
+  "generatedAt": "2026-03-27T04:13:55.284Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 321,
     "title": "Add record: Optimizer Tuning + Sliding Window Eval (val_bpb=1.1864)",
     "state": "open",
-    "updatedAt": "2026-03-21T07:04:44Z",
-    "headSha": "1060c3692b3ae2fa8c6d36538194c803a4beab88",
+    "updatedAt": "2026-03-27T03:55:20Z",
+    "headSha": "c2fb71404e962c6f99186f38f3e86bfc33b9c62e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/321",
     "authorLogin": "andreanjos"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_MLP3x_LeakyReLU_QAT_Int6_SlideEval/README.md",
       "records/track_10min_16mb/2026-03-21_OptimizerTuning_SlideEval64/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Baseline ReLU² model trained at seq2048 with tuned Muon optimizer hyperparameters and sliding-window stride-64 evaluation.",
+    "summary": "Optimizer warmdown/muon tuning with seq2048 training feeds sliding-window stride-64 evaluation on baseline plus int8+zlib quantization.",
     "tags": [
       "optimizer",
       "training-schedule",
-      "evaluation"
+      "evaluation",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Tune muon optimizer: warmdown 10k, muon steps 10, grad clip 1.0, beta2 0.99, scalar LR 0.02",
-      "Train at sequence length 2048",
-      "Sliding-window eval stride 64 to score every token with max context"
+      "warmdown/muon optimizer tuning",
+      "seq2048 training",
+      "sliding-window stride-64 eval with int8+zlib quantization"
     ]
   },
   "compatibility": {

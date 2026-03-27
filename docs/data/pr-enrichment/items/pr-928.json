@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-27T04:13:36.474Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 928,
+    "title": "Non-record: XSA-all + mHC + Full QAT (val_bpb=1.1211)",
+    "state": "open",
+    "updatedAt": "2026-03-27T03:58:04Z",
+    "headSha": "8294a75b78ca3bdbb7ecf641001d7bc358f4fe34",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/928",
+    "authorLogin": "autocode-rayes"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_XSA-all_mHC_FullQAT_ParallelMuon_1.1211/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "XSA on every layer plus learned norm-constrained residual mixing and end-to-end QAT trains a quantization-friendly GPT stack.",
+    "tags": [
+      "attention",
+      "architecture",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "cross-sequence attention from layer 0",
+      "manifold-constrained alpha/beta residual mix",
+      "full-training int6 QAT"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
