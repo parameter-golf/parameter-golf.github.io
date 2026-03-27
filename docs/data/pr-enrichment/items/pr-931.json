@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T07:15:13.548Z",
+  "generatedAt": "2026-03-27T07:44:52.749Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 931,
     "title": "Record: 0.0498 bpb - Packed Training N-gram Artifact + Learned Weighting Gate (updated) ",
     "state": "open",
-    "updatedAt": "2026-03-27T06:56:21Z",
+    "updatedAt": "2026-03-27T07:18:14Z",
     "headSha": "5e6c5de2aebbe7bf6b9a93e95b08d0c8ab80669d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/931",
     "authorLogin": "AnirudhRahul"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Learned gate mixes neural model with order-2..9 n-gram experts while evaluation begins from a packed training cache embedded in the artifact.",
+    "summary": "Learned gate blends neural output with packed order-2..9 n-gram experts whose cache is serialized into the artifact for immediate warm-start and causal eval.",
     "tags": [
       "architecture",
-      "compression",
-      "evaluation"
+      "evaluation",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Learned gate blending neural logits with order-2..9 n-gram experts",
-      "Packed 32K-bucket training cache serialized into the artifact for warm eval start",
-      "Context-only gating with score-first single-pass evaluation and cached GPTQ calibration"
+      "learned gating over neural + n-gram experts",
+      "packed training n-gram cache embedded in artifact",
+      "score-first single-pass causal evaluation"
     ]
   },
   "compatibility": {

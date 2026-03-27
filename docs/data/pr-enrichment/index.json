@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T07:15:33.846Z",
+  "generatedAt": "2026-03-27T07:44:59.598Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -172,14 +172,14 @@
       "prNumber": 931,
       "title": "Record: 0.0498 bpb - Packed Training N-gram Artifact + Learned Weighting Gate (updated) ",
       "status": "open",
-      "updatedAt": "2026-03-27T06:56:21Z",
+      "updatedAt": "2026-03-27T07:18:14Z",
       "headSha": "5e6c5de2aebbe7bf6b9a93e95b08d0c8ab80669d",
-      "generatedAt": "2026-03-27T07:15:13.548Z",
-      "summary": "Learned gate mixes neural model with order-2..9 n-gram experts while evaluation begins from a packed training cache embedded in the artifact.",
+      "generatedAt": "2026-03-27T07:44:52.749Z",
+      "summary": "Learned gate blends neural output with packed order-2..9 n-gram experts whose cache is serialized into the artifact for immediate warm-start and causal eval.",
       "tags": [
         "architecture",
-        "compression",
-        "evaluation"
+        "evaluation",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1271,12 +1271,13 @@
       "prNumber": 861,
       "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1326 (15.51 MB)",
       "status": "open",
-      "updatedAt": "2026-03-26T22:15:36Z",
-      "headSha": "b68b95d747142db1bae098b9d56dd2262f36cd8c",
-      "generatedAt": "2026-03-26T23:44:45.238Z",
-      "summary": "U-Net stack pairs per-row int5 QAT plus pruning and bigram hash/XSA tweaks with score-first TTT on MLP params for compact 16MB entries.",
+      "updatedAt": "2026-03-27T07:34:37Z",
+      "headSha": "28d45d26f58981b4e4c94acf8748cc38e1d3a93a",
+      "generatedAt": "2026-03-27T07:44:59.476Z",
+      "summary": "11L U-Net GPT couples Int5 per-row QAT with score-first TTT on MLP params plus bigram hash embeddings and XSA layers for compact compression.",
       "tags": [
         "quantization",
+        "attention",
         "architecture",
         "training-schedule"
       ],
