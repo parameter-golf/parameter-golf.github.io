@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-27T12:15:46.254Z",
-  "lastSeenUpdatedAt": "2026-03-27T12:12:02Z",
+  "generatedAt": "2026-03-27T12:45:44.396Z",
+  "lastSeenUpdatedAt": "2026-03-27T12:43:14Z",
   "prs": {
     "1": {
       "number": 1,
@@ -79968,7 +79968,7 @@
     },
     "923": {
       "number": 923,
-      "updatedAt": "2026-03-27T04:54:21Z",
+      "updatedAt": "2026-03-27T12:43:14Z",
       "pr": {
         "number": 923,
         "title": "[Notable Non-Record Submission] 1.1090 BPB - 74.3M Ternary U-Net Transformer (100k steps/3h)",
@@ -79979,7 +79979,7 @@
         "authorLogin": "CiprianFlorin-Ifrim",
         "authorName": null,
         "createdAt": "2026-03-27T01:41:36Z",
-        "updatedAt": "2026-03-27T04:54:21Z",
+        "updatedAt": "2026-03-27T12:43:14Z",
         "headSha": "daeb5232d38010dbf1c125083a8146a770a1aabb",
         "headRepo": "CiprianFlorin-Ifrim/openai-parameter-golf-challenge"
       },
@@ -82488,6 +82488,594 @@
             "script": "https://github.com/openai/parameter-golf/blob/1707e27de0be3b008987ee23d31abed9109e8bfc/records/track_non_record_16mb/2026-03-27_PhaseCoherenceGatedGradients/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/1707e27de0be3b008987ee23d31abed9109e8bfc/records/track_non_record_16mb/2026-03-27_PhaseCoherenceGatedGradients",
             "pr": "https://github.com/openai/parameter-golf/pull/950"
+          }
+        }
+      ]
+    },
+    "951": {
+      "number": 951,
+      "updatedAt": "2026-03-27T12:39:35Z",
+      "pr": {
+        "number": 951,
+        "title": "16L XSA-all + INT4 MLP QAT + GPTQ + EMA + Partial RoPE + 30ep Cosine TTT",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/951",
+        "authorLogin": "Bharath-970",
+        "authorName": null,
+        "createdAt": "2026-03-27T12:39:35Z",
+        "updatedAt": "2026-03-27T12:39:35Z",
+        "headSha": "4fb6969fc3fda29a6e0d846e0f39515799a3b004",
+        "headRepo": "Bharath-970/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-951-records-track_10min_16mb-2026-03-22_Int4MLP_11L_QAT-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-22_Int4MLP_11L_QAT",
+            "folderPath": "records/track_10min_16mb/2026-03-22_Int4MLP_11L_QAT",
+            "submissionPath": "records/track_10min_16mb/2026-03-22_Int4MLP_11L_QAT/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-22_Int4MLP_11L_QAT/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-22_Int4MLP_11L_QAT/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-22_Int4MLP_11L_QAT/train_gpt.py"
+          },
+          "submission": {
+            "author": "Bharath-970",
+            "githubId": "Bharath-970",
+            "name": "Bharath",
+            "blurb": null,
+            "date": "2026-03-27T12:39:35Z"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 951,
+            "title": "16L XSA-all + INT4 MLP QAT + GPTQ + EMA + Partial RoPE + 30ep Cosine TTT",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/951",
+            "authorLogin": "Bharath-970",
+            "authorName": null,
+            "createdAt": "2026-03-27T12:39:35Z",
+            "updatedAt": "2026-03-27T12:39:35Z",
+            "headSha": "4fb6969fc3fda29a6e0d846e0f39515799a3b004",
+            "headRepo": "Bharath-970/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-22_Int4MLP_11L_QAT/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-22_Int4MLP_11L_QAT/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-22_Int4MLP_11L_QAT/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-22_Int4MLP_11L_QAT/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-22_Int4MLP_11L_QAT",
+            "pr": "https://github.com/openai/parameter-golf/pull/951"
+          }
+        },
+        {
+          "id": "pr-951-records-track_10min_16mb-2026-03-23_12L_Int4MLP_Bigram20480_Trigram-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-23_12L_Int4MLP_Bigram20480_Trigram",
+            "folderPath": "records/track_10min_16mb/2026-03-23_12L_Int4MLP_Bigram20480_Trigram",
+            "submissionPath": "records/track_10min_16mb/2026-03-23_12L_Int4MLP_Bigram20480_Trigram/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-23_12L_Int4MLP_Bigram20480_Trigram/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-23_12L_Int4MLP_Bigram20480_Trigram/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-23_12L_Int4MLP_Bigram20480_Trigram/train_gpt.py"
+          },
+          "submission": {
+            "author": "Bharath-970",
+            "githubId": "Bharath-970",
+            "name": "Bharath",
+            "blurb": null,
+            "date": "2026-03-27T12:39:35Z"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 951,
+            "title": "16L XSA-all + INT4 MLP QAT + GPTQ + EMA + Partial RoPE + 30ep Cosine TTT",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/951",
+            "authorLogin": "Bharath-970",
+            "authorName": null,
+            "createdAt": "2026-03-27T12:39:35Z",
+            "updatedAt": "2026-03-27T12:39:35Z",
+            "headSha": "4fb6969fc3fda29a6e0d846e0f39515799a3b004",
+            "headRepo": "Bharath-970/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-23_12L_Int4MLP_Bigram20480_Trigram/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-23_12L_Int4MLP_Bigram20480_Trigram/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-23_12L_Int4MLP_Bigram20480_Trigram/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-23_12L_Int4MLP_Bigram20480_Trigram/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-23_12L_Int4MLP_Bigram20480_Trigram",
+            "pr": "https://github.com/openai/parameter-golf/pull/951"
+          }
+        },
+        {
+          "id": "pr-951-records-track_10min_16mb-2026-03-24_12L_EMA_PartialRoPE_Trigram-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-24_12L_EMA_PartialRoPE_Trigram",
+            "folderPath": "records/track_10min_16mb/2026-03-24_12L_EMA_PartialRoPE_Trigram",
+            "submissionPath": "records/track_10min_16mb/2026-03-24_12L_EMA_PartialRoPE_Trigram/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-24_12L_EMA_PartialRoPE_Trigram/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-24_12L_EMA_PartialRoPE_Trigram/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-24_12L_EMA_PartialRoPE_Trigram/train_gpt.py"
+          },
+          "submission": {
+            "author": "Bharath-970",
+            "githubId": "Bharath-970",
+            "name": "Bharath",
+            "blurb": null,
+            "date": "2026-03-27T12:39:35Z"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 951,
+            "title": "16L XSA-all + INT4 MLP QAT + GPTQ + EMA + Partial RoPE + 30ep Cosine TTT",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/951",
+            "authorLogin": "Bharath-970",
+            "authorName": null,
+            "createdAt": "2026-03-27T12:39:35Z",
+            "updatedAt": "2026-03-27T12:39:35Z",
+            "headSha": "4fb6969fc3fda29a6e0d846e0f39515799a3b004",
+            "headRepo": "Bharath-970/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_12L_EMA_PartialRoPE_Trigram/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_12L_EMA_PartialRoPE_Trigram/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_12L_EMA_PartialRoPE_Trigram/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_12L_EMA_PartialRoPE_Trigram/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_12L_EMA_PartialRoPE_Trigram",
+            "pr": "https://github.com/openai/parameter-golf/pull/951"
+          }
+        },
+        {
+          "id": "pr-951-records-track_10min_16mb-2026-03-24_12L_XSA4_GPTQ_EMA_PartialRoPE-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-24_12L_XSA4_GPTQ_EMA_PartialRoPE",
+            "folderPath": "records/track_10min_16mb/2026-03-24_12L_XSA4_GPTQ_EMA_PartialRoPE",
+            "submissionPath": "records/track_10min_16mb/2026-03-24_12L_XSA4_GPTQ_EMA_PartialRoPE/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-24_12L_XSA4_GPTQ_EMA_PartialRoPE/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-24_12L_XSA4_GPTQ_EMA_PartialRoPE/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-24_12L_XSA4_GPTQ_EMA_PartialRoPE/train_gpt.py"
+          },
+          "submission": {
+            "author": "Bharath-970",
+            "githubId": "Bharath-970",
+            "name": "Bharath",
+            "blurb": null,
+            "date": "2026-03-27T12:39:35Z"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 951,
+            "title": "16L XSA-all + INT4 MLP QAT + GPTQ + EMA + Partial RoPE + 30ep Cosine TTT",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/951",
+            "authorLogin": "Bharath-970",
+            "authorName": null,
+            "createdAt": "2026-03-27T12:39:35Z",
+            "updatedAt": "2026-03-27T12:39:35Z",
+            "headSha": "4fb6969fc3fda29a6e0d846e0f39515799a3b004",
+            "headRepo": "Bharath-970/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_12L_XSA4_GPTQ_EMA_PartialRoPE/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_12L_XSA4_GPTQ_EMA_PartialRoPE/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_12L_XSA4_GPTQ_EMA_PartialRoPE/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_12L_XSA4_GPTQ_EMA_PartialRoPE/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_12L_XSA4_GPTQ_EMA_PartialRoPE",
+            "pr": "https://github.com/openai/parameter-golf/pull/951"
+          }
+        },
+        {
+          "id": "pr-951-records-track_10min_16mb-2026-03-24_13L_XSA4_GPTQ_EMA_PartialRoPE-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-24_13L_XSA4_GPTQ_EMA_PartialRoPE",
+            "folderPath": "records/track_10min_16mb/2026-03-24_13L_XSA4_GPTQ_EMA_PartialRoPE",
+            "submissionPath": "records/track_10min_16mb/2026-03-24_13L_XSA4_GPTQ_EMA_PartialRoPE/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-24_13L_XSA4_GPTQ_EMA_PartialRoPE/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-24_13L_XSA4_GPTQ_EMA_PartialRoPE/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-24_13L_XSA4_GPTQ_EMA_PartialRoPE/train_gpt.py"
+          },
+          "submission": {
+            "author": "Bharath-970",
+            "githubId": "Bharath-970",
+            "name": "Bharath",
+            "blurb": null,
+            "date": "2026-03-27T12:39:35Z"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 951,
+            "title": "16L XSA-all + INT4 MLP QAT + GPTQ + EMA + Partial RoPE + 30ep Cosine TTT",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/951",
+            "authorLogin": "Bharath-970",
+            "authorName": null,
+            "createdAt": "2026-03-27T12:39:35Z",
+            "updatedAt": "2026-03-27T12:39:35Z",
+            "headSha": "4fb6969fc3fda29a6e0d846e0f39515799a3b004",
+            "headRepo": "Bharath-970/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_13L_XSA4_GPTQ_EMA_PartialRoPE/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_13L_XSA4_GPTQ_EMA_PartialRoPE/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_13L_XSA4_GPTQ_EMA_PartialRoPE/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_13L_XSA4_GPTQ_EMA_PartialRoPE/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-24_13L_XSA4_GPTQ_EMA_PartialRoPE",
+            "pr": "https://github.com/openai/parameter-golf/pull/951"
+          }
+        },
+        {
+          "id": "pr-951-records-track_10min_16mb-2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE",
+            "folderPath": "records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE",
+            "submissionPath": "records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE/train_gpt.py"
+          },
+          "submission": {
+            "author": "Bharath-970",
+            "githubId": "Bharath-970",
+            "name": "Bharath",
+            "blurb": null,
+            "date": "2026-03-27T12:39:35Z"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 951,
+            "title": "16L XSA-all + INT4 MLP QAT + GPTQ + EMA + Partial RoPE + 30ep Cosine TTT",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/951",
+            "authorLogin": "Bharath-970",
+            "authorName": null,
+            "createdAt": "2026-03-27T12:39:35Z",
+            "updatedAt": "2026-03-27T12:39:35Z",
+            "headSha": "4fb6969fc3fda29a6e0d846e0f39515799a3b004",
+            "headRepo": "Bharath-970/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE",
+            "pr": "https://github.com/openai/parameter-golf/pull/951"
+          }
+        },
+        {
+          "id": "pr-951-records-track_10min_16mb-2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE_TTT-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE_TTT",
+            "folderPath": "records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE_TTT",
+            "submissionPath": "records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE_TTT/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE_TTT/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE_TTT/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE_TTT/train_gpt.py"
+          },
+          "submission": {
+            "author": "Bharath-970",
+            "githubId": "Bharath-970",
+            "name": "Bharath",
+            "blurb": null,
+            "date": "2026-03-27T12:39:35Z"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 951,
+            "title": "16L XSA-all + INT4 MLP QAT + GPTQ + EMA + Partial RoPE + 30ep Cosine TTT",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/951",
+            "authorLogin": "Bharath-970",
+            "authorName": null,
+            "createdAt": "2026-03-27T12:39:35Z",
+            "updatedAt": "2026-03-27T12:39:35Z",
+            "headSha": "4fb6969fc3fda29a6e0d846e0f39515799a3b004",
+            "headRepo": "Bharath-970/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE_TTT/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE_TTT/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE_TTT/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE_TTT/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE_TTT",
+            "pr": "https://github.com/openai/parameter-golf/pull/951"
+          }
+        },
+        {
+          "id": "pr-951-records-track_10min_16mb-2026-03-25_16L_XSAall_GPTQ_EMA_PartialRoPE_TTT-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-25_16L_XSAall_GPTQ_EMA_PartialRoPE_TTT",
+            "folderPath": "records/track_10min_16mb/2026-03-25_16L_XSAall_GPTQ_EMA_PartialRoPE_TTT",
+            "submissionPath": "records/track_10min_16mb/2026-03-25_16L_XSAall_GPTQ_EMA_PartialRoPE_TTT/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-25_16L_XSAall_GPTQ_EMA_PartialRoPE_TTT/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-25_16L_XSAall_GPTQ_EMA_PartialRoPE_TTT/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-25_16L_XSAall_GPTQ_EMA_PartialRoPE_TTT/train_gpt.py"
+          },
+          "submission": {
+            "author": "Bharath-970",
+            "githubId": "Bharath-970",
+            "name": "Bharath",
+            "blurb": null,
+            "date": "2026-03-27T12:39:35Z"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 951,
+            "title": "16L XSA-all + INT4 MLP QAT + GPTQ + EMA + Partial RoPE + 30ep Cosine TTT",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/951",
+            "authorLogin": "Bharath-970",
+            "authorName": null,
+            "createdAt": "2026-03-27T12:39:35Z",
+            "updatedAt": "2026-03-27T12:39:35Z",
+            "headSha": "4fb6969fc3fda29a6e0d846e0f39515799a3b004",
+            "headRepo": "Bharath-970/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_16L_XSAall_GPTQ_EMA_PartialRoPE_TTT/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_16L_XSAall_GPTQ_EMA_PartialRoPE_TTT/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_16L_XSAall_GPTQ_EMA_PartialRoPE_TTT/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_16L_XSAall_GPTQ_EMA_PartialRoPE_TTT/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/4fb6969fc3fda29a6e0d846e0f39515799a3b004/records/track_10min_16mb/2026-03-25_16L_XSAall_GPTQ_EMA_PartialRoPE_TTT",
+            "pr": "https://github.com/openai/parameter-golf/pull/951"
           }
         }
       ]

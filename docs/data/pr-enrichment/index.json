@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-27T12:16:11.510Z",
+  "generatedAt": "2026-03-27T12:45:53.893Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 951,
+      "title": "16L XSA-all + INT4 MLP QAT + GPTQ + EMA + Partial RoPE + 30ep Cosine TTT",
+      "status": "open",
+      "updatedAt": "2026-03-27T12:39:35Z",
+      "headSha": "4fb6969fc3fda29a6e0d846e0f39515799a3b004",
+      "generatedAt": "2026-03-27T12:45:53.752Z",
+      "summary": "Shares KV state across 16 layers while pairing INT4 nibble MLP QAT, GPTQ-lite, EMA, partial RoPE, hash embeddings, and 30-epoch cosine TTT.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-951.json"
+    },
     {
       "prNumber": 950,
       "title": "2026-03-27_PhaseCoherenceGatedGradients submission",

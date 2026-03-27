@@ -1,31 +1,37 @@
 {
-  "generatedAt": "2026-03-27T12:15:19.350Z",
+  "generatedAt": "2026-03-27T12:45:20.300Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
   "skipped": [
     {
+      "pr": 923,
+      "reason": "no-record-submission-json"
+    },
+    {
       "stage": "pull-request-readme",
-      "pr": 347,
-      "submissionPath": "records/track_10min_16mb/2026-03-26_LongContext4096_BankQAT_GatedAttn/submission.json",
+      "pr": 951,
+      "submissionPath": "records/track_10min_16mb/2026-03-25_14L_XSA6_GPTQ_EMA_PartialRoPE_TTT/submission.json",
       "reason": "missing-or-unreadable-readme"
     },
     {
-      "pr": 386,
-      "reason": "no-record-submission-json"
+      "stage": "pull-request-readme",
+      "pr": 951,
+      "submissionPath": "records/track_10min_16mb/2026-03-25_16L_XSAall_GPTQ_EMA_PartialRoPE_TTT/submission.json",
+      "reason": "missing-or-unreadable-readme"
     }
   ],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-27T11:40:57Z",
+    "cutoffUpdatedAt": "2026-03-27T12:12:02Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 4,
-    "prsReused": 196,
+    "prsRefreshed": 2,
+    "prsReused": 198,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 904,
+    "cacheEntries": 905,
     "retryWindowRetained": false
   }
 }
