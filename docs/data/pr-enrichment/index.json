@@ -1,20 +1,41 @@
 {
-  "generatedAt": "2026-03-27T19:48:10.645Z",
+  "generatedAt": "2026-03-27T20:18:40.786Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 979,
+      "title": "Record: 1.1387 BPB — 11L LeakyReLU² + Early QAT@0.5 + GPTQ-lite + EMA",
+      "status": "open",
+      "updatedAt": "2026-03-27T19:59:19Z",
+      "headSha": "b0bcfbaac4e8c86cfdb1ab63e4ab3c4a78a96b87",
+      "generatedAt": "2026-03-27T20:18:16.847Z",
+      "summary": "11L 512-dim transformer with LeakyReLU², early LR-scale 0.5 STE int6 QAT, and GPTQ-lite per-row clip search before export.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-979.json"
+    },
+    {
       "prNumber": 978,
       "title": "Rerun of #972 with actual full-vocab normalization",
       "status": "open",
-      "updatedAt": "2026-03-27T19:45:11Z",
+      "updatedAt": "2026-03-27T19:57:37Z",
       "headSha": "6aada6ccb6af51539c9b2a11292f95284dfe9b62",
-      "generatedAt": "2026-03-27T19:47:59.291Z",
-      "summary": "Normalizes hashed 1024-token n-gram counts in sliding eval before Bayesian blending with the neural prior to ensure the blended scorer is honestly computed.",
+      "generatedAt": "2026-03-27T20:18:23.325Z",
+      "summary": "Full-vocab 1024-token n-gram scoring now divides by the hashed-vocab mass before Bayesian blending with the neural sliding baseline.",
       "tags": [
-        "evaluation",
-        "regularization",
-        "mixed-precision"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1184,13 +1205,14 @@
       "prNumber": 911,
       "title": "KoopCaps-HRM Ternary Reasoner — Koopman Capsule Dynamics + Adaptive Halting",
       "status": "open",
-      "updatedAt": "2026-03-27T19:43:02Z",
-      "headSha": "53ac82e4752efed690284462a61d90dd951655c0",
-      "generatedAt": "2026-03-27T19:48:10.507Z",
-      "summary": "Ternary U-Net with Koopman-driven capsules iteratively predicts corrective updates, coupling Hadamard feedback with adaptive halting and sliding-window carry.",
+      "updatedAt": "2026-03-27T20:13:37Z",
+      "headSha": "b0967491168104c8ce42916cc3d1b3f6e809f12c",
+      "generatedAt": "2026-03-27T20:18:30.881Z",
+      "summary": "Ternary-packed U-Net with Koopman capsule dynamics, adaptive halting, and cross-window carry for iterative refinement inside 12MB.",
       "tags": [
         "architecture",
         "quantization",
+        "attention",
         "evaluation"
       ],
       "flags": {
@@ -1620,10 +1642,10 @@
       "prNumber": 882,
       "title": "Non-record: LeakyReLU(0.5)^2 + TrigramHash on PR414 stack (1.3762 bpb, 1xA100)",
       "status": "open",
-      "updatedAt": "2026-03-27T18:25:50Z",
-      "headSha": "95277a642fd04e87e19a3b56b089772bd1cc3eed",
-      "generatedAt": "2026-03-27T18:47:42.461Z",
-      "summary": "Stacked on PR414, replaces MLP relu^2 with LeakyReLU(0.5)^2 and hashes token trigrams into 8192 buckets before attention.",
+      "updatedAt": "2026-03-27T20:07:10Z",
+      "headSha": "76571ebbf4435748fd2f553adc56f1861d709336",
+      "generatedAt": "2026-03-27T20:18:36.342Z",
+      "summary": "Builds on PR414 by swapping ReLU^2 for LeakyReLU(0.5)^2 and trigram hashing triples into 8k buckets to enrich local context before attention.",
       "tags": [
         "architecture",
         "attention",
@@ -8858,14 +8880,13 @@
       "prNumber": 425,
       "title": "Codex/runpod 2026 03 20 checkpoint",
       "status": "open",
-      "updatedAt": "2026-03-27T18:10:16Z",
-      "headSha": "7dba94e6464124a869f0afdeb1782390fcfbf830",
-      "generatedAt": "2026-03-27T18:17:16.511Z",
-      "summary": "Explored ATTN_TWICE alpha tuning with split EVAL/TTT sequence lengths to balance roundtrip and TTT eval behavior in a 1xH100 ablation run.",
+      "updatedAt": "2026-03-27T19:59:32Z",
+      "headSha": "b0fd77231ca24fa07f5cf56a8b7d3c4acd98fba9",
+      "generatedAt": "2026-03-27T20:18:40.723Z",
+      "summary": "Single-H100 ablation blends ATTN_TWICE_ALPHA=0.05 with split eval lengths (2048/1024) and LoRA-TTT tuning to balance roundtrip and TTT the 600s run.",
       "tags": [
         "attention",
         "evaluation",
-        "muon",
         "non-record"
       ],
       "flags": {

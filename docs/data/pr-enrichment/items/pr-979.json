@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T20:18:16.847Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 979,
+    "title": "Record: 1.1387 BPB — 11L LeakyReLU² + Early QAT@0.5 + GPTQ-lite + EMA",
+    "state": "open",
+    "updatedAt": "2026-03-27T19:59:19Z",
+    "headSha": "b0bcfbaac4e8c86cfdb1ab63e4ab3c4a78a96b87",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/979",
+    "authorLogin": "0xadvait"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_ByteStateTransformer/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11L 512-dim transformer with LeakyReLU², early LR-scale 0.5 STE int6 QAT, and GPTQ-lite per-row clip search before export.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Early LR-scale 0.5 STE int6 QAT during warmdown",
+      "GPTQ-lite per-row clip search for int6 attn/MLP weights",
+      "LeakyReLU² activations with U-Net skip links"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

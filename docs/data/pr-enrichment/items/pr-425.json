@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T18:17:16.511Z",
+  "generatedAt": "2026-03-27T20:18:40.723Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 425,
     "title": "Codex/runpod 2026 03 20 checkpoint",
     "state": "open",
-    "updatedAt": "2026-03-27T18:10:16Z",
-    "headSha": "7dba94e6464124a869f0afdeb1782390fcfbf830",
+    "updatedAt": "2026-03-27T19:59:32Z",
+    "headSha": "b0fd77231ca24fa07f5cf56a8b7d3c4acd98fba9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/425",
     "authorLogin": "DeividasMat"
   },
@@ -20,19 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Explored ATTN_TWICE alpha tuning with split EVAL/TTT sequence lengths to balance roundtrip and TTT eval behavior in a 1xH100 ablation run.",
+    "summary": "Single-H100 ablation blends ATTN_TWICE_ALPHA=0.05 with split eval lengths (2048/1024) and LoRA-TTT tuning to balance roundtrip and TTT the 600s run.",
     "tags": [
       "attention",
       "evaluation",
-      "muon",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Dual eval lengths for roundtrip vs TTT tradeoffs",
-      "Lightweight ATTN_TWICE calibration",
-      "Muon-backed low-cost ablation"
+      "Twice-attention scaling (ATTN_TWICE_ALPHA=0.05)",
+      "Separate eval lengths for roundtrip vs TTT scoring",
+      "Single-shard LoRA-TTT ablation under 600s cap"
     ]
   },
   "compatibility": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T18:47:42.461Z",
+  "generatedAt": "2026-03-27T20:18:36.342Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 882,
     "title": "Non-record: LeakyReLU(0.5)^2 + TrigramHash on PR414 stack (1.3762 bpb, 1xA100)",
     "state": "open",
-    "updatedAt": "2026-03-27T18:25:50Z",
-    "headSha": "95277a642fd04e87e19a3b56b089772bd1cc3eed",
+    "updatedAt": "2026-03-27T20:07:10Z",
+    "headSha": "76571ebbf4435748fd2f553adc56f1861d709336",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/882",
     "authorLogin": "IshiPareek"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacked on PR414, replaces MLP relu^2 with LeakyReLU(0.5)^2 and hashes token trigrams into 8192 buckets before attention.",
+    "summary": "Builds on PR414 by swapping ReLU^2 for LeakyReLU(0.5)^2 and trigram hashing triples into 8k buckets to enrich local context before attention.",
     "tags": [
       "architecture",
       "attention",
@@ -28,8 +28,8 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LeakyReLU(0.5)^2 in MLP",
-      "8192-bucket TrigramHash before attention"
+      "LeakyReLU(0.5)^2 keeps MLP neurons active instead of dying like ReLU^2",
+      "Trigram hashing groups token triples into 8k buckets to inject richer local context prior to attention"
     ]
   },
   "compatibility": {

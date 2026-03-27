@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T19:47:59.291Z",
+  "generatedAt": "2026-03-27T20:18:23.325Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 978,
     "title": "Rerun of #972 with actual full-vocab normalization",
     "state": "open",
-    "updatedAt": "2026-03-27T19:45:11Z",
+    "updatedAt": "2026-03-27T19:57:37Z",
     "headSha": "6aada6ccb6af51539c9b2a11292f95284dfe9b62",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/978",
     "authorLogin": "AnirudhRahul"
@@ -19,18 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Normalizes hashed 1024-token n-gram counts in sliding eval before Bayesian blending with the neural prior to ensure the blended scorer is honestly computed.",
+    "summary": "Full-vocab 1024-token n-gram scoring now divides by the hashed-vocab mass before Bayesian blending with the neural sliding baseline.",
     "tags": [
-      "evaluation",
-      "regularization",
-      "mixed-precision"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "full-vocab normalized 1024-token n-gram scoring",
-      "Bayesian first-match blend with neural prior",
-      "Int6 QAT quantized model artifact"
+      "Full-vocab 1024-token normalized n-gram scoring",
+      "Bayesian blend with fixed-beta neural prior",
+      "Corrected sliding evaluation normalization"
     ]
   },
   "compatibility": {
