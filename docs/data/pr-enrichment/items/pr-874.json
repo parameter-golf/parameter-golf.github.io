@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T17:41:20.746Z",
+  "generatedAt": "2026-03-28T20:24:50.585Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 874,
     "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.607, 1.92MB artifact)",
     "state": "open",
-    "updatedAt": "2026-03-26T17:23:09Z",
-    "headSha": "a0e74550512d3306d6ba12afa8a42549c4333b76",
+    "updatedAt": "2026-03-28T20:00:32Z",
+    "headSha": "54f1ea411f0910f148edc9050b1b9c6f50f4b39a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/874",
     "authorLogin": "fielding"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Use seeded random base matrices plus rank-16 adapters per projection so only 11% of weights are learned and stored.",
+    "summary": "Regenerated random linear weights plus rank-16 adapters let a 5-layer transformer learn with 90% noise and tiny 1.92MB artifact.",
     "tags": [
       "architecture",
       "compression",
+      "regularization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "seeded random foundations",
-      "LoRA-style adapter learning",
-      "per-layer regeneration without state storage"
+      "random seed-regenerated base matrices",
+      "LoRA-style adapter updates",
+      "depth and rank sweeps to balance compute vs steps"
     ]
   },
   "compatibility": {

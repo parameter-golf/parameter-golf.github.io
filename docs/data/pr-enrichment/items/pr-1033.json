@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T18:54:16.944Z",
+  "generatedAt": "2026-03-28T20:24:39.748Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1033,
     "title": "Record: 0.4311 BPB - Complementary Training + Backoff N-gram Mixer + TTT",
     "state": "open",
-    "updatedAt": "2026-03-28T18:42:40Z",
+    "updatedAt": "2026-03-28T19:59:56Z",
     "headSha": "cacbf228f39cb2f71bc681e03cf39701409988e7",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1033",
     "authorLogin": "Naazimsnh02"
@@ -20,17 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Training downweights bigram-friendly tokens so the transformer focuses on cache-hard cases before mixing with an adaptive backoff N-gram cache.",
+    "summary": "Complementary bigram-weighted training makes the neural stack focus on hard tokens while an entropy-adaptive backoff mixer and score-first TTT cover the rest.",
     "tags": [
       "architecture",
+      "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Complementary bigram-weighted loss",
-      "Adaptive backoff N-gram mixer",
-      "Score-first AdamW TTT with frozen blocks"
+      "complementary bigram-weighted loss to specialize the model",
+      "BackoffNgramMixer with entropy-adaptive mixing",
+      "score-first AdamW TTT with frozen prefix blocks"
     ]
   },
   "compatibility": {

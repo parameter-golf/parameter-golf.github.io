@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T19:54:33.401Z",
+  "generatedAt": "2026-03-28T20:24:50.710Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -29,12 +29,13 @@
       "prNumber": 1033,
       "title": "Record: 0.4311 BPB - Complementary Training + Backoff N-gram Mixer + TTT",
       "status": "open",
-      "updatedAt": "2026-03-28T18:42:40Z",
+      "updatedAt": "2026-03-28T19:59:56Z",
       "headSha": "cacbf228f39cb2f71bc681e03cf39701409988e7",
-      "generatedAt": "2026-03-28T18:54:16.944Z",
-      "summary": "Training downweights bigram-friendly tokens so the transformer focuses on cache-hard cases before mixing with an adaptive backoff N-gram cache.",
+      "generatedAt": "2026-03-28T20:24:39.748Z",
+      "summary": "Complementary bigram-weighted training makes the neural stack focus on hard tokens while an entropy-adaptive backoff mixer and score-first TTT cover the rest.",
       "tags": [
         "architecture",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {
@@ -120,12 +121,11 @@
       "prNumber": 1029,
       "title": "Non-record: Knowledge Distillation - A Negative Result (val_bpb=1.152)",
       "status": "open",
-      "updatedAt": "2026-03-28T17:29:44Z",
-      "headSha": "4a3cfc598d1720d09e9b5b4d7aaa0e24abdac372",
-      "generatedAt": "2026-03-28T17:54:31.575Z",
-      "summary": "Cached top-32 logits from a 105M teacher and swept hard vs. soft KL distillation on the 11-layer student, but step overhead erased any gains.",
+      "updatedAt": "2026-03-28T19:59:53Z",
+      "headSha": "a2ec171a62b79e482dec2410058a84d576f2b1d9",
+      "generatedAt": "2026-03-28T20:24:45.657Z",
+      "summary": "Cached top-32 teacher logits to run soft KL distillation with alpha/temp sweeps, probing whether added per-step overhead ever beats cached-hard-label training.",
       "tags": [
-        "architecture",
         "regularization",
         "evaluation",
         "non-record"
@@ -2738,13 +2738,14 @@
       "prNumber": 874,
       "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.607, 1.92MB artifact)",
       "status": "open",
-      "updatedAt": "2026-03-26T17:23:09Z",
-      "headSha": "a0e74550512d3306d6ba12afa8a42549c4333b76",
-      "generatedAt": "2026-03-26T17:41:20.746Z",
-      "summary": "Use seeded random base matrices plus rank-16 adapters per projection so only 11% of weights are learned and stored.",
+      "updatedAt": "2026-03-28T20:00:32Z",
+      "headSha": "54f1ea411f0910f148edc9050b1b9c6f50f4b39a",
+      "generatedAt": "2026-03-28T20:24:50.585Z",
+      "summary": "Regenerated random linear weights plus rank-16 adapters let a 5-layer transformer learn with 90% noise and tiny 1.92MB artifact.",
       "tags": [
         "architecture",
         "compression",
+        "regularization",
         "non-record"
       ],
       "flags": {
