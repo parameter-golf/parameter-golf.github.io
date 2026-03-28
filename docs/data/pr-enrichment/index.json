@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T02:50:13.707Z",
+  "generatedAt": "2026-03-28T03:19:53.010Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -5174,15 +5174,15 @@
       "prNumber": 675,
       "title": "Non-record: LeakyReLU² + LAWA + Ramping WD + Val Training (val_bpb=1.2302, 1xH100)",
       "status": "open",
-      "updatedAt": "2026-03-28T02:44:12Z",
-      "headSha": "d736eb1ff0718defaae14f5b4cd15ef415e51c21",
-      "generatedAt": "2026-03-28T02:50:13.612Z",
-      "summary": "Stacks LeakyReLU(0.5)², LAWA checkpoint averaging, ramping weight decay, and val-set training on a 10-layer model to squeeze quality on 1xH100.",
+      "updatedAt": "2026-03-28T03:14:43Z",
+      "headSha": "b9256c1e659f9cbbdb5ee853b50da4c953040946",
+      "generatedAt": "2026-03-28T03:19:52.912Z",
+      "summary": "Stacks LeakyReLU², LAWA averaging, and ramping weight decay atop a 10-layer baseline while training on the validation set plus int8+lzma compression.",
       "tags": [
         "val-only",
-        "architecture",
         "training-schedule",
-        "regularization"
+        "quantization",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": true,
