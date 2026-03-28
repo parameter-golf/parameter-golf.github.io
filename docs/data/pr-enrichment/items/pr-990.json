@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T07:21:04.866Z",
+  "generatedAt": "2026-03-28T09:21:45.621Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 990,
     "title": "ClownCar: Frugendorff compression baseline + canonical DeltaNet integration",
     "state": "open",
-    "updatedAt": "2026-03-28T06:56:43Z",
+    "updatedAt": "2026-03-28T08:33:21Z",
     "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/990",
     "authorLogin": "newjordan"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "The Frugendorff crawler loops one shared block four times, recomputing flow instructions per state and widening flat layers to trade saved params for extra capacity under int8 constraints.",
+    "summary": "ClownCar reuses a shared crawler block with loop-conditioned flow instructions to boost effective depth and pairs it with canonical DeltaNet kernels for compression-friendly inference.",
     "tags": [
       "architecture",
-      "quantization",
-      "training-schedule"
+      "compression"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "N/A",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Shared crawler block run across four loops with state-dependent Flow Instructions",
-      "Wider flat encoder/decoder layers to reallocate saved parameters into capacity",
-      "DeltaNet kernel and CUDA graph focus to tame quantization and loop overhead"
+      "shared crawler block repeated 4x with stateful flow instructions",
+      "width allocation from freed parameters after loop sharing",
+      "canonical DeltaNet chunk_delta_rule integration"
     ]
   },
   "compatibility": {

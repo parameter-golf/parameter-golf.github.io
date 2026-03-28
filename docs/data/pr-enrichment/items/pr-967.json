@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T08:21:33.942Z",
+  "generatedAt": "2026-03-28T09:21:55.410Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 967,
     "title": "Record: 1.0450 BPB — SGD TTT + HedgeMixer with Per-Layer LR Groups",
     "state": "closed",
-    "updatedAt": "2026-03-28T08:16:51Z",
+    "updatedAt": "2026-03-28T08:27:06Z",
     "headSha": "ec95c58f2ee1da62105369e895e1629b3de395bf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/967",
     "authorLogin": "dexhunter"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "TTT training swaps AdamW for SGD momentum, keeps the HedgeMixer scoring, and uses per-layer LR multipliers with cosine decay for aggressive short-window adaptation.",
+    "summary": "HedgeMixer TTT replaces AdamW with momentum SGD plus per-layer LR scaling and cosine decay to better exploit the short adaptation window.",
     "tags": [
       "optimizer",
-      "training-schedule",
-      "architecture"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SGD momentum optimizer for TTT adaptation",
+      "Momentum SGD for TTT adaptation",
       "Per-layer LR groups with cosine decay",
-      "HedgeMixer score-first mixture"
+      "HedgeMixer scoring backbone"
     ]
   },
   "compatibility": {

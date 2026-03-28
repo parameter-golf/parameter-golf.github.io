@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-28T09:21:20.657Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1010,
+    "title": "Non-record: VRL + LeakyReLU² + Full SOTA Stack (iteration build)",
+    "state": "open",
+    "updatedAt": "2026-03-28T09:19:15Z",
+    "headSha": "4aaeb0487e79cbf1376a57ecac44122e04659147",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1010",
+    "authorLogin": "AnubhavBharadwaaj"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_VRL_LeakyReLU2_GPTQ/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer SOTA build pairs VRL-backed LeakyReLU² MLPs with XSA on final layers, EMA+SWA blending, and late QAT-triggered GPTQ-lite quantization.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Late QAT-triggered GPTQ-lite int6/8 quant stack",
+      "EMA + SWA blend before eval",
+      "XSA-final layers with LeakyReLU² 3×MLP"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
