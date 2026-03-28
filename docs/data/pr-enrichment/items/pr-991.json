@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-28T01:19:40.787Z",
+  "generatedAt": "2026-03-28T02:19:37.224Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 991,
     "title": "Record: 33.6M Int5 GPTQ + Score-First TTT (val_bpb=1.1145, 3-seed)",
     "state": "open",
-    "updatedAt": "2026-03-28T01:09:41Z",
-    "headSha": "4d2a4eda713276c6a31e5b9e07a04bc058c92f75",
+    "updatedAt": "2026-03-28T01:52:42Z",
+    "headSha": "da4750aa811ed4dfa3a70c915ce3a5711e2d2ec0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/991",
     "authorLogin": "ibarrajo"
   },
@@ -19,25 +19,24 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "33.6M GPT uses int5 GPTQ compression with legal score-first backward-looking TTT and temperature calibration before final eval.",
+    "summary": "Larger 33.6M model with int5 GPTQ compression feeds score-first backward-looking TTT on last blocks plus temperature calibration.",
     "tags": [
-      "val-only",
       "quantization",
-      "evaluation",
-      "architecture"
+      "training-schedule",
+      "evaluation"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Score-first TTT adaptation trains on validation chunks (scored first) before recomputing final eval, so the model only learns from the validation shard.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "int5 GPTQ with clip [-16,15] plus zstd-22 compression",
-      "Score-first backward TTT (AdamW, cosine LR, 3 epochs on last two blocks)",
-      "Post-TTT temperature calibration (T=0.98) with sliding-window eval"
+      "Int5 GPTQ with clip [-16,15]",
+      "Score-first backward TTT on final blocks",
+      "Post-TTT temperature calibration (T=0.98)"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

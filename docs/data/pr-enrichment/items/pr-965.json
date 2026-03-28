@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T17:16:55.197Z",
+  "generatedAt": "2026-03-28T02:19:49.680Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 965,
     "title": "Architectural Record: 1.11837 BPB via KGIIR Trajectory Mixing",
     "state": "open",
-    "updatedAt": "2026-03-27T17:07:03Z",
+    "updatedAt": "2026-03-28T02:11:22Z",
     "headSha": "8d680e58e3f75a610cd95a16e4b1c2d408c05eac",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/965",
     "authorLogin": "Adam-Jacuch"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacks hardware-fused KGIIR trajectory mixing with gated token shifts to offload local dependencies and free attention capacity within the 88ms step budget.",
+    "summary": "Hardware-fused KGIIR trajectory mixing models hidden-state momentum with gated IIR filters to offload local context from attention.",
     "tags": [
       "architecture",
-      "attention",
-      "training-schedule"
+      "attention"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hardware-fused KGIIR/CUDA kernel",
-      "Per-channel gated 4-tap IIR trajectory mixing",
-      "Shift layers plus trajectory mixing to reallocate attention coverage"
+      "hardware-fused 4-tap KGIIR filter",
+      "gated momentum trajectory mixing",
+      "frees attention heads for global reasoning"
     ]
   },
   "compatibility": {

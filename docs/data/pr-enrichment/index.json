@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T01:49:48.697Z",
+  "generatedAt": "2026-03-28T02:19:49.820Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -122,23 +122,22 @@
       "prNumber": 991,
       "title": "Record: 33.6M Int5 GPTQ + Score-First TTT (val_bpb=1.1145, 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-28T01:09:41Z",
-      "headSha": "4d2a4eda713276c6a31e5b9e07a04bc058c92f75",
-      "generatedAt": "2026-03-28T01:19:40.787Z",
-      "summary": "33.6M GPT uses int5 GPTQ compression with legal score-first backward-looking TTT and temperature calibration before final eval.",
+      "updatedAt": "2026-03-28T01:52:42Z",
+      "headSha": "da4750aa811ed4dfa3a70c915ce3a5711e2d2ec0",
+      "generatedAt": "2026-03-28T02:19:37.224Z",
+      "summary": "Larger 33.6M model with int5 GPTQ compression feeds score-first backward-looking TTT on last blocks plus temperature calibration.",
       "tags": [
-        "val-only",
         "quantization",
-        "evaluation",
-        "architecture"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-991.json"
     },
@@ -146,10 +145,10 @@
       "prNumber": 990,
       "title": "ClownCar: Frugendorff compression baseline + canonical DeltaNet integration",
       "status": "open",
-      "updatedAt": "2026-03-28T01:32:39Z",
+      "updatedAt": "2026-03-28T02:02:59Z",
       "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491",
-      "generatedAt": "2026-03-28T01:49:38.282Z",
-      "summary": "Frugendorff shares a recurrent crawler with Flow instructions plus canonical DeltaNet kernels to compress transformer depth into ~13M params.",
+      "generatedAt": "2026-03-28T02:19:43.105Z",
+      "summary": "Weight-shared crawler loops with dynamic flow instructions plus DeltaNet chunk kernels to cut compute overhead within a tiny param budget.",
       "tags": [
         "architecture",
         "compression",
@@ -580,14 +579,13 @@
       "prNumber": 965,
       "title": "Architectural Record: 1.11837 BPB via KGIIR Trajectory Mixing",
       "status": "open",
-      "updatedAt": "2026-03-27T17:07:03Z",
+      "updatedAt": "2026-03-28T02:11:22Z",
       "headSha": "8d680e58e3f75a610cd95a16e4b1c2d408c05eac",
-      "generatedAt": "2026-03-27T17:16:55.197Z",
-      "summary": "Stacks hardware-fused KGIIR trajectory mixing with gated token shifts to offload local dependencies and free attention capacity within the 88ms step budget.",
+      "generatedAt": "2026-03-28T02:19:49.680Z",
+      "summary": "Hardware-fused KGIIR trajectory mixing models hidden-state momentum with gated IIR filters to offload local context from attention.",
       "tags": [
         "architecture",
-        "attention",
-        "training-schedule"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,

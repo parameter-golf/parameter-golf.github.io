@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T01:49:38.282Z",
+  "generatedAt": "2026-03-28T02:19:43.105Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 990,
     "title": "ClownCar: Frugendorff compression baseline + canonical DeltaNet integration",
     "state": "open",
-    "updatedAt": "2026-03-28T01:32:39Z",
+    "updatedAt": "2026-03-28T02:02:59Z",
     "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/990",
     "authorLogin": "newjordan"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Frugendorff shares a recurrent crawler with Flow instructions plus canonical DeltaNet kernels to compress transformer depth into ~13M params.",
+    "summary": "Weight-shared crawler loops with dynamic flow instructions plus DeltaNet chunk kernels to cut compute overhead within a tiny param budget.",
     "tags": [
       "architecture",
       "compression",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Weight-shared crawler loops driven by Flow instructions",
-      "Canonical DeltaNet integration with int8-aware crawler quant mode",
-      "CUDA-graph/kernel roadmap to fuse loop overhead"
+      "Weight-shared crawler loop with dynamic flow instructions",
+      "Chunked Canonical DeltaNet via chunk_delta_rule kernel",
+      "Pipeline-wide CUDA graph capture to eliminate Python loops"
     ]
   },
   "compatibility": {
