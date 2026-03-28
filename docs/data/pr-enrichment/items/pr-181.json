@@ -1,29 +1,30 @@
 {
-  "generatedAt": "2026-03-27T04:44:28.203Z",
+  "generatedAt": "2026-03-28T00:50:29.295Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 181,
     "title": "1.1190 BPB — 11L LeakyReLU² XSA4 PartialRoPE LNScale EMA ParallelMuon TTT",
     "state": "open",
-    "updatedAt": "2026-03-27T04:36:01Z",
-    "headSha": "ee202514f6b26687c3530d1abdfa79eea8be4312",
+    "updatedAt": "2026-03-28T00:49:37Z",
+    "headSha": "585c651ee9c27a833b0b9e8bb4a01f2dcaf8a640",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/181",
     "authorLogin": "manfromnowhere143"
   },
   "inputs": {
-    "hash": "5628975727839fe80347056ca1c4254c8770063b4860ce2e5be72d80a98f9087",
+    "hash": "9fc9fa9c8df429319712fb0ce803d1845895c93d5efca0571205b4d8990484d0",
     "readmePaths": [
       "records/track_10min_16mb/2026-03-23_AwebUltimate/README.md",
       "records/track_10min_16mb/2026-03-20_AwebOptimizedBaseline/README.md",
+      "records/track_10min_16mb/2026-03-28_AwebGDN/README.md",
       "records/track_10min_16mb/2026-03-21_AwebSOTA/README.md",
       "records/track_10min_16mb/2026-03-18_AwebBitNet/README.md",
       "records/track_10min_16mb/2026-03-18_AwebDepthRecurrence/README.md"
     ],
-    "submissionCount": 5
+    "submissionCount": 6
   },
   "output": {
-    "summary": "11-layer 512d GQA model blends LeakyReLU², Partial RoPE, XSA4, LN scale, Parallel Muon, GPTQ-lite int6/int8 quantization, and TTT-aware sliding-window eval.",
+    "summary": "Combines an 11-layer LeakyReLU² transformer with XSA, Partial RoPE, LN-scale, Parallel Muon/SWA, GPTQ-lite int6/int8 quantization, and TTT evaluation.",
     "tags": [
       "architecture",
       "optimizer",
@@ -31,11 +32,11 @@
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not val-only: trained normally with TTT applied only during evaluation.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "LeakyReLU² + Partial RoPE + XSA4 with LN scale",
-      "Parallel Muon + EMA/SWA with GPTQ-lite int6/int8 quant",
-      "Sliding-window evaluation paired with Legal Score-First TTT"
+      "LeakyReLU² + XSA4 + Partial RoPE with LN-scale",
+      "Parallel Muon optimizer plus EMA/SWA averaging",
+      "GPTQ-lite int6/int8 quantization feeding Legal Score-First TTT"
     ]
   },
   "compatibility": {

@@ -1,37 +1,38 @@
 {
-  "generatedAt": "2026-03-26T14:40:21.512Z",
+  "generatedAt": "2026-03-28T00:50:10.802Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 854,
     "title": "Non-record submission: MLP3x 9L 512d, 1.4530 bpb (1xRTX 4090)",
     "state": "open",
-    "updatedAt": "2026-03-26T14:35:02Z",
-    "headSha": "d9140d154cfd7ec4ecd761c3b848c66c014c7eef",
+    "updatedAt": "2026-03-28T00:42:08Z",
+    "headSha": "193b37d6c310fdfa7989abcd2b6f4c713cd509d1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/854",
     "authorLogin": "ivanontech"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_Autoresearch_8L_512d_RTX4090/README.md",
       "records/track_non_record_16mb/2026-03-26_MLP3x_9L_512d_RTX4090/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Automated sweep on RTX4090 showed 9-layer GPT with 3x FFN width and GQA attention beats deeper configs at ~22M params using Muon int8+zlib.",
+    "summary": "Sweep on RTX 4090 finds 9-layer GPT with 3x FFN width (1536) plus Muon optimizer beats deeper 12-layer models at ~22M params with int8+zlib.",
     "tags": [
       "architecture",
+      "depth-width",
       "muon",
-      "quantization",
-      "non-record"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "3x FFN multiplier with GQA attention",
-      "Muon optimizer plus int8+zlib compression",
-      "Sweep-driven width vs depth analysis"
+      "Muon optimizer with int8+zlib compression",
+      "3x MLP multiplier (1536 FFN dim) vs deeper stacks",
+      "Single-GPU automated sweep across configs"
     ]
   },
   "compatibility": {

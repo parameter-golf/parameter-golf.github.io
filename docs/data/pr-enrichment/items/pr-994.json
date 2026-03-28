@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-28T00:49:46.745Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 994,
+    "title": "Add Kshitij submission (1x H100, val_bpb 1.4315, env-based config)",
+    "state": "open",
+    "updatedAt": "2026-03-28T00:26:30Z",
+    "headSha": "7b32c8f3b38339e13427a476942c743569ba578a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/994",
+    "authorLogin": "singhaikshitijjain"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/28-02-2026_Kshitij_1xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Muon optimizer with Newton-Schulz orthogonalization powers a U-Net encoder-decoder transformer with tied embeddings, flash attention, and int8 quantization.",
+    "tags": [
+      "optimizer",
+      "architecture",
+      "quantization",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- Muon optimizer + Newton-Schulz orthogonalization",
+      "- U-Net encoder-decoder transformer with tied embeddings and flash attention",
+      "- Int8 post-training quantization with per-row scaling and zlib compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

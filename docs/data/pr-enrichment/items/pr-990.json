@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T00:19:17.436Z",
+  "generatedAt": "2026-03-28T00:49:59.853Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 990,
     "title": "ClownCar: Frugendorff compression baseline + canonical DeltaNet integration",
     "state": "open",
-    "updatedAt": "2026-03-28T00:02:14Z",
+    "updatedAt": "2026-03-28T00:38:03Z",
     "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/990",
     "authorLogin": "newjordan"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Frugendorff crawler shares a recurrent block with loop-conditioned flow instructions and replaces DeltaNetMemory with the canonical chunk_delta_rule kernel to shrink/accelerate compression.",
+    "summary": "Shares one crawler block per loop with flow-conditioned instructions and plugs in canonical DeltaNet kernels for a compact recurrent transformer compression.",
     "tags": [
       "architecture",
-      "compression",
-      "quantization"
+      "attention",
+      "quantization",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Weight-shared crawler with loop-specific flow instructions",
-      "Flat plus repeated block balance for param-efficient depth",
-      "Canonical chunk_delta_rule-based DeltaNet kernel replacing Python loop"
+      "Flow-conditioned loop perturbations for iterative refinement",
+      "Weight-shared crawler executed four times with unique flat encoder/decoder ends",
+      "Canonical DeltaNet chunked kernel replacing Python token loops"
     ]
   },
   "compatibility": {

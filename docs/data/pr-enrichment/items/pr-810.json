@@ -1,36 +1,37 @@
 {
-  "generatedAt": "2026-03-26T21:12:46.572Z",
+  "generatedAt": "2026-03-28T00:50:16.376Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 810,
     "title": " Record: Phrase Cache + N-gram Backoff + EMA-GPU (val_bpb=0.2722)",
-    "state": "open",
-    "updatedAt": "2026-03-26T20:44:18Z",
-    "headSha": "a6db0190d798c7e8621d3ce5bc5157eb177827d8",
+    "state": "closed",
+    "updatedAt": "2026-03-28T00:49:01Z",
+    "headSha": "efa0dd17bae1c097e23e2212aca0364d0f51d073",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/810",
     "authorLogin": "Idan3011"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-20_PreEnrich_EncoderRecurrence/README.md"
+      "records/track_10min_16mb/2026-03-28_PreEnrich_EMA-GPU_SmearGate_XSA4_1.1478/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines GPU-resident EMA, int6 QAT, and GELU pre-enrichment with shared multi-order n-gram and long phrase caches to boost eval predictions.",
+    "summary": "Combines shared multi-order n-gram cache with long phrase matching, entropy-adaptive mixing, GPU EMA, and XSA-enhanced GELU-pre-enriched model for efficient scoring.",
     "tags": [
       "evaluation",
-      "quantization",
+      "attention",
+      "architecture",
       "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Shared multi-order n-gram backoff + long phrase cache scoring",
-      "GPU-resident EMA + int6 QAT training",
-      "GELU pre-enrichment + XSA tweaks before transformer blocks"
+      "Phrase + multi-order n-gram caching with entropy-adaptive alpha",
+      "GPU EMA speedup alongside GELU pre-enrichment and XSA layers",
+      "Shared two-phase cache construction before phrase backoff"
     ]
   },
   "compatibility": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-28T00:19:00.616Z",
+  "generatedAt": "2026-03-28T00:49:53.211Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 993,
     "title": "Record: 11L XSA + Mixed INT6 + Adaptive N-gram Cache (2->7 backoff) - val_bpb=0.9631, 3-seed",
-    "state": "open",
-    "updatedAt": "2026-03-28T00:13:56Z",
-    "headSha": "b65409892fedf8bbb8ee023e306246397cb2f16a",
+    "state": "closed",
+    "updatedAt": "2026-03-28T00:28:29Z",
+    "headSha": "479aa0891a8099f279cdc1af1dbff19dcb764bec",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/993",
     "authorLogin": "aerosta"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Compact 11-layer XSA model uses mixed INT6 post-training quantization, sliding-window eval, and score-first adaptive 2-7 n-gram cache.",
+    "summary": "Combines an 11-layer XSA GPT with post-training mixed INT6 quantization, sliding-window scoring, and a score-first adaptive n-gram cache.",
     "tags": [
       "architecture",
       "quantization",
-      "evaluation"
+      "evaluation",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "11-layer XSA GPT with EMA and late SWA",
-      "Post-training mixed INT6 quantization + LZMA compression",
-      "Score-first adaptive n-gram cache with orders 2-7 backoff"
+      "11-layer XSA stack with 512d, 8Q, 4KV",
+      "Post-training mixed INT6 + LZMA artifact compression",
+      "Score-first sliding-window eval with adaptive n-gram cache (orders 2→7, sigmoid entropy)"
     ]
   },
   "compatibility": {

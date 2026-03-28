@@ -1,20 +1,68 @@
 {
-  "generatedAt": "2026-03-28T00:19:25.497Z",
+  "generatedAt": "2026-03-28T00:50:29.321Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 995,
+      "title": "Record: 1.0362 BPB — SGD Momentum 0.95 TTT + HedgeMixer + Per-Layer LR",
+      "status": "open",
+      "updatedAt": "2026-03-28T00:31:21Z",
+      "headSha": "29f6ef52a222cb5a11803f3e3aa8896b6e1031db",
+      "generatedAt": "2026-03-28T00:49:36.215Z",
+      "summary": "Swapped TTT’s AdamW for high-momentum SGD with per-layer LR scaling and cosine scheduling while keeping HedgeMixer for stable backward-looking adaptation.",
+      "tags": [
+        "optimizer",
+        "training-schedule",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-995.json"
+    },
+    {
+      "prNumber": 994,
+      "title": "Add Kshitij submission (1x H100, val_bpb 1.4315, env-based config)",
+      "status": "open",
+      "updatedAt": "2026-03-28T00:26:30Z",
+      "headSha": "7b32c8f3b38339e13427a476942c743569ba578a",
+      "generatedAt": "2026-03-28T00:49:46.745Z",
+      "summary": "Muon optimizer with Newton-Schulz orthogonalization powers a U-Net encoder-decoder transformer with tied embeddings, flash attention, and int8 quantization.",
+      "tags": [
+        "optimizer",
+        "architecture",
+        "quantization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-994.json"
+    },
+    {
       "prNumber": 993,
       "title": "Record: 11L XSA + Mixed INT6 + Adaptive N-gram Cache (2->7 backoff) - val_bpb=0.9631, 3-seed",
-      "status": "open",
-      "updatedAt": "2026-03-28T00:13:56Z",
-      "headSha": "b65409892fedf8bbb8ee023e306246397cb2f16a",
-      "generatedAt": "2026-03-28T00:19:00.616Z",
-      "summary": "Compact 11-layer XSA model uses mixed INT6 post-training quantization, sliding-window eval, and score-first adaptive 2-7 n-gram cache.",
+      "status": "closed",
+      "updatedAt": "2026-03-28T00:28:29Z",
+      "headSha": "479aa0891a8099f279cdc1af1dbff19dcb764bec",
+      "generatedAt": "2026-03-28T00:49:53.211Z",
+      "summary": "Combines an 11-layer XSA GPT with post-training mixed INT6 quantization, sliding-window scoring, and a score-first adaptive n-gram cache.",
       "tags": [
         "architecture",
         "quantization",
-        "evaluation"
+        "evaluation",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -76,14 +124,15 @@
       "prNumber": 990,
       "title": "ClownCar: Frugendorff compression baseline + canonical DeltaNet integration",
       "status": "open",
-      "updatedAt": "2026-03-28T00:02:14Z",
+      "updatedAt": "2026-03-28T00:38:03Z",
       "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491",
-      "generatedAt": "2026-03-28T00:19:17.436Z",
-      "summary": "Frugendorff crawler shares a recurrent block with loop-conditioned flow instructions and replaces DeltaNetMemory with the canonical chunk_delta_rule kernel to shrink/accelerate compression.",
+      "generatedAt": "2026-03-28T00:49:59.853Z",
+      "summary": "Shares one crawler block per loop with flow-conditioned instructions and plugs in canonical DeltaNet kernels for a compact recurrent transformer compression.",
       "tags": [
         "architecture",
-        "compression",
-        "quantization"
+        "attention",
+        "quantization",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -191,15 +240,15 @@
       "prNumber": 984,
       "title": "submission 2026-03-27_PhaseCoherenceGatedGradients PIC-GID + ParallelMuon",
       "status": "open",
-      "updatedAt": "2026-03-27T21:16:33Z",
+      "updatedAt": "2026-03-28T00:36:56Z",
       "headSha": "cc5cda4a4b4eb1151812caa49e228282618cf9b4",
-      "generatedAt": "2026-03-27T21:18:30.940Z",
-      "summary": "PIC-GD adapts Muon+Adam transformer training with pseudo-complex coherence gates that fade to Adam/Muon finetuning.",
+      "generatedAt": "2026-03-28T00:50:04.662Z",
+      "summary": "Explores PIC-GD gating by pairing channels into pseudo-complex latents with Parallel Muon + Adam fine-tuning for coherence-weighted gradients.",
       "tags": [
+        "non-record",
         "optimizer",
         "muon",
-        "regularization",
-        "non-record"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2309,15 +2358,15 @@
       "prNumber": 854,
       "title": "Non-record submission: MLP3x 9L 512d, 1.4530 bpb (1xRTX 4090)",
       "status": "open",
-      "updatedAt": "2026-03-26T14:35:02Z",
-      "headSha": "d9140d154cfd7ec4ecd761c3b848c66c014c7eef",
-      "generatedAt": "2026-03-26T14:40:21.512Z",
-      "summary": "Automated sweep on RTX4090 showed 9-layer GPT with 3x FFN width and GQA attention beats deeper configs at ~22M params using Muon int8+zlib.",
+      "updatedAt": "2026-03-28T00:42:08Z",
+      "headSha": "193b37d6c310fdfa7989abcd2b6f4c713cd509d1",
+      "generatedAt": "2026-03-28T00:50:10.802Z",
+      "summary": "Sweep on RTX 4090 finds 9-layer GPT with 3x FFN width (1536) plus Muon optimizer beats deeper 12-layer models at ~22M params with int8+zlib.",
       "tags": [
         "architecture",
+        "depth-width",
         "muon",
-        "quantization",
-        "non-record"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2955,14 +3004,15 @@
     {
       "prNumber": 810,
       "title": " Record: Phrase Cache + N-gram Backoff + EMA-GPU (val_bpb=0.2722)",
-      "status": "open",
-      "updatedAt": "2026-03-26T20:44:18Z",
-      "headSha": "a6db0190d798c7e8621d3ce5bc5157eb177827d8",
-      "generatedAt": "2026-03-26T21:12:46.572Z",
-      "summary": "Combines GPU-resident EMA, int6 QAT, and GELU pre-enrichment with shared multi-order n-gram and long phrase caches to boost eval predictions.",
+      "status": "closed",
+      "updatedAt": "2026-03-28T00:49:01Z",
+      "headSha": "efa0dd17bae1c097e23e2212aca0364d0f51d073",
+      "generatedAt": "2026-03-28T00:50:16.376Z",
+      "summary": "Combines shared multi-order n-gram cache with long phrase matching, entropy-adaptive mixing, GPU EMA, and XSA-enhanced GELU-pre-enriched model for efficient scoring.",
       "tags": [
         "evaluation",
-        "quantization",
+        "attention",
+        "architecture",
         "optimizer"
       ],
       "flags": {
@@ -12956,6 +13006,30 @@
       "file": "items/pr-190.json"
     },
     {
+      "prNumber": 187,
+      "title": "Record: EMA-GPU + Multi-Order N-gram Backoff + PE Confidence (val_bpb=0.9393)",
+      "status": "closed",
+      "updatedAt": "2026-03-26T04:37:25Z",
+      "headSha": "7e07f4d14d0ec0a74edff7d1cf92d80ac392a88c",
+      "generatedAt": "2026-03-28T00:50:22.204Z",
+      "summary": "GPU-resident EMA plus GELU pre-enrichment/XSA, then entropy-adaptive multi-order n-gram caching with PE confidence to guide sliding eval mixing.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-187.json"
+    },
+    {
       "prNumber": 183,
       "title": "Non-record: Cache LM + LoRA TTT (negative result on cache, positive on TTT)",
       "status": "open",
@@ -13005,10 +13079,10 @@
       "prNumber": 181,
       "title": "1.1190 BPB — 11L LeakyReLU² XSA4 PartialRoPE LNScale EMA ParallelMuon TTT",
       "status": "open",
-      "updatedAt": "2026-03-27T04:36:01Z",
-      "headSha": "ee202514f6b26687c3530d1abdfa79eea8be4312",
-      "generatedAt": "2026-03-27T04:44:28.203Z",
-      "summary": "11-layer 512d GQA model blends LeakyReLU², Partial RoPE, XSA4, LN scale, Parallel Muon, GPTQ-lite int6/int8 quantization, and TTT-aware sliding-window eval.",
+      "updatedAt": "2026-03-28T00:49:37Z",
+      "headSha": "585c651ee9c27a833b0b9e8bb4a01f2dcaf8a640",
+      "generatedAt": "2026-03-28T00:50:29.295Z",
+      "summary": "Combines an 11-layer LeakyReLU² transformer with XSA, Partial RoPE, LN-scale, Parallel Muon/SWA, GPTQ-lite int6/int8 quantization, and TTT evaluation.",
       "tags": [
         "architecture",
         "optimizer",
