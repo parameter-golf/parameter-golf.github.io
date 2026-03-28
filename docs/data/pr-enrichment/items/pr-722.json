@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T14:31:44.715Z",
+  "generatedAt": "2026-03-28T09:51:42.114Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 722,
     "title": "parameter golf submission - Julius",
-    "state": "open",
-    "updatedAt": "2026-03-25T14:19:58Z",
+    "state": "closed",
+    "updatedAt": "2026-03-28T09:44:41Z",
     "headSha": "98072979e3edc6857d2ec811629292d9644d9166",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/722",
     "authorLogin": "magicjulio"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Tweaked Chimera by swapping to LeakyReLU(0.5)², doubling context length, enlarging the BigramHash, and extending warmdown while keeping other settings.",
+    "summary": "Chimera baseline swaps ReLU² for LeakyReLU(0.5)², doubles context to 2048 with a larger bigram hash, and stretches warmdown before quant export.",
     "tags": [
       "architecture",
-      "training-schedule"
+      "training-schedule",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LeakyReLU(0.5)² in MLPs to avoid dead neurons with squared output",
-      "2048 context plus 3072-bucket BigramHash to expand horizon and reduce collisions",
-      "Longer 3.5k warmdown before quantization-aware export"
+      "LeakyReLU(0.5)^2 across all MLP activations",
+      "2048 seq len training/TTT with 3072-bucket BigramHash",
+      "3500-iter warmdown prior to INT6 quantization"
     ]
   },
   "compatibility": {

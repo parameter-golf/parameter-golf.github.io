@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-03-28T09:22:01.358Z",
+  "generatedAt": "2026-03-28T09:51:42.225Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 1010,
-      "title": "Non-record: VRL + LeakyReLU² + Full SOTA Stack (iteration build)",
+      "prNumber": 1011,
+      "title": "Anubhav ctw submission",
       "status": "open",
-      "updatedAt": "2026-03-28T09:19:15Z",
-      "headSha": "4aaeb0487e79cbf1376a57ecac44122e04659147",
-      "generatedAt": "2026-03-28T09:21:20.657Z",
-      "summary": "11-layer SOTA build pairs VRL-backed LeakyReLU² MLPs with XSA on final layers, EMA+SWA blending, and late QAT-triggered GPTQ-lite quantization.",
+      "updatedAt": "2026-03-28T09:22:54Z",
+      "headSha": "1059c8eb8c115fe1589dfced90b848f31065b2a7",
+      "generatedAt": "2026-03-28T09:51:31.015Z",
+      "summary": "Combines the SOTA 11-layer GPTQ stack with CTW-based sliding-window eval mixing to merge Bayesian suffix-tree probabilities with neural logits.",
       "tags": [
         "architecture",
         "quantization",
-        "training-schedule",
+        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -25,7 +25,7 @@
       "compatibility": {
         "valOnlyMatchesCollector": true
       },
-      "file": "items/pr-1010.json"
+      "file": "items/pr-1011.json"
     },
     {
       "prNumber": 1009,
@@ -975,10 +975,10 @@
       "prNumber": 960,
       "title": "Preliminary: 11L VRL + Full GPTQ + Parallel Muon + Legal TTT — val_bpb 1.1882 (ADIITJ)",
       "status": "open",
-      "updatedAt": "2026-03-27T14:40:57Z",
-      "headSha": "a2b2b3d0b1b8f5df9c3cd6471342cb7cb4b17844",
-      "generatedAt": "2026-03-27T14:46:35.452Z",
-      "summary": "Builds on PR #549 by adding Layer0 VRL, full Hessian-aware GPTQ, and tight SWA to the Parallel Muon + legal TTT stack for faster 11-layer training.",
+      "updatedAt": "2026-03-28T09:32:26Z",
+      "headSha": "2f67e5f941585710e23e20908b675e818828a6ef",
+      "generatedAt": "2026-03-28T09:51:37.161Z",
+      "summary": "Extends PR #549 with VRL value-residual gating, full Hessian-aware GPTQ int6, larger BigramHash, and preferring SWA snapshot averages over EMA.",
       "tags": [
         "architecture",
         "quantization",
@@ -4664,14 +4664,15 @@
     {
       "prNumber": 722,
       "title": "parameter golf submission - Julius",
-      "status": "open",
-      "updatedAt": "2026-03-25T14:19:58Z",
+      "status": "closed",
+      "updatedAt": "2026-03-28T09:44:41Z",
       "headSha": "98072979e3edc6857d2ec811629292d9644d9166",
-      "generatedAt": "2026-03-25T14:31:44.715Z",
-      "summary": "Tweaked Chimera by swapping to LeakyReLU(0.5)², doubling context length, enlarging the BigramHash, and extending warmdown while keeping other settings.",
+      "generatedAt": "2026-03-28T09:51:42.114Z",
+      "summary": "Chimera baseline swaps ReLU² for LeakyReLU(0.5)², doubles context to 2048 with a larger bigram hash, and stretches warmdown before quant export.",
       "tags": [
         "architecture",
-        "training-schedule"
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

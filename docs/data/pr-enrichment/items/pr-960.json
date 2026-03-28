@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T14:46:35.452Z",
+  "generatedAt": "2026-03-28T09:51:37.161Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 960,
     "title": "Preliminary: 11L VRL + Full GPTQ + Parallel Muon + Legal TTT — val_bpb 1.1882 (ADIITJ)",
     "state": "open",
-    "updatedAt": "2026-03-27T14:40:57Z",
-    "headSha": "a2b2b3d0b1b8f5df9c3cd6471342cb7cb4b17844",
+    "updatedAt": "2026-03-28T09:32:26Z",
+    "headSha": "2f67e5f941585710e23e20908b675e818828a6ef",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/960",
     "authorLogin": "ADIITJ"
   },
@@ -22,7 +22,7 @@
     "submissionCount": 5
   },
   "output": {
-    "summary": "Builds on PR #549 by adding Layer0 VRL, full Hessian-aware GPTQ, and tight SWA to the Parallel Muon + legal TTT stack for faster 11-layer training.",
+    "summary": "Extends PR #549 with VRL value-residual gating, full Hessian-aware GPTQ int6, larger BigramHash, and preferring SWA snapshot averages over EMA.",
     "tags": [
       "architecture",
       "quantization",
@@ -31,9 +31,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Layer-0 value residual blending via learned sigmoid VRL gates",
-      "Full GPTQ int6 with Hessian Cholesky error propagation",
-      "Tight SWA snapshot averaging replacing EMA during Muon training"
+      "Value Residual Learning gating across layers",
+      "Full Hessian-aware GPTQ int6 with Cholesky propagation",
+      "BigramHash expansion plus Tight SWA snapshot averaging"
     ]
   },
   "compatibility": {

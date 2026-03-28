@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-28T09:51:31.015Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1011,
+    "title": "Anubhav ctw submission",
+    "state": "open",
+    "updatedAt": "2026-03-28T09:22:54Z",
+    "headSha": "1059c8eb8c115fe1589dfced90b848f31065b2a7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1011",
+    "authorLogin": "AnubhavBharadwaaj"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-28_CTW_VRL_LeakyReLU2_GPTQ/README.md",
+      "records/track_non_record_16mb/2026-03-27_VRL_LeakyReLU2_GPTQ/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Combines the SOTA 11-layer GPTQ stack with CTW-based sliding-window eval mixing to merge Bayesian suffix-tree probabilities with neural logits.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Context Tree Weighting mix adds Bayesian suffix-tree probs in log-odds during sliding eval",
+      "GPTQ-lite + late QAT quantization atop EMA+SWA-weighted SOTA 11-layer model",
+      "Muon+AdamW warmdown schedule with stride-64 sliding-window evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
