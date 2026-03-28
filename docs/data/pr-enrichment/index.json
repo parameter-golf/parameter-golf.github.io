@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T16:23:56.732Z",
+  "generatedAt": "2026-03-28T16:54:01.399Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -241,14 +241,14 @@
       "prNumber": 1013,
       "title": "Non-record: S4D-Lin SSM Hybrid — Fixing Why Mamba Failed in Parameter…",
       "status": "open",
-      "updatedAt": "2026-03-28T10:27:13Z",
+      "updatedAt": "2026-03-28T16:38:39Z",
       "headSha": "dafde7df4176e836ee936969bc91037ec6142044",
-      "generatedAt": "2026-03-28T10:52:01.128Z",
-      "summary": "Hybrid model replaces the first two layers with S4D-Lin SSM blocks realized via grouped causal F.conv1d, matching transformer throughput without custom kernels.",
+      "generatedAt": "2026-03-28T16:53:52.057Z",
+      "summary": "Hybrid replaces the first two layers with S4D-Lin SSM blocks computed via standard conv1d, keeping baseline throughput while upper layers stay attention-based.",
       "tags": [
         "architecture",
-        "attention",
         "quantization",
+        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -12963,14 +12963,15 @@
       "prNumber": 223,
       "title": "Draft: SOTA+ TTT + RoPE50K + EMA + Curriculum (pending H100 run)",
       "status": "open",
-      "updatedAt": "2026-03-20T17:02:55Z",
-      "headSha": "4d22dc515a343ba077b8db8d623359e3a3d8f684",
-      "generatedAt": "2026-03-20T17:23:58.709Z",
-      "summary": "Builds on PR#198 by adding RoPE50K, LAWA-EMA, a context-length curriculum, and val-set SGD TTT before scoring.",
+      "updatedAt": "2026-03-28T16:39:11Z",
+      "headSha": "5105f423fe6a6f826cc364e39fb98304cc6782c9",
+      "generatedAt": "2026-03-28T16:54:01.371Z",
+      "summary": "Extends PR#198’s SmearGate stack with RoPE50K, LAWA-EMA plus curriculum scheduling, and full-model SGD test-time training before scoring.",
       "tags": [
         "val-only",
         "training-schedule",
-        "architecture"
+        "attention",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": true,

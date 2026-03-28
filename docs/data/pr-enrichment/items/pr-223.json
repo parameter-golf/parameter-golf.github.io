@@ -1,36 +1,38 @@
 {
-  "generatedAt": "2026-03-20T17:23:58.709Z",
+  "generatedAt": "2026-03-28T16:54:01.371Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 223,
     "title": "Draft: SOTA+ TTT + RoPE50K + EMA + Curriculum (pending H100 run)",
     "state": "open",
-    "updatedAt": "2026-03-20T17:02:55Z",
-    "headSha": "4d22dc515a343ba077b8db8d623359e3a3d8f684",
+    "updatedAt": "2026-03-28T16:39:11Z",
+    "headSha": "5105f423fe6a6f826cc364e39fb98304cc6782c9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/223",
     "authorLogin": "0xjaishy"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_10min_16mb/2026-03-29_AllInOne_SmearGate_LeakyRoPE_TTT/README.md",
       "records/track_10min_16mb/2026-03-20_SOTA_TTT_RoPE50K_EMA_Curriculum/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Builds on PR#198 by adding RoPE50K, LAWA-EMA, a context-length curriculum, and val-set SGD TTT before scoring.",
+    "summary": "Extends PR#198’s SmearGate stack with RoPE50K, LAWA-EMA plus curriculum scheduling, and full-model SGD test-time training before scoring.",
     "tags": [
       "val-only",
       "training-schedule",
-      "architecture"
+      "attention",
+      "optimizer"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Runs full-model SGD test-time training on the validation shard before evaluation.",
+    "valOnlyReasoning": "Full-model SGD test-time training on validation data before scoring (TTT adaptation).",
     "techniques": [
-      "RoPE50K positional smoothing",
-      "LAWA-EMA warmdown averaging",
-      "Curriculum + val-set SGD TTT"
+      "RoPE base 50K for smoother long-context interpolation",
+      "LAWA-EMA with curriculum switch (seq1024→2048) for steadier convergence",
+      "Full-model SGD TTT adaptation on validation data before scoring"
     ]
   },
   "compatibility": {

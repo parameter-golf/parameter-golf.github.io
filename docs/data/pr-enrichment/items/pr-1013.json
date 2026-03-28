@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T10:52:01.128Z",
+  "generatedAt": "2026-03-28T16:53:52.057Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1013,
     "title": "Non-record: S4D-Lin SSM Hybrid — Fixing Why Mamba Failed in Parameter…",
     "state": "open",
-    "updatedAt": "2026-03-28T10:27:13Z",
+    "updatedAt": "2026-03-28T16:38:39Z",
     "headSha": "dafde7df4176e836ee936969bc91037ec6142044",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1013",
     "authorLogin": "himanshudongre"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hybrid model replaces the first two layers with S4D-Lin SSM blocks realized via grouped causal F.conv1d, matching transformer throughput without custom kernels.",
+    "summary": "Hybrid replaces the first two layers with S4D-Lin SSM blocks computed via standard conv1d, keeping baseline throughput while upper layers stay attention-based.",
     "tags": [
       "architecture",
-      "attention",
       "quantization",
+      "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "S4D-Lin diagonal SSM via grouped causal conv1d",
-      "Hybrid lower-layer SSM with upper-layer attention stack",
-      "Full GPTQ int5 export for compressed evaluation"
+      "Lower layers use S4D-Lin fixed diagonal SSMs implemented as causal conv1d",
+      "Upper layers remain standard transformer attention",
+      "Evaluation includes GPTQ-int5 quantization insights"
     ]
   },
   "compatibility": {

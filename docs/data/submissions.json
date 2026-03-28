@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T16:23:39.916Z",
+  "generatedAt": "2026-03-28T16:53:45.055Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -9483,6 +9483,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/a17ff66702d50731c5d6833145875687a2791016/records/track_10min_16mb/2026-03-19_ValOnly_10min/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/a17ff66702d50731c5d6833145875687a2791016/records/track_10min_16mb/2026-03-19_ValOnly_10min",
         "pr": "https://github.com/openai/parameter-golf/pull/44",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-29_AllInOne_SmearGate_LeakyRoPE_TTT",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-29_AllInOne_SmearGate_LeakyRoPE_TTT",
+        "folderPath": "records/track_10min_16mb/2026-03-29_AllInOne_SmearGate_LeakyRoPE_TTT",
+        "submissionPath": "records/track_10min_16mb/2026-03-29_AllInOne_SmearGate_LeakyRoPE_TTT/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-29_AllInOne_SmearGate_LeakyRoPE_TTT/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-29_AllInOne_SmearGate_LeakyRoPE_TTT/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-29_AllInOne_SmearGate_LeakyRoPE_TTT/train_gpt.py"
+      },
+      "submission": {
+        "author": "0xjaishy",
+        "githubId": "0xjaishy",
+        "name": "ALL-IN-ONE MONSTER: SmearGate + LeakyReLU² + PartialRoPE + GPTQ-lite + TTT",
+        "blurb": "Fused the entire leaderboard: LeakyReLU(0.5)² from #1 + PartialRoPE+LNScale from 1.1248 + GPTQ-lite from 1.1233 + our SmearGate+int6+RoPE50K+Curriculum+TTT base. Maximum aggression.",
+        "date": "2026-03-29"
+      },
+      "metrics": {
+        "valBpb": 1.112,
+        "valLoss": 1.89,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15800000,
+        "bytesCode": 68500,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 223,
+        "title": "Draft: SOTA+ TTT + RoPE50K + EMA + Curriculum (pending H100 run)",
+        "state": "open",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/223",
+        "authorLogin": "0xjaishy",
+        "authorName": null,
+        "createdAt": "2026-03-20T15:36:03Z",
+        "updatedAt": "2026-03-28T16:39:11Z",
+        "headSha": "5105f423fe6a6f826cc364e39fb98304cc6782c9",
+        "headRepo": "0xjaishy/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5105f423fe6a6f826cc364e39fb98304cc6782c9/records/track_10min_16mb/2026-03-29_AllInOne_SmearGate_LeakyRoPE_TTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/5105f423fe6a6f826cc364e39fb98304cc6782c9/records/track_10min_16mb/2026-03-29_AllInOne_SmearGate_LeakyRoPE_TTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/5105f423fe6a6f826cc364e39fb98304cc6782c9/records/track_10min_16mb/2026-03-29_AllInOne_SmearGate_LeakyRoPE_TTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/5105f423fe6a6f826cc364e39fb98304cc6782c9/records/track_10min_16mb/2026-03-29_AllInOne_SmearGate_LeakyRoPE_TTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/5105f423fe6a6f826cc364e39fb98304cc6782c9/records/track_10min_16mb/2026-03-29_AllInOne_SmearGate_LeakyRoPE_TTT",
+        "pr": "https://github.com/openai/parameter-golf/pull/223",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -24872,7 +24949,7 @@
         "authorLogin": "himanshudongre",
         "authorName": null,
         "createdAt": "2026-03-28T10:15:02Z",
-        "updatedAt": "2026-03-28T10:27:13Z",
+        "updatedAt": "2026-03-28T16:38:39Z",
         "headSha": "dafde7df4176e836ee936969bc91037ec6142044",
         "headRepo": "himanshudongre/parameter-golf"
       },
@@ -58458,16 +58535,16 @@
         "authorLogin": "0xjaishy",
         "authorName": null,
         "createdAt": "2026-03-20T15:36:03Z",
-        "updatedAt": "2026-03-20T17:02:55Z",
-        "headSha": "4d22dc515a343ba077b8db8d623359e3a3d8f684",
+        "updatedAt": "2026-03-28T16:39:11Z",
+        "headSha": "5105f423fe6a6f826cc364e39fb98304cc6782c9",
         "headRepo": "0xjaishy/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4d22dc515a343ba077b8db8d623359e3a3d8f684/records/track_10min_16mb/2026-03-20_SOTA_TTT_RoPE50K_EMA_Curriculum/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/4d22dc515a343ba077b8db8d623359e3a3d8f684/records/track_10min_16mb/2026-03-20_SOTA_TTT_RoPE50K_EMA_Curriculum/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/4d22dc515a343ba077b8db8d623359e3a3d8f684/records/track_10min_16mb/2026-03-20_SOTA_TTT_RoPE50K_EMA_Curriculum/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/4d22dc515a343ba077b8db8d623359e3a3d8f684/records/track_10min_16mb/2026-03-20_SOTA_TTT_RoPE50K_EMA_Curriculum/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/4d22dc515a343ba077b8db8d623359e3a3d8f684/records/track_10min_16mb/2026-03-20_SOTA_TTT_RoPE50K_EMA_Curriculum",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5105f423fe6a6f826cc364e39fb98304cc6782c9/records/track_10min_16mb/2026-03-20_SOTA_TTT_RoPE50K_EMA_Curriculum/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/5105f423fe6a6f826cc364e39fb98304cc6782c9/records/track_10min_16mb/2026-03-20_SOTA_TTT_RoPE50K_EMA_Curriculum/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/5105f423fe6a6f826cc364e39fb98304cc6782c9/records/track_10min_16mb/2026-03-20_SOTA_TTT_RoPE50K_EMA_Curriculum/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/5105f423fe6a6f826cc364e39fb98304cc6782c9/records/track_10min_16mb/2026-03-20_SOTA_TTT_RoPE50K_EMA_Curriculum/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/5105f423fe6a6f826cc364e39fb98304cc6782c9/records/track_10min_16mb/2026-03-20_SOTA_TTT_RoPE50K_EMA_Curriculum",
         "pr": "https://github.com/openai/parameter-golf/pull/223",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
