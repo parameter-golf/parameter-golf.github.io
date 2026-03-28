@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-28T05:20:25.382Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1003,
+    "title": "[WIP] Non-record: Probatum — QAT + LeakyReLU² + EMA baseline",
+    "state": "open",
+    "updatedAt": "2026-03-28T04:58:33Z",
+    "headSha": "d9d57afb24794c40a1b3914338fff35217854699",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1003",
+    "authorLogin": "techleadershipofanurag"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adapts Probatum on-device coding tactics by applying QAT (int6 warmup), LeakyReLU², EMA, and Muon on a 9x512 baseline for Parameter Golf.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "int6 QAT warmup",
+      "LeakyReLU² activations replacing GeLU",
+      "EMA smoothing with Muon optimizer"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

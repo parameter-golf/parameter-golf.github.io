@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T04:50:17.266Z",
+  "generatedAt": "2026-03-28T05:20:20.598Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -23583,6 +23583,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-28_12L_INT4_bQAT_EMAfix",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-28_12L_INT4_bQAT_EMAfix",
+        "folderPath": "records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix",
+        "submissionPath": "records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/train_gpt.py"
+      },
+      "submission": {
+        "author": "Harsh Soni",
+        "githubId": "SoHarshh",
+        "name": "12L INT4 bQAT + EMA Fix + Deterministic QAT",
+        "blurb": "12-layer INT4 MLP+bigram QAT (novel: first INT4 bigram quantization) + U-Net skip connections + XSA(last 4) + EMA(0.997) with QAT-reset fix + LeakyReLU² + RoPE16 + LN Scale + resid_mix + Legal TTT. Key fixes: EMA reset on QAT activation eliminates quantization degradation; deterministic wallclock-fraction QAT trigger (LATE_QAT_FRAC=0.65) removes seed-to-seed QAT timing variance. 12L INT4 fits in 16MB via INT4 bigram QAT saving ~370KB vs INT6. 8×H100 seed 1: 5021 steps, post-quant 1.1703 (no TTT), ~1.165 with TTT.",
+        "date": "2026-03-28"
+      },
+      "metrics": {
+        "valBpb": 1.165,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15899385,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1002,
+        "title": "12L INT4 bQAT + EMA Fix + Deterministic QAT — val_bpb ~1.165",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1002",
+        "authorLogin": "SoHarshh",
+        "authorName": null,
+        "createdAt": "2026-03-28T04:51:05Z",
+        "updatedAt": "2026-03-28T04:51:05Z",
+        "headSha": "7429361cb9409260756ac3a49f49bbc9ba443f9a",
+        "headRepo": "SoHarshh/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7429361cb9409260756ac3a49f49bbc9ba443f9a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/7429361cb9409260756ac3a49f49bbc9ba443f9a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/7429361cb9409260756ac3a49f49bbc9ba443f9a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/7429361cb9409260756ac3a49f49bbc9ba443f9a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/7429361cb9409260756ac3a49f49bbc9ba443f9a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix",
+        "pr": "https://github.com/openai/parameter-golf/pull/1002",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-27_MLP3x_LeakyReLU_QAT_Int6_SlideEval",
       "source": "pull_request",
       "status": "open",
@@ -42829,6 +42906,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386",
         "pr": "https://github.com/openai/parameter-golf/pull/449",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-28_Probatum_LoRA_Distill_QAT_Baseline",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-28_Probatum_LoRA_Distill_QAT_Baseline",
+        "folderPath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline",
+        "submissionPath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/train_gpt.py"
+      },
+      "submission": {
+        "author": "Anurag M",
+        "githubId": "techleadershipofanurag",
+        "name": "Probatum Baseline — QAT + LeakyReLU² + EMA",
+        "blurb": "Non-record baseline submission adapting quantization-aware training and distillation techniques from the Probatum Code project to the 16MB parameter golf constraint. Starting from stock 9x512 config with planned improvements in QAT, activation functions, and optimizer tuning.",
+        "date": "2026-03-28T04:30:00Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1003,
+        "title": "[WIP] Non-record: Probatum — QAT + LeakyReLU² + EMA baseline",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1003",
+        "authorLogin": "techleadershipofanurag",
+        "authorName": null,
+        "createdAt": "2026-03-28T04:58:33Z",
+        "updatedAt": "2026-03-28T04:58:33Z",
+        "headSha": "d9d57afb24794c40a1b3914338fff35217854699",
+        "headRepo": "techleadershipofanurag/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d9d57afb24794c40a1b3914338fff35217854699/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/d9d57afb24794c40a1b3914338fff35217854699/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/d9d57afb24794c40a1b3914338fff35217854699/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/d9d57afb24794c40a1b3914338fff35217854699/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/d9d57afb24794c40a1b3914338fff35217854699/records/track_non_record_16mb/2026-03-28_Probatum_LoRA_Distill_QAT_Baseline",
+        "pr": "https://github.com/openai/parameter-golf/pull/1003",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

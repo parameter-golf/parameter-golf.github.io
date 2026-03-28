@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-28T04:50:25.065Z",
+  "generatedAt": "2026-03-28T05:20:30.579Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1003,
+      "title": "[WIP] Non-record: Probatum — QAT + LeakyReLU² + EMA baseline",
+      "status": "open",
+      "updatedAt": "2026-03-28T04:58:33Z",
+      "headSha": "d9d57afb24794c40a1b3914338fff35217854699",
+      "generatedAt": "2026-03-28T05:20:25.382Z",
+      "summary": "Adapts Probatum on-device coding tactics by applying QAT (int6 warmup), LeakyReLU², EMA, and Muon on a 9x512 baseline for Parameter Golf.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1003.json"
+    },
+    {
+      "prNumber": 1002,
+      "title": "12L INT4 bQAT + EMA Fix + Deterministic QAT — val_bpb ~1.165",
+      "status": "open",
+      "updatedAt": "2026-03-28T04:51:05Z",
+      "headSha": "7429361cb9409260756ac3a49f49bbc9ba443f9a",
+      "generatedAt": "2026-03-28T05:20:30.426Z",
+      "summary": "12-layer model trains INT4 MLP/bigram QAT with EMA reset and a deterministic wallclock QAT trigger to squeeze the stack into 16MB.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1002.json"
+    },
     {
       "prNumber": 1001,
       "title": "Non-record: Three Approaches + Lessons Learned (best: 1.1188 BPB)",
