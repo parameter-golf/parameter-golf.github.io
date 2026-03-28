@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-28T08:21:17.624Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1009,
+    "title": "12L INT4 bQAT + Value Embeddings — val_bpb 1.1588",
+    "state": "open",
+    "updatedAt": "2026-03-28T08:06:32Z",
+    "headSha": "0ab7cafc0c1074785eb6723a7e4baa2a0eae6c31",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1009",
+    "authorLogin": "SoHarshh"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "12L INT4 bigram+MLP QAT model pairs U-Net skips, XSA, EMA, and late-layer value embeddings to reinject token identity into attention V.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "INT4 MLP/bigram QAT with EMA fix",
+      "Late-layer Value Embeddings added to V",
+      "U-Net skips + XSA + resid_mix stack"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

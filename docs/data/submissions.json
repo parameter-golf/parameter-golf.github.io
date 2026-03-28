@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T07:51:03.006Z",
+  "generatedAt": "2026-03-28T08:21:11.018Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -6078,7 +6078,7 @@
         "authorLogin": "shalyhinpavel",
         "authorName": null,
         "createdAt": "2026-03-26T17:45:18Z",
-        "updatedAt": "2026-03-28T00:59:24Z",
+        "updatedAt": "2026-03-28T08:01:24Z",
         "headSha": "90d5115e4071a2538e05dafeb6e97c9490d0afe8",
         "headRepo": "shalyhinpavel/parameter-golf"
       },
@@ -6485,7 +6485,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-27_SGD_Momentum95_HedgeMixer_1-0362",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -6533,14 +6533,14 @@
       "pr": {
         "number": 995,
         "title": "Record: 1.0362 BPB — SGD Momentum 0.95 TTT + HedgeMixer + Per-Layer LR",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/995",
         "authorLogin": "dexhunter",
         "authorName": null,
         "createdAt": "2026-03-28T00:31:21Z",
-        "updatedAt": "2026-03-28T06:05:03Z",
+        "updatedAt": "2026-03-28T08:16:53Z",
         "headSha": "29f6ef52a222cb5a11803f3e3aa8896b6e1031db",
         "headRepo": "dexhunter/parameter-golf"
       },
@@ -6716,7 +6716,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-27_SGD_TTT_HedgeMixer_PerLayerLR_1-0450",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -6764,14 +6764,14 @@
       "pr": {
         "number": 967,
         "title": "Record: 1.0450 BPB — SGD TTT + HedgeMixer with Per-Layer LR Groups",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/967",
         "authorLogin": "dexhunter",
         "authorName": null,
         "createdAt": "2026-03-27T17:23:46Z",
-        "updatedAt": "2026-03-27T17:23:46Z",
+        "updatedAt": "2026-03-28T08:16:51Z",
         "headSha": "ec95c58f2ee1da62105369e895e1629b3de395bf",
         "headRepo": "dexhunter/parameter-golf"
       },
@@ -7563,7 +7563,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-27_ImprovedTTT_HedgeMixer_PerLayerLR_1-0722",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -7611,14 +7611,14 @@
       "pr": {
         "number": 953,
         "title": "Record: 1.0722 BPB — Improved TTT + HedgeMixer with Per-Layer LR Groups",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/953",
         "authorLogin": "dexhunter",
         "authorName": null,
         "createdAt": "2026-03-27T13:31:45Z",
-        "updatedAt": "2026-03-27T16:19:39Z",
+        "updatedAt": "2026-03-28T08:16:49Z",
         "headSha": "27b39c622da3a7f289ec0f81557e0f60455c4eb9",
         "headRepo": "dexhunter/parameter-golf"
       },
@@ -22197,6 +22197,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-28_12L_INT4_bQAT_VE",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-28_12L_INT4_bQAT_VE",
+        "folderPath": "records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE",
+        "submissionPath": "records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE/train_gpt.py"
+      },
+      "submission": {
+        "author": "Harsh Soni",
+        "githubId": "SoHarshh",
+        "name": "12L INT4 bQAT + EMA Fix + Value Embeddings",
+        "blurb": "12-layer INT4 MLP+bigram QAT + U-Net skips + XSA(last 4) + EMA(0.997) with QAT-reset fix + LeakyReLU² + RoPE16 + LN Scale + resid_mix + Legal TTT + Value Embeddings (ve_dim=128, last 2 layers). Value embeddings reinject token identity into V at layers 10-11, improving quality per step. Step_avg ~137ms, ~4380 steps in 10 min. Post-quant degradation very clean (1.1643 from 1.1754 pre-quant). 8×H100 seed 1: ttt_bpb=1.15875.",
+        "date": "2026-03-28"
+      },
+      "metrics": {
+        "valBpb": 1.1588,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 16290425,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1009,
+        "title": "12L INT4 bQAT + Value Embeddings — val_bpb 1.1588",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1009",
+        "authorLogin": "SoHarshh",
+        "authorName": null,
+        "createdAt": "2026-03-28T08:06:32Z",
+        "updatedAt": "2026-03-28T08:06:32Z",
+        "headSha": "0ab7cafc0c1074785eb6723a7e4baa2a0eae6c31",
+        "headRepo": "SoHarshh/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8f803e96c525a092e20acba7409e6c4f1b8fa27a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8f803e96c525a092e20acba7409e6c4f1b8fa27a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8f803e96c525a092e20acba7409e6c4f1b8fa27a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8f803e96c525a092e20acba7409e6c4f1b8fa27a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8f803e96c525a092e20acba7409e6c4f1b8fa27a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_VE",
+        "pr": "https://github.com/openai/parameter-golf/pull/1009",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-20_Int6QAT_BigramHash_MLP1344",
       "source": "pull_request",
       "status": "open",
@@ -22408,16 +22485,16 @@
         "authorLogin": "SoHarshh",
         "authorName": null,
         "createdAt": "2026-03-28T04:51:05Z",
-        "updatedAt": "2026-03-28T05:42:02Z",
-        "headSha": "ced5746fee07a96d51de410eb6263d247d89bbda",
+        "updatedAt": "2026-03-28T07:57:57Z",
+        "headSha": "8f803e96c525a092e20acba7409e6c4f1b8fa27a",
         "headRepo": "SoHarshh/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ced5746fee07a96d51de410eb6263d247d89bbda/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/ced5746fee07a96d51de410eb6263d247d89bbda/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/ced5746fee07a96d51de410eb6263d247d89bbda/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/ced5746fee07a96d51de410eb6263d247d89bbda/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/ced5746fee07a96d51de410eb6263d247d89bbda/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8f803e96c525a092e20acba7409e6c4f1b8fa27a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8f803e96c525a092e20acba7409e6c4f1b8fa27a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8f803e96c525a092e20acba7409e6c4f1b8fa27a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8f803e96c525a092e20acba7409e6c4f1b8fa27a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8f803e96c525a092e20acba7409e6c4f1b8fa27a/records/track_10min_16mb/2026-03-28_12L_INT4_bQAT_EMAfix",
         "pr": "https://github.com/openai/parameter-golf/pull/1002",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

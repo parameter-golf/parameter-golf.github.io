@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-28T05:51:12.142Z",
+  "generatedAt": "2026-03-28T08:21:23.760Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1002,
     "title": "12L INT4 bQAT + EMA Fix + Deterministic QAT — val_bpb ~1.165",
     "state": "open",
-    "updatedAt": "2026-03-28T05:42:02Z",
-    "headSha": "ced5746fee07a96d51de410eb6263d247d89bbda",
+    "updatedAt": "2026-03-28T07:57:57Z",
+    "headSha": "8f803e96c525a092e20acba7409e6c4f1b8fa27a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1002",
     "authorLogin": "SoHarshh"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "12L GPT uses INT4 QAT for both MLP and bigram weights, resets EMA at QAT start, and triggers quantization by wallclock fraction for deterministic timing under 16MB.",
+    "summary": "Uses INT4 bigram+MLP QAT with EMA reset and a deterministic wallclock trigger to stabilize a 12-layer 16MB model under aggressive quantization.",
     "tags": [
       "quantization",
-      "architecture",
-      "training-schedule"
+      "training-schedule",
+      "architecture"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Full-model training; no validation-only regime.",
     "techniques": [
-      "INT4 bigram QAT with STE plus EMA reset",
-      "Wallclock-fraction late QAT trigger for deterministic timing",
-      "12L layout with U-Net skips, XSA last layers, RoPE16"
+      "INT4 bigram+MLP QAT with EMA reset on activation",
+      "Deterministic wallclock-based QAT trigger at 65% budget",
+      "12-layer setup with U-Net skips, XSA last-4, and RoPE16 to fit 16MB"
     ]
   },
   "compatibility": {

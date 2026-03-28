@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T16:47:07.396Z",
+  "generatedAt": "2026-03-28T08:21:38.933Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 953,
     "title": "Record: 1.0722 BPB — Improved TTT + HedgeMixer with Per-Layer LR Groups",
-    "state": "open",
-    "updatedAt": "2026-03-27T16:19:39Z",
+    "state": "closed",
+    "updatedAt": "2026-03-28T08:16:49Z",
     "headSha": "27b39c622da3a7f289ec0f81557e0f60455c4eb9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/953",
     "authorLogin": "dexhunter"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Enhanced HedgeMixer + TTT with per-layer LR groups, cosine TTT schedule, and extra epoch/fewer frozen blocks for better adaptation.",
+    "summary": "Per-layer TTT LR groups plus a cosine decay, extra epoch, and fewer frozen blocks let HedgeMixer prep its chunk-by-chunk adaptation while folding sliding eval into TTT.",
     "tags": [
       "training-schedule",
       "optimizer",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-layer LR groups (3x output, 0.5x input) during TTT",
-      "Cosine chunk-wise LR annealing with 4 epochs",
-      "Reduced block freezing alongside HedgeMixer scoring"
+      "- per-layer LR groups targeting output vs input projections",
+      "- cosine TTT schedule with 4 epochs and one frozen block",
+      "- reuse TTT scoring to replace standalone sliding-window eval"
     ]
   },
   "compatibility": {
