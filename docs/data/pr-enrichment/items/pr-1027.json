@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-28T16:23:51.741Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1027,
+    "title": "Non-record: LeakyReLU² + BigramHash + Int5/Int6 + SlidingWindow — val_bpb 1.3036 (1×H100)",
+    "state": "open",
+    "updatedAt": "2026-03-28T16:00:11Z",
+    "headSha": "1fc2f703b55584080e7fd2a737c2f0fec59fd2c1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1027",
+    "authorLogin": "Syed-M-Zeeshan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "LeakyReLU² MLP-3× with BigramHash embeddings, mixed Int5/Int6 quantization, and sliding-window eval enhanced by EMA/SWA smoothing and AdamW TTT prep.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU(0.5)² MLP-3× backbone",
+      "BigramHash tokens with mixed Int5/Int6 quantization and FP16 tied embeds",
+      "EMA+SWA smoothing with AdamW pre-quant test-time training"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

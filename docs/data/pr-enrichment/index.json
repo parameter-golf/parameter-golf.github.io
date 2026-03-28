@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-28T15:53:24.571Z",
+  "generatedAt": "2026-03-28T16:23:56.732Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1028,
+      "title": "Medusa: Unstable — DeltaNet Crawler 0.8104 BPB 10mb file size(best seed), mean 0.9984, Frugendorff continuation",
+      "status": "open",
+      "updatedAt": "2026-03-28T16:18:37Z",
+      "headSha": "5f731b386f760ece37b4d4f0fb15cc7332c73b73",
+      "generatedAt": "2026-03-28T16:23:47.532Z",
+      "summary": "Medusa adds 4-head DeltaNet chunk_delta_rule inside the Frugendorff crawler with loop-aware GPTQ and late-start EMA to tame quantized state updates.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1028.json"
+    },
+    {
+      "prNumber": 1027,
+      "title": "Non-record: LeakyReLU² + BigramHash + Int5/Int6 + SlidingWindow — val_bpb 1.3036 (1×H100)",
+      "status": "open",
+      "updatedAt": "2026-03-28T16:00:11Z",
+      "headSha": "1fc2f703b55584080e7fd2a737c2f0fec59fd2c1",
+      "generatedAt": "2026-03-28T16:23:51.741Z",
+      "summary": "LeakyReLU² MLP-3× with BigramHash embeddings, mixed Int5/Int6 quantization, and sliding-window eval enhanced by EMA/SWA smoothing and AdamW TTT prep.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1027.json"
+    },
     {
       "prNumber": 1026,
       "title": "N-gram Cache + Entropy-Adaptive Alpha: 1.0945 BPB",
@@ -522,14 +569,13 @@
       "prNumber": 998,
       "title": "Add Conker-5 tandem residual exact experts non-record submission",
       "status": "open",
-      "updatedAt": "2026-03-28T09:57:26Z",
+      "updatedAt": "2026-03-28T16:09:43Z",
       "headSha": "084a2fe41800de14ec63a7e18ebe71611f73b805",
-      "generatedAt": "2026-03-28T10:21:50.455Z",
-      "summary": "Tandem-trains a Conker-3 base with gate-selected sparse exact residual experts and packages the model as an int6+zlib artifact.",
+      "generatedAt": "2026-03-28T16:23:56.586Z",
+      "summary": "Conker-3 tandem base learns with sparse exact-history residual experts whose gate-only selectors are packaged int6+zlib for this non-record 16MB submission.",
       "tags": [
         "architecture",
         "quantization",
-        "compression",
         "non-record"
       ],
       "flags": {
@@ -658,29 +704,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-992.json"
-    },
-    {
-      "prNumber": 990,
-      "title": "ClownCar: Frugendorff compression baseline + canonical DeltaNet integration",
-      "status": "open",
-      "updatedAt": "2026-03-28T13:33:49Z",
-      "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491",
-      "generatedAt": "2026-03-28T13:53:01.937Z",
-      "summary": "ClownCar reuses a shared Frugendorff crawler with DeltaNet kernels and int8-aware tweaks to trade depth for width in a compression-focused tiny model.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "compression"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-990.json"
     },
     {
       "prNumber": 989,

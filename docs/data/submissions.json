@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T15:53:17.533Z",
+  "generatedAt": "2026-03-28T16:23:39.916Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -2904,17 +2904,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 990,
-        "title": "ClownCar: Frugendorff compression baseline + canonical DeltaNet integration",
+        "number": 1028,
+        "title": "Medusa: Unstable — DeltaNet Crawler 0.8104 BPB 10mb file size(best seed), mean 0.9984, Frugendorff continuation",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/990",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1028",
         "authorLogin": "newjordan",
         "authorName": null,
-        "createdAt": "2026-03-28T00:02:14Z",
-        "updatedAt": "2026-03-28T13:33:49Z",
-        "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491",
+        "createdAt": "2026-03-28T16:08:34Z",
+        "updatedAt": "2026-03-28T16:18:37Z",
+        "headSha": "5f731b386f760ece37b4d4f0fb15cc7332c73b73",
         "headRepo": "newjordan/parameter-golf-1"
       },
       "links": {
@@ -2923,7 +2923,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/7b29d6b5e32db72c66f6a6db26109fda8e46b5e0/records/track_10min_16mb/2026-03-26_XWING_Cubric3D_complementary_8xH100/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/7b29d6b5e32db72c66f6a6db26109fda8e46b5e0/records/track_10min_16mb/2026-03-26_XWING_Cubric3D_complementary_8xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/7b29d6b5e32db72c66f6a6db26109fda8e46b5e0/records/track_10min_16mb/2026-03-26_XWING_Cubric3D_complementary_8xH100",
-        "pr": "https://github.com/openai/parameter-golf/pull/990",
+        "pr": "https://github.com/openai/parameter-golf/pull/1028",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -3375,7 +3375,7 @@
         "authorLogin": "asuramaya",
         "authorName": null,
         "createdAt": "2026-03-28T02:27:23Z",
-        "updatedAt": "2026-03-28T09:57:26Z",
+        "updatedAt": "2026-03-28T16:09:43Z",
         "headSha": "084a2fe41800de14ec63a7e18ebe71611f73b805",
         "headRepo": "asuramaya/parameter-golf"
       },
@@ -5858,6 +5858,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/7ccb4a43d287495eba665dbfcecda7a54c3b993e/records/track_10min_16mb/2026-03-26_LeakyReLU09_NgramCache_EntropyQAT/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/7ccb4a43d287495eba665dbfcecda7a54c3b993e/records/track_10min_16mb/2026-03-26_LeakyReLU09_NgramCache_EntropyQAT",
         "pr": "https://github.com/openai/parameter-golf/pull/885",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100",
+        "folderPath": "records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100",
+        "submissionPath": "records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/train_gpt.py"
+      },
+      "submission": {
+        "author": "Frosty40",
+        "githubId": "newjordan",
+        "name": "Medusa: DeltaNet (DELTA_NET_HEADS=4) + Loop-Aware GPTQ + Late-Start EMA",
+        "blurb": "Successor to PR #990 (ClownCar, 1.1813 BPB). Catalyzed by PR #875 (@shalyhinpavel, GDN 1.0226). Adds DELTA_NET_HEADS=4 (canonical chunk_delta_rule), loop-aware 2-phase GPTQ, late-start EMA (step 4400, decay=0.99). 4 flat + 1 crawler x 4 loops, INST_DIM=32. NOTE: this variant (Medusa_IV) has state dtype bug in eval path — see Medusa_V for fix.",
+        "date": "2026-03-28"
+      },
+      "metrics": {
+        "valBpb": 0.9984,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 10031847,
+        "bytesCode": 180226,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1028,
+        "title": "Medusa: Unstable — DeltaNet Crawler 0.8104 BPB 10mb file size(best seed), mean 0.9984, Frugendorff continuation",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1028",
+        "authorLogin": "newjordan",
+        "authorName": null,
+        "createdAt": "2026-03-28T16:08:34Z",
+        "updatedAt": "2026-03-28T16:18:37Z",
+        "headSha": "5f731b386f760ece37b4d4f0fb15cc7332c73b73",
+        "headRepo": "newjordan/parameter-golf-1"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5f731b386f760ece37b4d4f0fb15cc7332c73b73/records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/5f731b386f760ece37b4d4f0fb15cc7332c73b73/records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/5f731b386f760ece37b4d4f0fb15cc7332c73b73/records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/5f731b386f760ece37b4d4f0fb15cc7332c73b73/records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/5f731b386f760ece37b4d4f0fb15cc7332c73b73/records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100",
+        "pr": "https://github.com/openai/parameter-golf/pull/1028",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -34816,6 +34893,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/d3cbde1b2a004334d657dfa6d9b705a1474afc3e/records/track_10min_16mb/2026-03-19_WarmdownTuned_1xRTX5090/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/d3cbde1b2a004334d657dfa6d9b705a1474afc3e/records/track_10min_16mb/2026-03-19_WarmdownTuned_1xRTX5090",
         "pr": "https://github.com/openai/parameter-golf/pull/146",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow",
+        "folderPath": "records/track_non_record_16mb/2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow",
+        "submissionPath": "records/track_non_record_16mb/2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow/train_gpt.py"
+      },
+      "submission": {
+        "author": "Syed-M-Zeeshan",
+        "githubId": "Syed-M-Zeeshan",
+        "name": "LeakyReLU² + BigramHash + Int5/Int6 + Sliding Window + EMA + AdamW TTT",
+        "blurb": "Non-record 1×H100 submission. 11L 512d MLP-3x with LeakyReLU(0.5)², BigramHash(1536), mixed Int5/Int6 quantization, FP16 tied embeddings, EMA(0.997), AdamW pre-quant TTT, LZMA compression, sliding window eval (stride=64). Best 1×H100 result: val_bpb 1.3036 (sliding window) at 1090 steps in 10min. Projected 8×H100: ~1.17-1.19 BPB.",
+        "date": "2026-03-28T19:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.3036,
+        "valLoss": 2.201,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15893048,
+        "bytesCode": 46821,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1027,
+        "title": "Non-record: LeakyReLU² + BigramHash + Int5/Int6 + SlidingWindow — val_bpb 1.3036 (1×H100)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1027",
+        "authorLogin": "Syed-M-Zeeshan",
+        "authorName": null,
+        "createdAt": "2026-03-28T16:00:11Z",
+        "updatedAt": "2026-03-28T16:00:11Z",
+        "headSha": "1fc2f703b55584080e7fd2a737c2f0fec59fd2c1",
+        "headRepo": "Syed-M-Zeeshan/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1fc2f703b55584080e7fd2a737c2f0fec59fd2c1/records/track_non_record_16mb/2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/1fc2f703b55584080e7fd2a737c2f0fec59fd2c1/records/track_non_record_16mb/2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/1fc2f703b55584080e7fd2a737c2f0fec59fd2c1/records/track_non_record_16mb/2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/1fc2f703b55584080e7fd2a737c2f0fec59fd2c1/records/track_non_record_16mb/2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/1fc2f703b55584080e7fd2a737c2f0fec59fd2c1/records/track_non_record_16mb/2026-03-28_LeakyReLU_BigramHash_Int5Int6_SlidingWindow",
+        "pr": "https://github.com/openai/parameter-golf/pull/1027",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
