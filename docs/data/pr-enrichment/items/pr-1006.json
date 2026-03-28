@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T13:22:50.110Z",
+  "generatedAt": "2026-03-28T19:24:23.550Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1006,
     "title": "1.1085 BPB: JEPA + AdamW TTT + Full GPTQ + FA3 + LZMA",
     "state": "open",
-    "updatedAt": "2026-03-28T13:12:11Z",
+    "updatedAt": "2026-03-28T19:03:51Z",
     "headSha": "8ab5217009ea9e20f2f858f9aef5f0bd8c16c4c0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1006",
     "authorLogin": "NewyorkDev"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Uses JEPA regularizer, pre-quantization AdamW TTT, Hessian GPTQ, FA3, XSA on every layer, and LZMA to stay under 16MB.",
+    "summary": "JEPA auxiliary loss plus pre-quant AdamW TTT before full Hessian GPTQ quantization, boosted by FA3, LZMA, and full-layer XSA.",
     "tags": [
       "architecture",
-      "optimizer",
       "quantization",
-      "attention"
+      "attention",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "JEPA latent forecasting loss across horizons as representation regularizer",
-      "AdamW test-time training with cosine decay applied before quantization on EMA weights",
-      "Hessian-aware GPTQ int6 + FA3 speedup and LZMA compression to meet budget"
+      "JEPA joint-embedding auxiliary loss",
+      "Pre-quantization AdamW test-time training",
+      "Full Hessian GPTQ with FA3 and LZMA compression"
     ]
   },
   "compatibility": {
