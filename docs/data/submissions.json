@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T15:29:36.882Z",
+  "generatedAt": "2026-03-29T15:59:41.197Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -3212,17 +3212,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 990,
-        "title": "ClownCar: Frugendorff compression baseline + canonical DeltaNet integration",
+        "number": 1083,
+        "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB (3-seed mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/990",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1083",
         "authorLogin": "newjordan",
         "authorName": null,
-        "createdAt": "2026-03-28T00:02:14Z",
-        "updatedAt": "2026-03-28T13:33:49Z",
-        "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491",
+        "createdAt": "2026-03-29T15:59:30Z",
+        "updatedAt": "2026-03-29T15:59:30Z",
+        "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
         "headRepo": "newjordan/parameter-golf-1"
       },
       "links": {
@@ -3231,7 +3231,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/7b29d6b5e32db72c66f6a6db26109fda8e46b5e0/records/track_10min_16mb/2026-03-26_XWING_Cubric3D_complementary_8xH100/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/7b29d6b5e32db72c66f6a6db26109fda8e46b5e0/records/track_10min_16mb/2026-03-26_XWING_Cubric3D_complementary_8xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/7b29d6b5e32db72c66f6a6db26109fda8e46b5e0/records/track_10min_16mb/2026-03-26_XWING_Cubric3D_complementary_8xH100",
-        "pr": "https://github.com/openai/parameter-golf/pull/990",
+        "pr": "https://github.com/openai/parameter-golf/pull/1083",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -3309,6 +3309,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/7b29d6b5e32db72c66f6a6db26109fda8e46b5e0/records/track_10min_16mb/2026-03-26_XWING_YellowII_3Dcubric_complementary_8xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/7b29d6b5e32db72c66f6a6db26109fda8e46b5e0/records/track_10min_16mb/2026-03-26_XWING_YellowII_3Dcubric_complementary_8xH100",
         "pr": "https://github.com/openai/parameter-golf/pull/800",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100",
+        "folderPath": "records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100",
+        "submissionPath": "records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100/train_gpt.py"
+      },
+      "submission": {
+        "author": "Frosty40",
+        "githubId": "newjordan",
+        "name": "Bandit: ClownCar Crawler x Cubric Ngram9",
+        "blurb": "Frugendorff ClownCar crawler (4 flat + 1 crawlerx4 loops, inst_dim=32, DN=0, causality-fixed) + X-WING ngram oracle (shared tables, 3D Cubric 54-cell warm-start, entropy-adaptive alpha 0.20-0.75, complementary training COMPLEMENT_ALPHA=0.5). GPTQ-int6+zstd ~9.3MB. 3-seed mean val_bpb=0.4961 (std 0.0003).",
+        "date": "2026-03-29T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 0.4961,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 9214394,
+        "bytesCode": 181137,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1083,
+        "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1083",
+        "authorLogin": "newjordan",
+        "authorName": null,
+        "createdAt": "2026-03-29T15:59:30Z",
+        "updatedAt": "2026-03-29T15:59:30Z",
+        "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
+        "headRepo": "newjordan/parameter-golf-1"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4efa746c3596aba503b77ad4c5c5181aafab04bd/records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/4efa746c3596aba503b77ad4c5c5181aafab04bd/records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/4efa746c3596aba503b77ad4c5c5181aafab04bd/records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/4efa746c3596aba503b77ad4c5c5181aafab04bd/records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/4efa746c3596aba503b77ad4c5c5181aafab04bd/records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100",
+        "pr": "https://github.com/openai/parameter-golf/pull/1083",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -6300,17 +6377,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1028,
-        "title": "Medusa: Unstable — DeltaNet Crawler 0.8104 BPB 10mb file size(best seed), mean 0.9984, Frugendorff continuation",
+        "number": 1083,
+        "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB (3-seed mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1028",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1083",
         "authorLogin": "newjordan",
         "authorName": null,
-        "createdAt": "2026-03-28T16:08:34Z",
-        "updatedAt": "2026-03-29T00:57:29Z",
-        "headSha": "37df3009ba811f4cfc35a815057d7b7df925b5a2",
+        "createdAt": "2026-03-29T15:59:30Z",
+        "updatedAt": "2026-03-29T15:59:30Z",
+        "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
         "headRepo": "newjordan/parameter-golf-1"
       },
       "links": {
@@ -6319,7 +6396,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/37df3009ba811f4cfc35a815057d7b7df925b5a2/records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/37df3009ba811f4cfc35a815057d7b7df925b5a2/records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/37df3009ba811f4cfc35a815057d7b7df925b5a2/records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100",
-        "pr": "https://github.com/openai/parameter-golf/pull/1028",
+        "pr": "https://github.com/openai/parameter-golf/pull/1083",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

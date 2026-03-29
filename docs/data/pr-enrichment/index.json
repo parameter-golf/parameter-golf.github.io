@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-29T15:29:48.312Z",
+  "generatedAt": "2026-03-29T15:59:47.796Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1083,
+      "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-29T15:59:30Z",
+      "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
+      "generatedAt": "2026-03-29T15:59:47.619Z",
+      "summary": "Quantized ClownCar crawler fused with shared multi-order n-gram oracle using entropy-aware 3D cubric scaling and complementary training.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1083.json"
+    },
     {
       "prNumber": 1081,
       "title": "Non-record: Swarm-Guided KG-Conditioned Training (val_bpb=1.1220)",
@@ -953,29 +977,6 @@
       "file": "items/pr-1029.json"
     },
     {
-      "prNumber": 1028,
-      "title": "Medusa: Unstable — DeltaNet Crawler 0.8104 BPB 10mb file size(best seed), mean 0.9984, Frugendorff continuation",
-      "status": "open",
-      "updatedAt": "2026-03-29T00:57:29Z",
-      "headSha": "37df3009ba811f4cfc35a815057d7b7df925b5a2",
-      "generatedAt": "2026-03-29T01:26:40.223Z",
-      "summary": "Medusa layers DeltaNet heads into a Frugendorff crawler with loop-aware two-phase GPTQ plus late-start EMA for int6+zstd compression.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1028.json"
-    },
-    {
       "prNumber": 1027,
       "title": "Non-record: LeakyReLU² + BigramHash + Int5/Int6 + SlidingWindow — val_bpb 1.3036 (1×H100)",
       "status": "open",
@@ -1652,29 +1653,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-992.json"
-    },
-    {
-      "prNumber": 990,
-      "title": "ClownCar: Frugendorff compression baseline + canonical DeltaNet integration",
-      "status": "open",
-      "updatedAt": "2026-03-28T13:33:49Z",
-      "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491",
-      "generatedAt": "2026-03-28T23:56:08.976Z",
-      "summary": "ClownCar loops a Frugendorff crawler block 4× to trade depth for width while wiring in canonical DeltaNet kernels for a compact 13M transformer.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "compression"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-990.json"
     },
     {
       "prNumber": 989,

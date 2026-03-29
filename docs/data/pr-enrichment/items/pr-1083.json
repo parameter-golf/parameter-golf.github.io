@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-03-29T15:59:47.619Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1083,
+    "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-29T15:59:30Z",
+    "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1083",
+    "authorLogin": "newjordan"
+  },
+  "inputs": {
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_XWING_Cubric3D_complementary_8xH100/README.md",
+      "records/track_10min_16mb/2026-03-29_Bandit_ClownCar_X_CubricNgram9_8xH100/README.md",
+      "records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/README.md"
+    ],
+    "submissionCount": 3
+  },
+  "output": {
+    "summary": "Quantized ClownCar crawler fused with shared multi-order n-gram oracle using entropy-aware 3D cubric scaling and complementary training.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared n-gram tables with entropy/bin-aware 3D cubric multipliers",
+      "Complementary training downweighting bigram-predictable tokens",
+      "Loop-aware GPTQ + late-start EMA on the crawler topology"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

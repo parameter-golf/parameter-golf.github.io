@@ -2,7 +2,7 @@
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
-  "generatedAt": "2026-03-29T15:29:48.312Z",
+  "generatedAt": "2026-03-29T15:59:47.796Z",
   "prs": {
     "6": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:11373420c1f50e6a83599fb25bb73f38a6555cb7:closed:2026-03-18T18:34:32Z",
@@ -3970,12 +3970,6 @@
       "updatedAt": "2026-03-27T22:45:21Z",
       "headSha": "ae1d2c25a4cf4bf38f0e8c606e84dab25a9f474d"
     },
-    "990": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:90741b4c55ca0a0d0f79056dec29da64d7636491:open:2026-03-28T13:33:49Z",
-      "file": "items/pr-990.json",
-      "updatedAt": "2026-03-28T13:33:49Z",
-      "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491"
-    },
     "992": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:81e66fdcfd83420b492852979726f1117dfd20ab:open:2026-03-29T13:12:13Z",
       "file": "items/pr-992.json",
@@ -4149,12 +4143,6 @@
       "file": "items/pr-1027.json",
       "updatedAt": "2026-03-28T16:00:11Z",
       "headSha": "1fc2f703b55584080e7fd2a737c2f0fec59fd2c1"
-    },
-    "1028": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:37df3009ba811f4cfc35a815057d7b7df925b5a2:open:2026-03-29T00:57:29Z",
-      "file": "items/pr-1028.json",
-      "updatedAt": "2026-03-29T00:57:29Z",
-      "headSha": "37df3009ba811f4cfc35a815057d7b7df925b5a2"
     },
     "1029": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:acdc7170459a7561773bad1999df68bc76e8b108:open:2026-03-29T04:27:37Z",
@@ -4401,6 +4389,12 @@
       "file": "items/pr-1081.json",
       "updatedAt": "2026-03-29T15:18:04Z",
       "headSha": "30b555b81cf0d799a6788c0017384579da0d243a"
+    },
+    "1083": {
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:4efa746c3596aba503b77ad4c5c5181aafab04bd:open:2026-03-29T15:59:30Z",
+      "file": "items/pr-1083.json",
+      "updatedAt": "2026-03-29T15:59:30Z",
+      "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd"
     }
   }
 }
