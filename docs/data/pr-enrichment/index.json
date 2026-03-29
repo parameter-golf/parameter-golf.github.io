@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-29T02:56:44.034Z",
+  "generatedAt": "2026-03-29T03:26:42.535Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1053,
+      "title": "Submission/2026 03 28 masked diffusion",
+      "status": "open",
+      "updatedAt": "2026-03-29T03:10:34Z",
+      "headSha": "65ad02bb7711ba439ac492f83d5b310136466099",
+      "generatedAt": "2026-03-29T03:26:42.379Z",
+      "summary": "Implements a discrete masked diffusion LM trained with bidirectional attention, mask-only CE loss, and pseudo-log-likelihood eval using uniform mask rates.",
+      "tags": [
+        "attention",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1053.json"
+    },
     {
       "prNumber": 1051,
       "title": "WIP: LeakyReLU(0.5)² MLP on 11L EMA + GPTQ-lite stack (`track_10min_16mb`)",
@@ -8756,30 +8779,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-501.json"
-    },
-    {
-      "prNumber": 500,
-      "title": "Submission/2026 03 22 Sliding Window + WARMDOWN + AttnRes + PhiSimple (mean 1.1925 BPB)",
-      "status": "open",
-      "updatedAt": "2026-03-23T04:25:10Z",
-      "headSha": "6d557c3e5ab9cb44721e498ac609c5d3cbc95ff6",
-      "generatedAt": "2026-03-23T04:44:19.836Z",
-      "summary": "Combines sliding-window scoring, warmdown LR decay, block-wise AttnRes, and learnable PhiAlpha scaling atop LoRA to tighten weights for better quantized eval.",
-      "tags": [
-        "training-schedule",
-        "attention",
-        "architecture",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-500.json"
     },
     {
       "prNumber": 497,

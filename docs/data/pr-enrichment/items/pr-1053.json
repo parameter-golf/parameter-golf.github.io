@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-29T03:26:42.379Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1053,
+    "title": "Submission/2026 03 28 masked diffusion",
+    "state": "open",
+    "updatedAt": "2026-03-29T03:10:34Z",
+    "headSha": "65ad02bb7711ba439ac492f83d5b310136466099",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1053",
+    "authorLogin": "ikermoel"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_SlidingWindow_WARMDOWN_AttnRes_PhiSimple/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Implements a discrete masked diffusion LM trained with bidirectional attention, mask-only CE loss, and pseudo-log-likelihood eval using uniform mask rates.",
+    "tags": [
+      "attention",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Bidirectional attention over fully masked contexts",
+      "Mask-only CE loss with uniform sampling of mask rates",
+      "Pseudo-log-likelihood eval predicting tokens with bilateral context"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
