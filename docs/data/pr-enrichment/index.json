@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-29T19:01:11.047Z",
+  "generatedAt": "2026-03-29T19:31:02.799Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1092,
+      "title": "XSA-All 11L + LeakyReLU(0.75)² + Aggressive Legal TTT → 1.1219 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-29T19:29:24Z",
+      "headSha": "86f53b217c7db13c23db9c68222ce3d2a3efb3fc",
+      "generatedAt": "2026-03-29T19:31:02.637Z",
+      "summary": "Extends eXtended Self-Attention to all 11 layers with a LeakyReLU(0.75)^2 MLP and aggressive high-LR legal TTT adaptation.",
+      "tags": [
+        "attention",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1092.json"
+    },
     {
       "prNumber": 1091,
       "title": "The Kitchen Sink",

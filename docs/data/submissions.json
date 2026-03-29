@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T19:00:48.549Z",
+  "generatedAt": "2026-03-29T19:30:53.715Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -14026,6 +14026,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/fa15c5938fd14e8ecd8b11690c130a3b44abfc4a/records/track_10min_16mb/2026-03-28_AdaptivePrecisionEmbeddings_1.1217/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/fa15c5938fd14e8ecd8b11690c130a3b44abfc4a/records/track_10min_16mb/2026-03-28_AdaptivePrecisionEmbeddings_1.1217",
         "pr": "https://github.com/openai/parameter-golf/pull/1042",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-29_XSA11_LeakyReLU075_LegalTTT",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-29_XSA11_LeakyReLU075_LegalTTT",
+        "folderPath": "records/track_10min_16mb/2026-03-29_XSA11_LeakyReLU075_LegalTTT",
+        "submissionPath": "records/track_10min_16mb/2026-03-29_XSA11_LeakyReLU075_LegalTTT/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-29_XSA11_LeakyReLU075_LegalTTT/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-29_XSA11_LeakyReLU075_LegalTTT/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-29_XSA11_LeakyReLU075_LegalTTT/train_gpt.py"
+      },
+      "submission": {
+        "author": "Teddy Oweh",
+        "githubId": "teddyoweh",
+        "name": "XSA-All + LeakyReLU(0.75)² + Aggressive Legal TTT",
+        "blurb": "XSA extended to all 11 layers (-0.0007 BPB), LeakyReLU(0.75)² activation (PR #977), and aggressive legal score-first TTT (lr=0.03, 15× higher than SOTA, -0.0033 BPB gain). Built on PR #414 stack with Parameter Banking + Parallel Muon. SDPA fallback included for environments without Flash Attention 3. Single seed: 1.1219 BPB, artifact 15.92MB.",
+        "date": "2026-03-29"
+      },
+      "metrics": {
+        "valBpb": 1.1219,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15916230,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1092,
+        "title": "XSA-All 11L + LeakyReLU(0.75)² + Aggressive Legal TTT → 1.1219 BPB",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1092",
+        "authorLogin": "teddyoweh",
+        "authorName": null,
+        "createdAt": "2026-03-29T19:29:24Z",
+        "updatedAt": "2026-03-29T19:29:24Z",
+        "headSha": "86f53b217c7db13c23db9c68222ce3d2a3efb3fc",
+        "headRepo": "teddyoweh/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/86f53b217c7db13c23db9c68222ce3d2a3efb3fc/records/track_10min_16mb/2026-03-29_XSA11_LeakyReLU075_LegalTTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/86f53b217c7db13c23db9c68222ce3d2a3efb3fc/records/track_10min_16mb/2026-03-29_XSA11_LeakyReLU075_LegalTTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/86f53b217c7db13c23db9c68222ce3d2a3efb3fc/records/track_10min_16mb/2026-03-29_XSA11_LeakyReLU075_LegalTTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/86f53b217c7db13c23db9c68222ce3d2a3efb3fc/records/track_10min_16mb/2026-03-29_XSA11_LeakyReLU075_LegalTTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/86f53b217c7db13c23db9c68222ce3d2a3efb3fc/records/track_10min_16mb/2026-03-29_XSA11_LeakyReLU075_LegalTTT",
+        "pr": "https://github.com/openai/parameter-golf/pull/1092",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-29T19:31:02.637Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1092,
+    "title": "XSA-All 11L + LeakyReLU(0.75)² + Aggressive Legal TTT → 1.1219 BPB",
+    "state": "open",
+    "updatedAt": "2026-03-29T19:29:24Z",
+    "headSha": "86f53b217c7db13c23db9c68222ce3d2a3efb3fc",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1092",
+    "authorLogin": "teddyoweh"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-29_XSA11_LeakyReLU075_LegalTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Extends eXtended Self-Attention to all 11 layers with a LeakyReLU(0.75)^2 MLP and aggressive high-LR legal TTT adaptation.",
+    "tags": [
+      "attention",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Extended self-attention across all 11 layers",
+      "LeakyReLU(0.75)^2 activation in MLP",
+      "Score-first legal TTT with lr 0.03"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
