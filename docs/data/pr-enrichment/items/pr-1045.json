@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-28T23:55:53.856Z",
+  "generatedAt": "2026-03-29T00:26:05.060Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1045,
     "title": "[Non-Record] XSA-all-layers + VRL + bigram3072 + lzma9 — 1.1509 bpb, AdamW TTT findings",
     "state": "open",
-    "updatedAt": "2026-03-28T23:53:51Z",
-    "headSha": "6a63de5ea8c97194652864996642318a8b28a45a",
+    "updatedAt": "2026-03-29T00:09:09Z",
+    "headSha": "68aaefd4072a71e4bfa6b9b535756ceeaa4981e3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1045",
     "authorLogin": "Hilo-Hilo"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer d512 stack uses cross-attention on every layer, VRL, bigram3072, int6 QAT with lzma9, and finds AdamW TTT lr0.002 regresses.",
+    "summary": "XSA on all 11 layers plus value residual learning with a 3072-vocab bigram head over an 11L d512 stack compressed via int6+lzma9.",
     "tags": [
       "architecture",
       "quantization",
       "compression",
-      "non-record"
+      "regularization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Cross-attention on all 11 layers with Value Residual Learning",
-      "Bigram3072 head plus int6 QAT weights compressed via lzma9",
-      "AdamW TTT at lr0.002 regresses versus SGD"
+      "Cross-attention enabled across every layer",
+      "Value residual learning atop a bigram3072 head",
+      "Int6 weights stored with lzma9 compression"
     ]
   },
   "compatibility": {

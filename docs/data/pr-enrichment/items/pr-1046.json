@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-29T00:25:59.564Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1046,
+    "title": "Record: 11L Adaptive Markov + Int6 Mixed Quant (1.2174 bpb)",
+    "state": "open",
+    "updatedAt": "2026-03-29T00:21:39Z",
+    "headSha": "bde73581708508f4f57407b53c30c5dc9d7f63dc",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1046",
+    "authorLogin": "Jayteare"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_11L_AdaptiveMarkov_Int6_786K_1.2174/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Hybrid GPT mixes transformer logits with an adaptive per-position Markov gate and combines that with per-row int6/int8 quant plus a 786K-token batch for throughput.",
+    "tags": [
+      "architecture",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "adaptive Markov mixing with confidence gate",
+      "per-row int6/int8 quant + zstd export",
+      "786K-token batch for higher throughput"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

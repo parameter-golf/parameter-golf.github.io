@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T05:51:18.458Z",
+  "generatedAt": "2026-03-29T00:26:22.580Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 965,
     "title": "Architectural Record: 1.11837 BPB via KGIIR Trajectory Mixing",
     "state": "open",
-    "updatedAt": "2026-03-28T05:34:23Z",
+    "updatedAt": "2026-03-29T00:15:00Z",
     "headSha": "8d680e58e3f75a610cd95a16e4b1c2d408c05eac",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/965",
     "authorLogin": "Adam-Jacuch"
@@ -19,17 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Fused Kinematic Gated IIR trajectory mixing offloads local syntax to a 4-tap signal-momentum filter so attention heads focus on global reasoning.",
+    "summary": "Augments the Bektursun baseline with hardware-fused KGIIR trajectory mixing using gated 4-tap IIR momentum to offload local context and free attention capacity.",
     "tags": [
-      "architecture",
-      "attention"
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hardware-fused 4-tap KGIIR filter modeling hidden-state momentum",
-      "Layer-wise gating blends token signal with trajectory momentum",
-      "Offloads local dependencies so attention focuses on global reasoning"
+      "Hardware-fused KGIIR 4-tap IIR filter",
+      "Gated momentum shifts for local temporal dependencies",
+      "Frees attention heads for global reasoning"
     ]
   },
   "compatibility": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T09:21:40.168Z",
+  "generatedAt": "2026-03-29T00:26:15.801Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 995,
     "title": "Record: 1.0362 BPB — SGD Momentum 0.95 TTT + HedgeMixer + Per-Layer LR",
     "state": "closed",
-    "updatedAt": "2026-03-28T08:27:07Z",
+    "updatedAt": "2026-03-29T00:15:30Z",
     "headSha": "29f6ef52a222cb5a11803f3e3aa8896b6e1031db",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/995",
     "authorLogin": "dexhunter"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "TTT now trains with SGD momentum 0.95, per-layer LR multipliers, cosine schedule, and HedgeMixer for smoother adaptation and lower variance.",
+    "summary": "TTT training uses SGD momentum 0.95 with per-layer LR groups, cosine scheduling, and HedgeMixer for smoother, tuned adaptation.",
     "tags": [
       "optimizer",
-      "training-schedule",
-      "regularization"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SGD momentum 0.95 replacing AdamW in TTT",
-      "Per-layer LR groups (3x output, 0.5x input) with cosine decay",
-      "Backward-looking HedgeMixer retained"
+      "SGD TTT with momentum 0.95",
+      "Per-layer LR multipliers + cosine schedule",
+      "HedgeMixer with zero frozen blocks"
     ]
   },
   "compatibility": {
