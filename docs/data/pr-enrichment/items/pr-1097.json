@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-29T21:31:35.838Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1097,
+    "title": "Parameter golf jepa",
+    "state": "open",
+    "updatedAt": "2026-03-29T21:23:41Z",
+    "headSha": "5bed757868cf5b8508d09074ad42dd12e96abdaa",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1097",
+    "authorLogin": "danielxmed"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-29_JEPA-LM_Joint_Embedding_Predictive_Architecture/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Recasts the U-Net transformer as a JEPA-based encoder with a 256-D latent predictor and SIGReg anti-collapse regularizer for text compression.",
+    "tags": [
+      "architecture",
+      "regularization",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "JEPA bottleneck projection plus next-position predictor to shape encoder representations",
+      "SIGReg regularization to maintain diverse latent embeddings",
+      "JEPA heads used only during training so inference stays standard"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

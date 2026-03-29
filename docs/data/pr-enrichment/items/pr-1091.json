@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T21:01:28.216Z",
+  "generatedAt": "2026-03-29T21:31:47.207Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1091,
     "title": "The Kitchen Sink",
-    "state": "open",
-    "updatedAt": "2026-03-29T20:45:12Z",
-    "headSha": "81410f9d8368801a4da08bfc80869e70ed18ba53",
+    "state": "closed",
+    "updatedAt": "2026-03-29T21:16:01Z",
+    "headSha": "336910da00060709d7d53f0bc03b178ae32a5d70",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1091",
     "authorLogin": "MichaelMcCulloch"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Single train_gpt pipeline toggles 26 techniques across architecture, training, quantization, and eval-time enhancements for parameter golf.",
+    "summary": "Env-gated script merges 26 togglable architecture, training, quant, and eval tricks (TTT/kNN/n-gram) into a single parameter-golf pipeline.",
     "tags": [
       "architecture",
-      "quantization",
       "training-schedule",
+      "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Env-gated mix of architectural, training, and compression boosts",
-      "Eval-time TTT plus kNN/N-gram/TurboQuant augmentation",
-      "Modular ablation-ready feature toggles"
+      "Env-gated train-time stack covering activations, HybridNorm, SWA, EMA, QAT, and multi-token heads",
+      "Quant/compression chain with OptRot, GPTQ, pruning, entropy coding, and TurboQuant cache compression",
+      "Eval-time augmentations via TTT LoRA, n-gram cache, and kNN-LM"
     ]
   },
   "compatibility": {

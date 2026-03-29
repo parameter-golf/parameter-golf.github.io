@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-03-29T21:01:35.175Z",
+  "generatedAt": "2026-03-29T21:31:53.123Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1097,
+      "title": "Parameter golf jepa",
+      "status": "open",
+      "updatedAt": "2026-03-29T21:23:41Z",
+      "headSha": "5bed757868cf5b8508d09074ad42dd12e96abdaa",
+      "generatedAt": "2026-03-29T21:31:35.838Z",
+      "summary": "Recasts the U-Net transformer as a JEPA-based encoder with a 256-D latent predictor and SIGReg anti-collapse regularizer for text compression.",
+      "tags": [
+        "architecture",
+        "regularization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1097.json"
+    },
+    {
+      "prNumber": 1096,
+      "title": "Record: Depth-Recurrent UT + Rank-1 LoRA Per-Iteration Adaptation — val_bpb 1.3342",
+      "status": "open",
+      "updatedAt": "2026-03-29T21:06:15Z",
+      "headSha": "35488484b1cc58291c0c8eedeb890d4957fefb7c",
+      "generatedAt": "2026-03-29T21:31:42.260Z",
+      "summary": "Depth-recurrent Universal Transformer uses loop-wise rank-1 LoRA vectors on AdamW plus Output-LN and Birkhoff mixing for stable per-iteration adaptation.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1096.json"
+    },
     {
       "prNumber": 1095,
       "title": "Record: Seed-Regenerated Random Model + Incremental N-gram Cache — val_bpb 0.0905",
@@ -76,15 +122,15 @@
     {
       "prNumber": 1091,
       "title": "The Kitchen Sink",
-      "status": "open",
-      "updatedAt": "2026-03-29T20:45:12Z",
-      "headSha": "81410f9d8368801a4da08bfc80869e70ed18ba53",
-      "generatedAt": "2026-03-29T21:01:28.216Z",
-      "summary": "Single train_gpt pipeline toggles 26 techniques across architecture, training, quantization, and eval-time enhancements for parameter golf.",
+      "status": "closed",
+      "updatedAt": "2026-03-29T21:16:01Z",
+      "headSha": "336910da00060709d7d53f0bc03b178ae32a5d70",
+      "generatedAt": "2026-03-29T21:31:47.207Z",
+      "summary": "Env-gated script merges 26 togglable architecture, training, quant, and eval tricks (TTT/kNN/n-gram) into a single parameter-golf pipeline.",
       "tags": [
         "architecture",
-        "quantization",
         "training-schedule",
+        "quantization",
         "evaluation"
       ],
       "flags": {
@@ -242,14 +288,14 @@
       "prNumber": 1083,
       "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB, 9.9mb",
       "status": "open",
-      "updatedAt": "2026-03-29T19:59:37Z",
+      "updatedAt": "2026-03-29T21:01:20Z",
       "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
-      "generatedAt": "2026-03-29T20:01:22.061Z",
-      "summary": "Blends a Frugendorff ClownCar crawler with the X-WING shared n-gram oracle featuring warm-started 3D Cubric multipliers and complementary training.",
+      "generatedAt": "2026-03-29T21:31:52.960Z",
+      "summary": "Combines a Frugendorff ClownCar crawler with loop-aware GPTQ quantization and a shared Cubric n-gram oracle using adaptive multipliers plus complementary training.",
       "tags": [
         "architecture",
-        "evaluation",
-        "quantization"
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
