@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-28T00:50:04.662Z",
+  "generatedAt": "2026-03-29T06:57:57.860Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 984,
     "title": "submission 2026-03-27_PhaseCoherenceGatedGradients PIC-GID + ParallelMuon",
     "state": "open",
-    "updatedAt": "2026-03-28T00:36:56Z",
-    "headSha": "cc5cda4a4b4eb1151812caa49e228282618cf9b4",
+    "updatedAt": "2026-03-29T06:44:26Z",
+    "headSha": "c14f57c0e8e2d1772011dc41ec30c76a068734f6",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/984",
     "authorLogin": "jzgdev"
   },
@@ -19,19 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Explores PIC-GD gating by pairing channels into pseudo-complex latents with Parallel Muon + Adam fine-tuning for coherence-weighted gradients.",
+    "summary": "Adapts PIC-GD with coherence-gated gradients on paired hidden channels plus Muon/Adam split, fading to vanilla fine-tuning.",
     "tags": [
-      "non-record",
       "optimizer",
-      "muon",
-      "attention"
+      "training-schedule",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Phase-induced coherence gating on pseudo-complex latents",
-      "Parallel Muon + Adam split with late plain fine-tuning",
-      "Layer-wise norm scaling with LeakyReLU(0.5)^2"
+      "Phase coherence gating on paired hidden/reference latents",
+      "Muon+Adam optimizer split with late-stage fade to plain fine-tuning"
     ]
   },
   "compatibility": {
