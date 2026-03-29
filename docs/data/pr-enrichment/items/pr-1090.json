@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T18:31:05.462Z",
+  "generatedAt": "2026-03-29T19:01:03.217Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1090,
     "title": "Non-record: 11L XSA + Score-First LoRA TTT (1.1573, 1xH100)",
     "state": "open",
-    "updatedAt": "2026-03-29T18:18:46Z",
-    "headSha": "b0d7261716c3c1faa4a250d44ec6a7be90a59e23",
+    "updatedAt": "2026-03-29T18:35:50Z",
+    "headSha": "cb7f4170b8a152cc2be270c49e56a1f4cb149323",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1090",
     "authorLogin": "swapp1990"
   },
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer Transformer uses XSA on last layers, SwiGLU 3× MLP, SmearGate+U-Net skips, Muon/SWA, mixed int5/6/8 quant, and score-first LoRA TTT per 256-token chunk.",
+    "summary": "11L model pairs XSA on top layers with SwiGLU 3x MLP, SmearGate/U-Net skips, Muon WD+SWA, mixed int5/6/8 quant, and score-first LoRA TTT at eval.",
     "tags": [
+      "val-only",
       "architecture",
       "attention",
-      "quantization",
-      "evaluation"
+      "quantization"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "LoRA TTT adapts rank-8 adapters on each validation chunk before scoring, so training happens directly on validation data.",
     "techniques": [
-      "XSA on final layers with SwiGLU 3× MLP, SmearGate, and U-Net skips",
-      "Mixed int5/int6/int8 quantization with zstd-22 compression",
-      "Score-first LoRA TTT adaptation on 256-token chunks"
+      "11L config with SwiGLU 3x MLP, SmearGate, U-Net skips, Muon WD and SWA",
+      "Mixed quantization (int5 MLP, int6 attention, int8 embeddings) with zstd-22",
+      "Score-first LoRA TTT on 256-token eval chunks"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

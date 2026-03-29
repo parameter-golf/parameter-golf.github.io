@@ -1,34 +1,36 @@
 {
-  "generatedAt": "2026-03-29T18:01:03.066Z",
+  "generatedAt": "2026-03-29T19:01:10.880Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1084,
-    "title": "Non-Record: SLOT Eval-Time Augmentation on PR #549 SOTA Stack",
+    "title": "Non-Record: SLOT Eval-Time Augmentation on PR #549 SOTA Stack val_bpb = 1.1185 (3-seed mean, std 0.0003) | ~15.9 MB | 8×H100 SXM",
     "state": "open",
-    "updatedAt": "2026-03-29T17:47:04Z",
-    "headSha": "44a59d4af48f36743ab3785f1cc08e607cb454d2",
+    "updatedAt": "2026-03-29T18:38:19Z",
+    "headSha": "1a99ad2270f856731ebcf8dc95770f805b002861",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1084",
     "authorLogin": "AnubhavBharadwaaj"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
-      "records/track_non_record_16mb/2026-03-29_SLOT_on_LeakyReLU_TTT_ParallelMuon/README.md"
+      "records/track_non_record_16mb/2026-03-29_SLOT_on_LeakyReLU_TTT_ParallelMuon/README.md",
+      "records/track_non_record_16mb/2026-03-29_CTW_on_LeakyReLU_TTT_ParallelMuon/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Adds SLOT eval-time δ tuning on TTT-adapted hidden states to refine logits per batch before scoring.",
+    "summary": "Stacks SLOT delta tuning on TTT hidden states to refine logits per eval batch with a lightweight per-batch correction inside the scoring loop.",
     "tags": [
       "evaluation",
+      "architecture",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SLOT δ optimization on TTT-hidden logits",
-      "Per-batch AdamW over 512 delta parameters before final scoring"
+      "Per-batch SLOT delta optimized via AdamW on TTT hidden states",
+      "Split forward into hidden computation + compute_logits to insert SLOT correction"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T18:31:23.809Z",
+  "generatedAt": "2026-03-29T19:01:11.047Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -7,14 +7,14 @@
       "prNumber": 1091,
       "title": "The Kitchen Sink",
       "status": "open",
-      "updatedAt": "2026-03-29T18:22:33Z",
-      "headSha": "95a021102f3a84a08c8675b0a0c3db547e978562",
-      "generatedAt": "2026-03-29T18:30:56.672Z",
-      "summary": "Train script gates 26 architectural, training, quantization, and eval techniques (hybrid norm, QAT+GPTQ, TTT LoRA, kNN) for parameter golf.",
+      "updatedAt": "2026-03-29T18:58:03Z",
+      "headSha": "484005f01f51e5f3472b167de4316784a4edebef",
+      "generatedAt": "2026-03-29T19:00:55.051Z",
+      "summary": "Single train_gpt unifies 26 env-gated tweaks across architecture, training, quant/compression, and eval-time TTT/n-gram/kNN/TurboQuant stacks.",
       "tags": [
         "architecture",
-        "quantization",
         "training-schedule",
+        "quantization",
         "evaluation"
       ],
       "flags": {
@@ -31,23 +31,23 @@
       "prNumber": 1090,
       "title": "Non-record: 11L XSA + Score-First LoRA TTT (1.1573, 1xH100)",
       "status": "open",
-      "updatedAt": "2026-03-29T18:18:46Z",
-      "headSha": "b0d7261716c3c1faa4a250d44ec6a7be90a59e23",
-      "generatedAt": "2026-03-29T18:31:05.462Z",
-      "summary": "11-layer Transformer uses XSA on last layers, SwiGLU 3× MLP, SmearGate+U-Net skips, Muon/SWA, mixed int5/6/8 quant, and score-first LoRA TTT per 256-token chunk.",
+      "updatedAt": "2026-03-29T18:35:50Z",
+      "headSha": "cb7f4170b8a152cc2be270c49e56a1f4cb149323",
+      "generatedAt": "2026-03-29T19:01:03.217Z",
+      "summary": "11L model pairs XSA on top layers with SwiGLU 3x MLP, SmearGate/U-Net skips, Muon WD+SWA, mixed int5/6/8 quant, and score-first LoRA TTT at eval.",
       "tags": [
+        "val-only",
         "architecture",
         "attention",
-        "quantization",
-        "evaluation"
+        "quantization"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-1090.json"
     },
@@ -148,14 +148,15 @@
     },
     {
       "prNumber": 1084,
-      "title": "Non-Record: SLOT Eval-Time Augmentation on PR #549 SOTA Stack",
+      "title": "Non-Record: SLOT Eval-Time Augmentation on PR #549 SOTA Stack val_bpb = 1.1185 (3-seed mean, std 0.0003) | ~15.9 MB | 8×H100 SXM",
       "status": "open",
-      "updatedAt": "2026-03-29T17:47:04Z",
-      "headSha": "44a59d4af48f36743ab3785f1cc08e607cb454d2",
-      "generatedAt": "2026-03-29T18:01:03.066Z",
-      "summary": "Adds SLOT eval-time δ tuning on TTT-adapted hidden states to refine logits per batch before scoring.",
+      "updatedAt": "2026-03-29T18:38:19Z",
+      "headSha": "1a99ad2270f856731ebcf8dc95770f805b002861",
+      "generatedAt": "2026-03-29T19:01:10.880Z",
+      "summary": "Stacks SLOT delta tuning on TTT hidden states to refine logits per eval batch with a lightweight per-batch correction inside the scoring loop.",
       "tags": [
         "evaluation",
+        "architecture",
         "non-record"
       ],
       "flags": {
