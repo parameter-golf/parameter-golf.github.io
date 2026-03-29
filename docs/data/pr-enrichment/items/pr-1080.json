@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-29T14:59:32.272Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1080,
+    "title": "Add non-record 16MB submission: quant-quality-first 1.12276 BPB",
+    "state": "open",
+    "updatedAt": "2026-03-29T14:47:13Z",
+    "headSha": "6b73425b024e68e250fcc5d96b7acd81608bb741",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1080",
+    "authorLogin": "ciach"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-29_QuantQualityFirst_SP1024_11x512_KV4_MLP3_BG2048_ciach/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11L/512d GQA ups MLP mult to 3 and BG2048 with mixed int6 quant for mlp/attn (int8 embeds) to stay within the 16MB cap.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "MLP_MULT=3 & BIGRAM_VOCAB_SIZE=2048 on 11x512 GQA layout",
+      "Mixed int6 quant on MLP/attention with int8 embedding path",
+      "Stride-64 sliding-window eval with VE/XSA on top layers"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

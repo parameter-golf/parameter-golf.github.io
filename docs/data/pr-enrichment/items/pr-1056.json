@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T05:27:23.984Z",
+  "generatedAt": "2026-03-29T14:59:44.084Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -21,7 +21,7 @@
     "submissionCount": 3
   },
   "output": {
-    "summary": "Packed causal n-gram artifact plus Dirichlet posterior mixing blends a 2-layer GPT’s logits with high-order n-gram counts in single-pass score-first eval.",
+    "summary": "Combines a tiny GPT prior with packed multi-order n-gram counts and Dirichlet posterior backoff plus count-confidence gating during single-pass score-first eval.",
     "tags": [
       "architecture",
       "compression",
@@ -30,9 +30,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Packed order-2–12 n-gram hash tables zipped into artifact to warm cache from the start",
-      "Greedy Dirichlet posterior backoff with count-confidence gating selects the highest reliable order",
-      "Single-pass score-first sliding-window eval with distributed cache prefill"
+      "Packed causal n-gram artifact (orders 2–12) compressed in artifact",
+      "Dirichlet posterior backoff mixing with count-confidence gating",
+      "Score-first sliding-window eval with distributed cache prefill"
     ]
   },
   "compatibility": {

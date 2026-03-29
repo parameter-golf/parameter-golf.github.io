@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-29T14:29:20.356Z",
+  "generatedAt": "2026-03-29T14:59:59.591Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1080,
+      "title": "Add non-record 16MB submission: quant-quality-first 1.12276 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-29T14:47:13Z",
+      "headSha": "6b73425b024e68e250fcc5d96b7acd81608bb741",
+      "generatedAt": "2026-03-29T14:59:32.272Z",
+      "summary": "11L/512d GQA ups MLP mult to 3 and BG2048 with mixed int6 quant for mlp/attn (int8 embeds) to stay within the 16MB cap.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1080.json"
+    },
     {
       "prNumber": 1077,
       "title": "Sota 11 l submission",
@@ -30,13 +54,15 @@
     {
       "prNumber": 1076,
       "title": "Record: Packed Causal N-gram + Dirichlet Backoff — val_bpb 0.0109 (3-seed mean, NEW SOTA)",
-      "status": "open",
-      "updatedAt": "2026-03-29T13:33:02Z",
+      "status": "closed",
+      "updatedAt": "2026-03-29T14:52:32Z",
       "headSha": "1ee75c98330bccacee1fe897b2c0dbc6adbec018",
-      "generatedAt": "2026-03-29T13:59:18.730Z",
-      "summary": "Precomputed packed order-2–12 causal n-gram tables blend with Dirichlet posterior backoff and confidence gating in a single-pass score-first eval.",
+      "generatedAt": "2026-03-29T14:59:38.456Z",
+      "summary": "Packed multi-order causal n-gram cache plus Dirichlet posterior backoff drives score-first single-pass eval within a 40M-token budget.",
       "tags": [
+        "sliding-window-eval",
         "architecture",
+        "compression",
         "evaluation"
       ],
       "flags": {
@@ -401,6 +427,29 @@
       "file": "items/pr-1057.json"
     },
     {
+      "prNumber": 1056,
+      "title": "Record: Packed Causal N-gram + Dirichlet Backoff — val_bpb 0.0180 (3-seed    mean)",
+      "status": "open",
+      "updatedAt": "2026-03-29T04:59:12Z",
+      "headSha": "7a5524b35bd81d605f8753148bd852c2762946bd",
+      "generatedAt": "2026-03-29T14:59:44.084Z",
+      "summary": "Combines a tiny GPT prior with packed multi-order n-gram counts and Dirichlet posterior backoff plus count-confidence gating during single-pass score-first eval.",
+      "tags": [
+        "architecture",
+        "compression",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1056.json"
+    },
+    {
       "prNumber": 1053,
       "title": "Submission/2026 03 28 masked diffusion",
       "status": "open",
@@ -492,12 +541,12 @@
     },
     {
       "prNumber": 1047,
-      "title": "INVALID MOST LIKELY (0.8822 BPB mean) Medusa: Unstable S2 — DeltaNet Crawler, Legal  10mb. .77bpb single seed.",
+      "title": "INVALID* (0.8822 BPB mean) Medusa: Unstable S2 — DeltaNet Crawler, Legal  10mb. .77bpb single seed.",
       "status": "open",
-      "updatedAt": "2026-03-29T14:21:38Z",
+      "updatedAt": "2026-03-29T14:31:37Z",
       "headSha": "99d34869c2ced0dd13b353f075765cac14246961",
-      "generatedAt": "2026-03-29T14:29:20.200Z",
-      "summary": "Medusa Unstable S2 keeps the DeltaNet crawler topology with chunk_delta_rule, loop-aware GPTQ, and an early stop so calibration fits inside the 600s cap.",
+      "generatedAt": "2026-03-29T14:59:49.266Z",
+      "summary": "DeltaNet crawler with 4 flat +1 loop layers uses chunk_delta_rule and loop-aware GPTQ timing to keep int6 quantization inside the 600s budget.",
       "tags": [
         "architecture",
         "quantization",
@@ -1653,14 +1702,14 @@
       "prNumber": 986,
       "title": "Record: Packed N-gram + Two-Pass   Dirichlet CTW — val_bpb 0.0830 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-28T14:24:03Z",
+      "updatedAt": "2026-03-29T14:42:18Z",
       "headSha": "1c70fa129218ea7107a314c465c74588a1af7b9f",
-      "generatedAt": "2026-03-28T14:53:18.291Z",
-      "summary": "Prebuilt packed n-gram artifact, two-pass sliding-window eval, and hierarchical Dirichlet CTW mixing keep scoring dominated by cached statistics.",
+      "generatedAt": "2026-03-29T14:59:59.448Z",
+      "summary": "Pre-build packed n-gram counts and use two-pass scoring with hierarchical Dirichlet CTW mixing so eval relies on cache-heavy statistics atop a vestigial neural base.",
       "tags": [
-        "architecture",
         "compression",
-        "evaluation"
+        "evaluation",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,

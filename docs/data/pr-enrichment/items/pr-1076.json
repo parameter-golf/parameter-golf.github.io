@@ -1,38 +1,37 @@
 {
-  "generatedAt": "2026-03-29T13:59:18.730Z",
+  "generatedAt": "2026-03-29T14:59:38.456Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1076,
     "title": "Record: Packed Causal N-gram + Dirichlet Backoff — val_bpb 0.0109 (3-seed mean, NEW SOTA)",
-    "state": "open",
-    "updatedAt": "2026-03-29T13:33:02Z",
+    "state": "closed",
+    "updatedAt": "2026-03-29T14:52:32Z",
     "headSha": "1ee75c98330bccacee1fe897b2c0dbc6adbec018",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1076",
     "authorLogin": "sofiabod"
   },
   "inputs": {
-    "hash": "579bb5ffe0be0c1712f71e5520c59dac8d390132277b2852c9d7b29d19e6e091",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-29_DirichletBackoff_40M/README.md",
-      "records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff/README.md",
-      "records/track_10min_16mb/2026-03-28_SinglePass_PackedNgram_DirichletCTW/README.md",
-      "records/track_10min_16mb/2026-03-26_OrderAdaptive_9gram_Prefill/README.md"
+      "records/track_10min_16mb/2026-03-29_DirichletBackoff_40M/README.md"
     ],
-    "submissionCount": 4
+    "submissionCount": 1
   },
   "output": {
-    "summary": "Precomputed packed order-2–12 causal n-gram tables blend with Dirichlet posterior backoff and confidence gating in a single-pass score-first eval.",
+    "summary": "Packed multi-order causal n-gram cache plus Dirichlet posterior backoff drives score-first single-pass eval within a 40M-token budget.",
     "tags": [
+      "sliding-window-eval",
       "architecture",
+      "compression",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "N/A",
     "techniques": [
-      "Packed 32K-bucket order-2–12 causal n-gram cache from 40M tokens",
-      "Dirichlet posterior blending with count-confidence gating per order",
-      "Sliding-window score-first eval with distributed cache prefill"
+      "Packed multi-order n-gram hash tables in 32K buckets per order",
+      "Dirichlet posterior backoff mixing with count-confidence gating",
+      "Score-first single-pass eval with sliding-window stride 64"
     ]
   },
   "compatibility": {

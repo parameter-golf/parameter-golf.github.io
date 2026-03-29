@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T14:29:06.615Z",
+  "generatedAt": "2026-03-29T14:59:25.708Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -83,7 +83,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-29_DirichletBackoff_40M",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -131,14 +131,14 @@
       "pr": {
         "number": 1076,
         "title": "Record: Packed Causal N-gram + Dirichlet Backoff — val_bpb 0.0109 (3-seed mean, NEW SOTA)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1076",
         "authorLogin": "sofiabod",
         "authorName": null,
         "createdAt": "2026-03-29T13:33:02Z",
-        "updatedAt": "2026-03-29T13:33:02Z",
+        "updatedAt": "2026-03-29T14:52:32Z",
         "headSha": "1ee75c98330bccacee1fe897b2c0dbc6adbec018",
         "headRepo": "sofiabod/parameter-golf"
       },
@@ -283,17 +283,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1076,
-        "title": "Record: Packed Causal N-gram + Dirichlet Backoff — val_bpb 0.0109 (3-seed mean, NEW SOTA)",
+        "number": 1056,
+        "title": "Record: Packed Causal N-gram + Dirichlet Backoff — val_bpb 0.0180 (3-seed    mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1076",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1056",
         "authorLogin": "sofiabod",
         "authorName": null,
-        "createdAt": "2026-03-29T13:33:02Z",
-        "updatedAt": "2026-03-29T13:33:02Z",
-        "headSha": "1ee75c98330bccacee1fe897b2c0dbc6adbec018",
+        "createdAt": "2026-03-29T04:59:12Z",
+        "updatedAt": "2026-03-29T04:59:12Z",
+        "headSha": "7a5524b35bd81d605f8753148bd852c2762946bd",
         "headRepo": "sofiabod/parameter-golf"
       },
       "links": {
@@ -302,7 +302,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/7a5524b35bd81d605f8753148bd852c2762946bd/records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/7a5524b35bd81d605f8753148bd852c2762946bd/records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/7a5524b35bd81d605f8753148bd852c2762946bd/records/track_10min_16mb/2026-03-28_PackedCausal_DirichletBackoff",
-        "pr": "https://github.com/openai/parameter-golf/pull/1076",
+        "pr": "https://github.com/openai/parameter-golf/pull/1056",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -988,7 +988,7 @@
         "authorLogin": "sofiabod",
         "authorName": null,
         "createdAt": "2026-03-27T21:32:05Z",
-        "updatedAt": "2026-03-28T14:24:03Z",
+        "updatedAt": "2026-03-29T14:42:18Z",
         "headSha": "1c70fa129218ea7107a314c465c74588a1af7b9f",
         "headRepo": "sofiabod/parameter-golf"
       },
@@ -1595,17 +1595,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1076,
-        "title": "Record: Packed Causal N-gram + Dirichlet Backoff — val_bpb 0.0109 (3-seed mean, NEW SOTA)",
+        "number": 1056,
+        "title": "Record: Packed Causal N-gram + Dirichlet Backoff — val_bpb 0.0180 (3-seed    mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1076",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1056",
         "authorLogin": "sofiabod",
         "authorName": null,
-        "createdAt": "2026-03-29T13:33:02Z",
-        "updatedAt": "2026-03-29T13:33:02Z",
-        "headSha": "1ee75c98330bccacee1fe897b2c0dbc6adbec018",
+        "createdAt": "2026-03-29T04:59:12Z",
+        "updatedAt": "2026-03-29T04:59:12Z",
+        "headSha": "7a5524b35bd81d605f8753148bd852c2762946bd",
         "headRepo": "sofiabod/parameter-golf"
       },
       "links": {
@@ -1614,7 +1614,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/7a5524b35bd81d605f8753148bd852c2762946bd/records/track_10min_16mb/2026-03-28_SinglePass_PackedNgram_DirichletCTW/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/7a5524b35bd81d605f8753148bd852c2762946bd/records/track_10min_16mb/2026-03-28_SinglePass_PackedNgram_DirichletCTW/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/7a5524b35bd81d605f8753148bd852c2762946bd/records/track_10min_16mb/2026-03-28_SinglePass_PackedNgram_DirichletCTW",
-        "pr": "https://github.com/openai/parameter-golf/pull/1076",
+        "pr": "https://github.com/openai/parameter-golf/pull/1056",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -3135,17 +3135,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1076,
-        "title": "Record: Packed Causal N-gram + Dirichlet Backoff — val_bpb 0.0109 (3-seed mean, NEW SOTA)",
+        "number": 1056,
+        "title": "Record: Packed Causal N-gram + Dirichlet Backoff — val_bpb 0.0180 (3-seed    mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1076",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1056",
         "authorLogin": "sofiabod",
         "authorName": null,
-        "createdAt": "2026-03-29T13:33:02Z",
-        "updatedAt": "2026-03-29T13:33:02Z",
-        "headSha": "1ee75c98330bccacee1fe897b2c0dbc6adbec018",
+        "createdAt": "2026-03-29T04:59:12Z",
+        "updatedAt": "2026-03-29T04:59:12Z",
+        "headSha": "7a5524b35bd81d605f8753148bd852c2762946bd",
         "headRepo": "sofiabod/parameter-golf"
       },
       "links": {
@@ -3154,7 +3154,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/1a2ac56c297b1081b0819abf41f1c34315ea4f35/records/track_10min_16mb/2026-03-26_OrderAdaptive_9gram_Prefill/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/1a2ac56c297b1081b0819abf41f1c34315ea4f35/records/track_10min_16mb/2026-03-26_OrderAdaptive_9gram_Prefill/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/1a2ac56c297b1081b0819abf41f1c34315ea4f35/records/track_10min_16mb/2026-03-26_OrderAdaptive_9gram_Prefill",
-        "pr": "https://github.com/openai/parameter-golf/pull/1076",
+        "pr": "https://github.com/openai/parameter-golf/pull/1056",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -4833,7 +4833,7 @@
       },
       "pr": {
         "number": 1047,
-        "title": "INVALID MOST LIKELY (0.8822 BPB mean) Medusa: Unstable S2 — DeltaNet Crawler, Legal  10mb. .77bpb single seed.",
+        "title": "INVALID* (0.8822 BPB mean) Medusa: Unstable S2 — DeltaNet Crawler, Legal  10mb. .77bpb single seed.",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -4841,7 +4841,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-29T00:53:07Z",
-        "updatedAt": "2026-03-29T14:21:38Z",
+        "updatedAt": "2026-03-29T14:31:37Z",
         "headSha": "99d34869c2ced0dd13b353f075765cac14246961",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -13949,6 +13949,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/1a1d8101d6f40d9c2dcaaadcb44120def68d0f92/records/track_10min_16mb/2026-03-26_FullQAT_FA3_11L_1.1219/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/1a1d8101d6f40d9c2dcaaadcb44120def68d0f92/records/track_10min_16mb/2026-03-26_FullQAT_FA3_11L_1.1219",
         "pr": "https://github.com/openai/parameter-golf/pull/836",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-29_QuantQualityFirst_SP1024_11x512_KV4_MLP3_BG2048_ciach",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-29_QuantQualityFirst_SP1024_11x512_KV4_MLP3_BG2048_ciach",
+        "folderPath": "records/track_non_record_16mb/2026-03-29_QuantQualityFirst_SP1024_11x512_KV4_MLP3_BG2048_ciach",
+        "submissionPath": "records/track_non_record_16mb/2026-03-29_QuantQualityFirst_SP1024_11x512_KV4_MLP3_BG2048_ciach/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-29_QuantQualityFirst_SP1024_11x512_KV4_MLP3_BG2048_ciach/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-29_QuantQualityFirst_SP1024_11x512_KV4_MLP3_BG2048_ciach/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-29_QuantQualityFirst_SP1024_11x512_KV4_MLP3_BG2048_ciach/train_gpt.py"
+      },
+      "submission": {
+        "author": "ciach",
+        "githubId": "ciach",
+        "name": "Quant-Quality First (MLP3 + BG2048, int8 embeds)",
+        "blurb": "11L/512d GQA model with MLP_MULT=3.0, BIGRAM_VOCAB_SIZE=2048, int6 quantization on mlp+attn (embeddings on int8 path), zstd selected by auto-compressor.",
+        "date": "2026-03-29T14:16:37Z"
+      },
+      "metrics": {
+        "valBpb": 1.12276383,
+        "valLoss": 1.89573468,
+        "preQuantValBpb": 1.1394,
+        "preQuantValLoss": 1.9239,
+        "stepStop": 7020,
+        "wallclockSeconds": 600.071,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15561740,
+        "bytesCode": 74406,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1080,
+        "title": "Add non-record 16MB submission: quant-quality-first 1.12276 BPB",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1080",
+        "authorLogin": "ciach",
+        "authorName": null,
+        "createdAt": "2026-03-29T14:47:13Z",
+        "updatedAt": "2026-03-29T14:47:13Z",
+        "headSha": "6b73425b024e68e250fcc5d96b7acd81608bb741",
+        "headRepo": "ciach/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6b73425b024e68e250fcc5d96b7acd81608bb741/records/track_non_record_16mb/2026-03-29_QuantQualityFirst_SP1024_11x512_KV4_MLP3_BG2048_ciach/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/6b73425b024e68e250fcc5d96b7acd81608bb741/records/track_non_record_16mb/2026-03-29_QuantQualityFirst_SP1024_11x512_KV4_MLP3_BG2048_ciach/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/6b73425b024e68e250fcc5d96b7acd81608bb741/records/track_non_record_16mb/2026-03-29_QuantQualityFirst_SP1024_11x512_KV4_MLP3_BG2048_ciach/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/6b73425b024e68e250fcc5d96b7acd81608bb741/records/track_non_record_16mb/2026-03-29_QuantQualityFirst_SP1024_11x512_KV4_MLP3_BG2048_ciach/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/6b73425b024e68e250fcc5d96b7acd81608bb741/records/track_non_record_16mb/2026-03-29_QuantQualityFirst_SP1024_11x512_KV4_MLP3_BG2048_ciach",
+        "pr": "https://github.com/openai/parameter-golf/pull/1080",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
