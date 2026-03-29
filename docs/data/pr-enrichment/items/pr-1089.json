@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T22:02:04.586Z",
+  "generatedAt": "2026-03-29T23:02:34.457Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1089,
-    "title": "Record Submission: 1.1086 BPB - Turbo-Muon + EngramLite + ParamBanking (11L 512d)",
+    "title": "Record Submission: 1.1091 BPB - Turbo-Muon + EngramLite + ParamBanking + XSA (11L 512d)",
     "state": "open",
-    "updatedAt": "2026-03-29T21:46:44Z",
-    "headSha": "7a465c4989424eb5297bcca7c39dd5a3e85d3615",
+    "updatedAt": "2026-03-29T22:51:18Z",
+    "headSha": "8c44a2e215cde029c42d96bc5291cd87969cfbd9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1089",
     "authorLogin": "mikeapedia"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer GPT couples Turbo-Muon/parameter banking, EngramLite hash embeddings, U-Net skips, and GPTQ mixed-precision compression within the 16MB budget.",
+    "summary": "11-layer GPT pairs Turbo-Muon, hash-based EngramLite, Parameter Banking, cross-sequence attention with U-Net skips, and GPTQ mixed-precision for 16MB.",
     "tags": [
-      "optimizer",
+      "muon",
       "architecture",
-      "quantization"
+      "quantization",
+      "mixed-precision"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Not a val-only setup; standard training plus validation.",
     "techniques": [
-      "Turbo-Muon optimizer with AOL preconditioning and banked row_col Newton-Schulz",
-      "EngramLite hash embeddings plus U-Net skips and ValueEmbedding to preserve token context",
-      "GPTQ int6/int7 mixed precision with Hessian-guided bit allocation and late QAT"
+      "Turbo-Muon optimizer with AOL preconditioning, Polar Express coefficients, and banked Newton-Schulz",
+      "EngramLite hash embeddings feeding U-Net-gated cross-sequence attention",
+      "GPTQ mixed-precision with Hessian-aware bit promotion, late QAT, and Brotli byte-shuffle compression"
     ]
   },
   "compatibility": {

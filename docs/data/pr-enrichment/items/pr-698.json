@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T09:30:35.102Z",
+  "generatedAt": "2026-03-29T23:02:42.293Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 698,
-    "title": "Add MergedTop3_v3 clean 8xH100 record-track submission",
+    "title": "11L XSA4 + EMA + BigramHash + GPTQ-lite",
     "state": "open",
-    "updatedAt": "2026-03-25T09:06:42Z",
-    "headSha": "428c70f01a8406d7fb7e074b1b2a6ce0ad48a7ec",
+    "updatedAt": "2026-03-29T22:49:38Z",
+    "headSha": "d1d4a90db719a7b7cb7c9ad16e03470d38aa190c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/698",
     "authorLogin": "hesong0222-dev"
   },
@@ -20,19 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Merged top-stack recipe with XSA on final layers, partial RoPE, BigramHash, layerwise LN scaling, sliding-window eval, and int6+GPTQ-lite quantization for 8xH100.",
+    "summary": "11-layer model uses last-4-layer XSA, SmearGate + BigramHash, partial RoPE, EMA, and sliding-window int6 GPTQ-lite quantization for 10m/16MB.",
     "tags": [
-      "quantization",
-      "sliding-window-eval",
       "architecture",
+      "quantization",
+      "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Partial RoPE (ROPE_DIMS=16) combined with XSA on the last four layers",
-      "BigramHash-2048 plus mixed int6 quantization with GPTQ-lite clip search",
-      "Layerwise LN scaling, EMA, and sliding-window eval (stride 64)"
+      "Tail-layer XSA with SmearGate and partial RoPE",
+      "BigramHash token mixing plus EMA and layerwise LN scale",
+      "Mixed int6 GPTQ-lite quant + sliding-window eval"
     ]
   },
   "compatibility": {

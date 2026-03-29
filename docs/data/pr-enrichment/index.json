@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T22:32:09.266Z",
+  "generatedAt": "2026-03-29T23:02:42.396Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -52,17 +52,17 @@
     },
     {
       "prNumber": 1099,
-      "title": "Record: Coprime-Stride Loader + Full GPTQ + XSA-all — val_bpb 1.1136 (3-seed mean)",
+      "title": "Record: Coprime-Stride Loader + Full GPTQ + XSA-all — val_bpb 1.1133 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-29T21:41:26Z",
-      "headSha": "cf068e95456bc8a8f1af2c217e07d4d98a74b9cf",
-      "generatedAt": "2026-03-29T22:01:46.553Z",
-      "summary": "Leveraged coprime-stride loader, full Hessian GPTQ with XSA on all layers, and trimmed GPTQ reserve (plus FA3/FA2 fallback) to reclaim extra steps.",
+      "updatedAt": "2026-03-29T22:45:35Z",
+      "headSha": "7eb6f2410602a4ea5a9f9166104e12dfe8361fd4",
+      "generatedAt": "2026-03-29T23:02:03.988Z",
+      "summary": "Combines coprime-stride loading with full Hessian GPTQ, XSA on all layers, GPTQ reserve tuning, EMA, and FA3/FA2 fallback for compact BPB runs.",
       "tags": [
-        "architecture",
         "quantization",
         "attention",
-        "training-schedule"
+        "training-schedule",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -102,14 +102,13 @@
       "prNumber": 1097,
       "title": "Parameter golf jepa",
       "status": "open",
-      "updatedAt": "2026-03-29T22:07:21Z",
+      "updatedAt": "2026-03-29T22:52:01Z",
       "headSha": "5bed757868cf5b8508d09074ad42dd12e96abdaa",
-      "generatedAt": "2026-03-29T22:32:01.175Z",
-      "summary": "Recasts the U-Net transformer as a JEPA text compressor with a 256-dim latent predictor plus SIGReg training signal that vanishes during inference.",
+      "generatedAt": "2026-03-29T23:02:08.868Z",
+      "summary": "Reinterprets the U-Net transformer as a JEPA with a 256-d latent predictor plus SIGReg regularization for text compression.",
       "tags": [
         "architecture",
-        "regularization",
-        "compression"
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -264,16 +263,17 @@
     },
     {
       "prNumber": 1089,
-      "title": "Record Submission: 1.1086 BPB - Turbo-Muon + EngramLite + ParamBanking (11L 512d)",
+      "title": "Record Submission: 1.1091 BPB - Turbo-Muon + EngramLite + ParamBanking + XSA (11L 512d)",
       "status": "open",
-      "updatedAt": "2026-03-29T21:46:44Z",
-      "headSha": "7a465c4989424eb5297bcca7c39dd5a3e85d3615",
-      "generatedAt": "2026-03-29T22:02:04.586Z",
-      "summary": "11-layer GPT couples Turbo-Muon/parameter banking, EngramLite hash embeddings, U-Net skips, and GPTQ mixed-precision compression within the 16MB budget.",
+      "updatedAt": "2026-03-29T22:51:18Z",
+      "headSha": "8c44a2e215cde029c42d96bc5291cd87969cfbd9",
+      "generatedAt": "2026-03-29T23:02:34.457Z",
+      "summary": "11-layer GPT pairs Turbo-Muon, hash-based EngramLite, Parameter Banking, cross-sequence attention with U-Net skips, and GPTQ mixed-precision for 16MB.",
       "tags": [
-        "optimizer",
+        "muon",
         "architecture",
-        "quantization"
+        "quantization",
+        "mixed-precision"
       ],
       "flags": {
         "usesValOnly": false,
@@ -6572,16 +6572,16 @@
     },
     {
       "prNumber": 698,
-      "title": "Add MergedTop3_v3 clean 8xH100 record-track submission",
+      "title": "11L XSA4 + EMA + BigramHash + GPTQ-lite",
       "status": "open",
-      "updatedAt": "2026-03-25T09:06:42Z",
-      "headSha": "428c70f01a8406d7fb7e074b1b2a6ce0ad48a7ec",
-      "generatedAt": "2026-03-25T09:30:35.102Z",
-      "summary": "Merged top-stack recipe with XSA on final layers, partial RoPE, BigramHash, layerwise LN scaling, sliding-window eval, and int6+GPTQ-lite quantization for 8xH100.",
+      "updatedAt": "2026-03-29T22:49:38Z",
+      "headSha": "d1d4a90db719a7b7cb7c9ad16e03470d38aa190c",
+      "generatedAt": "2026-03-29T23:02:42.293Z",
+      "summary": "11-layer model uses last-4-layer XSA, SmearGate + BigramHash, partial RoPE, EMA, and sliding-window int6 GPTQ-lite quantization for 10m/16MB.",
       "tags": [
-        "quantization",
-        "sliding-window-eval",
         "architecture",
+        "quantization",
+        "evaluation",
         "non-record"
       ],
       "flags": {

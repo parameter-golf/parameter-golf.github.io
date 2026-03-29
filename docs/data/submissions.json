@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T22:31:49.376Z",
+  "generatedAt": "2026-03-29T23:01:58.369Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10439,11 +10439,11 @@
         "author": "Bortlesboat",
         "githubId": "Bortlesboat",
         "name": "Coprime-Stride Loader + Full Hessian GPTQ + XSA-all + FA3 Fallback",
-        "blurb": "Coprime-stride multi-shard data pipeline (PR #726 style) + Full Hessian GPTQ with Cholesky error compensation + XSA on all 11 layers + BigramHash(2816x112) + EMA(0.997) + Parallel Muon + FA3/FA2 graceful fallback. GPTQ reserve reduced from 14s to 10s for ~44 extra training steps. No TTT. 3-seed mean: 1.1136 (std 0.0003). Built on PR #549 and PR #1060.",
+        "blurb": "Coprime-stride multi-shard data pipeline (PR #726 style) + Full Hessian GPTQ with Cholesky error compensation + XSA on all 11 layers + BigramHash(2816x112) + EMA(0.997) + Parallel Muon + FA3/FA2 graceful fallback. GPTQ reserve reduced from 14s to 9s for ~55 extra training steps. No TTT. 3-seed mean: 1.1133 (std 0.0001). Built on PR #549 and PR #1060.",
         "date": "2026-03-29"
       },
       "metrics": {
-        "valBpb": 1.1136,
+        "valBpb": 1.1133,
         "valLoss": null,
         "preQuantValBpb": null,
         "preQuantValLoss": null,
@@ -10452,7 +10452,7 @@
         "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": 15901403,
+        "bytesTotal": 15899687,
         "bytesCode": null,
         "bytesModelInt8Zlib": null
       },
@@ -10465,7 +10465,7 @@
       },
       "pr": {
         "number": 1099,
-        "title": "Record: Coprime-Stride Loader + Full GPTQ + XSA-all — val_bpb 1.1136 (3-seed mean)",
+        "title": "Record: Coprime-Stride Loader + Full GPTQ + XSA-all — val_bpb 1.1133 (3-seed mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -10473,16 +10473,16 @@
         "authorLogin": "Bortlesboat",
         "authorName": null,
         "createdAt": "2026-03-29T21:41:26Z",
-        "updatedAt": "2026-03-29T21:41:26Z",
-        "headSha": "cf068e95456bc8a8f1af2c217e07d4d98a74b9cf",
+        "updatedAt": "2026-03-29T22:45:35Z",
+        "headSha": "7eb6f2410602a4ea5a9f9166104e12dfe8361fd4",
         "headRepo": "Bortlesboat/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/cf068e95456bc8a8f1af2c217e07d4d98a74b9cf/records/track_10min_16mb/2026-03-29_V16_CoprimeSWA_EMA_1.1136/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/cf068e95456bc8a8f1af2c217e07d4d98a74b9cf/records/track_10min_16mb/2026-03-29_V16_CoprimeSWA_EMA_1.1136/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/cf068e95456bc8a8f1af2c217e07d4d98a74b9cf/records/track_10min_16mb/2026-03-29_V16_CoprimeSWA_EMA_1.1136/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/cf068e95456bc8a8f1af2c217e07d4d98a74b9cf/records/track_10min_16mb/2026-03-29_V16_CoprimeSWA_EMA_1.1136/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/cf068e95456bc8a8f1af2c217e07d4d98a74b9cf/records/track_10min_16mb/2026-03-29_V16_CoprimeSWA_EMA_1.1136",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7eb6f2410602a4ea5a9f9166104e12dfe8361fd4/records/track_10min_16mb/2026-03-29_V16_CoprimeSWA_EMA_1.1136/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/7eb6f2410602a4ea5a9f9166104e12dfe8361fd4/records/track_10min_16mb/2026-03-29_V16_CoprimeSWA_EMA_1.1136/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/7eb6f2410602a4ea5a9f9166104e12dfe8361fd4/records/track_10min_16mb/2026-03-29_V16_CoprimeSWA_EMA_1.1136/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/7eb6f2410602a4ea5a9f9166104e12dfe8361fd4/records/track_10min_16mb/2026-03-29_V16_CoprimeSWA_EMA_1.1136/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/7eb6f2410602a4ea5a9f9166104e12dfe8361fd4/records/track_10min_16mb/2026-03-29_V16_CoprimeSWA_EMA_1.1136",
         "pr": "https://github.com/openai/parameter-golf/pull/1099",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -26839,8 +26839,8 @@
       "submission": {
         "author": "Hael",
         "githubId": "hesong0222-dev",
-        "name": "MergedTop3_v3 clean H100 rerun",
-        "blurb": "Fresh uninterrupted 8xH100 rerun of the merged top-stack recipe: March 20 backbone, March 21 Partial RoPE and LN scale, and March 22 GPTQ-lite clip search plus warmdown 3500. This records the clean single-seed run completed on March 25, 2026.",
+        "name": "11L XSA4 + EMA + BigramHash + GPTQ-lite",
+        "blurb": "11 layers with XSA on the last 4 layers, EMA, 3x MLP, SmearGate, BigramHash(2048), mixed int6 + zstd, Partial RoPE, LN scale, and GPTQ-lite clip search. Single-seed 8xH100 run from March 25, 2026.",
         "date": "2026-03-25T00:00:00Z"
       },
       "metrics": {
@@ -26866,7 +26866,7 @@
       },
       "pr": {
         "number": 698,
-        "title": "Add MergedTop3_v3 clean 8xH100 record-track submission",
+        "title": "11L XSA4 + EMA + BigramHash + GPTQ-lite",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -26874,16 +26874,16 @@
         "authorLogin": "hesong0222-dev",
         "authorName": null,
         "createdAt": "2026-03-25T08:56:32Z",
-        "updatedAt": "2026-03-25T09:06:42Z",
-        "headSha": "428c70f01a8406d7fb7e074b1b2a6ce0ad48a7ec",
+        "updatedAt": "2026-03-29T22:49:38Z",
+        "headSha": "d1d4a90db719a7b7cb7c9ad16e03470d38aa190c",
         "headRepo": "hesong0222-dev/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/428c70f01a8406d7fb7e074b1b2a6ce0ad48a7ec/records/track_10min_16mb/2026-03-25_MergedTop3_v3_clean_h100/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/428c70f01a8406d7fb7e074b1b2a6ce0ad48a7ec/records/track_10min_16mb/2026-03-25_MergedTop3_v3_clean_h100/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/428c70f01a8406d7fb7e074b1b2a6ce0ad48a7ec/records/track_10min_16mb/2026-03-25_MergedTop3_v3_clean_h100/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/428c70f01a8406d7fb7e074b1b2a6ce0ad48a7ec/records/track_10min_16mb/2026-03-25_MergedTop3_v3_clean_h100/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/428c70f01a8406d7fb7e074b1b2a6ce0ad48a7ec/records/track_10min_16mb/2026-03-25_MergedTop3_v3_clean_h100",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d1d4a90db719a7b7cb7c9ad16e03470d38aa190c/records/track_10min_16mb/2026-03-25_MergedTop3_v3_clean_h100/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/d1d4a90db719a7b7cb7c9ad16e03470d38aa190c/records/track_10min_16mb/2026-03-25_MergedTop3_v3_clean_h100/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/d1d4a90db719a7b7cb7c9ad16e03470d38aa190c/records/track_10min_16mb/2026-03-25_MergedTop3_v3_clean_h100/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/d1d4a90db719a7b7cb7c9ad16e03470d38aa190c/records/track_10min_16mb/2026-03-25_MergedTop3_v3_clean_h100/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/d1d4a90db719a7b7cb7c9ad16e03470d38aa190c/records/track_10min_16mb/2026-03-25_MergedTop3_v3_clean_h100",
         "pr": "https://github.com/openai/parameter-golf/pull/698",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -38886,7 +38886,7 @@
         "authorLogin": "danielxmed",
         "authorName": null,
         "createdAt": "2026-03-29T21:23:41Z",
-        "updatedAt": "2026-03-29T22:07:21Z",
+        "updatedAt": "2026-03-29T22:52:01Z",
         "headSha": "5bed757868cf5b8508d09074ad42dd12e96abdaa",
         "headRepo": "danielxmed/parameter-golf"
       },
@@ -47117,7 +47117,7 @@
       },
       "pr": {
         "number": 698,
-        "title": "Add MergedTop3_v3 clean 8xH100 record-track submission",
+        "title": "11L XSA4 + EMA + BigramHash + GPTQ-lite",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -47125,8 +47125,8 @@
         "authorLogin": "hesong0222-dev",
         "authorName": null,
         "createdAt": "2026-03-25T08:56:32Z",
-        "updatedAt": "2026-03-25T09:06:42Z",
-        "headSha": "428c70f01a8406d7fb7e074b1b2a6ce0ad48a7ec",
+        "updatedAt": "2026-03-29T22:49:38Z",
+        "headSha": "d1d4a90db719a7b7cb7c9ad16e03470d38aa190c",
         "headRepo": "hesong0222-dev/parameter-golf"
       },
       "links": {
@@ -49201,7 +49201,7 @@
       },
       "pr": {
         "number": 1089,
-        "title": "Record Submission: 1.1086 BPB - Turbo-Muon + EngramLite + ParamBanking (11L 512d)",
+        "title": "Record Submission: 1.1091 BPB - Turbo-Muon + EngramLite + ParamBanking + XSA (11L 512d)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -49209,16 +49209,16 @@
         "authorLogin": "mikeapedia",
         "authorName": null,
         "createdAt": "2026-03-29T18:10:07Z",
-        "updatedAt": "2026-03-29T21:46:44Z",
-        "headSha": "7a465c4989424eb5297bcca7c39dd5a3e85d3615",
+        "updatedAt": "2026-03-29T22:51:18Z",
+        "headSha": "8c44a2e215cde029c42d96bc5291cd87969cfbd9",
         "headRepo": "mikeapedia/parameter-golf-1"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7a465c4989424eb5297bcca7c39dd5a3e85d3615/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/7a465c4989424eb5297bcca7c39dd5a3e85d3615/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/7a465c4989424eb5297bcca7c39dd5a3e85d3615/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/7a465c4989424eb5297bcca7c39dd5a3e85d3615/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/7a465c4989424eb5297bcca7c39dd5a3e85d3615/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8c44a2e215cde029c42d96bc5291cd87969cfbd9/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8c44a2e215cde029c42d96bc5291cd87969cfbd9/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8c44a2e215cde029c42d96bc5291cd87969cfbd9/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8c44a2e215cde029c42d96bc5291cd87969cfbd9/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8c44a2e215cde029c42d96bc5291cd87969cfbd9/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking",
         "pr": "https://github.com/openai/parameter-golf/pull/1089",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
