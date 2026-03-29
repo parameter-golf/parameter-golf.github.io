@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-29T06:27:50.447Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1059,
+    "title": "Int5 MLP + Int6 Attn + zstd-22, val_bpb 1.1996",
+    "state": "open",
+    "updatedAt": "2026-03-29T06:10:19Z",
+    "headSha": "7530c5d3f035a792e55d72dbf350d10a9d54309d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1059",
+    "authorLogin": "edidisheng"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_Int5MLP_Int6Attn_14L_zstd/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Quantized MLP to int5 and attention to int6, enabled 11-layer/MLP3× expansion, and swapped to zstd-22 to fit under 16MB.",
+    "tags": [
+      "quantization",
+      "compression",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "int5 MLP and int6 attention quantization",
+      "11-layer model with mlp_mult=3",
+      "zstd-22 compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

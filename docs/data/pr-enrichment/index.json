@@ -1,20 +1,89 @@
 {
-  "generatedAt": "2026-03-29T05:57:25.240Z",
+  "generatedAt": "2026-03-29T06:27:57.364Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 1058,
-      "title": "Publish clean prune baseline 1.12470947 as non-record package",
+      "prNumber": 1061,
+      "title": "Causal Oscillator LM: physics-native architecture (BPB 1.34)",
       "status": "open",
-      "updatedAt": "2026-03-29T05:49:29Z",
-      "headSha": "415b59aa635f1d64786d33304bb9fce030aaaff3",
-      "generatedAt": "2026-03-29T05:57:25.083Z",
-      "summary": "Publishes clean prune-before-quant baseline using selective pre-quant pruning and exact 16MB budgeting for a reproducible non-record artifact.",
+      "updatedAt": "2026-03-29T06:23:37Z",
+      "headSha": "ff0135d66b7fdaed35f0359bf89782fb38a67360",
+      "generatedAt": "2026-03-29T06:27:41.012Z",
+      "summary": "Physics-native LM uses damped harmonic oscillator transfer function for causal context, then feeds oscillator states into attention layers without standard transformer blocks.",
+      "tags": [
+        "architecture",
+        "attention",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1061.json"
+    },
+    {
+      "prNumber": 1060,
+      "title": "Record: 1.1123 BPB — Coprime-Stride Loader + Full GPTQ + XSA-all (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-29T06:15:28Z",
+      "headSha": "77948c3a683fa542d8ff296b601c41a2e49fe057",
+      "generatedAt": "2026-03-29T06:27:46.836Z",
+      "summary": "Combines coprime-stride multi-shard loading with full Hessian GPTQ and XSA on every layer atop the PR #549 scaffold.",
+      "tags": [
+        "quantization",
+        "attention",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1060.json"
+    },
+    {
+      "prNumber": 1059,
+      "title": "Int5 MLP + Int6 Attn + zstd-22, val_bpb 1.1996",
+      "status": "open",
+      "updatedAt": "2026-03-29T06:10:19Z",
+      "headSha": "7530c5d3f035a792e55d72dbf350d10a9d54309d",
+      "generatedAt": "2026-03-29T06:27:50.447Z",
+      "summary": "Quantized MLP to int5 and attention to int6, enabled 11-layer/MLP3× expansion, and swapped to zstd-22 to fit under 16MB.",
       "tags": [
         "quantization",
         "compression",
-        "non-record"
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1059.json"
+    },
+    {
+      "prNumber": 1058,
+      "title": "Publish clean prune baseline 1.12470947 as non-record package",
+      "status": "open",
+      "updatedAt": "2026-03-29T06:17:38Z",
+      "headSha": "388f428ac9685b9de9121adeffb4dd2860f87d1a",
+      "generatedAt": "2026-03-29T06:27:57.206Z",
+      "summary": "Packages the clean prune-before-quant baseline with selective pre-quant pruning off and exact 16MB budgeting for a reproducible non-record submission.",
+      "tags": [
+        "non-record",
+        "quantization",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,

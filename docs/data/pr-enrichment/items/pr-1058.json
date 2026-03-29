@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T05:57:25.083Z",
+  "generatedAt": "2026-03-29T06:27:57.206Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1058,
     "title": "Publish clean prune baseline 1.12470947 as non-record package",
     "state": "open",
-    "updatedAt": "2026-03-29T05:49:29Z",
-    "headSha": "415b59aa635f1d64786d33304bb9fce030aaaff3",
+    "updatedAt": "2026-03-29T06:17:38Z",
+    "headSha": "388f428ac9685b9de9121adeffb4dd2860f87d1a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1058",
     "authorLogin": "resouer"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Publishes clean prune-before-quant baseline using selective pre-quant pruning and exact 16MB budgeting for a reproducible non-record artifact.",
+    "summary": "Packages the clean prune-before-quant baseline with selective pre-quant pruning off and exact 16MB budgeting for a reproducible non-record submission.",
     "tags": [
+      "non-record",
       "quantization",
-      "compression",
-      "non-record"
+      "compression"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "N/A",
     "techniques": [
-      "Selective pre-quant pruning via packaged budget flags",
-      "Exact 16,000,000-byte size enforcement without TTT",
-      "Reproducible non-record artifact packaging"
+      "Selective prune-before-quant boundary with TTT disabled",
+      "Strict 16MB budget accounting in the packed package",
+      "Self-contained reproducibility bundle for auditable non-record run"
     ]
   },
   "compatibility": {
