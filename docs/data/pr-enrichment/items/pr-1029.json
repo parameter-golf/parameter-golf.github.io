@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T01:26:35.508Z",
+  "generatedAt": "2026-03-29T01:56:41.210Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1029,
-    "title": "Non-record: Knowledge Distillation - A Negative Result (val_bpb=1.152)",
+    "title": "Non-record: Knowledge Distillation — A Negative\n  Result (val_bpb=1.1553)",
     "state": "open",
-    "updatedAt": "2026-03-29T01:10:23Z",
-    "headSha": "0d3c2d7f1a280498b9403795b937c5d562bfa13e",
+    "updatedAt": "2026-03-29T01:45:11Z",
+    "headSha": "266a01260b03063b9d9f42fb2ccacd2e184bc9a9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1029",
     "authorLogin": "fielding"
   },
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Cached top-32 logits from a 105M teacher to replay hard/soft distillation and show the overhead cancels any gain within the 10-minute budget.",
+    "summary": "Cached teacher logits for soft KL distillation but the lookup overhead offsets any gain, leaving the student tied with the hard-label baseline even after extended runs.",
     "tags": [
       "non-record",
-      "evaluation",
-      "training-schedule"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Cached teacher logits (top-32) to avoid online inference",
-      "Hard vs soft KL distillation sweep",
-      "Extended 2h run to compare step-overhead impact"
+      "-Cached teacher top-32 logits to avoid online inference",
+      "-Compared hard vs soft distillation mixing ratios",
+      "-Ran extended 2h sweep to track convergence and warmdown effects"
     ]
   },
   "compatibility": {

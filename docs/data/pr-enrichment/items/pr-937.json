@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T07:15:08.639Z",
+  "generatedAt": "2026-03-29T01:56:45.734Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 937,
     "title": "[Non-Record Submission] CompressedUT CE + EMA Export + Export-Aligned Late QAT (1.4457 BPB)",
     "state": "open",
-    "updatedAt": "2026-03-27T06:57:43Z",
-    "headSha": "cda31199e832e1d510b3e2227c228c5fa8f7e68f",
+    "updatedAt": "2026-03-29T01:49:02Z",
+    "headSha": "dbdd6ee8f8ee09ac9aa997d93b7df1a2ed580236",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/937",
     "authorLogin": "mihir-s-05"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "CompressedUT CE-only model combines compressed latent backbone with EMA exports and export-aligned late QAT to shrink the quantized artifact gap under 16MB.",
+    "summary": "CompressedUT CE run boosts artifact by strengthening the compressed latent backbone combined with EMA export and export-aligned late QAT with wider capacity.",
     "tags": [
       "architecture",
       "quantization",
-      "training-schedule",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "compressed latent backbone with conv front-end and autoregressive byte decoder",
-      "EMA-exported weights plus export-aligned late QAT",
-      "wider int6 clip-search grid for artifact packing"
+      "Compressed latent transformer over byte convolutional frontend",
+      "EMA-weight export with late QAT aligned to the deployment quantizer",
+      "Expanded int6 clip search plus wider byte pathway to use remaining budget"
     ]
   },
   "compatibility": {

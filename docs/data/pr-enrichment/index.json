@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-03-29T01:26:45.184Z",
+  "generatedAt": "2026-03-29T01:56:59.131Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1049,
+      "title": "Add record draft: LeakyReLU2 on EMA+GPTQ-lite 10min/16MB stack",
+      "status": "closed",
+      "updatedAt": "2026-03-29T01:39:16Z",
+      "headSha": "0e110b499e2109eb35196d82603b76cfe9cdf1e9",
+      "generatedAt": "2026-03-29T01:56:30.593Z",
+      "summary": "GPTQ-lite 10min/16MB stack tweaks the MLP to LeakyReLU(0.5) before squaring while keeping EMA, tight SWA, and GPTQ-lite int6 calibration.",
+      "tags": [
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1049.json"
+    },
     {
       "prNumber": 1048,
       "title": "Non-record: Compression moonshots — 8 negative/marginal findings (Procrustes, SWA smoothness, selective fp16, pruning+zstd)",
@@ -53,14 +75,13 @@
       "prNumber": 1046,
       "title": "Record: 11L Adaptive Markov + Int6 Mixed Quant (1.2174 bpb)",
       "status": "open",
-      "updatedAt": "2026-03-29T01:23:15Z",
-      "headSha": "b2265d5e46189cd2cf360026b9e0abe18de9ee46",
-      "generatedAt": "2026-03-29T01:26:30.257Z",
-      "summary": "Hybrid 11-layer GPT mixes transformer logits with an adaptive per-position Markov gate while applying per-row int6/int8 quantization and large 786K token batches.",
+      "updatedAt": "2026-03-29T01:26:29Z",
+      "headSha": "0d5fa5179b0a4642f71b6c1edb5b8acb9332619e",
+      "generatedAt": "2026-03-29T01:56:35.933Z",
+      "summary": "11-layer GPT mixes transformer logits with adaptive Markov transitions via confidence gating while int6/int8 quantization plus zstd keeps the artifact small.",
       "tags": [
         "architecture",
-        "quantization",
-        "training-schedule"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -421,16 +442,15 @@
     },
     {
       "prNumber": 1029,
-      "title": "Non-record: Knowledge Distillation - A Negative Result (val_bpb=1.152)",
+      "title": "Non-record: Knowledge Distillation — A Negative\n  Result (val_bpb=1.1553)",
       "status": "open",
-      "updatedAt": "2026-03-29T01:10:23Z",
-      "headSha": "0d3c2d7f1a280498b9403795b937c5d562bfa13e",
-      "generatedAt": "2026-03-29T01:26:35.508Z",
-      "summary": "Cached top-32 logits from a 105M teacher to replay hard/soft distillation and show the overhead cancels any gain within the 10-minute budget.",
+      "updatedAt": "2026-03-29T01:45:11Z",
+      "headSha": "266a01260b03063b9d9f42fb2ccacd2e184bc9a9",
+      "generatedAt": "2026-03-29T01:56:41.210Z",
+      "summary": "Cached teacher logits for soft KL distillation but the lookup overhead offsets any gain, leaving the student tied with the hard-label baseline even after extended runs.",
       "tags": [
         "non-record",
-        "evaluation",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2043,14 +2063,13 @@
       "prNumber": 937,
       "title": "[Non-Record Submission] CompressedUT CE + EMA Export + Export-Aligned Late QAT (1.4457 BPB)",
       "status": "open",
-      "updatedAt": "2026-03-27T06:57:43Z",
-      "headSha": "cda31199e832e1d510b3e2227c228c5fa8f7e68f",
-      "generatedAt": "2026-03-27T07:15:08.639Z",
-      "summary": "CompressedUT CE-only model combines compressed latent backbone with EMA exports and export-aligned late QAT to shrink the quantized artifact gap under 16MB.",
+      "updatedAt": "2026-03-29T01:49:02Z",
+      "headSha": "dbdd6ee8f8ee09ac9aa997d93b7df1a2ed580236",
+      "generatedAt": "2026-03-29T01:56:45.734Z",
+      "summary": "CompressedUT CE run boosts artifact by strengthening the compressed latent backbone combined with EMA export and export-aligned late QAT with wider capacity.",
       "tags": [
         "architecture",
         "quantization",
-        "training-schedule",
         "non-record"
       ],
       "flags": {
@@ -3038,14 +3057,14 @@
       "prNumber": 874,
       "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.607, 1.92MB artifact)",
       "status": "open",
-      "updatedAt": "2026-03-28T20:00:32Z",
-      "headSha": "54f1ea411f0910f148edc9050b1b9c6f50f4b39a",
-      "generatedAt": "2026-03-28T20:24:50.585Z",
-      "summary": "Regenerated random linear weights plus rank-16 adapters let a 5-layer transformer learn with 90% noise and tiny 1.92MB artifact.",
+      "updatedAt": "2026-03-29T01:46:42Z",
+      "headSha": "204a5d3e16e8a1dd8fe58d9b7192e7ff39647360",
+      "generatedAt": "2026-03-29T01:56:51.681Z",
+      "summary": "Most linear projections use seed-regenerated random matrices plus tiny learned adapters so only ~2.2M params need storing in the artifact.",
       "tags": [
         "architecture",
         "compression",
-        "regularization",
+        "attention",
         "non-record"
       ],
       "flags": {
@@ -5460,14 +5479,15 @@
       "prNumber": 713,
       "title": "Record: 10L + Batched LoRA TTT (mean val_bpb=1.1180, 3 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-25T13:10:04Z",
+      "updatedAt": "2026-03-29T01:46:35Z",
       "headSha": "9b6ab5b0ce58fdc45fa284993f6d612ee454264f",
-      "generatedAt": "2026-03-25T13:32:06.195Z",
-      "summary": "10-layer GQA transformer with SmearGate/U-Net skips, mixed int5/int6 quantization, and batched per-document LoRA test-time training.",
+      "generatedAt": "2026-03-29T01:56:59.025Z",
+      "summary": "10-layer mixed int5/6 transformer with gated attention, U-Net skips, and batched per-document LoRA TTT resets.",
       "tags": [
         "architecture",
-        "attention",
-        "quantization"
+        "quantization",
+        "optimizer",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

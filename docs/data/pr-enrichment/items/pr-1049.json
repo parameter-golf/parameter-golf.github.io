@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-29T01:56:30.593Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1049,
+    "title": "Add record draft: LeakyReLU2 on EMA+GPTQ-lite 10min/16MB stack",
+    "state": "closed",
+    "updatedAt": "2026-03-29T01:39:16Z",
+    "headSha": "0e110b499e2109eb35196d82603b76cfe9cdf1e9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1049",
+    "authorLogin": "tejas-goyal"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_LeakyReLU2_EMA_GPTQlite_10min16mb/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "GPTQ-lite 10min/16MB stack tweaks the MLP to LeakyReLU(0.5) before squaring while keeping EMA, tight SWA, and GPTQ-lite int6 calibration.",
+    "tags": [
+      "architecture",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU(0.5) replacing ReLU before squaring",
+      "EMA plus tight SWA preserved from parent stack",
+      "GPTQ-lite int6 export pipeline"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

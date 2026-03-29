@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-28T20:24:50.585Z",
+  "generatedAt": "2026-03-29T01:56:51.681Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 874,
     "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.607, 1.92MB artifact)",
     "state": "open",
-    "updatedAt": "2026-03-28T20:00:32Z",
-    "headSha": "54f1ea411f0910f148edc9050b1b9c6f50f4b39a",
+    "updatedAt": "2026-03-29T01:46:42Z",
+    "headSha": "204a5d3e16e8a1dd8fe58d9b7192e7ff39647360",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/874",
     "authorLogin": "fielding"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Regenerated random linear weights plus rank-16 adapters let a 5-layer transformer learn with 90% noise and tiny 1.92MB artifact.",
+    "summary": "Most linear projections use seed-regenerated random matrices plus tiny learned adapters so only ~2.2M params need storing in the artifact.",
     "tags": [
       "architecture",
       "compression",
-      "regularization",
+      "attention",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "random seed-regenerated base matrices",
-      "LoRA-style adapter updates",
-      "depth and rank sweeps to balance compute vs steps"
+      "Seeded random base weights for each linear projection",
+      "Rank-16 LoRA-style adapter matrices learn low-rank corrections",
+      "Muon+AdamW+EMA training on 4xH200"
     ]
   },
   "compatibility": {
