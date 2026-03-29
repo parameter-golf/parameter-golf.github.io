@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-29T01:26:45.035Z",
+  "generatedAt": "2026-03-29T02:56:38.570Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1006,
     "title": "1.1085 BPB: JEPA + AdamW TTT + Full GPTQ + FA3 + LZMA",
     "state": "open",
-    "updatedAt": "2026-03-29T01:13:02Z",
+    "updatedAt": "2026-03-29T02:54:07Z",
     "headSha": "8ab5217009ea9e20f2f858f9aef5f0bd8c16c4c0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1006",
     "authorLogin": "NewyorkDev"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "JEPA auxiliary future-state loss, pre-quantization AdamW TTT, full Hessian GPTQ, FA3 speedups, LZMA compression, and XSA-on-all-layers squeeze more steps into 10min/16MB.",
+    "summary": "Combines JEPA auxiliary loss, pre-quantization AdamW TTT, full Hessian GPTQ, FA3 speed, XSA-every-layer, and LZMA to fit an 11L GQA LM under 16MB.",
     "tags": [
-      "regularization",
       "optimizer",
       "quantization",
-      "attention"
+      "attention",
+      "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "No validation-shard training or val-only regime was used.",
     "techniques": [
-      "JEPA auxiliary future-state regularizer",
-      "Pre-quantization AdamW test-time training on EMA weights",
-      "Full Hessian GPTQ with FA3/LZMA/XSA stack"
+      "JEPA joint-embedding auxiliary loss",
+      "Pre-quantization AdamW test-time training",
+      "Full Hessian GPTQ with FlashAttention 3 and LZMA"
     ]
   },
   "compatibility": {

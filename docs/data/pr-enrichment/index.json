@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-03-29T02:26:37.504Z",
+  "generatedAt": "2026-03-29T02:56:44.034Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1051,
+      "title": "WIP: LeakyReLU(0.5)² MLP on 11L EMA + GPTQ-lite stack (`track_10min_16mb`)",
+      "status": "open",
+      "updatedAt": "2026-03-29T02:52:39Z",
+      "headSha": "0cec37607827fac7dad53354dd02e81ec4d66e8f",
+      "generatedAt": "2026-03-29T02:56:30.211Z",
+      "summary": "Retains the 11L EMA + GPTQ-lite track stack but swaps the MLP to LeakyReLU(0.5) before squaring for the 10min/16MB record folder.",
+      "tags": [
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1051.json"
+    },
     {
       "prNumber": 1050,
       "title": "Add Stack Integration + Legal TTT submission package",
@@ -24,28 +46,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1050.json"
-    },
-    {
-      "prNumber": 1049,
-      "title": "Add record draft: LeakyReLU2 on EMA+GPTQ-lite 10min/16MB stack",
-      "status": "closed",
-      "updatedAt": "2026-03-29T01:39:16Z",
-      "headSha": "0e110b499e2109eb35196d82603b76cfe9cdf1e9",
-      "generatedAt": "2026-03-29T01:56:30.593Z",
-      "summary": "GPTQ-lite 10min/16MB stack tweaks the MLP to LeakyReLU(0.5) before squaring while keeping EMA, tight SWA, and GPTQ-lite int6 calibration.",
-      "tags": [
-        "architecture",
-        "quantization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1049.json"
     },
     {
       "prNumber": 1048,
@@ -863,15 +863,15 @@
       "prNumber": 1006,
       "title": "1.1085 BPB: JEPA + AdamW TTT + Full GPTQ + FA3 + LZMA",
       "status": "open",
-      "updatedAt": "2026-03-29T01:13:02Z",
+      "updatedAt": "2026-03-29T02:54:07Z",
       "headSha": "8ab5217009ea9e20f2f858f9aef5f0bd8c16c4c0",
-      "generatedAt": "2026-03-29T01:26:45.035Z",
-      "summary": "JEPA auxiliary future-state loss, pre-quantization AdamW TTT, full Hessian GPTQ, FA3 speedups, LZMA compression, and XSA-on-all-layers squeeze more steps into 10min/16MB.",
+      "generatedAt": "2026-03-29T02:56:38.570Z",
+      "summary": "Combines JEPA auxiliary loss, pre-quantization AdamW TTT, full Hessian GPTQ, FA3 speed, XSA-every-layer, and LZMA to fit an 11L GQA LM under 16MB.",
       "tags": [
-        "regularization",
         "optimizer",
         "quantization",
-        "attention"
+        "attention",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2086,14 +2086,15 @@
       "prNumber": 937,
       "title": "[Non-Record Submission] CompressedUT CE + EMA Export + Export-Aligned Late QAT (1.4457 BPB)",
       "status": "open",
-      "updatedAt": "2026-03-29T01:49:02Z",
-      "headSha": "dbdd6ee8f8ee09ac9aa997d93b7df1a2ed580236",
-      "generatedAt": "2026-03-29T01:56:45.734Z",
-      "summary": "CompressedUT CE run boosts artifact by strengthening the compressed latent backbone combined with EMA export and export-aligned late QAT with wider capacity.",
+      "updatedAt": "2026-03-29T02:41:43Z",
+      "headSha": "ec308d78859e681b4010a2dac47cae99a0dd6204",
+      "generatedAt": "2026-03-29T02:56:43.893Z",
+      "summary": "CompressedUT CE-only run boosts exported artifact via EMA-smoothed weights, export-aligned late QAT, tighter clip search, and a wider compressed backbone.",
       "tags": [
         "architecture",
+        "compression",
         "quantization",
-        "non-record"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

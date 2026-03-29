@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-29T02:56:30.211Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1051,
+    "title": "WIP: LeakyReLU(0.5)² MLP on 11L EMA + GPTQ-lite stack (`track_10min_16mb`)",
+    "state": "open",
+    "updatedAt": "2026-03-29T02:52:39Z",
+    "headSha": "0cec37607827fac7dad53354dd02e81ec4d66e8f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1051",
+    "authorLogin": "tejas-goyal"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_LeakyReLU2_EMA_GPTQlite_10min16mb/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Retains the 11L EMA + GPTQ-lite track stack but swaps the MLP to LeakyReLU(0.5) before squaring for the 10min/16MB record folder.",
+    "tags": [
+      "architecture",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU(0.5) followed by squaring in the triple MLP block",
+      "11-layer EMA training culminating in GPTQ-lite int6 export"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

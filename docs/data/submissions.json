@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T02:26:22.716Z",
+  "generatedAt": "2026-03-29T02:56:24.483Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -9389,7 +9389,7 @@
         "authorLogin": "NewyorkDev",
         "authorName": null,
         "createdAt": "2026-03-28T05:45:09Z",
-        "updatedAt": "2026-03-29T01:13:02Z",
+        "updatedAt": "2026-03-29T02:54:07Z",
         "headSha": "8ab5217009ea9e20f2f858f9aef5f0bd8c16c4c0",
         "headRepo": "NewyorkDev/parameter-golf"
       },
@@ -39502,8 +39502,8 @@
         "authorLogin": "mihir-s-05",
         "authorName": null,
         "createdAt": "2026-03-27T06:55:02Z",
-        "updatedAt": "2026-03-29T01:49:02Z",
-        "headSha": "dbdd6ee8f8ee09ac9aa997d93b7df1a2ed580236",
+        "updatedAt": "2026-03-29T02:41:43Z",
+        "headSha": "ec308d78859e681b4010a2dac47cae99a0dd6204",
         "headRepo": "mihir-s-05/parameter-golf"
       },
       "links": {
@@ -45997,7 +45997,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-28_LeakyReLU2_EMA_GPTQlite_10min16mb",
       "source": "pull_request",
-      "status": "closed",
+      "status": "open",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -46043,17 +46043,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1049,
-        "title": "Add record draft: LeakyReLU2 on EMA+GPTQ-lite 10min/16MB stack",
-        "state": "closed",
+        "number": 1051,
+        "title": "WIP: LeakyReLU(0.5)² MLP on 11L EMA + GPTQ-lite stack (`track_10min_16mb`)",
+        "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1049",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1051",
         "authorLogin": "tejas-goyal",
         "authorName": null,
-        "createdAt": "2026-03-29T01:38:55Z",
-        "updatedAt": "2026-03-29T01:39:16Z",
-        "headSha": "0e110b499e2109eb35196d82603b76cfe9cdf1e9",
+        "createdAt": "2026-03-29T02:52:39Z",
+        "updatedAt": "2026-03-29T02:52:39Z",
+        "headSha": "0cec37607827fac7dad53354dd02e81ec4d66e8f",
         "headRepo": "tejas-goyal/parameter-golf"
       },
       "links": {
@@ -46062,7 +46062,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/0e110b499e2109eb35196d82603b76cfe9cdf1e9/records/track_10min_16mb/2026-03-28_LeakyReLU2_EMA_GPTQlite_10min16mb/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/0e110b499e2109eb35196d82603b76cfe9cdf1e9/records/track_10min_16mb/2026-03-28_LeakyReLU2_EMA_GPTQlite_10min16mb/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/0e110b499e2109eb35196d82603b76cfe9cdf1e9/records/track_10min_16mb/2026-03-28_LeakyReLU2_EMA_GPTQlite_10min16mb",
-        "pr": "https://github.com/openai/parameter-golf/pull/1049",
+        "pr": "https://github.com/openai/parameter-golf/pull/1051",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
