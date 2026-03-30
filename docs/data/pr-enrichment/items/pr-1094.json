@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T01:02:27.563Z",
+  "generatedAt": "2026-03-30T01:32:26.879Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1094,
     "title": "Record: 0.3958 BPB — Causal BackoffNgramMixer (3-seed, std 0.0011)",
     "state": "open",
-    "updatedAt": "2026-03-30T00:57:29Z",
+    "updatedAt": "2026-03-30T01:04:35Z",
     "headSha": "0befb078f89158751309ae9c66b6a3bd99ad92a3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1094",
     "authorLogin": "michaelwinczuk"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11L LeakyReLU² transformer mixes causal BackoffNgramMixer with entropy-adaptive alpha via batched sliding-window eval that incrementally updates n-grams.",
+    "summary": "Causal BackoffNgramMixer blends neural logits with hashed orders 2–10 via an entropy-adaptive alpha while batched sliding-window eval incrementally updates n-gram counts.",
     "tags": [
-      "architecture",
       "evaluation",
-      "optimizer"
+      "architecture",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Batched sliding-window eval with stride-64, batch_seqs=128, and causal count updates",
-      "Full-vocab mixture blending neural logits with 2–10 order BackoffNgramMixer using entropy-adaptive alpha",
-      "Parallel Muon optimizer base with Multi-Token prediction heads discarded at export"
+      "Causal BackoffNgramMixer orders 2–10 with entropy-adaptive alpha",
+      "Batched sliding-window eval with incremental n-gram updates",
+      "Swarm-designed architecture with KG-conditioned embedding init"
     ]
   },
   "compatibility": {

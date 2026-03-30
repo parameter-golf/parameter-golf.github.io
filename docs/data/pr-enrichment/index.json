@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T01:02:34.778Z",
+  "generatedAt": "2026-03-30T01:32:33.398Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -220,14 +220,14 @@
       "prNumber": 1094,
       "title": "Record: 0.3958 BPB — Causal BackoffNgramMixer (3-seed, std 0.0011)",
       "status": "open",
-      "updatedAt": "2026-03-30T00:57:29Z",
+      "updatedAt": "2026-03-30T01:04:35Z",
       "headSha": "0befb078f89158751309ae9c66b6a3bd99ad92a3",
-      "generatedAt": "2026-03-30T01:02:27.563Z",
-      "summary": "11L LeakyReLU² transformer mixes causal BackoffNgramMixer with entropy-adaptive alpha via batched sliding-window eval that incrementally updates n-grams.",
+      "generatedAt": "2026-03-30T01:32:26.879Z",
+      "summary": "Causal BackoffNgramMixer blends neural logits with hashed orders 2–10 via an entropy-adaptive alpha while batched sliding-window eval incrementally updates n-gram counts.",
       "tags": [
-        "architecture",
         "evaluation",
-        "optimizer"
+        "architecture",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -314,15 +314,15 @@
       "prNumber": 1089,
       "title": "Record Submission: 1.1091 BPB - Turbo-Muon + EngramLite + ParamBanking + XSA (11L 512d)",
       "status": "open",
-      "updatedAt": "2026-03-29T22:51:18Z",
-      "headSha": "8c44a2e215cde029c42d96bc5291cd87969cfbd9",
-      "generatedAt": "2026-03-29T23:02:34.457Z",
-      "summary": "11-layer GPT pairs Turbo-Muon, hash-based EngramLite, Parameter Banking, cross-sequence attention with U-Net skips, and GPTQ mixed-precision for 16MB.",
+      "updatedAt": "2026-03-30T01:17:51Z",
+      "headSha": "215193e3e3f31569c445d6e45020d22e74d05daf",
+      "generatedAt": "2026-03-30T01:32:33.230Z",
+      "summary": "11L GPT packs Turbo-Muon optimizer, EngramLite hash embeddings, Parameter Banking, gated skips/ValueEmbedding, SmearGate, XSA, and GPTQ mixed precision.",
       "tags": [
-        "muon",
+        "optimizer",
         "architecture",
-        "quantization",
-        "mixed-precision"
+        "attention",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
