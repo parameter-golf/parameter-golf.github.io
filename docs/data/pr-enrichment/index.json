@@ -1,19 +1,40 @@
 {
-  "generatedAt": "2026-03-30T22:08:19.954Z",
+  "generatedAt": "2026-03-30T22:38:39.269Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 1155,
+      "title": "Non-record: MLX smoke test on MacBook Air M3 — val_bpb 2.3029",
+      "status": "closed",
+      "updatedAt": "2026-03-30T22:34:05Z",
+      "headSha": "4828ad19b179ba355e493190789f4f6ff1399b65",
+      "generatedAt": "2026-03-30T22:38:28.427Z",
+      "summary": "Runs unmodified train_gpt_mlx.py on a MacBook Air M3 to validate the MLX pipeline before scaling to multi-H100 training.",
+      "tags": [
+        "non-record",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1155.json"
+    },
+    {
       "prNumber": 1154,
       "title": "Non-record: Polar STE QAT for structural weights",
       "status": "open",
-      "updatedAt": "2026-03-30T21:54:03Z",
-      "headSha": "ba91df0c4ada35df6ae5e7c8a9c1bb44cceba00e",
-      "generatedAt": "2026-03-30T22:08:09.836Z",
-      "summary": "Adds Polar STE QAT for structural weights plus matching polar export helpers and roundtrip validation dequantization.",
+      "updatedAt": "2026-03-30T22:37:31Z",
+      "headSha": "b39370597cddbb83c6115bb71e4d768b9605b0a1",
+      "generatedAt": "2026-03-30T22:38:33.364Z",
+      "summary": "Adds Polar STE QAT on CastedLinear structural weights with polar export/roundtrip and an artifact isolation harness for polar+zlib validation.",
       "tags": [
         "quantization",
-        "architecture",
         "evaluation",
         "non-record"
       ],
@@ -121,16 +142,16 @@
     },
     {
       "prNumber": 1145,
-      "title": "Record: 1.1109 BPB Loader FullGPTQ XSA11 + online ngram augment",
+      "title": "Record: 1.1109 BPB FullGPTQ XSA11 + online ngram augment",
       "status": "open",
-      "updatedAt": "2026-03-30T20:00:48Z",
+      "updatedAt": "2026-03-30T22:28:59Z",
       "headSha": "63cc3a350d1f038c9e4ee99ec9af46e2ac2f915b",
-      "generatedAt": "2026-03-30T20:07:59.401Z",
-      "summary": "Retunes the Loader FullGPTQ XSA11 schedule (WARMDOWN_ITERS=4000) and layers a causal online n-gram/within-word/word-start agreement overlay that boosts a renormalized softmax.",
+      "generatedAt": "2026-03-30T22:38:39.103Z",
+      "summary": "Retuned GPTQ XSA11 bigram-hash stack with WARMDOWN_ITERS=4000 and added a single-pass causal online n-gram agreement overlay boosting normalized softmax.",
       "tags": [
-        "quantization",
-        "training-schedule",
-        "evaluation"
+        "architecture",
+        "evaluation",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

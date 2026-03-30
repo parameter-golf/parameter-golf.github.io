@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-30T22:38:28.427Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1155,
+    "title": "Non-record: MLX smoke test on MacBook Air M3 — val_bpb 2.3029",
+    "state": "closed",
+    "updatedAt": "2026-03-30T22:34:05Z",
+    "headSha": "4828ad19b179ba355e493190789f4f6ff1399b65",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1155",
+    "authorLogin": "Rhoahndur"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-30_MLX_MacBookAir_M3_SmokeTest/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Runs unmodified train_gpt_mlx.py on a MacBook Air M3 to validate the MLX pipeline before scaling to multi-H100 training.",
+    "tags": [
+      "non-record",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Baseline train_gpt_mlx.py execution",
+      "Apple Silicon MLX smoke test",
+      "Pipeline validation before H100 scaling"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T20:07:59.401Z",
+  "generatedAt": "2026-03-30T22:38:39.103Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1145,
-    "title": "Record: 1.1109 BPB Loader FullGPTQ XSA11 + online ngram augment",
+    "title": "Record: 1.1109 BPB FullGPTQ XSA11 + online ngram augment",
     "state": "open",
-    "updatedAt": "2026-03-30T20:00:48Z",
+    "updatedAt": "2026-03-30T22:28:59Z",
     "headSha": "63cc3a350d1f038c9e4ee99ec9af46e2ac2f915b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1145",
     "authorLogin": "AnirudhRahul"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Retunes the Loader FullGPTQ XSA11 schedule (WARMDOWN_ITERS=4000) and layers a causal online n-gram/within-word/word-start agreement overlay that boosts a renormalized softmax.",
+    "summary": "Retuned GPTQ XSA11 bigram-hash stack with WARMDOWN_ITERS=4000 and added a single-pass causal online n-gram agreement overlay boosting normalized softmax.",
     "tags": [
-      "quantization",
-      "training-schedule",
-      "evaluation"
+      "architecture",
+      "evaluation",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "GPTQ XSA11 bigram-hash backbone",
-      "WARMDOWN_ITERS=4000 retrained schedule",
-      "causal online n-gram agreement overlay with single-token softmax boosts"
+      "single-pass causal n-gram agreement overlay",
+      "prefix-only expert boosts with softmax renormalization",
+      "WARMDOWN_ITERS=4000 retrained GPTQ XSA11 bigram stack"
     ]
   },
   "compatibility": {

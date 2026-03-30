@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T22:08:03.571Z",
+  "generatedAt": "2026-03-30T22:38:21.722Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10228,7 +10228,7 @@
       },
       "pr": {
         "number": 1145,
-        "title": "Record: 1.1109 BPB Loader FullGPTQ XSA11 + online ngram augment",
+        "title": "Record: 1.1109 BPB FullGPTQ XSA11 + online ngram augment",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -10236,7 +10236,7 @@
         "authorLogin": "AnirudhRahul",
         "authorName": null,
         "createdAt": "2026-03-30T18:58:12Z",
-        "updatedAt": "2026-03-30T20:00:48Z",
+        "updatedAt": "2026-03-30T22:28:59Z",
         "headSha": "63cc3a350d1f038c9e4ee99ec9af46e2ac2f915b",
         "headRepo": "AnirudhRahul/parameter-golf"
       },
@@ -47741,8 +47741,8 @@
         "authorLogin": "LucasErcolano",
         "authorName": null,
         "createdAt": "2026-03-30T21:54:03Z",
-        "updatedAt": "2026-03-30T21:54:03Z",
-        "headSha": "ba91df0c4ada35df6ae5e7c8a9c1bb44cceba00e",
+        "updatedAt": "2026-03-30T22:37:31Z",
+        "headSha": "b39370597cddbb83c6115bb71e4d768b9605b0a1",
         "headRepo": "LucasErcolano/parameter-golf"
       },
       "links": {
@@ -47983,6 +47983,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/6853b49028e0dd08e8da6ebebe5a8b08d4ef652d/records/track_non_record_16mb/2026-03-19_MirrorRecurrence_MLX_M5Max_sp1024/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/6853b49028e0dd08e8da6ebebe5a8b08d4ef652d/records/track_non_record_16mb/2026-03-19_MirrorRecurrence_MLX_M5Max_sp1024",
         "pr": "https://github.com/openai/parameter-golf/pull/84",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-30_MLX_MacBookAir_M3_SmokeTest",
+      "source": "pull_request",
+      "status": "closed",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-30_MLX_MacBookAir_M3_SmokeTest",
+        "folderPath": "records/track_non_record_16mb/2026-03-30_MLX_MacBookAir_M3_SmokeTest",
+        "submissionPath": "records/track_non_record_16mb/2026-03-30_MLX_MacBookAir_M3_SmokeTest/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-30_MLX_MacBookAir_M3_SmokeTest/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-30_MLX_MacBookAir_M3_SmokeTest/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-30_MLX_MacBookAir_M3_SmokeTest/train_gpt.py"
+      },
+      "submission": {
+        "author": "Aleksandr Gaun",
+        "githubId": "Rhoahndur",
+        "name": "MLX Smoke Test on MacBook Air M3",
+        "blurb": "Baseline MLX smoke test on Apple Silicon (MacBook Air M3, 200 steps) to validate local dev workflow before scaling to H100s.",
+        "date": "2026-03-30"
+      },
+      "metrics": {
+        "valBpb": 2.3029,
+        "valLoss": 3.8884,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": 200,
+        "wallclockSeconds": 204,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 9693033,
+        "bytesCode": 50195,
+        "bytesModelInt8Zlib": 9642838
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1155,
+        "title": "Non-record: MLX smoke test on MacBook Air M3 — val_bpb 2.3029",
+        "state": "closed",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1155",
+        "authorLogin": "Rhoahndur",
+        "authorName": null,
+        "createdAt": "2026-03-30T22:31:05Z",
+        "updatedAt": "2026-03-30T22:34:05Z",
+        "headSha": "4828ad19b179ba355e493190789f4f6ff1399b65",
+        "headRepo": "Rhoahndur/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4828ad19b179ba355e493190789f4f6ff1399b65/records/track_non_record_16mb/2026-03-30_MLX_MacBookAir_M3_SmokeTest/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/4828ad19b179ba355e493190789f4f6ff1399b65/records/track_non_record_16mb/2026-03-30_MLX_MacBookAir_M3_SmokeTest/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/4828ad19b179ba355e493190789f4f6ff1399b65/records/track_non_record_16mb/2026-03-30_MLX_MacBookAir_M3_SmokeTest/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/4828ad19b179ba355e493190789f4f6ff1399b65/records/track_non_record_16mb/2026-03-30_MLX_MacBookAir_M3_SmokeTest/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/4828ad19b179ba355e493190789f4f6ff1399b65/records/track_non_record_16mb/2026-03-30_MLX_MacBookAir_M3_SmokeTest",
+        "pr": "https://github.com/openai/parameter-golf/pull/1155",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
