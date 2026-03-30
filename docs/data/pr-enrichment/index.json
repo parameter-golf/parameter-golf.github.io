@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T01:32:33.398Z",
+  "generatedAt": "2026-03-30T02:02:29.425Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -55,10 +55,10 @@
       "prNumber": 1104,
       "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Word Boundaries (39x-91x fewer params than H-Net paper)",
       "status": "open",
-      "updatedAt": "2026-03-30T00:00:06Z",
+      "updatedAt": "2026-03-30T01:33:38Z",
       "headSha": "dea0514e52ed3139f37b37eea80b7fceec76d1d1",
-      "generatedAt": "2026-03-30T00:02:17.059Z",
-      "summary": "Byte-level 1-stage H-Net uses RLW-guided routing and padded DDP to learn whitespace-aligned dynamic chunking vs subword chunking.",
+      "generatedAt": "2026-03-30T02:02:29.252Z",
+      "summary": "A 9-layer single-stage H-Net learns whitespace-aligned chunks from raw byte260 via RLW-tuned routing, comparing byte vs sp1024 chunking on a multi-GPU DDP path.",
       "tags": [
         "architecture",
         "tokenization",
