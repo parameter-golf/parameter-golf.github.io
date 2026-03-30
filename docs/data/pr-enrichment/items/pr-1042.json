@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T10:05:23.654Z",
+  "generatedAt": "2026-03-30T17:07:14.931Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1042,
     "title": "Record: Adaptive Precision Embedding Quantization (4-seed mean val_bpb=1.1217)",
     "state": "open",
-    "updatedAt": "2026-03-30T09:58:06Z",
+    "updatedAt": "2026-03-30T16:45:35Z",
     "headSha": "4a66e132c31d7c0208ef85f37aef81d9b7b945e1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1042",
     "authorLogin": "nothingLiva"
@@ -19,15 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adaptive precision quantizes embeddings by keeping the top 100 tokens at int8 while the remaining tokens stay at int6 to reduce frequent-token error accumulation.",
+    "summary": "Allocates int8 precision to the top 100 frequent tokens and int6 to the rest so embedding quantization respects heavy-tailed token usage.",
     "tags": [
-      "quantization"
+      "quantization",
+      "tokenization",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "frequency-weighted precision",
-      "int6/int8 mixed embedding quantization"
+      "Adaptive precision embedding quantization",
+      "Frequency-driven int8/int6 token split"
     ]
   },
   "compatibility": {

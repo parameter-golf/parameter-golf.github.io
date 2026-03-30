@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-30T17:07:09.581Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1138,
+    "title": "Non-record: Whole-Model GTA Megakernel Draft + Manual CUDA Reverse Pass",
+    "state": "open",
+    "updatedAt": "2026-03-30T16:49:50Z",
+    "headSha": "1cd1248cc7ef1bbff563d30fc258c9390632d572",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1138",
+    "authorLogin": "greqone"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-28_WholeModelMegakernel_GTA9x512/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Packed-GTA trainer uses an inline CUDA extension + cuBLAS whole-model forward/eval path with a manual packed-buffer reverse pass in this non-record megakernel draft.",
+    "tags": [
+      "architecture",
+      "attention",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Inline CUDA whole-model forward/eval/backward entrypoints",
+      "Packed fp32 runtime buffers with manual reverse pass",
+      "cuBLAS-backed projections for GTA attention"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

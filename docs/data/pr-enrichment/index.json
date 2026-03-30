@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-30T16:37:17.841Z",
+  "generatedAt": "2026-03-30T17:07:24.540Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1139,
+      "title": "Non-record: AutoResearch Value Embeddings + MLP3x, 1.1801 bpb (1x RTX 4090)",
+      "status": "open",
+      "updatedAt": "2026-03-30T16:56:26Z",
+      "headSha": "341e1d700ac6ab150ae17d92fd89ab7860a57ca0",
+      "generatedAt": "2026-03-30T17:07:05.069Z",
+      "summary": "AutoResearch sweep trains a 12L/640d model with alternating gated value embeddings, MLP3x expansions, SSSL sliding windows, and Muon+Adam within a 5-min RTX 4090 budget.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "sliding-window-eval",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1139.json"
+    },
+    {
+      "prNumber": 1138,
+      "title": "Non-record: Whole-Model GTA Megakernel Draft + Manual CUDA Reverse Pass",
+      "status": "open",
+      "updatedAt": "2026-03-30T16:49:50Z",
+      "headSha": "1cd1248cc7ef1bbff563d30fc258c9390632d572",
+      "generatedAt": "2026-03-30T17:07:09.581Z",
+      "summary": "Packed-GTA trainer uses an inline CUDA extension + cuBLAS whole-model forward/eval path with a manual packed-buffer reverse pass in this non-record megakernel draft.",
+      "tags": [
+        "architecture",
+        "attention",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1138.json"
+    },
     {
       "prNumber": 1135,
       "title": "Record: Fused Triton MLP + Full GPTQ + Coprime Loader + XSA-all + BH2816 (val_bpb 1.1116)",
@@ -1519,12 +1566,14 @@
       "prNumber": 1042,
       "title": "Record: Adaptive Precision Embedding Quantization (4-seed mean val_bpb=1.1217)",
       "status": "open",
-      "updatedAt": "2026-03-30T09:58:06Z",
+      "updatedAt": "2026-03-30T16:45:35Z",
       "headSha": "4a66e132c31d7c0208ef85f37aef81d9b7b945e1",
-      "generatedAt": "2026-03-30T10:05:23.654Z",
-      "summary": "Adaptive precision quantizes embeddings by keeping the top 100 tokens at int8 while the remaining tokens stay at int6 to reduce frequent-token error accumulation.",
+      "generatedAt": "2026-03-30T17:07:14.931Z",
+      "summary": "Allocates int8 precision to the top 100 frequent tokens and int6 to the rest so embedding quantization respects heavy-tailed token usage.",
       "tags": [
-        "quantization"
+        "quantization",
+        "tokenization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1935,15 +1984,15 @@
     {
       "prNumber": 1019,
       "title": "Record: AR Self-Gen GPTQ + XSA-all + BigramHash 3072×112 — val_bpb 1.11473 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-03-29T04:42:28Z",
+      "status": "closed",
+      "updatedAt": "2026-03-30T16:59:20Z",
       "headSha": "d7fbe3d16f81a16e26604353bafc61d151cf5264",
-      "generatedAt": "2026-03-29T04:57:33.223Z",
-      "summary": "Autoregressive self-generated data drives Full Hessian GPTQ calibration while XSA-all + BigramHash 3072×112 sit atop the selective-pruning stack.",
+      "generatedAt": "2026-03-30T17:07:18.820Z",
+      "summary": "Full Hessian GPTQ uses autoregressive self-generated calibration alongside 3072×112 BigramHash and XSA applied to every layer for the record stack.",
       "tags": [
         "quantization",
-        "architecture",
-        "optimizer"
+        "attention",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4176,14 +4225,15 @@
     {
       "prNumber": 882,
       "title": "Non-record: LeakyReLU(0.5)^2 + TrigramHash on PR414 stack (1.3762 bpb, 1xA100)",
-      "status": "open",
-      "updatedAt": "2026-03-30T14:38:06Z",
-      "headSha": "fcb6fd740095c8dc09bd700f418168529c0d5a30",
-      "generatedAt": "2026-03-30T15:07:22.632Z",
-      "summary": "LeakyReLU(0.5)^2 swapped in for ReLU^2 and TrigramHash buckets enrich 3-token context before attention on the PR414 stack.",
+      "status": "closed",
+      "updatedAt": "2026-03-30T16:56:23Z",
+      "headSha": "66100cede4b3f5f0358da9efc82c7516b213ae68",
+      "generatedAt": "2026-03-30T17:07:24.405Z",
+      "summary": "Built on PR414 stack, replaced relu^2 with LeakyReLU(0.5)^2 and added TrigramHash grouping to enrich local attention context.",
       "tags": [
         "architecture",
         "attention",
+        "regularization",
         "non-record"
       ],
       "flags": {
