@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-30T15:07:08.587Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1133,
+    "title": "Non-record: Sliding-Window Evaluation + Int8-Zlib Compression (1.34 bpb)",
+    "state": "open",
+    "updatedAt": "2026-03-30T14:44:32Z",
+    "headSha": "b770b08398b06043acd7e838cd76c745b5e25826",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1133",
+    "authorLogin": "swetapaul08"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-30_orbiluxlabs_exp05_sliding/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Sliding-window eval (stride512) plus int8+zlib compression for a single-GPU 16MB non-record run.",
+    "tags": [
+      "sliding-window-eval",
+      "quantization",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "EVAL_STRIDE=512 sliding-window evaluation",
+      "Int8 checkpoint with Zlib compression",
+      "Single-GPU 16MB non-record setup"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

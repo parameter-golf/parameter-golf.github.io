@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T04:57:23.437Z",
+  "generatedAt": "2026-03-30T15:07:15.253Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1029,
     "title": "Non-record: Knowledge Distillation — A Negative\n  Result (val_bpb=1.1553)",
     "state": "open",
-    "updatedAt": "2026-03-29T04:27:37Z",
-    "headSha": "acdc7170459a7561773bad1999df68bc76e8b108",
+    "updatedAt": "2026-03-30T14:55:38Z",
+    "headSha": "f2b1ba50956c5063e54f4fec72ae897543f3f96b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1029",
     "authorLogin": "fielding"
   },
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Cached teacher logits for soft KL distillation but overhead (~11ms/step) offset benefits, so a bigger teacher can’t beat the baseline in ten-minute runs.",
+    "summary": "Cached top-32 teacher logits and swept hard/soft distillation mixes to see if extra signal can beat the overhead within a ten-minute training budget.",
     "tags": [
+      "regularization",
       "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Cached top-32 teacher logits to amortize distillation cost",
-      "Soft KL distillation with varying alpha/temp to probe signal vs overhead",
-      "Extended runs confirm step penalty keeps curves aligned"
+      "Cached teacher top-32 logits for soft KL distillation to minimize online overhead",
+      "Compared hard vs soft distillation alphas while tracking step penalties",
+      "Extended runs to see if distillation benefits outrun cached-logit costs over time"
     ]
   },
   "compatibility": {

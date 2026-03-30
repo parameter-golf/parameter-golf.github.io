@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-03-30T14:37:58.674Z",
+  "generatedAt": "2026-03-30T15:07:22.756Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1134,
+      "title": "Vihaan gelu submission 2026 03 30",
+      "status": "open",
+      "updatedAt": "2026-03-30T14:52:27Z",
+      "headSha": "6cbb2436e46b2bbc4ada3c93d2b390d37b50a499",
+      "generatedAt": "2026-03-30T15:07:02.868Z",
+      "summary": "Baseline GPT uses GELU instead of ReLU² in MLPs to test smoother activation behavior on the existing 9-layer, 512-dim model.",
+      "tags": [
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1134.json"
+    },
+    {
+      "prNumber": 1133,
+      "title": "Non-record: Sliding-Window Evaluation + Int8-Zlib Compression (1.34 bpb)",
+      "status": "open",
+      "updatedAt": "2026-03-30T14:44:32Z",
+      "headSha": "b770b08398b06043acd7e838cd76c745b5e25826",
+      "generatedAt": "2026-03-30T15:07:08.587Z",
+      "summary": "Sliding-window eval (stride512) plus int8+zlib compression for a single-GPU 16MB non-record run.",
+      "tags": [
+        "sliding-window-eval",
+        "quantization",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1133.json"
+    },
     {
       "prNumber": 1130,
       "title": "Record: 1.1140 BPB — ResidLambdas + Split-LR + Train-Budget GPTQ + Coprime Loader (12-seed mean)",
@@ -1702,11 +1747,12 @@
       "prNumber": 1029,
       "title": "Non-record: Knowledge Distillation — A Negative\n  Result (val_bpb=1.1553)",
       "status": "open",
-      "updatedAt": "2026-03-29T04:27:37Z",
-      "headSha": "acdc7170459a7561773bad1999df68bc76e8b108",
-      "generatedAt": "2026-03-29T04:57:23.437Z",
-      "summary": "Cached teacher logits for soft KL distillation but overhead (~11ms/step) offset benefits, so a bigger teacher can’t beat the baseline in ten-minute runs.",
+      "updatedAt": "2026-03-30T14:55:38Z",
+      "headSha": "f2b1ba50956c5063e54f4fec72ae897543f3f96b",
+      "generatedAt": "2026-03-30T15:07:15.253Z",
+      "summary": "Cached top-32 teacher logits and swept hard/soft distillation mixes to see if extra signal can beat the overhead within a ten-minute training budget.",
       "tags": [
+        "regularization",
         "evaluation",
         "non-record"
       ],
@@ -4107,10 +4153,10 @@
       "prNumber": 882,
       "title": "Non-record: LeakyReLU(0.5)^2 + TrigramHash on PR414 stack (1.3762 bpb, 1xA100)",
       "status": "open",
-      "updatedAt": "2026-03-27T20:07:10Z",
-      "headSha": "76571ebbf4435748fd2f553adc56f1861d709336",
-      "generatedAt": "2026-03-27T20:18:36.342Z",
-      "summary": "Builds on PR414 by swapping ReLU^2 for LeakyReLU(0.5)^2 and trigram hashing triples into 8k buckets to enrich local context before attention.",
+      "updatedAt": "2026-03-30T14:38:06Z",
+      "headSha": "fcb6fd740095c8dc09bd700f418168529c0d5a30",
+      "generatedAt": "2026-03-30T15:07:22.632Z",
+      "summary": "LeakyReLU(0.5)^2 swapped in for ReLU^2 and TrigramHash buckets enrich 3-token context before attention on the PR414 stack.",
       "tags": [
         "architecture",
         "attention",

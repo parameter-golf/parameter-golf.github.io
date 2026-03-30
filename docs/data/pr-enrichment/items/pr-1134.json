@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-03-30T15:07:02.868Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1134,
+    "title": "Vihaan gelu submission 2026 03 30",
+    "state": "open",
+    "updatedAt": "2026-03-30T14:52:27Z",
+    "headSha": "6cbb2436e46b2bbc4ada3c93d2b390d37b50a499",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1134",
+    "authorLogin": "WinterBlossom0"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-30_GELU_MLP/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Baseline GPT uses GELU instead of ReLU² in MLPs to test smoother activation behavior on the existing 9-layer, 512-dim model.",
+    "tags": [
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "GELU replacing ReLU² in MLP",
+      "Standard 9-layer/512-dim Transformer with tied embeddings"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
