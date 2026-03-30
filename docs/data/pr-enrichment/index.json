@@ -1,8 +1,52 @@
 {
-  "generatedAt": "2026-03-30T03:33:11.737Z",
+  "generatedAt": "2026-03-30T04:03:06.943Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1116,
+      "title": "Notable Non-Record: JEPA — 1.4447 BPB — Joint Embedding Predictive Architecture for LLMs",
+      "status": "open",
+      "updatedAt": "2026-03-30T03:59:52Z",
+      "headSha": "b0ab6670af358315048a6516f6a2929daa78913b",
+      "generatedAt": "2026-03-30T04:03:01.216Z",
+      "summary": "LLM-JEPA auxiliary loss trains mean-pooled embeddings from dual random-masked views with cosine similarity and stop-gradient alongside NTP.",
+      "tags": [
+        "regularization",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1116.json"
+    },
+    {
+      "prNumber": 1115,
+      "title": "[Non-record] 1xH100 LeakyReLU2 + Legal TTT screening negative result",
+      "status": "open",
+      "updatedAt": "2026-03-30T03:55:10Z",
+      "headSha": "58bae80b1065e3bff561b6a669d25afeb034adcd",
+      "generatedAt": "2026-03-30T04:03:06.771Z",
+      "summary": "Low-cost 1xH100 screening of the LeakyReLU2 + Legal TTT frontier branch to spot stability issues after compression/evaluation.",
+      "tags": [
+        "non-record",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1115.json"
+    },
     {
       "prNumber": 1114,
       "title": "Record: Packed N-gram + Dirichlet CTW — val_bpb 0.0235 (1xB200)",

@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-30T04:03:06.771Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1115,
+    "title": "[Non-record] 1xH100 LeakyReLU2 + Legal TTT screening negative result",
+    "state": "open",
+    "updatedAt": "2026-03-30T03:55:10Z",
+    "headSha": "58bae80b1065e3bff561b6a669d25afeb034adcd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1115",
+    "authorLogin": "schoudhary90210"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-30_1xH100_LeakyReLU2_LegalTTT_screen/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Low-cost 1xH100 screening of the LeakyReLU2 + Legal TTT frontier branch to spot stability issues after compression/evaluation.",
+    "tags": [
+      "non-record",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU2 + Legal TTT screening on single H100",
+      "Compression-to-eval stability check",
+      "Reporting negative screening result"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

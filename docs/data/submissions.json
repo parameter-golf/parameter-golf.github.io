@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T03:32:38.679Z",
+  "generatedAt": "2026-03-30T04:02:54.931Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -42294,6 +42294,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-29_JEPA_LLM",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-29_JEPA_LLM",
+        "folderPath": "records/track_10min_16mb/2026-03-29_JEPA_LLM",
+        "submissionPath": "records/track_10min_16mb/2026-03-29_JEPA_LLM/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-29_JEPA_LLM/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-29_JEPA_LLM/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-29_JEPA_LLM/train_gpt.py"
+      },
+      "submission": {
+        "author": "gowtham0992",
+        "githubId": "gowtham0992",
+        "name": "JEPA: Joint Embedding Predictive Architecture for LLMs",
+        "blurb": "First JEPA submission. Auxiliary JEPA loss alongside NTP: two views via random token masking, cosine similarity between mean-pooled embeddings, stop-gradient on target. Following LLM-JEPA (Balestriero et al., 2509.14252). Sliding window eval only. 8xH100 SXM, 1790 steps at 310ms/step.",
+        "date": "2026-03-29T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.44470265,
+        "valLoss": 2.43931992,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 10054691,
+        "bytesCode": 72358,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1116,
+        "title": "Notable Non-Record: JEPA — 1.4447 BPB — Joint Embedding Predictive Architecture for LLMs",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1116",
+        "authorLogin": "gowtham0992",
+        "authorName": null,
+        "createdAt": "2026-03-30T03:59:52Z",
+        "updatedAt": "2026-03-30T03:59:52Z",
+        "headSha": "b0ab6670af358315048a6516f6a2929daa78913b",
+        "headRepo": "gowtham0992/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b0ab6670af358315048a6516f6a2929daa78913b/records/track_10min_16mb/2026-03-29_JEPA_LLM/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/b0ab6670af358315048a6516f6a2929daa78913b/records/track_10min_16mb/2026-03-29_JEPA_LLM/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/b0ab6670af358315048a6516f6a2929daa78913b/records/track_10min_16mb/2026-03-29_JEPA_LLM/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/b0ab6670af358315048a6516f6a2929daa78913b/records/track_10min_16mb/2026-03-29_JEPA_LLM/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/b0ab6670af358315048a6516f6a2929daa78913b/records/track_10min_16mb/2026-03-29_JEPA_LLM",
+        "pr": "https://github.com/openai/parameter-golf/pull/1116",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-27_CompressedUT_CE_EMA_ExportAlignedQAT_1-4457",
       "source": "pull_request",
       "status": "open",
@@ -47988,6 +48065,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/10556aebcc62c4ddc97ce750b25a23ab9739305b/records/track_non_record_16mb/2026-03-26_DiffusionNoisedTeacher_AR/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/10556aebcc62c4ddc97ce750b25a23ab9739305b/records/track_non_record_16mb/2026-03-26_DiffusionNoisedTeacher_AR",
         "pr": "https://github.com/openai/parameter-golf/pull/904",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-30_1xH100_LeakyReLU2_LegalTTT_screen",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-30_1xH100_LeakyReLU2_LegalTTT_screen",
+        "folderPath": "records/track_non_record_16mb/2026-03-30_1xH100_LeakyReLU2_LegalTTT_screen",
+        "submissionPath": "records/track_non_record_16mb/2026-03-30_1xH100_LeakyReLU2_LegalTTT_screen/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-30_1xH100_LeakyReLU2_LegalTTT_screen/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-30_1xH100_LeakyReLU2_LegalTTT_screen/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-30_1xH100_LeakyReLU2_LegalTTT_screen/train_gpt.py"
+      },
+      "submission": {
+        "author": "Siddhant_Choudhary",
+        "githubId": "schoudhary90210",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-30T03:55:10Z"
+      },
+      "metrics": {
+        "valBpb": 4.62390226,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1115,
+        "title": "[Non-record] 1xH100 LeakyReLU2 + Legal TTT screening negative result",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1115",
+        "authorLogin": "schoudhary90210",
+        "authorName": null,
+        "createdAt": "2026-03-30T03:55:10Z",
+        "updatedAt": "2026-03-30T03:55:10Z",
+        "headSha": "58bae80b1065e3bff561b6a669d25afeb034adcd",
+        "headRepo": "schoudhary90210/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/58bae80b1065e3bff561b6a669d25afeb034adcd/records/track_non_record_16mb/2026-03-30_1xH100_LeakyReLU2_LegalTTT_screen/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/58bae80b1065e3bff561b6a669d25afeb034adcd/records/track_non_record_16mb/2026-03-30_1xH100_LeakyReLU2_LegalTTT_screen/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/58bae80b1065e3bff561b6a669d25afeb034adcd/records/track_non_record_16mb/2026-03-30_1xH100_LeakyReLU2_LegalTTT_screen/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/58bae80b1065e3bff561b6a669d25afeb034adcd/records/track_non_record_16mb/2026-03-30_1xH100_LeakyReLU2_LegalTTT_screen/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/58bae80b1065e3bff561b6a669d25afeb034adcd/records/track_non_record_16mb/2026-03-30_1xH100_LeakyReLU2_LegalTTT_screen",
+        "pr": "https://github.com/openai/parameter-golf/pull/1115",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

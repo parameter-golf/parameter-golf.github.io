@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-30T04:03:01.216Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1116,
+    "title": "Notable Non-Record: JEPA — 1.4447 BPB — Joint Embedding Predictive Architecture for LLMs",
+    "state": "open",
+    "updatedAt": "2026-03-30T03:59:52Z",
+    "headSha": "b0ab6670af358315048a6516f6a2929daa78913b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1116",
+    "authorLogin": "gowtham0992"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-29_JEPA_LLM/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "LLM-JEPA auxiliary loss trains mean-pooled embeddings from dual random-masked views with cosine similarity and stop-gradient alongside NTP.",
+    "tags": [
+      "regularization",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "JEPA auxiliary cosine loss on mean-pooled embeddings",
+      "Dual random token masking views per update",
+      "Stop-gradient asymmetry to avoid collapse"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
