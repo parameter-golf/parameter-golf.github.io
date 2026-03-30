@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T13:23:02.763Z",
+  "generatedAt": "2026-03-30T00:32:22.695Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 886,
     "title": "RFC: How to Clean Up All the Parameter Golf Submissions",
     "state": "open",
-    "updatedAt": "2026-03-28T13:02:48Z",
+    "updatedAt": "2026-03-30T00:19:04Z",
     "headSha": "37aa1892cd4607a4a20a2027067b8f86b0244da4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/886",
     "authorLogin": "abaybektursun"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Audit shows cached n-gram blend reports invalid BPB because hash ratios aren't normalized; proposes per-token distribution checks, causality rules, and eval-state caps.",
+    "summary": "Shows n-gram cache blends rely on flawed hash-ratio P(cache_bin) and urges full-distribution checks plus causality and eval-state caps.",
     "tags": [
       "evaluation",
       "non-record"
@@ -27,8 +27,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "per-token distribution-sum assertion",
-      "explicit causality and eval-state caps"
+      "Full-vocabulary distribution verification during eval",
+      "Bucket-size sweep to reveal hash-collision artifacts",
+      "Proposed causality and auxiliary-state/latency caps"
     ]
   },
   "compatibility": {

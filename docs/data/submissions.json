@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T00:02:05.298Z",
+  "generatedAt": "2026-03-30T00:32:04.477Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -21044,7 +21044,7 @@
     {
       "id": "record-records-track_non_record_16mb-2026-03-29_LLaDA_MDLM_Diffusion",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "non-record",
       "track": {
         "path": "records/track_non_record_16mb",
@@ -21092,14 +21092,14 @@
       "pr": {
         "number": 1100,
         "title": "Non-record: LLaDA-MDLM Diffusion — val_var_bpb 1.1465 (first diffusion to beat AR baseline)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1100",
         "authorLogin": "agalimova",
         "authorName": null,
         "createdAt": "2026-03-29T21:47:50Z",
-        "updatedAt": "2026-03-29T21:47:50Z",
+        "updatedAt": "2026-03-30T00:23:02Z",
         "headSha": "927e8a2d4f1323bb5b09a6b39ea65a9c94b2b922",
         "headRepo": "agalimova/parameter-golf"
       },
@@ -52597,7 +52597,7 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-26T19:03:36Z",
-        "updatedAt": "2026-03-28T13:02:48Z",
+        "updatedAt": "2026-03-30T00:19:04Z",
         "headSha": "37aa1892cd4607a4a20a2027067b8f86b0244da4",
         "headRepo": "abaybektursun/parameter-golf"
       },
