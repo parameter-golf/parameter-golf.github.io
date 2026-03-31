@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T03:40:22.200Z",
+  "generatedAt": "2026-03-31T04:10:36.049Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -8465,7 +8465,7 @@
         "authorLogin": "andrewbaggio1",
         "authorName": null,
         "createdAt": "2026-03-25T03:22:29Z",
-        "updatedAt": "2026-03-31T02:51:42Z",
+        "updatedAt": "2026-03-31T03:47:28Z",
         "headSha": "3f9fa54e5975dba72598fa52828f496f803b2531",
         "headRepo": "andrewbaggio1/parameter-golf"
       },
@@ -18627,7 +18627,7 @@
       },
       "pr": {
         "number": 1166,
-        "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1347",
+        "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1347 (README request)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -18635,7 +18635,7 @@
         "authorLogin": "Christopher-Lee-McClendon",
         "authorName": null,
         "createdAt": "2026-03-31T03:03:12Z",
-        "updatedAt": "2026-03-31T03:17:17Z",
+        "updatedAt": "2026-03-31T04:08:31Z",
         "headSha": "fdb829f7946d676df6dd2f1eb86888d49cba394a",
         "headRepo": "Christopher-Lee-McClendon/parameter-golf"
       },

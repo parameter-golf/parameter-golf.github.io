@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T03:10:33.624Z",
+  "generatedAt": "2026-03-31T04:10:48.458Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 672,
     "title": "Record: 30ep Cosine TTT on LeakyReLU² stack (3-seed mean val_bpb=1.0781)",
     "state": "open",
-    "updatedAt": "2026-03-31T02:51:42Z",
+    "updatedAt": "2026-03-31T03:47:28Z",
     "headSha": "3f9fa54e5975dba72598fa52828f496f803b2531",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/672",
     "authorLogin": "andrewbaggio1"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Apply 30-epoch cosine test-time tuning atop PR#518’s LeakyReLU² 11-layer stack with per-layer LR scaling and unchanged architecture.",
+    "summary": "Reuses PR#518's LeakyReLU² 11-layer stack and runs 30-epoch cosine TTT to refine weights before sliding-window eval.",
     "tags": [
       "architecture",
-      "training-schedule",
-      "optimizer"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "30-epoch cosine test-time tuning",
-      "LeakyReLU² 11L / 4KV GQA stack",
-      "per-layer LR group scaling"
+      "11L LeakyReLU(0.5)² stack with GQA, SmearGate, Partial RoPE",
+      "Cosine-decayed 30-epoch test-time tuning (TTT)",
+      "Late QAT + EMA/SWA quantized artifact under 16MB"
     ]
   },
   "compatibility": {

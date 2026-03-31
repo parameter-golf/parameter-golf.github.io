@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T03:40:39.539Z",
+  "generatedAt": "2026-03-31T04:10:48.554Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -51,16 +51,16 @@
     },
     {
       "prNumber": 1166,
-      "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1347",
+      "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1347 (README request)",
       "status": "open",
-      "updatedAt": "2026-03-31T03:17:17Z",
+      "updatedAt": "2026-03-31T04:08:31Z",
       "headSha": "fdb829f7946d676df6dd2f1eb86888d49cba394a",
-      "generatedAt": "2026-03-31T03:40:39.372Z",
-      "summary": "Combines a 10-layer transformer with end-to-end TTT-Linear inner loops and a single-step FlowRefiner on hidden states, fitting under 16MB via int6/int8 quantization.",
+      "generatedAt": "2026-03-31T04:10:41.984Z",
+      "summary": "10-layer GPT blends end-to-end TTT-Linear per-head adaptation with a tiny latent-flow FlowRefiner before logits, keeping the ensemble under 16 MB by quantized output compression.",
       "tags": [
         "architecture",
+        "attention",
         "quantization",
-        "compression",
         "non-record"
       ],
       "flags": {
@@ -7875,14 +7875,13 @@
       "prNumber": 672,
       "title": "Record: 30ep Cosine TTT on LeakyReLU² stack (3-seed mean val_bpb=1.0781)",
       "status": "open",
-      "updatedAt": "2026-03-31T02:51:42Z",
+      "updatedAt": "2026-03-31T03:47:28Z",
       "headSha": "3f9fa54e5975dba72598fa52828f496f803b2531",
-      "generatedAt": "2026-03-31T03:10:33.624Z",
-      "summary": "Apply 30-epoch cosine test-time tuning atop PR#518’s LeakyReLU² 11-layer stack with per-layer LR scaling and unchanged architecture.",
+      "generatedAt": "2026-03-31T04:10:48.458Z",
+      "summary": "Reuses PR#518's LeakyReLU² 11-layer stack and runs 30-epoch cosine TTT to refine weights before sliding-window eval.",
       "tags": [
         "architecture",
-        "training-schedule",
-        "optimizer"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
