@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T11:43:03.624Z",
+  "generatedAt": "2026-03-31T12:13:05.527Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -125,10 +125,10 @@
       "prNumber": 1172,
       "title": "Record: SLOT + Split-LR + Full GPTQ + XSA-all — val_bpb 1.1015 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-31T11:23:33Z",
+      "updatedAt": "2026-03-31T11:44:14Z",
       "headSha": "99b080be7ee758616038526f297e9e4f8680734c",
-      "generatedAt": "2026-03-31T11:42:45.071Z",
-      "summary": "Combines eval-time SLOT delta tuning with split Muon learning rates, sigmoid-gated skips, and soft-round QAT before GPTQ compression.",
+      "generatedAt": "2026-03-31T12:12:58.081Z",
+      "summary": "Combines SLOT eval-time delta tuning, split Muon LR, sigmoid-gated skips, soft-round QAT, and BigramHash growth atop the GPTQ stack.",
       "tags": [
         "evaluation",
         "optimizer",
@@ -149,15 +149,15 @@
       "prNumber": 1170,
       "title": "Non-record: 11L NativeFlowMatcher + Legal TTT — val_bpb 1.1199 (single seed)",
       "status": "open",
-      "updatedAt": "2026-03-31T11:36:49Z",
-      "headSha": "a8177a2e5d720b538059d544328ec59a3587d19c",
-      "generatedAt": "2026-03-31T11:42:50.211Z",
-      "summary": "Adds a gated NativeFlowMatcher OT-CFM velocity net atop an 11L transformer and applies legal score-first TTT for residual refinement at eval.",
+      "updatedAt": "2026-03-31T12:08:54Z",
+      "headSha": "24792dd5151c08304d2ba4a8ea1a81cf0a099271",
+      "generatedAt": "2026-03-31T12:13:05.343Z",
+      "summary": "Adds a gated NativeFlowMatcher OT-CFM residual velocity correction on transformer hidden states and pairs it with legal score-first test-time training.",
       "tags": [
         "architecture",
-        "training-schedule",
         "quantization",
-        "evaluation"
+        "evaluation",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
