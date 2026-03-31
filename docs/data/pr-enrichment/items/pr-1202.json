@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-31T22:46:36.709Z",
+  "generatedAt": "2026-03-31T23:16:33.387Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1202,
     "title": "Record: Unified Attention + FA3 + Legal TTT (val_bpb=1.1412, 3-seed)",
     "state": "open",
-    "updatedAt": "2026-03-31T22:38:47Z",
-    "headSha": "2882f3a43af9c8f42c7b4592d3bf9968766f3f8f",
+    "updatedAt": "2026-03-31T22:59:49Z",
+    "headSha": "e11ed4bd77b30062e4f86dbf9c56f8317d6fdea1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1202",
     "authorLogin": "VirajDeshwal"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Unified Attention reallocates routing budget to a larger MLP, adds FA3 head-dim padding for Hopper speed, and uses legal score-first TTT adaptation.",
+    "summary": "Unified attention reallocates Q/K/V into one projection, paired with FA3 head-dim padding and legal score-first TTT chunk adaptation.",
     "tags": [
       "val-only",
       "attention",
       "training-schedule",
-      "evaluation"
+      "muon"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Legal score-first TTT trains via SGD on validation chunks after scoring, so the adaptation occurs entirely on held-out val tokens.",
+    "valOnlyReasoning": "Legal score-first TTT repeatedly trains SGD on validation chunks after sliding-window scoring, so the validation shard itself is used for adaptation.",
     "techniques": [
-      "Unified Attention merges QKV into one projection to boost MLP capacity",
-      "Zero-pad head dim from 44→48 for FA3 Hopper flash attention compatibility",
-      "Legal score-first TTT runs SGD on 32K-token validation chunks after scoring"
+      "Unified attention shares one projection output for Q/K/V, shrinking routing params and boosting MLP budget",
+      "Pad head_dim to 48 before FA3 FlashAttention to keep computation lossless while accessing Hopper speed",
+      "Score-first legal TTT runs SGD with momentum on successive 32K validation chunks after no-grad scoring for val-only adaptation"
     ]
   },
   "compatibility": {

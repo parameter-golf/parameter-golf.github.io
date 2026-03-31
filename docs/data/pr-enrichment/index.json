@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T22:46:36.892Z",
+  "generatedAt": "2026-03-31T23:16:39.449Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -30,15 +30,15 @@
       "prNumber": 1202,
       "title": "Record: Unified Attention + FA3 + Legal TTT (val_bpb=1.1412, 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-31T22:38:47Z",
-      "headSha": "2882f3a43af9c8f42c7b4592d3bf9968766f3f8f",
-      "generatedAt": "2026-03-31T22:46:36.709Z",
-      "summary": "Unified Attention reallocates routing budget to a larger MLP, adds FA3 head-dim padding for Hopper speed, and uses legal score-first TTT adaptation.",
+      "updatedAt": "2026-03-31T22:59:49Z",
+      "headSha": "e11ed4bd77b30062e4f86dbf9c56f8317d6fdea1",
+      "generatedAt": "2026-03-31T23:16:33.387Z",
+      "summary": "Unified attention reallocates Q/K/V into one projection, paired with FA3 head-dim padding and legal score-first TTT chunk adaptation.",
       "tags": [
         "val-only",
         "attention",
         "training-schedule",
-        "evaluation"
+        "muon"
       ],
       "flags": {
         "usesValOnly": true,
@@ -6420,15 +6420,15 @@
     {
       "prNumber": 806,
       "title": "Record: Backoff N-gram Cache + LeakyReLU(0.9)² (val_bpb=0.6678)",
-      "status": "open",
-      "updatedAt": "2026-03-30T02:32:53Z",
+      "status": "closed",
+      "updatedAt": "2026-03-31T23:08:29Z",
       "headSha": "9876d60008393c88f90b38b53329dfdaf74f64e8",
-      "generatedAt": "2026-03-30T03:04:12.496Z",
-      "summary": "Backoff n-gram eval cache using entropy-adaptive mixing, distributed pre-fill, and LeakyReLU(0.9)² on a neural base while preserving score-first legality.",
+      "generatedAt": "2026-03-31T23:16:39.332Z",
+      "summary": "Pairs an 11-layer transformer with LeakyReLU(0.9)² and a multi-order backoff n-gram cache that mixes entropy-weighted empirical counts across GPUs.",
       "tags": [
+        "architecture",
         "evaluation",
-        "optimizer",
-        "architecture"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,

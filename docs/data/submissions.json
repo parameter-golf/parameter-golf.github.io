@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T22:46:22.429Z",
+  "generatedAt": "2026-03-31T23:16:25.349Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -4167,7 +4167,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-26_NgramCache_LeakyReLU09_BackoffMixer",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -4215,14 +4215,14 @@
       "pr": {
         "number": 806,
         "title": "Record: Backoff N-gram Cache + LeakyReLU(0.9)² (val_bpb=0.6678)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/806",
         "authorLogin": "ibarrajo",
         "authorName": null,
         "createdAt": "2026-03-26T03:47:28Z",
-        "updatedAt": "2026-03-30T02:32:53Z",
+        "updatedAt": "2026-03-31T23:08:29Z",
         "headSha": "9876d60008393c88f90b38b53329dfdaf74f64e8",
         "headRepo": "ibarrajo/parameter-golf"
       },
@@ -21022,16 +21022,16 @@
         "authorLogin": "VirajDeshwal",
         "authorName": null,
         "createdAt": "2026-03-31T21:53:17Z",
-        "updatedAt": "2026-03-31T22:38:47Z",
-        "headSha": "2882f3a43af9c8f42c7b4592d3bf9968766f3f8f",
+        "updatedAt": "2026-03-31T22:59:49Z",
+        "headSha": "e11ed4bd77b30062e4f86dbf9c56f8317d6fdea1",
         "headRepo": "VirajDeshwal/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2882f3a43af9c8f42c7b4592d3bf9968766f3f8f/records/track_10min_16mb/2026-03-31_UnifiedAttention_FA3_LegalTTT/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/2882f3a43af9c8f42c7b4592d3bf9968766f3f8f/records/track_10min_16mb/2026-03-31_UnifiedAttention_FA3_LegalTTT/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/2882f3a43af9c8f42c7b4592d3bf9968766f3f8f/records/track_10min_16mb/2026-03-31_UnifiedAttention_FA3_LegalTTT/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/2882f3a43af9c8f42c7b4592d3bf9968766f3f8f/records/track_10min_16mb/2026-03-31_UnifiedAttention_FA3_LegalTTT/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/2882f3a43af9c8f42c7b4592d3bf9968766f3f8f/records/track_10min_16mb/2026-03-31_UnifiedAttention_FA3_LegalTTT",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e11ed4bd77b30062e4f86dbf9c56f8317d6fdea1/records/track_10min_16mb/2026-03-31_UnifiedAttention_FA3_LegalTTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e11ed4bd77b30062e4f86dbf9c56f8317d6fdea1/records/track_10min_16mb/2026-03-31_UnifiedAttention_FA3_LegalTTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e11ed4bd77b30062e4f86dbf9c56f8317d6fdea1/records/track_10min_16mb/2026-03-31_UnifiedAttention_FA3_LegalTTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e11ed4bd77b30062e4f86dbf9c56f8317d6fdea1/records/track_10min_16mb/2026-03-31_UnifiedAttention_FA3_LegalTTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e11ed4bd77b30062e4f86dbf9c56f8317d6fdea1/records/track_10min_16mb/2026-03-31_UnifiedAttention_FA3_LegalTTT",
         "pr": "https://github.com/openai/parameter-golf/pull/1202",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
