@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T14:37:09.470Z",
+  "generatedAt": "2026-03-31T03:10:28.698Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 886,
     "title": "RFC: How to Clean Up All the Parameter Golf Submissions",
     "state": "open",
-    "updatedAt": "2026-03-30T14:26:43Z",
+    "updatedAt": "2026-03-31T03:03:08Z",
     "headSha": "37aa1892cd4607a4a20a2027067b8f86b0244da4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/886",
     "authorLogin": "abaybektursun"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Shows n-gram cache blends report invalid token distributions via hash bucket ratios and proposes distribution checks plus causality and aux-state/latency caps.",
+    "summary": "Shows n-gram cache mixing produces inflated scores because probability mass sums to ~277, and adds checks plus causality/overhead rules.",
     "tags": [
       "evaluation",
       "non-record"
@@ -27,9 +27,8 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Full-token distribution verification",
-      "Explicit causality and auxiliary-state caps",
-      "Bucket collision analysis"
+      "assert per-token probability sums to 1 during evaluation",
+      "limit auxiliary eval-time state and enforce causality for measurement integrity"
     ]
   },
   "compatibility": {

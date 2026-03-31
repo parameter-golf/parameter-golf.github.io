@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-31T03:10:16.256Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1166,
+    "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1347",
+    "state": "open",
+    "updatedAt": "2026-03-31T03:03:12Z",
+    "headSha": "acc84009e73cfc14bceecdb819cb1c53ecc867dd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1166",
+    "authorLogin": "Christopher-Lee-McClendon"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer transformer adds E2E TTT-Linear and a FlowRefiner after final LayerNorm, then uses per-row int6/int8 quant plus lzma to stay under the 16 MB cap.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Normal training on full shards; no validation-only training regime.",
+    "techniques": [
+      "E2E TTT-Linear inner-loop per-head refinement applied post-LayerNorm",
+      "1-step latent FlowRefiner adds a gated residual correction",
+      "Per-row int6/int8 quantization with lzma-6 compression to meet the artifact budget"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

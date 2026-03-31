@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-31T03:10:24.497Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1164,
+    "title": "Non-record: random-map adapter train/eval ablations on 8xH100",
+    "state": "open",
+    "updatedAt": "2026-03-31T02:43:11Z",
+    "headSha": "2107da4ccb822e2a69455bea5a22191e120c67ef",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1164",
+    "authorLogin": "papalino456"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-31_RandomMapAdapters_TrainEval/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Ablating random-diagonal adapters on q/v/lm_head alongside document-aware LoRA/random-map TTT to probe train+eval adapter combos on 8xH100.",
+    "tags": [
+      "architecture",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Train-time random-diag adapters on q/v/lm_head",
+      "Document-aware evaluation with LoRA and random-map TTT",
+      "Shared ablation launcher with run_all_ablations"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

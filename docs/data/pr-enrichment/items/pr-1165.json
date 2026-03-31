@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-31T03:10:19.848Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1165,
+    "title": "Structured Embedding Init (BPB 1.2314)",
+    "state": "open",
+    "updatedAt": "2026-03-31T02:54:32Z",
+    "headSha": "8160ecefc9b86cb14583edd61b061c9c47b0899c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1165",
+    "authorLogin": "brandonpf"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_StructuredEmbeddingInit/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Overrides most frequent tokens with PCA-derived positions, keeping the rest at Xavier init so structured co-occurrence patterns seed embeddings.",
+    "tags": [
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- PCA-derived token positions",
+      "- Selectively replace frequent embeddings",
+      "- Xavier-standardize overridden entries"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

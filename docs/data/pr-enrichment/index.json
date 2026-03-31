@@ -1,8 +1,76 @@
 {
-  "generatedAt": "2026-03-31T02:40:21.546Z",
+  "generatedAt": "2026-03-31T03:10:33.726Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1166,
+      "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1347",
+      "status": "open",
+      "updatedAt": "2026-03-31T03:03:12Z",
+      "headSha": "acc84009e73cfc14bceecdb819cb1c53ecc867dd",
+      "generatedAt": "2026-03-31T03:10:16.256Z",
+      "summary": "10-layer transformer adds E2E TTT-Linear and a FlowRefiner after final LayerNorm, then uses per-row int6/int8 quant plus lzma to stay under the 16 MB cap.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1166.json"
+    },
+    {
+      "prNumber": 1165,
+      "title": "Structured Embedding Init (BPB 1.2314)",
+      "status": "open",
+      "updatedAt": "2026-03-31T02:54:32Z",
+      "headSha": "8160ecefc9b86cb14583edd61b061c9c47b0899c",
+      "generatedAt": "2026-03-31T03:10:19.848Z",
+      "summary": "Overrides most frequent tokens with PCA-derived positions, keeping the rest at Xavier init so structured co-occurrence patterns seed embeddings.",
+      "tags": [
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1165.json"
+    },
+    {
+      "prNumber": 1164,
+      "title": "Non-record: random-map adapter train/eval ablations on 8xH100",
+      "status": "open",
+      "updatedAt": "2026-03-31T02:43:11Z",
+      "headSha": "2107da4ccb822e2a69455bea5a22191e120c67ef",
+      "generatedAt": "2026-03-31T03:10:24.497Z",
+      "summary": "Ablating random-diagonal adapters on q/v/lm_head alongside document-aware LoRA/random-map TTT to probe train+eval adapter combos on 8xH100.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1164.json"
+    },
     {
       "prNumber": 1163,
       "title": "[record] LR warmdown v1 (WARMDOWN_ITERS=900) with confirmed 10-min runs",
@@ -4454,10 +4522,10 @@
       "prNumber": 886,
       "title": "RFC: How to Clean Up All the Parameter Golf Submissions",
       "status": "open",
-      "updatedAt": "2026-03-30T14:26:43Z",
+      "updatedAt": "2026-03-31T03:03:08Z",
       "headSha": "37aa1892cd4607a4a20a2027067b8f86b0244da4",
-      "generatedAt": "2026-03-30T14:37:09.470Z",
-      "summary": "Shows n-gram cache blends report invalid token distributions via hash bucket ratios and proposes distribution checks plus causality and aux-state/latency caps.",
+      "generatedAt": "2026-03-31T03:10:28.698Z",
+      "summary": "Shows n-gram cache mixing produces inflated scores because probability mass sums to ~277, and adds checks plus causality/overhead rules.",
       "tags": [
         "evaluation",
         "non-record"
@@ -7761,14 +7829,14 @@
       "prNumber": 672,
       "title": "Record: 30ep Cosine TTT on LeakyReLU² stack (3-seed mean val_bpb=1.0781)",
       "status": "open",
-      "updatedAt": "2026-03-25T03:22:29Z",
+      "updatedAt": "2026-03-31T02:51:42Z",
       "headSha": "3f9fa54e5975dba72598fa52828f496f803b2531",
-      "generatedAt": "2026-03-25T03:28:39.017Z",
-      "summary": "Extends PR518's LeakyReLU² 11-layer stack with a 30-epoch cosine TTT run to refine parameters before sliding eval.",
+      "generatedAt": "2026-03-31T03:10:33.624Z",
+      "summary": "Apply 30-epoch cosine test-time tuning atop PR#518’s LeakyReLU² 11-layer stack with per-layer LR scaling and unchanged architecture.",
       "tags": [
-        "training-schedule",
         "architecture",
-        "regularization"
+        "training-schedule",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
