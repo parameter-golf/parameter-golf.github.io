@@ -1,8 +1,56 @@
 {
-  "generatedAt": "2026-03-31T15:44:27.724Z",
+  "generatedAt": "2026-03-31T16:14:34.418Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1184,
+      "title": "Record: Scylla + Full GPTQ + XSA-all + FA3 — val_bpb 0.9485 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-31T16:01:28Z",
+      "headSha": "4cbc43f290f4cf4efde795163b3e8db9f86dfaf8",
+      "generatedAt": "2026-03-31T16:14:29.020Z",
+      "summary": "Merges Scylla tokenization with PR #1060’s stack: XSA on all layers, FlashAttention 3, coprime loader, and full Hessian GPTQ quantization.",
+      "tags": [
+        "tokenization",
+        "attention",
+        "quantization",
+        "muon"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1184.json"
+    },
+    {
+      "prNumber": 1183,
+      "title": "  Non-record: Retrodiction Training (Petz Recovery Map) — val_bpb 1.508",
+      "status": "open",
+      "updatedAt": "2026-03-31T15:58:32Z",
+      "headSha": "a320923c09c31877057f887f288be891b3cd1794",
+      "generatedAt": "2026-03-31T16:14:34.243Z",
+      "summary": "Adds a Petz-inspired retrodiction loss training on reversed sequences alongside causal AR to learn bidirectional signals with zero inference cost.",
+      "tags": [
+        "regularization",
+        "training-schedule",
+        "quantization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1183.json"
+    },
     {
       "prNumber": 1182,
       "title": "[track_10min_16mb] XSA7 + BigramHash + ValueResidual + Legal TTT — val_bpb=1.1227",

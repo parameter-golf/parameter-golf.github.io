@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-31T16:14:29.020Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1184,
+    "title": "Record: Scylla + Full GPTQ + XSA-all + FA3 — val_bpb 0.9485 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-31T16:01:28Z",
+    "headSha": "4cbc43f290f4cf4efde795163b3e8db9f86dfaf8",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1184",
+    "authorLogin": "icryo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-31_Scylla_FullGPTQ_XSA11_FA3_0.9485/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Merges Scylla tokenization with PR #1060’s stack: XSA on all layers, FlashAttention 3, coprime loader, and full Hessian GPTQ quantization.",
+    "tags": [
+      "tokenization",
+      "attention",
+      "quantization",
+      "muon"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Scylla TokenMonster-derived 998-token vocab",
+      "XSA across 11 layers with Hopper-native FlashAttention 3",
+      "Full Hessian GPTQ quantization paired with coprime-stride data loading"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

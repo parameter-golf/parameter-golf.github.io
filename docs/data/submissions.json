@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T15:44:11.211Z",
+  "generatedAt": "2026-03-31T16:14:21.476Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -5622,6 +5622,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/b4edf2a84b069b2adae9ee590736aa2dd02fcf4b/records/track_10min_16mb/2026-03-25_OrderAdaptiveEntropyGating_XSA11_0.9353/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/b4edf2a84b069b2adae9ee590736aa2dd02fcf4b/records/track_10min_16mb/2026-03-25_OrderAdaptiveEntropyGating_XSA11_0.9353",
         "pr": "https://github.com/openai/parameter-golf/pull/774",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-31_Scylla_FullGPTQ_XSA11_FA3_0-9485",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-31_Scylla_FullGPTQ_XSA11_FA3_0.9485",
+        "folderPath": "records/track_10min_16mb/2026-03-31_Scylla_FullGPTQ_XSA11_FA3_0.9485",
+        "submissionPath": "records/track_10min_16mb/2026-03-31_Scylla_FullGPTQ_XSA11_FA3_0.9485/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-31_Scylla_FullGPTQ_XSA11_FA3_0.9485/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-31_Scylla_FullGPTQ_XSA11_FA3_0.9485/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-31_Scylla_FullGPTQ_XSA11_FA3_0.9485/train_gpt.py"
+      },
+      "submission": {
+        "author": "icryo",
+        "githubId": "icryo",
+        "name": "Scylla tokenizer + Full GPTQ + XSA-all + FA3",
+        "blurb": "Scylla TokenMonster tokenizer (998 tokens) + PR #1060 stack (Full Hessian GPTQ, XSA on all 11 layers, coprime-stride loader) + FA3 Hopper attention. 3-seed mean 0.9485 bpb (std 0.0008). No TTT needed. 87.9ms/step, 6716 steps.",
+        "date": "2026-03-31"
+      },
+      "metrics": {
+        "valBpb": 0.9485,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15600000,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1184,
+        "title": "Record: Scylla + Full GPTQ + XSA-all + FA3 — val_bpb 0.9485 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1184",
+        "authorLogin": "icryo",
+        "authorName": null,
+        "createdAt": "2026-03-31T16:01:28Z",
+        "updatedAt": "2026-03-31T16:01:28Z",
+        "headSha": "4cbc43f290f4cf4efde795163b3e8db9f86dfaf8",
+        "headRepo": "icryo/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4cbc43f290f4cf4efde795163b3e8db9f86dfaf8/records/track_10min_16mb/2026-03-31_Scylla_FullGPTQ_XSA11_FA3_0.9485/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/4cbc43f290f4cf4efde795163b3e8db9f86dfaf8/records/track_10min_16mb/2026-03-31_Scylla_FullGPTQ_XSA11_FA3_0.9485/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/4cbc43f290f4cf4efde795163b3e8db9f86dfaf8/records/track_10min_16mb/2026-03-31_Scylla_FullGPTQ_XSA11_FA3_0.9485/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/4cbc43f290f4cf4efde795163b3e8db9f86dfaf8/records/track_10min_16mb/2026-03-31_Scylla_FullGPTQ_XSA11_FA3_0.9485/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/4cbc43f290f4cf4efde795163b3e8db9f86dfaf8/records/track_10min_16mb/2026-03-31_Scylla_FullGPTQ_XSA11_FA3_0.9485",
+        "pr": "https://github.com/openai/parameter-golf/pull/1184",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -45442,6 +45519,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/68932d5e495c698aaea467d1fa36874cb9d1f448/records/track_non_record_16mb/2026-03-23_BBI_HyperparamSweep_j420/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/68932d5e495c698aaea467d1fa36874cb9d1f448/records/track_non_record_16mb/2026-03-23_BBI_HyperparamSweep_j420",
         "pr": "https://github.com/openai/parameter-golf/pull/530",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max",
+        "folderPath": "records/track_non_record_16mb/2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max",
+        "submissionPath": "records/track_non_record_16mb/2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max/train_gpt.py"
+      },
+      "submission": {
+        "author": "Sheng-Kai Huang",
+        "githubId": "akaiHuang",
+        "name": "Retrodiction Training (Petz Recovery Map) — 16L on M1 Max",
+        "blurb": null,
+        "date": "2026-03-31"
+      },
+      "metrics": {
+        "valBpb": 1.508,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1183,
+        "title": "  Non-record: Retrodiction Training (Petz Recovery Map) — val_bpb 1.508",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1183",
+        "authorLogin": "akaiHuang",
+        "authorName": null,
+        "createdAt": "2026-03-31T15:58:32Z",
+        "updatedAt": "2026-03-31T15:58:32Z",
+        "headSha": "a320923c09c31877057f887f288be891b3cd1794",
+        "headRepo": "akaiHuang/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a320923c09c31877057f887f288be891b3cd1794/records/track_non_record_16mb/2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/a320923c09c31877057f887f288be891b3cd1794/records/track_non_record_16mb/2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/a320923c09c31877057f887f288be891b3cd1794/records/track_non_record_16mb/2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/a320923c09c31877057f887f288be891b3cd1794/records/track_non_record_16mb/2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/a320923c09c31877057f887f288be891b3cd1794/records/track_non_record_16mb/2026-03-31_Retrodiction_PetzRecoveryMap_16L_M1Max",
+        "pr": "https://github.com/openai/parameter-golf/pull/1183",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
