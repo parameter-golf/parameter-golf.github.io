@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T09:42:00.949Z",
+  "generatedAt": "2026-03-31T10:11:59.941Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -51222,6 +51222,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/67f6c44803953c8237de7494c83be84a98f23aec/records/track_10min_16mb/2026-03-31_LR_Warmdown_V1/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/67f6c44803953c8237de7494c83be84a98f23aec/records/track_10min_16mb/2026-03-31_LR_Warmdown_V1",
         "pr": "https://github.com/openai/parameter-golf/pull/1163",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-31_QKGain4_XSA11_TTT_SLOT",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-31_QKGain4_XSA11_TTT_SLOT",
+        "folderPath": "records/track_10min_16mb/2026-03-31_QKGain4_XSA11_TTT_SLOT",
+        "submissionPath": "records/track_10min_16mb/2026-03-31_QKGain4_XSA11_TTT_SLOT/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-31_QKGain4_XSA11_TTT_SLOT/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-31_QKGain4_XSA11_TTT_SLOT/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-31_QKGain4_XSA11_TTT_SLOT/train_gpt.py"
+      },
+      "submission": {
+        "author": "bigbag1983",
+        "githubId": "bigbag1983",
+        "name": "QK-Gain 4.0 + XSA-11 + Muon-TTT + SLOT",
+        "blurb": "Built on PR #1135 with four additions: QK_GAIN_INIT=4.0 (from PR #1125 sweep), XSA expanded to all 11 layers, Muon-style TTT (3 epochs, score-first), and SLOT eval-time delta optimization (arXiv:2505.12392v2). 3-seed mean 1.0962 BPB (std 0.0005), beats merged SOTA 1.1147 by 0.019.",
+        "date": "2026-03-31"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1176,
+        "title": "Record: QK-Gain 4.0 + XSA-11 + Muon-TTT + SLOT — val_bpb 1.0962 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1176",
+        "authorLogin": "bigbag",
+        "authorName": null,
+        "createdAt": "2026-03-31T09:45:23Z",
+        "updatedAt": "2026-03-31T09:54:16Z",
+        "headSha": "cc1ad3b313c61aa3af41b44c655d57570d67cf6b",
+        "headRepo": "bigbag/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/cc1ad3b313c61aa3af41b44c655d57570d67cf6b/records/track_10min_16mb/2026-03-31_QKGain4_XSA11_TTT_SLOT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/cc1ad3b313c61aa3af41b44c655d57570d67cf6b/records/track_10min_16mb/2026-03-31_QKGain4_XSA11_TTT_SLOT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/cc1ad3b313c61aa3af41b44c655d57570d67cf6b/records/track_10min_16mb/2026-03-31_QKGain4_XSA11_TTT_SLOT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/cc1ad3b313c61aa3af41b44c655d57570d67cf6b/records/track_10min_16mb/2026-03-31_QKGain4_XSA11_TTT_SLOT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/cc1ad3b313c61aa3af41b44c655d57570d67cf6b/records/track_10min_16mb/2026-03-31_QKGain4_XSA11_TTT_SLOT",
+        "pr": "https://github.com/openai/parameter-golf/pull/1176",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-31T10:12:07.658Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1176,
+    "title": "Record: QK-Gain 4.0 + XSA-11 + Muon-TTT + SLOT — val_bpb 1.0962 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-31T09:54:16Z",
+    "headSha": "cc1ad3b313c61aa3af41b44c655d57570d67cf6b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1176",
+    "authorLogin": "bigbag"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-31_QKGain4_XSA11_TTT_SLOT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Builds on PR #1135 by boosting QK gain/XSA coverage and adding Muon TTT plus SLOT eval-time deltas.",
+    "tags": [
+      "attention",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "QK_GAIN_INIT=4.0 with XSA on all 11 layers",
+      "Muon score-first TTT during evaluation",
+      "SLOT per-batch delta optimization at final hidden layer"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

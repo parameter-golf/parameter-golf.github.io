@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-31T09:42:12.240Z",
+  "generatedAt": "2026-03-31T10:12:07.832Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1176,
+      "title": "Record: QK-Gain 4.0 + XSA-11 + Muon-TTT + SLOT — val_bpb 1.0962 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-31T09:54:16Z",
+      "headSha": "cc1ad3b313c61aa3af41b44c655d57570d67cf6b",
+      "generatedAt": "2026-03-31T10:12:07.658Z",
+      "summary": "Builds on PR #1135 by boosting QK gain/XSA coverage and adding Muon TTT plus SLOT eval-time deltas.",
+      "tags": [
+        "attention",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1176.json"
+    },
     {
       "prNumber": 1174,
       "title": "[Non-Record] 5L MLP×4 EMA=0.97 Optuna — GH200 proxy, val_bpb=1.3069 (int6+zlib)",
