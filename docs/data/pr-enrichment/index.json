@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T17:45:08.906Z",
+  "generatedAt": "2026-03-31T18:14:56.377Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -8157,13 +8157,14 @@
       "prNumber": 672,
       "title": "Record: 30ep Cosine TTT on LeakyReLU² stack (3-seed mean val_bpb=1.0781)",
       "status": "open",
-      "updatedAt": "2026-03-31T03:47:28Z",
+      "updatedAt": "2026-03-31T18:10:29Z",
       "headSha": "3f9fa54e5975dba72598fa52828f496f803b2531",
-      "generatedAt": "2026-03-31T04:10:48.458Z",
-      "summary": "Reuses PR#518's LeakyReLU² 11-layer stack and runs 30-epoch cosine TTT to refine weights before sliding-window eval.",
+      "generatedAt": "2026-03-31T18:14:56.280Z",
+      "summary": "Extends the LeakyReLU² 11-layer stack with 30-epoch cosine TTT using AdamW layer-wise LR groups before sliding-window evaluation.",
       "tags": [
+        "training-schedule",
         "architecture",
-        "training-schedule"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
