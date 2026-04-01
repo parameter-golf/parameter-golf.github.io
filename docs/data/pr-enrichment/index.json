@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-01T05:19:29.022Z",
+  "generatedAt": "2026-04-01T05:49:31.127Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1212,
+      "title": "Record: Window Attention + Mixed Seq_Len Training, bpb 1.1108, eval at 6144 (5-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-01T05:44:17Z",
+      "headSha": "2fc09fc7208e1dd100c1dea4f23d4ac754ac6ef7",
+      "generatedAt": "2026-04-01T05:49:23.988Z",
+      "summary": "Window attention on even layers plus mixed seq_len GPUs lets the model see long context while keeping compute low, aided by fused Triton MLP and sigmoid-gated skips.",
+      "tags": [
+        "attention",
+        "training-schedule",
+        "architecture",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1212.json"
+    },
     {
       "prNumber": 1210,
       "title": "Non-record: Custom tokenizer with web-content symbols + pre-tokenized dataset",
@@ -2076,15 +2100,15 @@
       "prNumber": 1085,
       "title": "Non-record:11L GQA + MLP 3 + Partial RoPE + Int6 Attn/MLP + QAT40 ",
       "status": "open",
-      "updatedAt": "2026-03-29T17:17:36Z",
-      "headSha": "6a10c0a488c49f9b2fb86bf28265f6b46055e5d0",
-      "generatedAt": "2026-03-29T17:30:41.015Z",
-      "summary": "11-layer GPT-style model pairs GQA/Partial RoPE with late-stage QAT and mixed Int6 quantization to fit within 16MB while keeping capacity high.",
+      "updatedAt": "2026-04-01T05:47:33Z",
+      "headSha": "d1fdd260653ef776a4f47f06af218c492562774f",
+      "generatedAt": "2026-04-01T05:49:30.970Z",
+      "summary": "11L GQA+MLP model with Partial RoPE pairs Muon+AdamW warmdown and QAT40 before Int6 export to hit the single-H100 baseline.",
       "tags": [
         "architecture",
         "quantization",
         "training-schedule",
-        "non-record"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,

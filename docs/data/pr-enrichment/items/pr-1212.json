@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-01T05:49:23.988Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1212,
+    "title": "Record: Window Attention + Mixed Seq_Len Training, bpb 1.1108, eval at 6144 (5-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-01T05:44:17Z",
+    "headSha": "2fc09fc7208e1dd100c1dea4f23d4ac754ac6ef7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1212",
+    "authorLogin": "Gusanidas"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-31_KitchenSinkV3/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Window attention on even layers plus mixed seq_len GPUs lets the model see long context while keeping compute low, aided by fused Triton MLP and sigmoid-gated skips.",
+    "tags": [
+      "attention",
+      "training-schedule",
+      "architecture",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "FlashAttention3 windowed layers interleaved with full attention",
+      "5x2048 + 3x6144 mixed sequence lengths per step",
+      "sigmoid-gated skips and fused Triton LeakyReLU² MLP"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
