@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T02:18:33.235Z",
+  "generatedAt": "2026-04-01T02:49:31.390Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -173,13 +173,13 @@
       "prNumber": 1197,
       "title": "Non-record: Mamba-Inspired SSM Hybrid 3:1 (val_bpb 3.3168)",
       "status": "open",
-      "updatedAt": "2026-03-31T20:41:06Z",
+      "updatedAt": "2026-04-01T02:46:21Z",
       "headSha": "6e23d7d8590eaf819e2ef7fe5ff94dda95ce010d",
-      "generatedAt": "2026-03-31T20:45:38.841Z",
-      "summary": "Pure PyTorch Mamba-inspired SSM hybrid mixes 3:1 SSM-to-attention blocks with selective gating, causal Conv1d, and SiLU outputs.",
+      "generatedAt": "2026-04-01T02:48:52.854Z",
+      "summary": "Pure PyTorch SSM hybrid with a 3:1 SSM-to-attention ratio, selective gating, causal Conv1d, and SiLU output echoing Qwen3-Next/Kimi Linear patterns.",
       "tags": [
-        "architecture",
         "attention",
+        "architecture",
         "non-record"
       ],
       "flags": {
@@ -196,13 +196,13 @@
       "prNumber": 1196,
       "title": "Non-record: LLM-JEPA — Joint Embedding Prediction (val_bpb 2.2020)",
       "status": "open",
-      "updatedAt": "2026-03-31T20:41:04Z",
+      "updatedAt": "2026-04-01T02:46:20Z",
       "headSha": "4914d51d7e88871c796094de1c3cc721f43c4358",
-      "generatedAt": "2026-03-31T20:45:43.072Z",
-      "summary": "Adds a training-only JEPA head where AR context embeddings predict target span embeddings via a lightweight MLP with stop-gradient targets to prevent collapse.",
+      "generatedAt": "2026-04-01T02:48:58.409Z",
+      "summary": "Adds JEPA head where context embeddings predict target span embeddings via a lightweight MLP auxiliary loss alongside AR training.",
       "tags": [
         "architecture",
-        "regularization",
+        "training-schedule",
         "non-record"
       ],
       "flags": {
@@ -219,10 +219,10 @@
       "prNumber": 1195,
       "title": "Non-record: Learning Adapters on Random Linear Maps (val_bpb 2.2017)",
       "status": "open",
-      "updatedAt": "2026-03-31T20:41:01Z",
+      "updatedAt": "2026-04-01T02:46:18Z",
       "headSha": "f2c462d8f5a580209f86a0b0db5c6e25cc44699c",
-      "generatedAt": "2026-03-31T20:45:51.017Z",
-      "summary": "Frozen random orthogonal projections for attention and MLP layers with only diagonal scale+shift adapters trained (~0.5% params) to test random maps for LM structure.",
+      "generatedAt": "2026-04-01T02:49:03.140Z",
+      "summary": "Trains a transformer with all projection matrices frozen as random orthogonal maps, learning only diagonal scale/shift adapters (~0.5% params).",
       "tags": [
         "architecture",
         "non-record"
@@ -241,15 +241,15 @@
       "prNumber": 1194,
       "title": "Non-record: Text Diffusion (MDLM) — Masked Discrete Diffusion (val_bpb 3.3801)",
       "status": "open",
-      "updatedAt": "2026-03-31T20:40:59Z",
+      "updatedAt": "2026-04-01T02:46:17Z",
       "headSha": "a6f3a3469650f3ef8b8d2706e6e718129e8ebfb9",
-      "generatedAt": "2026-03-31T20:45:56.561Z",
-      "summary": "Hybrid AR/diffusion training mixes 30% autoregressive loss with 70% masked diffusion, using bidirectional attention for masking, causal eval, and a cosine mask schedule.",
+      "generatedAt": "2026-04-01T02:49:07.491Z",
+      "summary": "Hybrid text generation couples 30/70 AR and masked diffusion losses with bidirectional masking plus causal eval attention for a diffusion-first submission.",
       "tags": [
-        "non-record",
-        "attention",
+        "architecture",
         "training-schedule",
-        "architecture"
+        "attention",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -265,13 +265,14 @@
       "prNumber": 1193,
       "title": "Non-record: Universal Transformer + Adaptive Density (val_bpb 1.4390)",
       "status": "open",
-      "updatedAt": "2026-03-31T20:40:56Z",
+      "updatedAt": "2026-04-01T02:46:15Z",
       "headSha": "952a223e13aebb788359eccae5577aba0f1a8ea1",
-      "generatedAt": "2026-03-31T20:46:03.249Z",
-      "summary": "Shared-weight Universal Transformer block looped 12× with per-iteration scaling/embeddings and a sparse-to-dense curriculum for parameter-efficient recurrence.",
+      "generatedAt": "2026-04-01T02:49:12.389Z",
+      "summary": "Loops a single shared transformer block 12× with per-iteration scales and a sparse-to-dense curriculum to explore universal transformer recurrence.",
       "tags": [
         "architecture",
         "training-schedule",
+        "compression",
         "non-record"
       ],
       "flags": {
@@ -288,13 +289,13 @@
       "prNumber": 1192,
       "title": "Non-record: Fused Triton Megakernels — RMSNorm + LeakyReLU² (val_bpb 1.3560)",
       "status": "open",
-      "updatedAt": "2026-03-31T20:40:00Z",
+      "updatedAt": "2026-04-01T02:46:14Z",
       "headSha": "c22ffe99c73611cb7255851e81b5c940ab606098",
-      "generatedAt": "2026-03-31T20:46:08.995Z",
-      "summary": "Custom Triton megakernels fuse RMSNorm and LeakyReLU² for faster eval with autograd wrappers prepping kernel reuse in training.",
+      "generatedAt": "2026-04-01T02:49:17.229Z",
+      "summary": "Fuses RMSNorm and LeakyReLU² into Triton megakernels for faster evaluation while keeping PyTorch training and fallback compatibility.",
       "tags": [
-        "non-record",
-        "evaluation"
+        "evaluation",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -310,13 +311,13 @@
       "prNumber": 1191,
       "title": "Non-record: H-Net Dynamic Chunking — Learned Tokenization Layer (val_bpb 1.3587)",
       "status": "open",
-      "updatedAt": "2026-03-31T20:39:26Z",
+      "updatedAt": "2026-04-01T02:46:12Z",
       "headSha": "c4cf7174371e392462c864c1d6025e73a55b44f4",
-      "generatedAt": "2026-03-31T20:46:16.811Z",
-      "summary": "Adds a lightweight learned dynamic chunking layer that predicts soft token boundaries before the transformer to approximate H-Net-style tokenization.",
+      "generatedAt": "2026-04-01T02:49:22.265Z",
+      "summary": "Adds an H-Net-inspired learned chunker that predicts soft boundaries and blends neighbouring embeddings before the transformer stack.",
       "tags": [
-        "architecture",
         "tokenization",
+        "architecture",
         "non-record"
       ],
       "flags": {
@@ -426,14 +427,15 @@
       "prNumber": 1184,
       "title": "Record: Scylla + Full GPTQ + XSA-all + FA3 — val_bpb 0.9485 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T01:58:21Z",
+      "updatedAt": "2026-04-01T02:18:38Z",
       "headSha": "4cbc43f290f4cf4efde795163b3e8db9f86dfaf8",
-      "generatedAt": "2026-04-01T02:18:27.767Z",
-      "summary": "Pairs the Scylla tokenizer with the PR #1060 stack—Full Hessian GPTQ, XSA-all, FlashAttention 3—for a tightly quantized GPT run.",
+      "generatedAt": "2026-04-01T02:49:26.756Z",
+      "summary": "Applies the Scylla tokenizer atop PR #1060’s stack with Full Hessian GPTQ, XSA on every layer, FlashAttention, and a coprime loader for a modern quantized run.",
       "tags": [
-        "tokenization",
         "quantization",
-        "attention"
+        "attention",
+        "tokenization",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -660,15 +662,15 @@
     },
     {
       "prNumber": 1170,
-      "title": "Non-record: 11L NativeFlowMatcher + Legal TTT — val_bpb 1.1199 (single seed)",
+      "title": "Non-record: 11L NativeFlowMatcher + Legal TTT — val_bpb 1.1199 (3-seed mean no-TTT: 1.1225)",
       "status": "open",
-      "updatedAt": "2026-04-01T01:57:52Z",
+      "updatedAt": "2026-04-01T02:32:36Z",
       "headSha": "e75f03e5f8560eaab00cdd25997bd8e6c027c7aa",
-      "generatedAt": "2026-04-01T02:18:33.071Z",
-      "summary": "Adds gated NativeFlowMatcher OT-CFM corrections to transformer hidden states, jointly trained with AR loss plus legal score-first TTT.",
+      "generatedAt": "2026-04-01T02:49:31.214Z",
+      "summary": "Adds OT-CFM NativeFlowMatcher as a gated residual correction on hidden states and evaluates it with legal score-first TTT on the 11L Muon transformer.",
       "tags": [
         "architecture",
-        "quantization",
+        "training-schedule",
         "evaluation",
         "non-record"
       ],

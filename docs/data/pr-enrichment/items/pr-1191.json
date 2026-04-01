@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T20:46:16.811Z",
+  "generatedAt": "2026-04-01T02:49:22.265Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1191,
     "title": "Non-record: H-Net Dynamic Chunking — Learned Tokenization Layer (val_bpb 1.3587)",
     "state": "open",
-    "updatedAt": "2026-03-31T20:39:26Z",
+    "updatedAt": "2026-04-01T02:46:12Z",
     "headSha": "c4cf7174371e392462c864c1d6025e73a55b44f4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1191",
     "authorLogin": "dentity007"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds a lightweight learned dynamic chunking layer that predicts soft token boundaries before the transformer to approximate H-Net-style tokenization.",
+    "summary": "Adds an H-Net-inspired learned chunker that predicts soft boundaries and blends neighbouring embeddings before the transformer stack.",
     "tags": [
-      "architecture",
       "tokenization",
+      "architecture",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "learned chunker predicting boundary sigmoids",
-      "softly blends adjacent embeddings based on boundary scores",
-      "HNET_ENABLED/HNET_LAYERS toggle for control"
+      "Differentiable boundary scores mix adjacent embeddings",
+      "Chunker inserted between embedding norm and transformer blocks",
+      "HNET_ENABLED flag toggles the preprocessing layer"
     ]
   },
   "compatibility": {
