@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T17:23:55.770Z",
+  "generatedAt": "2026-04-01T17:54:06.963Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10228,7 +10228,7 @@
       },
       "pr": {
         "number": 1217,
-        "title": "Record: MuonEq-R + Context-Only SLOT + QK_GAIN=5.0 — val_bpb 1.1027 (3-seed mean)",
+        "title": "Non Record: MuonEq-R + Context-Only SLOT + QK_GAIN=5.0 — val_bpb 1.1027 (3-seed mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -10236,7 +10236,7 @@
         "authorLogin": "bigbag",
         "authorName": null,
         "createdAt": "2026-04-01T10:37:01Z",
-        "updatedAt": "2026-04-01T14:09:35Z",
+        "updatedAt": "2026-04-01T17:36:22Z",
         "headSha": "1b462047cba314e27afefd29c42463bb8ad06985",
         "headRepo": "bigbag/parameter-golf"
       },

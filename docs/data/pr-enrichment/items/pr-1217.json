@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-01T14:22:42.394Z",
+  "generatedAt": "2026-04-01T17:54:15.747Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1217,
-    "title": "Record: MuonEq-R + Context-Only SLOT + QK_GAIN=5.0 — val_bpb 1.1027 (3-seed mean)",
+    "title": "Non Record: MuonEq-R + Context-Only SLOT + QK_GAIN=5.0 — val_bpb 1.1027 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-01T14:09:35Z",
+    "updatedAt": "2026-04-01T17:36:22Z",
     "headSha": "1b462047cba314e27afefd29c42463bb8ad06985",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1217",
     "authorLogin": "bigbag"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Pairs MuonEq-R row-normalized orthogonalization, a QK_GAIN=5.0 sweep, and causal context-only SLOT delta tuning in sliding-window eval.",
+    "summary": "Adds MuonEq-R optimizer conditioning, a high-gain QK init, and causal context-only SLOT during sliding-window eval for smoother inference.",
     "tags": [
       "muon",
-      "optimizer",
-      "evaluation"
+      "evaluation",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Row-normalized Newton-Schulz (MuonEq-R) updates",
-      "High QK_GAIN init (5.0) from sweep",
-      "Causal context-only SLOT delta tuning for sliding-window scoring"
+      "MuonEq-R row-normalization before Newton-Schulz orthogonalization",
+      "QK_GAIN_INIT=5.0 for stronger query-key scaling",
+      "Context-only SLOT optimizes delta using only previously scored tokens in sliding windows"
     ]
   },
   "compatibility": {

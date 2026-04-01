@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T17:24:04.656Z",
+  "generatedAt": "2026-04-01T17:54:15.930Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -124,16 +124,16 @@
     },
     {
       "prNumber": 1217,
-      "title": "Record: MuonEq-R + Context-Only SLOT + QK_GAIN=5.0 — val_bpb 1.1027 (3-seed mean)",
+      "title": "Non Record: MuonEq-R + Context-Only SLOT + QK_GAIN=5.0 — val_bpb 1.1027 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T14:09:35Z",
+      "updatedAt": "2026-04-01T17:36:22Z",
       "headSha": "1b462047cba314e27afefd29c42463bb8ad06985",
-      "generatedAt": "2026-04-01T14:22:42.394Z",
-      "summary": "Pairs MuonEq-R row-normalized orthogonalization, a QK_GAIN=5.0 sweep, and causal context-only SLOT delta tuning in sliding-window eval.",
+      "generatedAt": "2026-04-01T17:54:15.747Z",
+      "summary": "Adds MuonEq-R optimizer conditioning, a high-gain QK init, and causal context-only SLOT during sliding-window eval for smoother inference.",
       "tags": [
         "muon",
-        "optimizer",
-        "evaluation"
+        "evaluation",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
