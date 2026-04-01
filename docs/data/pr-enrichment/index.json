@@ -1,8 +1,76 @@
 {
-  "generatedAt": "2026-04-01T21:55:40.440Z",
+  "generatedAt": "2026-04-01T22:56:02.555Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1235,
+      "title": "Non-record: 21L PRP experiment",
+      "status": "open",
+      "updatedAt": "2026-04-01T22:32:48Z",
+      "headSha": "8cf6640b5a06013564132234c6f0f8ada0993ee2",
+      "generatedAt": "2026-04-01T22:55:45.286Z",
+      "summary": "21L model uses PRP SwiGLU controls, shared attention pairings, and 8K tokenizer with 2048 context plus longer cosine LR schedule.",
+      "tags": [
+        "architecture",
+        "attention",
+        "training-schedule",
+        "tokenization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1235.json"
+    },
+    {
+      "prNumber": 1234,
+      "title": "Non-record: AR Self-Generated GPTQ Calibration (val_bpb=1.1461)",
+      "status": "open",
+      "updatedAt": "2026-04-01T22:28:04Z",
+      "headSha": "8c3f82063b4666f08721bb3de10d7e9e107fd0d1",
+      "generatedAt": "2026-04-01T22:55:51.066Z",
+      "summary": "Approach G combines Int6 GPTQ with autoregressive self-generated calibration data and Cholesky-compensated quantization on an 11-layer XSA stack.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1234.json"
+    },
+    {
+      "prNumber": 1233,
+      "title": "Non-record: Focal Loss (gamma=2.0) — val_bpb=1.1460",
+      "status": "open",
+      "updatedAt": "2026-04-01T22:28:00Z",
+      "headSha": "65c71c50b4125c44ec3592406ccde578342398b9",
+      "generatedAt": "2026-04-01T22:55:56.159Z",
+      "summary": "Adds gamma=2 focal loss atop the Int5 GPTQ Approach B stack to down-weight easy tokens while keeping the rest of the training pipeline unchanged.",
+      "tags": [
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1233.json"
+    },
     {
       "prNumber": 1232,
       "title": "feat: Non-record 11L PR940 Stack (no n-gram in use) + 20k Steps + Legal TTT (1.0929 BPB)",
@@ -244,15 +312,15 @@
       "prNumber": 1218,
       "title": "Record: 4096-Vocab + 4.0-MLP-mult + 0.085-WD + Simplifications — val_bpb 1.09785 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T12:40:17Z",
+      "updatedAt": "2026-04-01T22:52:45Z",
       "headSha": "4421a8d90c6e653bf36e2cbc59c08691d82f46af",
-      "generatedAt": "2026-04-01T12:52:09.319Z",
-      "summary": "Larger vocab with wider MLPs, higher WD, and simplified Muon+DDP stack plus coprime data loading and GPTQ/Hessian-aware quantization.",
+      "generatedAt": "2026-04-01T22:56:02.370Z",
+      "summary": "Simplified XSA-heavy stack adds 4096 vocab, wider MLPs with stronger decay, coprime loader, and GPTQ-aware compression.",
       "tags": [
         "architecture",
-        "tokenization",
         "quantization",
-        "training-schedule"
+        "tokenization",
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,

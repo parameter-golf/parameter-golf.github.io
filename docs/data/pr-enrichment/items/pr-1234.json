@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-01T22:55:51.066Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1234,
+    "title": "Non-record: AR Self-Generated GPTQ Calibration (val_bpb=1.1461)",
+    "state": "open",
+    "updatedAt": "2026-04-01T22:28:04Z",
+    "headSha": "8c3f82063b4666f08721bb3de10d7e9e107fd0d1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1234",
+    "authorLogin": "ibarrajo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-01_ApproachG_SelfGenGPTQ/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Approach G combines Int6 GPTQ with autoregressive self-generated calibration data and Cholesky-compensated quantization on an 11-layer XSA stack.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "autoregressive self-generated GPTQ calibration data",
+      "Int6 GPTQ with Cholesky compensation and column reordering",
+      "sliding-window eval with score-first TTT"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

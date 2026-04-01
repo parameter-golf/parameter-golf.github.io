@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-01T22:55:45.286Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1235,
+    "title": "Non-record: 21L PRP experiment",
+    "state": "open",
+    "updatedAt": "2026-04-01T22:32:48Z",
+    "headSha": "8cf6640b5a06013564132234c6f0f8ada0993ee2",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1235",
+    "authorLogin": "maksblu"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-01_21L_PRP/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "21L model uses PRP SwiGLU controls, shared attention pairings, and 8K tokenizer with 2048 context plus longer cosine LR schedule.",
+    "tags": [
+      "architecture",
+      "attention",
+      "training-schedule",
+      "tokenization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Pairwise shared attention modules reduce unique stacks",
+      "PRP SwiGLU MLPs train low-rank controls with dedicated optimizer splits",
+      "8K SentencePiece + 2048 context with multi-phase cosine LR schedule"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

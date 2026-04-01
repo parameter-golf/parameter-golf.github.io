@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T22:25:28.213Z",
+  "generatedAt": "2026-04-01T22:55:34.225Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10005,7 +10005,7 @@
         "authorLogin": "clarkkev",
         "authorName": null,
         "createdAt": "2026-04-01T11:54:49Z",
-        "updatedAt": "2026-04-01T12:40:17Z",
+        "updatedAt": "2026-04-01T22:52:45Z",
         "headSha": "4421a8d90c6e653bf36e2cbc59c08691d82f46af",
         "headRepo": "clarkkev/parameter-golf"
       },
@@ -43680,6 +43680,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-04-01_21L_PRP",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-01_21L_PRP",
+        "folderPath": "records/track_10min_16mb/2026-04-01_21L_PRP",
+        "submissionPath": "records/track_10min_16mb/2026-04-01_21L_PRP/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-01_21L_PRP/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-01_21L_PRP/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-01_21L_PRP/train_gpt.py"
+      },
+      "submission": {
+        "author": "UniversalComputingResearch",
+        "githubId": "maksblu",
+        "name": "21L + PRP SwiGLU + Shared Attention + sp8192 + 2048 context length",
+        "blurb": null,
+        "date": "2026-04-01T22:32:48Z"
+      },
+      "metrics": {
+        "valBpb": 1.354,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1235,
+        "title": "Non-record: 21L PRP experiment",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1235",
+        "authorLogin": "maksblu",
+        "authorName": null,
+        "createdAt": "2026-04-01T22:32:48Z",
+        "updatedAt": "2026-04-01T22:32:48Z",
+        "headSha": "8cf6640b5a06013564132234c6f0f8ada0993ee2",
+        "headRepo": "UniversalComputingResearch/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8cf6640b5a06013564132234c6f0f8ada0993ee2/records/track_10min_16mb/2026-04-01_21L_PRP/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8cf6640b5a06013564132234c6f0f8ada0993ee2/records/track_10min_16mb/2026-04-01_21L_PRP/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8cf6640b5a06013564132234c6f0f8ada0993ee2/records/track_10min_16mb/2026-04-01_21L_PRP/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8cf6640b5a06013564132234c6f0f8ada0993ee2/records/track_10min_16mb/2026-04-01_21L_PRP/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8cf6640b5a06013564132234c6f0f8ada0993ee2/records/track_10min_16mb/2026-04-01_21L_PRP",
+        "pr": "https://github.com/openai/parameter-golf/pull/1235",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-27_6L_128c_Gating_Muon_SWA_Mixed56_1-3540",
       "source": "pull_request",
       "status": "open",
@@ -54148,6 +54225,160 @@
         "script": "https://github.com/openai/parameter-golf/blob/c0d3bbed1feb145b786a128abaa472da534b1b01/records/track_10min_16mb/2026-04-01_ScoredPos-SLOT-PerSample-GPTQ-QKGain_0.9300/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/c0d3bbed1feb145b786a128abaa472da534b1b01/records/track_10min_16mb/2026-04-01_ScoredPos-SLOT-PerSample-GPTQ-QKGain_0.9300",
         "pr": "https://github.com/openai/parameter-golf/pull/1229",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-01_ApproachH_FocalLoss",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-01_ApproachH_FocalLoss",
+        "folderPath": "records/track_10min_16mb/2026-04-01_ApproachH_FocalLoss",
+        "submissionPath": "records/track_10min_16mb/2026-04-01_ApproachH_FocalLoss/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-01_ApproachH_FocalLoss/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-01_ApproachH_FocalLoss/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-01_ApproachH_FocalLoss/train_gpt.py"
+      },
+      "submission": {
+        "author": "Alex Ibarra",
+        "githubId": "elninja",
+        "name": "ApproachH_FocalLoss",
+        "blurb": "Focal loss (gamma=2) on top of Int5 GPTQ + 33.6M params + SWA + XSA + VE. Down-weights easy tokens to focus training on hard tokens.",
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1233,
+        "title": "Non-record: Focal Loss (gamma=2.0) — val_bpb=1.1460",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1233",
+        "authorLogin": "ibarrajo",
+        "authorName": null,
+        "createdAt": "2026-04-01T22:28:00Z",
+        "updatedAt": "2026-04-01T22:28:00Z",
+        "headSha": "65c71c50b4125c44ec3592406ccde578342398b9",
+        "headRepo": "ibarrajo/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/65c71c50b4125c44ec3592406ccde578342398b9/records/track_10min_16mb/2026-04-01_ApproachH_FocalLoss/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/65c71c50b4125c44ec3592406ccde578342398b9/records/track_10min_16mb/2026-04-01_ApproachH_FocalLoss/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/65c71c50b4125c44ec3592406ccde578342398b9/records/track_10min_16mb/2026-04-01_ApproachH_FocalLoss/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/65c71c50b4125c44ec3592406ccde578342398b9/records/track_10min_16mb/2026-04-01_ApproachH_FocalLoss/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/65c71c50b4125c44ec3592406ccde578342398b9/records/track_10min_16mb/2026-04-01_ApproachH_FocalLoss",
+        "pr": "https://github.com/openai/parameter-golf/pull/1233",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-01_ApproachG_SelfGenGPTQ",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-01_ApproachG_SelfGenGPTQ",
+        "folderPath": "records/track_10min_16mb/2026-04-01_ApproachG_SelfGenGPTQ",
+        "submissionPath": "records/track_10min_16mb/2026-04-01_ApproachG_SelfGenGPTQ/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-01_ApproachG_SelfGenGPTQ/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-01_ApproachG_SelfGenGPTQ/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-01_ApproachG_SelfGenGPTQ/train_gpt.py"
+      },
+      "submission": {
+        "author": "elninja",
+        "githubId": "elninja",
+        "name": "AR Self-Gen GPTQ + Int6 + XSA + TTT",
+        "blurb": "11L model with AR self-generated GPTQ calibration (64 seqs x 2048 tokens, temp=0.8). Model generates its own calibration data after training -- no training or validation data accessed during quantization. Full Hessian GPTQ with Cholesky error compensation. BigramHash 6144x128, value embeddings, sliding window eval, score-first TTT.",
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1234,
+        "title": "Non-record: AR Self-Generated GPTQ Calibration (val_bpb=1.1461)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1234",
+        "authorLogin": "ibarrajo",
+        "authorName": null,
+        "createdAt": "2026-04-01T22:28:04Z",
+        "updatedAt": "2026-04-01T22:28:04Z",
+        "headSha": "8c3f82063b4666f08721bb3de10d7e9e107fd0d1",
+        "headRepo": "ibarrajo/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8c3f82063b4666f08721bb3de10d7e9e107fd0d1/records/track_10min_16mb/2026-04-01_ApproachG_SelfGenGPTQ/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8c3f82063b4666f08721bb3de10d7e9e107fd0d1/records/track_10min_16mb/2026-04-01_ApproachG_SelfGenGPTQ/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8c3f82063b4666f08721bb3de10d7e9e107fd0d1/records/track_10min_16mb/2026-04-01_ApproachG_SelfGenGPTQ/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8c3f82063b4666f08721bb3de10d7e9e107fd0d1/records/track_10min_16mb/2026-04-01_ApproachG_SelfGenGPTQ/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8c3f82063b4666f08721bb3de10d7e9e107fd0d1/records/track_10min_16mb/2026-04-01_ApproachG_SelfGenGPTQ",
+        "pr": "https://github.com/openai/parameter-golf/pull/1234",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
