@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T18:54:18.445Z",
+  "generatedAt": "2026-04-01T19:24:21.183Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -47906,6 +47906,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/80f42d379735c7467c531f0d4e7003d87b073f9b/records/track_non_record_16mb/2026-03-24_MLX_MacminiM4_16GB_LateProjectionEMA/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/80f42d379735c7467c531f0d4e7003d87b073f9b/records/track_non_record_16mb/2026-03-24_MLX_MacminiM4_16GB_LateProjectionEMA",
         "pr": "https://github.com/openai/parameter-golf/pull/643",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-01_Wolfie8935_4090_ValCalib_ablations",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-01_Wolfie8935_4090_ValCalib_ablations",
+        "folderPath": "records/track_non_record_16mb/2026-04-01_Wolfie8935_4090_ValCalib_ablations",
+        "submissionPath": "records/track_non_record_16mb/2026-04-01_Wolfie8935_4090_ValCalib_ablations/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-01_Wolfie8935_4090_ValCalib_ablations/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-01_Wolfie8935_4090_ValCalib_ablations/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-01_Wolfie8935_4090_ValCalib_ablations/train_gpt.py"
+      },
+      "submission": {
+        "author": "Wolfie8935",
+        "githubId": "Wolfie8935",
+        "name": "4090 ablations on ValCalib GPTQ+XSA stack (incomplete matrix)",
+        "blurb": "Non-record submission documenting single RTX 4090 ablations (TRAIN_BATCH_TOKENS=196608) on the 2026-03-25 ValCalib / AR self-gen GPTQ + XSA-all + BigramHash 3072x112 lineage. Includes logs for ctrl, a1, a2, b1 only; c1/c2/d1/d2 not packaged. Best included sliding BPB from train_a1_calib192_seed314.log: final_int6_sliding_window_exact val_bpb ~1.56854187 — not comparable to 8xH100 SOTA. Ctrl log interrupted before sliding eval in captured run.",
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": 1.56854187,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": 600,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1226,
+        "title": "Non-record: 4090 single-GPU ablations on ValCalib GPTQ + XSA stack (partial logs)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1226",
+        "authorLogin": "Wolfie8935",
+        "authorName": null,
+        "createdAt": "2026-04-01T19:08:04Z",
+        "updatedAt": "2026-04-01T19:08:04Z",
+        "headSha": "03ef1e62ef44a628202300c88a621d207d4642df",
+        "headRepo": "Wolfie8935/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/03ef1e62ef44a628202300c88a621d207d4642df/records/track_non_record_16mb/2026-04-01_Wolfie8935_4090_ValCalib_ablations/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/03ef1e62ef44a628202300c88a621d207d4642df/records/track_non_record_16mb/2026-04-01_Wolfie8935_4090_ValCalib_ablations/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/03ef1e62ef44a628202300c88a621d207d4642df/records/track_non_record_16mb/2026-04-01_Wolfie8935_4090_ValCalib_ablations/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/03ef1e62ef44a628202300c88a621d207d4642df/records/track_non_record_16mb/2026-04-01_Wolfie8935_4090_ValCalib_ablations/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/03ef1e62ef44a628202300c88a621d207d4642df/records/track_non_record_16mb/2026-04-01_Wolfie8935_4090_ValCalib_ablations",
+        "pr": "https://github.com/openai/parameter-golf/pull/1226",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

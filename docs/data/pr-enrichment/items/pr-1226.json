@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-01T19:24:27.850Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1226,
+    "title": "Non-record: 4090 single-GPU ablations on ValCalib GPTQ + XSA stack (partial logs)",
+    "state": "open",
+    "updatedAt": "2026-04-01T19:08:04Z",
+    "headSha": "03ef1e62ef44a628202300c88a621d207d4642df",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1226",
+    "authorLogin": "Wolfie8935"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-01_Wolfie8935_4090_ValCalib_ablations/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Document single-RTX4090 ablation logs for ValCalib GPTQ+XSA+BigramHash stack using smaller TRAIN_BATCH_TOKENS to highlight budget-GPU behavior.",
+    "tags": [
+      "non-record",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Single-GPU RTX4090 run of ValCalib GPTQ+XSA+BigramHash lineage",
+      "Smaller TRAIN_BATCH_TOKENS=196608 microbatch for 24GB VRAM fit",
+      "Documented calibration/block-size ablations with partial logs"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

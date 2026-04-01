@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-01T18:54:25.900Z",
+  "generatedAt": "2026-04-01T19:24:28.027Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1226,
+      "title": "Non-record: 4090 single-GPU ablations on ValCalib GPTQ + XSA stack (partial logs)",
+      "status": "open",
+      "updatedAt": "2026-04-01T19:08:04Z",
+      "headSha": "03ef1e62ef44a628202300c88a621d207d4642df",
+      "generatedAt": "2026-04-01T19:24:27.850Z",
+      "summary": "Document single-RTX4090 ablation logs for ValCalib GPTQ+XSA+BigramHash stack using smaller TRAIN_BATCH_TOKENS to highlight budget-GPU behavior.",
+      "tags": [
+        "non-record",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1226.json"
+    },
     {
       "prNumber": 1224,
       "title": "Add non-record AR GPTQ XSA ROTQ Hadamard submission",
