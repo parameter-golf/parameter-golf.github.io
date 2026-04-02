@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-04-02T05:28:30.767Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1247,
+    "title": "Proposal: Validate ASQU on the March 22 10min/16MB control line",
+    "state": "open",
+    "updatedAt": "2026-04-02T05:18:24Z",
+    "headSha": "f30e006c45f4f63e699a3cb5e8dd7316456dc0fb",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1247",
+    "authorLogin": "fahmitech"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Transfers learned per-channel ASQU activation onto the March 22 11L stack to test its compatibility with the 10min/16MB control line.",
+    "tags": [
+      "architecture",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "ASQU activation with per-channel β transfer",
+      "Controlled March 22 base with EMA, tight SWA, and late QAT",
+      "GPTQ-lite per-row clip percentile search for int6"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-04-02T04:27:36.653Z",
+  "generatedAt": "2026-04-02T05:28:47.619Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1247,
+      "title": "Proposal: Validate ASQU on the March 22 10min/16MB control line",
+      "status": "open",
+      "updatedAt": "2026-04-02T05:18:24Z",
+      "headSha": "f30e006c45f4f63e699a3cb5e8dd7316456dc0fb",
+      "generatedAt": "2026-04-02T05:28:30.767Z",
+      "summary": "Transfers learned per-channel ASQU activation onto the March 22 11L stack to test its compatibility with the 10min/16MB control line.",
+      "tags": [
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1247.json"
+    },
     {
       "prNumber": 1246,
       "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
@@ -2472,15 +2494,15 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Fast Causal N-Gram Tilt & Subword Certainty— 1.1052 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-02T00:57:10Z",
-      "headSha": "30c83c773b8629e45f09a17fefcf33afef6df08b",
-      "generatedAt": "2026-04-02T01:26:42.541Z",
-      "summary": "Fused Triton/CUTLASS MLP kernels with precomputed grads, expanded 3.5× MLP, Hessian-guided mixed int5/int6 quantization, and a fast sparse causal n-gram tilt.",
+      "updatedAt": "2026-04-02T05:26:59Z",
+      "headSha": "17d5028b13d4ed383271ab66be075a177ef39171",
+      "generatedAt": "2026-04-02T05:28:37.169Z",
+      "summary": "Fuses Triton TMA forward and CUTLASS EVT backward MLP kernels, widens MLP + Hessian-guided mixed int5/int6 quant, and adds fast n-gram tilt memory.",
       "tags": [
         "architecture",
         "quantization",
-        "compression",
-        "evaluation"
+        "evaluation",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -19032,23 +19054,23 @@
       "prNumber": 64,
       "title": "Record: DominationV3 + GPTQ-lite + TTT25 (mean val_bpb=1.1250, 3 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-23T22:16:34Z",
+      "updatedAt": "2026-04-02T05:09:45Z",
       "headSha": "741fc5537562b03e95611e142d0dee602da3c0ce",
-      "generatedAt": "2026-03-23T22:19:26.553Z",
-      "summary": "11-layer DominationV3 uses Partial RoPE+LN scale with GPTQ-lite per-row clipping and 25-epoch SGD TTT on scored tokens alongside sliding-window eval.",
+      "generatedAt": "2026-04-02T05:28:47.611Z",
+      "summary": "DominationV3 tweaks (partial RoPE + LN scale) with GPTQ-lite int6 quant and 25-epoch SGD TTT adaptation on validation tokens.",
       "tags": [
         "quantization",
-        "attention",
+        "architecture",
         "training-schedule",
-        "evaluation"
+        "val-only"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-64.json"
     },

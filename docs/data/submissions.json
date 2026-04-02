@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T04:58:07.837Z",
+  "generatedAt": "2026-04-02T05:28:22.544Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10621,16 +10621,16 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-30T00:03:19Z",
-        "updatedAt": "2026-04-02T00:57:10Z",
-        "headSha": "30c83c773b8629e45f09a17fefcf33afef6df08b",
+        "updatedAt": "2026-04-02T05:26:59Z",
+        "headSha": "17d5028b13d4ed383271ab66be075a177ef39171",
         "headRepo": "abaybektursun/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/30c83c773b8629e45f09a17fefcf33afef6df08b/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/30c83c773b8629e45f09a17fefcf33afef6df08b/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/30c83c773b8629e45f09a17fefcf33afef6df08b/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/30c83c773b8629e45f09a17fefcf33afef6df08b/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/30c83c773b8629e45f09a17fefcf33afef6df08b/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/17d5028b13d4ed383271ab66be075a177ef39171/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/17d5028b13d4ed383271ab66be075a177ef39171/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/17d5028b13d4ed383271ab66be075a177ef39171/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/17d5028b13d4ed383271ab66be075a177ef39171/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/17d5028b13d4ed383271ab66be075a177ef39171/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap",
         "pr": "https://github.com/openai/parameter-golf/pull/1105",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -17788,7 +17788,7 @@
         "authorLogin": "yesbhautik",
         "authorName": null,
         "createdAt": "2026-03-19T07:32:20Z",
-        "updatedAt": "2026-03-23T22:16:34Z",
+        "updatedAt": "2026-04-02T05:09:45Z",
         "headSha": "741fc5537562b03e95611e142d0dee602da3c0ce",
         "headRepo": "yesbhautik/parameter-golf"
       },
@@ -54533,6 +54533,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/4ba466313f2ccadf47b07abf8bcacda4581135c7/records/track_non_record_16mb/2026-04-02_28_Experiments_5_Days_Scale_Deception/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/4ba466313f2ccadf47b07abf8bcacda4581135c7/records/track_non_record_16mb/2026-04-02_28_Experiments_5_Days_Scale_Deception",
         "pr": "https://github.com/openai/parameter-golf/pull/1227",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite",
+        "folderPath": "records/track_10min_16mb/2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite",
+        "submissionPath": "records/track_10min_16mb/2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite/train_gpt.py"
+      },
+      "submission": {
+        "author": "fahmitech",
+        "githubId": "fahmitech",
+        "name": "11L XSA4 + Partial RoPE + LN Scale + VE128 + ASQU + EMA + GPTQ-lite",
+        "blurb": "Differentiated follow-on candidate built from the proven March 22 11-layer FA3 mainline. This variant keeps the March 22 stack intact while switching the MLP activation to ASQU, a learned per-channel asymmetric squared unit with prior controlled evidence over both relu^2 and leaky_relu^2. Fresh metrics pending rerun on this fork.",
+        "date": "2026-04-02"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1247,
+        "title": "Proposal: Validate ASQU on the March 22 10min/16MB control line",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1247",
+        "authorLogin": "fahmitech",
+        "authorName": null,
+        "createdAt": "2026-04-02T05:18:24Z",
+        "updatedAt": "2026-04-02T05:18:24Z",
+        "headSha": "f30e006c45f4f63e699a3cb5e8dd7316456dc0fb",
+        "headRepo": "fahmitech/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f30e006c45f4f63e699a3cb5e8dd7316456dc0fb/records/track_10min_16mb/2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/f30e006c45f4f63e699a3cb5e8dd7316456dc0fb/records/track_10min_16mb/2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/f30e006c45f4f63e699a3cb5e8dd7316456dc0fb/records/track_10min_16mb/2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/f30e006c45f4f63e699a3cb5e8dd7316456dc0fb/records/track_10min_16mb/2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/f30e006c45f4f63e699a3cb5e8dd7316456dc0fb/records/track_10min_16mb/2026-04-02_11L_XSA4_PartialRoPE_LNScale_VE128_ASQU_EMA_GPTQlite",
+        "pr": "https://github.com/openai/parameter-golf/pull/1247",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

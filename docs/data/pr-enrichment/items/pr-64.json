@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T22:19:26.553Z",
+  "generatedAt": "2026-04-02T05:28:47.611Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 64,
     "title": "Record: DominationV3 + GPTQ-lite + TTT25 (mean val_bpb=1.1250, 3 seeds)",
     "state": "open",
-    "updatedAt": "2026-03-23T22:16:34Z",
+    "updatedAt": "2026-04-02T05:09:45Z",
     "headSha": "741fc5537562b03e95611e142d0dee602da3c0ce",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/64",
     "authorLogin": "yesbhautik"
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer DominationV3 uses Partial RoPE+LN scale with GPTQ-lite per-row clipping and 25-epoch SGD TTT on scored tokens alongside sliding-window eval.",
+    "summary": "DominationV3 tweaks (partial RoPE + LN scale) with GPTQ-lite int6 quant and 25-epoch SGD TTT adaptation on validation tokens.",
     "tags": [
       "quantization",
-      "attention",
+      "architecture",
       "training-schedule",
-      "evaluation"
+      "val-only"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT adaptation applies 25 epochs of SGD on already-graded validation tokens during evaluation, which qualifies as val-only training.",
     "techniques": [
-      "Partial RoPE + LN scale to reduce positional overhead",
-      "GPTQ-lite per-row clip search for mixed int6 quantization",
-      "25-epoch SGD TTT on scored tokens with sliding-window eval"
+      "11-layer DominationV3 with Partial RoPE (16/64 dims), LN scale, EMA, and GQA",
+      "GPTQ-lite per-row clip search for int6 quantization on mlp/attn/tok_emb plus zstd-22",
+      "25-epoch aggressive SGD TTT (all blocks unfrozen) on validation tokens via sliding-window eval"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }
