@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T01:26:34.330Z",
+  "generatedAt": "2026-04-02T01:56:46.034Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -6628,6 +6628,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/30ba8e4100bd32bf11bd0a41a1f88f9371003733/records/track_10min_16mb/2026-03-25_CosineTTT_NgramCache_8xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/30ba8e4100bd32bf11bd0a41a1f88f9371003733/records/track_10min_16mb/2026-03-25_CosineTTT_NgramCache_8xH100",
         "pr": "https://github.com/openai/parameter-golf/pull/1186",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-01_MDLM_EOS_FullDataset_A10G",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-01_MDLM_EOS_FullDataset_A10G",
+        "folderPath": "records/track_non_record_16mb/2026-04-01_MDLM_EOS_FullDataset_A10G",
+        "submissionPath": "records/track_non_record_16mb/2026-04-01_MDLM_EOS_FullDataset_A10G/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-01_MDLM_EOS_FullDataset_A10G/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-01_MDLM_EOS_FullDataset_A10G/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-01_MDLM_EOS_FullDataset_A10G/train_gpt.py"
+      },
+      "submission": {
+        "author": "aiejvn",
+        "githubId": "139830381",
+        "name": "MDLM v5: EOS Learning + Full Dataset Shard Rotation (Non-Record)",
+        "blurb": "Builds on PR #1106 MDLM stack. Adds EOS token learning (token 1 as document boundary anchor, never masked) and dedicated PAD_ID=1025 to separate structural padding from diffusion masking. Full FineWeb SP-1024 dataset trained via shard rotation: loads 4 shards at a time, rotates every 6000 steps, ensuring all 80 shards are seen without exceeding RAM. val_var_bpb=0.9901 (128 eval steps), 33M params, 1267 min on 1x AWS A10G.",
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": 0.9901,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": 6000,
+        "wallclockSeconds": 76019,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1241,
+        "title": "MDLM Diffusion — val_var_bpb 0.9901, EOS learning + full dataset shard rotation, 33M params, 1x AWS A10G",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1241",
+        "authorLogin": "aiejvn",
+        "authorName": null,
+        "createdAt": "2026-04-02T01:38:56Z",
+        "updatedAt": "2026-04-02T01:41:05Z",
+        "headSha": "bce7f0a46a565c8ee296ebea70563640f98566f0",
+        "headRepo": "aiejvn/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/bce7f0a46a565c8ee296ebea70563640f98566f0/records/track_non_record_16mb/2026-04-01_MDLM_EOS_FullDataset_A10G/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/bce7f0a46a565c8ee296ebea70563640f98566f0/records/track_non_record_16mb/2026-04-01_MDLM_EOS_FullDataset_A10G/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/bce7f0a46a565c8ee296ebea70563640f98566f0/records/track_non_record_16mb/2026-04-01_MDLM_EOS_FullDataset_A10G/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/bce7f0a46a565c8ee296ebea70563640f98566f0/records/track_non_record_16mb/2026-04-01_MDLM_EOS_FullDataset_A10G/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/bce7f0a46a565c8ee296ebea70563640f98566f0/records/track_non_record_16mb/2026-04-01_MDLM_EOS_FullDataset_A10G",
+        "pr": "https://github.com/openai/parameter-golf/pull/1241",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

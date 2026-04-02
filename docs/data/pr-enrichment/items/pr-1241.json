@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-02T01:56:55.245Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1241,
+    "title": "MDLM Diffusion — val_var_bpb 0.9901, EOS learning + full dataset shard rotation, 33M params, 1x AWS A10G",
+    "state": "open",
+    "updatedAt": "2026-04-02T01:41:05Z",
+    "headSha": "bce7f0a46a565c8ee296ebea70563640f98566f0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1241",
+    "authorLogin": "aiejvn"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-01_MDLM_EOS_FullDataset_A10G/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Anchors diffusion with never-masked EOS and distinct PAD plus shard-rotation loading to train MDLM on the full FineWeb dataset within RAM limits.",
+    "tags": [
+      "architecture",
+      "tokenization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "EOS token kept visible and PAD excluded from diffusion masking/loss",
+      "ShardedDataLoader rotates 4-shard groups using preallocated buffers to cover all 80 shards",
+      "Head-count sweep shows bidirectional diffusion BPB remains invariant so hardware-aligned configs suffice"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
