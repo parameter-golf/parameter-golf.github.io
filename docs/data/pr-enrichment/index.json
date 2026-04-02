@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-04-02T08:29:47.954Z",
+  "generatedAt": "2026-04-02T09:00:05.015Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1253,
+      "title": "[non_record_16mb] 12L dim=448 LeakyReLU^2 BGVOCAB=2048 GH200 proxy (val_bpb=1.2326)",
+      "status": "open",
+      "updatedAt": "2026-04-02T08:50:21Z",
+      "headSha": "7715b7064a510237b57b81e696707b389f95ad76",
+      "generatedAt": "2026-04-02T08:59:55.267Z",
+      "summary": "Proxy 12L 448-dim GQA+XSA transformer adds LeakyReLU², Bigram-2048 bypass, EMA tweaks, and Optuna-tuned optimizer before int6+zstd compression.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1253.json"
+    },
+    {
+      "prNumber": 1252,
+      "title": "Record(?): WARP (Word-Aware Representation Priors) — val_bpb 1.0713 | 1xH100 10min | 13.65 MB",
+      "status": "open",
+      "updatedAt": "2026-04-02T08:33:33Z",
+      "headSha": "1668e1884e5e5f8d96b9d6751d1ad3df8bdc4632",
+      "generatedAt": "2026-04-02T09:00:00.362Z",
+      "summary": "Augments a LeakyReLU-squared GQA stack with lightweight WARP modules injecting word-length, within-word positional, and word-type logit priors to restore boundary info.",
+      "tags": [
+        "architecture",
+        "attention"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1252.json"
+    },
     {
       "prNumber": 1248,
       "title": "Non-record: GQA + LZMA + Selective Pruning (val_bpb=1.1264)",
@@ -844,14 +890,14 @@
       "prNumber": 1204,
       "title": "Record: ParallelResiduals + MiniDepthRecurrence, 1.1063 BPB / 1.8679 nats, -0.0072 vs PR #1179, -0.0143 vs merged SOTA",
       "status": "open",
-      "updatedAt": "2026-04-02T08:25:17Z",
+      "updatedAt": "2026-04-02T08:30:36Z",
       "headSha": "e01b7e19895e09efb97c415ad6e32e60d6b4842b",
-      "generatedAt": "2026-04-02T08:29:37.597Z",
-      "summary": "Adds parallel residual routing plus delayed mini-depth recurrence with untied repeated MLPs atop the existing mixed-quant+GPTQ stack.",
+      "generatedAt": "2026-04-02T09:00:04.836Z",
+      "summary": "Parallel residual lanes plus delayed mini depth recurrence ride atop AR GPTQ/mixed quant to squeeze more depth from the stack.",
       "tags": [
+        "quantization",
         "architecture",
-        "training-schedule",
-        "mixed-precision"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

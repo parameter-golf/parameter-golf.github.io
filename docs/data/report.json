@@ -1,39 +1,25 @@
 {
-  "generatedAt": "2026-04-02T08:28:59.421Z",
+  "generatedAt": "2026-04-02T08:59:25.815Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
   "skipped": [
     {
-      "pr": 1251,
+      "pr": 1220,
       "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 1250,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "pr": 1249,
-      "reason": "no-record-submission-json"
-    },
-    {
-      "stage": "pull-request-readme",
-      "pr": 1248,
-      "submissionPath": "records/track_10min_16mb/2026-04-01_ApproachI_GQA_LZMA/submission.json",
-      "reason": "missing-or-unreadable-readme"
     }
   ],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-04-02T07:50:46Z",
+    "cutoffUpdatedAt": "2026-04-02T08:28:01Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 7,
-    "prsReused": 193,
+    "prsRefreshed": 4,
+    "prsReused": 196,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 1197,
+    "cacheEntries": 1199,
     "retryWindowRetained": false
   }
 }

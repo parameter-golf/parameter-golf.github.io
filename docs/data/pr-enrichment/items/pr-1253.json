@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-02T08:59:55.267Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1253,
+    "title": "[non_record_16mb] 12L dim=448 LeakyReLU^2 BGVOCAB=2048 GH200 proxy (val_bpb=1.2326)",
+    "state": "open",
+    "updatedAt": "2026-04-02T08:50:21Z",
+    "headSha": "7715b7064a510237b57b81e696707b389f95ad76",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1253",
+    "authorLogin": "Okropniak"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-02_12L_dim448_leaky_GH200/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Proxy 12L 448-dim GQA+XSA transformer adds LeakyReLU², Bigram-2048 bypass, EMA tweaks, and Optuna-tuned optimizer before int6+zstd compression.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "12-layer 448-dim GQA/XSA with Bigram-2048+1024 bypass and EMA=0.995",
+      "LeakyReLU² activations with Optuna v1 TPE optimizer tuning",
+      "int6+zstd-22 quantized artifact from GH200 proxy run"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

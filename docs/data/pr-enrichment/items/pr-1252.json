@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-04-02T09:00:00.362Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1252,
+    "title": "Record(?): WARP (Word-Aware Representation Priors) — val_bpb 1.0713 | 1xH100 10min | 13.65 MB",
+    "state": "open",
+    "updatedAt": "2026-04-02T08:33:33Z",
+    "headSha": "1668e1884e5e5f8d96b9d6751d1ad3df8bdc4632",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1252",
+    "authorLogin": "ahmetdenizyilmaz"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-02_WARP_WordAware_Representation_Priors/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Augments a LeakyReLU-squared GQA stack with lightweight WARP modules injecting word-length, within-word positional, and word-type logit priors to restore boundary info.",
+    "tags": [
+      "architecture",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Word-length embeddings at layer 0 plus within-word positional Q/K biases before RoPE",
+      "Word-type logit bias via a small classifier added to pre-softmax logits",
+      "EMA disabled on short runs while retaining Legal TTT and context-only SLOT stack"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

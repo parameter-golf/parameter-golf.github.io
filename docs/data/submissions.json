@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T08:29:23.728Z",
+  "generatedAt": "2026-04-02T08:59:48.340Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -8716,6 +8716,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-04-02_WARP_WordAware_Representation_Priors",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-02_WARP_WordAware_Representation_Priors",
+        "folderPath": "records/track_10min_16mb/2026-04-02_WARP_WordAware_Representation_Priors",
+        "submissionPath": "records/track_10min_16mb/2026-04-02_WARP_WordAware_Representation_Priors/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-02_WARP_WordAware_Representation_Priors/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-02_WARP_WordAware_Representation_Priors/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-02_WARP_WordAware_Representation_Priors/train_gpt.py"
+      },
+      "submission": {
+        "author": "ahmetdenizyilmaz",
+        "githubId": "ahmetdenizyilmaz",
+        "name": "WARP (Word-Aware Representation Priors) + Legal TTT + Context-Only SLOT",
+        "blurb": "WARP injects word-level structural priors at 3 points: word length embedding (layer 0), word position in Q+K attention (all layers), word type logit bias (output). 183,820 extra params (0.7% overhead). EMA disabled for short runs. Built on LeakyReLU-squared + Parallel Muon + BigramHash(2816) + XSA-11 stack. Legal score-first TTT (2ep, freeze 2) + context-only SLOT (lr=0.005, 8 steps). Trained on 1xH100, 600s wallclock, 1260 steps.",
+        "date": "2026-04-02"
+      },
+      "metrics": {
+        "valBpb": 1.0713,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 13653989,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1252,
+        "title": "Record(?): WARP (Word-Aware Representation Priors) — val_bpb 1.0713 | 1xH100 10min | 13.65 MB",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1252",
+        "authorLogin": "ahmetdenizyilmaz",
+        "authorName": null,
+        "createdAt": "2026-04-02T08:33:33Z",
+        "updatedAt": "2026-04-02T08:33:33Z",
+        "headSha": "1668e1884e5e5f8d96b9d6751d1ad3df8bdc4632",
+        "headRepo": "ahmetdenizyilmaz/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1668e1884e5e5f8d96b9d6751d1ad3df8bdc4632/records/track_10min_16mb/2026-04-02_WARP_WordAware_Representation_Priors/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/1668e1884e5e5f8d96b9d6751d1ad3df8bdc4632/records/track_10min_16mb/2026-04-02_WARP_WordAware_Representation_Priors/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/1668e1884e5e5f8d96b9d6751d1ad3df8bdc4632/records/track_10min_16mb/2026-04-02_WARP_WordAware_Representation_Priors/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/1668e1884e5e5f8d96b9d6751d1ad3df8bdc4632/records/track_10min_16mb/2026-04-02_WARP_WordAware_Representation_Priors/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/1668e1884e5e5f8d96b9d6751d1ad3df8bdc4632/records/track_10min_16mb/2026-04-02_WARP_WordAware_Representation_Priors",
+        "pr": "https://github.com/openai/parameter-golf/pull/1252",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-27_ImprovedTTT_HedgeMixer_PerLayerLR_1-0722",
       "source": "pull_request",
       "status": "closed",
@@ -10775,7 +10852,7 @@
         "authorLogin": "msisovic",
         "authorName": null,
         "createdAt": "2026-04-01T00:46:06Z",
-        "updatedAt": "2026-04-02T08:25:17Z",
+        "updatedAt": "2026-04-02T08:30:36Z",
         "headSha": "e01b7e19895e09efb97c415ad6e32e60d6b4842b",
         "headRepo": "msisovic/parameter-golf"
       },
@@ -39744,6 +39821,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/cb598b3fe774fbe50c946a810b652284ca6ae987/records/track_10min_16mb/2026-03-20_INT6_10L_SWA_NorMuon/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/cb598b3fe774fbe50c946a810b652284ca6ae987/records/track_10min_16mb/2026-03-20_INT6_10L_SWA_NorMuon",
         "pr": "https://github.com/openai/parameter-golf/pull/204",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-02_12L_dim448_leaky_GH200",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-02_12L_dim448_leaky_GH200",
+        "folderPath": "records/track_non_record_16mb/2026-04-02_12L_dim448_leaky_GH200",
+        "submissionPath": "records/track_non_record_16mb/2026-04-02_12L_dim448_leaky_GH200/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-02_12L_dim448_leaky_GH200/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-02_12L_dim448_leaky_GH200/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-02_12L_dim448_leaky_GH200/train_gpt.py"
+      },
+      "submission": {
+        "author": "pzydron",
+        "githubId": "Okropniak",
+        "name": "12L dim=448 LeakyReLU² BGVOCAB=2048 — GH200 MIG proxy",
+        "blurb": "Proxy-scale submission (GH200 MIG 1g.24gb, 5k steps). 12-layer 448-dim GQA+XSA transformer with MLP×3, Bigram-2048+1024dim bypass, LeakyReLU² (slope=0.1), EMA=0.995, Optuna v1 TPE hyperparams. val_bpb=1.23263493 (int6+zstd-22, stride=64, 15.58MB). Not a SOTA record — proxy hardware. Requesting H100 access for full competition run.",
+        "date": "2026-04-02"
+      },
+      "metrics": {
+        "valBpb": 1.23263493,
+        "valLoss": 1.8071,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15582679,
+        "bytesCode": 70494,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1253,
+        "title": "[non_record_16mb] 12L dim=448 LeakyReLU^2 BGVOCAB=2048 GH200 proxy (val_bpb=1.2326)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1253",
+        "authorLogin": "Okropniak",
+        "authorName": null,
+        "createdAt": "2026-04-02T08:50:21Z",
+        "updatedAt": "2026-04-02T08:50:21Z",
+        "headSha": "7715b7064a510237b57b81e696707b389f95ad76",
+        "headRepo": "Okropniak/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7715b7064a510237b57b81e696707b389f95ad76/records/track_non_record_16mb/2026-04-02_12L_dim448_leaky_GH200/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/7715b7064a510237b57b81e696707b389f95ad76/records/track_non_record_16mb/2026-04-02_12L_dim448_leaky_GH200/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/7715b7064a510237b57b81e696707b389f95ad76/records/track_non_record_16mb/2026-04-02_12L_dim448_leaky_GH200/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/7715b7064a510237b57b81e696707b389f95ad76/records/track_non_record_16mb/2026-04-02_12L_dim448_leaky_GH200/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/7715b7064a510237b57b81e696707b389f95ad76/records/track_non_record_16mb/2026-04-02_12L_dim448_leaky_GH200",
+        "pr": "https://github.com/openai/parameter-golf/pull/1253",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
