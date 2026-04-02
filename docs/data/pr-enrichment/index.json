@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T13:31:52.121Z",
+  "generatedAt": "2026-04-02T14:02:04.762Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -170,15 +170,15 @@
       "prNumber": 1246,
       "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
       "status": "open",
-      "updatedAt": "2026-04-02T02:59:53Z",
-      "headSha": "648d5b8f623cbcc2dbc4cc718bdf9ce77fa08775",
-      "generatedAt": "2026-04-02T03:27:23.462Z",
-      "summary": "Ternary QAT 10-layer GPT with relu² U-Net skips, Partial RoPE, NeoMuon, and BitNet base-3 packing for <16MB.",
+      "updatedAt": "2026-04-02T13:46:00Z",
+      "headSha": "e7b1283d56111ae80ed3a34e855314d669174b40",
+      "generatedAt": "2026-04-02T14:01:56.918Z",
+      "summary": "10-layer GPT uses BitNet ternary QAT with relu², NeoMuon, Partial RoPE, and base-3 packing to fit ~73M params under 16MB.",
       "tags": [
         "quantization",
         "architecture",
-        "regularization",
-        "optimizer"
+        "training-schedule",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2612,15 +2612,15 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Fast Causal N-Gram Tilt & Subword Certainty (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-02T06:08:45Z",
-      "headSha": "7a37b6d10d08265b48ed9a8f2ed62747ee8dc5ec",
-      "generatedAt": "2026-04-02T06:29:59.545Z",
-      "summary": "Fuses Triton TMA/CUTLASS EVT MLP kernels with Hessian-guided mixed int5/int6 GPTQ and fast causal n-gram tilt over SP4608 to fit more capacity.",
+      "updatedAt": "2026-04-02T13:39:46Z",
+      "headSha": "fbb9b372ee90ebf21c9ab969f964669a82c3bdb0",
+      "generatedAt": "2026-04-02T14:02:04.604Z",
+      "summary": "Uses fused Triton TMA + CUTLASS EVT MLP kernels plus fast causal n-gram tilt as sparse auxiliary memory, with all-int6 quantization and Brotli compression.",
       "tags": [
         "architecture",
         "quantization",
         "compression",
-        "evaluation"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

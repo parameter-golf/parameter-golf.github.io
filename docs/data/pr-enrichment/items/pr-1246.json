@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-02T03:27:23.462Z",
+  "generatedAt": "2026-04-02T14:01:56.918Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1246,
     "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
     "state": "open",
-    "updatedAt": "2026-04-02T02:59:53Z",
-    "headSha": "648d5b8f623cbcc2dbc4cc718bdf9ce77fa08775",
+    "updatedAt": "2026-04-02T13:46:00Z",
+    "headSha": "e7b1283d56111ae80ed3a34e855314d669174b40",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1246",
     "authorLogin": "deborahnelson8788726"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Ternary QAT 10-layer GPT with relu² U-Net skips, Partial RoPE, NeoMuon, and BitNet base-3 packing for <16MB.",
+    "summary": "10-layer GPT uses BitNet ternary QAT with relu², NeoMuon, Partial RoPE, and base-3 packing to fit ~73M params under 16MB.",
     "tags": [
       "quantization",
       "architecture",
-      "regularization",
-      "optimizer"
+      "training-schedule",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Trinity-inspired BitNet b1.58 ternary QAT with base-3 packing",
-      "relu² wide U-Net-style transformer with Partial RoPE and Z-loss",
-      "NeoMuon optimizer with EMA warmdown regime"
+      "BitNet b1.58 ternary QAT with base-3 packing",
+      "Partial RoPE and relu² 4× MLP widening",
+      "NeoMuon + EMA warmdown training regime"
     ]
   },
   "compatibility": {
