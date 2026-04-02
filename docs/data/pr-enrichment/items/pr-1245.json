@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-02T02:57:27.679Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1245,
+    "title": "[Non-Record] Hymba-8L: Hybrid SSM + Sliding Window Attention with 32K Context (1.1470 BPB)",
+    "state": "open",
+    "updatedAt": "2026-04-02T02:30:36Z",
+    "headSha": "39ec0ae36aae516d4ba378d62e43d9c9bb2e6c9d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1245",
+    "authorLogin": "mkenney2"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-01-hymba_ssm4_8L_swa1024/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Hybrid Hymba uses parallel Mamba SSM + SWA-1024 with untied embeddings, tight regularization, and extended warmdown/TTT to train 32K contexts.",
+    "tags": [
+      "architecture",
+      "attention",
+      "training-schedule",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Parallel Mamba SSM and SWA-1024 per layer",
+      "Untied embeddings with high WD and int8 quantization",
+      "Extended cosine warmdown plus 25-epoch TTT"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,21 +1,69 @@
 {
-  "generatedAt": "2026-04-02T02:27:21.948Z",
+  "generatedAt": "2026-04-02T02:57:38.766Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 1244,
-      "title": "Add non-record unlimited-compute 11L LeakyTTT 24h local RTX 4060 Ti run",
+      "prNumber": 1246,
+      "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
       "status": "open",
-      "updatedAt": "2026-04-02T02:25:48Z",
-      "headSha": "083f860ff4aa4b5a456c13fe64e5c7ec99f398fc",
-      "generatedAt": "2026-04-02T02:27:06.436Z",
-      "summary": "Extends an 11-layer LeakyReLU^2 + Parallel Muon + XSA4 + Partial RoPE stack with layerwise LN scale, EMA, and legal score-first TTT training for 24h on one RTX 4060 Ti.",
+      "updatedAt": "2026-04-02T02:44:32Z",
+      "headSha": "27c4edd4007e3b5f7bb873e98b5b9d4365502813",
+      "generatedAt": "2026-04-02T02:57:20.697Z",
+      "summary": "Trinity ternary QAT inspired 10-layer GPT uses relu² MLP/U-Net skips, Partial RoPE, and NeoMuon/EMA to pack ~72M params under 16MB.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "optimizer",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1246.json"
+    },
+    {
+      "prNumber": 1245,
+      "title": "[Non-Record] Hymba-8L: Hybrid SSM + Sliding Window Attention with 32K Context (1.1470 BPB)",
+      "status": "open",
+      "updatedAt": "2026-04-02T02:30:36Z",
+      "headSha": "39ec0ae36aae516d4ba378d62e43d9c9bb2e6c9d",
+      "generatedAt": "2026-04-02T02:57:27.679Z",
+      "summary": "Hybrid Hymba uses parallel Mamba SSM + SWA-1024 with untied embeddings, tight regularization, and extended warmdown/TTT to train 32K contexts.",
       "tags": [
         "architecture",
+        "attention",
         "training-schedule",
-        "evaluation",
-        "non-record"
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1245.json"
+    },
+    {
+      "prNumber": 1244,
+      "title": "Non-record RTX4060Ti 11L LeakyTTT 24h local (1.1443 BPB)",
+      "status": "open",
+      "updatedAt": "2026-04-02T02:35:00Z",
+      "headSha": "083f860ff4aa4b5a456c13fe64e5c7ec99f398fc",
+      "generatedAt": "2026-04-02T02:57:33.413Z",
+      "summary": "11-layer LeakyReLU^2 + Parallel Muon with XSA4, partial RoPE, LN scale, EMA/SWA, and legal score-first TTT trained 24h at 2048 context on RTX4060Ti.",
+      "tags": [
+        "architecture",
+        "muon",
+        "attention",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -498,15 +546,15 @@
       "prNumber": 1218,
       "title": "Record: 4096-Vocab + 4.0-MLP-mult + 0.085-WD + Simplifications — val_bpb 1.09785 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T22:52:45Z",
+      "updatedAt": "2026-04-02T02:47:20Z",
       "headSha": "4421a8d90c6e653bf36e2cbc59c08691d82f46af",
-      "generatedAt": "2026-04-01T22:56:02.370Z",
-      "summary": "Simplified XSA-heavy stack adds 4096 vocab, wider MLPs with stronger decay, coprime loader, and GPTQ-aware compression.",
+      "generatedAt": "2026-04-02T02:57:38.579Z",
+      "summary": "Swapped to 4096 vocab with uniform XSA layers, stronger WD+mlp4, coprime loader plus GPTQ/Brotli and sigmoid-gated UNet skips for a streamlined larger model.",
       "tags": [
         "architecture",
+        "regularization",
         "quantization",
-        "tokenization",
-        "regularization"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,

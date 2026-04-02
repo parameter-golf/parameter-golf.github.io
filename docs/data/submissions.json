@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T02:26:58.557Z",
+  "generatedAt": "2026-04-02T02:57:13.337Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -6406,6 +6406,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon",
+        "folderPath": "records/track_10min_16mb/2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon",
+        "submissionPath": "records/track_10min_16mb/2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon/train_gpt.py"
+      },
+      "submission": {
+        "author": "deborahnelson8788726",
+        "githubId": "gHashTag",
+        "name": "gHashTag",
+        "blurb": null,
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": 0.965,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1246,
+        "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1246",
+        "authorLogin": "deborahnelson8788726",
+        "authorName": null,
+        "createdAt": "2026-04-02T02:44:32Z",
+        "updatedAt": "2026-04-02T02:44:32Z",
+        "headSha": "27c4edd4007e3b5f7bb873e98b5b9d4365502813",
+        "headRepo": "deborahnelson8788726/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/27c4edd4007e3b5f7bb873e98b5b9d4365502813/records/track_10min_16mb/2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/27c4edd4007e3b5f7bb873e98b5b9d4365502813/records/track_10min_16mb/2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/27c4edd4007e3b5f7bb873e98b5b9d4365502813/records/track_10min_16mb/2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/27c4edd4007e3b5f7bb873e98b5b9d4365502813/records/track_10min_16mb/2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/27c4edd4007e3b5f7bb873e98b5b9d4365502813/records/track_10min_16mb/2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon",
+        "pr": "https://github.com/openai/parameter-golf/pull/1246",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-26_Backoff_Entropy_Adaptive",
       "source": "pull_request",
       "status": "closed",
@@ -10159,7 +10236,7 @@
         "authorLogin": "clarkkev",
         "authorName": null,
         "createdAt": "2026-04-01T11:54:49Z",
-        "updatedAt": "2026-04-01T22:52:45Z",
+        "updatedAt": "2026-04-02T02:47:20Z",
         "headSha": "4421a8d90c6e653bf36e2cbc59c08691d82f46af",
         "headRepo": "clarkkev/parameter-golf"
       },
@@ -22785,7 +22862,7 @@
       },
       "pr": {
         "number": 1244,
-        "title": "Add non-record unlimited-compute 11L LeakyTTT 24h local RTX 4060 Ti run",
+        "title": "Non-record RTX4060Ti 11L LeakyTTT 24h local (1.1443 BPB)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -22793,7 +22870,7 @@
         "authorLogin": "monkeyKingProgrammer",
         "authorName": null,
         "createdAt": "2026-04-02T02:25:48Z",
-        "updatedAt": "2026-04-02T02:25:48Z",
+        "updatedAt": "2026-04-02T02:35:00Z",
         "headSha": "083f860ff4aa4b5a456c13fe64e5c7ec99f398fc",
         "headRepo": "monkeyKingProgrammer/parameter-golf"
       },
@@ -54302,6 +54379,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386",
         "pr": "https://github.com/openai/parameter-golf/pull/449",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-01-hymba_ssm4_8L_swa1024",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-01-hymba_ssm4_8L_swa1024",
+        "folderPath": "records/track_10min_16mb/2026-04-01-hymba_ssm4_8L_swa1024",
+        "submissionPath": "records/track_10min_16mb/2026-04-01-hymba_ssm4_8L_swa1024/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-01-hymba_ssm4_8L_swa1024/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-01-hymba_ssm4_8L_swa1024/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-01-hymba_ssm4_8L_swa1024/train_gpt.py"
+      },
+      "submission": {
+        "author": "mkenney2",
+        "githubId": "mkenney2",
+        "name": null,
+        "blurb": null,
+        "date": "2026-04-02T02:30:36Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1245,
+        "title": "[Non-Record] Hymba-8L: Hybrid SSM + Sliding Window Attention with 32K Context (1.1470 BPB)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1245",
+        "authorLogin": "mkenney2",
+        "authorName": null,
+        "createdAt": "2026-04-02T02:30:36Z",
+        "updatedAt": "2026-04-02T02:30:36Z",
+        "headSha": "39ec0ae36aae516d4ba378d62e43d9c9bb2e6c9d",
+        "headRepo": "mkenney2/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/39ec0ae36aae516d4ba378d62e43d9c9bb2e6c9d/records/track_10min_16mb/2026-04-01-hymba_ssm4_8L_swa1024/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/39ec0ae36aae516d4ba378d62e43d9c9bb2e6c9d/records/track_10min_16mb/2026-04-01-hymba_ssm4_8L_swa1024/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/39ec0ae36aae516d4ba378d62e43d9c9bb2e6c9d/records/track_10min_16mb/2026-04-01-hymba_ssm4_8L_swa1024/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/39ec0ae36aae516d4ba378d62e43d9c9bb2e6c9d/records/track_10min_16mb/2026-04-01-hymba_ssm4_8L_swa1024/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/39ec0ae36aae516d4ba378d62e43d9c9bb2e6c9d/records/track_10min_16mb/2026-04-01-hymba_ssm4_8L_swa1024",
+        "pr": "https://github.com/openai/parameter-golf/pull/1245",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

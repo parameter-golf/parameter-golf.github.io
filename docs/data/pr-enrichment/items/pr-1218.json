@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-01T22:56:02.370Z",
+  "generatedAt": "2026-04-02T02:57:38.579Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1218,
     "title": "Record: 4096-Vocab + 4.0-MLP-mult + 0.085-WD + Simplifications — val_bpb 1.09785 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-01T22:52:45Z",
+    "updatedAt": "2026-04-02T02:47:20Z",
     "headSha": "4421a8d90c6e653bf36e2cbc59c08691d82f46af",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1218",
     "authorLogin": "clarkkev"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Simplified XSA-heavy stack adds 4096 vocab, wider MLPs with stronger decay, coprime loader, and GPTQ-aware compression.",
+    "summary": "Swapped to 4096 vocab with uniform XSA layers, stronger WD+mlp4, coprime loader plus GPTQ/Brotli and sigmoid-gated UNet skips for a streamlined larger model.",
     "tags": [
       "architecture",
+      "regularization",
       "quantization",
-      "tokenization",
-      "regularization"
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Wider MLPs with higher Muon/embedding weight decay plus lower LR",
-      "4096-size SentencePiece tokenizer combined with coprime-stride data loading",
-      "GPTQ Hessian-aware quantization with byte-shuffle and brotli compression"
+      "Higher weight decay with wider MLPs and reduced LR to keep bigger weights compressible",
+      "Coprime-stride loader and GPTQ Hessian-aware quantization with byte-shuffle+ Brotli compression",
+      "Simplified architecture (no gated attention/value residuals) with sigmoid-gated UNet skips and XSA in all layers"
     ]
   },
   "compatibility": {

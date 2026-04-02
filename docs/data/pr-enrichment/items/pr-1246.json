@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-02T02:57:20.697Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1246,
+    "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
+    "state": "open",
+    "updatedAt": "2026-04-02T02:44:32Z",
+    "headSha": "27c4edd4007e3b5f7bb873e98b5b9d4365502813",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1246",
+    "authorLogin": "deborahnelson8788726"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-01_Trinity_Ternary_ReluSq_UNet_NeoMuon/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Trinity ternary QAT inspired 10-layer GPT uses relu² MLP/U-Net skips, Partial RoPE, and NeoMuon/EMA to pack ~72M params under 16MB.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "optimizer",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "BitNet b1.58 ternary QAT with absmean scaling and base-3 packing",
+      "relu² MLP4x + learned U-Net skips with Partial RoPE",
+      "NeoMuon optimizer with EMA and warmdown schedule"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
