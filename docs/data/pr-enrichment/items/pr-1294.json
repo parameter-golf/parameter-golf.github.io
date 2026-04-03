@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-03T10:08:58.230Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1294,
+    "title": "Submission/random linear maps lora",
+    "state": "closed",
+    "updatedAt": "2026-04-03T10:08:30Z",
+    "headSha": "77cec218435a8e89988eeb01687d85ae7434cfc8",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1294",
+    "authorLogin": "austinluk"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-03_RandomLinearMaps_LoRA_Adapters/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Train LoRA adapters atop a deterministic random-weight transformer so the frozen 70M backbone costs no storage while adapters fit within 16MB.",
+    "tags": [
+      "architecture",
+      "regularization",
+      "muon",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Deterministic random-weight backbone with trainable LoRA adapters",
+      "Muon optimizer for adapters, Adam for embeddings/norms",
+      "Serialize only adapters plus seed, regenerate backbone at load"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

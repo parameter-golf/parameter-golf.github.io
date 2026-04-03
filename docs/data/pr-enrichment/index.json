@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-03T09:38:36.777Z",
+  "generatedAt": "2026-04-03T10:09:02.290Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1294,
+      "title": "Submission/random linear maps lora",
+      "status": "closed",
+      "updatedAt": "2026-04-03T10:08:30Z",
+      "headSha": "77cec218435a8e89988eeb01687d85ae7434cfc8",
+      "generatedAt": "2026-04-03T10:08:58.230Z",
+      "summary": "Train LoRA adapters atop a deterministic random-weight transformer so the frozen 70M backbone costs no storage while adapters fit within 16MB.",
+      "tags": [
+        "architecture",
+        "regularization",
+        "muon",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1294.json"
+    },
     {
       "prNumber": 1293,
       "title": "Non-record: Universal Transformer with Adaptive Computation Time",
@@ -78,14 +102,14 @@
       "prNumber": 1289,
       "title": "Record: PROTEUS v1.6 — Scylla + Parallel Residuals + Depth Recurrence + Legal TTT — val_bpb 1.0819 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T08:09:16Z",
+      "updatedAt": "2026-04-03T10:04:54Z",
       "headSha": "302f714bebadaf8727f448690f0e138bf3da9b8f",
-      "generatedAt": "2026-04-03T08:38:39.491Z",
-      "summary": "Scylla retokenized base uses parallel residuals plus depth recurrence with learnable lane blending and sensitivity-driven mixed INT5/INT6 quantization.",
+      "generatedAt": "2026-04-03T10:09:02.085Z",
+      "summary": "Integrates parallel residuals, depth recurrence, and legal TTT with mixed INT5/INT6 quantization plus learnable lane merging and Scylla retokenization.",
       "tags": [
         "quantization",
         "architecture",
-        "attention"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
