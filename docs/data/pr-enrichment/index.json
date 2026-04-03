@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T06:08:38.356Z",
+  "generatedAt": "2026-04-03T07:08:17.280Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -358,23 +358,23 @@
       "prNumber": 1269,
       "title": "[Submission] Jtss-ux - 1.1301 BPB (10min_16mb)",
       "status": "open",
-      "updatedAt": "2026-04-02T22:50:56Z",
-      "headSha": "8a834841c232f9d105f180468837c3d3c25f3615",
-      "generatedAt": "2026-04-02T23:05:49.259Z",
-      "summary": "Combines LeakyReLU(0.5)² MLPs with Parameter Banking + Parallel Muon optimization and legal score-first TTT chunks.",
+      "updatedAt": "2026-04-03T06:59:56Z",
+      "headSha": "9f65f81822350a6b36ab57071f8f973783e6ce87",
+      "generatedAt": "2026-04-03T07:08:17.098Z",
+      "summary": "LeakyReLU(0.5)² MLP with Parameter Banking + Parallel Muon optimizer plus legal score-first chunked TTT on validation tokens.",
       "tags": [
+        "val-only",
         "architecture",
         "optimizer",
-        "training-schedule",
-        "muon"
+        "training-schedule"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-1269.json"
     },
