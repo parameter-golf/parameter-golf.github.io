@@ -1,43 +1,43 @@
 {
-  "generatedAt": "2026-04-03T21:43:11.971Z",
+  "generatedAt": "2026-04-03T22:43:37.307Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 675,
-    "title": "Non-record: LeakyReLU² + LAWA + Ramping WD + Val Training (val_bpb=1.2302, 1xH100)",
+    "title": "Record: Hypergradient SLOT-24 — val_bpb 0.7625 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-03T21:24:41Z",
-    "headSha": "10dfec293b4101ea6d43242c6ddc9251c031a61e",
+    "updatedAt": "2026-04-03T22:40:46Z",
+    "headSha": "fab13bf2e277eafd62e292877ebb60805fca6659",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/675",
     "authorLogin": "ChideraIbe123"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_10min_16mb/2026-04-03_HypergradientSLOT_0.7625/README.md",
       "records/track_non_record_16mb/2026-03-24_LeakyReLU2_LAWA_RampingWD_ValTrain_1xH100/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "LeakyReLU² MLPs with LAWA averaging and ramping WD, trained directly on the validation shard, squeeze BPB on 1xH100.",
+    "summary": "Hypergradient descent replaces SLOT's fixed cosine LR schedule so each evaluation step adapts its learning rate via gradient alignment.",
     "tags": [
-      "val-only",
+      "optimizer",
+      "evaluation",
       "training-schedule",
-      "architecture",
-      "compression"
+      "non-record"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "The run trains on the validation shard under the allowed val-only regime to maximize BPB performance.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "LeakyReLU² MLP activations",
-      "LAWA checkpoint averaging",
-      "Ramping WD with validation-set tuning"
+      "Hypergradient lr adaptation replacing the fixed cosine SLOT schedule",
+      "Score-first SLOT evaluation with frozen hidden states"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-03T22:13:05.807Z",
+  "generatedAt": "2026-04-03T22:43:37.403Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1316,
+      "title": "Full-Depth MLP Megakernel + Fused Attention Preprocessing (non-record)",
+      "status": "open",
+      "updatedAt": "2026-04-03T22:38:29Z",
+      "headSha": "b6a76b33a3fad706686d0577736d3b9397395fe7",
+      "generatedAt": "2026-04-03T22:43:27.375Z",
+      "summary": "Tile-engine inspired Triton kernels keep the 1536-dim MLP register-resident while fusing QK RMSNorm+RoPE+q_gain to shrink prep memory.",
+      "tags": [
+        "architecture",
+        "attention",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1316.json"
+    },
     {
       "prNumber": 1315,
       "title": "[non-record track] BankLinear: cross-layer shared weight bank",
@@ -5680,16 +5703,16 @@
     },
     {
       "prNumber": 979,
-      "title": "Record: 1.1387 BPB — 11L LeakyReLU² + Early QAT@0.5 + GPTQ-lite + EMA",
+      "title": "Leaderboard: 1.1387 BPB — 11L LeakyReLU² + Early QAT@0.5 + GPTQ-lite + EMA",
       "status": "open",
-      "updatedAt": "2026-03-31T13:48:28Z",
+      "updatedAt": "2026-04-03T22:38:19Z",
       "headSha": "0f2d8a620946bcf6609f3d7b9ebe57e5cf22a875",
-      "generatedAt": "2026-03-31T14:13:52.235Z",
-      "summary": "11-layer 512d transformer couples Muon+AdamW with EMA and early STE QAT at LR scale 0.5 plus GPTQ-lite per-row int6/8 quantization before sliding eval.",
+      "generatedAt": "2026-04-03T22:43:32.109Z",
+      "summary": "11L 512d Transformer pairs LeakyReLU² MLPs, EMA/GPTQ-lite export, and early LR-scale-0.5 int6 QAT to shrink the quant gap before sliding eval.",
       "tags": [
         "quantization",
-        "optimizer",
-        "evaluation"
+        "architecture",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -10324,25 +10347,25 @@
     },
     {
       "prNumber": 675,
-      "title": "Non-record: LeakyReLU² + LAWA + Ramping WD + Val Training (val_bpb=1.2302, 1xH100)",
+      "title": "Record: Hypergradient SLOT-24 — val_bpb 0.7625 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T21:24:41Z",
-      "headSha": "10dfec293b4101ea6d43242c6ddc9251c031a61e",
-      "generatedAt": "2026-04-03T21:43:11.971Z",
-      "summary": "LeakyReLU² MLPs with LAWA averaging and ramping WD, trained directly on the validation shard, squeeze BPB on 1xH100.",
+      "updatedAt": "2026-04-03T22:40:46Z",
+      "headSha": "fab13bf2e277eafd62e292877ebb60805fca6659",
+      "generatedAt": "2026-04-03T22:43:37.307Z",
+      "summary": "Hypergradient descent replaces SLOT's fixed cosine LR schedule so each evaluation step adapts its learning rate via gradient alignment.",
       "tags": [
-        "val-only",
+        "optimizer",
+        "evaluation",
         "training-schedule",
-        "architecture",
-        "compression"
+        "non-record"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-675.json"
     },

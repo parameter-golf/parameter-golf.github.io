@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-03T22:43:27.375Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1316,
+    "title": "Full-Depth MLP Megakernel + Fused Attention Preprocessing (non-record)",
+    "state": "open",
+    "updatedAt": "2026-04-03T22:38:29Z",
+    "headSha": "b6a76b33a3fad706686d0577736d3b9397395fe7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1316",
+    "authorLogin": "AR6420"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-03_MegakernelFusion_TileEngine/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Tile-engine inspired Triton kernels keep the 1536-dim MLP register-resident while fusing QK RMSNorm+RoPE+q_gain to shrink prep memory.",
+    "tags": [
+      "architecture",
+      "attention",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "full-depth MLP megakernel with tiled register accumulation",
+      "fused attention preprocessing (RMSNorm+RoPE+q_gain)",
+      "tile-engine memory-hierarchy metaphor"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
