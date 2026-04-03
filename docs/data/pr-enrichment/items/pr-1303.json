@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-03T18:42:04.786Z",
+  "generatedAt": "2026-04-03T21:43:00.191Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1303,
     "title": "Record: SLOT + QK-Gain 4.0 + XSA-11 — val_bpb 0.9462 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-03T18:19:43Z",
+    "updatedAt": "2026-04-03T21:41:13Z",
     "headSha": "692707359e43d83c5041b11846c2edb28b6be7d0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1303",
     "authorLogin": "anthony-maio"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Extends VRL+LeakyReLU2 base with QK-Gain 4.0, full-layer XSA, and eval-time per-sample SLOT delta/logit bias tuning over sliding windows.",
+    "summary": "VRL/LeakyReLU base with 11-layer XSA applies per-head QK-Gain scaling and SLOT deltas to refine sliding-window outputs.",
     "tags": [
       "architecture",
       "attention",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Full-layer XSA atop VRL+LeakyReLU2 base",
-      "QK-Gain 4.0 per-head query scaling",
-      "Eval-time SLOT per-sample delta+logit bias tuning"
+      "Per-head QK-Gain 4.0 on 11-layer XSA VRL backbone",
+      "SLOT-16 per-sequence hidden delta and logit bias tuned via 16-step AdamW",
+      "Scored-position mask and stride-64 sliding eval to keep SLOT within budget"
     ]
   },
   "compatibility": {

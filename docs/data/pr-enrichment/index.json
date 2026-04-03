@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T21:12:26.819Z",
+  "generatedAt": "2026-04-03T21:43:12.060Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -239,10 +239,10 @@
       "prNumber": 1303,
       "title": "Record: SLOT + QK-Gain 4.0 + XSA-11 — val_bpb 0.9462 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T18:19:43Z",
+      "updatedAt": "2026-04-03T21:41:13Z",
       "headSha": "692707359e43d83c5041b11846c2edb28b6be7d0",
-      "generatedAt": "2026-04-03T18:42:04.786Z",
-      "summary": "Extends VRL+LeakyReLU2 base with QK-Gain 4.0, full-layer XSA, and eval-time per-sample SLOT delta/logit bias tuning over sliding windows.",
+      "generatedAt": "2026-04-03T21:43:00.191Z",
+      "summary": "VRL/LeakyReLU base with 11-layer XSA applies per-head QK-Gain scaling and SLOT deltas to refine sliding-window outputs.",
       "tags": [
         "architecture",
         "attention",
@@ -8196,14 +8196,14 @@
     {
       "prNumber": 812,
       "title": "[non-record track] BankLinear: cross-layer shared weight bank with learned + random mixtures",
-      "status": "open",
-      "updatedAt": "2026-03-27T01:19:04Z",
+      "status": "closed",
+      "updatedAt": "2026-04-03T21:38:08Z",
       "headSha": "2e8b9633af7846ecb6d69d56fa8166cbd58c2287",
-      "generatedAt": "2026-03-27T01:44:20.836Z",
-      "summary": "BankLinear builds QKV weights by mixing layer-specific coefficients over a shared learned + random bank, freeing parameters to enlarge the MLP.",
+      "generatedAt": "2026-04-03T21:43:05.198Z",
+      "summary": "BankLinear builds QKV weights by mixing shared learned and random basis banks, letting layers reuse parameters while retaining per-layer specialization.",
       "tags": [
         "architecture",
-        "attention",
+        "compression",
         "non-record"
       ],
       "flags": {
@@ -10326,15 +10326,15 @@
       "prNumber": 675,
       "title": "Non-record: LeakyReLU² + LAWA + Ramping WD + Val Training (val_bpb=1.2302, 1xH100)",
       "status": "open",
-      "updatedAt": "2026-04-03T16:58:43Z",
-      "headSha": "0e998345c8e96f042a7f94b7e367743c9f23376d",
-      "generatedAt": "2026-04-03T17:10:32.584Z",
-      "summary": "10-layer model with LeakyReLU(0.5)², LAWA checkpoint averaging, ramping WD, val-set training, and lzma compression for compact quantized runs.",
+      "updatedAt": "2026-04-03T21:24:41Z",
+      "headSha": "10dfec293b4101ea6d43242c6ddc9251c031a61e",
+      "generatedAt": "2026-04-03T21:43:11.971Z",
+      "summary": "LeakyReLU² MLPs with LAWA averaging and ramping WD, trained directly on the validation shard, squeeze BPB on 1xH100.",
       "tags": [
         "val-only",
-        "compression",
         "training-schedule",
-        "non-record"
+        "architecture",
+        "compression"
       ],
       "flags": {
         "usesValOnly": true,

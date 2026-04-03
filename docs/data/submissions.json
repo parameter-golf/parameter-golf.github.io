@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T21:12:17.560Z",
+  "generatedAt": "2026-04-03T21:42:53.430Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -41064,7 +41064,7 @@
     {
       "id": "record-records-track_non_record_16mb-2026-03-18_BankLinear",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "non-record",
       "track": {
         "path": "records/track_non_record_16mb",
@@ -41112,14 +41112,14 @@
       "pr": {
         "number": 812,
         "title": "[non-record track] BankLinear: cross-layer shared weight bank with learned + random mixtures",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/812",
         "authorLogin": "andrewmouldon",
         "authorName": null,
         "createdAt": "2026-03-26T05:02:51Z",
-        "updatedAt": "2026-03-27T01:19:04Z",
+        "updatedAt": "2026-04-03T21:38:08Z",
         "headSha": "2e8b9633af7846ecb6d69d56fa8166cbd58c2287",
         "headRepo": "andrewmouldon/parameter-golf"
       },
@@ -41966,16 +41966,16 @@
         "authorLogin": "ChideraIbe123",
         "authorName": null,
         "createdAt": "2026-03-25T03:58:35Z",
-        "updatedAt": "2026-04-03T16:58:43Z",
-        "headSha": "0e998345c8e96f042a7f94b7e367743c9f23376d",
+        "updatedAt": "2026-04-03T21:24:41Z",
+        "headSha": "10dfec293b4101ea6d43242c6ddc9251c031a61e",
         "headRepo": "ChideraIbe123/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0e998345c8e96f042a7f94b7e367743c9f23376d/records/track_non_record_16mb/2026-03-24_LeakyReLU2_LAWA_RampingWD_ValTrain_1xH100/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/0e998345c8e96f042a7f94b7e367743c9f23376d/records/track_non_record_16mb/2026-03-24_LeakyReLU2_LAWA_RampingWD_ValTrain_1xH100/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/0e998345c8e96f042a7f94b7e367743c9f23376d/records/track_non_record_16mb/2026-03-24_LeakyReLU2_LAWA_RampingWD_ValTrain_1xH100/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/0e998345c8e96f042a7f94b7e367743c9f23376d/records/track_non_record_16mb/2026-03-24_LeakyReLU2_LAWA_RampingWD_ValTrain_1xH100/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/0e998345c8e96f042a7f94b7e367743c9f23376d/records/track_non_record_16mb/2026-03-24_LeakyReLU2_LAWA_RampingWD_ValTrain_1xH100",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/10dfec293b4101ea6d43242c6ddc9251c031a61e/records/track_non_record_16mb/2026-03-24_LeakyReLU2_LAWA_RampingWD_ValTrain_1xH100/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/10dfec293b4101ea6d43242c6ddc9251c031a61e/records/track_non_record_16mb/2026-03-24_LeakyReLU2_LAWA_RampingWD_ValTrain_1xH100/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/10dfec293b4101ea6d43242c6ddc9251c031a61e/records/track_non_record_16mb/2026-03-24_LeakyReLU2_LAWA_RampingWD_ValTrain_1xH100/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/10dfec293b4101ea6d43242c6ddc9251c031a61e/records/track_non_record_16mb/2026-03-24_LeakyReLU2_LAWA_RampingWD_ValTrain_1xH100/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/10dfec293b4101ea6d43242c6ddc9251c031a61e/records/track_non_record_16mb/2026-03-24_LeakyReLU2_LAWA_RampingWD_ValTrain_1xH100",
         "pr": "https://github.com/openai/parameter-golf/pull/675",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -58218,7 +58218,7 @@
         "authorLogin": "anthony-maio",
         "authorName": null,
         "createdAt": "2026-04-03T14:38:28Z",
-        "updatedAt": "2026-04-03T18:19:43Z",
+        "updatedAt": "2026-04-03T21:41:13Z",
         "headSha": "692707359e43d83c5041b11846c2edb28b6be7d0",
         "headRepo": "anthony-maio/parameter-golf"
       },

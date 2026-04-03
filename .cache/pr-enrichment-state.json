@@ -2,7 +2,7 @@
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
-  "generatedAt": "2026-04-03T21:12:26.819Z",
+  "generatedAt": "2026-04-03T21:43:12.060Z",
   "prs": {
     "6": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:11373420c1f50e6a83599fb25bb73f38a6555cb7:closed:2026-03-18T18:34:32Z",
@@ -2693,10 +2693,10 @@
       "headSha": "4e465ee7c8c8c3adbfa9c2db9631bdd15b68a791"
     },
     "675": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:0e998345c8e96f042a7f94b7e367743c9f23376d:open:2026-04-03T16:58:43Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:10dfec293b4101ea6d43242c6ddc9251c031a61e:open:2026-04-03T21:24:41Z",
       "file": "items/pr-675.json",
-      "updatedAt": "2026-04-03T16:58:43Z",
-      "headSha": "0e998345c8e96f042a7f94b7e367743c9f23376d"
+      "updatedAt": "2026-04-03T21:24:41Z",
+      "headSha": "10dfec293b4101ea6d43242c6ddc9251c031a61e"
     },
     "676": {
       "signature": "2026-03-20-pr-enrichment-v2-approach-first:697f4ce12cff9a911d00417ab6b5378660cf91a6:open:2026-03-25T04:12:57Z",
@@ -3245,9 +3245,9 @@
       "headSha": "29eac0c169f84141dc53c1c3bdf0b1ee64aafdcf"
     },
     "812": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:2e8b9633af7846ecb6d69d56fa8166cbd58c2287:open:2026-03-27T01:19:04Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:2e8b9633af7846ecb6d69d56fa8166cbd58c2287:closed:2026-04-03T21:38:08Z",
       "file": "items/pr-812.json",
-      "updatedAt": "2026-03-27T01:19:04Z",
+      "updatedAt": "2026-04-03T21:38:08Z",
       "headSha": "2e8b9633af7846ecb6d69d56fa8166cbd58c2287"
     },
     "813": {
@@ -5303,9 +5303,9 @@
       "headSha": "8d1eb2335a59b3771eed68f8e0990d2026e89590"
     },
     "1303": {
-      "signature": "2026-03-20-pr-enrichment-v2-approach-first:692707359e43d83c5041b11846c2edb28b6be7d0:open:2026-04-03T18:19:43Z",
+      "signature": "2026-03-20-pr-enrichment-v2-approach-first:692707359e43d83c5041b11846c2edb28b6be7d0:open:2026-04-03T21:41:13Z",
       "file": "items/pr-1303.json",
-      "updatedAt": "2026-04-03T18:19:43Z",
+      "updatedAt": "2026-04-03T21:41:13Z",
       "headSha": "692707359e43d83c5041b11846c2edb28b6be7d0"
     },
     "1304": {
