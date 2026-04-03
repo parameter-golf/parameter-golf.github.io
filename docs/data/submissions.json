@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T10:08:53.517Z",
+  "generatedAt": "2026-04-03T10:38:53.623Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -9081,7 +9081,7 @@
         "authorLogin": "MatoTeziTanka",
         "authorName": null,
         "createdAt": "2026-04-03T07:37:15Z",
-        "updatedAt": "2026-04-03T10:04:54Z",
+        "updatedAt": "2026-04-03T10:30:49Z",
         "headSha": "302f714bebadaf8727f448690f0e138bf3da9b8f",
         "headRepo": "MatoTeziTanka/parameter-golf"
       },
@@ -57008,7 +57008,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-04-03_RandomLinearMaps_LoRA_Adapters",
       "source": "pull_request",
-      "status": "closed",
+      "status": "open",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -57054,16 +57054,16 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1294,
-        "title": "Submission/random linear maps lora",
-        "state": "closed",
+        "number": 1295,
+        "title": "[Submission] Random LinearMaps + LoRA Adapters",
+        "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1294",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1295",
         "authorLogin": "austinluk",
         "authorName": null,
-        "createdAt": "2026-04-03T10:01:32Z",
-        "updatedAt": "2026-04-03T10:08:30Z",
+        "createdAt": "2026-04-03T10:11:14Z",
+        "updatedAt": "2026-04-03T10:11:14Z",
         "headSha": "77cec218435a8e89988eeb01687d85ae7434cfc8",
         "headRepo": "austinluk/parameter-golf"
       },
@@ -57073,7 +57073,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/77cec218435a8e89988eeb01687d85ae7434cfc8/records/track_10min_16mb/2026-04-03_RandomLinearMaps_LoRA_Adapters/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/77cec218435a8e89988eeb01687d85ae7434cfc8/records/track_10min_16mb/2026-04-03_RandomLinearMaps_LoRA_Adapters/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/77cec218435a8e89988eeb01687d85ae7434cfc8/records/track_10min_16mb/2026-04-03_RandomLinearMaps_LoRA_Adapters",
-        "pr": "https://github.com/openai/parameter-golf/pull/1294",
+        "pr": "https://github.com/openai/parameter-golf/pull/1295",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

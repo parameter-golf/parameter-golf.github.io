@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-03T10:39:04.513Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1295,
+    "title": "[Submission] Random LinearMaps + LoRA Adapters",
+    "state": "open",
+    "updatedAt": "2026-04-03T10:11:14Z",
+    "headSha": "77cec218435a8e89988eeb01687d85ae7434cfc8",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1295",
+    "authorLogin": "austinluk"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-03_RandomLinearMaps_LoRA_Adapters/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Train LoRA adapters atop a frozen RNG-generated 12-layer backbone, saving only adapters and the seed so the 70M-parameter backbone costs zero artifact bytes.",
+    "tags": [
+      "architecture",
+      "compression",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "N/A",
+    "techniques": [
+      "frozen random backbone regenerated from seed",
+      "LoRA adapters trainable while base stays fixed",
+      "Int8+zlib compression applied to adapter weights"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

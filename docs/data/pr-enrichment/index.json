@@ -1,21 +1,20 @@
 {
-  "generatedAt": "2026-04-03T10:09:02.290Z",
+  "generatedAt": "2026-04-03T10:39:09.746Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 1294,
-      "title": "Submission/random linear maps lora",
-      "status": "closed",
-      "updatedAt": "2026-04-03T10:08:30Z",
+      "prNumber": 1295,
+      "title": "[Submission] Random LinearMaps + LoRA Adapters",
+      "status": "open",
+      "updatedAt": "2026-04-03T10:11:14Z",
       "headSha": "77cec218435a8e89988eeb01687d85ae7434cfc8",
-      "generatedAt": "2026-04-03T10:08:58.230Z",
-      "summary": "Train LoRA adapters atop a deterministic random-weight transformer so the frozen 70M backbone costs no storage while adapters fit within 16MB.",
+      "generatedAt": "2026-04-03T10:39:04.513Z",
+      "summary": "Train LoRA adapters atop a frozen RNG-generated 12-layer backbone, saving only adapters and the seed so the 70M-parameter backbone costs zero artifact bytes.",
       "tags": [
         "architecture",
-        "regularization",
-        "muon",
-        "compression"
+        "compression",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -25,7 +24,7 @@
       "compatibility": {
         "valOnlyMatchesCollector": true
       },
-      "file": "items/pr-1294.json"
+      "file": "items/pr-1295.json"
     },
     {
       "prNumber": 1293,
@@ -102,14 +101,15 @@
       "prNumber": 1289,
       "title": "Record: PROTEUS v1.6 — Scylla + Parallel Residuals + Depth Recurrence + Legal TTT — val_bpb 1.0819 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T10:04:54Z",
+      "updatedAt": "2026-04-03T10:30:49Z",
       "headSha": "302f714bebadaf8727f448690f0e138bf3da9b8f",
-      "generatedAt": "2026-04-03T10:09:02.085Z",
-      "summary": "Integrates parallel residuals, depth recurrence, and legal TTT with mixed INT5/INT6 quantization plus learnable lane merging and Scylla retokenization.",
+      "generatedAt": "2026-04-03T10:39:09.554Z",
+      "summary": "Blends learnable parallel-residual lane mixing, sensitivity-driven INT5/INT6 quantization, and legal score-first TTT/depth recurrence atop Scylla tokenization.",
       "tags": [
         "quantization",
         "architecture",
-        "optimizer"
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
