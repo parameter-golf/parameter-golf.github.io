@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-03T05:38:09.584Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1285,
+    "title": "Record: MuonEq-R + Depth Recurrence + WD=0.090 + All-Int6 GPTQ — val_bpb 1.0912 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-03T05:33:56Z",
+    "headSha": "e1cf90a3f9911001e059cd1d1ca4bde32d6677d5",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1285",
+    "authorLogin": "dexhunter"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-03_MuonEqR_DepthRecurrence_WD090_AllInt6/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "MuonEq-R with depth recurrence and stronger weight decay shrinks weights enough to allow all-66-layer int6 GPTQ quantization.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "architecture",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "MuonEq-R optimizer with row normalization",
+      "Depth recurrence on layers 4 and 5 for extra depth without new params",
+      "Higher WD creates headroom for all-66-layer int6 GPTQ"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

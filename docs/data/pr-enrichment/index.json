@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-03T04:38:19.667Z",
+  "generatedAt": "2026-04-03T05:38:16.222Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1285,
+      "title": "Record: MuonEq-R + Depth Recurrence + WD=0.090 + All-Int6 GPTQ — val_bpb 1.0912 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-03T05:33:56Z",
+      "headSha": "e1cf90a3f9911001e059cd1d1ca4bde32d6677d5",
+      "generatedAt": "2026-04-03T05:38:09.584Z",
+      "summary": "MuonEq-R with depth recurrence and stronger weight decay shrinks weights enough to allow all-66-layer int6 GPTQ quantization.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "architecture",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1285.json"
+    },
     {
       "prNumber": 1283,
       "title": "Ouroboros — 1.13727008 val_bpb (seed 444)",
@@ -10886,14 +10910,13 @@
       "prNumber": 602,
       "title": "Add non-record 4xH100 10L Int5-MLP submission",
       "status": "open",
-      "updatedAt": "2026-03-24T07:09:07Z",
+      "updatedAt": "2026-04-03T05:37:31Z",
       "headSha": "3455bb2f10d2eb8c1ecd9b0cec79efac4016b654",
-      "generatedAt": "2026-03-24T07:22:16.790Z",
-      "summary": "Rerunning the 10L Int5-MLP recipe on 4xH100 with built-in gradient accumulation, a 1200s cap, and sliding-window evaluation.",
+      "generatedAt": "2026-04-03T05:38:16.138Z",
+      "summary": "Reapplies the 10-layer Int5-MLP recipe on 4×H100 with a 1200s cap, built-in accumulation, and sliding-window stride-64 eval.",
       "tags": [
         "quantization",
-        "compression",
-        "sliding-window-eval",
+        "evaluation",
         "non-record"
       ],
       "flags": {

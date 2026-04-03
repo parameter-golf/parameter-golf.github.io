@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T05:07:57.951Z",
+  "generatedAt": "2026-04-03T05:38:00.940Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -9708,6 +9708,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/93c3ebf72a3fff3a73445c13a0738e7f9ace85de/records/track_10min_16mb/2026-04-01_scylla-tuned-ttt/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/93c3ebf72a3fff3a73445c13a0738e7f9ace85de/records/track_10min_16mb/2026-04-01_scylla-tuned-ttt",
         "pr": "https://github.com/openai/parameter-golf/pull/1242",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-03_MuonEqR_DepthRecurrence_WD090_AllInt6",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-03_MuonEqR_DepthRecurrence_WD090_AllInt6",
+        "folderPath": "records/track_10min_16mb/2026-04-03_MuonEqR_DepthRecurrence_WD090_AllInt6",
+        "submissionPath": "records/track_10min_16mb/2026-04-03_MuonEqR_DepthRecurrence_WD090_AllInt6/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-03_MuonEqR_DepthRecurrence_WD090_AllInt6/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-03_MuonEqR_DepthRecurrence_WD090_AllInt6/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-03_MuonEqR_DepthRecurrence_WD090_AllInt6/train_gpt.py"
+      },
+      "submission": {
+        "author": "dexhunter",
+        "githubId": "dexhunter",
+        "name": "Record: MuonEq-R + Depth Recurrence + WD=0.090 + All-Int6 GPTQ",
+        "blurb": "WD-quantization synergy: higher weight decay (0.090) improves compression enough to keep ALL 66 layers at int6. Combined with MuonEq-R and depth recurrence. 3-seed mean 1.0912 BPB / 2.5106 nats. No TTT, no SLOT.",
+        "date": "2026-04-03"
+      },
+      "metrics": {
+        "valBpb": 1.0912,
+        "valLoss": null,
+        "preQuantValBpb": 1.0993,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15967483,
+        "bytesCode": 21396,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1285,
+        "title": "Record: MuonEq-R + Depth Recurrence + WD=0.090 + All-Int6 GPTQ — val_bpb 1.0912 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1285",
+        "authorLogin": "dexhunter",
+        "authorName": null,
+        "createdAt": "2026-04-03T05:33:56Z",
+        "updatedAt": "2026-04-03T05:33:56Z",
+        "headSha": "e1cf90a3f9911001e059cd1d1ca4bde32d6677d5",
+        "headRepo": "dexhunter/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e1cf90a3f9911001e059cd1d1ca4bde32d6677d5/records/track_10min_16mb/2026-04-03_MuonEqR_DepthRecurrence_WD090_AllInt6/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e1cf90a3f9911001e059cd1d1ca4bde32d6677d5/records/track_10min_16mb/2026-04-03_MuonEqR_DepthRecurrence_WD090_AllInt6/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e1cf90a3f9911001e059cd1d1ca4bde32d6677d5/records/track_10min_16mb/2026-04-03_MuonEqR_DepthRecurrence_WD090_AllInt6/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e1cf90a3f9911001e059cd1d1ca4bde32d6677d5/records/track_10min_16mb/2026-04-03_MuonEqR_DepthRecurrence_WD090_AllInt6/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e1cf90a3f9911001e059cd1d1ca4bde32d6677d5/records/track_10min_16mb/2026-04-03_MuonEqR_DepthRecurrence_WD090_AllInt6",
+        "pr": "https://github.com/openai/parameter-golf/pull/1285",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -23178,7 +23255,7 @@
         "authorLogin": "ReNothingg",
         "authorName": null,
         "createdAt": "2026-03-24T07:09:07Z",
-        "updatedAt": "2026-03-24T07:09:07Z",
+        "updatedAt": "2026-04-03T05:37:31Z",
         "headSha": "3455bb2f10d2eb8c1ecd9b0cec79efac4016b654",
         "headRepo": "ReNothingg/parameter-golf"
       },
