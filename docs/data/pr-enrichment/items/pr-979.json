@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-03T22:43:32.109Z",
+  "generatedAt": "2026-04-03T23:13:34.182Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 979,
     "title": "Leaderboard: 1.1387 BPB — 11L LeakyReLU² + Early QAT@0.5 + GPTQ-lite + EMA",
     "state": "open",
-    "updatedAt": "2026-04-03T22:38:19Z",
+    "updatedAt": "2026-04-03T23:02:25Z",
     "headSha": "0f2d8a620946bcf6609f3d7b9ebe57e5cf22a875",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/979",
     "authorLogin": "0xadvait"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11L 512d Transformer pairs LeakyReLU² MLPs, EMA/GPTQ-lite export, and early LR-scale-0.5 int6 QAT to shrink the quant gap before sliding eval.",
+    "summary": "11-layer LeakyReLU² transformer pairs Muon+AdamW+EMA with GPTQ-lite and early LR-scale-0.5 int6 QAT to sharply close the quantization gap.",
     "tags": [
-      "quantization",
       "architecture",
+      "quantization",
+      "optimizer",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "- Early int6 STE QAT triggered once LR scale drops below 0.5",
-      "- LeakyReLU(0.5)² 3x MLP blocks with U-Net skips",
-      "- Per-row GPTQ-lite clip search plus EMA averaging"
+      "Early int6 STE-QAT triggered when LR scale <0.5",
+      "GPTQ-lite per-row clip search for int6/8 export",
+      "Muon+AdamW with EMA warmdown schedule"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T22:43:37.403Z",
+  "generatedAt": "2026-04-03T23:13:34.317Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -357,14 +357,14 @@
       "prNumber": 1300,
       "title": "Non-record: 1.8184 BPB Single-step Recurrent Transformer with Q-LoRA (Windows 3090)",
       "status": "open",
-      "updatedAt": "2026-04-03T17:33:09Z",
+      "updatedAt": "2026-04-03T23:10:45Z",
       "headSha": "3a10cfd929e9ba2a573b8008f9d9138259780657",
-      "generatedAt": "2026-04-03T17:41:40.069Z",
-      "summary": "Single-pass wide transformer with near-full-rank dual-Q attention replaces depth recurrence for 10-minute RTX 3090 tuning.",
+      "generatedAt": "2026-04-03T23:13:28.375Z",
+      "summary": "Single-pass wide transformer with near-full-rank dual-Q attention and expanded MLP, tuned for max throughput on 10-minute Windows RTX 3090 runs.",
       "tags": [
         "architecture",
         "attention",
-        "quantization",
+        "training-schedule",
         "non-record"
       ],
       "flags": {
@@ -5705,13 +5705,14 @@
       "prNumber": 979,
       "title": "Leaderboard: 1.1387 BPB — 11L LeakyReLU² + Early QAT@0.5 + GPTQ-lite + EMA",
       "status": "open",
-      "updatedAt": "2026-04-03T22:38:19Z",
+      "updatedAt": "2026-04-03T23:02:25Z",
       "headSha": "0f2d8a620946bcf6609f3d7b9ebe57e5cf22a875",
-      "generatedAt": "2026-04-03T22:43:32.109Z",
-      "summary": "11L 512d Transformer pairs LeakyReLU² MLPs, EMA/GPTQ-lite export, and early LR-scale-0.5 int6 QAT to shrink the quant gap before sliding eval.",
+      "generatedAt": "2026-04-03T23:13:34.182Z",
+      "summary": "11-layer LeakyReLU² transformer pairs Muon+AdamW+EMA with GPTQ-lite and early LR-scale-0.5 int6 QAT to sharply close the quantization gap.",
       "tags": [
-        "quantization",
         "architecture",
+        "quantization",
+        "optimizer",
         "training-schedule"
       ],
       "flags": {

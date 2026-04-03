@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-03T17:41:40.069Z",
+  "generatedAt": "2026-04-03T23:13:28.375Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1300,
     "title": "Non-record: 1.8184 BPB Single-step Recurrent Transformer with Q-LoRA (Windows 3090)",
     "state": "open",
-    "updatedAt": "2026-04-03T17:33:09Z",
+    "updatedAt": "2026-04-03T23:10:45Z",
     "headSha": "3a10cfd929e9ba2a573b8008f9d9138259780657",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1300",
     "authorLogin": "Ribin545"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Single-pass wide transformer with near-full-rank dual-Q attention replaces depth recurrence for 10-minute RTX 3090 tuning.",
+    "summary": "Single-pass wide transformer with near-full-rank dual-Q attention and expanded MLP, tuned for max throughput on 10-minute Windows RTX 3090 runs.",
     "tags": [
       "architecture",
       "attention",
-      "quantization",
+      "training-schedule",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Replace depth recurrence with steps=1 wide block to fit more steps in 10-minute runs",
-      "Dual-Q LoRA adapter functions as a near-full-rank second Q projection",
-      "Custom gradient scaler, loss filter, and EMA tracking stabilize tight-budget training"
+      "single-pass wide block replacing depth recurrence",
+      "dual-Q near-full-rank LoRA acting as second query projection",
+      "custom gradient scaler and loss filter for tight 10-minute RTX 3090 budget"
     ]
   },
   "compatibility": {
