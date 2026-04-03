@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T20:12:11.167Z",
+  "generatedAt": "2026-04-03T21:12:26.819Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -709,13 +709,14 @@
       "prNumber": 1278,
       "title": "WIP: Depth Recurrence — val_bpb 3.2134 (beats baseline by 0.014 BPB at 2.8x fewer params)",
       "status": "open",
-      "updatedAt": "2026-04-03T19:41:47Z",
-      "headSha": "683a6547793a245ecae0d074f25ad9a07614dd7f",
-      "generatedAt": "2026-04-03T20:12:10.979Z",
-      "summary": "Shares a few transformer blocks with learned iteration gating to loop through 20+ effective layers inside the 16MB budget.",
+      "updatedAt": "2026-04-03T20:42:21Z",
+      "headSha": "2cb6f4418bff650994f93df0ab8f8efeb8ffcdb5",
+      "generatedAt": "2026-04-03T21:12:26.631Z",
+      "summary": "Shares few transformer blocks across many iterations with per-iteration embeddings/gates and U-Net skips to reach 20+ effective layers within 16MB.",
       "tags": [
         "architecture",
-        "quantization"
+        "quantization",
+        "depth-width"
       ],
       "flags": {
         "usesValOnly": false,

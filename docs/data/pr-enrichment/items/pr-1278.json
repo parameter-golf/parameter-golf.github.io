@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-03T20:12:10.979Z",
+  "generatedAt": "2026-04-03T21:12:26.631Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1278,
     "title": "WIP: Depth Recurrence — val_bpb 3.2134 (beats baseline by 0.014 BPB at 2.8x fewer params)",
     "state": "open",
-    "updatedAt": "2026-04-03T19:41:47Z",
-    "headSha": "683a6547793a245ecae0d074f25ad9a07614dd7f",
+    "updatedAt": "2026-04-03T20:42:21Z",
+    "headSha": "2cb6f4418bff650994f93df0ab8f8efeb8ffcdb5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1278",
     "authorLogin": "GitGeeks"
   },
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Shares a few transformer blocks with learned iteration gating to loop through 20+ effective layers inside the 16MB budget.",
+    "summary": "Shares few transformer blocks across many iterations with per-iteration embeddings/gates and U-Net skips to reach 20+ effective layers within 16MB.",
     "tags": [
       "architecture",
-      "quantization"
+      "quantization",
+      "depth-width"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not val-only training; project describes weight-shared training validated on MLX plus planned throughput tests.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Weight-shared transformer blocks iterated multiple times",
-      "Learned iteration embeddings with sigmoid gating",
-      "U-Net-style skips across recurrence"
+      "Weight-shared transformer blocks iterated repeatedly",
+      "Learned iteration embeddings with sigmoid gating for conditioning",
+      "U-Net-inspired skip connections across the recurrent depth"
     ]
   },
   "compatibility": {
