@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-03T13:39:54.044Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1301,
+    "title": "Non-record: Selective Freeze on Random Linear Maps — Why Freezing Gate+Up Beats Full Freeze + LoRA",
+    "state": "open",
+    "updatedAt": "2026-04-03T13:26:52Z",
+    "headSha": "3dfd64cc584ab71b163083fff184cde242eb0c6f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1301",
+    "authorLogin": "himanshudongre"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-03_Selective_Freeze_Random_Linear_Maps/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Selective freezing of gate+up MLP projections on random linear maps keeps attention learning while shrinking artifacts, surpassing full freeze+LoRA.",
+    "tags": [
+      "architecture",
+      "regularization",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Freeze only gate+up MLP projections while learning attention and down outputs to retain relational learning",
+      "Treat frozen random projections as structural regularizer inspired by Johnson-Lindenstrauss to save artifact bytes"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

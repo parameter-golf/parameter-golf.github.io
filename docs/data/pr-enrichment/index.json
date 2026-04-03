@@ -1,16 +1,64 @@
 {
-  "generatedAt": "2026-04-03T13:09:55.970Z",
+  "generatedAt": "2026-04-03T13:40:09.553Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 1299,
+      "prNumber": 1302,
+      "title": "Record: Split-LR + N-gram Agreement + Full GPTQ — val_bpb 1.1079 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-03T13:34:01Z",
+      "headSha": "3273d7f9160aaf12e29ea0f53a3250073b84e7d3",
+      "generatedAt": "2026-04-03T13:39:50.144Z",
+      "summary": "Split-LR for early/late layers, Soft-round QAT, and full Hessian GPTQ int6 pair with online n-gram agreement boosting.",
+      "tags": [
+        "training-schedule",
+        "quantization",
+        "evaluation",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1302.json"
+    },
+    {
+      "prNumber": 1301,
+      "title": "Non-record: Selective Freeze on Random Linear Maps — Why Freezing Gate+Up Beats Full Freeze + LoRA",
+      "status": "open",
+      "updatedAt": "2026-04-03T13:26:52Z",
+      "headSha": "3dfd64cc584ab71b163083fff184cde242eb0c6f",
+      "generatedAt": "2026-04-03T13:39:54.044Z",
+      "summary": "Selective freezing of gate+up MLP projections on random linear maps keeps attention learning while shrinking artifacts, surpassing full freeze+LoRA.",
+      "tags": [
+        "architecture",
+        "regularization",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1301.json"
+    },
+    {
+      "prNumber": 1300,
       "title": "Non-record: 1.8184 BPB Single-step Recurrent Transformer with Q-LoRA (Windows 3090)",
       "status": "open",
-      "updatedAt": "2026-04-03T13:03:38Z",
-      "headSha": "e1b49a4f0bd73b21d9eb1a0e8dfdbb8984dd3ad5",
-      "generatedAt": "2026-04-03T13:09:33.142Z",
-      "summary": "Single-step recurrent tied-block transformer with per-step Q-LoRA adapters and wallclock-aware optimizer routing on Windows RTX 3090.",
+      "updatedAt": "2026-04-03T13:16:27Z",
+      "headSha": "3a10cfd929e9ba2a573b8008f9d9138259780657",
+      "generatedAt": "2026-04-03T13:39:59.901Z",
+      "summary": "Single-step tied-block recurrent transformer with per-step LoRA adapters, step embeddings, and bigram hashing tuned for 10-minute Windows 3090 runs.",
       "tags": [
         "architecture",
         "optimizer",
@@ -25,7 +73,7 @@
       "compatibility": {
         "valOnlyMatchesCollector": true
       },
-      "file": "items/pr-1299.json"
+      "file": "items/pr-1300.json"
     },
     {
       "prNumber": 1298,
@@ -403,12 +451,12 @@
     },
     {
       "prNumber": 1278,
-      "title": "WIP: Depth Recurrence via Weight-Shared Transformer Blocks",
+      "title": "WIP: Depth Recurrence — val_bpb 3.2134 (beats baseline by 0.014 BPB at 2.8x fewer params)",
       "status": "open",
-      "updatedAt": "2026-04-03T13:05:27Z",
+      "updatedAt": "2026-04-03T13:13:30Z",
       "headSha": "8ad372f3da340112668962caf0fc8eae55a6ae44",
-      "generatedAt": "2026-04-03T13:09:42.709Z",
-      "summary": "Shares transformer block weights across multiple iterations with per-iteration gating and U-Net skip control to realize deep recurrence under 16MB.",
+      "generatedAt": "2026-04-03T13:40:04.623Z",
+      "summary": "Weight-shared recurrence reuses few transformer blocks with iteration embeddings, gating, and U-Net skips to reach 20+ effective layers inside 16MB.",
       "tags": [
         "architecture",
         "depth-width"
@@ -18739,15 +18787,15 @@
     {
       "prNumber": 131,
       "title": "[WIP] add combined optimization, waiting for 8 gpu train",
-      "status": "open",
-      "updatedAt": "2026-03-19T21:20:37Z",
+      "status": "closed",
+      "updatedAt": "2026-04-03T13:24:48Z",
       "headSha": "c4f56326f8547635794b4046a484bc67b190effb",
-      "generatedAt": "2026-03-19T21:38:45.569Z",
-      "summary": "Combines SwiGLU blocks, int6 quant/Aware-training, cosine LR, and adaptive batch/stride logic with sliding-window eval for the 10min/16MB track.",
+      "generatedAt": "2026-04-03T13:40:09.535Z",
+      "summary": "Combines SwiGLU MLP, cosine LR, mixed int6/int8 quant, adaptive batch tuning, and sliding-window eval within a single train script.",
       "tags": [
         "architecture",
         "quantization",
-        "optimizer",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {

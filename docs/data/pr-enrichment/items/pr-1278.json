@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-03T13:09:42.709Z",
+  "generatedAt": "2026-04-03T13:40:04.623Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1278,
-    "title": "WIP: Depth Recurrence via Weight-Shared Transformer Blocks",
+    "title": "WIP: Depth Recurrence — val_bpb 3.2134 (beats baseline by 0.014 BPB at 2.8x fewer params)",
     "state": "open",
-    "updatedAt": "2026-04-03T13:05:27Z",
+    "updatedAt": "2026-04-03T13:13:30Z",
     "headSha": "8ad372f3da340112668962caf0fc8eae55a6ae44",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1278",
     "authorLogin": "GitGeeks"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Shares transformer block weights across multiple iterations with per-iteration gating and U-Net skip control to realize deep recurrence under 16MB.",
+    "summary": "Weight-shared recurrence reuses few transformer blocks with iteration embeddings, gating, and U-Net skips to reach 20+ effective layers inside 16MB.",
     "tags": [
       "architecture",
       "depth-width"
@@ -27,9 +27,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Weight-shared transformer recursion",
-      "Per-iteration gate & iteration embeddings",
-      "U-Net-inspired skip connections for recurrence"
+      "Weight-shared depth recurrence",
+      "Iteration embeddings with sigmoid gating",
+      "U-Net style skip connections across recurrences"
     ]
   },
   "compatibility": {

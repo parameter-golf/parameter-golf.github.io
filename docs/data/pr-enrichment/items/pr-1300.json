@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-03T13:39:59.901Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1300,
+    "title": "Non-record: 1.8184 BPB Single-step Recurrent Transformer with Q-LoRA (Windows 3090)",
+    "state": "open",
+    "updatedAt": "2026-04-03T13:16:27Z",
+    "headSha": "3a10cfd929e9ba2a573b8008f9d9138259780657",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1300",
+    "authorLogin": "Ribin545"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-01_EliteUTv22p8_12StepRecurrence_Windows3090/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Single-step tied-block recurrent transformer with per-step LoRA adapters, step embeddings, and bigram hashing tuned for 10-minute Windows 3090 runs.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Tied-block recurrent reuse",
+      "Per-step LoRA adapters and step embeddings",
+      "Bigram hash control path"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

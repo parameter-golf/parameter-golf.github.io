@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T21:38:45.569Z",
+  "generatedAt": "2026-04-03T13:40:09.535Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 131,
     "title": "[WIP] add combined optimization, waiting for 8 gpu train",
-    "state": "open",
-    "updatedAt": "2026-03-19T21:20:37Z",
+    "state": "closed",
+    "updatedAt": "2026-04-03T13:24:48Z",
     "headSha": "c4f56326f8547635794b4046a484bc67b190effb",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/131",
     "authorLogin": "Billy1900"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines SwiGLU blocks, int6 quant/Aware-training, cosine LR, and adaptive batch/stride logic with sliding-window eval for the 10min/16MB track.",
+    "summary": "Combines SwiGLU MLP, cosine LR, mixed int6/int8 quant, adaptive batch tuning, and sliding-window eval within a single train script.",
     "tags": [
       "architecture",
       "quantization",
-      "optimizer",
+      "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SwiGLU MLP with tuned Muon params",
-      "int6 mixed quantization with STE QAT option",
-      "cosine decay schedule plus sliding-window eval"
+      "SwiGLU gating MLP to boost capacity and gradient flow",
+      "Int6 Transformer quant (int8 embeddings) with optional STE QAT for robustness",
+      "Cosine LR plus adaptive batch/stride tuning alongside sliding-window evaluation"
     ]
   },
   "compatibility": {
