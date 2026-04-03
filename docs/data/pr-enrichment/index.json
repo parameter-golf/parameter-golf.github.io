@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-03T21:43:12.060Z",
+  "generatedAt": "2026-04-03T22:13:05.807Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1315,
+      "title": "[non-record track] BankLinear: cross-layer shared weight bank",
+      "status": "open",
+      "updatedAt": "2026-04-03T22:01:35Z",
+      "headSha": "2e8b9633af7846ecb6d69d56fa8166cbd58c2287",
+      "generatedAt": "2026-04-03T22:13:01.294Z",
+      "summary": "BankLinear composes each layer's QKV weights from a shared learnable bank with channel-wise modulation, replacing per-layer storage with compositional synthesis.",
+      "tags": [
+        "architecture",
+        "compression",
+        "attention",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1315.json"
+    },
     {
       "prNumber": 1313,
       "title": "Record: SLOT-24 Aggressive — val_bpb 0.8637 (3-seed mean)",
@@ -709,14 +733,13 @@
       "prNumber": 1278,
       "title": "WIP: Depth Recurrence — val_bpb 3.2134 (beats baseline by 0.014 BPB at 2.8x fewer params)",
       "status": "open",
-      "updatedAt": "2026-04-03T20:42:21Z",
-      "headSha": "2cb6f4418bff650994f93df0ab8f8efeb8ffcdb5",
-      "generatedAt": "2026-04-03T21:12:26.631Z",
-      "summary": "Shares few transformer blocks across many iterations with per-iteration embeddings/gates and U-Net skips to reach 20+ effective layers within 16MB.",
+      "updatedAt": "2026-04-03T22:06:59Z",
+      "headSha": "b04959c9be3bcc6906330cce8feb65beb1713e3c",
+      "generatedAt": "2026-04-03T22:13:05.625Z",
+      "summary": "Weight-shared transformer blocks iterate multiple times with learned iteration conditioning and U-Net skips to reach 20+ effective layers under 16MB.",
       "tags": [
         "architecture",
-        "quantization",
-        "depth-width"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -8192,29 +8215,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-813.json"
-    },
-    {
-      "prNumber": 812,
-      "title": "[non-record track] BankLinear: cross-layer shared weight bank with learned + random mixtures",
-      "status": "closed",
-      "updatedAt": "2026-04-03T21:38:08Z",
-      "headSha": "2e8b9633af7846ecb6d69d56fa8166cbd58c2287",
-      "generatedAt": "2026-04-03T21:43:05.198Z",
-      "summary": "BankLinear builds QKV weights by mixing shared learned and random basis banks, letting layers reuse parameters while retaining per-layer specialization.",
-      "tags": [
-        "architecture",
-        "compression",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-812.json"
     },
     {
       "prNumber": 811,
