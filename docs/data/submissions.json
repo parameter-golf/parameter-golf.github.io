@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T05:46:30.170Z",
+  "generatedAt": "2026-04-04T06:16:26.496Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -58229,6 +58229,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/ca37a33176abcdb1afc9681ca28892c916b00169/records/track_10min_16mb/2026-04-04_SLOT28_VRL_QKGain4_XSA11/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/ca37a33176abcdb1afc9681ca28892c916b00169/records/track_10min_16mb/2026-04-04_SLOT28_VRL_QKGain4_XSA11",
         "pr": "https://github.com/openai/parameter-golf/pull/1324",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-04_PolySoftcap_ZLoss_YaRN_Zstd22_Stride16",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-04_PolySoftcap_ZLoss_YaRN_Zstd22_Stride16",
+        "folderPath": "records/track_10min_16mb/2026-04-04_PolySoftcap_ZLoss_YaRN_Zstd22_Stride16",
+        "submissionPath": "records/track_10min_16mb/2026-04-04_PolySoftcap_ZLoss_YaRN_Zstd22_Stride16/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-04_PolySoftcap_ZLoss_YaRN_Zstd22_Stride16/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-04_PolySoftcap_ZLoss_YaRN_Zstd22_Stride16/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-04_PolySoftcap_ZLoss_YaRN_Zstd22_Stride16/train_gpt.py"
+      },
+      "submission": {
+        "author": "Monisha Kollipara",
+        "githubId": "monishakollipara13",
+        "name": "Poly5 Softcap + Z-Loss + YaRN + Zstd-22 + Stride-16 (on SOTA #1 stack)",
+        "blurb": "Six orthogonal improvements on PR #549 (LeakyReLU + TTT + Parallel Muon) stack: (1) Polynomial degree-5 softcap replacing tanh for sharper gradients, (2) Z-loss regularization (1e-4 * logsumexp^2) anchoring logits near zero, (3) YaRN positional encoding for better long-context handling, (4) zstd-22 compression replacing LZMA-6 (~50% smaller artifacts), (5) Sliding eval stride=16 (vs 64), (6) FlashAttention fallback for non-Hopper GPUs. Smoke-tested on 1xH100 (Modal). Awaiting 8xH100 verification.",
+        "date": "2026-04-04"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1325,
+        "title": "Record Submission: Poly5 Softcap + Z-Loss + YaRN + Zstd-22 + Stride-16 (on PR #549 stack)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1325",
+        "authorLogin": "monisha-max",
+        "authorName": null,
+        "createdAt": "2026-04-04T06:14:58Z",
+        "updatedAt": "2026-04-04T06:14:58Z",
+        "headSha": "70546cc3035577ab6c8f4b0ad836a4add7e00a94",
+        "headRepo": "monisha-max/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/70546cc3035577ab6c8f4b0ad836a4add7e00a94/records/track_10min_16mb/2026-04-04_PolySoftcap_ZLoss_YaRN_Zstd22_Stride16/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/70546cc3035577ab6c8f4b0ad836a4add7e00a94/records/track_10min_16mb/2026-04-04_PolySoftcap_ZLoss_YaRN_Zstd22_Stride16/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/70546cc3035577ab6c8f4b0ad836a4add7e00a94/records/track_10min_16mb/2026-04-04_PolySoftcap_ZLoss_YaRN_Zstd22_Stride16/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/70546cc3035577ab6c8f4b0ad836a4add7e00a94/records/track_10min_16mb/2026-04-04_PolySoftcap_ZLoss_YaRN_Zstd22_Stride16/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/70546cc3035577ab6c8f4b0ad836a4add7e00a94/records/track_10min_16mb/2026-04-04_PolySoftcap_ZLoss_YaRN_Zstd22_Stride16",
+        "pr": "https://github.com/openai/parameter-golf/pull/1325",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

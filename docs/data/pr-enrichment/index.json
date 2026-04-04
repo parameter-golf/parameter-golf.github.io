@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-04T05:46:42.621Z",
+  "generatedAt": "2026-04-04T06:16:36.435Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1325,
+      "title": "Record Submission: Poly5 Softcap + Z-Loss + YaRN + Zstd-22 + Stride-16 (on PR #549 stack)",
+      "status": "open",
+      "updatedAt": "2026-04-04T06:14:58Z",
+      "headSha": "70546cc3035577ab6c8f4b0ad836a4add7e00a94",
+      "generatedAt": "2026-04-04T06:16:36.236Z",
+      "summary": "Combines poly5 softcap, Z-loss, YaRN RoPE, stride-16 sliding eval, and zstd-22 compression atop the PR #549 stack.",
+      "tags": [
+        "sliding-window-eval",
+        "compression",
+        "regularization",
+        "positional-encoding"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1325.json"
+    },
     {
       "prNumber": 1324,
       "title": "Record: val_bpb 0.8275 (3-seed mean) — SLOT-28 + VRL + QK-Gain 4.0 + XSA-11",

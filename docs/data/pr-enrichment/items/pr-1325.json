@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-04T06:16:36.236Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1325,
+    "title": "Record Submission: Poly5 Softcap + Z-Loss + YaRN + Zstd-22 + Stride-16 (on PR #549 stack)",
+    "state": "open",
+    "updatedAt": "2026-04-04T06:14:58Z",
+    "headSha": "70546cc3035577ab6c8f4b0ad836a4add7e00a94",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1325",
+    "authorLogin": "monisha-max"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-04_PolySoftcap_ZLoss_YaRN_Zstd22_Stride16/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines poly5 softcap, Z-loss, YaRN RoPE, stride-16 sliding eval, and zstd-22 compression atop the PR #549 stack.",
+    "tags": [
+      "sliding-window-eval",
+      "compression",
+      "regularization",
+      "positional-encoding"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "poly5 softcap and Z-loss logit regularizer",
+      "YaRN RoPE tuned for 2048 tokens",
+      "stride-16 sliding eval paired with zstd-22 compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
