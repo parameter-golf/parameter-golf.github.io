@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-04T08:48:01.467Z",
+  "generatedAt": "2026-04-04T09:17:54.816Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1333,
+      "title": "Record: SP4096 + Depth Recurrence + Parallel Residuals + Causal SLOT-16 — val_bpb 1.0766 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-04T09:12:52Z",
+      "headSha": "7ed3f08e61281dbab846f6215fbf5005e8a8379d",
+      "generatedAt": "2026-04-04T09:17:54.621Z",
+      "summary": "Combines deep recurrent + parallel residual architecture with MuonEq-R and GPTQ int6 training, then evaluates via causal SLOT delta adaptation.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1333.json"
+    },
     {
       "prNumber": 1332,
       "title": "Record: SP4096 + Polar Express NS + MuonEq-R + WD=0.090 — 1.0959 BPB (3-seed mean)",

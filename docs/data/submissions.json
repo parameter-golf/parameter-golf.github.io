@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T08:47:49.366Z",
+  "generatedAt": "2026-04-04T09:17:44.825Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -9092,6 +9092,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/27b39c622da3a7f289ec0f81557e0f60455c4eb9/records/track_10min_16mb/2026-03-27_ImprovedTTT_HedgeMixer_PerLayerLR_1.0722/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/27b39c622da3a7f289ec0f81557e0f60455c4eb9/records/track_10min_16mb/2026-03-27_ImprovedTTT_HedgeMixer_PerLayerLR_1.0722",
         "pr": "https://github.com/openai/parameter-golf/pull/953",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-04_SP4096_DepthRecurrence_ParallelResid_CausalSLOT",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-04_SP4096_DepthRecurrence_ParallelResid_CausalSLOT",
+        "folderPath": "records/track_10min_16mb/2026-04-04_SP4096_DepthRecurrence_ParallelResid_CausalSLOT",
+        "submissionPath": "records/track_10min_16mb/2026-04-04_SP4096_DepthRecurrence_ParallelResid_CausalSLOT/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-04_SP4096_DepthRecurrence_ParallelResid_CausalSLOT/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-04_SP4096_DepthRecurrence_ParallelResid_CausalSLOT/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-04_SP4096_DepthRecurrence_ParallelResid_CausalSLOT/train_gpt.py"
+      },
+      "submission": {
+        "author": "aryanbhosale",
+        "githubId": "aryanbhosale",
+        "name": "SP4096 + Depth Recurrence + Parallel Residuals + MuonEq-R + Causal SLOT-16",
+        "blurb": null,
+        "date": "2026-04-04"
+      },
+      "metrics": {
+        "valBpb": 1.0766079,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1333,
+        "title": "Record: SP4096 + Depth Recurrence + Parallel Residuals + Causal SLOT-16 — val_bpb 1.0766 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1333",
+        "authorLogin": "aryanbhosale",
+        "authorName": null,
+        "createdAt": "2026-04-04T09:12:52Z",
+        "updatedAt": "2026-04-04T09:12:52Z",
+        "headSha": "7ed3f08e61281dbab846f6215fbf5005e8a8379d",
+        "headRepo": "aryanbhosale/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7ed3f08e61281dbab846f6215fbf5005e8a8379d/records/track_10min_16mb/2026-04-04_SP4096_DepthRecurrence_ParallelResid_CausalSLOT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/7ed3f08e61281dbab846f6215fbf5005e8a8379d/records/track_10min_16mb/2026-04-04_SP4096_DepthRecurrence_ParallelResid_CausalSLOT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/7ed3f08e61281dbab846f6215fbf5005e8a8379d/records/track_10min_16mb/2026-04-04_SP4096_DepthRecurrence_ParallelResid_CausalSLOT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/7ed3f08e61281dbab846f6215fbf5005e8a8379d/records/track_10min_16mb/2026-04-04_SP4096_DepthRecurrence_ParallelResid_CausalSLOT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/7ed3f08e61281dbab846f6215fbf5005e8a8379d/records/track_10min_16mb/2026-04-04_SP4096_DepthRecurrence_ParallelResid_CausalSLOT",
+        "pr": "https://github.com/openai/parameter-golf/pull/1333",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
