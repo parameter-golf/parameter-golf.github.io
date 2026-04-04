@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T11:18:42.995Z",
+  "generatedAt": "2026-04-04T11:49:03.072Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -14801,7 +14801,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -17958,7 +17958,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -19652,7 +19652,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -20576,7 +20576,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -21346,7 +21346,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -22039,7 +22039,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -26659,7 +26659,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -28199,7 +28199,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -30432,7 +30432,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -31356,7 +31356,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -32665,7 +32665,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -38055,7 +38055,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -38209,7 +38209,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -39287,7 +39287,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -39980,7 +39980,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -40211,7 +40211,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -41058,7 +41058,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -41828,7 +41828,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -42444,7 +42444,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -52284,16 +52284,16 @@
         "authorLogin": "Parswanadh",
         "authorName": null,
         "createdAt": "2026-03-23T17:23:02Z",
-        "updatedAt": "2026-04-04T10:51:52Z",
-        "headSha": "7a42601922a9e45abeaff088708efd1d76ea4fab",
+        "updatedAt": "2026-04-04T11:40:56Z",
+        "headSha": "5448ed0ce054c13ad2f11cdbd3e47a041ec72cb2",
         "headRepo": "Parswanadh/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7a42601922a9e45abeaff088708efd1d76ea4fab/records/track_10min_16mb/2026-03-22_TernaryRecurrent_NonRecord/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/7a42601922a9e45abeaff088708efd1d76ea4fab/records/track_10min_16mb/2026-03-22_TernaryRecurrent_NonRecord/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/7a42601922a9e45abeaff088708efd1d76ea4fab/records/track_10min_16mb/2026-03-22_TernaryRecurrent_NonRecord/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/7a42601922a9e45abeaff088708efd1d76ea4fab/records/track_10min_16mb/2026-03-22_TernaryRecurrent_NonRecord/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/7a42601922a9e45abeaff088708efd1d76ea4fab/records/track_10min_16mb/2026-03-22_TernaryRecurrent_NonRecord",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5448ed0ce054c13ad2f11cdbd3e47a041ec72cb2/records/track_10min_16mb/2026-03-22_TernaryRecurrent_NonRecord/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/5448ed0ce054c13ad2f11cdbd3e47a041ec72cb2/records/track_10min_16mb/2026-03-22_TernaryRecurrent_NonRecord/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/5448ed0ce054c13ad2f11cdbd3e47a041ec72cb2/records/track_10min_16mb/2026-03-22_TernaryRecurrent_NonRecord/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/5448ed0ce054c13ad2f11cdbd3e47a041ec72cb2/records/track_10min_16mb/2026-03-22_TernaryRecurrent_NonRecord/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/5448ed0ce054c13ad2f11cdbd3e47a041ec72cb2/records/track_10min_16mb/2026-03-22_TernaryRecurrent_NonRecord",
         "pr": "https://github.com/openai/parameter-golf/pull/559",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -76098,7 +76098,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {
@@ -78571,7 +78571,7 @@
       "provenance": {
         "onMain": true,
         "hasPullRequest": true,
-        "listedInReadme": true
+        "listedInReadme": false
       }
     },
     {

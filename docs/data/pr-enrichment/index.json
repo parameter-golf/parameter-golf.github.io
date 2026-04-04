@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T11:18:55.307Z",
+  "generatedAt": "2026-04-04T11:49:10.042Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -12564,14 +12564,14 @@
       "prNumber": 559,
       "title": "Non-record: TernaryRecurrentGPT - ternary 1.58-bit MLP + depth recurrence (1xL4 val_bpb=1.5348)",
       "status": "open",
-      "updatedAt": "2026-04-04T10:51:52Z",
-      "headSha": "7a42601922a9e45abeaff088708efd1d76ea4fab",
-      "generatedAt": "2026-04-04T11:18:55.231Z",
-      "summary": "Depth-recurrent 7-layer GPT loops with ternary 1.58-bit STE-QAT MLPs, BigramHash/SmearGate, and Muon+AdamW+SWA for compact inference.",
+      "updatedAt": "2026-04-04T11:40:56Z",
+      "headSha": "5448ed0ce054c13ad2f11cdbd3e47a041ec72cb2",
+      "generatedAt": "2026-04-04T11:49:09.962Z",
+      "summary": "Loops over 7 unique layers for 14-depth recurrence and 1.58-bit ternary MLPs with Muon/AdamW+SWA to shrink the quant gap.",
       "tags": [
-        "quantization",
         "architecture",
-        "training-schedule"
+        "quantization",
+        "muon"
       ],
       "flags": {
         "usesValOnly": false,

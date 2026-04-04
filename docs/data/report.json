@@ -1,17 +1,22 @@
 {
-  "generatedAt": "2026-04-04T11:18:10.303Z",
+  "generatedAt": "2026-04-04T11:48:34.269Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
   "skipped": [],
-  "errors": [],
+  "errors": [
+    {
+      "stage": "readme-index",
+      "message": "GitHub API 500 for https://api.github.com/repos/openai/parameter-golf/contents/README.md?ref=main: "
+    }
+  ],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-04-04T10:44:55Z",
+    "cutoffUpdatedAt": "2026-04-04T11:13:49Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 2,
-    "prsReused": 198,
+    "prsRefreshed": 1,
+    "prsReused": 199,
     "stoppedEarly": true,
     "refreshFailures": 0,
     "cacheEntries": 1278,
