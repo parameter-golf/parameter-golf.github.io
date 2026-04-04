@@ -1,18 +1,90 @@
 {
-  "generatedAt": "2026-04-04T09:17:54.816Z",
+  "generatedAt": "2026-04-04T09:48:45.479Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 1337,
+      "title": " [Non-Record] LegendreGPT: Legendre polynomial depth parameterization",
+      "status": "open",
+      "updatedAt": "2026-04-04T09:44:47Z",
+      "headSha": "e6dcdd37123686e26891e7e59793cf807159fdd5",
+      "generatedAt": "2026-04-04T09:48:20.666Z",
+      "summary": "LegendreGPT uses Legendre polynomials to parameterize transformer weights across depth with two coefficient groups and per-order learning rates.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1337.json"
+    },
+    {
+      "prNumber": 1335,
+      "title": "VQ-VAE Weight Compression (non-record track)",
+      "status": "open",
+      "updatedAt": "2026-04-04T09:33:04Z",
+      "headSha": "d7b59e6dcfc7eb1bda1aaae380674b9c1113cd22",
+      "generatedAt": "2026-04-04T09:48:25.845Z",
+      "summary": "Trains cosine-sphere VQ-VAE codebooks during warmdown to replace scalar INT5 quantization by pairing weights and co-evolving codebooks for tighter compression.",
+      "tags": [
+        "quantization",
+        "compression",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1335.json"
+    },
+    {
+      "prNumber": 1334,
+      "title": "Record: SP4096 + Depth Recurrence + Parallel Residuals + MuonEq-R + QK-Gain 5.0 — val_bpb 1.0897 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-04T09:32:35Z",
+      "headSha": "be8c14d1fc1be0cefecb75405e77458806787952",
+      "generatedAt": "2026-04-04T09:48:31.072Z",
+      "summary": "Combines SP4096 vocab, depth recurrence, parallel residual lanes, MuonEq-R, and quantized QK-Gain to squeeze architecture gains before sliding-window eval.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1334.json"
+    },
+    {
       "prNumber": 1333,
       "title": "Record: SP4096 + Depth Recurrence + Parallel Residuals + Causal SLOT-16 — val_bpb 1.0766 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-04T09:12:52Z",
+      "updatedAt": "2026-04-04T09:34:45Z",
       "headSha": "7ed3f08e61281dbab846f6215fbf5005e8a8379d",
-      "generatedAt": "2026-04-04T09:17:54.621Z",
-      "summary": "Combines deep recurrent + parallel residual architecture with MuonEq-R and GPTQ int6 training, then evaluates via causal SLOT delta adaptation.",
+      "generatedAt": "2026-04-04T09:48:40.501Z",
+      "summary": "SP4096 pairs depth recurrence and parallel residuals with MuonEq-R and causal per-batch SLOT delta adaptation over frozen GPTQ-int6 weights.",
       "tags": [
         "architecture",
+        "muon",
         "quantization",
         "evaluation"
       ],
@@ -4241,15 +4313,15 @@
       "prNumber": 1085,
       "title": "Non-record:11L GQA + MLP 3 + Partial RoPE + Int6 Attn/MLP + QAT40 ",
       "status": "open",
-      "updatedAt": "2026-04-01T05:47:33Z",
-      "headSha": "d1fdd260653ef776a4f47f06af218c492562774f",
-      "generatedAt": "2026-04-01T05:49:30.970Z",
-      "summary": "11L GQA+MLP model with Partial RoPE pairs Muon+AdamW warmdown and QAT40 before Int6 export to hit the single-H100 baseline.",
+      "updatedAt": "2026-04-04T09:24:43Z",
+      "headSha": "50cfb82a7a7130139bbc14c6c06e240ef2db8899",
+      "generatedAt": "2026-04-04T09:48:45.316Z",
+      "summary": "11-layer GPT uses GQA/XSA with partial RoPE, 3x MLP, Muon+AdamW warmdown, and late QAT40 to adapt Int6 attention/MLP quantization.",
       "tags": [
-        "architecture",
+        "sliding-window-eval",
         "quantization",
-        "training-schedule",
-        "optimizer"
+        "optimizer",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,

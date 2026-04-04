@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-04T09:17:54.621Z",
+  "generatedAt": "2026-04-04T09:48:40.501Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1333,
     "title": "Record: SP4096 + Depth Recurrence + Parallel Residuals + Causal SLOT-16 — val_bpb 1.0766 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-04T09:12:52Z",
+    "updatedAt": "2026-04-04T09:34:45Z",
     "headSha": "7ed3f08e61281dbab846f6215fbf5005e8a8379d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1333",
     "authorLogin": "aryanbhosale"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines deep recurrent + parallel residual architecture with MuonEq-R and GPTQ int6 training, then evaluates via causal SLOT delta adaptation.",
+    "summary": "SP4096 pairs depth recurrence and parallel residuals with MuonEq-R and causal per-batch SLOT delta adaptation over frozen GPTQ-int6 weights.",
     "tags": [
       "architecture",
+      "muon",
       "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Evaluation adapts a causal SLOT delta per batch atop frozen model, but all training happens on the standard training set without val-shard training.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Depth recurrence + parallel residuals with MuonEq-R",
-      "GPTQ int6 plus Brotli/LZMA compression wrapper",
-      "Per-batch causal SLOT delta optimization during eval"
+      "Depth recurrence + parallel residual SP4096 architecture",
+      "MuonEq-R backbone with GPTQ-int6 compression",
+      "Causal SLOT delta optimization during sliding eval"
     ]
   },
   "compatibility": {

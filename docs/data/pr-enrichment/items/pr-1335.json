@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-04T09:48:25.845Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1335,
+    "title": "VQ-VAE Weight Compression (non-record track)",
+    "state": "open",
+    "updatedAt": "2026-04-04T09:33:04Z",
+    "headSha": "d7b59e6dcfc7eb1bda1aaae380674b9c1113cd22",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1335",
+    "authorLogin": "WeijieChen2017"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-01_VQ_Weight_Compression/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Trains cosine-sphere VQ-VAE codebooks during warmdown to replace scalar INT5 quantization by pairing weights and co-evolving codebooks for tighter compression.",
+    "tags": [
+      "quantization",
+      "compression",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Pairwise VQ codebooks replace scalar INT5 bins",
+      "EMA-updated cosine similarity matching every 50 warmdown steps",
+      "10-bit packed indices with per-row scales for storage"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

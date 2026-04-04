@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-04T09:48:31.072Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1334,
+    "title": "Record: SP4096 + Depth Recurrence + Parallel Residuals + MuonEq-R + QK-Gain 5.0 — val_bpb 1.0897 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-04T09:32:35Z",
+    "headSha": "be8c14d1fc1be0cefecb75405e77458806787952",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1334",
+    "authorLogin": "aryanbhosale"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-04_SP4096_DepthRecurrence_ParallelResid_MuonEqR/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines SP4096 vocab, depth recurrence, parallel residual lanes, MuonEq-R, and quantized QK-Gain to squeeze architecture gains before sliding-window eval.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Depth recurrence + parallel residual lanes for virtual layering",
+      "MuonEq-R with QK-Gain attention tweaks",
+      "GPTQ int6 quantization with compressed wrapper"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
