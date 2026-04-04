@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-04T10:48:59.486Z",
+  "generatedAt": "2026-04-04T11:18:50.279Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1300,
     "title": "Non-record: 1.8184 BPB Single-step Recurrent Transformer with Q-LoRA (Windows 3090)",
     "state": "open",
-    "updatedAt": "2026-04-04T10:32:38Z",
-    "headSha": "a3d4cc0d36009850ee6e8e03e246e2144f498d84",
+    "updatedAt": "2026-04-04T11:13:49Z",
+    "headSha": "6d5ff914b4d550a858c124d7007a0a8ea6fdd829",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1300",
     "authorLogin": "Ribin545"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Wide single-pass transformer on RTX 3090 swaps recurrence for near-full-rank dual-Q LoRA to maximize steps under 10-minute caps while staying INT8-friendly.",
+    "summary": "Documented journey to a single-pass wide transformer with near-full-rank dual-Q attention and throughput-focused tuning on Windows RTX 3090.",
     "tags": [
       "architecture",
       "attention",
-      "quantization",
-      "non-record"
+      "training-schedule",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Single-pass wide transformer to boost throughput under 10-minute RTX 3090 runs",
-      "Near-full-rank dual-Q LoRA adapter derived from lora_rank=512 for richer query space",
-      "INT8-aware instrumentation with best-checkpoint saving and dynamic scaling"
+      "Single-pass transformer with GQA and dual-Q adapter derived from high-rank LoRA",
+      "Throughput-first tuning (steps=1, dim=1024) with best-checkpoint saving under 10-minute cap",
+      "Dynamic gradient scaling plus loss filtering to stabilize short-wallclock runs"
     ]
   },
   "compatibility": {

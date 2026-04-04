@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T10:49:04.431Z",
+  "generatedAt": "2026-04-04T11:18:55.307Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -750,15 +750,15 @@
       "prNumber": 1300,
       "title": "Non-record: 1.8184 BPB Single-step Recurrent Transformer with Q-LoRA (Windows 3090)",
       "status": "open",
-      "updatedAt": "2026-04-04T10:32:38Z",
-      "headSha": "a3d4cc0d36009850ee6e8e03e246e2144f498d84",
-      "generatedAt": "2026-04-04T10:48:59.486Z",
-      "summary": "Wide single-pass transformer on RTX 3090 swaps recurrence for near-full-rank dual-Q LoRA to maximize steps under 10-minute caps while staying INT8-friendly.",
+      "updatedAt": "2026-04-04T11:13:49Z",
+      "headSha": "6d5ff914b4d550a858c124d7007a0a8ea6fdd829",
+      "generatedAt": "2026-04-04T11:18:50.279Z",
+      "summary": "Documented journey to a single-pass wide transformer with near-full-rank dual-Q attention and throughput-focused tuning on Windows RTX 3090.",
       "tags": [
         "architecture",
         "attention",
-        "quantization",
-        "non-record"
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -12564,13 +12564,14 @@
       "prNumber": 559,
       "title": "Non-record: TernaryRecurrentGPT - ternary 1.58-bit MLP + depth recurrence (1xL4 val_bpb=1.5348)",
       "status": "open",
-      "updatedAt": "2026-04-04T10:44:55Z",
-      "headSha": "3cb68000535a7a33a92a0b0fdd4b64e9ae85747d",
-      "generatedAt": "2026-04-04T10:49:04.356Z",
-      "summary": "Depth-recurrent GPT reuses 7 layers twice with ternary 1.58-bit STE-quantized MLPs, BigramHash/SmearGate, and Muon+AdamW+SWA training.",
+      "updatedAt": "2026-04-04T10:51:52Z",
+      "headSha": "7a42601922a9e45abeaff088708efd1d76ea4fab",
+      "generatedAt": "2026-04-04T11:18:55.231Z",
+      "summary": "Depth-recurrent 7-layer GPT loops with ternary 1.58-bit STE-QAT MLPs, BigramHash/SmearGate, and Muon+AdamW+SWA for compact inference.",
       "tags": [
         "quantization",
-        "architecture"
+        "architecture",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
