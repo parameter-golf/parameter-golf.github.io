@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-04T05:16:01.788Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1322,
+    "title": "Lucky V — 1.08746285 val_bpb (seed 444)",
+    "state": "open",
+    "updatedAt": "2026-04-04T05:04:49Z",
+    "headSha": "6a9158b1fd452546be260d63d2da47bd538360b1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1322",
+    "authorLogin": "newjordan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-04_Lucky_V_8xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Rascal-style 11-layer transformer pairs MuonEq-R plus high QK gain with Flash Attention, VE layers, and sliding-window SLOT test-time adaptation.",
+    "tags": [
+      "muon",
+      "sliding-window-eval",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "MuonEq-R with row-normalized momentum and extra Newton-Schulz steps",
+      "Per-head QK gain, VE layers, and Flash Attention 3 in 11-layer core",
+      "Sliding-window SLOT test-time adaptation (32 steps, lr 0.04)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

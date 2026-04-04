@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T04:45:43.886Z",
+  "generatedAt": "2026-04-04T05:15:53.450Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -9708,6 +9708,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/567dc403e4864b265134c96115af38e415e9b883/records/track_10min_16mb/2026-04-02_Scylla_ParallelResiduals_DepthRecurrence_TTT/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/567dc403e4864b265134c96115af38e415e9b883/records/track_10min_16mb/2026-04-02_Scylla_ParallelResiduals_DepthRecurrence_TTT",
         "pr": "https://github.com/openai/parameter-golf/pull/1274",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-04_Lucky_V_8xH100",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-04_Lucky_V_8xH100",
+        "folderPath": "records/track_10min_16mb/2026-04-04_Lucky_V_8xH100",
+        "submissionPath": "records/track_10min_16mb/2026-04-04_Lucky_V_8xH100/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-04_Lucky_V_8xH100/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-04_Lucky_V_8xH100/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-04_Lucky_V_8xH100/train_gpt.py"
+      },
+      "submission": {
+        "author": "Frosty40",
+        "githubId": "newjordan",
+        "name": "Lucky V",
+        "blurb": "Rascal II + MuonEq-R + QK_GAIN=5 + NS7 + SLOT32 (sliding-window test-time adaptation, lr=0.04)",
+        "date": "2026-04-04T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.0878,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15552366,
+        "bytesCode": 124171,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1322,
+        "title": "Lucky V — 1.08746285 val_bpb (seed 444)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1322",
+        "authorLogin": "newjordan",
+        "authorName": null,
+        "createdAt": "2026-04-04T04:50:40Z",
+        "updatedAt": "2026-04-04T05:04:49Z",
+        "headSha": "6a9158b1fd452546be260d63d2da47bd538360b1",
+        "headRepo": "newjordan/parameter-golf-1"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6a9158b1fd452546be260d63d2da47bd538360b1/records/track_10min_16mb/2026-04-04_Lucky_V_8xH100/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/6a9158b1fd452546be260d63d2da47bd538360b1/records/track_10min_16mb/2026-04-04_Lucky_V_8xH100/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/6a9158b1fd452546be260d63d2da47bd538360b1/records/track_10min_16mb/2026-04-04_Lucky_V_8xH100/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/6a9158b1fd452546be260d63d2da47bd538360b1/records/track_10min_16mb/2026-04-04_Lucky_V_8xH100/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/6a9158b1fd452546be260d63d2da47bd538360b1/records/track_10min_16mb/2026-04-04_Lucky_V_8xH100",
+        "pr": "https://github.com/openai/parameter-golf/pull/1322",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

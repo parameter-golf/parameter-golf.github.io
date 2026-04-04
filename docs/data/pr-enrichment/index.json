@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-04T04:45:49.624Z",
+  "generatedAt": "2026-04-04T05:16:01.986Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1322,
+      "title": "Lucky V — 1.08746285 val_bpb (seed 444)",
+      "status": "open",
+      "updatedAt": "2026-04-04T05:04:49Z",
+      "headSha": "6a9158b1fd452546be260d63d2da47bd538360b1",
+      "generatedAt": "2026-04-04T05:16:01.788Z",
+      "summary": "Rascal-style 11-layer transformer pairs MuonEq-R plus high QK gain with Flash Attention, VE layers, and sliding-window SLOT test-time adaptation.",
+      "tags": [
+        "muon",
+        "sliding-window-eval",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1322.json"
+    },
     {
       "prNumber": 1321,
       "title": "Record: SLOT-48 — val_bpb 0.7406 (3-seed mean)",
