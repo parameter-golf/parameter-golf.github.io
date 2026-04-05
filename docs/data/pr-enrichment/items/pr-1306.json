@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-04T23:24:06.364Z",
+  "generatedAt": "2026-04-05T03:55:13.429Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1306,
     "title": "Record: Causal SLOT + Pre-quant TTT — val_bpb 1.0846 (3-seed mean)",
-    "state": "open",
-    "updatedAt": "2026-04-04T23:15:27Z",
+    "state": "closed",
+    "updatedAt": "2026-04-05T03:06:00Z",
     "headSha": "d43a0f3695b2a01ec5231fc646fbcbc87f32e99b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1306",
     "authorLogin": "resouer"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Causal SLOT limits delta updates to already-scored tokens, paired with pre-quant AdamW TTT and a coprime-stride loader for Full Hessian GPTQ eval.",
+    "summary": "Combines causal SLOT delta search, pre-quant AdamW TTT, and coprime-stride loader on the GPTQ stack for causal eval and smoother quantization preparation.",
     "tags": [
-      "evaluation",
-      "optimizer"
+      "quantization",
+      "optimizer",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "delta optimization restricted to context-only positions",
-      "AdamW TTT on full-precision weights before quantization",
-      "coprime-stride multi-shard data sampling"
+      "Causal SLOT restricts delta updates to past tokens",
+      "AdamW TTT on FP weights before GPTQ quantization",
+      "Coprime-stride multi-shard sampling for diverse batches"
     ]
   },
   "compatibility": {

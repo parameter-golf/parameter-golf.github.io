@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T02:54:17.252Z",
+  "generatedAt": "2026-04-05T03:54:59.876Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -9565,7 +9565,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-04-03_CausalSLOT-PreQuantTTT-CoprimeLoader_1-0846",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -9613,14 +9613,14 @@
       "pr": {
         "number": 1306,
         "title": "Record: Causal SLOT + Pre-quant TTT — val_bpb 1.0846 (3-seed mean)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1306",
         "authorLogin": "resouer",
         "authorName": null,
         "createdAt": "2026-04-03T16:29:29Z",
-        "updatedAt": "2026-04-04T23:15:27Z",
+        "updatedAt": "2026-04-05T03:06:00Z",
         "headSha": "d43a0f3695b2a01ec5231fc646fbcbc87f32e99b",
         "headRepo": "resouer/parameter-golf"
       },
@@ -60605,7 +60605,7 @@
         "authorLogin": "resouer",
         "authorName": null,
         "createdAt": "2026-04-04T15:40:21Z",
-        "updatedAt": "2026-04-04T23:15:34Z",
+        "updatedAt": "2026-04-05T03:26:34Z",
         "headSha": "4ede046aac47273388f3b4d02de228292faa8a50",
         "headRepo": "resouer/parameter-golf"
       },
@@ -62475,7 +62475,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-04-01_ScoredPos-SLOT-PerSample-GPTQ-QKGain_0-9300",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -62523,14 +62523,14 @@
       "pr": {
         "number": 1229,
         "title": "Record: Scored-Position SLOT + Per-Sample Delta + GPTQ (val_bpb: 0.9300)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1229",
         "authorLogin": "resouer",
         "authorName": null,
         "createdAt": "2026-04-01T19:56:29Z",
-        "updatedAt": "2026-04-01T19:56:29Z",
+        "updatedAt": "2026-04-05T03:05:47Z",
         "headSha": "c0d3bbed1feb145b786a128abaa472da534b1b01",
         "headRepo": "resouer/parameter-golf"
       },

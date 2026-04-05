@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T02:24:52.651Z",
+  "generatedAt": "2026-04-05T03:55:18.413Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -397,15 +397,14 @@
       "prNumber": 1350,
       "title": "Record: L-BFGS Causal SLOT — val_bpb 1.0046 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-04T23:15:34Z",
+      "updatedAt": "2026-04-05T03:26:34Z",
       "headSha": "4ede046aac47273388f3b4d02de228292faa8a50",
-      "generatedAt": "2026-04-04T23:23:49.580Z",
-      "summary": "Adds causal-only L-BFGS logit SLOT eval with warm-start focal loss plus pre-quant AdamW TTT and coprime loader tweaks.",
+      "generatedAt": "2026-04-05T03:55:09.676Z",
+      "summary": "Causal L-BFGS logit-space SLOT over past tokens plus pre-quant AdamW TTT and tuned GPTQ/config loader tweaks for compliant eval.",
       "tags": [
-        "evaluation",
+        "quantization",
         "optimizer",
-        "training-schedule",
-        "quantization"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1211,14 +1210,15 @@
     {
       "prNumber": 1306,
       "title": "Record: Causal SLOT + Pre-quant TTT — val_bpb 1.0846 (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-04-04T23:15:27Z",
+      "status": "closed",
+      "updatedAt": "2026-04-05T03:06:00Z",
       "headSha": "d43a0f3695b2a01ec5231fc646fbcbc87f32e99b",
-      "generatedAt": "2026-04-04T23:24:06.364Z",
-      "summary": "Causal SLOT limits delta updates to already-scored tokens, paired with pre-quant AdamW TTT and a coprime-stride loader for Full Hessian GPTQ eval.",
+      "generatedAt": "2026-04-05T03:55:13.429Z",
+      "summary": "Combines causal SLOT delta search, pre-quant AdamW TTT, and coprime-stride loader on the GPTQ stack for causal eval and smoother quantization preparation.",
       "tags": [
-        "evaluation",
-        "optimizer"
+        "quantization",
+        "optimizer",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2657,15 +2657,15 @@
     {
       "prNumber": 1229,
       "title": "Record: Scored-Position SLOT + Per-Sample Delta + GPTQ (val_bpb: 0.9300)",
-      "status": "open",
-      "updatedAt": "2026-04-01T19:56:29Z",
+      "status": "closed",
+      "updatedAt": "2026-04-05T03:05:47Z",
       "headSha": "c0d3bbed1feb145b786a128abaa472da534b1b01",
-      "generatedAt": "2026-04-01T20:24:45.795Z",
-      "summary": "Aligns SLOT delta training to eval scoring strides with per-sample state/logit adaptations, cosine LR, and GPTQ calibrated on real data.",
+      "generatedAt": "2026-04-05T03:55:18.234Z",
+      "summary": "Scored-position SLOT trains per-sample delta plus logit bias on eval scoring positions with real-data GPTQ calibration and cosine LR.",
       "tags": [
+        "architecture",
         "quantization",
-        "training-schedule",
-        "attention"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

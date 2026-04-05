@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-01T20:24:45.795Z",
+  "generatedAt": "2026-04-05T03:55:18.234Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1229,
     "title": "Record: Scored-Position SLOT + Per-Sample Delta + GPTQ (val_bpb: 0.9300)",
-    "state": "open",
-    "updatedAt": "2026-04-01T19:56:29Z",
+    "state": "closed",
+    "updatedAt": "2026-04-05T03:05:47Z",
     "headSha": "c0d3bbed1feb145b786a128abaa472da534b1b01",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1229",
     "authorLogin": "resouer"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Aligns SLOT delta training to eval scoring strides with per-sample state/logit adaptations, cosine LR, and GPTQ calibrated on real data.",
+    "summary": "Scored-position SLOT trains per-sample delta plus logit bias on eval scoring positions with real-data GPTQ calibration and cosine LR.",
     "tags": [
+      "architecture",
       "quantization",
-      "training-schedule",
-      "attention"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Scored-position SLOT mask on evaluation strides",
-      "Per-sample delta + logit bias adaptation",
-      "GPTQ calibration on real data with cosine LR"
+      "Eval-aligned SLOT mask focusing delta loss on stride-64 scoring tokens",
+      "Per-sample [bsz,1,dim] delta and logit bias for sequence-specific adaptation",
+      "Real-data GPTQ calibration with cosine LR over 16 AdamW steps"
     ]
   },
   "compatibility": {
