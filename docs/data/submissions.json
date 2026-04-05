@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T12:57:42.234Z",
+  "generatedAt": "2026-04-05T13:27:39.726Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -33199,6 +33199,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/2c12ff54420b2a2d94831ef013f0877e483a1284/records/track_10min_16mb/2026-03-20_Int6STE_NorMuon_SWA_SlidingWindow/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/2c12ff54420b2a2d94831ef013f0877e483a1284/records/track_10min_16mb/2026-03-20_Int6STE_NorMuon_SWA_SlidingWindow",
         "pr": "https://github.com/openai/parameter-golf/pull/156",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-05_CautiousMuon_SP4096_DepthRecur",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-05_CautiousMuon_SP4096_DepthRecur",
+        "folderPath": "records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur",
+        "submissionPath": "records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/train_gpt.py"
+      },
+      "submission": {
+        "author": "X-Abhishek-X",
+        "githubId": "X-Abhishek-X",
+        "name": "Cautious Muon + SP4096 + Depth Recurrence + Parallel Residuals",
+        "blurb": "Applies Cautious Muon (arXiv:2411.16085) to the Muon optimizer — masks Newton-Schulz updates where the orthogonalized direction disagrees with the raw gradient sign, providing ~1.47x effective convergence per step with zero parameter overhead. Built on PR #1334 (aryanbhosale) base with SP4096 vocabulary, depth recurrence (layers 4,5), parallel residuals (from layer 7), MuonEq-R, QK-Gain 5.0, and full GPTQ INT6 + Brotli compression. Mean val_bpb = 1.1604 (3 seeds, std = 0.0033).",
+        "date": "2026-04-05"
+      },
+      "metrics": {
+        "valBpb": 1.16043988,
+        "valLoss": 2.67020395,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1381,
+        "title": "Record: Cautious Muon + SP4096 + Depth Recurrence — val_bpb 1.1604",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1381",
+        "authorLogin": "X-Abhishek-X",
+        "authorName": null,
+        "createdAt": "2026-04-05T13:12:14Z",
+        "updatedAt": "2026-04-05T13:21:26Z",
+        "headSha": "ab0e4302e64862ff1cecd12382851cd9ca0b5c95",
+        "headRepo": "X-Abhishek-X/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ab0e4302e64862ff1cecd12382851cd9ca0b5c95/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/ab0e4302e64862ff1cecd12382851cd9ca0b5c95/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/ab0e4302e64862ff1cecd12382851cd9ca0b5c95/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/ab0e4302e64862ff1cecd12382851cd9ca0b5c95/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/ab0e4302e64862ff1cecd12382851cd9ca0b5c95/records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur",
+        "pr": "https://github.com/openai/parameter-golf/pull/1381",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

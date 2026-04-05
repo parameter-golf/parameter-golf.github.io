@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-04-05T13:27:46.738Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1381,
+    "title": "Record: Cautious Muon + SP4096 + Depth Recurrence — val_bpb 1.1604",
+    "state": "open",
+    "updatedAt": "2026-04-05T13:21:26Z",
+    "headSha": "ab0e4302e64862ff1cecd12382851cd9ca0b5c95",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1381",
+    "authorLogin": "X-Abhishek-X"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-05_CautiousMuon_SP4096_DepthRecur/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Applies Cautious Muon masking to Muon's Newton-Schulz updates atop the SP4096 depth-recurrent, parallel-residual stack.",
+    "tags": [
+      "optimizer",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Cautious Muon mask on orthogonalized Muon updates",
+      "Depth recurrence with parallel residuals on the SP4096 base",
+      "MuonEq-R normalization with QK-Gain 5.0"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

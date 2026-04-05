@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-04-05T12:58:08.969Z",
+  "generatedAt": "2026-04-05T13:27:46.940Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1381,
+      "title": "Record: Cautious Muon + SP4096 + Depth Recurrence — val_bpb 1.1604",
+      "status": "open",
+      "updatedAt": "2026-04-05T13:21:26Z",
+      "headSha": "ab0e4302e64862ff1cecd12382851cd9ca0b5c95",
+      "generatedAt": "2026-04-05T13:27:46.738Z",
+      "summary": "Applies Cautious Muon masking to Muon's Newton-Schulz updates atop the SP4096 depth-recurrent, parallel-residual stack.",
+      "tags": [
+        "optimizer",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1381.json"
+    },
     {
       "prNumber": 1380,
       "title": "Non-record: Focal Loss for LM Pretraining — 1.1567 int8 BPB on RTX 4000 Ada (3-line change)",
