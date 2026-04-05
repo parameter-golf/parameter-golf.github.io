@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-05T04:25:25.525Z",
+  "generatedAt": "2026-04-05T04:55:23.982Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1371,
+      "title": "Non-record: Olmo Hybrid (GDN + Attention) for long-context training — 8k/16k/32k crossover study",
+      "status": "open",
+      "updatedAt": "2026-04-05T04:43:55Z",
+      "headSha": "61108c565bf58aa948455abc86035a721e85eac0",
+      "generatedAt": "2026-04-05T04:55:23.772Z",
+      "summary": "Hybrid keeps most layers as Gated DeltaNet linear-recurrent blocks with occasional full attention so long-context runs finish more steps within the same wall-clock.",
+      "tags": [
+        "architecture",
+        "attention",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1371.json"
+    },
     {
       "prNumber": 1369,
       "title": "Non-record: Negative results from gated multi-order hash n-grams",

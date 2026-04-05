@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T04:25:09.896Z",
+  "generatedAt": "2026-04-05T04:55:17.007Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -52372,6 +52372,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/ceb47577fa9b6de1eb2ea819ec166fc25654f2c0/records/track_non_record_16mb/2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/ceb47577fa9b6de1eb2ea819ec166fc25654f2c0/records/track_non_record_16mb/2026-04-01_JEPA_v2_MultiStep_Int6_BigramHash_EMA",
         "pr": "https://github.com/openai/parameter-golf/pull/1330",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-04_GDN_Hybrid_LongContext",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-04_GDN_Hybrid_LongContext",
+        "folderPath": "records/track_non_record_16mb/2026-04-04_GDN_Hybrid_LongContext",
+        "submissionPath": "records/track_non_record_16mb/2026-04-04_GDN_Hybrid_LongContext/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-04_GDN_Hybrid_LongContext/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-04_GDN_Hybrid_LongContext/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-04_GDN_Hybrid_LongContext/train_gpt.py"
+      },
+      "submission": {
+        "author": "Arjun",
+        "githubId": "aarjunsrinivasan",
+        "name": "GDN Hybrid Attention: Long-Context Performance in the Parameter-Constrained Regime",
+        "blurb": null,
+        "date": "2026-04-04"
+      },
+      "metrics": {
+        "valBpb": 1.4709,
+        "valLoss": 2.4836,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 14060514,
+        "bytesCode": 50450,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1371,
+        "title": "Non-record: Olmo Hybrid (GDN + Attention) for long-context training — 8k/16k/32k crossover study",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1371",
+        "authorLogin": "aarjunsrinivasan",
+        "authorName": null,
+        "createdAt": "2026-04-05T04:43:55Z",
+        "updatedAt": "2026-04-05T04:43:55Z",
+        "headSha": "61108c565bf58aa948455abc86035a721e85eac0",
+        "headRepo": "aarjunsrinivasan/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/61108c565bf58aa948455abc86035a721e85eac0/records/track_non_record_16mb/2026-04-04_GDN_Hybrid_LongContext/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/61108c565bf58aa948455abc86035a721e85eac0/records/track_non_record_16mb/2026-04-04_GDN_Hybrid_LongContext/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/61108c565bf58aa948455abc86035a721e85eac0/records/track_non_record_16mb/2026-04-04_GDN_Hybrid_LongContext/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/61108c565bf58aa948455abc86035a721e85eac0/records/track_non_record_16mb/2026-04-04_GDN_Hybrid_LongContext/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/61108c565bf58aa948455abc86035a721e85eac0/records/track_non_record_16mb/2026-04-04_GDN_Hybrid_LongContext",
+        "pr": "https://github.com/openai/parameter-golf/pull/1371",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

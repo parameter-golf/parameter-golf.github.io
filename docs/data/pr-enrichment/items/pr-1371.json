@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-05T04:55:23.772Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1371,
+    "title": "Non-record: Olmo Hybrid (GDN + Attention) for long-context training — 8k/16k/32k crossover study",
+    "state": "open",
+    "updatedAt": "2026-04-05T04:43:55Z",
+    "headSha": "61108c565bf58aa948455abc86035a721e85eac0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1371",
+    "authorLogin": "aarjunsrinivasan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-04_GDN_Hybrid_LongContext/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Hybrid keeps most layers as Gated DeltaNet linear-recurrent blocks with occasional full attention so long-context runs finish more steps within the same wall-clock.",
+    "tags": [
+      "architecture",
+      "attention",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Interleaving 3:1 GDN and full-attention layers",
+      "Muon optimizer schedule rescaled per context length",
+      "Chunk_gated_delta_rule Triton kernel from flash-linear-attention"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
