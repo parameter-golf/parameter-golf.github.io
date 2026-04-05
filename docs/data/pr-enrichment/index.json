@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-04-05T10:57:17.812Z",
+  "generatedAt": "2026-04-05T12:58:08.969Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1380,
+      "title": "Non-record: Focal Loss for LM Pretraining — 1.1567 int8 BPB on RTX 4000 Ada (3-line change)",
+      "status": "open",
+      "updatedAt": "2026-04-05T12:44:38Z",
+      "headSha": "78321759c3ebee8296ac399a2dc589e05df661cb",
+      "generatedAt": "2026-04-05T12:57:50.220Z",
+      "summary": "Applies focal loss to LM pretraining and couples it with cosine LR plus a 1/10 encoder-decoder split to focus capacity on hard-to-predict tokens.",
+      "tags": [
+        "regularization",
+        "training-schedule",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1380.json"
+    },
+    {
+      "prNumber": 1379,
+      "title": "Record: 0.4162 BPB mixed quant ngram (post-fix reruns)",
+      "status": "open",
+      "updatedAt": "2026-04-05T12:51:34Z",
+      "headSha": "299c3974db5b28d092ef76d680860cd07ade6b20",
+      "generatedAt": "2026-04-05T12:57:54.456Z",
+      "summary": "Mixed Int5/Int6 quantized 11L GQA transformer pairs complementary training with a score-first DDP-safe causal backoff n-gram mixer and entropy-adaptive blending.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1379.json"
+    },
     {
       "prNumber": 1378,
       "title": "Non Record: GPTQ int7 XSA BigramHash — val_bpb 1.1711",
@@ -118,6 +165,30 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1371.json"
+    },
+    {
+      "prNumber": 1370,
+      "title": "Non-record: 10L Gated DeltaNet (PureGDN) — val_bpb 1.003028 (3-seed mean, legal TTT)",
+      "status": "open",
+      "updatedAt": "2026-04-05T12:57:29Z",
+      "headSha": "f2be0b6fff9d758fe9253e1a307afb6e90034f6b",
+      "generatedAt": "2026-04-05T12:57:58.446Z",
+      "summary": "10-layer PureGDN stack swaps transformer softmax for Gated DeltaNet linear attention with BigramHash+trigram tokens and score-first TTT adaptation.",
+      "tags": [
+        "architecture",
+        "attention",
+        "tokenization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1370.json"
     },
     {
       "prNumber": 1369,
@@ -321,30 +392,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1360.json"
-    },
-    {
-      "prNumber": 1359,
-      "title": "Record: 0.4188 BPB mixed quant ngram",
-      "status": "closed",
-      "updatedAt": "2026-04-04T21:16:34Z",
-      "headSha": "db46fb7bb711911753df79d4cf19548456624e46",
-      "generatedAt": "2026-04-04T21:22:59.538Z",
-      "summary": "Combines int5/int6 quantized 11-layer GQA with complementary loss and a score-first causal backoff n-gram mixer that syncs before cache updates.",
-      "tags": [
-        "quantization",
-        "mixed-precision",
-        "architecture",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1359.json"
     },
     {
       "prNumber": 1358,
@@ -1634,14 +1681,13 @@
       "prNumber": 1289,
       "title": "Record: PROTEUS v1.6 — Scylla + Parallel Residuals + Depth Recurrence + Legal TTT — val_bpb 1.0819 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T10:30:49Z",
+      "updatedAt": "2026-04-05T12:37:51Z",
       "headSha": "302f714bebadaf8727f448690f0e138bf3da9b8f",
-      "generatedAt": "2026-04-03T10:39:09.554Z",
-      "summary": "Blends learnable parallel-residual lane mixing, sensitivity-driven INT5/INT6 quantization, and legal score-first TTT/depth recurrence atop Scylla tokenization.",
+      "generatedAt": "2026-04-05T12:58:03.210Z",
+      "summary": "Merges Scylla retokenization, parallel residual lanes with learnable mixing, depth recurrence, legal TTT, and sensitivity-driven mixed INT5/INT6 quantization.",
       "tags": [
         "quantization",
         "architecture",
-        "optimizer",
         "training-schedule"
       ],
       "flags": {
@@ -13047,15 +13093,15 @@
     {
       "prNumber": 571,
       "title": "Non-record: trigram phrase-memory ablation on 1×H100: negative result (1.2791 BPB best)",
-      "status": "open",
-      "updatedAt": "2026-03-23T20:07:34Z",
+      "status": "closed",
+      "updatedAt": "2026-04-05T12:53:38Z",
       "headSha": "f6f83b31514b10e3415017faa8eb2204a9046003",
-      "generatedAt": "2026-03-23T20:17:56.393Z",
-      "summary": "Ablated TrigramHash lookup tables on a tuned 16MB 1×H100 backbone and found plain backbone capacity outperforms the static trigram embeddings.",
+      "generatedAt": "2026-04-05T12:58:08.880Z",
+      "summary": "Ablated static trigram phrase-memory vs slim backbone with existing bigram hash on 1×H100 to show params better spent on larger model capacity.",
       "tags": [
         "architecture",
-        "evaluation",
-        "non-record"
+        "non-record",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

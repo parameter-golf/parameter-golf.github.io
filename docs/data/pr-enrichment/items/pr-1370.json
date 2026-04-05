@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-05T12:57:58.446Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1370,
+    "title": "Non-record: 10L Gated DeltaNet (PureGDN) — val_bpb 1.003028 (3-seed mean, legal TTT)",
+    "state": "open",
+    "updatedAt": "2026-04-05T12:57:29Z",
+    "headSha": "f2be0b6fff9d758fe9253e1a307afb6e90034f6b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1370",
+    "authorLogin": "Christopher-Lee-McClendon"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-04_10L_GDN_PureGDN_7k_LegalTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer PureGDN stack swaps transformer softmax for Gated DeltaNet linear attention with BigramHash+trigram tokens and score-first TTT adaptation.",
+    "tags": [
+      "architecture",
+      "attention",
+      "tokenization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Gated DeltaNet linear attention replacing softmax",
+      "BigramHash embeddings extended with trigram hash",
+      "Score-first TTT with chunk-wise SGD and frozen blocks"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

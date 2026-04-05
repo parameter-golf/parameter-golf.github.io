@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-05T12:57:50.220Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1380,
+    "title": "Non-record: Focal Loss for LM Pretraining — 1.1567 int8 BPB on RTX 4000 Ada (3-line change)",
+    "state": "open",
+    "updatedAt": "2026-04-05T12:44:38Z",
+    "headSha": "78321759c3ebee8296ac399a2dc589e05df661cb",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1380",
+    "authorLogin": "ranausmanai"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Applies focal loss to LM pretraining and couples it with cosine LR plus a 1/10 encoder-decoder split to focus capacity on hard-to-predict tokens.",
+    "tags": [
+      "regularization",
+      "training-schedule",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Focal loss reweights CE to emphasize hard tokens",
+      "Cosine annealing replaces linear warmdown for smoother schedule",
+      "Asymmetric split keeps just 1 encoder layer for cost-effective structure"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
