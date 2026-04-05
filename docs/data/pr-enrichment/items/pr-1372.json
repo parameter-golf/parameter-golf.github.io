@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-04-05T05:25:30.195Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1372,
+    "title": "V20: Cascaded 2-Phase L-BFGS Causal SLOT (1.00497 BPB, 3-seed)",
+    "state": "open",
+    "updatedAt": "2026-04-05T05:01:34Z",
+    "headSha": "ef61af87cfcfa552171cb6749efdfba905eb8d1e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1372",
+    "authorLogin": "Bortlesboat"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-05_V20_Cascaded_LBFGS_Causal_SLOT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Stacks cascaded 2-phase L-BFGS SLOT eval with fresh history resets to cut curvature work while keeping causal mask on scored tokens.",
+    "tags": [
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- Coarse 5-iter L-BFGS pass with history=10",
+      "- Refined 18-iter L-BFGS pass with history reset and history=20"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

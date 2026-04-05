@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-05T05:25:37.675Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1086,
+    "title": "Track A: 11L U-Net + BigramHash + SmearGate + Partial RoPE + QAT (1.1349 bpb)",
+    "state": "open",
+    "updatedAt": "2026-03-30T12:39:49Z",
+    "headSha": "ca9e8d60408c517445be7a377ca708092ffa43a1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1086",
+    "authorLogin": "Omrigotlieb"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_MLP3x_QAT_Int6_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11L U-Net uses BigramHash, SmearGate, Partial RoPE, mixed int6/int8 QAT, and Muon/Adam+EMA to target sub-16MB artifacts.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "optimizer",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "U-Net w/ BigramHash embeddings, SmearGate blending, Partial RoPE",
+      "Mixed int6/int8 QAT with GPTQ-lite best-of-5 per-row search",
+      "Muon+Adam blend with EMA and wallclock-adaptive warmdown"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

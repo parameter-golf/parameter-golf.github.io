@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-04-05T04:55:23.982Z",
+  "generatedAt": "2026-04-05T05:25:37.830Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1372,
+      "title": "V20: Cascaded 2-Phase L-BFGS Causal SLOT (1.00497 BPB, 3-seed)",
+      "status": "open",
+      "updatedAt": "2026-04-05T05:01:34Z",
+      "headSha": "ef61af87cfcfa552171cb6749efdfba905eb8d1e",
+      "generatedAt": "2026-04-05T05:25:30.195Z",
+      "summary": "Stacks cascaded 2-phase L-BFGS SLOT eval with fresh history resets to cut curvature work while keeping causal mask on scored tokens.",
+      "tags": [
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1372.json"
+    },
     {
       "prNumber": 1371,
       "title": "Non-record: Olmo Hybrid (GDN + Attention) for long-context training — 8k/16k/32k crossover study",
@@ -4934,6 +4956,30 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1087.json"
+    },
+    {
+      "prNumber": 1086,
+      "title": "Track A: 11L U-Net + BigramHash + SmearGate + Partial RoPE + QAT (1.1349 bpb)",
+      "status": "open",
+      "updatedAt": "2026-03-30T12:39:49Z",
+      "headSha": "ca9e8d60408c517445be7a377ca708092ffa43a1",
+      "generatedAt": "2026-04-05T05:25:37.675Z",
+      "summary": "11L U-Net uses BigramHash, SmearGate, Partial RoPE, mixed int6/int8 QAT, and Muon/Adam+EMA to target sub-16MB artifacts.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1086.json"
     },
     {
       "prNumber": 1085,
@@ -20786,30 +20832,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-88.json"
-    },
-    {
-      "prNumber": 86,
-      "title": "Update: 11L MLP3x + WD=0.04 + zstd-22 (val_bpb 1.1502)",
-      "status": "closed",
-      "updatedAt": "2026-03-20T18:44:49Z",
-      "headSha": "1641a23486b3a5675c8fcc51f734b394b525105f",
-      "generatedAt": "2026-03-22T06:37:36.049Z",
-      "summary": "11-layer MLP3x GPT uses int6 QAT with decoupled weight decay and zstd-22 compression plus sliding-window eval to fit under 16MB.",
-      "tags": [
-        "quantization",
-        "architecture",
-        "training-schedule",
-        "sliding-window-eval"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-86.json"
     },
     {
       "prNumber": 85,
