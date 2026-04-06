@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-06T08:33:49.904Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1405,
+    "title": "Record: Scylla + GPTQ + BH3072 — val_bpb 1.0856 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-06T08:02:38Z",
+    "headSha": "b965076d78d8b81a891fdf99cd0a0aea18895381",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1405",
+    "authorLogin": "anthony-maio"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-06_Scylla_GPTQ_BH3072/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines Scylla 998-token TokenMonster tokenization with AR self-gen GPTQ int6 and a VRL/BigramHash 3072x112-rich 11-layer architecture to keep the artifact compact.",
+    "tags": [
+      "tokenization",
+      "quantization",
+      "architecture",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "AR self-generated GPTQ int6 with Cholesky Hessian compensation",
+      "11-layer VRL/XSA design with BigramHash 3072x112 and QK-Gain 4.0",
+      "Scylla TokenMonster tokenizer reducing tokens per byte"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

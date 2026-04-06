@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-02T00:56:51.016Z",
+  "generatedAt": "2026-04-06T08:35:11.658Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1005,
     "title": "Non-Record: Extended Compute Scaling Analysis: 1.0853 BPB at 50K steps (11.5 hours) on 4×A100MIG",
-    "state": "open",
-    "updatedAt": "2026-04-02T00:53:22Z",
+    "state": "closed",
+    "updatedAt": "2026-04-06T04:10:56Z",
     "headSha": "6d97a058527ac7bfab8266469e1e8247f574de0f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1005",
     "authorLogin": "OnlyJundong"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Extended compute on the PR#549 LeakyReLU²+Parallel Muon stack trains to 50K steps with warmdown smoothing weights to recover compressibility.",
+    "summary": "Train the PR#549 stack for 20K–50K steps on 4×A100 MIG to analyze how warmdown and extended compute shape BPB and artifact scaling beyond the 10-min cap.",
     "tags": [
       "non-record",
       "training-schedule",
-      "compression"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "extended training schedule",
-      "warmdown-driven compressibility recovery"
+      "Extended-step scaling on 4×A100 MIG",
+      "Warmdown to restore compressibility",
+      "BPB and artifact trajectories vs steps"
     ]
   },
   "compatibility": {

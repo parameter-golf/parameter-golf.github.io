@@ -1,8 +1,362 @@
 {
-  "generatedAt": "2026-04-05T21:30:30.371Z",
+  "generatedAt": "2026-04-06T08:35:30.668Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1412,
+      "title": "Non-record: Parallel Residuals + Hessian-Aware SDClip (3-seed mean 1.08354 BPB)",
+      "status": "open",
+      "updatedAt": "2026-04-06T08:25:01Z",
+      "headSha": "4b5779136ccec49be5f5fe9e25cb6b8c6f499c9e",
+      "generatedAt": "2026-04-06T08:33:08.754Z",
+      "summary": "Adds GPT-J-style parallel residuals in top layers, Hessian-aware SDClip tuning, and staged recurrence to tighten GPTQ quantization behavior.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1412.json"
+    },
+    {
+      "prNumber": 1411,
+      "title": "Non-record: Blueprint Stack + ProgSeq + Multi-scale RoPE + ByteEmbed — val_bpb 1.5568 (1xRTX 3080)",
+      "status": "open",
+      "updatedAt": "2026-04-06T07:44:28Z",
+      "headSha": "e99e0107b477b58c30998880341ec39aca01a819",
+      "generatedAt": "2026-04-06T08:33:14.580Z",
+      "summary": "Single-GPU blueprint adds progressive seq len, KV-group RoPE, byte-side embeddings, and mixed-bit export while ablations highlight per-step overhead limits.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization",
+        "tokenization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1411.json"
+    },
+    {
+      "prNumber": 1410,
+      "title": "Record: 11L LatentMask TTT + GPTQ + Product-Key Bigram + Brotli — val_bpb 1.1158 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-06T07:19:55Z",
+      "headSha": "8110cb8579d315b9d68233bed2fd6c663c4e1fab",
+      "generatedAt": "2026-04-06T08:33:22.945Z",
+      "summary": "11L GPT uses LatentMask TTT per-channel masks, Product-Key bigram embeddings, alternating gated/XSA layers, and Brotli compression to squeeze into 16MB.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1410.json"
+    },
+    {
+      "prNumber": 1408,
+      "title": "Record: dTTT + BigramHash 3072×112 — val_bpb 1.0800 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-06T06:32:10Z",
+      "headSha": "d3ae847e0109e501567cf6a70153dec4c0fbb828",
+      "generatedAt": "2026-04-06T08:33:28.961Z",
+      "summary": "Applies dTTT per-block LR adaptation to BigramHash 3072×112 features ahead of GPTQ int6 quantization to deepen n-gram modeling capacity.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1408.json"
+    },
+    {
+      "prNumber": 1407,
+      "title": "Non-record: Extended Compute Scaling Analysis (20K steps, 1.0960 BPB, 3 seeds (each run ~6 hours on 4xA100MIG))",
+      "status": "open",
+      "updatedAt": "2026-04-06T05:19:30Z",
+      "headSha": "80311efcf92cfcacccce16a39c529851bd2811d0",
+      "generatedAt": "2026-04-06T08:33:33.841Z",
+      "summary": "Extended-run of PR #549 stack for 20k steps on 4×A100 MIG to chart warmdown-driven BPB drops and artifact-size recovery under unlimited compute.",
+      "tags": [
+        "non-record",
+        "training-schedule",
+        "regularization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1407.json"
+    },
+    {
+      "prNumber": 1406,
+      "title": "Record: 11L Depth Recurrence + Discriminative Pre-Quant TTT (8xH100) — val_bpb 1.0887 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-06T04:56:30Z",
+      "headSha": "dd52bdd22704aafd079fc34af03091e122dffc2d",
+      "generatedAt": "2026-04-06T08:33:44.660Z",
+      "summary": "Depth recurrence reruns blocks 4/5 and adds discriminative pre-quant TTT with per-block LR scaling before GPTQ quantization.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "val-only",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-1406.json"
+    },
+    {
+      "prNumber": 1405,
+      "title": "Record: Scylla + GPTQ + BH3072 — val_bpb 1.0856 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-06T08:02:38Z",
+      "headSha": "b965076d78d8b81a891fdf99cd0a0aea18895381",
+      "generatedAt": "2026-04-06T08:33:49.904Z",
+      "summary": "Combines Scylla 998-token TokenMonster tokenization with AR self-gen GPTQ int6 and a VRL/BigramHash 3072x112-rich 11-layer architecture to keep the artifact compact.",
+      "tags": [
+        "tokenization",
+        "quantization",
+        "architecture",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1405.json"
+    },
+    {
+      "prNumber": 1404,
+      "title": "Non-record: compile-friendly state-space hybrid with attention anchors\n",
+      "status": "open",
+      "updatedAt": "2026-04-06T03:34:04Z",
+      "headSha": "3184acd18e40258e85bb4614ae3c5b5c2510858a",
+      "generatedAt": "2026-04-06T08:33:55.405Z",
+      "summary": "Hybrid AASSSASSS layout mixes attention anchors with S4D-style SSM blocks and keeps ssm.* tensors in float16 for export-friendly quantization.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1404.json"
+    },
+    {
+      "prNumber": 1402,
+      "title": "Verifily Data Quality: Three-Tier Token Weighting + DCLS Salience",
+      "status": "open",
+      "updatedAt": "2026-04-06T02:23:37Z",
+      "headSha": "168bfe53b236676ed4eccf446c652b6562e2d329",
+      "generatedAt": "2026-04-06T08:34:01.050Z",
+      "summary": "GPU three-tier token weighting plus EMA surprise batch reweighting and quality-aware bigram mixer biases training toward valuable tokens without new params.",
+      "tags": [
+        "regularization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1402.json"
+    },
+    {
+      "prNumber": 1401,
+      "title": "Submission/epsilon flashonly 2026 04 06",
+      "status": "open",
+      "updatedAt": "2026-04-06T02:14:13Z",
+      "headSha": "0f3c7231323e943545e553f26d0d17088fc9385d",
+      "generatedAt": "2026-04-06T08:34:06.350Z",
+      "summary": "11-layer GPT using FlashAttention/XSA, Muon+AdamW split with EMA+SWA, then GPTQ int6 pruning for a 16MB artifact.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1401.json"
+    },
+    {
+      "prNumber": 1400,
+      "title": "Record: Hadamard-Rotated GPTQ + dTTT + Recur2 (1.1035 BPB)",
+      "status": "open",
+      "updatedAt": "2026-04-06T01:52:00Z",
+      "headSha": "69faa980026c540f99d1d86aa2baac4444b1072b",
+      "generatedAt": "2026-04-06T08:34:12.274Z",
+      "summary": "Adds MR-GPTQ Hadamard rotation, discriminative test-time tuning, and 2-layer depth recurrence to PR#1019 pipeline to cut quantization noise.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1400.json"
+    },
+    {
+      "prNumber": 1399,
+      "title": "Record: Pre-Quant TTT + ETLB: Eval-Time Logit Bias for Neural Language Model Compression 1.0898 BPB on PR #1285 base",
+      "status": "open",
+      "updatedAt": "2026-04-06T03:02:49Z",
+      "headSha": "dddbd59dbf36c1bab35b36365bca62cb6942f5ba",
+      "generatedAt": "2026-04-06T08:34:16.790Z",
+      "summary": "Apply eval-time logit bias adaptation plus pre-quant TTT on a MuonEq-R depth-recurrent GPTQ int6 model.",
+      "tags": [
+        "evaluation",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1399.json"
+    },
+    {
+      "prNumber": 1398,
+      "title": "Non-Record: SP1024 + Depth Recurrence + Adaptive Markov Curriculum +  Legal TTT — val_bpb 1.1047",
+      "status": "open",
+      "updatedAt": "2026-04-06T01:17:06Z",
+      "headSha": "67bc9cae5a894f87d5ebd9e95626bea4b3e862e5",
+      "generatedAt": "2026-04-06T08:34:22.046Z",
+      "summary": "Adaptive Markov Curriculum steers capacity toward surprising bigram transitions while Turbo-Muon preconditioning, EMA+SWA blending, and Auto-QMax packing maximize quantized capacity.",
+      "tags": [
+        "training-schedule",
+        "optimizer",
+        "quantization",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1398.json"
+    },
+    {
+      "prNumber": 1396,
+      "title": "Record: Combined 3-Layer Recurrence + Parallel Residuals + Polar Express + Brotli — val_bpb 1.1067 (3-seed mean)",
+      "status": "closed",
+      "updatedAt": "2026-04-06T04:17:20Z",
+      "headSha": "805dfc14483e889f386262bf3c618a7bb58bd848",
+      "generatedAt": "2026-04-06T08:34:27.998Z",
+      "summary": "Merges 3-layer depth recurrence with parallel residual start plus Polar Express NS prep and Brotli compression for a clean quantized stack.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "regularization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1396.json"
+    },
+    {
+      "prNumber": 1395,
+      "title": "Record: SP4096 + Linear LR + Depth Recurrence -- val_bpb=1.0924 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-05T23:11:45Z",
+      "headSha": "ea1246055fcb77c548d795a457378326cca52d12",
+      "generatedAt": "2026-04-06T08:34:32.584Z",
+      "summary": "Linear LR warmdown to zero plus depth recurrence on SP4096 with MuonEq-R stabilizes weights before GPTQ int6 compression.",
+      "tags": [
+        "training-schedule",
+        "quantization",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1395.json"
+    },
     {
       "prNumber": 1394,
       "title": "Record: SP8192 + GPTQ Embeddings + Depth Recurrence + MuonEq-R + SDClip  — val_bpb 1.08563 (5 seed mean)",
@@ -402,15 +756,15 @@
       "prNumber": 1370,
       "title": "Non-record: 10L Gated DeltaNet (PureGDN) — val_bpb 1.003028 (3-seed mean, legal TTT)",
       "status": "open",
-      "updatedAt": "2026-04-05T12:57:29Z",
-      "headSha": "f2be0b6fff9d758fe9253e1a307afb6e90034f6b",
-      "generatedAt": "2026-04-05T12:57:58.446Z",
-      "summary": "10-layer PureGDN stack swaps transformer softmax for Gated DeltaNet linear attention with BigramHash+trigram tokens and score-first TTT adaptation.",
+      "updatedAt": "2026-04-05T22:29:19Z",
+      "headSha": "e3fe29966dbe7a2440aad4efde2a6ebc280b0fb9",
+      "generatedAt": "2026-04-06T08:34:37.093Z",
+      "summary": "10-layer model swaps softmax for Gated DeltaNet linear attention with BigramHash+trigram features and score-first TTT training.",
       "tags": [
-        "architecture",
         "attention",
-        "tokenization",
-        "training-schedule"
+        "architecture",
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1168,22 +1522,22 @@
       "prNumber": 1329,
       "title": "Record: Per-Sample SLOT + TTT + LR=0.024 + Stride=96 — val_bpb 0.63614 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-04T10:17:27Z",
+      "updatedAt": "2026-04-06T05:38:49Z",
       "headSha": "0c7bd5ee4f099cafc8c9ccbb170820a4656f0881",
-      "generatedAt": "2026-04-04T10:18:31.159Z",
-      "summary": "Combines TTT with per-sample SLOT deltas, higher LR, and stride=96 evaluation to fit the budget while capturing sequence-level patterns.",
+      "generatedAt": "2026-04-06T08:34:43.007Z",
+      "summary": "Combines TTT-tuned base and stride-96 per-sample SLOT, fitting tiny hidden/logit deltas via high-LR AdamW to capture sequence-level stats at eval time.",
       "tags": [
+        "val-only",
         "optimizer",
-        "training-schedule",
         "evaluation"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-1329.json"
     },
@@ -1913,14 +2267,14 @@
       "prNumber": 1289,
       "title": "Record: PROTEUS v1.6 — Scylla + Parallel Residuals + Depth Recurrence + Legal TTT — val_bpb 1.0819 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-05T12:37:51Z",
+      "updatedAt": "2026-04-06T08:02:33Z",
       "headSha": "302f714bebadaf8727f448690f0e138bf3da9b8f",
-      "generatedAt": "2026-04-05T12:58:03.210Z",
-      "summary": "Merges Scylla retokenization, parallel residual lanes with learnable mixing, depth recurrence, legal TTT, and sensitivity-driven mixed INT5/INT6 quantization.",
+      "generatedAt": "2026-04-06T08:34:48.137Z",
+      "summary": "PROTEUS v1.6 pairs sensitivity-driven INT5/INT6 quantization with learnable mixing on parallel residual lanes and Scylla retokenization.",
       "tags": [
         "quantization",
         "architecture",
-        "training-schedule"
+        "tokenization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2093,30 +2447,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1281.json"
-    },
-    {
-      "prNumber": 1280,
-      "title": "Record: AR Self-Gen GPTQ + XSA-11 + BigramHash3072x112 (mean 1.1156)",
-      "status": "open",
-      "updatedAt": "2026-04-03T02:50:29Z",
-      "headSha": "16196382e498c236e2a773e433eb5401101c535e",
-      "generatedAt": "2026-04-03T03:07:21.673Z",
-      "summary": "Single-pass run uses AR self-generated GPTQ with XSA on all 11 layers plus BigramHash 3072x112, while Muon Newton-Schulz TTT adds entropy-based epochs.",
-      "tags": [
-        "quantization",
-        "attention",
-        "optimizer",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1280.json"
     },
     {
       "prNumber": 1279,
@@ -2309,15 +2639,15 @@
       "prNumber": 1269,
       "title": "30-Layer Recursive GPT (10 Physical x 3 Recursive) + VRL + Parallel Muon",
       "status": "open",
-      "updatedAt": "2026-04-05T21:27:12Z",
-      "headSha": "cb60c7bd6da5f077723c8cd36dfef1f86561ac10",
-      "generatedAt": "2026-04-05T21:30:14.614Z",
-      "summary": "Combines 10-layer recursion repeated 3× with VRL+MTP, Bigram/Trigram hashing, and Parallel Muon tuning for H100 plus int8+LZMA compression.",
+      "updatedAt": "2026-04-06T07:02:07Z",
+      "headSha": "58c874f80ec800c2377f9d08cf8474cc8b2faabe",
+      "generatedAt": "2026-04-06T08:34:54.839Z",
+      "summary": "Shares 10 physical layers across 3 recursive passes with VRL, MTP, and bigram/trigram hashing plus Parallel Muon targeting 30-layer virtual depth.",
       "tags": [
         "architecture",
         "optimizer",
-        "quantization",
-        "compression"
+        "muon",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2678,14 +3008,14 @@
       "prNumber": 1246,
       "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
       "status": "open",
-      "updatedAt": "2026-04-05T21:08:47Z",
-      "headSha": "2c4f03cadece65d9d421c29d3227773a77931706",
-      "generatedAt": "2026-04-05T21:30:19.312Z",
-      "summary": "Ternary QAT + int6 GPTQ stack expands MLP width (3.25x) inside NeoMuon/Partial RoPE architecture with EMA/SWA and z-loss.",
+      "updatedAt": "2026-04-05T21:56:53Z",
+      "headSha": "7d9268023ac266762aa5d620230f59ba56fc3378",
+      "generatedAt": "2026-04-06T08:35:00.108Z",
+      "summary": "Trinity-inspired ternary QAT widens the MLP and packs weights via base-3 ternary packing while training with Partial RoPE, NeoMuon, EMA/SWA before GPTQ.",
       "tags": [
         "quantization",
         "architecture",
-        "regularization"
+        "muon"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2815,30 +3145,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1241.json"
-    },
-    {
-      "prNumber": 1239,
-      "title": "[Non-Record] Whirlpool v5b — Non-Euclidean Lorentzian Attention on the Hyperboloid Manifold",
-      "status": "open",
-      "updatedAt": "2026-04-01T23:55:33Z",
-      "headSha": "3780f0e47ee6d83d1b082a5828efa70b18c41994",
-      "generatedAt": "2026-04-01T23:56:34.596Z",
-      "summary": "Hyperboloid Lorentzian attention with a custom Triton kernel and curvature-progressive shared blocks for depth.",
-      "tags": [
-        "attention",
-        "architecture",
-        "training-schedule",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1239.json"
     },
     {
       "prNumber": 1238,
@@ -4491,12 +4797,12 @@
     },
     {
       "prNumber": 1138,
-      "title": "Non-record: ownership-clean optional megakernel path on WSL2/RTX 4090",
+      "title": "Non-record / in-progress: ownership-clean optional megakernel path on WSL2/RTX 4090",
       "status": "open",
-      "updatedAt": "2026-04-05T21:26:50Z",
+      "updatedAt": "2026-04-06T01:28:44Z",
       "headSha": "a57d6b8f5a6695b32cabe54b472c524290b4e4ee",
-      "generatedAt": "2026-04-05T21:30:23.366Z",
-      "summary": "Optional WSL2/RTX 4090 megakernel lane keeps ownership-clean reverse execution while iterating deep inner-phase rewrites and inline CUDA helpers for non-record runs.",
+      "generatedAt": "2026-04-06T08:35:05.304Z",
+      "summary": "Documents an optional WSL2/RTX4090 megakernel path preserving forward device ownership and ownership-clean reverse math with inline CUDA whole-model kernels.",
       "tags": [
         "architecture",
         "evaluation",
@@ -6608,15 +6914,15 @@
     {
       "prNumber": 1005,
       "title": "Non-Record: Extended Compute Scaling Analysis: 1.0853 BPB at 50K steps (11.5 hours) on 4×A100MIG",
-      "status": "open",
-      "updatedAt": "2026-04-02T00:53:22Z",
+      "status": "closed",
+      "updatedAt": "2026-04-06T04:10:56Z",
       "headSha": "6d97a058527ac7bfab8266469e1e8247f574de0f",
-      "generatedAt": "2026-04-02T00:56:51.016Z",
-      "summary": "Extended compute on the PR#549 LeakyReLU²+Parallel Muon stack trains to 50K steps with warmdown smoothing weights to recover compressibility.",
+      "generatedAt": "2026-04-06T08:35:11.658Z",
+      "summary": "Train the PR#549 stack for 20K–50K steps on 4×A100 MIG to analyze how warmdown and extended compute shape BPB and artifact scaling beyond the 10-min cap.",
       "tags": [
         "non-record",
         "training-schedule",
-        "compression"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -7809,13 +8115,13 @@
       "prNumber": 934,
       "title": "WIP: 1.1xxx BPB - MDL-T Stack (LeakyReLU² + EMA + GPTQ-lite + LateQAT + warmdown3500 + int6+zstd-22)",
       "status": "open",
-      "updatedAt": "2026-03-27T05:12:06Z",
-      "headSha": "16076d50a7b11005b5f3a933f9d3bc431e9001b5",
-      "generatedAt": "2026-03-27T05:14:10.128Z",
-      "summary": "Combines MDL-T regularizer pulling weights to int6 grid with LeakyReLU², EMA smoothing, GPTQ-lite clip search, and late int6 QAT for compression-aware training.",
+      "updatedAt": "2026-04-06T02:32:02Z",
+      "headSha": "fe4f4f4e91a2789602637165d0af8f2b8f2ed591",
+      "generatedAt": "2026-04-06T08:35:18.193Z",
+      "summary": "Stacks MDL-T regularization that steers weights toward int6 gridpoints with EMA, LeakyReLU², extended warmdown, GPTQ-lite clipping, and Late QAT before zstd-22 compression.",
       "tags": [
-        "quantization",
         "regularization",
+        "quantization",
         "training-schedule",
         "compression"
       ],
@@ -8689,10 +8995,10 @@
       "prNumber": 877,
       "title": "Non-record: sin² activation + causal screening pipeline",
       "status": "open",
-      "updatedAt": "2026-04-05T20:53:44Z",
-      "headSha": "d4b212424af6455799a2bdb116670f04cc07e6af",
-      "generatedAt": "2026-04-05T21:00:25.895Z",
-      "summary": "sin² periodic activation replaces relu² in GPT MLPs via causal DAG-guided screening plus adaptive multi-token prediction and selective loss probes.",
+      "updatedAt": "2026-04-05T21:48:29Z",
+      "headSha": "1d85c1630df9fed56de7c00aeffa954a0c93e03f",
+      "generatedAt": "2026-04-06T08:35:24.085Z",
+      "summary": "Use sin² in MLPs and an automated causal screening pipeline to guide periodic activations plus adaptive multi-token prediction and Rho-1 loss masking probes.",
       "tags": [
         "architecture",
         "evaluation",
@@ -11739,14 +12045,13 @@
       "prNumber": 675,
       "title": "Record: Hypergradient SLOT-24 — val_bpb 0.7625 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-04T17:50:42Z",
-      "headSha": "41c435cb9713134d73729acf2eeafbbed485ceff",
-      "generatedAt": "2026-04-04T17:51:46.633Z",
-      "summary": "Hypergradient descent replaces SLOT's fixed LR schedule so each evaluation batch adapts its step size via gradient alignment instead of cosine decay.",
+      "updatedAt": "2026-04-06T01:00:53Z",
+      "headSha": "0b8e387b0493c9a9ac7a0e2338d887f3e158d045",
+      "generatedAt": "2026-04-06T08:35:30.571Z",
+      "summary": "Hypergradient descent replaces SLOT's fixed cosine LR, adapting stepsizes per eval sample to match each document's optimization landscape.",
       "tags": [
-        "optimizer",
-        "training-schedule",
         "evaluation",
+        "optimizer",
         "non-record"
       ],
       "flags": {

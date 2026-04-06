@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-05T21:00:25.895Z",
+  "generatedAt": "2026-04-06T08:35:24.085Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 877,
     "title": "Non-record: sin² activation + causal screening pipeline",
     "state": "open",
-    "updatedAt": "2026-04-05T20:53:44Z",
-    "headSha": "d4b212424af6455799a2bdb116670f04cc07e6af",
+    "updatedAt": "2026-04-05T21:48:29Z",
+    "headSha": "1d85c1630df9fed56de7c00aeffa954a0c93e03f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/877",
     "authorLogin": "clthuang"
   },
@@ -20,7 +20,7 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "sin² periodic activation replaces relu² in GPT MLPs via causal DAG-guided screening plus adaptive multi-token prediction and selective loss probes.",
+    "summary": "Use sin² in MLPs and an automated causal screening pipeline to guide periodic activations plus adaptive multi-token prediction and Rho-1 loss masking probes.",
     "tags": [
       "architecture",
       "evaluation",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "sin² activation preserves relu² range while smoothing gradients",
-      "Automated causal DAG-guided screening of 24 interventions",
-      "Adaptive MTP and Rho-1 selective loss masking for harder tokens"
+      "sin² drop-in for relu² to keep non-negative squaring while smoothing gradients",
+      "automated causal DAG screening pipeline to prioritize architecture interventions",
+      "adaptive multi-token prediction and Rho-1 selective loss masking explorations"
     ]
   },
   "compatibility": {

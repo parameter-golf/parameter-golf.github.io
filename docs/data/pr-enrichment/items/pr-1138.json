@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-05T21:30:23.366Z",
+  "generatedAt": "2026-04-06T08:35:05.304Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1138,
-    "title": "Non-record: ownership-clean optional megakernel path on WSL2/RTX 4090",
+    "title": "Non-record / in-progress: ownership-clean optional megakernel path on WSL2/RTX 4090",
     "state": "open",
-    "updatedAt": "2026-04-05T21:26:50Z",
+    "updatedAt": "2026-04-06T01:28:44Z",
     "headSha": "a57d6b8f5a6695b32cabe54b472c524290b4e4ee",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1138",
     "authorLogin": "greqone"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Optional WSL2/RTX 4090 megakernel lane keeps ownership-clean reverse execution while iterating deep inner-phase rewrites and inline CUDA helpers for non-record runs.",
+    "summary": "Documents an optional WSL2/RTX4090 megakernel path preserving forward device ownership and ownership-clean reverse math with inline CUDA whole-model kernels.",
     "tags": [
       "architecture",
       "evaluation",
@@ -28,8 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "ownership-clean reverse megakernel path",
-      "deep inner-phase rewrite counter analysis"
+      "optional ownership-clean megakernel path",
+      "inline CUDA whole-model forward/backward",
+      "6-launch WSL2/RTX4090 topology"
     ]
   },
   "compatibility": {

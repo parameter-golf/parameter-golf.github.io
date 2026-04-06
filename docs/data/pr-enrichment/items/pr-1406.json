@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-04-06T08:33:44.660Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1406,
+    "title": "Record: 11L Depth Recurrence + Discriminative Pre-Quant TTT (8xH100) — val_bpb 1.0887 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-06T04:56:30Z",
+    "headSha": "dd52bdd22704aafd079fc34af03091e122dffc2d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1406",
+    "authorLogin": "aamodbhatt"
+  },
+  "inputs": {
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-06_DepthRecurrence_PreQuantTTT_11L_8xH100/README.md",
+      "records/track_10min_16mb/2026-04-03_ARSelfGenGPTQ_XSA11_Bigram3072_8xH100/README.md",
+      "records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_11L_8xH100/README.md"
+    ],
+    "submissionCount": 3
+  },
+  "output": {
+    "summary": "Depth recurrence reruns blocks 4/5 and adds discriminative pre-quant TTT with per-block LR scaling before GPTQ quantization.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "val-only",
+      "quantization"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Discriminative pre-quant TTT performs AdamW adaptation on validation chunks before GPTQ quantization.",
+    "techniques": [
+      "Depth recurrence reuses blocks 4 and 5 so 11 layers execute 13 passes with shared weights",
+      "Discriminative pre-quant TTT fine-tunes on val chunks with per-block LR scaling prior to int6 GPTQ"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

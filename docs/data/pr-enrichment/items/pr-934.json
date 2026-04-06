@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T05:14:10.128Z",
+  "generatedAt": "2026-04-06T08:35:18.193Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 934,
     "title": "WIP: 1.1xxx BPB - MDL-T Stack (LeakyReLU² + EMA + GPTQ-lite + LateQAT + warmdown3500 + int6+zstd-22)",
     "state": "open",
-    "updatedAt": "2026-03-27T05:12:06Z",
-    "headSha": "16076d50a7b11005b5f3a933f9d3bc431e9001b5",
+    "updatedAt": "2026-04-06T02:32:02Z",
+    "headSha": "fe4f4f4e91a2789602637165d0af8f2b8f2ed591",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/934",
     "authorLogin": "tuanaqeelbohoran"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines MDL-T regularizer pulling weights to int6 grid with LeakyReLU², EMA smoothing, GPTQ-lite clip search, and late int6 QAT for compression-aware training.",
+    "summary": "Stacks MDL-T regularization that steers weights toward int6 gridpoints with EMA, LeakyReLU², extended warmdown, GPTQ-lite clipping, and Late QAT before zstd-22 compression.",
     "tags": [
-      "quantization",
       "regularization",
+      "quantization",
       "training-schedule",
       "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "MDL-T regularizer aligning weights with int6 gridpoints during extended warmdown",
-      "LeakyReLU(0.5)² MLP plus EMA smoothing to stabilize late training",
-      "Late int6 QAT with GPTQ-lite clipping and zstd-22 compression"
+      "- MDL-T regularizer normalizes quantization noise to nudge weights toward int6 gridpoints during warmdown",
+      "- Late QAT with GPTQ-lite clip search on EMA-smoothed weights for final quantization-aware convergence",
+      "- LeakyReLU(0.5)² activations paired with stretched warmdown to support compressible representations"
     ]
   },
   "compatibility": {

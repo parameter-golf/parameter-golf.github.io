@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-06T08:34:01.050Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1402,
+    "title": "Verifily Data Quality: Three-Tier Token Weighting + DCLS Salience",
+    "state": "open",
+    "updatedAt": "2026-04-06T02:23:37Z",
+    "headSha": "168bfe53b236676ed4eccf446c652b6562e2d329",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1402",
+    "authorLogin": "arsenis-cmd"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-05_Verifily_DataQuality_ThreeTier_DCLS/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "GPU three-tier token weighting plus EMA surprise batch reweighting and quality-aware bigram mixer biases training toward valuable tokens without new params.",
+    "tags": [
+      "regularization",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "GPU-resident bigram tiers conditioned on doc quality",
+      "EMA surprise-driven batch loss multipliers",
+      "Quality-conditioned bigram-neural eval mixer"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

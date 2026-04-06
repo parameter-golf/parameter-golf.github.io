@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-06T08:33:55.405Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1404,
+    "title": "Non-record: compile-friendly state-space hybrid with attention anchors\n",
+    "state": "open",
+    "updatedAt": "2026-04-06T03:34:04Z",
+    "headSha": "3184acd18e40258e85bb4614ae3c5b5c2510858a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1404",
+    "authorLogin": "greqone"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-06_StateSpaceHybrid_AttentionAnchors/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Hybrid AASSSASSS layout mixes attention anchors with S4D-style SSM blocks and keeps ssm.* tensors in float16 for export-friendly quantization.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "AASSSASSS exact-attention + S4D hybrid layout",
+      "S4D-Lin state-space blocks with learned depthwise conv kernels",
+      "Float16 export for ssm.* tensors to stay under 16MB"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

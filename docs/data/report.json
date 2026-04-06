@@ -1,27 +1,37 @@
 {
-  "generatedAt": "2026-04-05T21:29:37.650Z",
+  "generatedAt": "2026-04-06T08:31:59.404Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [],
-  "errors": [
+  "skipped": [
     {
-      "stage": "pull-request-file",
-      "pr": 1390,
-      "filename": "records/records/leaky_relu_sliding_window/submission.json",
-      "message": "Unexpected token 'j', \"json{\n  \"n\"... is not valid JSON"
+      "pr": 1374,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 1403,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 827,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "pr": 260,
+      "reason": "no-record-submission-json"
     }
   ],
+  "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-04-05T20:53:44Z",
+    "cutoffUpdatedAt": "2026-04-05T21:27:12Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 6,
-    "prsReused": 194,
+    "prsRefreshed": 30,
+    "prsReused": 170,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 1334,
+    "cacheEntries": 1351,
     "retryWindowRetained": false
   }
 }

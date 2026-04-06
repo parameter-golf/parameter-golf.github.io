@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-04-06T08:34:12.274Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1400,
+    "title": "Record: Hadamard-Rotated GPTQ + dTTT + Recur2 (1.1035 BPB)",
+    "state": "open",
+    "updatedAt": "2026-04-06T01:52:00Z",
+    "headSha": "69faa980026c540f99d1d86aa2baac4444b1072b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1400",
+    "authorLogin": "tmancino"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-05_Hadamard_dTTT_Recur2/README.md",
+      "records/track_non_record_16mb/2026-04-01_WhirlpoolV5b_LorentzianTransformer/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Adds MR-GPTQ Hadamard rotation, discriminative test-time tuning, and 2-layer depth recurrence to PR#1019 pipeline to cut quantization noise.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Hadamard rotation before GPTQ to smooth weight distribution",
+      "Per-block discriminative TTT with cosine decay",
+      "2-layer recurrence for higher effective depth"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

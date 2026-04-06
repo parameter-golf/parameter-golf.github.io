@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-06T08:34:16.790Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1399,
+    "title": "Record: Pre-Quant TTT + ETLB: Eval-Time Logit Bias for Neural Language Model Compression 1.0898 BPB on PR #1285 base",
+    "state": "open",
+    "updatedAt": "2026-04-06T03:02:49Z",
+    "headSha": "dddbd59dbf36c1bab35b36365bca62cb6942f5ba",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1399",
+    "authorLogin": "AnubhavBharadwaaj"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-05_PreQuantTTT_ETLB_MuonEqR_DepthRecurrence_AllInt6/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Apply eval-time logit bias adaptation plus pre-quant TTT on a MuonEq-R depth-recurrent GPTQ int6 model.",
+    "tags": [
+      "evaluation",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Sliding-window logit bias warm-start with SGD updates",
+      "Pre-quantization TTT on frozen GPTQ blocks",
+      "Depth-recurrent MuonEq-R architecture with int6 GPTQ"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

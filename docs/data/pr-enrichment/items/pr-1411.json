@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-06T08:33:14.580Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1411,
+    "title": "Non-record: Blueprint Stack + ProgSeq + Multi-scale RoPE + ByteEmbed — val_bpb 1.5568 (1xRTX 3080)",
+    "state": "open",
+    "updatedAt": "2026-04-06T07:44:28Z",
+    "headSha": "e99e0107b477b58c30998880341ec39aca01a819",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1411",
+    "authorLogin": "Blakethefn"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_BlueprintStack_ProgSeq_MultiRoPE_ByteEmbed_1xRTX3080/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Single-GPU blueprint adds progressive seq len, KV-group RoPE, byte-side embeddings, and mixed-bit export while ablations highlight per-step overhead limits.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "quantization",
+      "tokenization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Progressive seq-len schedule through 2048 tokens",
+      "Multi-scale RoPE per KV group with byte-level side embeddings",
+      "Mixed-bit export (int5/int6) after training"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

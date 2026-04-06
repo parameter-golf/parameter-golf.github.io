@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-06T08:33:22.945Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1410,
+    "title": "Record: 11L LatentMask TTT + GPTQ + Product-Key Bigram + Brotli — val_bpb 1.1158 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-06T07:19:55Z",
+    "headSha": "8110cb8579d315b9d68233bed2fd6c663c4e1fab",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1410",
+    "authorLogin": "izlley"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-05_11L_LatentMaskTTT_GPTQ_ProductKey_Brotli/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11L GPT uses LatentMask TTT per-channel masks, Product-Key bigram embeddings, alternating gated/XSA layers, and Brotli compression to squeeze into 16MB.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LatentMask per-channel sigmoid masks trained during score-first Muon-lite TTT",
+      "Product-Key bigram factorization replacing hash tables for zero-collision embeddings",
+      "Brotli-11 + uint8 log-scale serialization plus alternating gated/XSA layers to pack 16MB"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,37 +1,38 @@
 {
-  "generatedAt": "2026-04-05T21:30:14.614Z",
+  "generatedAt": "2026-04-06T08:34:54.839Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1269,
     "title": "30-Layer Recursive GPT (10 Physical x 3 Recursive) + VRL + Parallel Muon",
     "state": "open",
-    "updatedAt": "2026-04-05T21:27:12Z",
-    "headSha": "cb60c7bd6da5f077723c8cd36dfef1f86561ac10",
+    "updatedAt": "2026-04-06T07:02:07Z",
+    "headSha": "58c874f80ec800c2377f9d08cf8474cc8b2faabe",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1269",
     "authorLogin": "Jtss-ux"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_10min_16mb/2026-04-06_Jtss-ux_ImprovedBaseline/README.md",
       "records/track_10min_16mb/Jtss-ux_Recursive_30_Layer/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Combines 10-layer recursion repeated 3× with VRL+MTP, Bigram/Trigram hashing, and Parallel Muon tuning for H100 plus int8+LZMA compression.",
+    "summary": "Shares 10 physical layers across 3 recursive passes with VRL, MTP, and bigram/trigram hashing plus Parallel Muon targeting 30-layer virtual depth.",
     "tags": [
       "architecture",
       "optimizer",
-      "quantization",
-      "compression"
+      "muon",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Recursive 10-layer stack applied thrice to simulate 30-layer depth with VRL-stabilized gating",
-      "Parallel Muon optimizer with Parameter Banking and activation checkpointing on H100",
-      "Int8 GPTQ calibration plus LZMA compression for sub-16MB deployment"
+      "Recursive weight sharing for 30-layer virtual depth",
+      "Value Residual Learning with sigmoid gating",
+      "Parallel Muon optimizer with bigram/trigram hashing and MTP"
     ]
   },
   "compatibility": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-05T12:58:03.210Z",
+  "generatedAt": "2026-04-06T08:34:48.137Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1289,
     "title": "Record: PROTEUS v1.6 — Scylla + Parallel Residuals + Depth Recurrence + Legal TTT — val_bpb 1.0819 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-05T12:37:51Z",
+    "updatedAt": "2026-04-06T08:02:33Z",
     "headSha": "302f714bebadaf8727f448690f0e138bf3da9b8f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1289",
     "authorLogin": "MatoTeziTanka"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Merges Scylla retokenization, parallel residual lanes with learnable mixing, depth recurrence, legal TTT, and sensitivity-driven mixed INT5/INT6 quantization.",
+    "summary": "PROTEUS v1.6 pairs sensitivity-driven INT5/INT6 quantization with learnable mixing on parallel residual lanes and Scylla retokenization.",
     "tags": [
       "quantization",
       "architecture",
-      "training-schedule"
+      "tokenization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Sensitivity-driven mixed INT5/INT6 quantization routing per layer",
-      "Learnable lane_merge and resid_mix_mlp for parallel residual fusion",
-      "Integrated Scylla retokenization with depth recurrence and legal TTT"
+      "Mixed INT5/INT6 per-layer quantization",
+      "Learnable lane merge plus resid_mix_mlp for parallel residuals",
+      "Scylla retokenization pipeline"
     ]
   },
   "compatibility": {

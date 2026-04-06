@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-04-06T08:34:06.350Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1401,
+    "title": "Submission/epsilon flashonly 2026 04 06",
+    "state": "open",
+    "updatedAt": "2026-04-06T02:14:13Z",
+    "headSha": "0f3c7231323e943545e553f26d0d17088fc9385d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1401",
+    "authorLogin": "teerthsharma"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_Epsilon_FlashOnly/README.md",
+      "records/track_10min_16mb/2026-03-22_AETHER_SparseSDP_Governor/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "11-layer GPT using FlashAttention/XSA, Muon+AdamW split with EMA+SWA, then GPTQ int6 pruning for a 16MB artifact.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "FlashAttention-only stack with XSA on final layers",
+      "Muon/AdamW split augmented by EMA+SWA",
+      "GPTQ int6 quantization plus selective pruning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-04T10:18:31.159Z",
+  "generatedAt": "2026-04-06T08:34:43.007Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1329,
     "title": "Record: Per-Sample SLOT + TTT + LR=0.024 + Stride=96 — val_bpb 0.63614 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-04T10:17:27Z",
+    "updatedAt": "2026-04-06T05:38:49Z",
     "headSha": "0c7bd5ee4f099cafc8c9ccbb170820a4656f0881",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1329",
     "authorLogin": "renqianluo"
@@ -19,24 +19,24 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines TTT with per-sample SLOT deltas, higher LR, and stride=96 evaluation to fit the budget while capturing sequence-level patterns.",
+    "summary": "Combines TTT-tuned base and stride-96 per-sample SLOT, fitting tiny hidden/logit deltas via high-LR AdamW to capture sequence-level stats at eval time.",
     "tags": [
+      "val-only",
       "optimizer",
-      "training-schedule",
       "evaluation"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT and per-sample SLOT optimize parameters solely on the validation sequences before scoring.",
     "techniques": [
-      "Per-sequence hidden-state delta + logit bias fitted on scored tokens",
-      "Higher LR (0.024) AdamW steps for better 24-step convergence",
-      "Stride=96 evaluation to reduce windows and enable longer SLOT tuning"
+      "per-sample hidden/logit deltas",
+      "high-LR AdamW fine-tuning",
+      "stride-96 evaluation windows"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

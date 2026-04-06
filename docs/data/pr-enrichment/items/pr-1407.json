@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-06T08:33:33.841Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1407,
+    "title": "Non-record: Extended Compute Scaling Analysis (20K steps, 1.0960 BPB, 3 seeds (each run ~6 hours on 4xA100MIG))",
+    "state": "open",
+    "updatedAt": "2026-04-06T05:19:30Z",
+    "headSha": "80311efcf92cfcacccce16a39c529851bd2811d0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1407",
+    "authorLogin": "OnlyJundong"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-06_ExtendedCompute_20K_6hours_4xA100MIG_ScalingAnalysis/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Extended-run of PR #549 stack for 20k steps on 4×A100 MIG to chart warmdown-driven BPB drops and artifact-size recovery under unlimited compute.",
+    "tags": [
+      "non-record",
+      "training-schedule",
+      "regularization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Warmdown-heavy schedule scaling",
+      "Artifact-size vs. steps trace",
+      "LeakyReLU² + TTT + Parallel Muon baseline"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
