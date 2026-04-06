@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T05:37:17.000Z",
+  "generatedAt": "2026-04-06T20:35:49.559Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 69,
     "title": "SubSixteen v2: Int6 QAT + MLP 3x + SWA + Sliding Window (val_bpb 1.1708)",
     "state": "open",
-    "updatedAt": "2026-03-22T05:24:38Z",
+    "updatedAt": "2026-04-06T20:31:25Z",
     "headSha": "2462e105a97a2be9e5a04111e0ce7d1d6228d001",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/69",
     "authorLogin": "TevBenji"
@@ -20,19 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "SubSixteen v2 trains a 9-layer GPT with int6 QAT, oversized MLP, Muon+AdamW mix, SWA, sliding-window eval, and zstd-22 compression.",
+    "summary": "SubSixteen v2 trains a 9-layer GPT with Int6 QAT, enlarged MLP, and SWA averaging before export for sliding-window scoring under 16 MB.",
     "tags": [
-      "architecture",
       "quantization",
-      "optimizer",
-      "evaluation"
+      "architecture",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not val-only training.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Int6 STE QAT with CastedLinear fake quantization",
-      "Muon+AdamW mix with wallclock-aware warmdown and SWA averaging",
-      "Sliding-window eval plus zstd-22 compressed artifact"
+      "Int6 fake-quant CASTedLinear QAT",
+      "MLP expansion to 1536 with relu² in 9-layer GPT",
+      "SWA averaging 16 warmdown checkpoints before export"
     ]
   },
   "compatibility": {

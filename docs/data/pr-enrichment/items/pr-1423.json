@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-06T18:05:02.669Z",
+  "generatedAt": "2026-04-06T20:35:43.579Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1423,
     "title": "Record: SP8192 + Pre-Quant TTT + QK-Gain 5.0 + Depth Recurrence + MuonEq-R — val_bpb 1.0791 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-06T17:51:39Z",
+    "updatedAt": "2026-04-06T20:14:24Z",
     "headSha": "eebe7b221d9bfb70719a4c8cf39dd80dec24d786",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1423",
     "authorLogin": "aryanbhosale"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Enhances the SP8192 base with MuonEq-R depth recurrence, pre-quant TTT adaptation, and QK-Gain 5.0 ahead of GPTQ/SDClip quantization.",
+    "summary": "SP8192 depth-recurrent MuonEq-R stack uses pre-quant TTT with SDClip/GPTQ quant and boosts QK-Gain to 5.0.",
     "tags": [
       "architecture",
-      "muon",
-      "quantization",
-      "training-schedule"
+      "training-schedule",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "MuonEq-R depth recurrence on the SP8192 stack",
-      "Pre-quant TTT adaptation before GPTQ/SDClip quantization",
-      "QK-Gain 5.0 scaling for attention"
+      "pre-quant TTT adaptation baked into GPTQ artifact",
+      "SDClip quant with GPTQ embeddings and sigmoid-gated U-Net skips",
+      "QK-Gain 5.0 on depth recurrence and MuonEq-R"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-06T20:06:08.668Z",
+  "generatedAt": "2026-04-06T20:35:49.567Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -54,15 +54,14 @@
       "prNumber": 1423,
       "title": "Record: SP8192 + Pre-Quant TTT + QK-Gain 5.0 + Depth Recurrence + MuonEq-R — val_bpb 1.0791 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-06T17:51:39Z",
+      "updatedAt": "2026-04-06T20:14:24Z",
       "headSha": "eebe7b221d9bfb70719a4c8cf39dd80dec24d786",
-      "generatedAt": "2026-04-06T18:05:02.669Z",
-      "summary": "Enhances the SP8192 base with MuonEq-R depth recurrence, pre-quant TTT adaptation, and QK-Gain 5.0 ahead of GPTQ/SDClip quantization.",
+      "generatedAt": "2026-04-06T20:35:43.579Z",
+      "summary": "SP8192 depth-recurrent MuonEq-R stack uses pre-quant TTT with SDClip/GPTQ quant and boosts QK-Gain to 5.0.",
       "tags": [
         "architecture",
-        "muon",
-        "quantization",
-        "training-schedule"
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -22034,15 +22033,14 @@
       "prNumber": 69,
       "title": "SubSixteen v2: Int6 QAT + MLP 3x + SWA + Sliding Window (val_bpb 1.1708)",
       "status": "open",
-      "updatedAt": "2026-03-22T05:24:38Z",
+      "updatedAt": "2026-04-06T20:31:25Z",
       "headSha": "2462e105a97a2be9e5a04111e0ce7d1d6228d001",
-      "generatedAt": "2026-03-22T05:37:17.000Z",
-      "summary": "SubSixteen v2 trains a 9-layer GPT with int6 QAT, oversized MLP, Muon+AdamW mix, SWA, sliding-window eval, and zstd-22 compression.",
+      "generatedAt": "2026-04-06T20:35:49.559Z",
+      "summary": "SubSixteen v2 trains a 9-layer GPT with Int6 QAT, enlarged MLP, and SWA averaging before export for sliding-window scoring under 16 MB.",
       "tags": [
-        "architecture",
         "quantization",
-        "optimizer",
-        "evaluation"
+        "architecture",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
